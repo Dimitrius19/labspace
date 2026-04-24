@@ -158,15 +158,10 @@ export function VentureDetail({
                   </select>
                 </Field>
                 <Field label="Health">
-                  <select
+                  <HealthPicker
                     value={venture.health}
-                    onChange={(e) => updateHealth(venture.id, e.target.value as Health)}
-                    className="w-full rounded-md border border-slate-200 px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200"
-                  >
-                    <option value="on-track">On track</option>
-                    <option value="at-risk">At risk</option>
-                    <option value="blocked">Blocked</option>
-                  </select>
+                    onChange={(h) => updateHealth(venture.id, h)}
+                  />
                 </Field>
                 <Field label={`Launch target (${formatDaysUntil(venture.launchTarget)})`}>
                   <input
@@ -343,5 +338,54 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
       <span className="mb-1 block text-[11px] font-medium uppercase tracking-wide text-slate-500">{label}</span>
       {children}
     </label>
+  );
+}
+
+const HEALTH_OPTIONS: { key: Health; label: string; active: string; idle: string }[] = [
+  {
+    key: "on-track",
+    label: "On track",
+    active: "bg-emerald-500 text-white border-emerald-500",
+    idle: "text-emerald-700 border-slate-200 hover:bg-emerald-50",
+  },
+  {
+    key: "at-risk",
+    label: "At risk",
+    active: "bg-amber-500 text-white border-amber-500",
+    idle: "text-amber-700 border-slate-200 hover:bg-amber-50",
+  },
+  {
+    key: "blocked",
+    label: "Blocked",
+    active: "bg-rose-500 text-white border-rose-500",
+    idle: "text-rose-700 border-slate-200 hover:bg-rose-50",
+  },
+];
+
+function HealthPicker({
+  value,
+  onChange,
+}: {
+  value: Health;
+  onChange: (h: Health) => void;
+}) {
+  return (
+    <div className="inline-flex w-full overflow-hidden rounded-md border border-slate-200">
+      {HEALTH_OPTIONS.map((opt, i) => {
+        const isActive = opt.key === value;
+        return (
+          <button
+            key={opt.key}
+            type="button"
+            onClick={() => onChange(opt.key)}
+            className={`flex-1 border-r px-2 py-1.5 text-xs font-medium transition-colors last:border-r-0 ${
+              isActive ? opt.active : `bg-white ${opt.idle}`
+            } ${i === 0 ? "rounded-l-md" : ""} ${i === HEALTH_OPTIONS.length - 1 ? "rounded-r-md" : ""}`}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
+    </div>
   );
 }
