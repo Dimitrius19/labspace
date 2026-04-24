@@ -9,6 +9,7 @@ import {
   formatDaysUntil,
   nextMilestone,
 } from "../lib/ventureUtils";
+import type { LatestCommit } from "../lib/ventureManifest";
 import { ProgressRing } from "./ProgressRing";
 
 const ACCENT_RING: Record<string, string> = {
@@ -30,9 +31,11 @@ const ACCENT_BAR: Record<string, string> = {
 export function VentureCard({
   venture,
   onClick,
+  latestCommit,
 }: {
   venture: Venture;
   onClick: () => void;
+  latestCommit?: LatestCommit | null;
 }) {
   const tp = taskProgress(venture);
   const mp = milestoneProgress(venture);
@@ -122,6 +125,15 @@ export function VentureCard({
           {nm && (
             <div className="mt-2 border-t border-slate-100 pt-2 text-[11px] text-slate-500">
               Next milestone: <span className="font-medium text-slate-700">{nm.title}</span> · {formatDate(nm.targetDate)}
+            </div>
+          )}
+          {latestCommit && (
+            <div className="mt-2 border-t border-slate-100 pt-2 text-[11px] text-slate-500">
+              <span className="uppercase tracking-wide">Last commit</span>
+              <div className="mt-0.5 line-clamp-1 text-slate-700">{latestCommit.message}</div>
+              <div className="text-[10px] text-slate-400">
+                {latestCommit.author} · {formatDate(latestCommit.date.slice(0, 10))}
+              </div>
             </div>
           )}
         </div>

@@ -1,5 +1,6 @@
 import { useVentures } from "../hooks/useVentures";
 import { VentureCard } from "./VentureCard";
+import { SyncBadge } from "./SyncBadge";
 import { taskProgress, blockingTasks, daysUntil, formatDate } from "../lib/ventureUtils";
 import { HEALTH_COLORS } from "../types";
 
@@ -8,7 +9,7 @@ export function VenturesOverview({
 }: {
   onOpenVenture: (id: string) => void;
 }) {
-  const { ventures } = useVentures();
+  const { ventures, commits, syncStatus, syncError, lastFetched, refetch } = useVentures();
 
   const totalTasks = ventures.reduce((n, v) => n + v.tasks.length, 0);
   const doneTasks = ventures.reduce((n, v) => n + v.tasks.filter((t) => t.done).length, 0);
@@ -32,6 +33,14 @@ export function VenturesOverview({
           <p className="mt-1 text-sm text-slate-500">
             Launch-readiness tracker for the three AI-enabled businesses in build.
           </p>
+          <div className="mt-2">
+            <SyncBadge
+              status={syncStatus}
+              error={syncError}
+              lastFetched={lastFetched}
+              onRefresh={refetch}
+            />
+          </div>
         </div>
         <div className="flex flex-wrap gap-3">
           <SummaryStat label="Ventures" value={ventures.length} />
@@ -42,7 +51,12 @@ export function VenturesOverview({
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {ventures.map((v) => (
-          <VentureCard key={v.id} venture={v} onClick={() => onOpenVenture(v.id)} />
+          <VentureCard
+            key={v.id}
+            venture={v}
+            onClick={() => onOpenVenture(v.id)}
+            latestCommit={commits[v.id]}
+          />
         ))}
       </div>
 
