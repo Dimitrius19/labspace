@@ -2,7 +2,9 @@ import {
   createContext,
   useContext,
   useCallback,
+  useEffect,
   useMemo,
+  useState,
   type ReactNode,
 } from "react";
 import { ventures as staticVentures } from "../data/ventures";
@@ -13,9 +15,21 @@ import type {
   Health,
   VentureOverrides,
 } from "../types";
+import {
+  mergeManifest,
+  type LatestCommit,
+  type VentureSyncResponse,
+} from "../lib/ventureManifest";
+
+export type SyncStatus = "idle" | "loading" | "synced" | "error" | "disabled";
 
 interface UseVenturesReturn {
   ventures: Venture[];
+  commits: Record<string, LatestCommit | null>;
+  syncStatus: SyncStatus;
+  syncError: string | null;
+  lastFetched: string | null;
+  refetch: () => void;
   getVenture: (id: string) => Venture | undefined;
   toggleTask: (ventureId: string, taskId: string) => void;
   toggleMilestone: (ventureId: string, milestoneId: string) => void;
@@ -54,10 +68,60 @@ export function VenturesProvider({ children }: { children: ReactNode }) {
     "labspace-ventures",
     {}
   );
+  const [manifests, setManifests] = useState<Record<string, Partial<Venture> | null>>({});
+  const [commits, setCommits] = useState<Record<string, LatestCommit | null>>({});
+  const [syncStatus, setSyncStatus] = useState<SyncStatus>("idle");
+  const [syncError, setSyncError] = useState<string | null>(null);
+  const [lastFetched, setLastFetched] = useState<string | null>(null);
+  const [refreshTick, setRefreshTick] = useState(0);
+
+  useEffect(() => {
+    let cancelled = false;
+    setSyncStatus("loading");
+    setSyncError(null);
+    fetch("/api/ventures")
+      .then(async (res) => {
+        if (!res.ok) {
+          const body = await res.text().catch(() => "");
+          if (res.status === 404) throw new Error("disabled");
+          throw new Error(body || `HTTP ${res.status}`);
+        }
+        return res.json() as Promise<VentureSyncResponse>;
+      })
+      .then((data) => {
+        if (cancelled) return;
+        const manifestMap: Record<string, Partial<Venture> | null> = {};
+        const commitMap: Record<string, LatestCommit | null> = {};
+        for (const v of data.ventures) {
+          manifestMap[v.id] = v.manifest;
+          commitMap[v.id] = v.latestCommit;
+        }
+        setManifests(manifestMap);
+        setCommits(commitMap);
+        setLastFetched(data.fetchedAt);
+        setSyncStatus("synced");
+      })
+      .catch((e: Error) => {
+        if (cancelled) return;
+        if (e.message === "disabled") {
+          setSyncStatus("disabled");
+        } else {
+          setSyncStatus("error");
+          setSyncError(e.message);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [refreshTick]);
 
   const ventures = useMemo<Venture[]>(
-    () => staticVentures.map((v) => applyOverrides(v, overrides[v.id])),
-    [overrides]
+    () =>
+      staticVentures.map((seed) => {
+        const withManifest = mergeManifest(seed, manifests[seed.id] ?? null);
+        return applyOverrides(withManifest, overrides[seed.id]);
+      }),
+    [manifests, overrides]
   );
 
   const stamp = () => new Date().toISOString();
@@ -156,6 +220,8 @@ export function VenturesProvider({ children }: { children: ReactNode }) {
     [setOverrides]
   );
 
+  const refetch = useCallback(() => setRefreshTick((n) => n + 1), []);
+
   const getVenture = useCallback(
     (id: string) => ventures.find((v) => v.id === id),
     [ventures]
@@ -163,6 +229,11 @@ export function VenturesProvider({ children }: { children: ReactNode }) {
 
   const value: UseVenturesReturn = {
     ventures,
+    commits,
+    syncStatus,
+    syncError,
+    lastFetched,
+    refetch,
     getVenture,
     toggleTask,
     toggleMilestone,
