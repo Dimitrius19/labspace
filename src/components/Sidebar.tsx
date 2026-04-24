@@ -63,12 +63,15 @@ function NavIcon({ type }: { type: string }) {
 export function Sidebar({
   activeView,
   onViewChange,
+  onOpenVenture,
 }: {
   activeView: ViewKey;
   onViewChange: (view: ViewKey) => void;
+  onOpenVenture: (id: string) => void;
 }) {
   const { ideas, filters, setFilter, clearFilters } = useIdeas();
   const { ventures } = useVentures();
+  const showIdeaFilters = activeView !== "ventures";
 
   const stageCounts = STAGES.map((s) => ({
     ...s,
@@ -113,8 +116,9 @@ export function Sidebar({
             return (
               <button
                 key={v.id}
-                onClick={() => onViewChange("ventures")}
-                className="flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-sm text-slate-400 transition-colors hover:text-slate-200"
+                onClick={() => onOpenVenture(v.id)}
+                title={`Open ${v.name}`}
+                className="flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-sm text-slate-400 transition-colors hover:bg-slate-800/50 hover:text-slate-200"
               >
                 <span className="flex items-center gap-2 truncate">
                   <span className={`h-1.5 w-1.5 flex-shrink-0 rounded-full ${h.dot}`} />
@@ -126,37 +130,41 @@ export function Sidebar({
           })}
         </div>
 
-        <div className="border-t border-slate-700 px-3 py-4">
-          <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
-            Idea Stages
-          </div>
-          {stageCounts.map((s) => (
-            <button
-              key={s.key}
-              onClick={() =>
-                setFilter("stage", filters.stage === s.key ? null : s.key)
-              }
-              className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm transition-colors ${
-                filters.stage === s.key
-                  ? "bg-slate-800 text-white"
-                  : "text-slate-400 hover:text-slate-200"
-              }`}
-            >
-              <span>{s.label}</span>
-              <span className="text-xs text-slate-500">{s.count}</span>
-            </button>
-          ))}
-          {filters.stage && (
-            <button
-              onClick={clearFilters}
-              className="mt-2 w-full rounded-md px-3 py-1 text-xs text-blue-400 hover:text-blue-300"
-            >
-              Clear filters
-            </button>
-          )}
-        </div>
+        {showIdeaFilters && (
+          <>
+            <div className="border-t border-slate-700 px-3 py-4">
+              <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
+                Idea Stages
+              </div>
+              {stageCounts.map((s) => (
+                <button
+                  key={s.key}
+                  onClick={() =>
+                    setFilter("stage", filters.stage === s.key ? null : s.key)
+                  }
+                  className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm transition-colors ${
+                    filters.stage === s.key
+                      ? "bg-slate-800 text-white"
+                      : "text-slate-400 hover:text-slate-200"
+                  }`}
+                >
+                  <span>{s.label}</span>
+                  <span className="text-xs text-slate-500">{s.count}</span>
+                </button>
+              ))}
+              {filters.stage && (
+                <button
+                  onClick={clearFilters}
+                  className="mt-2 w-full rounded-md px-3 py-1 text-xs text-blue-400 hover:text-blue-300"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
 
-        <TagCloud />
+            <TagCloud />
+          </>
+        )}
       </div>
     </aside>
   );

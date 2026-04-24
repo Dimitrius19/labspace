@@ -1,13 +1,14 @@
 import { useVentures } from "../hooks/useVentures";
 import { VentureCard } from "./VentureCard";
-import { VentureDetail } from "./VentureDetail";
-import { useState } from "react";
 import { taskProgress, blockingTasks, daysUntil, formatDate } from "../lib/ventureUtils";
 import { HEALTH_COLORS } from "../types";
 
-export function VenturesOverview() {
+export function VenturesOverview({
+  onOpenVenture,
+}: {
+  onOpenVenture: (id: string) => void;
+}) {
   const { ventures } = useVentures();
-  const [openId, setOpenId] = useState<string | null>(null);
 
   const totalTasks = ventures.reduce((n, v) => n + v.tasks.length, 0);
   const doneTasks = ventures.reduce((n, v) => n + v.tasks.filter((t) => t.done).length, 0);
@@ -41,7 +42,7 @@ export function VenturesOverview() {
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {ventures.map((v) => (
-          <VentureCard key={v.id} venture={v} onClick={() => setOpenId(v.id)} />
+          <VentureCard key={v.id} venture={v} onClick={() => onOpenVenture(v.id)} />
         ))}
       </div>
 
@@ -93,7 +94,6 @@ export function VenturesOverview() {
         </div>
       </div>
 
-      {openId && <VentureDetail ventureId={openId} onClose={() => setOpenId(null)} />}
     </div>
   );
 }
