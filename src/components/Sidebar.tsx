@@ -77,7 +77,7 @@ export function Sidebar({
 
   return (
     <aside className="flex h-screen w-60 flex-col border-r border-slate-700 bg-slate-900">
-      <div className="border-b border-slate-700 px-5 py-5">
+      <div className="shrink-0 border-b border-slate-700 px-5 py-5">
         <div className="text-xs font-medium uppercase tracking-wider text-slate-500">
           T-Life Capital
         </div>
@@ -85,77 +85,79 @@ export function Sidebar({
         <div className="text-[10px] font-normal tracking-wide text-slate-500">Workbench</div>
       </div>
 
-      <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.key}
-            onClick={() => onViewChange(item.key)}
-            className={`flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors ${
-              activeView === item.key
-                ? "bg-slate-800 font-medium text-white"
-                : "text-slate-400 hover:bg-slate-800/50 hover:text-slate-200"
-            }`}
-          >
-            <NavIcon type={item.icon} />
-            {item.label}
-          </button>
-        ))}
-      </nav>
-
-      <div className="border-t border-slate-700 px-3 py-4">
-        <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
-          Active Ventures
-        </div>
-        {ventures.map((v) => {
-          const { pct } = taskProgress(v);
-          const h = HEALTH_COLORS[v.health];
-          return (
+      <div className="flex-1 overflow-y-auto">
+        <nav className="space-y-1 px-3 py-4">
+          {NAV_ITEMS.map((item) => (
             <button
-              key={v.id}
-              onClick={() => onViewChange("ventures")}
-              className="flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-sm text-slate-400 transition-colors hover:text-slate-200"
+              key={item.key}
+              onClick={() => onViewChange(item.key)}
+              className={`flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors ${
+                activeView === item.key
+                  ? "bg-slate-800 font-medium text-white"
+                  : "text-slate-400 hover:bg-slate-800/50 hover:text-slate-200"
+              }`}
             >
-              <span className="flex items-center gap-2 truncate">
-                <span className={`h-1.5 w-1.5 flex-shrink-0 rounded-full ${h.dot}`} />
-                <span className="truncate">{v.name}</span>
-              </span>
-              <span className="text-[10px] text-slate-500">{pct}%</span>
+              <NavIcon type={item.icon} />
+              {item.label}
             </button>
-          );
-        })}
-      </div>
+          ))}
+        </nav>
 
-      <div className="border-t border-slate-700 px-3 py-4">
-        <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
-          Idea Stages
+        <div className="border-t border-slate-700 px-3 py-4">
+          <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
+            Active Ventures
+          </div>
+          {ventures.map((v) => {
+            const { pct } = taskProgress(v);
+            const h = HEALTH_COLORS[v.health];
+            return (
+              <button
+                key={v.id}
+                onClick={() => onViewChange("ventures")}
+                className="flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-sm text-slate-400 transition-colors hover:text-slate-200"
+              >
+                <span className="flex items-center gap-2 truncate">
+                  <span className={`h-1.5 w-1.5 flex-shrink-0 rounded-full ${h.dot}`} />
+                  <span className="truncate">{v.name}</span>
+                </span>
+                <span className="text-[10px] text-slate-500">{pct}%</span>
+              </button>
+            );
+          })}
         </div>
-        {stageCounts.map((s) => (
-          <button
-            key={s.key}
-            onClick={() =>
-              setFilter("stage", filters.stage === s.key ? null : s.key)
-            }
-            className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm transition-colors ${
-              filters.stage === s.key
-                ? "bg-slate-800 text-white"
-                : "text-slate-400 hover:text-slate-200"
-            }`}
-          >
-            <span>{s.label}</span>
-            <span className="text-xs text-slate-500">{s.count}</span>
-          </button>
-        ))}
-        {filters.stage && (
-          <button
-            onClick={clearFilters}
-            className="mt-2 w-full rounded-md px-3 py-1 text-xs text-blue-400 hover:text-blue-300"
-          >
-            Clear filters
-          </button>
-        )}
-      </div>
 
-      <TagCloud />
+        <div className="border-t border-slate-700 px-3 py-4">
+          <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
+            Idea Stages
+          </div>
+          {stageCounts.map((s) => (
+            <button
+              key={s.key}
+              onClick={() =>
+                setFilter("stage", filters.stage === s.key ? null : s.key)
+              }
+              className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm transition-colors ${
+                filters.stage === s.key
+                  ? "bg-slate-800 text-white"
+                  : "text-slate-400 hover:text-slate-200"
+              }`}
+            >
+              <span>{s.label}</span>
+              <span className="text-xs text-slate-500">{s.count}</span>
+            </button>
+          ))}
+          {filters.stage && (
+            <button
+              onClick={clearFilters}
+              className="mt-2 w-full rounded-md px-3 py-1 text-xs text-blue-400 hover:text-blue-300"
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
+
+        <TagCloud />
+      </div>
     </aside>
   );
 }
