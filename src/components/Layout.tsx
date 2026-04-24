@@ -6,14 +6,20 @@ export function Layout({
   children,
   activeView,
   onViewChange,
+  onOpenVenture,
 }: {
   children: ReactNode;
   activeView: ViewKey;
   onViewChange: (view: ViewKey) => void;
+  onOpenVenture: (id: string) => void;
 }) {
   return (
     <div className="flex h-screen overflow-hidden">
-      <Sidebar activeView={activeView} onViewChange={onViewChange} />
+      <Sidebar
+        activeView={activeView}
+        onViewChange={onViewChange}
+        onOpenVenture={onOpenVenture}
+      />
       <main className="flex-1 overflow-y-auto bg-slate-50 p-6">
         {children}
       </main>

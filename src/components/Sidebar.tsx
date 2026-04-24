@@ -1,9 +1,13 @@
 import { STAGES, type ViewKey } from "../types";
 import { useIdeas } from "../hooks/useIdeas";
+import { useVentures } from "../hooks/useVentures";
 import { TagCloud } from "./TagCloud";
+import { HEALTH_COLORS } from "../types";
+import { taskProgress } from "../lib/ventureUtils";
 
 const NAV_ITEMS: { key: ViewKey; label: string; icon: string }[] = [
-  { key: "dashboard", label: "Dashboard", icon: "chart" },
+  { key: "ventures", label: "Ventures", icon: "rocket" },
+  { key: "dashboard", label: "Idea Dashboard", icon: "chart" },
   { key: "funnel", label: "Funnel Board", icon: "funnel" },
   { key: "catalog", label: "Idea Catalog", icon: "grid" },
   { key: "geography", label: "By Geography", icon: "globe" },
@@ -13,6 +17,14 @@ const NAV_ITEMS: { key: ViewKey; label: string; icon: string }[] = [
 function NavIcon({ type }: { type: string }) {
   const cls = "h-4 w-4";
   switch (type) {
+    case "rocket":
+      return (
+        <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+        </svg>
+      );
     case "chart":
       return (
         <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,11 +63,15 @@ function NavIcon({ type }: { type: string }) {
 export function Sidebar({
   activeView,
   onViewChange,
+  onOpenVenture,
 }: {
   activeView: ViewKey;
   onViewChange: (view: ViewKey) => void;
+  onOpenVenture: (id: string) => void;
 }) {
   const { ideas, filters, setFilter, clearFilters } = useIdeas();
+  const { ventures } = useVentures();
+  const showIdeaFilters = activeView !== "ventures";
 
   const stageCounts = STAGES.map((s) => ({
     ...s,
@@ -64,7 +80,7 @@ export function Sidebar({
 
   return (
     <aside className="flex h-screen w-60 flex-col border-r border-slate-700 bg-slate-900">
-      <div className="border-b border-slate-700 px-5 py-5">
+      <div className="shrink-0 border-b border-slate-700 px-5 py-5">
         <div className="text-xs font-medium uppercase tracking-wider text-slate-500">
           T-Life Capital
         </div>
@@ -72,54 +88,84 @@ export function Sidebar({
         <div className="text-[10px] font-normal tracking-wide text-slate-500">Workbench</div>
       </div>
 
-      <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
-        {NAV_ITEMS.map((item) => (
-          <button
-            key={item.key}
-            onClick={() => onViewChange(item.key)}
-            className={`flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors ${
-              activeView === item.key
-                ? "bg-slate-800 font-medium text-white"
-                : "text-slate-400 hover:bg-slate-800/50 hover:text-slate-200"
-            }`}
-          >
-            <NavIcon type={item.icon} />
-            {item.label}
-          </button>
-        ))}
-      </nav>
+      <div className="flex-1 overflow-y-auto">
+        <nav className="space-y-1 px-3 py-4">
+          {NAV_ITEMS.map((item) => (
+            <button
+              key={item.key}
+              onClick={() => onViewChange(item.key)}
+              className={`flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors ${
+                activeView === item.key
+                  ? "bg-slate-800 font-medium text-white"
+                  : "text-slate-400 hover:bg-slate-800/50 hover:text-slate-200"
+              }`}
+            >
+              <NavIcon type={item.icon} />
+              {item.label}
+            </button>
+          ))}
+        </nav>
 
-      <div className="border-t border-slate-700 px-3 py-4">
-        <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
-          Stages
+        <div className="border-t border-slate-700 px-3 py-4">
+          <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
+            Active Ventures
+          </div>
+          {ventures.map((v) => {
+            const { pct } = taskProgress(v);
+            const h = HEALTH_COLORS[v.health];
+            return (
+              <button
+                key={v.id}
+                onClick={() => onOpenVenture(v.id)}
+                title={`Open ${v.name}`}
+                className="flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-sm text-slate-400 transition-colors hover:bg-slate-800/50 hover:text-slate-200"
+              >
+                <span className="flex items-center gap-2 truncate">
+                  <span className={`h-1.5 w-1.5 flex-shrink-0 rounded-full ${h.dot}`} />
+                  <span className="truncate">{v.name}</span>
+                </span>
+                <span className="text-[10px] text-slate-500">{pct}%</span>
+              </button>
+            );
+          })}
         </div>
-        {stageCounts.map((s) => (
-          <button
-            key={s.key}
-            onClick={() =>
-              setFilter("stage", filters.stage === s.key ? null : s.key)
-            }
-            className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm transition-colors ${
-              filters.stage === s.key
-                ? "bg-slate-800 text-white"
-                : "text-slate-400 hover:text-slate-200"
-            }`}
-          >
-            <span>{s.label}</span>
-            <span className="text-xs text-slate-500">{s.count}</span>
-          </button>
-        ))}
-        {filters.stage && (
-          <button
-            onClick={clearFilters}
-            className="mt-2 w-full rounded-md px-3 py-1 text-xs text-blue-400 hover:text-blue-300"
-          >
-            Clear filters
-          </button>
+
+        {showIdeaFilters && (
+          <>
+            <div className="border-t border-slate-700 px-3 py-4">
+              <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
+                Idea Stages
+              </div>
+              {stageCounts.map((s) => (
+                <button
+                  key={s.key}
+                  onClick={() =>
+                    setFilter("stage", filters.stage === s.key ? null : s.key)
+                  }
+                  className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm transition-colors ${
+                    filters.stage === s.key
+                      ? "bg-slate-800 text-white"
+                      : "text-slate-400 hover:text-slate-200"
+                  }`}
+                >
+                  <span>{s.label}</span>
+                  <span className="text-xs text-slate-500">{s.count}</span>
+                </button>
+              ))}
+              {filters.stage && (
+                <button
+                  onClick={clearFilters}
+                  className="mt-2 w-full rounded-md px-3 py-1 text-xs text-blue-400 hover:text-blue-300"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
+
+            <TagCloud />
+          </>
         )}
       </div>
-
-      <TagCloud />
     </aside>
   );
 }

@@ -90,7 +90,7 @@ export interface FilterState {
   search: string;
 }
 
-export type ViewKey = "dashboard" | "funnel" | "catalog" | "geography" | "category";
+export type ViewKey = "ventures" | "dashboard" | "funnel" | "catalog" | "geography" | "category";
 
 export const STAGES: { key: Stage; label: string; color: string }[] = [
   { key: "discovered", label: "Discovered", color: "slate" },
@@ -106,3 +106,101 @@ export const MARKETS: { key: MarketKey; label: string }[] = [
   { key: "europe", label: "Europe" },
   { key: "middle-east", label: "Middle East" },
 ];
+
+// ---------- Ventures (active businesses) ----------
+
+export type VentureStage =
+  | "ideation"
+  | "building"
+  | "private-beta"
+  | "public-beta"
+  | "launched"
+  | "scaling";
+
+export type TaskCategory =
+  | "product"
+  | "engineering"
+  | "design"
+  | "legal"
+  | "go-to-market"
+  | "operations"
+  | "finance";
+
+export type Health = "on-track" | "at-risk" | "blocked";
+
+export interface LaunchTask {
+  id: string;
+  title: string;
+  category: TaskCategory;
+  done: boolean;
+  priority: "p0" | "p1" | "p2";
+  notes?: string;
+}
+
+export interface VentureMilestone {
+  id: string;
+  title: string;
+  targetDate: string; // YYYY-MM-DD
+  done: boolean;
+  note?: string;
+}
+
+export interface Venture {
+  id: string;
+  slug: string;
+  name: string;
+  tagline: string;
+  description: string;
+  repoUrl: string;
+  liveUrl?: string;
+  stage: VentureStage;
+  health: Health;
+  launchTarget: string; // YYYY-MM-DD
+  kickoffDate: string;
+  techStack: string[];
+  team: { name: string; role: string }[];
+  nextAction: string;
+  risks: string[];
+  tasks: LaunchTask[];
+  milestones: VentureMilestone[];
+  accent: string; // tailwind color prefix, e.g. "blue"
+  notes: string;
+}
+
+export interface VentureOverrides {
+  [ventureId: string]: {
+    stage?: VentureStage;
+    health?: Health;
+    launchTarget?: string;
+    nextAction?: string;
+    notes?: string;
+    taskDone?: Record<string, boolean>;
+    milestoneDone?: Record<string, boolean>;
+    updatedAt?: string;
+  };
+}
+
+export const VENTURE_STAGES: { key: VentureStage; label: string; color: string }[] = [
+  { key: "ideation", label: "Ideation", color: "slate" },
+  { key: "building", label: "Building", color: "blue" },
+  { key: "private-beta", label: "Private Beta", color: "violet" },
+  { key: "public-beta", label: "Public Beta", color: "amber" },
+  { key: "launched", label: "Launched", color: "emerald" },
+  { key: "scaling", label: "Scaling", color: "teal" },
+];
+
+export const TASK_CATEGORIES: { key: TaskCategory; label: string; icon: string }[] = [
+  { key: "product", label: "Product", icon: "box" },
+  { key: "engineering", label: "Engineering", icon: "code" },
+  { key: "design", label: "Design", icon: "palette" },
+  { key: "legal", label: "Legal & Compliance", icon: "shield" },
+  { key: "go-to-market", label: "Go-to-Market", icon: "megaphone" },
+  { key: "operations", label: "Operations", icon: "gear" },
+  { key: "finance", label: "Finance", icon: "dollar" },
+];
+
+export const HEALTH_COLORS: Record<Health, { bg: string; text: string; dot: string; label: string }> = {
+  "on-track": { bg: "bg-emerald-50", text: "text-emerald-700", dot: "bg-emerald-500", label: "On track" },
+  "at-risk": { bg: "bg-amber-50", text: "text-amber-700", dot: "bg-amber-500", label: "At risk" },
+  blocked: { bg: "bg-rose-50", text: "text-rose-700", dot: "bg-rose-500", label: "Blocked" },
+};
