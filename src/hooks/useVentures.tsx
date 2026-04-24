@@ -115,6 +115,20 @@ export function VenturesProvider({ children }: { children: ReactNode }) {
     };
   }, [refreshTick]);
 
+  // Auto-poll every 60s (matches the edge function's CDN TTL) so changes
+  // committed in a venture repo show up without clicking Refresh. Pauses
+  // while the tab is hidden to avoid background cost.
+  useEffect(() => {
+    if (syncStatus === "disabled") return;
+    const tick = () => {
+      if (document.visibilityState === "visible") {
+        setRefreshTick((n) => n + 1);
+      }
+    };
+    const id = window.setInterval(tick, 60_000);
+    return () => window.clearInterval(id);
+  }, [syncStatus]);
+
   const ventures = useMemo<Venture[]>(
     () =>
       staticVentures.map((seed) => {
