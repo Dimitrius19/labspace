@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { useVentures } from "../hooks/useVentures";
 import type { LaunchTask, VentureStage, Health } from "../types";
 import {
@@ -12,6 +12,7 @@ import {
   tasksByCategory,
   daysUntil,
   formatDate,
+  formatDaysUntil,
 } from "../lib/ventureUtils";
 import { ProgressRing } from "./ProgressRing";
 
@@ -52,12 +53,24 @@ export function VentureDetail({
   const venture = getVenture(ventureId);
   const [tab, setTab] = useState<Tab>("overview");
 
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [onClose]);
+
   if (!venture) return null;
 
   const tp = taskProgress(venture);
   const mp = milestoneProgress(venture);
   const categories = tasksByCategory(venture);
-  const days = daysUntil(venture.launchTarget);
   const ringColor = ACCENT_RING[venture.accent] ?? "#3b82f6";
   const health = HEALTH_COLORS[venture.health];
 
@@ -132,7 +145,7 @@ export function VentureDetail({
         <div className="flex-1 overflow-y-auto p-6">
           {tab === "overview" && (
             <div className="space-y-6">
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <Field label="Stage">
                   <select
                     value={venture.stage}
@@ -155,7 +168,7 @@ export function VentureDetail({
                     <option value="blocked">Blocked</option>
                   </select>
                 </Field>
-                <Field label={`Launch target (${days < 0 ? `${Math.abs(days)}d overdue` : `in ${days}d`})`}>
+                <Field label={`Launch target (${formatDaysUntil(venture.launchTarget)})`}>
                   <input
                     type="date"
                     value={venture.launchTarget}
@@ -237,21 +250,28 @@ export function VentureDetail({
                     </div>
                     <ul className="divide-y divide-slate-100 rounded-lg border border-slate-200 bg-white">
                       {group.tasks.map((t) => (
-                        <li key={t.id} className="flex items-start gap-3 px-3 py-2.5">
-                          <input
-                            type="checkbox"
-                            checked={t.done}
-                            onChange={() => toggleTask(venture.id, t.id)}
-                            className="mt-1 h-4 w-4 cursor-pointer rounded border-slate-300 text-blue-600 focus:ring-blue-500"
-                          />
-                          <div className="flex-1">
-                            <div className={`text-sm ${t.done ? "text-slate-400 line-through" : "text-slate-800"}`}>
-                              {t.title}
+                        <li key={t.id}>
+                          <button
+                            type="button"
+                            onClick={() => toggleTask(venture.id, t.id)}
+                            className="flex w-full items-start gap-3 px-3 py-2.5 text-left transition-colors hover:bg-slate-50"
+                          >
+                            <input
+                              type="checkbox"
+                              checked={t.done}
+                              readOnly
+                              tabIndex={-1}
+                              className="pointer-events-none mt-1 h-4 w-4 rounded border-slate-300 text-blue-600"
+                            />
+                            <div className="flex-1">
+                              <div className={`text-sm ${t.done ? "text-slate-400 line-through" : "text-slate-800"}`}>
+                                {t.title}
+                              </div>
                             </div>
-                          </div>
-                          <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${PRIORITY_STYLES[t.priority]}`}>
-                            {t.priority}
-                          </span>
+                            <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase ${PRIORITY_STYLES[t.priority]}`}>
+                              {t.priority}
+                            </span>
+                          </button>
                         </li>
                       ))}
                     </ul>
@@ -266,17 +286,20 @@ export function VentureDetail({
               {venture.milestones.map((m) => {
                 const d = daysUntil(m.targetDate);
                 return (
-                  <div
+                  <button
                     key={m.id}
-                    className={`flex items-start gap-3 rounded-lg border px-4 py-3 ${
+                    type="button"
+                    onClick={() => toggleMilestone(venture.id, m.id)}
+                    className={`flex w-full items-start gap-3 rounded-lg border px-4 py-3 text-left transition-colors hover:bg-slate-50 ${
                       m.done ? "border-emerald-200 bg-emerald-50/40" : "border-slate-200 bg-white"
                     }`}
                   >
                     <input
                       type="checkbox"
                       checked={m.done}
-                      onChange={() => toggleMilestone(venture.id, m.id)}
-                      className="mt-1 h-4 w-4 cursor-pointer rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+                      readOnly
+                      tabIndex={-1}
+                      className="pointer-events-none mt-1 h-4 w-4 rounded border-slate-300 text-emerald-600"
                     />
                     <div className="flex-1">
                       <div className={`text-sm font-medium ${m.done ? "text-slate-500 line-through" : "text-slate-900"}`}>
@@ -286,12 +309,12 @@ export function VentureDetail({
                         target: {formatDate(m.targetDate)}
                         {!m.done && (
                           <span className={`ml-2 ${d < 0 ? "text-rose-600" : d < 30 ? "text-amber-600" : "text-slate-500"}`}>
-                            {d < 0 ? `${Math.abs(d)}d overdue` : `in ${d}d`}
+                            {formatDaysUntil(m.targetDate)}
                           </span>
                         )}
                       </div>
                     </div>
-                  </div>
+                  </button>
                 );
               })}
             </div>
