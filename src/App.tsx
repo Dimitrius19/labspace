@@ -1,16 +1,25 @@
-import { useState, type ReactNode } from "react";
+import { lazy, Suspense, useState, type ReactNode } from "react";
 import { IdeasProvider } from "./hooks/useIdeas";
 import { VenturesProvider } from "./hooks/useVentures";
 import { Layout } from "./components/Layout";
-import { Dashboard } from "./components/Dashboard";
-import { FunnelBoard } from "./components/FunnelBoard";
-import { IdeaCatalog } from "./components/IdeaCatalog";
-import { ByGeography } from "./components/ByGeography";
-import { ByCategoryView } from "./components/ByCategoryView";
-import { IdeaDetail } from "./components/IdeaDetail";
 import { VenturesOverview } from "./components/VenturesOverview";
 import { VentureDetail } from "./components/VentureDetail";
 import type { ViewKey, Idea } from "./types";
+
+const Dashboard = lazy(() => import("./components/Dashboard").then((m) => ({ default: m.Dashboard })));
+const FunnelBoard = lazy(() => import("./components/FunnelBoard").then((m) => ({ default: m.FunnelBoard })));
+const IdeaCatalog = lazy(() => import("./components/IdeaCatalog").then((m) => ({ default: m.IdeaCatalog })));
+const ByGeography = lazy(() => import("./components/ByGeography").then((m) => ({ default: m.ByGeography })));
+const ByCategoryView = lazy(() => import("./components/ByCategoryView").then((m) => ({ default: m.ByCategoryView })));
+const IdeaDetail = lazy(() => import("./components/IdeaDetail").then((m) => ({ default: m.IdeaDetail })));
+
+function ViewFallback() {
+  return (
+    <div className="flex h-full items-center justify-center text-sm text-slate-400">
+      Loading…
+    </div>
+  );
+}
 
 export default function App() {
   const [activeView, setActiveView] = useState<ViewKey>("ventures");
@@ -34,13 +43,15 @@ export default function App() {
           onViewChange={setActiveView}
           onOpenVenture={setOpenVentureId}
         >
-          {viewMap[activeView]}
+          <Suspense fallback={<ViewFallback />}>{viewMap[activeView]}</Suspense>
         </Layout>
         {selectedIdea && (
-          <IdeaDetail
-            ideaId={selectedIdea.id}
-            onClose={() => setSelectedIdea(null)}
-          />
+          <Suspense fallback={null}>
+            <IdeaDetail
+              ideaId={selectedIdea.id}
+              onClose={() => setSelectedIdea(null)}
+            />
+          </Suspense>
         )}
         {openVentureId && (
           <VentureDetail

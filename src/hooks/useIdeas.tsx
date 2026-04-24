@@ -1,12 +1,12 @@
 import {
   createContext,
   useContext,
+  useEffect,
   useState,
   useCallback,
   useMemo,
   type ReactNode,
 } from "react";
-import { ideas as staticIdeas } from "../data/ideas";
 import { useLocalStorage } from "./useLocalStorage";
 import type {
   Idea,
@@ -39,6 +39,15 @@ export function IdeasProvider({ children }: { children: ReactNode }) {
     tags: [],
     search: "",
   });
+  const [staticIdeas, setStaticIdeas] = useState<Idea[]>([]);
+
+  useEffect(() => {
+    let cancelled = false;
+    import("../data/ideas").then((mod) => {
+      if (!cancelled) setStaticIdeas(mod.ideas);
+    });
+    return () => { cancelled = true; };
+  }, []);
 
   const ideas = useMemo<Idea[]>(
     () =>
@@ -51,7 +60,7 @@ export function IdeasProvider({ children }: { children: ReactNode }) {
           notes: override.notes ?? idea.notes,
         };
       }),
-    [overrides]
+    [staticIdeas, overrides]
   );
 
   const filtered = useMemo(() => {

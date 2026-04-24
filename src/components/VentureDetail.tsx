@@ -187,7 +187,7 @@ export function VentureDetail({
                 <p className="text-sm leading-relaxed text-slate-700">{venture.description}</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                   <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Tech stack</h4>
                   <div className="flex flex-wrap gap-1.5">
