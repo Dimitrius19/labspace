@@ -35,6 +35,15 @@ export function daysUntil(dateStr: string): number {
   return Math.round((target - now) / (1000 * 60 * 60 * 24));
 }
 
+export function formatDaysUntil(dateStr: string): string {
+  const d = daysUntil(dateStr);
+  if (d === 0) return "today";
+  if (d === 1) return "tomorrow";
+  if (d === -1) return "1d overdue";
+  if (d < 0) return `${Math.abs(d)}d overdue`;
+  return `in ${d}d`;
+}
+
 export function formatDate(dateStr: string): string {
   const d = new Date(dateStr + "T00:00:00");
   return d.toLocaleDateString(undefined, {

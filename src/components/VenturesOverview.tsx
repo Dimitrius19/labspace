@@ -2,7 +2,7 @@ import { useVentures } from "../hooks/useVentures";
 import { VentureCard } from "./VentureCard";
 import { VentureDetail } from "./VentureDetail";
 import { useState } from "react";
-import { taskProgress, blockingTasks, daysUntil } from "../lib/ventureUtils";
+import { taskProgress, blockingTasks, daysUntil, formatDate } from "../lib/ventureUtils";
 import { HEALTH_COLORS } from "../types";
 
 export function VenturesOverview() {
@@ -25,14 +25,14 @@ export function VenturesOverview() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-end justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold text-slate-900">Active Ventures</h1>
           <p className="mt-1 text-sm text-slate-500">
             Launch-readiness tracker for the three AI-enabled businesses in build.
           </p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
           <SummaryStat label="Ventures" value={ventures.length} />
           <SummaryStat label="Overall progress" value={`${overallPct}%`} accent="text-blue-600" />
           <SummaryStat label="P0 blockers" value={totalBlockers} accent={totalBlockers > 0 ? "text-rose-600" : "text-emerald-600"} />
@@ -61,9 +61,9 @@ export function VenturesOverview() {
                       <div className="text-[11px] text-slate-500">{m.venture}</div>
                     </div>
                     <div className="flex items-center gap-3 text-right">
-                      <div className="text-xs text-slate-600">{m.targetDate}</div>
+                      <div className="text-xs text-slate-600">{formatDate(m.targetDate)}</div>
                       <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${d < 0 ? "bg-rose-50 text-rose-700" : d < 30 ? "bg-amber-50 text-amber-700" : "bg-slate-100 text-slate-600"}`}>
-                        {d < 0 ? `${Math.abs(d)}d late` : `${d}d`}
+                        {d < 0 ? `${Math.abs(d)}d late` : d === 0 ? "today" : `${d}d`}
                       </span>
                     </div>
                   </li>

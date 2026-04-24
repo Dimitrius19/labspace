@@ -6,6 +6,7 @@ import {
   blockingTasks,
   daysUntil,
   formatDate,
+  formatDaysUntil,
   nextMilestone,
 } from "../lib/ventureUtils";
 import { ProgressRing } from "./ProgressRing";
@@ -77,7 +78,7 @@ export function VentureCard({
               {formatDate(venture.launchTarget)}
             </div>
             <div className={`text-[10px] ${days < 0 ? "text-rose-600" : days < 60 ? "text-amber-600" : "text-slate-500"}`}>
-              {days < 0 ? `${Math.abs(days)}d overdue` : `in ${days}d`}
+              {formatDaysUntil(venture.launchTarget)}
             </div>
           </div>
           <div>
