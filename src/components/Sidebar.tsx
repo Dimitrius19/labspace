@@ -1,9 +1,13 @@
 import { STAGES, type ViewKey } from "../types";
 import { useIdeas } from "../hooks/useIdeas";
+import { useVentures } from "../hooks/useVentures";
 import { TagCloud } from "./TagCloud";
+import { HEALTH_COLORS } from "../types";
+import { taskProgress } from "../lib/ventureUtils";
 
 const NAV_ITEMS: { key: ViewKey; label: string; icon: string }[] = [
-  { key: "dashboard", label: "Dashboard", icon: "chart" },
+  { key: "ventures", label: "Ventures", icon: "rocket" },
+  { key: "dashboard", label: "Idea Dashboard", icon: "chart" },
   { key: "funnel", label: "Funnel Board", icon: "funnel" },
   { key: "catalog", label: "Idea Catalog", icon: "grid" },
   { key: "geography", label: "By Geography", icon: "globe" },
@@ -13,6 +17,12 @@ const NAV_ITEMS: { key: ViewKey; label: string; icon: string }[] = [
 function NavIcon({ type }: { type: string }) {
   const cls = "h-4 w-4";
   switch (type) {
+    case "rocket":
+      return (
+        <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 15l4 4m6-14a7 7 0 017 7c0 5-7 11-7 11S8 17 8 12a7 7 0 017-7zm0 5a2 2 0 100 4 2 2 0 000-4z" />
+        </svg>
+      );
     case "chart":
       return (
         <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,6 +66,7 @@ export function Sidebar({
   onViewChange: (view: ViewKey) => void;
 }) {
   const { ideas, filters, setFilter, clearFilters } = useIdeas();
+  const { ventures } = useVentures();
 
   const stageCounts = STAGES.map((s) => ({
     ...s,
@@ -91,7 +102,30 @@ export function Sidebar({
 
       <div className="border-t border-slate-700 px-3 py-4">
         <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
-          Stages
+          Active Ventures
+        </div>
+        {ventures.map((v) => {
+          const { pct } = taskProgress(v);
+          const h = HEALTH_COLORS[v.health];
+          return (
+            <button
+              key={v.id}
+              onClick={() => onViewChange("ventures")}
+              className="flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-sm text-slate-400 transition-colors hover:text-slate-200"
+            >
+              <span className="flex items-center gap-2 truncate">
+                <span className={`h-1.5 w-1.5 flex-shrink-0 rounded-full ${h.dot}`} />
+                <span className="truncate">{v.name}</span>
+              </span>
+              <span className="text-[10px] text-slate-500">{pct}%</span>
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="border-t border-slate-700 px-3 py-4">
+        <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
+          Idea Stages
         </div>
         {stageCounts.map((s) => (
           <button
