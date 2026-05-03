@@ -4244,5 +4244,359 @@ export const ideas: Idea[] = [
       "composite": 3.85
     },
     "ycRfsCorrelation": "YC wants ML-focused development environments. Porthos gives maritime operators a no-code LLM fine-tuning platform — shipping companies can train models on their proprietary voyage data."
+  },
+  {
+    "id": "pharma-skills-intelligence",
+    "title": "Aletheia GxP",
+    "ycCategory": "AI for Regulated Industries / Vertical SaaS",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Continuous, AI-driven competency assurance for pharma GMP manufacturing — the audit-grade skills intelligence layer above Veeva, MasterControl and ComplianceWire.",
+    "description": "EU GMP Annex 1 (operative August 2023) moved the regulatory bar from 'trained' to 'qualified, assessed initially and on an ongoing basis,' with mandatory annual gowning requalification, bi-annual aseptic process simulations per shift, and event-driven disqualification on failed media fills or deviation involvement. A typical 200-operator sterile site now generates 16,000-30,000 trackable competency artifacts per year, all maintained today in spreadsheets, paper files, and disconnected LMS systems. A single FDA Form 483 citing 21 CFR 211.25 (personnel qualifications) costs €0.5-2M to remediate; a Warning Letter €5-25M; a consent decree (Ranbaxy 2013, Genzyme 2010) €100-750M+.\n\nAletheia GxP is an additive intelligence layer — not an LMS replacement — that ingests training records from existing GxP systems (Veeva Vault Training, MasterControl, ComplianceWire, SAP SuccessFactors), maps them to a role-based GMP competency graph, monitors work artifacts (deviations, batch records, eLogbook entries, equipment logs, QA observations) for competency drift, and produces audit-grade continuous competency dashboards. The differentiated UX is the Inspector Mode: a read-only, time-bounded, auditor-credentialed view that any FDA, EMA, EOF, MHRA or PMDA inspector can access during an inspection to verify any operator's competency posture in real time — the artifact a QP shows the inspector at 09:30 on Day 1.\n\nThe wedge sits in white space between document-based GxP LMS (Veeva, MasterControl, ComplianceWire — none model competency as f(observed work outputs, error rates, deviation involvement)) and horizontal AI skills platforms (Workera, Eightfold — none have GAMP5/Part 11/EU AI Act validation). Architecture rule: every AI inference is decision-support, all task-allocation and disqualification decisions remain human-confirmed, classifying the system out of EU AI Act Annex III(4)(b) high-risk under Art. 6(3) — saves €1-3M and 6-12 months vs. high-risk conformity assessment. Three-tier pricing: T1 Core €18 PEPM + €30K/site, T2 Intelligence €26 PEPM + €40K/site, T3 Regulated €32 PEPM + €50K/site (with Inspector Mode and AI Act compliance pack). Reference 500-FTE customer: ~€150K ACV.",
+    "primaryMarket": "greece-cyprus",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "T-Life owns the design partner. ELPEN (largest independent Greek pharma manufacturer), WinMedica (~€300M revenue commercial arm in BC Partners process), and the Tripoli HPAPI facility (€65M+ investment, EOF-inspected, 416-equipment training matrix) provide a captive first customer with live data, marquee EU reference, and €400K+ committed ARR floor at launch. Greek + Cypriot mid-size generics (Vianex, Pharmathen, DEMO, Lavipharm, Uni-Pharma, Medochemie, Remedica) are 100-800 mfg FTE, family-owned, paper-or-Excel competency systems, and inspectable by EOF/EMA — the highest-pain, lowest-cycle-time beachhead in Europe.",
+    "expansionMarkets": [
+      {
+        "market": "balkans",
+        "fit": "green",
+        "note": "Sopharma, Hemofarm, Galenika, Alkaloid, Belupo, Antibiotice, Zentiva-RO — 12-18 qualifying logos with severe Annex 1 exposure and weak incumbent penetration. Beachhead extension Months 6-18."
+      },
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "Türkiye must be in the beachhead (Abdi Ibrahim, Bilim, Nobel, Sanovel, Deva, Eczacıbaşı — 12-18 qualifying logos); without it, qualifying-target count drops below Series A threshold. Italy (35-45 qualifying mid-size) and Iberia open Year 2 once GR/Balkan reference logos close."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC pharma manufacturing (Hikma, Julphar, SPIMACO, Saja) is GCC-DR / FDA / EMA inspected with similar pain; Elnova Dubai presence provides bridgehead but deal cycles longer. Year 2-3 expansion."
+      }
+    ],
+    "stage": "evaluating",
+    "tlifeAngle": "Only T-Life Capital can run this play. The wedge requires owning a real pharma manufacturing operation to design the product against. ELPEN/Tripoli provide live regulatory exposure (EOF inspection completed with 10 observations, GAMP5 validation already built), 416-equipment training matrix as anchor dataset, and a family-pharma network across Greece/Cyprus/Balkans that no horizontal competitor can replicate. Tripoli CDMO NewCo capture: 15-30% tech-transfer cycle compression worth 1-2pp EBITDA = €3-10M EV at CDMO multiples.",
+    "tags": [
+      "pharma",
+      "gmp",
+      "skills-intelligence",
+      "ai-native",
+      "vertical-saas",
+      "annex-1",
+      "part-11",
+      "gamp5",
+      "eu-ai-act",
+      "regulated-industries",
+      "tripoli",
+      "elpen"
+    ],
+    "addedDate": "2026-05-03",
+    "notes": "Phase 0 underwritten: 16-week, €150K budget, modeled on PawDesk template. Go criteria at Week 16: (1) 1 external paying pilot signed €20-50K, (2) Tripoli operational with live data, (3) 3+ pipeline opportunities at term-sheet stage, (4) single-tenant deploy time <6 weeks demonstrable, (5) first-pass GAMP5 categorization completed (Cat 4 platform, Cat 5 AI engine). Top three monitoring signals: Veeva R&D Day for Vault Skills/Vault Competency announcements; HealthStream pharma extension (~30% probability); /skills/ /competencies/ in Vault REST API release notes. Defensibility window vs Veeva: 36-48 months.",
+    "whyNow": "EU GMP Annex 1 (revised 22 Aug 2022, operative 25 Aug 2023; lyophilizer §8.123 operative Aug 2024) is no longer compatible with read-and-understood LMS as primary system of competency record — §7.4-7.7 mandate ongoing competency assessment with annual gowning requalification, §9.33-9.42 mandate bi-annual APS per shift, §7.13-7.14 codify event-driven disqualification. The EU AI Act (Reg. 2024/1689) Annex III(4)(b) general-application date is 2 Aug 2026, creating a 12-18 month architectural window to self-classify out under Art. 6(3) before deployer obligations crystallize. EMA Reflection Paper on AI in the Medicinal Product Lifecycle (Sept 2024), FDA Draft Guidance on AI/ML in Drug Manufacturing (2023), and the pending EU Annex 11 revision (final 2025-26) all legitimize AI-derived competency evidence if traceable, explainable, and validated. Eightfold's transformer-embedding architecture is an Annex 11 algorithm-transparency liability; horizontal AI players need $5-10M and 18-24 months to ship GAMP5/Part 11 compliance.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-4 (Phase 0)",
+        "milestone": "Regulatory deep-dive locked; 50 EU mid-size + 30 CDMO + 40 beachhead-fit target list finalized; 5 LOI conversations initiated with Greek/Balkan QDs; MVP ingests CSV + Veeva Vault Training sandbox; competency graph for sterile manufacturing operator (Annex 1 scope); Inspector Mode v1; 2 deviation-type AI scenarios; Tripoli HPAPI deployed with 416-equipment matrix; first-pass GAMP5 categorization completed; AI Act Art. 6(3) self-classification documented; 1 external paying pilot signed €20-50K."
+      },
+      {
+        "timeframe": "Month 5-12 (Seed €1.5-3M)",
+        "milestone": "5 design partners live (1 ELPEN/Tripoli + 4 external); €0.4-0.8M ARR; Tier 2 connectors (MasterControl, ComplianceWire, SuccessFactors) shipped; USDM/PharmaLex validation partner attestation; Lightcast taxonomy licensed; Annex 1 + OEB containment + APS competencies covered; first sponsor-audit-pass-through reference. Likely seed leads: Marathon VC, VentureFriends, Speedinvest Health, Heal Capital."
+      },
+      {
+        "timeframe": "Month 12-24",
+        "milestone": "8-15 logos at €100K avg ACV = €0.8-1.5M ARR; Türkiye (Abdi Ibrahim, Sanovel, Bilim) entered; 12-month proprietary GMP work-artifact corpus creates competency-drift signal moat — incumbents cannot replicate without back-filling 12 months of deviation/batch-record telemetry. Tier 3 connectors (TrackWise Digital, Werum PAS-X, Körber, Tulip) shipped."
+      },
+      {
+        "timeframe": "Month 24-36 (Series A €8-12M @ €40-60M post)",
+        "milestone": "30 logos, €4.5M ARR base case, 76% GM, 112% NRR, 2.1× burn multiple. Italy + Iberia entered. Product extends to medical device (FDA 21 CFR Part 820 / ISO 13485) and clinical trials competency (GCP). Roll-up optionality: ISOTrain modernization, GMP-Pro/Peither content acquisition. Likely Series A leads: Insight Partners (Aizon/ValGenesis adjacency), Index, Atomico, EQT Growth."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€100-150K Phase 0 + €1.5-3M Seed",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Phase 0 underwritten by T-Life Capital with ELPEN/Tripoli design-partner labor in-kind. €60K founder draw, €40K AI/data engineer, €16K regulatory advisor, €10K USDM/PharmaLex scoping, €8K cloud, €10K legal/IP/ISO 27001, €6K travel. Zero buffer. Seed sized for 18-month runway to PMF signal."
+    },
+    "competitors": [
+      {
+        "name": "Veeva Vault Training",
+        "type": "incumbent",
+        "geography": "Global / NYSE: VEEV",
+        "note": "Highest strategic risk. €60-120/user/yr, 10-15% EU pharma share growing fast on QualityDocs coattails. Veeva AI / Direct AI announced GA late 2025-26. Defensibility window 36-48 months; signals to monitor: R&D Day keynotes, /skills/ /competencies/ in Vault REST API."
+      },
+      {
+        "name": "MasterControl Training Excellence",
+        "type": "incumbent",
+        "geography": "Global / PE-owned (H&F)",
+        "note": "€80-150/user/yr, 12-18% EU share. MasterControl AI doc authoring shipped; manufacturing AI announced. Capital available via H&F. Vulnerability: closed ecosystem, weaker MES integration."
+      },
+      {
+        "name": "ComplianceWire",
+        "type": "incumbent",
+        "geography": "Global / UL Solutions (NYSE: ULS)",
+        "note": "Dominant in US pharma, $35-70/learner/yr + content. Rules-based adaptive only, no genuine AI competency model. Lowest vulnerability — strongest GxP validation reputation."
+      },
+      {
+        "name": "Workera",
+        "type": "startup",
+        "geography": "US / Andrew Ng, AI Fund",
+        "note": "$48M raised, ~$150-250M post. Horizontal AI skills assessment with no pharma logos. Cannot enter without GAMP5/Part 11/AI Act build ($5-10M, 18-24 months). 20-25% probability of GMP entry within 24mo."
+      },
+      {
+        "name": "Eightfold AI",
+        "type": "startup",
+        "geography": "US / SoftBank",
+        "note": "$410M raised, ~$1.2-1.8B. Transformer-embedding architecture is itself an Annex 11 algorithm-transparency liability — structural barrier to GMP entry."
+      },
+      {
+        "name": "ValGenesis VLMS",
+        "type": "incumbent",
+        "geography": "Global / PE (Vitruvian)",
+        "note": "Workforce 360 module is closest conceptual adjacency. 25-35% EU validation share, <10% Workforce share. Highest probability of feature-overlap collision."
+      },
+      {
+        "name": "TrackWise Digital (Sparta / Honeywell)",
+        "type": "incumbent",
+        "geography": "Global / Honeywell",
+        "note": "Acquired Jan 2021 for $1.3B. Highest fusion risk if Forge AI is wired into Experion + TrackWise + Sparta — DCS/MES/QMS adjacency unique to Honeywell."
+      },
+      {
+        "name": "HealthStream",
+        "type": "adjacent",
+        "geography": "US / NASDAQ: HSTM",
+        "note": "~$290M ARR healthcare competency platform. ~30% probability of pharma extension — closest cultural fit, public-company P&L capacity."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 5,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.95
+    },
+    "ycRfsCorrelation": "YC wants AI for regulated industries and vertical SaaS that incumbents cannot retrofit. Aletheia GxP is the AI-native competency intelligence layer for pharma GMP — Annex 1 (2023) made document-based LMS structurally insufficient, and EU AI Act compliance creates a 36-48 month moat against horizontal AI players who lack GAMP5/Part 11 validation."
+  },
+  {
+    "id": "peoplecert-ai-wrapper",
+    "title": "Praxis Layer",
+    "ycCategory": "AI Tutoring / Workforce Education",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "AI-native preparation, simulation and continuous-practice layer for ITIL, PRINCE2 and AXELOS certifications — the Duolingo-meets-LeetCode of regulated workforce credentials.",
+    "description": "PeopleCert (post-AXELOS acquisition from Capita / UK Cabinet Office in 2021) sits on the ITIL, PRINCE2, DevOps, Lean Six Sigma and LanguageCert IP estate, generating ~€250M revenue with 90%+ gross margins on flagship exams. The IP moat is durable because of ISO 17024, Ofqual, and UKVI SELT regulatory perimeter. What is not durable is the preparation layer above it: Accredited Training Organizations charge €1,000-3,000 per learner for classroom or VILT delivery against a static syllabus, with no adaptive practice, no work-artifact-grounded simulation, and no continuous post-credential practice. ChatGPT and Claude can already teach ITIL better than the median ATO — but cannot issue the credential.\n\nPraxis Layer is the AI-native preparation product feeding into PeopleCert exams. €20-40/month subscription, sold to enterprises that already buy ITIL/PRINCE2 vouchers in bulk (BT, Capgemini, Accenture, Deloitte, NHS Digital, Greek public sector). Core product: infinite practice question generation, scenario-based simulation of incident, problem and change management workflows, weakness diagnosis, predicted-pass scoring, and continuous post-credential practice (the 'Anki for ITIL practitioners' insight). Greek/Balkan/MENA beachhead is realistic given language and channel access via T-Life network. Wrapper not competitor: complementary to PeopleCert and ATPs, candidates pass at higher rates → ATPs sell more vouchers, PeopleCert revenue grows.\n\nExit thesis: €5-20M ARR business in 36 months, acquired by an ATP consolidator (QA, ILX, Fast Lane), by Coursera/Pluralsight as a vertical wedge, or by PeopleCert itself defensively. Lower ceiling than the pharma play but lower risk and faster cycle.",
+    "primaryMarket": "greece-cyprus",
+    "primaryMarketFit": "yellow",
+    "primaryMarketRationale": "Greece + Cyprus is small as endgame but high-fit as wedge: Greek public sector ITIL adoption is mandated for digital transformation programs, T-Life network includes corporate IT services buyers, and Greek/English bilingual delivery differentiates against UK-anchored ATPs. Real prize is EU + MENA expansion via channel partners.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "Primary market: UK, DACH, Nordics buy 60%+ of ITIL/PRINCE2 vouchers globally. Channel-partner sales motion through ATPs that want AI prep without building it themselves. Year 2 target."
+      },
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC public-sector digital transformation programs (Saudi Vision 2030, UAE We the UAE 2031) drive massive ITIL adoption. Elnova Dubai network provides distribution. €4-8K licensing potential per government contract."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller voucher volume but lower CAC and good content-localization beachhead before Western EU rollout."
+      }
+    ],
+    "stage": "exploring",
+    "tlifeAngle": "Lower priority than the pharma skills-intelligence play (which only T-Life can run). Praxis Layer is a generic wrapper play any AI-fluent founder could attempt — T-Life advantage is GR/MENA channel access and capital efficiency, not unfair product moat.",
+    "tags": [
+      "ai-tutoring",
+      "certification",
+      "peoplecert",
+      "itil",
+      "prince2",
+      "wrapper-play",
+      "workforce-education",
+      "b2b-saas"
+    ],
+    "addedDate": "2026-05-03",
+    "notes": "Lower-ceiling, lower-risk than pharma skills-intelligence (#pharma-skills-intelligence). Realistic 36mo outcome: €5-20M ARR, acquired by ATP consolidator or PeopleCert defensively. Run as Phase 0 only if pharma play stalls or as parallel low-burn experiment.",
+    "whyNow": "PeopleCert acquired AXELOS from Capita/UK Cabinet Office in 2021 for £380M+, consolidating ITIL 4 + PRINCE2 + MSP IP. ITIL 4 Foundation pass rates and time-to-pass have not improved despite 5+ years of generative AI availability — ATPs have no incentive to compress their own delivery margin. EU AI Act Annex III(3)(d) classifies AI for educational assessment as high-risk effective Aug 2026, creating a moat for compliant operators and a barrier for ChatGPT-wrapper hobbyists. PeopleCert online proctoring (€80M+ revenue line) is structurally exposed to AI-detection arms race — a complementary AI prep + simulation product that improves pass rates is a net positive for the certification body, not a threat.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "ITIL 4 Foundation + Practitioner content corpus built; adaptive practice engine live; 3 ATP partners signed in GR + MENA; 500 paying learners at €25/mo; first enterprise deal (50-200 seats) closed."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "Expand to PRINCE2 Foundation/Practitioner, DevOps, Agile; 5,000+ paying learners; 10 enterprise deals; channel partnerships with QA, ILX, Fast Lane, Global Knowledge. Content moat: largest curated ITIL/PRINCE2 scenario corpus outside PeopleCert itself."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "€5-15M ARR; PeopleCert formal partnership for shared revenue on voucher attach; expand to LanguageCert (UKVI SELT prep); evaluate AWS/Azure/GCP cert verticals as adjacent SKU. Exit window opens at €10M ARR with strategic ATP consolidator or defensive PeopleCert acquisition."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€200-400K",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Pure SaaS economics. Main costs: 1 content engineer with ITIL expertise (€80K), 1 full-stack engineer (€80K), AI inference (€5-15K/mo at scale), GTM (€60K Year 1)."
+    },
+    "competitors": [
+      {
+        "name": "Coursera (ITIL/PMI)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "MOOC-style ITIL content, no adaptive simulation, no proprietary AI tutor. Vulnerable to vertical specialist."
+      },
+      {
+        "name": "Pluralsight",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Enterprise IT skills, has ITIL paths but generic UX. Vista Equity-owned, slower product velocity."
+      },
+      {
+        "name": "QA / ILX / Fast Lane",
+        "type": "incumbent",
+        "geography": "UK/EU/Global",
+        "note": "Tier-1 ATPs. Channel partners not competitors — can be co-opted."
+      },
+      {
+        "name": "Generic ChatGPT/Claude usage",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Largest current substitute. Loses to vertical product on accuracy, scenario fidelity, and pass-prediction."
+      },
+      {
+        "name": "PeopleCert MyAxelos",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "PeopleCert's own subscription product. Static content, no AI. Unlikely to ship competing AI tutor before 2027."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 3,
+      "tlifeEdge": 2,
+      "competitiveGap": 3,
+      "capitalFit": 5,
+      "regulatoryRisk": 4,
+      "founderAvailability": 3,
+      "composite": 3.10
+    },
+    "ycRfsCorrelation": "YC wants AI tutors and vertical workforce-education products. Praxis Layer is the AI-native prep + simulation layer above the regulated certification perimeter — wraps PeopleCert's IP without competing with it, sells into enterprises already buying vouchers in bulk."
+  },
+  {
+    "id": "ai-ops-peer-body",
+    "title": "AgentOps Council",
+    "ycCategory": "AI Governance / Standards Bodies",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Author the canonical body of knowledge for agentic AI operations governance — the ITIL of AI systems lifecycle management — and own the regulated-perimeter assessment business for the next 30 years.",
+    "description": "Every billion-dollar regulated-credential business — ITIL, PRINCE2, PMI PMP, Scaled Agile SAFe, ITSQB software testing, IPMA project management — was once a peer-body that authored a framework, achieved ISO 17024 alignment, won one government's procurement endorsement, and then compounded for decades. The EU AI Act (Reg. 2024/1689) creates exactly this regulatory vacuum for AI systems lifecycle governance: high-risk AI deployers must demonstrate qualified personnel performing risk management, data governance, human oversight, and post-market monitoring (Arts. 9-15, 26), but no ISO 17024 scheme exists for 'AI system lifecycle manager,' 'AI risk officer,' or 'agentic workflow auditor.' The 18-24 month window between Aug 2026 (general application) and Aug 2027 (Annex I sectoral) is when the canonical framework gets written.\n\nAgentOps Council is the consortium structure that authors v1 of the Body of Knowledge, achieves ISO 17024 accreditation, and wins one EU member state's procurement endorsement (Greece, via T-Life public-sector access; Estonia, via existing e-government track record; Ireland, via EU-AI-Act enforcement domicile). Founding members: 3-5 anchor enterprises (one large bank, one large telco, one government digital agency, one pharma — ELPEN/WinMedica anchor), 2 academic institutions (NTUA, UCL or TU Delft), 1 standards body (ETSI or CEN-CENELEC), 2-3 advisory members from former AXELOS / PeopleCert / PMI leadership. Revenue lines (Year 3+): exam fees (€400-800/exam), accredited training organization royalties (15-25%), corporate licensing (€50-200K/yr), government contract endorsements (€500K-5M/contract), continuous CPD subscriptions.\n\nThis is what Scaled Agile (SAFe) did to PMI in the 2010s — authored a framework, sold the certification economy on top, reached $300M+ revenue in under a decade. The prize: a billion-dollar regulated-perimeter business with structural moats (ISO accreditation, government endorsement, network effects of accredited trainers) that compounds for 20-30 years.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "EU AI Act is the regulatory tailwind that creates the framework vacuum. Brussels-domiciled Council with EU-domain credibility is the only viable shape; Greece and Cyprus are useful only as endorsement-jurisdiction stepping stones, not endgame markets.",
+    "expansionMarkets": [
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Useful as one of the first EU member-state procurement endorsements via T-Life public-sector access. Not a meaningful TAM segment on its own."
+      },
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC AI national strategies (Saudi NAIS, UAE AI Strategy 2031) need governance frameworks; first-mover EU-aligned standard becomes the import. Year 3-4 expansion."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Public-sector digital transformation programs adopt EU-aligned standards by default; minimal direct effort needed."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "T-Life advantages: capital patience for 5-7 year build (no external VC pressure), ELPEN/WinMedica/Tripoli as anchor consortium members across pharma vertical, public-sector relationships in Greece for first endorsement. Disadvantages: this is a consortium-shaped opportunity that does not fit a single-founder venture model and requires a credible international Council Chair (former AXELOS, PMI, IEEE leadership) — recruit-driven, not capital-driven.",
+    "tags": [
+      "ai-governance",
+      "standards-body",
+      "iso-17024",
+      "eu-ai-act",
+      "certification",
+      "peer-body",
+      "long-horizon",
+      "consortium"
+    ],
+    "addedDate": "2026-05-03",
+    "notes": "Highest ceiling, hardest to start. 5-7 year build, consortium-shaped, recruit-driven. Park as long-horizon optionality unless a credible Council Chair (former AXELOS/PMI/IEEE leadership) becomes available. Re-evaluate quarterly as EU AI Act enforcement crystallizes through 2026-27.",
+    "whyNow": "EU AI Act entered into force 1 Aug 2024. General application of Annex III high-risk obligations is 2 Aug 2026 — exactly the inflection point that created ITIL (post-1989 UK government IT modernization), Sarbanes-Oxley auditor markets (post-2002), and GDPR DPO certification (post-2018). The 18-24 month window between regulatory effective date and enforcement maturity is when a canonical framework can establish dominance. Microsoft, Google, AWS are racing to publish AI governance content but all are vendor-conflicted and cannot operate the assessment perimeter (regulators will not endorse vendor-led certification of AI deployer competency). The neutral peer-body shape is the only structurally legitimate operator, and no incumbent (PMI, ISACA, IEEE) has yet shipped a comprehensive agentic AI ops framework — IEEE 7000-series is fragmented, ISACA AAIA is a single-cert wrapper, PMI Citizen Developer is adjacent.",
+    "roadToMoat": [
+      {
+        "timeframe": "Year 1",
+        "milestone": "Consortium incorporated (Brussels-domiciled non-profit + commercial subsidiary); 5 anchor founding members signed (1 bank, 1 telco, 1 government agency, 1 pharma anchor via ELPEN, 1 academic); Council Chair recruited (ex-AXELOS/PMI/IEEE leadership); v0.5 Body of Knowledge drafted; ISO 17024 application initiated."
+      },
+      {
+        "timeframe": "Year 2-3",
+        "milestone": "BoK v1.0 published; Foundation + Practitioner exam scheme designed and psychometrically validated; first 5 ATOs accredited; ISO 17024 awarded; first EU member-state procurement endorsement (target: Greece public sector via T-Life network, or Estonia via e-gov track record); 500 candidates pass Foundation exam."
+      },
+      {
+        "timeframe": "Year 3-5",
+        "milestone": "10,000+ certifications issued; 50+ accredited ATOs across EU; Practitioner + Auditor + Architect tier exams launched; 3 EU member-states endorsing; corporate licensing program live; €5-15M revenue, profitable. Acquisition interest from PeopleCert, PMI, ISACA, or PE consolidators (Hg, Vista) emerges."
+      },
+      {
+        "timeframe": "Year 5-7",
+        "milestone": "100K+ certifications; €30-100M revenue; structural moat (ISO accreditation + government endorsements + ATO network) makes displacement uneconomic for new entrants; exit options: sale to PeopleCert/PMI consolidator at €300M-1B, or hold as compounding annuity asset in T-Life portfolio."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€2-5M over 3 years",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Most cost is Council Chair salary (€200-300K/yr), 3-5 framework authors (€100-150K each), psychometrics consultancy for exam validation (€200-400K), ISO 17024 accreditation process (€150-300K), legal entity + governance (€100-200K), Years 1-3 marketing for first ATO recruitment (€500K). Revenue inflection at Year 3."
+    },
+    "competitors": [
+      {
+        "name": "PeopleCert / AXELOS",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Owns ITIL, PRINCE2, MSP. Most likely to extend into AI ops governance via ITIL 5 or new framework — but slow and ITIL-anchored. 18-24 month window before they ship."
+      },
+      {
+        "name": "PMI (Project Management Institute)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "PMI Citizen Developer cert is adjacent. Possible AI ops cert in 2026-27 but PMI is project-mgmt-anchored, not lifecycle-ops-anchored."
+      },
+      {
+        "name": "ISACA",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Advanced in AI Audit (AAIA) certification. Single-cert wrapper, not a comprehensive framework. Possible partner not competitor."
+      },
+      {
+        "name": "IEEE Standards Association",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "IEEE 7000-series ethics-aligned design standards. Fragmented, not bundled into a credential program. Possible content licensing partner."
+      },
+      {
+        "name": "Vendor-led certs (Microsoft, AWS, Google)",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "AI-900, AWS AI Practitioner, Google ML certs — all vendor-conflicted, cannot operate neutral assessment perimeter for regulated AI ops."
+      },
+      {
+        "name": "Anthropic / OpenAI / Cohere safety frameworks",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Vendor-published responsible AI guidance — not certification frameworks. Useful content sources, not competitors."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 5,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 1,
+      "composite": 3.30
+    },
+    "ycRfsCorrelation": "YC wants AI infrastructure and governance products. AgentOps Council is the regulatory-perimeter play — author the canonical agentic AI ops framework before PMI/ISACA/IEEE bundle one, ride the EU AI Act enforcement curve from 2026-2030, and own the assessment economy for 20-30 years (the SAFe-vs-PMI playbook applied to AI ops)."
   }
 ];
