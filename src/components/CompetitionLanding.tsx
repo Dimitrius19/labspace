@@ -158,7 +158,11 @@ export function CompetitionLanding() {
         ) : (
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
             {briefs.map((idea) => (
-              <article key={idea.id} className="rounded-2xl border border-slate-200 bg-white p-5">
+              <a
+                key={idea.id}
+                href={`/competition/briefs/${idea.id}`}
+                className="block rounded-2xl border border-slate-200 bg-white p-5 transition-all hover:border-violet-300 hover:shadow-sm"
+              >
                 <div className="text-[10px] font-medium uppercase tracking-widest text-violet-600">{idea.ycCategory}</div>
                 <h3 className="mt-1 text-base font-bold text-slate-900">{idea.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{idea.oneLiner}</p>
@@ -167,7 +171,8 @@ export function CompetitionLanding() {
                     <span key={t} className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] text-slate-600">{t}</span>
                   ))}
                 </div>
-              </article>
+                <div className="mt-3 text-[11px] font-medium text-violet-700">Read brief →</div>
+              </a>
             ))}
           </div>
         )}

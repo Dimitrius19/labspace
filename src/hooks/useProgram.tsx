@@ -76,6 +76,15 @@ export interface Team {
   notes?: string;
 }
 
+export interface ActivityEntry {
+  id: string;
+  at: string;
+  kind: string;
+  summary: string;
+}
+
+const ACTIVITY_CAP = 50;
+
 export interface ProgramOverrides {
   taskDone: Record<string, boolean>;
   milestoneDone: Record<string, boolean>;
@@ -86,6 +95,8 @@ export interface ProgramOverrides {
   applicants: Applicant[];
   mentors: Mentor[];
   teams: Team[];
+  activity: ActivityEntry[];
+  applicantNotes: Record<string, string>;
   updatedAt: string;
 }
 
@@ -99,6 +110,8 @@ const DEFAULT_OVERRIDES: ProgramOverrides = {
   applicants: [],
   mentors: [],
   teams: [],
+  activity: [],
+  applicantNotes: {},
   updatedAt: "",
 };
 
@@ -113,8 +126,20 @@ function ensureDefaults(raw: Partial<ProgramOverrides>): ProgramOverrides {
     applicants: raw.applicants ?? [],
     mentors: raw.mentors ?? [],
     teams: raw.teams ?? [],
+    activity: raw.activity ?? [],
+    applicantNotes: raw.applicantNotes ?? {},
     updatedAt: raw.updatedAt ?? "",
   };
+}
+
+function pushActivity(prev: ProgramOverrides, kind: string, summary: string): ProgramOverrides["activity"] {
+  const entry: ActivityEntry = {
+    id: `act-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 6)}`,
+    at: new Date().toISOString(),
+    kind,
+    summary,
+  };
+  return [entry, ...(prev.activity ?? [])].slice(0, ACTIVITY_CAP);
 }
 
 function applyOverrides(seed: Program, ov: ProgramOverrides): Program {
@@ -155,6 +180,7 @@ interface UseProgramReturn {
   addApplicant: (applicant: Omit<Applicant, "id">) => void;
   addApplicantsBulk: (applicants: Omit<Applicant, "id">[]) => void;
   setApplicantStage: (applicantId: string, stage: ApplicantStage) => void;
+  setApplicantNote: (applicantId: string, note: string) => void;
   removeApplicant: (applicantId: string) => void;
   // mentors
   addMentor: (m: Omit<Mentor, "id">) => void;
@@ -169,6 +195,7 @@ interface UseProgramReturn {
   unassignMember: (teamId: string, applicantId: string) => void;
   assignMentorToTeam: (teamId: string, mentorId: string) => void;
   unassignMentorFromTeam: (teamId: string, mentorId: string) => void;
+  clearActivity: () => void;
   reset: () => void;
 }
 
@@ -195,9 +222,11 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
       setOverrides((prev) => {
         const defaultDone = seed.tasks.find((t) => t.id === taskId)?.done ?? false;
         const current = prev.taskDone[taskId] ?? defaultDone;
+        const task = seed.tasks.find((t) => t.id === taskId);
         return {
           ...prev,
           taskDone: { ...prev.taskDone, [taskId]: !current },
+          activity: pushActivity(prev, "task-toggle", `${!current ? "✓" : "↺"} ${task?.title ?? taskId}`),
           updatedAt: stamp(),
         };
       });
@@ -210,9 +239,11 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
       setOverrides((prev) => {
         const defaultDone = seed.milestones.find((m) => m.id === milestoneId)?.done ?? false;
         const current = prev.milestoneDone[milestoneId] ?? defaultDone;
+        const m = seed.milestones.find((x) => x.id === milestoneId);
         return {
           ...prev,
           milestoneDone: { ...prev.milestoneDone, [milestoneId]: !current },
+          activity: pushActivity(prev, "milestone-toggle", `${!current ? "✓" : "↺"} milestone: ${m?.title ?? milestoneId}`),
           updatedAt: stamp(),
         };
       });
@@ -222,24 +253,33 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
 
   const setPhaseStatus = useCallback(
     (phaseId: string, status: ProgramPhaseStatus) => {
-      setOverrides((prev) => ({
-        ...prev,
-        phaseStatus: { ...prev.phaseStatus, [phaseId]: status },
-        updatedAt: stamp(),
-      }));
+      setOverrides((prev) => {
+        const ph = seed.phases.find((p) => p.id === phaseId);
+        return {
+          ...prev,
+          phaseStatus: { ...prev.phaseStatus, [phaseId]: status },
+          activity: pushActivity(prev, "phase-status", `Phase ${ph?.number ?? "?"} → ${status}`),
+          updatedAt: stamp(),
+        };
+      });
     },
-    [setOverrides]
+    [seed, setOverrides]
   );
 
   const toggleDecision = useCallback(
     (decisionId: string) => {
-      setOverrides((prev) => ({
-        ...prev,
-        decisionsLocked: { ...prev.decisionsLocked, [decisionId]: !prev.decisionsLocked[decisionId] },
-        updatedAt: stamp(),
-      }));
+      setOverrides((prev) => {
+        const dec = seed.openDecisions.find((d) => d.id === decisionId);
+        const next = !prev.decisionsLocked[decisionId];
+        return {
+          ...prev,
+          decisionsLocked: { ...prev.decisionsLocked, [decisionId]: next },
+          activity: pushActivity(prev, "decision-toggle", `${next ? "🔒 locked" : "🔓 unlocked"}: ${dec?.topic ?? decisionId}`),
+          updatedAt: stamp(),
+        };
+      });
     },
-    [setOverrides]
+    [seed, setOverrides]
   );
 
   const setOutreachStatus = useCallback(
@@ -249,6 +289,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
         return {
           ...prev,
           outreach: { ...prev.outreach, [institutionId]: { ...current, status } },
+          activity: pushActivity(prev, "outreach-status", `${institutionId.toUpperCase()} → ${status}`),
           updatedAt: stamp(),
         };
       });
@@ -358,6 +399,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
           selectedBriefIds: has
             ? prev.selectedBriefIds.filter((id) => id !== ideaId)
             : [...prev.selectedBriefIds, ideaId],
+          activity: pushActivity(prev, "brief-toggle", `${has ? "✗ deselected" : "✓ selected"} brief: ${ideaId}`),
           updatedAt: stamp(),
         };
       });
@@ -372,6 +414,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
         return {
           ...prev,
           applicants: [...prev.applicants, newApp],
+          activity: pushActivity(prev, "applicant-add", `+ applicant ${newApp.name} (${newApp.institution})`),
           updatedAt: stamp(),
         };
       });
@@ -381,9 +424,24 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
 
   const setApplicantStage = useCallback(
     (applicantId: string, stage: ApplicantStage) => {
+      setOverrides((prev) => {
+        const a = prev.applicants.find((x) => x.id === applicantId);
+        return {
+          ...prev,
+          applicants: prev.applicants.map((x) => (x.id === applicantId ? { ...x, stage } : x)),
+          activity: a ? pushActivity(prev, "applicant-stage", `${a.name} → ${stage}`) : prev.activity,
+          updatedAt: stamp(),
+        };
+      });
+    },
+    [setOverrides]
+  );
+
+  const setApplicantNote = useCallback(
+    (applicantId: string, note: string) => {
       setOverrides((prev) => ({
         ...prev,
-        applicants: prev.applicants.map((a) => (a.id === applicantId ? { ...a, stage } : a)),
+        applicantNotes: { ...prev.applicantNotes, [applicantId]: note },
         updatedAt: stamp(),
       }));
     },
@@ -425,6 +483,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
       setOverrides((prev) => ({
         ...prev,
         mentors: [...(prev.mentors ?? []), { ...m, id: genId("m") }],
+        activity: pushActivity(prev, "mentor-add", `+ ${m.kind === "advisor" ? "advisor" : "SME"} ${m.name} (${m.specialty})`),
         updatedAt: stamp(),
       }));
     },
@@ -465,6 +524,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
           ...(prev.teams ?? []),
           { ...team, id: genId("t"), status: "forming" as TeamStatus, memberIds: [], mentorIds: [] },
         ],
+        activity: pushActivity(prev, "team-add", `+ team ${team.name}${team.briefId ? "" : " (no brief yet)"}`),
         updatedAt: stamp(),
       }));
     },
@@ -495,11 +555,15 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
 
   const setTeamStatus = useCallback(
     (id: string, status: TeamStatus) => {
-      setOverrides((prev) => ({
-        ...prev,
-        teams: (prev.teams ?? []).map((t) => (t.id === id ? { ...t, status } : t)),
-        updatedAt: stamp(),
-      }));
+      setOverrides((prev) => {
+        const team = (prev.teams ?? []).find((t) => t.id === id);
+        return {
+          ...prev,
+          teams: (prev.teams ?? []).map((t) => (t.id === id ? { ...t, status } : t)),
+          activity: team ? pushActivity(prev, "team-status", `${team.name} → ${status}`) : prev.activity,
+          updatedAt: stamp(),
+        };
+      });
     },
     [setOverrides]
   );
@@ -564,6 +628,10 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     [setOverrides]
   );
 
+  const clearActivity = useCallback(() => {
+    setOverrides((prev) => ({ ...prev, activity: [], updatedAt: stamp() }));
+  }, [setOverrides]);
+
   const reset = useCallback(() => {
     setOverrides(DEFAULT_OVERRIDES);
   }, [setOverrides]);
@@ -585,6 +653,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     addApplicant,
     addApplicantsBulk,
     setApplicantStage,
+    setApplicantNote,
     removeApplicant,
     addMentor,
     updateMentor,
@@ -597,6 +666,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     unassignMember,
     assignMentorToTeam,
     unassignMentorFromTeam,
+    clearActivity,
     reset,
   };
 

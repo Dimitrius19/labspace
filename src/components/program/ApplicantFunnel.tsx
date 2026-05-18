@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useProgram, type ApplicantStage, type ApplicantRole, type Applicant } from "../../hooks/useProgram";
+import { ApplicantDetailModal } from "./ApplicantDetailModal";
 
 const STAGES: { key: ApplicantStage; label: string; accent: string }[] = [
   { key: "applied", label: "Applied", accent: "border-t-slate-400" },
@@ -32,6 +33,7 @@ export function ApplicantFunnel() {
   const [showImport, setShowImport] = useState(false);
   const [csvText, setCsvText] = useState("");
   const [importMsg, setImportMsg] = useState<string | null>(null);
+  const [openApplicantId, setOpenApplicantId] = useState<string | null>(null);
   const [draft, setDraft] = useState<{ name: string; institution: string; role: ApplicantRole }>({
     name: "",
     institution: "EKPA",
@@ -203,6 +205,7 @@ export function ApplicantFunnel() {
                   <ApplicantCard
                     key={a.id}
                     applicant={a}
+                    hasNote={!!overrides.applicantNotes[a.id]}
                     onAdvance={() => {
                       const idx = STAGES.findIndex((s) => s.key === a.stage);
                       if (idx < STAGES.length - 1) {
@@ -216,6 +219,7 @@ export function ApplicantFunnel() {
                       }
                     }}
                     onRemove={() => removeApplicant(a.id)}
+                    onOpen={() => setOpenApplicantId(a.id)}
                     canAdvance={STAGES.findIndex((s) => s.key === a.stage) < STAGES.length - 1}
                     canRetreat={STAGES.findIndex((s) => s.key === a.stage) > 0}
                   />
@@ -225,37 +229,49 @@ export function ApplicantFunnel() {
           );
         })}
       </div>
+      {openApplicantId && (
+        <ApplicantDetailModal applicantId={openApplicantId} onClose={() => setOpenApplicantId(null)} />
+      )}
     </div>
   );
 }
 
 function ApplicantCard({
   applicant,
+  hasNote,
   onAdvance,
   onRetreat,
   onRemove,
+  onOpen,
   canAdvance,
   canRetreat,
 }: {
   applicant: Applicant;
+  hasNote: boolean;
   onAdvance: () => void;
   onRetreat: () => void;
   onRemove: () => void;
+  onOpen: () => void;
   canAdvance: boolean;
   canRetreat: boolean;
 }) {
   const role = ROLES.find((r) => r.key === applicant.role)!;
   return (
     <div className="rounded-md border border-slate-200 bg-white px-2 py-1.5 shadow-sm">
-      <div className="flex items-start justify-between gap-1">
-        <div className="min-w-0">
-          <div className="truncate text-xs font-medium text-slate-900">{applicant.name}</div>
-          <div className="text-[10px] text-slate-500">{applicant.institution}</div>
+      <button onClick={onOpen} className="block w-full text-left">
+        <div className="flex items-start justify-between gap-1">
+          <div className="min-w-0">
+            <div className="truncate text-xs font-medium text-slate-900">
+              {applicant.name}
+              {hasNote && <span className="ml-1 text-violet-500" title="Has notes">●</span>}
+            </div>
+            <div className="text-[10px] text-slate-500">{applicant.institution}</div>
+          </div>
+          <span className={`flex-shrink-0 rounded-full px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wider ${role.chip}`}>
+            {role.label[0]}
+          </span>
         </div>
-        <span className={`flex-shrink-0 rounded-full px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wider ${role.chip}`}>
-          {role.label[0]}
-        </span>
-      </div>
+      </button>
       <div className="mt-1.5 flex items-center justify-between text-[10px]">
         <div className="flex gap-1">
           <button

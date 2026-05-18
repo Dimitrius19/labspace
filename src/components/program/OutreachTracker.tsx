@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useProgram, type OutreachStatus, type ContactStatus } from "../../hooks/useProgram";
+import { generateTemplates } from "../../lib/outreachTemplates";
+import { formatDate } from "../../lib/ventureUtils";
 
 const OUTREACH_STATUS_OPTIONS: { key: OutreachStatus; label: string; chip: string; dot: string }[] = [
   { key: "not-started", label: "Not started", chip: "bg-slate-100 text-slate-600", dot: "bg-slate-300" },
@@ -53,6 +55,11 @@ export function OutreachTracker() {
               status={state.status}
               contacts={state.contacts}
               log={state.log}
+              programName={program.name}
+              cohortKickoffDate={program.cohortKickoffDate}
+              demoDayDate={program.demoDayDate}
+              studioCheque={program.budget.cohortCapital}
+              applicationsOpen={"Aug 15, 2026"}
               onStatusChange={(s) => setOutreachStatus(pool.institutionId, s)}
               onAddContact={(c) => addContact(pool.institutionId, c)}
               onUpdateContact={(id, patch) => updateContact(pool.institutionId, id, patch)}
@@ -75,6 +82,11 @@ interface InstitutionCardProps {
   status: OutreachStatus;
   contacts: { id: string; name: string; role: string; email?: string; status: ContactStatus }[];
   log: { id: string; date: string; note: string }[];
+  programName: string;
+  cohortKickoffDate: string;
+  demoDayDate: string;
+  studioCheque: string;
+  applicationsOpen: string;
   onStatusChange: (s: OutreachStatus) => void;
   onAddContact: (c: { name: string; role: string; email?: string; status: ContactStatus }) => void;
   onUpdateContact: (id: string, patch: Partial<{ name: string; role: string; email: string; status: ContactStatus }>) => void;
@@ -86,6 +98,33 @@ interface InstitutionCardProps {
 function InstitutionCard(props: InstitutionCardProps) {
   const [newContact, setNewContact] = useState({ name: "", role: "", email: "" });
   const [logDraft, setLogDraft] = useState("");
+  const [showTemplates, setShowTemplates] = useState(false);
+  const [copiedKind, setCopiedKind] = useState<string | null>(null);
+
+  const facultyName = props.contacts[0]?.name;
+  const templates = generateTemplates({
+    programName: props.programName,
+    institutionShortName: props.shortName,
+    institutionFullName: props.fullName,
+    primaryHub: props.primaryHub,
+    facultyName,
+    cohortKickoffDate: formatDate(props.cohortKickoffDate),
+    demoDayDate: formatDate(props.demoDayDate),
+    applicationsOpen: props.applicationsOpen,
+    studioCheque: props.studioCheque,
+    senderName: "Dimitri",
+    senderTitle: "Founder",
+  });
+
+  const copyToClipboard = async (text: string, kind: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedKind(kind);
+      setTimeout(() => setCopiedKind(null), 1500);
+    } catch {
+      // ignore
+    }
+  };
 
   const submitContact = () => {
     if (!newContact.name.trim()) return;
@@ -106,12 +145,12 @@ function InstitutionCard(props: InstitutionCardProps) {
 
   return (
     <div className="rounded-xl border border-slate-200 bg-white">
-      <div className="flex items-baseline justify-between gap-2 border-b border-slate-100 px-5 py-4">
+      <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-100 px-5 py-4">
         <div>
           <h3 className="text-base font-bold text-slate-900">{props.shortName}</h3>
           <div className="text-[11px] text-slate-500">{props.fullName} · primary hub: <span className="font-medium text-violet-700">{props.primaryHub}</span></div>
         </div>
-        <div className="flex gap-1">
+        <div className="flex flex-wrap items-center gap-1">
           {OUTREACH_STATUS_OPTIONS.map((opt) => (
             <button
               key={opt.key}
@@ -123,8 +162,59 @@ function InstitutionCard(props: InstitutionCardProps) {
               {opt.label}
             </button>
           ))}
+          <button
+            onClick={() => setShowTemplates(!showTemplates)}
+            className={`ml-1 rounded-full border px-2.5 py-0.5 text-[11px] font-medium transition-colors ${showTemplates ? "border-slate-900 bg-slate-900 text-white" : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"}`}
+          >
+            ✉ Templates
+          </button>
         </div>
       </div>
+
+      {showTemplates && (
+        <div className="border-b border-slate-100 bg-slate-50/40 px-5 py-4">
+          <div className="mb-2 text-[10px] text-slate-500">
+            Merge field used: {facultyName ? <>faculty name = <span className="font-medium text-slate-700">{facultyName}</span></> : <>add a contact above to auto-fill the faculty name</>}.
+          </div>
+          <div className="space-y-3">
+            {templates.map((tpl) => (
+              <details key={tpl.kind} className="rounded-md border border-slate-200 bg-white">
+                <summary className="flex cursor-pointer items-center justify-between gap-2 px-3 py-2 text-xs font-medium text-slate-900 hover:bg-slate-50">
+                  <span>{tpl.label}</span>
+                  <span className="text-[10px] text-slate-400">{tpl.hint}</span>
+                </summary>
+                <div className="border-t border-slate-100 px-3 py-2">
+                  {tpl.subject && (
+                    <div className="mb-1 flex items-baseline gap-2 text-[11px]">
+                      <span className="font-semibold uppercase tracking-wider text-slate-500">Subject</span>
+                      <span className="text-slate-700">{tpl.subject}</span>
+                    </div>
+                  )}
+                  <pre className="max-h-72 overflow-y-auto whitespace-pre-wrap rounded border border-slate-100 bg-slate-50 p-2 font-sans text-[11px] leading-relaxed text-slate-700">
+                    {tpl.body}
+                  </pre>
+                  <div className="mt-2 flex justify-end gap-2">
+                    {tpl.subject && (
+                      <button
+                        onClick={() => copyToClipboard(`Subject: ${tpl.subject}\n\n${tpl.body}`, `${tpl.kind}-full`)}
+                        className="rounded bg-slate-900 px-2 py-1 text-[11px] font-medium text-white hover:bg-slate-800"
+                      >
+                        {copiedKind === `${tpl.kind}-full` ? "Copied ✓" : "Copy subject + body"}
+                      </button>
+                    )}
+                    <button
+                      onClick={() => copyToClipboard(tpl.body, `${tpl.kind}-body`)}
+                      className="rounded border border-slate-200 bg-white px-2 py-1 text-[11px] font-medium text-slate-700 hover:bg-slate-50"
+                    >
+                      {copiedKind === `${tpl.kind}-body` ? "Copied ✓" : "Copy body only"}
+                    </button>
+                  </div>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 gap-5 px-5 py-4 md:grid-cols-2">
         <div>

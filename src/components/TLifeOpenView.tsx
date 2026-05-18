@@ -2,6 +2,7 @@ import { lazy, Suspense, useState } from "react";
 import { useProgram } from "../hooks/useProgram";
 import type { ProgramPhaseStatus, ProgramTaskCategory, ProgramPriority } from "../data/programs";
 import { formatDate, formatDaysUntil } from "../lib/ventureUtils";
+import { programToIcs, downloadIcs } from "../lib/programIcs";
 
 const OutreachTracker = lazy(() => import("./program/OutreachTracker").then((m) => ({ default: m.OutreachTracker })));
 const BriefLibrary = lazy(() => import("./program/BriefLibrary").then((m) => ({ default: m.BriefLibrary })));
@@ -130,7 +131,7 @@ function TabFallback() {
 }
 
 function OverviewTab() {
-  const { program, overrides, toggleTask, toggleMilestone, setPhaseStatus, toggleDecision, reset } = useProgram();
+  const { program, overrides, toggleTask, toggleMilestone, setPhaseStatus, toggleDecision, clearActivity, reset } = useProgram();
 
   const tasksByCategory = (Object.keys(CATEGORY_LABEL) as ProgramTaskCategory[])
     .map((cat) => ({ category: cat, tasks: program.tasks.filter((t) => t.category === cat) }))
@@ -175,11 +176,25 @@ function OverviewTab() {
         })}
       </section>
 
-      {/* Key dates strip */}
-      <section className="grid grid-cols-1 gap-3 md:grid-cols-3">
-        <DateCard label="Kickoff" date={program.kickoffDate} accent="violet" />
-        <DateCard label="Demo Day" date={program.demoDayDate} accent="rose" />
-        <DateCard label="Studio cohort" date={program.cohortKickoffDate} accent="emerald" />
+      {/* Key dates strip + .ics export */}
+      <section className="space-y-2">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+          <DateCard label="Kickoff" date={program.kickoffDate} accent="violet" />
+          <DateCard label="Demo Day" date={program.demoDayDate} accent="rose" />
+          <DateCard label="Studio cohort" date={program.cohortKickoffDate} accent="emerald" />
+        </div>
+        <div className="flex justify-end">
+          <button
+            onClick={() => {
+              const ics = programToIcs(program);
+              downloadIcs(`${program.slug}.ics`, ics);
+            }}
+            className="rounded-md border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+            title="Download all phases + milestones as a calendar file"
+          >
+            📅 Export to calendar (.ics)
+          </button>
+        </div>
       </section>
 
       {/* Progress meter */}
@@ -417,6 +432,32 @@ function OverviewTab() {
         </div>
       </section>
 
+      {/* Activity feed */}
+      {(overrides.activity?.length ?? 0) > 0 && (
+        <section>
+          <div className="mb-3 flex items-baseline justify-between">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">Recent activity</h2>
+            <button onClick={clearActivity} className="text-[11px] text-slate-400 hover:text-slate-700">
+              Clear
+            </button>
+          </div>
+          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+            {(overrides.activity ?? []).slice(0, 20).map((entry, idx) => (
+              <div
+                key={entry.id}
+                className={`flex items-baseline gap-3 px-5 py-2 ${idx !== Math.min(19, (overrides.activity?.length ?? 1) - 1) ? "border-b border-slate-50" : ""}`}
+              >
+                <span className="w-16 flex-shrink-0 text-[10px] text-slate-400">
+                  {timeAgo(entry.at)}
+                </span>
+                <span className="text-xs text-slate-700">{entry.summary}</span>
+                <span className="ml-auto rounded-full bg-slate-100 px-2 py-0.5 text-[10px] text-slate-500">{entry.kind}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Footer: budget + team + reset */}
       <section className="grid grid-cols-1 gap-3 md:grid-cols-2">
         <div className="rounded-xl border border-slate-200 bg-white p-5">
@@ -460,6 +501,18 @@ function OverviewTab() {
       </div>
     </div>
   );
+}
+
+function timeAgo(iso: string): string {
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const s = Math.round(diffMs / 1000);
+  if (s < 60) return `${s}s ago`;
+  const m = Math.round(s / 60);
+  if (m < 60) return `${m}m ago`;
+  const h = Math.round(m / 60);
+  if (h < 24) return `${h}h ago`;
+  const d = Math.round(h / 24);
+  return `${d}d ago`;
 }
 
 function DateCard({ label, date, accent }: { label: string; date: string; accent: "violet" | "rose" | "emerald" }) {
