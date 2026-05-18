@@ -90,7 +90,7 @@ export interface FilterState {
   search: string;
 }
 
-export type ViewKey = "ventures" | "dashboard" | "funnel" | "catalog" | "geography" | "category";
+export type ViewKey = "ventures" | "open" | "dashboard" | "funnel" | "catalog" | "geography" | "category";
 
 export const STAGES: { key: Stage; label: string; color: string }[] = [
   { key: "discovered", label: "Discovered", color: "slate" },
