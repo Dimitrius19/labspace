@@ -48,6 +48,34 @@ export interface Applicant {
   notes?: string;
 }
 
+export type MentorKind = "advisor" | "sme";
+
+export interface Mentor {
+  id: string;
+  name: string;
+  kind: MentorKind;
+  specialty: string;
+  capacity: number;
+  email?: string;
+}
+
+export type TeamStatus =
+  | "forming"
+  | "building"
+  | "killed"
+  | "demo-day-qualified"
+  | "studio-offered";
+
+export interface Team {
+  id: string;
+  name: string;
+  briefId: string | null;
+  memberIds: string[];
+  mentorIds: string[];
+  status: TeamStatus;
+  notes?: string;
+}
+
 export interface ProgramOverrides {
   taskDone: Record<string, boolean>;
   milestoneDone: Record<string, boolean>;
@@ -56,6 +84,8 @@ export interface ProgramOverrides {
   outreach: Record<string, OutreachState>;
   selectedBriefIds: string[];
   applicants: Applicant[];
+  mentors: Mentor[];
+  teams: Team[];
   updatedAt: string;
 }
 
@@ -67,8 +97,25 @@ const DEFAULT_OVERRIDES: ProgramOverrides = {
   outreach: {},
   selectedBriefIds: [],
   applicants: [],
+  mentors: [],
+  teams: [],
   updatedAt: "",
 };
+
+function ensureDefaults(raw: Partial<ProgramOverrides>): ProgramOverrides {
+  return {
+    taskDone: raw.taskDone ?? {},
+    milestoneDone: raw.milestoneDone ?? {},
+    phaseStatus: raw.phaseStatus ?? {},
+    decisionsLocked: raw.decisionsLocked ?? {},
+    outreach: raw.outreach ?? {},
+    selectedBriefIds: raw.selectedBriefIds ?? [],
+    applicants: raw.applicants ?? [],
+    mentors: raw.mentors ?? [],
+    teams: raw.teams ?? [],
+    updatedAt: raw.updatedAt ?? "",
+  };
+}
 
 function applyOverrides(seed: Program, ov: ProgramOverrides): Program {
   return {
@@ -106,8 +153,22 @@ interface UseProgramReturn {
   toggleBrief: (ideaId: string) => void;
   // applicants
   addApplicant: (applicant: Omit<Applicant, "id">) => void;
+  addApplicantsBulk: (applicants: Omit<Applicant, "id">[]) => void;
   setApplicantStage: (applicantId: string, stage: ApplicantStage) => void;
   removeApplicant: (applicantId: string) => void;
+  // mentors
+  addMentor: (m: Omit<Mentor, "id">) => void;
+  updateMentor: (id: string, patch: Partial<Omit<Mentor, "id">>) => void;
+  removeMentor: (id: string) => void;
+  // teams
+  addTeam: (team: Omit<Team, "id" | "status" | "memberIds" | "mentorIds">) => void;
+  updateTeam: (id: string, patch: Partial<Omit<Team, "id">>) => void;
+  removeTeam: (id: string) => void;
+  setTeamStatus: (id: string, status: TeamStatus) => void;
+  assignMember: (teamId: string, applicantId: string) => void;
+  unassignMember: (teamId: string, applicantId: string) => void;
+  assignMentorToTeam: (teamId: string, mentorId: string) => void;
+  unassignMentorFromTeam: (teamId: string, mentorId: string) => void;
   reset: () => void;
 }
 
@@ -120,7 +181,9 @@ function genId(prefix: string) {
 }
 
 export function ProgramProvider({ children }: { children: ReactNode }) {
-  const [overrides, setOverrides] = useLocalStorage<ProgramOverrides>(STORAGE_KEY, DEFAULT_OVERRIDES);
+  const [rawOverrides, setRawOverrides] = useLocalStorage<ProgramOverrides>(STORAGE_KEY, DEFAULT_OVERRIDES);
+  const overrides = ensureDefaults(rawOverrides);
+  const setOverrides = setRawOverrides;
   const seed = staticPrograms[0];
 
   const program = useMemo(() => applyOverrides(seed, overrides), [seed, overrides]);
@@ -332,6 +395,169 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
       setOverrides((prev) => ({
         ...prev,
         applicants: prev.applicants.filter((a) => a.id !== applicantId),
+        teams: (prev.teams ?? []).map((t) => ({
+          ...t,
+          memberIds: t.memberIds.filter((m) => m !== applicantId),
+        })),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const addApplicantsBulk = useCallback(
+    (apps: Omit<Applicant, "id">[]) => {
+      if (apps.length === 0) return;
+      setOverrides((prev) => ({
+        ...prev,
+        applicants: [
+          ...prev.applicants,
+          ...apps.map((a) => ({ ...a, id: genId("a") })),
+        ],
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const addMentor = useCallback(
+    (m: Omit<Mentor, "id">) => {
+      setOverrides((prev) => ({
+        ...prev,
+        mentors: [...(prev.mentors ?? []), { ...m, id: genId("m") }],
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const updateMentor = useCallback(
+    (id: string, patch: Partial<Omit<Mentor, "id">>) => {
+      setOverrides((prev) => ({
+        ...prev,
+        mentors: (prev.mentors ?? []).map((m) => (m.id === id ? { ...m, ...patch } : m)),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const removeMentor = useCallback(
+    (id: string) => {
+      setOverrides((prev) => ({
+        ...prev,
+        mentors: (prev.mentors ?? []).filter((m) => m.id !== id),
+        teams: (prev.teams ?? []).map((t) => ({
+          ...t,
+          mentorIds: t.mentorIds.filter((mid) => mid !== id),
+        })),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const addTeam = useCallback(
+    (team: Omit<Team, "id" | "status" | "memberIds" | "mentorIds">) => {
+      setOverrides((prev) => ({
+        ...prev,
+        teams: [
+          ...(prev.teams ?? []),
+          { ...team, id: genId("t"), status: "forming" as TeamStatus, memberIds: [], mentorIds: [] },
+        ],
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const updateTeam = useCallback(
+    (id: string, patch: Partial<Omit<Team, "id">>) => {
+      setOverrides((prev) => ({
+        ...prev,
+        teams: (prev.teams ?? []).map((t) => (t.id === id ? { ...t, ...patch } : t)),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const removeTeam = useCallback(
+    (id: string) => {
+      setOverrides((prev) => ({
+        ...prev,
+        teams: (prev.teams ?? []).filter((t) => t.id !== id),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const setTeamStatus = useCallback(
+    (id: string, status: TeamStatus) => {
+      setOverrides((prev) => ({
+        ...prev,
+        teams: (prev.teams ?? []).map((t) => (t.id === id ? { ...t, status } : t)),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const assignMember = useCallback(
+    (teamId: string, applicantId: string) => {
+      setOverrides((prev) => ({
+        ...prev,
+        // Move applicant out of any other team they're in, then add to this team
+        teams: (prev.teams ?? []).map((t) => {
+          if (t.id === teamId) {
+            return t.memberIds.includes(applicantId)
+              ? t
+              : { ...t, memberIds: [...t.memberIds, applicantId] };
+          }
+          return { ...t, memberIds: t.memberIds.filter((m) => m !== applicantId) };
+        }),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const unassignMember = useCallback(
+    (teamId: string, applicantId: string) => {
+      setOverrides((prev) => ({
+        ...prev,
+        teams: (prev.teams ?? []).map((t) =>
+          t.id === teamId ? { ...t, memberIds: t.memberIds.filter((m) => m !== applicantId) } : t
+        ),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const assignMentorToTeam = useCallback(
+    (teamId: string, mentorId: string) => {
+      setOverrides((prev) => ({
+        ...prev,
+        teams: (prev.teams ?? []).map((t) =>
+          t.id === teamId && !t.mentorIds.includes(mentorId)
+            ? { ...t, mentorIds: [...t.mentorIds, mentorId] }
+            : t
+        ),
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const unassignMentorFromTeam = useCallback(
+    (teamId: string, mentorId: string) => {
+      setOverrides((prev) => ({
+        ...prev,
+        teams: (prev.teams ?? []).map((t) =>
+          t.id === teamId ? { ...t, mentorIds: t.mentorIds.filter((m) => m !== mentorId) } : t
+        ),
         updatedAt: stamp(),
       }));
     },
@@ -357,8 +583,20 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     removeLogEntry,
     toggleBrief,
     addApplicant,
+    addApplicantsBulk,
     setApplicantStage,
     removeApplicant,
+    addMentor,
+    updateMentor,
+    removeMentor,
+    addTeam,
+    updateTeam,
+    removeTeam,
+    setTeamStatus,
+    assignMember,
+    unassignMember,
+    assignMentorToTeam,
+    unassignMentorFromTeam,
     reset,
   };
 

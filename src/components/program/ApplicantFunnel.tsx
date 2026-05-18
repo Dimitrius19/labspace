@@ -27,13 +27,46 @@ const TARGETS: Record<ApplicantStage, number> = {
 };
 
 export function ApplicantFunnel() {
-  const { overrides, addApplicant, setApplicantStage, removeApplicant } = useProgram();
+  const { overrides, addApplicant, addApplicantsBulk, setApplicantStage, removeApplicant } = useProgram();
   const [showAdd, setShowAdd] = useState(false);
+  const [showImport, setShowImport] = useState(false);
+  const [csvText, setCsvText] = useState("");
+  const [importMsg, setImportMsg] = useState<string | null>(null);
   const [draft, setDraft] = useState<{ name: string; institution: string; role: ApplicantRole }>({
     name: "",
     institution: "EKPA",
     role: "hacker",
   });
+
+  const runImport = () => {
+    const lines = csvText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+    if (lines.length === 0) {
+      setImportMsg("No rows found.");
+      return;
+    }
+    const startsWithHeader = /^name\s*,/i.test(lines[0]);
+    const rows = startsWithHeader ? lines.slice(1) : lines;
+    const parsed: { name: string; institution: string; role: ApplicantRole; stage: "applied" }[] = [];
+    const validRoles: ApplicantRole[] = ["hacker", "hustler", "designer", "domain"];
+    const skipped: number[] = [];
+    rows.forEach((row, idx) => {
+      const cols = row.split(",").map((c) => c.trim());
+      const [name, institution = "Other", roleRaw = "hacker"] = cols;
+      if (!name) {
+        skipped.push(idx + (startsWithHeader ? 2 : 1));
+        return;
+      }
+      const role = (validRoles.includes(roleRaw.toLowerCase() as ApplicantRole)
+        ? roleRaw.toLowerCase()
+        : "hacker") as ApplicantRole;
+      parsed.push({ name, institution, role, stage: "applied" });
+    });
+    addApplicantsBulk(parsed);
+    setCsvText("");
+    setImportMsg(
+      `Imported ${parsed.length}${skipped.length > 0 ? ` · skipped ${skipped.length} blank` : ""}.`
+    );
+  };
 
   const submit = () => {
     if (!draft.name.trim()) return;
@@ -54,13 +87,52 @@ export function ApplicantFunnel() {
           <div className="text-sm text-slate-600">{overrides.applicants.length} applicants tracked</div>
           <div className="text-[11px] text-slate-400">Targets: 200 applied → 80 accepted → 60 demo-day finalists</div>
         </div>
-        <button
-          onClick={() => setShowAdd(!showAdd)}
-          className="rounded-md bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
-        >
-          {showAdd ? "Cancel" : "+ Add applicant"}
-        </button>
+        <div className="flex gap-2">
+          <button
+            onClick={() => {
+              setShowImport(!showImport);
+              setShowAdd(false);
+              setImportMsg(null);
+            }}
+            className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50"
+          >
+            {showImport ? "Cancel import" : "Bulk import CSV"}
+          </button>
+          <button
+            onClick={() => {
+              setShowAdd(!showAdd);
+              setShowImport(false);
+            }}
+            className="rounded-md bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+          >
+            {showAdd ? "Cancel" : "+ Add applicant"}
+          </button>
+        </div>
       </div>
+
+      {showImport && (
+        <div className="rounded-xl border border-slate-200 bg-white p-4">
+          <div className="mb-2 text-[11px] text-slate-500">
+            Paste rows as <code className="rounded bg-slate-100 px-1">name,institution,role</code>. Role = hacker / hustler / designer / domain (defaults to hacker). Header row optional.
+          </div>
+          <textarea
+            value={csvText}
+            onChange={(e) => setCsvText(e.target.value)}
+            placeholder="Maria Papadaki,EKPA,hacker&#10;Yannis Karras,NTUA,hustler&#10;Eleni Voulgari,AUEB,designer"
+            rows={6}
+            className="w-full rounded border border-slate-200 px-2 py-1.5 font-mono text-xs"
+          />
+          <div className="mt-2 flex items-center gap-2">
+            <button
+              onClick={runImport}
+              className="rounded bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+            >
+              Import
+            </button>
+            {importMsg && <span className="text-[11px] text-emerald-700">{importMsg}</span>}
+          </div>
+        </div>
+      )}
 
       {showAdd && (
         <div className="rounded-xl border border-slate-200 bg-white p-4">

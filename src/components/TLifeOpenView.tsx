@@ -6,8 +6,10 @@ import { formatDate, formatDaysUntil } from "../lib/ventureUtils";
 const OutreachTracker = lazy(() => import("./program/OutreachTracker").then((m) => ({ default: m.OutreachTracker })));
 const BriefLibrary = lazy(() => import("./program/BriefLibrary").then((m) => ({ default: m.BriefLibrary })));
 const ApplicantFunnel = lazy(() => import("./program/ApplicantFunnel").then((m) => ({ default: m.ApplicantFunnel })));
+const MentorsRoster = lazy(() => import("./program/MentorsRoster").then((m) => ({ default: m.MentorsRoster })));
+const TeamsBoard = lazy(() => import("./program/TeamsBoard").then((m) => ({ default: m.TeamsBoard })));
 
-type SubTab = "overview" | "outreach" | "briefs" | "funnel";
+type SubTab = "overview" | "outreach" | "briefs" | "funnel" | "mentors" | "teams";
 
 const PHASE_STATUS_STYLE: Record<ProgramPhaseStatus, { dot: string; chip: string }> = {
   upcoming: { dot: "bg-slate-300", chip: "bg-slate-100 text-slate-600" },
@@ -40,6 +42,8 @@ export function TLifeOpenView() {
   const briefsSelected = overrides.selectedBriefIds.length;
   const applicantsTracked = overrides.applicants.length;
   const institutionsSigned = Object.values(overrides.outreach).filter((o) => o.status === "signed").length;
+  const mentorsTracked = (overrides.mentors ?? []).length;
+  const teamsTracked = (overrides.teams ?? []).length;
 
   return (
     <div className="flex h-full flex-col">
@@ -58,11 +62,13 @@ export function TLifeOpenView() {
           </div>
           <h1 className="mt-2 text-2xl font-bold text-slate-900">{program.name}</h1>
           <p className="mt-1 max-w-3xl text-sm text-slate-600">{program.tagline}</p>
-          <nav className="mt-4 flex gap-1">
+          <nav className="mt-4 flex flex-wrap gap-1">
             <TabBtn label="Overview" active={tab === "overview"} onClick={() => setTab("overview")} />
             <TabBtn label="Outreach" badge={institutionsSigned > 0 ? `${institutionsSigned}/4` : undefined} active={tab === "outreach"} onClick={() => setTab("outreach")} />
             <TabBtn label="Briefs" badge={briefsSelected > 0 ? String(briefsSelected) : undefined} active={tab === "briefs"} onClick={() => setTab("briefs")} />
             <TabBtn label="Funnel" badge={applicantsTracked > 0 ? String(applicantsTracked) : undefined} active={tab === "funnel"} onClick={() => setTab("funnel")} />
+            <TabBtn label="Mentors" badge={mentorsTracked > 0 ? String(mentorsTracked) : undefined} active={tab === "mentors"} onClick={() => setTab("mentors")} />
+            <TabBtn label="Teams" badge={teamsTracked > 0 ? String(teamsTracked) : undefined} active={tab === "teams"} onClick={() => setTab("teams")} />
           </nav>
         </div>
       </header>
@@ -82,6 +88,16 @@ export function TLifeOpenView() {
         {tab === "funnel" && (
           <Suspense fallback={<TabFallback />}>
             <ApplicantFunnel />
+          </Suspense>
+        )}
+        {tab === "mentors" && (
+          <Suspense fallback={<TabFallback />}>
+            <MentorsRoster />
+          </Suspense>
+        )}
+        {tab === "teams" && (
+          <Suspense fallback={<TabFallback />}>
+            <TeamsBoard />
           </Suspense>
         )}
       </div>
@@ -126,21 +142,37 @@ function OverviewTab() {
   const totalTasks = program.tasks.length;
   const taskPct = totalTasks === 0 ? 0 : Math.round((tasksDone / totalTasks) * 100);
 
+  // Live KPI calculations from state
+  const liveCounts: Record<string, number> = {
+    Applications: overrides.applicants.length,
+    Accepted: overrides.applicants.filter((a) =>
+      ["accepted", "team-formed", "midpoint", "demo-day"].includes(a.stage)
+    ).length,
+    "Teams at Demo Day": (overrides.teams ?? []).filter(
+      (t) => t.status === "demo-day-qualified" || t.status === "studio-offered"
+    ).length,
+    "Studio offers": (overrides.teams ?? []).filter((t) => t.status === "studio-offered").length,
+  };
+
   return (
     <div className="space-y-8">
       <p className="max-w-3xl text-sm leading-relaxed text-slate-500">{program.description}</p>
 
-      {/* Hero KPIs */}
+      {/* Hero KPIs — now/target live */}
       <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
-        {program.kpis.map((kpi) => (
-          <div key={kpi.label} className="rounded-xl border border-slate-200 bg-white p-4">
-            <div className="text-[11px] font-medium uppercase tracking-wider text-slate-500">{kpi.label}</div>
-            <div className="mt-1 text-2xl font-bold text-slate-900">{kpi.target}</div>
-            <div className="mt-0.5 text-[11px] text-slate-500">
-              now: <span className="font-medium text-slate-700">{kpi.current}</span> {kpi.unit}
+        {program.kpis.map((kpi) => {
+          const live = liveCounts[kpi.label] ?? 0;
+          return (
+            <div key={kpi.label} className="rounded-xl border border-slate-200 bg-white p-4">
+              <div className="text-[11px] font-medium uppercase tracking-wider text-slate-500">{kpi.label}</div>
+              <div className="mt-1 flex items-baseline gap-2">
+                <span className={`text-2xl font-bold ${live > 0 ? "text-slate-900" : "text-slate-400"}`}>{live}</span>
+                <span className="text-xs text-slate-400">/ {kpi.target}</span>
+              </div>
+              <div className="text-[11px] text-slate-500">{kpi.unit}</div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
 
       {/* Key dates strip */}
