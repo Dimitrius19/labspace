@@ -3743,7 +3743,119 @@ export const ideas: Idea[] = [
       "founderAvailability": 2,
       "composite": 3.75
     },
-    "ycRfsCorrelation": "YC wants longevity products built on biomarkers people actively manage (#15 in the May-2026 list). WellSpan is the EU-compliant Function Health analog with an unfair distribution moat — pharmacy network + integrated supplement formulation — that incumbents cannot replicate."
+    "ycRfsCorrelation": "YC wants longevity products built on biomarkers people actively manage (#15 in the May-2026 list). WellSpan is the EU-compliant Function Health analog with an unfair distribution moat — pharmacy network + integrated supplement formulation — that incumbents cannot replicate.",
+    "tlifeAssetRefs": [
+      "elpen",
+      "winmedica",
+      "elnova-dubai",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "ws-a1",
+        "claim": "EU IVDR = Regulation 2017/746, fully applicable 26 May 2022 (MDR is 2017/745, applicable 26 May 2021)",
+        "source": "https://eur-lex.europa.eu/eli/reg/2017/746/oj",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ws-a2",
+        "claim": "Function Health reached ~200K paying members at $365/yr by May 2025 (price cut from $499 earlier in 2024-25)",
+        "source": "https://sacra.com/c/function-health/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ws-a3",
+        "claim": "Bioiatriki operates 72 diagnostic centres across Greece and Cyprus, EOPYY-contracted",
+        "source": "https://bioiatriki.gr/en/group/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ws-a4",
+        "claim": "NMN remains a Novel Food in EU; EFSA positive safety opinion May 2026; Commission authorisation pending — not legally sellable as EU food supplement at thesis date",
+        "source": "https://www.nutraingredients.com/Article/2026/05/13/efsa-gives-positive-safety-opinion-on-nmn/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Excluded from headline supplement stack."
+      },
+      {
+        "id": "ws-a5",
+        "claim": "Levine PhenoAge is published mortality-prediction biomarker (Levine et al. 2018, Aging; Liu et al. 2018, PLOS Medicine)",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5940111/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ws-a6",
+        "claim": "Greece has ~10,500 community pharmacies",
+        "source": "[ESTIMATE — Greek pharmacist association figure widely cited]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "Verify against Panhellenic Pharmaceutical Association annual report before external memo."
+      },
+      {
+        "id": "ws-a7",
+        "claim": "ELPEN has a consumer-facing EOF-registered food-supplement product line",
+        "source": "[REFUTED — not found in May-2026 validation search]",
+        "status": "refuted",
+        "lastChecked": "2026-05-16",
+        "note": "ELPEN has pharma manufacturing capability that could be extended to food supplements — that's a build, not existing IP. See tlifeAssets.ts#elpen for the canonical claim."
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ws-k1",
+        "hypothesis": "A working-age Greek/Cypriot retail customer will pay €40-60/month for a pharmacy-distributed biomarker + supplement protocol",
+        "experiment": "Pre-sell to 50 customers via 2 partner pharmacies in Attica with a paper-prototype dashboard and a placeholder supplement stack — collect signed annual commitments at €40/mo",
+        "costEur": 5000,
+        "durationWeeks": 4,
+        "killSignal": "<10 paid sign-ups across 2 pharmacies in 4 weeks",
+        "validateSignal": "≥25 paid sign-ups; ≥40% conversion from pharmacist-led conversation"
+      },
+      {
+        "id": "ws-k2",
+        "hypothesis": "ELPEN can produce 5 EU-compliant food-supplement SKUs with EOF dossiers in under 6 months at competitive unit cost",
+        "experiment": "Regulatory-affairs scoping engagement: detailed plan for 5 SKUs (omega-3, D3+K2, magnesium glycinate, NAC, creatine) with EOF dossier path, GMP cost per unit, lead time to first batch",
+        "costEur": 4000,
+        "durationWeeks": 6,
+        "killSignal": "EOF dossier path > 6 months OR unit cost >120% of Lanes/Power Health equivalent",
+        "validateSignal": "Dossier path < 4 months for all 5 SKUs AND unit cost ≤ 90% of incumbents"
+      },
+      {
+        "id": "ws-k3",
+        "hypothesis": "A Tier-1 Greek lab (Bioiatriki) will partner on an at-home phlebotomy + EOPYY-non-reimbursed biomarker workflow at unit economics that work",
+        "experiment": "Direct engagement with Bioiatriki business-development; target signed LOI with per-panel cost and revenue split",
+        "costEur": 2000,
+        "durationWeeks": 6,
+        "killSignal": "No LOI from any Tier-1 lab (Bioiatriki, Affidea, InterBalkan, Euromedica) in 6 weeks",
+        "validateSignal": "Signed LOI from at least 1 Tier-1 lab at per-panel cost <€55"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Pharmacy channel won't push subscriptions — pharmacist commission too thin vs OTC margin; pharmacists prefer one-shot supplement sales over recurring revenue with sign-up friction",
+        "likelihood": "high",
+        "earlySignal": "Pilot pharmacy commission negotiation in weeks 1-2 — if 'we need 25%+ of subscription revenue' is the floor, the unit economics break"
+      },
+      {
+        "cause": "ELPEN supplement SKU build is critical-path and slips beyond 6 months, killing GTM timing",
+        "likelihood": "medium",
+        "earlySignal": "Kill test ws-k2 results; ELPEN production R&D timeline review at week 4"
+      },
+      {
+        "cause": "Function Health (or copy-cat) enters EU via UK lab partnership (Randox, TDL) before our beachhead solidifies",
+        "likelihood": "medium",
+        "earlySignal": "Function Health UK job postings; Quest/Randox press releases on EU expansion"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.25,
+      "reaches10mArrBy36mo": 0.1,
+      "totalFailureBy36mo": 0.45,
+      "basisOfEstimate": "Function Health hit $50M ARR in 24 months in US on a Quest Diagnostics partnership with frictionless lab logistics. EU subscription-health adoption runs ~30-40% slower than US (Spotify, Netflix benchmarks). Pharmacy-channel partnership adds 6-12 months of negotiation/training. ELPEN supplement-SKU build is critical-path and adds another 3-6 months. Total failure band reflects high probability that one of the three kill tests fails."
+    }
   },
   {
     "id": "sme-bookkeeping-agent",
@@ -3852,7 +3964,125 @@ export const ideas: Idea[] = [
       "founderAvailability": 4,
       "composite": 3.75
     },
-    "ycRfsCorrelation": "YC wants bookkeeping agents that charge per transaction (#21 in the May-2026 list). Logos Books is the WhatsApp-native Greek-SME implementation with unfair pharmacy and industrial-park channel access — the channel solves the cold-start problem that kills most B2B-SaaS-for-SME plays."
+    "ycRfsCorrelation": "YC wants bookkeeping agents that charge per transaction (#21 in the May-2026 list). Logos Books is the WhatsApp-native Greek-SME implementation with unfair pharmacy and industrial-park channel access — the channel solves the cold-start problem that kills most B2B-SaaS-for-SME plays.",
+    "tlifeAssetRefs": [
+      "winmedica",
+      "altp",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "lb-a1",
+        "claim": "myDATA real-time invoice transmission has been mandatory in Greece since 1 November 2021",
+        "source": "https://sovos.com/vat/tax-rules/mydata-greece/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a2",
+        "claim": "Greek Law 5222/2025 sets B2B peppol e-invoicing mandate at 2 March 2026 (large businesses) and October 2026 (rest)",
+        "source": "https://edicomgroup.com/blog/greece-mandatory-electronic-invoice",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a3",
+        "claim": "Romania RO e-Factura B2B mandatory since 1 January 2024 (grace period to May 2024)",
+        "source": "https://www.piroi.com/post/ro-e-factura-mandatory-b2b-from-1-january-2024",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a4",
+        "claim": "Greek micro-SME count (<10 FTE) ~600K — load-bearing TAM number",
+        "source": "[ESTIMATE — Eurostat SBA 2024 implies ~700-820K total SMEs at ~96% micro-share = ~670-790K micro-SMEs]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "Requires ELSTAT structural business statistics primary-source confirmation before external memo."
+      },
+      {
+        "id": "lb-a5",
+        "claim": "Epsilon Net listed on Athens Stock Exchange since July 2020 (EPSr); owns Pylon ERP and acquired SingularLogic (now Epsilon SingularLogic)",
+        "source": "https://www.marketscreener.com/quote/stock/EPSILON-NET-S-A-18153983/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a6",
+        "claim": "Entersoft acquired SoftOne in October 2025; merged entity branded ENTERSOFTONE",
+        "source": "[CONFIRMED via May-2026 validation; SoftOne no longer independent]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a7",
+        "claim": "Claude Haiku 4.5 cost per typical receipt OCR + categorisation transaction is ~€0.003",
+        "source": "https://pricepertoken.com/pricing-page/model/anthropic-claude-haiku-4.5",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "$1/M input + $5/M output; ~2K input + 200 output tokens per receipt = $0.003 ≈ €0.0028."
+      },
+      {
+        "id": "lb-a8",
+        "claim": "Cyprus has comparable B2B e-invoicing mandate to Greece",
+        "source": "[REFUTED — Cyprus mandates only B2G e-invoicing since 2020; B2B not mandated until ViDA 2030]",
+        "status": "refuted",
+        "lastChecked": "2026-05-16",
+        "note": "Cyprus expansion is voluntary-onboarding only until ViDA 2030 — no regulatory tailwind."
+      }
+    ],
+    "killTests": [
+      {
+        "id": "lb-k1",
+        "hypothesis": "Greek micro-SMEs will switch from a logistis to a WhatsApp-native AI bookkeeper at €15/mo + €0.30/tx",
+        "experiment": "Cold-pitch 20 Attica pharmacy owners (a fast-to-reach micro-SME segment with predictable transaction volume) on the switch; require a verbal commitment to a 2-month trial",
+        "costEur": 3000,
+        "durationWeeks": 4,
+        "killSignal": "<2/20 commit to a trial",
+        "validateSignal": "≥7/20 commit; ≥3 sign a 2-month trial contract"
+      },
+      {
+        "id": "lb-k2",
+        "hypothesis": "The agent achieves ≥80% accuracy on Greek receipt-to-myDATA-line-item extraction at <€0.20 marginal cost",
+        "experiment": "Build a WhatsApp prototype + AADE myDATA submission flow; process 1,000 real receipts from 5 friendly pharmacies; measure accuracy vs human-labelled ground truth and per-receipt cost",
+        "costEur": 8000,
+        "durationWeeks": 6,
+        "killSignal": "<60% accuracy OR >€0.30 marginal cost",
+        "validateSignal": "≥80% accuracy AND <€0.20 marginal cost"
+      },
+      {
+        "id": "lb-k3",
+        "hypothesis": "Progressive OEE-licensed logistes will adopt Logos Books as a productivity layer rather than fight it",
+        "experiment": "Pitch 5 selected mid-size accounting firms (50-200 SME books) on a revenue-share partnership: their book migrates to Logos, they get €5/SME/mo revshare and reclaim 60% of their time",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "0/5 accept terms; OEE-association pushback or threat to pull licences",
+        "validateSignal": "≥2/5 sign a revshare LOI for a 50-SME pilot"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "AADE myDATA API reliability or rate limits make real-time per-transaction filing economically unviable",
+        "likelihood": "medium",
+        "earlySignal": "Kill test lb-k2 stress-tests the API; also direct engagement with AADE certification team in week 1"
+      },
+      {
+        "cause": "OEE-licensed logistes lobby for regulatory protection (e.g., 'only licensed logistes can submit myDATA on behalf of others') — kills the direct-to-SME play",
+        "likelihood": "medium",
+        "earlySignal": "Monitor OEE statements on AI bookkeeping; commission a legal opinion on the regulatory perimeter in week 2"
+      },
+      {
+        "cause": "Epsilon Net or ENTERSOFTONE ship a WhatsApp / per-transaction product before we hit critical mass",
+        "likelihood": "low",
+        "earlySignal": "Monitor product release notes and pricing pages quarterly; incumbents are SaaS-per-seat by DNA — pivoting is hard"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.12,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Romania RO e-Factura precedent: ~50K SMEs adopted cloud accounting solutions in the first 18 months post-mandate. Greek B2B mandate starts Mar 2026 (large) and Oct 2026 (rest); our 18-mo target window aligns with the steepest part of the adoption curve. €1M ARR requires ~5,000 paying SMEs at our blended €200/yr ACV — feasible at 1% of micro-SME TAM and ~10% share of net-new adopters. Lower bound: lobbyist pushback from logistes; upper bound: full adoption of agent-led bookkeeping by digital-native generation."
+    }
   },
   {
     "id": "on-device-gxp-inference",
@@ -3900,7 +4130,7 @@ export const ideas: Idea[] = [
       "trend-34-ai-defense"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Trend match: 36-list #27 (on-device AI for healthcare/legal/finance) + #18 (agent permissions, security, audit trails) + #2 (managed AI employees in regulated workflows) + #34 (AI-native defense and compliance tools). Hardware-anchored play — higher capex than pure SaaS, but defensibility profile is qualitatively different and complementary to Aletheia GxP. Aletheia and VaultEdge could ship as a bundle or be founded as a single dual-product company.\n\nValidation log (2026-05-16): Corrected gpt-oss release date — Aug 5 2025 (not 2024). Revised hardware reference: the prior '2x RTX 5090 = €20-40K' path is REFUTED because NVIDIA's consumer-GeForce EULA prohibits data-centre use and a GxP-validated appliance cannot ship with consumer cards; correct hardware reference is NVIDIA L40S or RTX PRO 6000 Blackwell (96GB, ~€8-12K, data-centre-licensed) in an OEM-validated 4U chassis with redundant PSU/IPMI/hot-swap/EU-CE — BOM €40-70K, sticker €100-150K. Comparable DGX Station A100 sticker is €91-137K turnkey. Hardware-inventory line item in capital plan increased from €150-250K to €250-400K to reflect realistic BOM. Corrected Hugging Face Inference Endpoints — VPC-attached managed cloud, not true on-prem; separate TGI/vLLM self-hosting is the real on-prem path. Llama 3.3 70B Q4 quant fits single A100 80GB but NVIDIA NIM recommends 2x80GB for production KV-cache headroom — note in roadmap. NVIDIA Run:ai acquisition closed Dec 2024 (announced Apr 2024). FDA Jan 2025 draft guidance confirmed. Veeva confirmed as multi-tenant-only with no on-prem variant. Aizon confirmed as Barcelona-HQ smart-mfg AI startup ~$30M raised."
+    "notes": "Trend match: 36-list #27 (on-device AI for healthcare/legal/finance) + #18 (agent permissions, security, audit trails) + #2 (managed AI employees in regulated workflows) + #34 (AI-native defense and compliance tools). Hardware-anchored play — higher capex than pure SaaS, but defensibility profile is qualitatively different and complementary to Aletheia GxP. Aletheia and VaultEdge could ship as a bundle or be founded as a single dual-product company.\n\nValidation log (2026-05-16): Corrected gpt-oss release date — Aug 5 2025 (not 2024). Revised hardware reference: the prior '2x RTX 5090 = €20-40K' path is REFUTED because NVIDIA's consumer-GeForce EULA prohibits data-centre use and a GxP-validated appliance cannot ship with consumer cards; correct hardware reference is NVIDIA L40S or RTX PRO 6000 Blackwell (96GB, ~€8-12K, data-centre-licensed) in an OEM-validated 4U chassis with redundant PSU/IPMI/hot-swap/EU-CE — BOM €40-70K, sticker €100-150K. Comparable DGX Station A100 sticker is €91-137K turnkey. Hardware-inventory line item in capital plan increased from €150-250K to €250-400K to reflect realistic BOM. Corrected Hugging Face Inference Endpoints — VPC-attached managed cloud, not true on-prem; separate TGI/vLLM self-hosting is the real on-prem path. Llama 3.3 70B Q4 quant fits single A100 80GB but NVIDIA NIM recommends 2x80GB for production KV-cache headroom — note in roadmap. NVIDIA Run:ai acquisition closed Dec 2024 (announced Apr 2024). FDA Jan 2025 draft guidance confirmed. Veeva confirmed as multi-tenant-only with no on-prem variant. Aizon confirmed as Barcelona-HQ smart-mfg AI startup ~$30M raised.",
     "whyNow": "Three converging factors. (1) Open-weight models (Llama 3.3 70B, Mistral Small 3.1, Qwen2.5 72B, gpt-oss 120B/20B — most released Dec 2024 through Aug 2025) crossed the 'good enough for narrow regulated tasks' threshold and run on a single NVIDIA L40S or RTX PRO 6000 Blackwell (96GB, ~€10K) in an OEM-validated chassis (BOM €40-70K — DIY whitebox is cheaper but not sellable as GxP-validated hardware; consumer RTX 5090 is excluded by NVIDIA's data-centre EULA). (2) EU AI Act Art. 6(3) self-classification pathway (effective Aug 2026) gives operators a legal route to deploy decision-support AI without high-risk conformity assessment — but only on validated software. (3) Cloud LLM providers (OpenAI, Anthropic) are still unwilling to sign GxP validation contracts at the model level, leaving a vacuum that on-prem inference appliances fill. Veeva and MasterControl will not enter this hardware category (breaks their multi-tenant model — Veeva is explicit that Vault is true multi-tenant with no on-premises version); horizontal hardware-AI players (Lambda Labs, NVIDIA post-Run:ai acquisition Apr 2024) do not have the GxP validation know-how.",
     "roadToMoat": [
       {
@@ -3970,6 +4200,122 @@ export const ideas: Idea[] = [
       "founderAvailability": 2,
       "composite": 3.85
     },
-    "ycRfsCorrelation": "YC wants on-device AI for regulated industries where data must stay local (#27 in the May-2026 list) and agent permissions/security/audit infrastructure (#18). VaultEdge is the GxP-pharma-first implementation, with Tripoli as design partner and natural bundle with Aletheia GxP — the SaaS+appliance pair becomes the regulated-industry-AI reference architecture for Southern Europe."
+    "ycRfsCorrelation": "YC wants on-device AI for regulated industries where data must stay local (#27 in the May-2026 list) and agent permissions/security/audit infrastructure (#18). VaultEdge is the GxP-pharma-first implementation, with Tripoli as design partner and natural bundle with Aletheia GxP — the SaaS+appliance pair becomes the regulated-industry-AI reference architecture for Southern Europe.",
+    "tlifeAssetRefs": [
+      "elpen",
+      "tripoli-hpapi",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "ve-a1",
+        "claim": "Llama 3.3 70B released by Meta on 6 December 2024",
+        "source": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ve-a2",
+        "claim": "gpt-oss released by OpenAI on 5 August 2025 (120B + 20B parameter open-weight models, Apache 2.0)",
+        "source": "https://openai.com/index/introducing-gpt-oss/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ve-a3",
+        "claim": "NVIDIA consumer GeForce EULA prohibits use of GeForce cards in datacenters (excludes consumer RTX 5090 from validated GxP appliance BOM)",
+        "source": "https://www.nvidia.com/en-us/drivers/geforce-license/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ve-a4",
+        "claim": "EU AI Act Art. 6(3) self-classification path is available for AI systems performing narrow preparatory / decision-support tasks where humans retain control over regulated decisions",
+        "source": "https://artificialintelligenceact.eu/article/6/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ve-a5",
+        "claim": "Veeva Vault is true multi-tenant SaaS with no on-premises variant",
+        "source": "https://intuitionlabs.ai/articles/veeva-vault-cloud-content-management-platform-for-life-sciences",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ve-a6",
+        "claim": "NVIDIA acquired Run:ai (announced April 2024, closed December 2024, reported ~$700M)",
+        "source": "https://techcrunch.com/2024/04/24/nvidia-acquires-ai-workload-management-startup-runai/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ve-a7",
+        "claim": "GxP-validated OEM appliance BOM with data-centre-licensed GPU (L40S or RTX PRO 6000 Blackwell) lands at €40-70K; DGX Station A100 reference sticker is €91-137K",
+        "source": "[ESTIMATE — build-up from L40S/RTX PRO 6000 ~€8-12K + 4U validated chassis ~€20-35K + redundancy/CE certification overhead]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "Get a real BOM quote from Supermicro or Dell EMC at Phase 0 week 2; the prior '€20-40K' figure was DIY-whitebox-only and not GxP-sellable."
+      },
+      {
+        "id": "ve-a8",
+        "claim": "FDA Jan 2025 Draft Guidance: 'Considerations for the Use of AI to Support Regulatory Decision-Making for Drug and Biological Products'",
+        "source": "https://www.federalregister.gov/documents/2025/01/07/2024-31542/considerations-for-the-use-of-artificial-intelligence-to-support-regulatory-decision-making-for-drug",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ve-k1",
+        "hypothesis": "An open-weight 70B model on a single L40S can achieve ≥90% accuracy on Greek-language batch-record review for sterile manufacturing at ≥5 inferences/minute",
+        "experiment": "Acquire 1 L40S + chassis; fine-tune Llama 3.3 70B on 5 real Tripoli batch records (anonymised); benchmark accuracy vs QA-reviewer ground truth and throughput",
+        "costEur": 22000,
+        "durationWeeks": 6,
+        "killSignal": "<80% accuracy OR <2 inferences/minute under realistic prompt load",
+        "validateSignal": "≥90% accuracy AND ≥5 inferences/minute; QA reviewer ranks AI output as 'usable with minor edits'"
+      },
+      {
+        "id": "ve-k2",
+        "hypothesis": "Mid-size EU pharma QA directors will commit budget to a €100-150K capex appliance + €30-60K/yr support, rather than insisting on SaaS opex",
+        "experiment": "Pitch 5 mid-size EU pharma QA directors (Vianex, Pharmathen, Sopharma, Hemofarm, Krka-like) on the appliance economics; target signed LOI with budget approval mechanism",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "0/5 say 'we can budget within 12 months'; capex friction kills every conversation",
+        "validateSignal": "≥2/5 sign LOI with named-decision-maker timeline"
+      },
+      {
+        "id": "ve-k3",
+        "hypothesis": "USDM Life Sciences or PharmaLex can deliver a GAMP5 Cat 4/5 validation pack for VaultEdge in <6 months at <€200K",
+        "experiment": "Scoping engagement with both; request fixed-price proposal for IQ/OQ/PQ + Cat-5 AI engine validation + AI Act Art. 6(3) documentation",
+        "costEur": 10000,
+        "durationWeeks": 6,
+        "killSignal": "Both quote >€400K or >9 months",
+        "validateSignal": "At least one quotes <€200K AND <6 months"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Pharma buyers will not accept capex hardware sales — they want SaaS opex with no on-prem footprint; €100-150K capex is a non-starter for procurement",
+        "likelihood": "high",
+        "earlySignal": "Kill test ve-k2 results in weeks 6-8 — if 0/5 LOI, pivot to managed-on-prem SaaS pricing model"
+      },
+      {
+        "cause": "Open-weight model quality plateaus on free-text deviation analysis — Llama 3.3 70B / Mistral Small not good enough for the most valuable use case (root-cause inference)",
+        "likelihood": "medium",
+        "earlySignal": "Kill test ve-k1 results; also monitor gpt-oss 120B benchmarks on regulated-document tasks"
+      },
+      {
+        "cause": "Veeva ships an OEM partner appliance (e.g., Vault Edge via NVIDIA partnership) and absorbs the category before we hit critical mass",
+        "likelihood": "low",
+        "earlySignal": "Monitor Veeva R&D Day (Sept) keynotes; track Vault REST API release notes for on-prem hooks; LinkedIn job postings for 'Vault Edge' or on-prem PMs"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.2,
+      "reaches10mArrBy36mo": 0.08,
+      "totalFailureBy36mo": 0.5,
+      "basisOfEstimate": "Hardware-anchored sales in regulated pharma have 9-15 month cycles (Aizon, Werum PAS-X benchmarks); €100-150K ACV requires VP-Quality budget approval, which is the friction surface where ve-k2 will likely fail. Bundling with Aletheia GxP (SaaS) materially de-risks GTM — the standalone band above is conservative because of capex pushback. If bundled, multiply success probabilities ~1.5×. Total failure band reflects ~50% probability that one of capex-budget-approval (ve-k2) or model-quality (ve-k1) kill tests fails outright."
+    }
   }
 ];
