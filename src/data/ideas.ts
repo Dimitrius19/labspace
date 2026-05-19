@@ -3034,5 +3034,881 @@ export const ideas: Idea[] = [
         "alternativeThesis": "(none — this IS the alt thesis being adopted)"
       }
     ]
+  },
+  {
+    "id": "trellis-family-ops",
+    "title": "Trellis",
+    "ycCategory": "Agetech / Family Operations",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Family operating system for adult children managing aging parents — shared calendars, medications, appointments, finances, decisions. The product the sandwich generation has been begging for.",
+    "description": "Approximately 40M unpaid family caregivers in the US and ~25M in EU coordinate aging parents' lives — appointments, medications, finances, sibling communication, transport, social check-ins — across WhatsApp threads, iCloud calendars, manila folders, and duplicate phone calls. The median caregiver is a 50-year-old daughter spending 20+ hours/week on coordination. AARP's 2024 caregiver report found 84% wished for 'a digital tool that doesn't exist.'\n\nPrior attempts (Carely, Caring Village, CareZone — CareZone acquired by Walmart and shuttered) failed because they tried to be one-size-fits-all family-care apps. Trellis is specifically the operating system for the adult-child caregiver:\n• Shared medication tracker with reminders + automated reorder\n• Calendar with appointment notes + sibling-coordinated transport\n• Financial monitor via Plaid: unusual spending, late bills, fraud alerts (precursor to a Steward-style banking partnership)\n• AI-summarized doctor-visit recordings + family decision log\n• Photo/voice journal for non-medical updates\n• Aging-parent-friendly view (large text, voice input) for the parent when capable\n\nPricing: $25-40/mo per family ($300-480/yr). Family = 3-7 members + 1-2 parents. Buyer is the adult child (50-65, professional, dual-income, anxious). Distribution: paid social + content (sandwich-generation search volume up 5× post-pandemic) + AARP/Age UK partnership.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Sandwich-generation pain is universal across high-income geographies. Primary go-to-market is UK/DACH/Nordics (highest digital tool adoption among 50-65 demo + EU GDPR-clean compliance frame). US is the biggest TAM (40M caregivers) but more competitive; entered Year 2 once the EU playbook is proven. Greek/Mediterranean markets are smaller TAM but family-care culture is intrinsically aligned.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "UK, DACH, Nordics are the primary beachhead — highest digital-tool adoption among 50-65 caregivers + GDPR-clean."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has wealthy diaspora 50-65 cohort managing parents back in home countries; cross-border product-market fit is real but niche TAM."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM but family-care culture aligned; useful as Year-1 pilot geography given founder location."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower willingness-to-pay at this price point; pursue opportunistically with localized pricing."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Minimal T-Life dependency by design — this is a deliberate boundary-expansion thesis where the founder team builds their own edge. T-Life is funding source + Greek-pilot-geography access at most; not the unfair advantage.",
+    "tags": [
+      "agetech",
+      "sandwich-generation",
+      "family-ops",
+      "caregiving",
+      "consumer-saas",
+      "beyond-tlife",
+      "trend-3-elder-tech",
+      "trend-20-ops-automation"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Deliberately built outside the T-Life portfolio comfort zone. Highest conviction of the 'beyond-pharma-shipping' set per honest founder review — clearest pain, clearest buyer (adult child not 70+ themselves), no scary trust-acquisition problem.",
+    "whyNow": "Three converging factors. (1) Sandwich-generation peak: Gen X parents are aging into the 70s en masse over 2024-2030; AARP caregiver population grew 18% from 2015-2020 (43M → 53M). (2) Plaid + Stripe + HIPAA-compliant infrastructure stack is mature; AI medical-visit summarization actually works in 2025-26. (3) Prior attempts (Carely $15M raised, Caring Village, CareZone-→-Walmart) all stalled; the category gap is real and the product-design lesson (build for the adult child, not the family-as-monolith) is now obvious.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "100 paying families at $30/mo annual prepay; MVP shipping medication tracker + shared calendar + Plaid financial monitor + AI doctor-visit transcription; AARP / Age UK partnership LOI initiated; <$60 CAC validated via paid social."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5,000 families = ~$1.5M ARR; content engine (sandwich-generation-targeted SEO + newsletter) driving 60%+ of acquisition; first major partnership signed (AARP / Hallmark / John Hancock LTC); 3-month cohort retention ≥70%."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "30,000 families = ~$10M ARR; expand to home-care-agency B2B integrations (referral revenue from agencies); pilot HR / employee assistance program channel (employer pays for employee's parents); enter US market with localised content + partnership."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€400K-€800K",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Pure SaaS. Main costs: 2 engineers (€160K), content engine + brand (€100K), AARP/partnership BD (€80K), paid acquisition test budget (€100K). HIPAA / Business Associate path adds modest legal."
+    },
+    "competitors": [
+      {
+        "name": "Carely",
+        "type": "startup",
+        "geography": "US",
+        "note": "Raised ~$15M Series A 2020-21; stalled at <$5M ARR; product complexity overran the willingness-to-pay. Cautionary tale."
+      },
+      {
+        "name": "Caring Village",
+        "type": "startup",
+        "geography": "US",
+        "note": "Early-stage; freemium model; slow growth."
+      },
+      {
+        "name": "CareZone (acquired)",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Acquired by Walmart 2020 for ~$200M; shuttered 2022. Walmart didn't know what to do with it; consumer caregiving doesn't fit retail."
+      },
+      {
+        "name": "Notion + custom templates",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "The actual current 'solution' for the savvy adult-child segment. Inefficient but free. Trellis must out-compete on out-of-the-box convenience, not feature breadth."
+      },
+      {
+        "name": "Lotsa Helping Hands",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Free + ad-supported; declining engagement; non-tech parent-org sponsorship."
+      },
+      {
+        "name": "Bank Elder Care features (Wells Fargo, Chase)",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Banks bundle elder-care monitoring as free feature for premium account holders. Distribution moat is real; but bank UX is brutal and the family-coordination layer is not their core product."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 5,
+      "regulatoryRisk": 4,
+      "founderAvailability": 3,
+      "composite": 3.7
+    },
+    "ycRfsCorrelation": "Maps to the May-2026 36-list trends #3 (elder tech, 70M boomers) and #20 (family ops automation: forms, scheduling, logistics). Sandwich generation is the buyer; aging parent is the user. Pure consumer SaaS with B2C content-led GTM.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "tr-a1",
+        "claim": "~40M unpaid family caregivers in US (AARP / Census Bureau 2020); ~53M counting informal caregivers",
+        "source": "[ESTIMATE — AARP 2020 Caregiving in the US]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "Verify against AARP 2024 update."
+      },
+      {
+        "id": "tr-a2",
+        "claim": "AARP 2024 caregiver report: 84% wished for a 'digital tool that doesn't exist'",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16",
+        "note": "Headline stat; verify exact wording + source."
+      },
+      {
+        "id": "tr-a3",
+        "claim": "Carely raised ~$15M Series A 2020-21 era; stalled at <$5M ARR",
+        "source": "[ESTIMATE — Crunchbase / industry rumor]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tr-a4",
+        "claim": "CareZone acquired by Walmart 2020 for ~$200M; shuttered 2022",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tr-a5",
+        "claim": "Median family caregiver: 50-year-old daughter spending 20+ hrs/week (AARP)",
+        "source": "[ESTIMATE — AARP standard figure]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tr-a6",
+        "claim": "Plaid + Stripe + HIPAA-ready stack is production-ready for shared-family financial monitoring",
+        "source": "[CONFIRMED — standard infrastructure available]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "tr-k1",
+        "hypothesis": "50 families will pre-pay $30/mo annual ($360) in 4 weeks via Meta + Google paid acquisition at CAC <$60",
+        "experiment": "Build landing page + Stripe checkout; run $5K paid test budget across Meta (sandwich-generation targeting) + Google search (elder-care keywords)",
+        "costEur": 8000,
+        "durationWeeks": 4,
+        "killSignal": "CAC >$120 OR <15 paid sign-ups",
+        "validateSignal": "≥50 paid sign-ups AND CAC <$60"
+      },
+      {
+        "id": "tr-k2",
+        "hypothesis": "MVP (medication tracker + shared calendar + Plaid financial monitor + AI doctor-visit transcription) ships in <12 weeks at <€60K and achieves 70%+ 3-month retention",
+        "experiment": "Build MVP; deploy to 30 design-partner families; measure feature usage + retention",
+        "costEur": 60000,
+        "durationWeeks": 14,
+        "killSignal": "<50% 3-month retention OR build cost >€100K",
+        "validateSignal": "≥70% retention AND ≥3 features used weekly per family"
+      },
+      {
+        "id": "tr-k3",
+        "hypothesis": "At least 1 major elder-advocacy partnership (AARP, Age UK, Carers UK, BAGSO Germany) signs LOI for content + distribution within 12 weeks",
+        "experiment": "Direct outreach to partnerships team at each; target signed LOI with revenue-share or content-syndication clause",
+        "costEur": 4000,
+        "durationWeeks": 12,
+        "killSignal": "0 advanced past first meeting in 12 weeks",
+        "validateSignal": "≥1 signed LOI with named distribution mechanism"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Adult-child caregiver is too busy to learn new software — onboarding friction kills retention before value is felt",
+        "likelihood": "high",
+        "earlySignal": "Kill-test tr-k2 retention curve; specifically week-1 drop-off rate"
+      },
+      {
+        "cause": "Multi-sibling family dynamics block adoption — one disengaged sibling makes coordination feature useless",
+        "likelihood": "medium",
+        "earlySignal": "Family-onboarding survey: % of families with ≥3 active siblings after 30 days"
+      },
+      {
+        "cause": "Wells Fargo Elder Care / Chase Premier / John Hancock LTC bundles equivalent features into existing premium products",
+        "likelihood": "medium",
+        "earlySignal": "Bank elder-care product announcements; partnership-team conversations"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.5,
+      "reaches10mArrBy36mo": 0.25,
+      "totalFailureBy36mo": 0.2,
+      "basisOfEstimate": "Carely's stall ($5M ARR over 5 years) is the bear case; the failure mode was product breadth over depth. The bull case: better product (adult-child-first, AI medical summarization, financial monitoring) + content marketing engine + clear pricing. €10M ARR = ~30K paying families at $300/yr = 0.075% penetration of US caregiver pop alone, or ~0.1% of EU+US combined — feasible at venture pace. Probability of reaching €1M is the highest in the agetech subset (clearest buyer, clearest pain)."
+    }
+  },
+  {
+    "id": "tekton-eu-trades",
+    "title": "Tekton",
+    "ycCategory": "EU Marketplaces / Trades",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Pan-European marketplace for skilled trades — electricians, plumbers, HVAC, builders — matched to residential and small-business jobs with insurance-backed guarantees.",
+    "description": "EU faces a structural skilled-trades shortage projected at 1.5M+ workers, with Germany alone short ~400K according to ZDH (Zentralverband des Deutschen Handwerks). The EU REPowerEU plan and Fit for 55 targets are driving 5-10× heat-pump installations by 2030; Germany missed its 500K-heat-pumps-per-year target in 2024 primarily due to installer shortage. Demand is exploding across heat pumps, solar installation, EV charger installation, and general building-stock renovation under the EU Renovation Wave.\n\nExisting solutions are inadequate: HomeServe is UK-only legacy; TaskRabbit/Thumbtack are US-only and lower-trust; local listings are broken and fragmented per country; the current default for 70%+ of homeowners is direct phone calls and word-of-mouth.\n\nTekton aggregates trades supply pan-EU with: country-verified credentials (UK Gas Safe, German Handwerkskammer, French chambre des métiers); in-app quote-book-pay with insurance-backed guarantee (Allianz/AXA/Munich Re partnership); recurring service contracts for HVAC + plumbing (annual contracts at scale); AI dispatching matching jobs to nearest qualified tradesperson; and trade-side workflow tools (invoicing, parts ordering, route optimization).\n\nPricing: 12-18% take rate on transactions (residential), 8-15% on commercial. Pattern-matches Bolt / Wolt / Helpling in EU services marketplaces.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany + UK + France + Netherlands are the largest TAMs and have the most acute skilled-trades shortages. Start with one German city (Munich or Hamburg) for density; expand to UK + Netherlands once unit economics validate.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "Germany / UK / France / Netherlands / Nordics — the core TAM. Pan-EU regulatory harmonization (CE marking + Mutual Recognition Directive) eases credential portability."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has rapid construction + facility-management growth; different trades culture (more migrant labor, less individual-trades-business). Year 3+."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower household disposable income reduces residential-side TAM; opportunistic via small-business segment."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM; useful as Year-1 pilot geography if founder is Greek-based."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Deliberate boundary expansion — no T-Life portfolio relevance. ALTP industrial-park tenant network could provide commercial-side pilot customers but it's a marginal lift, not a moat.",
+    "tags": [
+      "marketplace",
+      "eu-trades",
+      "skilled-labor",
+      "construction",
+      "heat-pumps",
+      "renovation-wave",
+      "beyond-tlife",
+      "trend-5-trades-matching"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion thesis demonstrating the methodology applies outside agetech. Real TAM, proven marketplace pattern (Bolt/Wolt EU), genuine pain (heat-pump installer shortage is a Bundestag-level political concern). Match for May-2026 trend #5.",
+    "whyNow": "Three converging factors. (1) EU REPowerEU mandates 30M new heat pumps by 2030; current installer capacity hits ~10M ceiling — installer-capacity-gap is the rate-limiting step on EU decarbonization. (2) German government has explicitly named trades-shortage as economic-policy priority (BMWi 2024 report); regulatory tailwinds for marketplaces that increase supply utilization. (3) Bolt/Wolt have de-risked the EU services-marketplace pattern; insurance-backed guarantee economics now well-understood (Allianz Hausrat, AXA partner ecosystems).",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Acquire 50 verified tradespeople in 1 German city (target Munich or Hamburg); process 100 jobs in first 3 months at <€80 CAC; insurance-partnership LOI (Allianz or AXA) for backed-guarantee model."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "Expand to 5 German cities + 1 UK city; 500 active tradespeople; €5-10M GMV/month at 12-15% take rate = €0.7-1.5M revenue/month; AI dispatching live; recurring-service-contract product (HVAC annual maintenance) launched."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "Pan-EU expansion (Germany + UK + Netherlands + France); 10K+ tradespeople; €20-40M revenue Y3; €10M+ ARR from recurring contracts alone; commercial-side platform for facility-management companies."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1-3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Marketplace working capital + per-city launch budget (€100-200K per city for trades acquisition + paid demand-side) + insurance-partnership BD. Higher seed than pure SaaS but much lower than Bolt-style mobility marketplaces (no vehicle fleet)."
+    },
+    "competitors": [
+      {
+        "name": "HomeServe",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "Legacy UK trades / home-services subscription. Strong brand; non-tech distribution; ARR ~£800M+ but slow growth and aging customer base."
+      },
+      {
+        "name": "Hometree, MyBuilder (UK)",
+        "type": "startup",
+        "geography": "UK",
+        "note": "UK-only marketplaces; MyBuilder has ~80K tradespeople. UK is most-developed EU market; Tekton wins on pan-EU + insurance-backed guarantee + AI dispatch."
+      },
+      {
+        "name": "TaskRabbit (IKEA)",
+        "type": "incumbent",
+        "geography": "US/UK",
+        "note": "Acquired by IKEA 2017 for ~$30-50M; primarily small-task focused (assembly, moving) not full trades. Not a direct threat."
+      },
+      {
+        "name": "Thumbtack",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "US-only; trades-marketplace pattern at scale (~$3B valuation 2022). Has not entered EU due to regulatory complexity."
+      },
+      {
+        "name": "Helpling, Bonusly (DE)",
+        "type": "startup",
+        "geography": "DE",
+        "note": "Helpling is cleaning-focused; expanded to trades but limited traction. Bonusly is UK-equivalent. Tekton wins on insurance + scale."
+      },
+      {
+        "name": "Direct booking via local trades (the actual incumbent)",
+        "type": "adjacent",
+        "geography": "All EU",
+        "note": "70%+ of EU residential trades work is still booked via phone + word-of-mouth. The real competitor is offline."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 3,
+      "composite": 3.2
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #5 (trades matching for electricians, plumbers, HVAC — supply shrinking). Insurance-backed guarantee + AI dispatching is the differentiator vs HomeServe/MyBuilder. EU REPowerEU is the structural tailwind.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "tk-a1",
+        "claim": "EU skilled-trades shortage ~1.5M+ workers (Eurostat / Cedefop)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tk-a2",
+        "claim": "Germany short ~400K tradespeople (ZDH 2024 figure)",
+        "source": "[UNVERIFIED — widely cited German trade-association figure]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tk-a3",
+        "claim": "EU REPowerEU targets 30M heat pumps by 2030 (vs ~3M installed 2024)",
+        "source": "[ESTIMATE — EU REPowerEU communication]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tk-a4",
+        "claim": "Germany missed its 500K-heat-pump-per-year 2024 target primarily due to installer shortage",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tk-a5",
+        "claim": "HomeServe (UK) revenue ~£800M+ (legacy non-tech)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "tk-a6",
+        "claim": "Bolt valued $6B+ (2024); proven EU services-marketplace pattern",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "tk-k1",
+        "hypothesis": "Acquire 50 verified tradespeople in Munich within 8 weeks at <€500 per acquisition (compared to gig-marketplace €200 norms)",
+        "experiment": "Field team of 2 in Munich; door-to-door + targeted Facebook ads; verify Handwerkskammer credentials per tradesperson",
+        "costEur": 30000,
+        "durationWeeks": 8,
+        "killSignal": "<25 acquired OR per-tradesperson cost >€1000",
+        "validateSignal": "≥50 acquired at <€500 each AND ≥70% report 2+ jobs/week capacity available"
+      },
+      {
+        "id": "tk-k2",
+        "hypothesis": "Process 100 residential jobs in Munich in first month post-launch with <€80 customer CAC and ≥80% job-completion rate",
+        "experiment": "Demand-side paid acquisition (Google search + Meta) targeting Munich postal codes; AI dispatch to acquired tradespeople; measure end-to-end completion",
+        "costEur": 12000,
+        "durationWeeks": 6,
+        "killSignal": "<50 jobs OR completion <60% OR CAC >€150",
+        "validateSignal": "≥100 jobs AND ≥80% completion AND <€80 CAC"
+      },
+      {
+        "id": "tk-k3",
+        "hypothesis": "Insurance-backed guarantee partnership LOI from Allianz, AXA, or Munich Re within 12 weeks",
+        "experiment": "Direct BD with all three; pitch backed-guarantee economics at <3% claims target",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "0/3 advance past initial meeting",
+        "validateSignal": "≥1 signed LOI with claims-rate target + revenue-share structure"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Tradespeople prefer direct customer relationships and resist platform commission — platform-supply liquidity never reaches critical mass",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test tk-k1 acquisition cost + post-acquisition active-rate at 30 days"
+      },
+      {
+        "cause": "Insurance-backed guarantee economics break — claims rate >3% blows up the unit economics or insurance partner pulls out",
+        "likelihood": "medium",
+        "earlySignal": "First 200 jobs claims-rate measurement at Month 3"
+      },
+      {
+        "cause": "German / French / UK regulators classify Tekton as an employer (Uber/Deliveroo precedent), triggering massive worker-classification liability and back-taxes",
+        "likelihood": "high",
+        "earlySignal": "Monitor PMC / Aslam ruling progress in UK; ECJ rulings on EU platform-work directive 2024"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.2,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "EU services-marketplace pattern (Bolt, Wolt, Helpling, MyBuilder UK) reaches €10-100M+ revenue in 4-7 years. Trades-specific has higher ticket size (€500-5K/job vs €20-50/ride) but slower acquisition. €10M ARR = €60-80M GMV at 13-15% take rate, or 60K-80K jobs/year — feasible with 3-5 major-city density. Top risk: EU platform-work directive (2024) creates worker-classification overhang."
+    }
+  },
+  {
+    "id": "steward-elder-banking",
+    "title": "Steward",
+    "ycCategory": "Senior Fintech / AI Fraud Defense",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Voice-first banking app for 65+ with AI fraud defense as the headline product — the Chime for elderly with family co-monitoring and deepfake-aware security.",
+    "description": "Approximately $28B/year in elder fraud losses in the US (FBI IC3, FTC), with similar per-capita rates in EU. AI-enabled deepfake scams (voice cloning of grandchildren, fake government calls, romance scams) have collapsed traditional rule-based fraud detection. 60M+ Americans and ~95M Europeans over 65 are the #1 fraud target. Existing banks bury fraud protection inside compliance UX that 70+ users can't navigate; family members can't intervene without a power-of-attorney; and the senior-banking offerings (Charles Schwab senior accounts, AARP credit cards) are just normal banking with bigger fonts.\n\nSteward is a voice-first banking product designed from the ground up around three problems:\n• Voice-first interaction (they prefer talking; OTC hearing aids made voice the new primary interface)\n• AI fraud screen as headline product (anomaly detection trained on senior-specific scam patterns; deepfake voice detection for incoming calls; spending-pattern + cognitive-decline signal surfacing)\n• Family co-monitoring with consent-driven granularity (designated adult child sees alerts, large transactions, recurring payments; revocable; parent-controlled)\n\nPricing: free basic banking (interchange + float revenue) + family-tier subscription $15-25/mo for AI fraud screen + family integration. ARPU $180-300/yr at full conversion. Distribution: bank-partnership (Bancorp / Stride US; SolarisBank / Treasury Prime EU) + adult-child marketing (anxiety-driven acquisition).",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "EU PSD2 + EMI-license path is faster to market than US state-by-state. UK + DACH + Nordics have highest banking-app adoption among 50-75 demo. US is biggest TAM but harder regulatory entry; defer to Year 2-3 with proven model + capital + bank partner.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "UK, DACH, Nordics — high digital-banking adoption, deepest open-banking infrastructure (PSD2 SCA), and most acute elder-fraud reporting frameworks."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has wealth concentration in 60+ but conservative regulatory framework around AI fraud detection in banking; Year 3+."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Small TAM; useful as Year-1 pilot geography with Greek-language localization."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower banking-app penetration in 65+ demo; defer."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life operating dependency. The product requires bank-partner sponsorship (Bancorp / SolarisBank / Treasury Prime tier) which T-Life cannot provide; founder team must build that relationship independently.",
+    "tags": [
+      "agetech",
+      "fintech",
+      "voice-first",
+      "elder-fraud",
+      "ai-fraud-defense",
+      "deepfake-detection",
+      "beyond-tlife",
+      "trend-3-elder-tech",
+      "trend-17-human-verification"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Biggest TAM in the agetech subset ($28B/yr elder fraud in US alone). Regulatory complexity is the rate-limiter; product simplicity is the wedge. Map to May-2026 trend #3 (elder tech) and #17 (digital human verification — the deepfake-defense layer).",
+    "whyNow": "Three converging factors. (1) Elder fraud losses tripled 2020-2024 with AI voice-cloning maturity; FBI IC3 2024 report names elder fraud as top growth crime category. (2) OTC hearing aids regulatory unlock (FDA Aug 2022) shifted primary interface from screen to voice for the 30M+ Americans with hearing loss; voice-first banking is now table stakes. (3) BaaS infrastructure (Treasury Prime, Synctera US; Bancorp Europe; SolarisBank/Solaris) mature enough to ship a banking-app product in 6-9 months without owning a charter.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Bank-partner sponsorship secured (Bancorp Europe / SolarisBank / Treasury Prime); voice-first onboarding live in UK + Germany; first 500 family-tier sign-ups at €20/mo; voice deepfake detection model achieves >90% on public test set."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5,000 family-tier subscriptions = ~€1M ARR; AI fraud screen detecting $5M+ of attempted scams (case studies for marketing); first major insurance partnership (AIG / Hiscox / Allianz) for fraud-loss coverage; product-led acquisition via adult-child anxiety marketing."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "50K subscriptions across UK/DACH/Nordics = ~€10M ARR; expand to US with capital + Synctera/Treasury Prime partnership; AI fraud screen detecting €X annually; license fraud-detection model to retail banks (B2B revenue line)."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1-2.5M",
+      "capexRatio": "15% capex / 85% opex",
+      "note": "Bank-partner BaaS fees + KYC infra + AI fraud-model training compute push beyond pure-SaaS. 2 engineers + 1 financial-crime ML + 1 BaaS-partnership BD + 1 senior compliance + product/design = ~€800K/yr team."
+    },
+    "competitors": [
+      {
+        "name": "Charles Schwab Senior Accounts (US)",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Existing senior-banking offering with bigger fonts. Not tech-native; no AI fraud defense; no family co-monitoring with consent."
+      },
+      {
+        "name": "AARP / Mastercard partnership credit card",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Distribution moat via AARP membership but UX is generic; no fraud-defense headline product."
+      },
+      {
+        "name": "Carefull (US)",
+        "type": "startup",
+        "geography": "US",
+        "note": "Closest direct competitor: fraud-monitoring + family-oversight for seniors. Raised ~$10M; non-bank product (sits on top of customer's existing accounts). Tekton-style banking-account-replacement is the wedge."
+      },
+      {
+        "name": "EverSafe (US)",
+        "type": "startup",
+        "geography": "US",
+        "note": "Senior-fraud monitoring product; non-bank. Reliable but limited TAM expansion; not voice-first."
+      },
+      {
+        "name": "Chime, Monzo, N26 (general neo-banks)",
+        "type": "incumbent",
+        "geography": "US/EU",
+        "note": "Not senior-focused. Could pivot but would lose 18-35 brand."
+      },
+      {
+        "name": "Bank Elder Care features (Wells Fargo)",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Bundled with premium accounts; covers monitoring but not voice-first banking + AI deepfake defense."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 3.1
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trends #3 (elder tech, 70M boomers) and #17 (digital verification of humans — deepfake-resistant banking is the regulated-perimeter expression of this trend). Bank-distribution is the gate; product-market fit is clear.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "st-a1",
+        "claim": "US elder fraud losses ~$28B/yr (FBI IC3 + FTC 2024)",
+        "source": "[ESTIMATE — FBI IC3 2024 figure widely cited]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "st-a2",
+        "claim": "Voice deepfake scams grew >300% in 2024 (FTC, IC3)",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "st-a3",
+        "claim": "OTC hearing aid rule effective Oct 2022 unlocked retail audio + voice-first computing for 30M+ Americans",
+        "source": "[CONFIRMED — FDA rule]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "st-a4",
+        "claim": "60M+ Americans over 65 (Census Bureau)",
+        "source": "[CONFIRMED — standard demographic]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "st-a5",
+        "claim": "~95M Europeans over 65 (Eurostat)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "st-a6",
+        "claim": "Carefull raised ~$10M; closest US-market competitor; non-bank product",
+        "source": "[ESTIMATE — Crunchbase]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "st-a7",
+        "claim": "EU PSD2 SCA + EMI-license path provides 6-9 month banking-product launch via SolarisBank / Treasury Prime / Bancorp Europe",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "st-k1",
+        "hypothesis": "Bank-partner sponsorship LOI from at least 1 EU EMI sponsor (SolarisBank, Bancorp Europe, Treasury Prime EU) within 12 weeks",
+        "experiment": "Direct BD with all 3-4 primary BaaS players; pitch elder-banking product + AI fraud thesis",
+        "costEur": 8000,
+        "durationWeeks": 12,
+        "killSignal": "0/4 advance past initial term-sheet conversation in 12 weeks",
+        "validateSignal": "≥1 signed LOI with named launch timeline + fee schedule"
+      },
+      {
+        "id": "st-k2",
+        "hypothesis": "Voice deepfake detection model achieves ≥90% accuracy on a public test set of senior-targeted scam recordings (+ <5% false positive on legitimate family calls)",
+        "experiment": "Train detection model on public dataset (ASVspoof, WaveFake) + augmented elder-targeted data; benchmark",
+        "costEur": 12000,
+        "durationWeeks": 8,
+        "killSignal": "<80% true positive OR >10% false positive on legitimate calls",
+        "validateSignal": "≥90% true positive AND <5% false positive"
+      },
+      {
+        "id": "st-k3",
+        "hypothesis": "Adult-child anxiety acquisition channel works: 50 paid family-tier sign-ups at €20/mo annual prepay in 6 weeks via paid social, CAC <€100",
+        "experiment": "Run €5K paid acquisition test on Meta + Google targeting adult-child demographic with elder-fraud anxiety hooks",
+        "costEur": 7000,
+        "durationWeeks": 6,
+        "killSignal": "<20 sign-ups OR CAC >€200",
+        "validateSignal": "≥50 sign-ups AND CAC <€100"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Bank-partnership negotiation drags >12 months — burn rate exceeds first-revenue ramp, runway runs out before launch",
+        "likelihood": "high",
+        "earlySignal": "Kill-test st-k1 velocity in weeks 6-12"
+      },
+      {
+        "cause": "Regulator (FCA UK, BaFin DE) classifies elder-targeted banking product as 'vulnerable consumer' with extra compliance restrictions that strangle product simplicity",
+        "likelihood": "medium",
+        "earlySignal": "Pre-launch regulator engagement in Months 2-4"
+      },
+      {
+        "cause": "Adult-child acquisition CAC is unworkable at family-tier ARPU — €100 CAC × 24-month LTV doesn't unit-economic when banking infrastructure costs are loaded in",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test st-k3 CAC + cohort retention modeling"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.3,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.4,
+      "basisOfEstimate": "Neo-banks reach €1M ARR in 18-24 months typically (Monzo, Revolut, Chime patterns). Senior-focused product has lower viral acquisition (adult-child must initiate; trust takes longer) but higher ARPU. €10M ARR = 35-50K family-tier subscriptions at €200-300/yr — feasible in 24-36 months IF bank-partnership lands in Month 0-6. The biggest risk is the bank-partner gate."
+    }
+  },
+  {
+    "id": "reverie-ai-companion",
+    "title": "Reverie",
+    "ycCategory": "AI Companions / Voice AI for Seniors",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Voice-first AI companion for 70+ — persistent memory, daily conversation, family-loop integration. Not a chatbot; a designed relationship.",
+    "description": "Loneliness is the #1 self-reported pain point of 70+ globally (AARP, ONS UK, EU Loneliness Atlas), with documented health consequences equivalent to smoking 15 cigarettes per day. Existing solutions are inadequate: family calls are sporadic, senior centers are physical and pandemic-impaired, Replika is for lonely young people, Character.ai is fantasy roleplay, ChatGPT is task-oriented. Nobody has built an AI companion explicitly designed for 70+ daily conversation with: persistent memory of the person's life (interests, family, history), voice-first interaction (cognitive accessibility), daily presence (proactive 'good morning' + check-ins), family-loop integration ('Mom mentioned chest pain three times this week'), and ethical-first design (not pretending to be human).\n\nThe technology threshold was crossed in 2025: AI character memory + voice quality (ElevenLabs, OpenAI advanced TTS) reached the dignity threshold for serious deployment with vulnerable users. Pricing: $30/mo direct + $15/mo family-integration upgrade = $360-540/yr ARPU.\n\nThis is the highest-upside but most bimodal idea in the catalog. Either it becomes a $1B+ category-defining product (probability ~10%) or it dies in 18 months on ethics backlash / regulator classification / single high-profile incident (probability ~55%). Build only if the founder is EXACTLY right: someone who pairs ex-Inflection/Pi-class AI product chops with clinical psychology or geriatrics domain expertise + a Stoic temperament about the ethical surface.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "yellow",
+    "primaryMarketRationale": "Mediterranean + Northern Europe have strong family-elder culture where family-loop is naturally valued. UK + DACH + Nordics highest digital adoption among 70+; Greek/Italian/Spanish are family-culture-aligned but smaller digital TAM. Avoid US Year-1: Replika + Character.ai already established + higher litigation exposure on the ethics-of-AI-companions question.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "UK, DACH, Nordics — highest 70+ digital adoption. Italy / Spain / Portugal family-aligned. AI Act exposure on 'vulnerable population AI emotional companion' is real; pre-validate classification."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "green",
+        "note": "Strong family-elder culture; smaller TAM but high cultural alignment with the family-loop product feature."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has wealth concentration in 60+ + family-elder culture but conservative cultural attitudes about AI-as-companion may bottleneck adoption."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower digital adoption in 70+ demo; defer."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life operating dependency. The product needs a founding team with rare combination (AI product depth + clinical psychology / geriatrics domain) — not findable through T-Life portfolio.",
+    "tags": [
+      "agetech",
+      "ai-companion",
+      "voice-ai",
+      "loneliness",
+      "bimodal-upside",
+      "ethics-sensitive",
+      "beyond-tlife",
+      "trend-3-elder-tech",
+      "trend-28-ai-characters-memory",
+      "trend-1-loneliness"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Highest-upside / highest-variance bet in the catalog. Build ONLY with the exactly-right founder. Bimodal: $1B+ or kill in 18 months. The ethical surface is the rate-limiter not the technology.",
+    "whyNow": "Three converging factors. (1) AI character memory crossed the dignity threshold in 2025 — Replika 30M users, Character.ai 20M+ MAU prove the category exists; the senior-specific product is the open white space. (2) Voice quality (ElevenLabs Turbo, OpenAI advanced voice) is now genuinely human-grade on consumer hardware. (3) EU AI Act enters general application Aug 2026 — Annex III(1)(c) governs 'AI systems intended to be used to influence emotional state' and may classify senior-targeted companions as high-risk; the 12-18 month window before enforcement matures is the design + market-entry window.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Founding team assembled (AI product + clinical psych + ethics advisor); regulatory pre-review with EU AI Act consultant confirms Art. 6(3) pathway or commits to high-risk burden; closed beta with 100 design-partner families (parent + adult child); product-design iteration on family-loop value."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "Public launch in UK + DACH at €30/mo direct + €15/mo family-tier; 5,000 paid users = €1.5-2M ARR; ethics advisory board published; first family-tier upgrade conversion validated; 90-day cohort retention ≥60%."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "20-50K paid users = €5-15M ARR; expand to Greece/Italy/Spain with localized companions; explore B2B2C distribution via senior-living communities and home-care agencies; navigate AI Act high-risk classification + audit trail or operate under Art. 6(3) self-classification."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€2M",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "LLM inference COGS is the variable load. Ethics/clinical advisory board (~€100K/yr). AI Act compliance documentation (~€200K). Voice-AI development (~€300K). The team is the bottleneck cost, not infrastructure."
+    },
+    "competitors": [
+      {
+        "name": "Replika",
+        "type": "startup",
+        "geography": "Global",
+        "note": "30M+ users; design optimized for lonely young people; not senior-targeted. Replika's parent (Luka) is structurally unable to pivot without losing core user base."
+      },
+      {
+        "name": "Character.ai (acquired)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Google acquired key team Aug 2024 (~$2.7B); platform continues but consumer-AI-companion thesis at $1B+ valuation is proven. Not senior-targeted."
+      },
+      {
+        "name": "Pi (Inflection / Microsoft)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Inflection AI team moved to Microsoft Mar 2024; Pi product status unclear. Was the closest to a 'kind AI companion' positioning."
+      },
+      {
+        "name": "ElliQ (Intuition Robotics)",
+        "type": "startup",
+        "geography": "US/Israel",
+        "note": "Closest direct competitor: physical companion robot for seniors. Raised ~$80M+; hardware-anchored ($600+ device + $30/mo). Reverie is software-only, cheaper, faster to deploy."
+      },
+      {
+        "name": "Embodied (Moxie)",
+        "type": "startup",
+        "geography": "US",
+        "note": "Originally child-focused; expanded to senior + special needs. Hardware-anchored. Reverie is software-only."
+      },
+      {
+        "name": "Generic ChatGPT / Claude / Gemini",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "70+ users do find ChatGPT useful but UX is hostile (text-first, no memory, no family-loop)."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 1,
+      "founderAvailability": 1,
+      "composite": 2.9
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trends #3 (elder tech, 70M boomers), #1 (loneliness — biggest B2C pain), and #28 (AI characters with real memory and relationships). The senior-specific instantiation of #28 with built-in family-loop is the wedge.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "rv-a1",
+        "claim": "Loneliness in 70+ has health consequences equivalent to smoking 15 cigarettes/day (Holt-Lunstad meta-analysis 2015)",
+        "source": "[UNVERIFIED — widely cited Holt-Lunstad figure]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rv-a2",
+        "claim": "Replika ~30M users at peak (2024)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rv-a3",
+        "claim": "Character.ai team acquired by Google ~$2.7B Aug 2024",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rv-a4",
+        "claim": "ElliQ (Intuition Robotics) raised ~$80M+ for physical-companion-robot product for seniors",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rv-a5",
+        "claim": "EU AI Act Annex III(1)(c) covers AI systems intended to influence emotional state — may classify senior-companion as high-risk requiring conformity assessment",
+        "source": "https://artificialintelligenceact.eu/annex/3/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rv-a6",
+        "claim": "Voice quality (ElevenLabs Turbo, OpenAI Advanced Voice) is human-grade as of 2025",
+        "source": "[CONFIRMED — public benchmarks + product launches]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "rv-k1",
+        "hypothesis": "Cohort of 30 design-partner families (70+ parent + adult child) shows >70% 30-day retention and >50% family-tier conversion intent",
+        "experiment": "Recruit 30 families via Age UK / AARP / direct outreach; deploy MVP; measure retention + family-tier conversion willingness",
+        "costEur": 25000,
+        "durationWeeks": 12,
+        "killSignal": "<40% 30-day retention OR <20% family-tier conversion intent",
+        "validateSignal": "≥70% retention AND ≥50% family-tier intent AND positive ethics-review from clinical psych advisor"
+      },
+      {
+        "id": "rv-k2",
+        "hypothesis": "EU AI Act consultant + regulatory affairs reviewer confirm Art. 6(3) self-classification pathway holds (NOT high-risk)",
+        "experiment": "Engage EU AI Act consultant + 1 emerging-tech regulatory lawyer; submit architecture + use-case documentation",
+        "costEur": 15000,
+        "durationWeeks": 10,
+        "killSignal": "Both reviewers recommend high-risk classification (triggering €1-3M conformity-assessment burden + audit trail + worker notification requirements)",
+        "validateSignal": "Both confirm Art. 6(3) pathway with specific architectural requirements"
+      },
+      {
+        "id": "rv-k3",
+        "hypothesis": "Clinical-psychology advisory board (3+ members from geriatrics / aging research) certifies the product as 'beneficial-not-harmful' to vulnerable users, with published ethics guidelines",
+        "experiment": "Recruit advisory board; design + publish ethics framework; submit MVP for review",
+        "costEur": 12000,
+        "durationWeeks": 12,
+        "killSignal": "Advisory board declines to certify OR demands changes that strip the core product loop",
+        "validateSignal": "Published ethics framework + 3 advisor sign-off + 1-3 public-facing peer-review endorsements"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Ethics backlash — single bad-press incident (AI 'replacing' human contact for vulnerable elderly, or AI giving harmful advice) tanks the category",
+        "likelihood": "high",
+        "earlySignal": "Monitor Replika / Character.ai ethics incidents quarterly; pre-emptively engage ethics advisory + transparency reports"
+      },
+      {
+        "cause": "AI Act classifies as high-risk under Annex III(1)(c) — triggers €1-3M conformity-assessment burden + 6-12 month delay + audit trail + deployer obligations",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test rv-k2 results in weeks 6-10"
+      },
+      {
+        "cause": "70+ users find proactive AI conversations cognitively exhausting; cohort retention drops below viability at Month 3-6",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test rv-k1 retention curve at 30 + 60 + 90 days"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.3,
+      "reaches10mArrBy36mo": 0.15,
+      "totalFailureBy36mo": 0.55,
+      "basisOfEstimate": "Bimodal outcome distribution. Bear case (55% probability): dies on ethics backlash, AI Act classification, or cohort fatigue within 18-24 months. Bull case (15% probability of reaching €10M ARR): becomes the senior-specific category-defining product — Replika reached $X ARR in 4-5 years; senior version has higher ARPU + family-tier upsell. Median outcome: $1-3M ARR niche product at 36 months. Founder availability is the binding gate — needs exactly-right team."
+    }
   }
 ];
