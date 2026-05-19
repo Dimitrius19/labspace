@@ -96,7 +96,100 @@ export const ideas: Idea[] = [
       "founderAvailability": 4,
       "composite": 3.65
     },
-    "ycRfsCorrelation": "YC wants software that transforms industrial operations. TechShift connects displaced manufacturing workers to life sciences roles through AI-matched upskilling pathways."
+    "ycRfsCorrelation": "YC wants software that transforms industrial operations. TechShift connects displaced manufacturing workers to life sciences roles through AI-matched upskilling pathways.",
+    "tlifeAssetRefs": [
+      "altp",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "ts-a1",
+        "claim": "ALTP is an active industrial park hosting life-sciences and adjacent SMEs",
+        "source": "[USER-STATED — see tlifeAssets.ts#altp]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a2",
+        "claim": "OAED / RRF co-funding pathways for workforce-transition programs exist in Greece",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a3",
+        "claim": "EU Social Fund (ESF+) co-funds workforce transition",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a4",
+        "claim": "Generation (US/UK), Multiverse (UK) are adjacent workforce-transition platforms reaching $50M+ revenue",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a5",
+        "claim": "Greek industrial layoffs / displaced manufacturing workers ~10K+/year in SE Europe",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ts-k1",
+        "hypothesis": "ALTP secures €500K+ OAED/RRF co-funding for the first 200-person cohort within 12 weeks",
+        "experiment": "Submit co-funding application; engage Greek Ministry of Labour",
+        "costEur": 5000,
+        "durationWeeks": 12,
+        "killSignal": "No co-funding committed in 12 weeks OR <€200K",
+        "validateSignal": "≥€500K committed for cohort 1"
+      },
+      {
+        "id": "ts-k2",
+        "hypothesis": "First 50 cohort graduates place into 20+ ALTP tenant SMEs at €30K+ starting salaries within 6 months of graduation",
+        "experiment": "Run cohort 1 of 50; track placements + salaries",
+        "costEur": 30000,
+        "durationWeeks": 26,
+        "killSignal": "<60% placement rate OR <50% at €30K+",
+        "validateSignal": "≥70% placement at ≥€30K"
+      },
+      {
+        "id": "ts-k3",
+        "hypothesis": "ALTP tenant demand for cohort grads is ≥200 hires/year by year 2",
+        "experiment": "Survey 50 ALTP tenants + 20 external SE Europe life-sciences companies",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "<50 expected hires/year aggregated",
+        "validateSignal": "≥150 expected hires/year with named-position commitment"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "OAED/RRF co-funding pipeline disrupts at political transition (Greek government change)",
+        "likelihood": "medium",
+        "earlySignal": "Track election cycles + Ministry of Labour policy statements"
+      },
+      {
+        "cause": "Cohort placement rate fails to reach venture-scale economics (60%+ placement at sufficient salary)",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test ts-k2 results in Month 6"
+      },
+      {
+        "cause": "ALTP tenant demand for cohort grads doesn't materialize at scale — Greek life-sciences hiring is too slow",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test ts-k3 results"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.5,
+      "reaches10mArrBy36mo": 0.15,
+      "totalFailureBy36mo": 0.25,
+      "basisOfEstimate": "RRF/ESF+ co-funding subsidizes Y1-2 revenue significantly — €1M ARR is achievable mostly on grants. €10M ARR requires expansion beyond Greek-only TAM (DACH, Italy, Iberia displaced-worker programs) and proven placement-rate model — harder. Generation/Multiverse hit $50M+ but each took 5-7 years."
+    }
   },
   {
     "id": "construction-site-coach",
@@ -194,7 +287,100 @@ export const ideas: Idea[] = [
       "founderAvailability": 4,
       "composite": 3.5
     },
-    "ycRfsCorrelation": "YC wants AI that provides step-by-step instructions for field work. Siteform coaches migrant construction workers through safety procedures and building techniques via wearable cameras on Balkan and Greek construction sites."
+    "ycRfsCorrelation": "YC wants AI that provides step-by-step instructions for field work. Siteform coaches migrant construction workers through safety procedures and building techniques via wearable cameras on Balkan and Greek construction sites.",
+    "tlifeAssetRefs": [
+      "altp",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "sf-a1",
+        "claim": "Greek Presidential Decree PD 128/2023 created enhanced construction safety obligations",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "sf-a2",
+        "claim": "EU NSRF allocates €26B to Greek construction over 2021-27",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "sf-a3",
+        "claim": "Migrant construction workforce in Greece ~80K",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "sf-a4",
+        "claim": "Hilti, Procore offer adjacent site safety products but no multilingual AI coaching",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "sf-a5",
+        "claim": "ALTP has construction-adjacent tenant SMEs as captive design partners",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "sf-k1",
+        "hypothesis": "1 mid-size Greek main contractor signs at €30-80K ACV in 12 weeks",
+        "experiment": "Direct pitch + on-site demo at ALTP construction site + 5 external mid-size contractors",
+        "costEur": 5000,
+        "durationWeeks": 12,
+        "killSignal": "0 signed",
+        "validateSignal": "≥1 signed at €30K+ with 100+ worker site"
+      },
+      {
+        "id": "sf-k2",
+        "hypothesis": "Multilingual (Greek/Albanian/Romanian/Arabic) coaching is comprehensible and useful to actual migrant workers at the site",
+        "experiment": "Deploy on 1 ALTP construction site with 30 migrant workers; observe + survey for 4 weeks",
+        "costEur": 6000,
+        "durationWeeks": 4,
+        "killSignal": "<60% workers report value",
+        "validateSignal": "≥80% workers report value + measurable safety-behavior change"
+      },
+      {
+        "id": "sf-k3",
+        "hypothesis": "Site accident rate drops 30%+ in first 90 days of deployment",
+        "experiment": "Measure accident rates before/after deployment with same site as control",
+        "costEur": 4000,
+        "durationWeeks": 12,
+        "killSignal": "<10% reduction OR not statistically significant",
+        "validateSignal": "≥30% reduction AND insurance partner validates"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Site accident reduction signal too noisy to attribute to coaching — main contractor doesn't pay for unproven causation",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test sf-k3 results"
+      },
+      {
+        "cause": "Main contractor margin compression makes €30-80K ACV unaffordable (Greek construction has razor-thin margins)",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test sf-k1 negotiation feedback"
+      },
+      {
+        "cause": "Hardware fit-out per worker (smart helmets/tablets) erodes SaaS margin — becomes a hardware business not software",
+        "likelihood": "high",
+        "earlySignal": "Cost-per-worker modeling at scale; first 100-worker deployment economics"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Construction SaaS has tough 12-18 month sales cycles. Main contractor buyer with insurance discount + NSRF pull is more credible than direct-to-migrant-worker. €10M ARR = 100-150 contractors × €70-100K — requires expansion to DACH or Iberia within 24 months. The cross-cutting red-team flag (AI-Guidance-for-Physical-Work pattern) puts a real cap on this thesis."
+    }
   },
   {
     "id": "olaf-trace-eu-funds",
@@ -290,7 +476,106 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.2
     },
-    "ycRfsCorrelation": "YC wants tools that automate document parsing and corporate structure tracing for fraud investigations. OLAFTrace does exactly this for EU structural fund fraud — mapping shell company networks."
+    "ycRfsCorrelation": "YC wants tools that automate document parsing and corporate structure tracing for fraud investigations. OLAFTrace does exactly this for EU structural fund fraud — mapping shell company networks.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "ot-a1",
+        "claim": "EU structural funds total €380B over 2021-27 programming period",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ot-a2",
+        "claim": "OLAF / EPPO investigators have publicly identified beneficial-ownership tracing as a tool gap",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ot-a3",
+        "claim": "Hellenic Court of Auditors + Greek Ministry of Development are warm intros via T-Life network",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ot-a4",
+        "claim": "Sayari, Kharon, Refinitiv World-Check are adjacent corporate-intelligence vendors but US-private-sector focused",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ot-a5",
+        "claim": "UBO (beneficial-ownership) directives create EU-wide ownership-data registries",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ot-a6",
+        "claim": "Folded scope: procurement-ghost-detector (Phantomcheck) — bid-rigging + ghost-contractor detection now Module 2",
+        "source": "[INTERNAL — see catalog-cuts.ts]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ot-k1",
+        "hypothesis": "1 EU member-state audit authority signs at €100-250K in 12 weeks",
+        "experiment": "Direct outreach to Hellenic Court of Auditors + 4 EU equivalents (Italy Corte dei Conti, Spain Tribunal, etc.)",
+        "costEur": 7000,
+        "durationWeeks": 12,
+        "killSignal": "0 advanced past procurement-eligibility-checks",
+        "validateSignal": "≥1 signed at €100K+ OR named procurement-cycle timeline"
+      },
+      {
+        "id": "ot-k2",
+        "hypothesis": "Platform resolves 3 named complex ownership cases in <48 hours each (vs current human-investigator baseline of 1-3 weeks)",
+        "experiment": "Anonymized real cases from Hellenic Court of Auditors archive; measure resolution time + accuracy",
+        "costEur": 5000,
+        "durationWeeks": 8,
+        "killSignal": "Resolution takes >5 days OR accuracy <80% vs ground truth",
+        "validateSignal": "≤48hr resolution AND ≥90% accuracy on all 3 cases"
+      },
+      {
+        "id": "ot-k3",
+        "hypothesis": "Data lineage meets court-admissible standard validated by 1 maritime/financial-crime law expert",
+        "experiment": "Submit sample case package to law-firm review",
+        "costEur": 4000,
+        "durationWeeks": 4,
+        "killSignal": "Reviewer flags chain-of-custody or source-data sovereignty gaps",
+        "validateSignal": "Reviewer rates package as court-admissible"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Sayari / Kharon enter European public-sector market with brand + scale",
+        "likelihood": "medium",
+        "earlySignal": "Monitor Sayari/Kharon EU expansion + government-RFP wins"
+      },
+      {
+        "cause": "UBO registries close or restrict access (privacy litigation; e.g. CJEU Sovim 2022 case)",
+        "likelihood": "medium",
+        "earlySignal": "Track CJEU UBO cases; engage EU privacy regulators"
+      },
+      {
+        "cause": "B2G sales cycle drags beyond 12 months — burn exceeds first-revenue ramp",
+        "likelihood": "high",
+        "earlySignal": "Kill-test ot-k1 conversion velocity"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.2,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "B2G evidence-products have brutal sales cycles but high ACV (€100-250K). €10M ARR = 40-100 accounts × €100-250K — plausible across EU-27 + EPPO + OLAF. T-Life's Ministry of Development warm intros compress Greek first-sale; pan-EU pull-through depends on Greek case-file proof. Only entry in the catalog where the proprietary beneficial-ownership graph is a genuine data moat that compounds over time."
+    }
   },
   {
     "id": "pharma-kickback-sentinel",
@@ -386,7 +671,101 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.5
     },
-    "ycRfsCorrelation": "YC wants infrastructure for evidence organization in fraud cases. Sentinel monitors healthcare professional payments and transfer-of-value patterns, flagging potential kickback violations."
+    "ycRfsCorrelation": "YC wants infrastructure for evidence organization in fraud cases. Sentinel monitors healthcare professional payments and transfer-of-value patterns, flagging potential kickback violations.",
+    "tlifeAssetRefs": [
+      "elpen",
+      "winmedica",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "se-a1",
+        "claim": "EFPIA Disclosure Code mandates HCP transfer-of-value transparency across 33 European countries",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "se-a2",
+        "claim": "Greek Law 4316/2014 and national variants enforce anti-kickback rules for HCP interactions",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "se-a3",
+        "claim": "Top-20 EU pharma spend €1-5M+/year per company on HCP compliance monitoring",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "se-a4",
+        "claim": "Veeva Vault PromoMats covers adjacent promotional content compliance but not anomaly detection",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "se-a5",
+        "claim": "IQVIA Reach and Frequency products handle reporting but not real-time monitoring",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "se-k1",
+        "hypothesis": "2 EU mid-cap pharma compliance officers sign at €60-150K ACV in 10 weeks",
+        "experiment": "Direct pitch via ELPEN compliance team + cold outreach to 8 EU mid-cap pharma",
+        "costEur": 5000,
+        "durationWeeks": 10,
+        "killSignal": "<1 signed pilot",
+        "validateSignal": "≥2 signed at €60K+ ACV"
+      },
+      {
+        "id": "se-k2",
+        "hypothesis": "Anomaly detection finds ≥1 genuine kickback pattern in design-partner historical data (within bounds of acceptable risk)",
+        "experiment": "Run model on ELPEN historical HCP-TOV data; manual review of flagged anomalies",
+        "costEur": 8000,
+        "durationWeeks": 8,
+        "killSignal": "0 true positives OR >50% false positive rate",
+        "validateSignal": "≥1 true positive AND <20% false positive rate"
+      },
+      {
+        "id": "se-k3",
+        "hypothesis": "EFPIA XML filing format integration validated end-to-end across 3 EU jurisdictions",
+        "experiment": "Build EFPIA submission pipeline; test against published schemas (Greece + 2 others)",
+        "costEur": 4000,
+        "durationWeeks": 6,
+        "killSignal": "Pipeline fails validation in any jurisdiction",
+        "validateSignal": "All 3 jurisdictions pass schema validation; pilot agency signs"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Veeva PromoMats extends into transfer-of-value monitoring + anomaly detection",
+        "likelihood": "medium",
+        "earlySignal": "Track Veeva product announcements; engage Veeva PromoMats customer advisory boards"
+      },
+      {
+        "cause": "Compliance officers under-staff and don't prioritize new tooling — €60-150K budget approval cycle too slow",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test se-k1 conversion rate"
+      },
+      {
+        "cause": "EFPIA changes disclosure format / national variants diverge — integration cost grows linearly with countries",
+        "likelihood": "low",
+        "earlySignal": "Annual EFPIA Code review; monitor for divergence"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.22,
+      "totalFailureBy36mo": 0.25,
+      "basisOfEstimate": "Compliance SaaS in pharma has hard budget lines and €60-150K ACV is well within range. €10M ARR = 100 customers × €100K average. 27 EFPIA member countries × 5-10 mid-cap pharma each = ~150-300 target accounts. Strongest unit-economic profile of the pharma cluster keepers."
+    }
   },
   {
     "id": "shipping-sanctions-tracer",
@@ -482,7 +861,99 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.3
     },
-    "ycRfsCorrelation": "YC wants corporate structure tracing and evidence organization. VesselVerity reconstructs dark voyages from AIS gaps and satellite imagery for maritime sanctions evasion investigations."
+    "ycRfsCorrelation": "YC wants corporate structure tracing and evidence organization. VesselVerity reconstructs dark voyages from AIS gaps and satellite imagery for maritime sanctions evasion investigations.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "vv-a1",
+        "claim": "EU 14th Russia sanctions package added personal liability for EU ship managers facilitating sanction circumvention",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vv-a2",
+        "claim": "AIS dark-voyage detection methodology proven by Windward, Pole Star, Spire",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vv-a3",
+        "claim": "Tryfon Fleet AIS data + voyage history calibrates dark-voyage detection models",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vv-a4",
+        "claim": "OFAC, EPPO, EU FIU, port-state authorities buy evidence packages at €100-500K",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vv-a5",
+        "claim": "Windward valued at $200M+ as public company; primary competitor in compliance space (not prosecution)",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "vv-k1",
+        "hypothesis": "1 prosecutorial buyer (EPPO / OFAC / EU FIU) signs evidence-package pilot at €40-100K in 12 weeks",
+        "experiment": "Direct outreach to OFAC enforcement + EPPO + 3 EU member-state FIUs",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "0 advanced past first call",
+        "validateSignal": "≥1 signed pilot OR named procurement timeline"
+      },
+      {
+        "id": "vv-k2",
+        "hypothesis": "Generated evidence package for 3 named dark voyages survives court-admissibility review by maritime law expert",
+        "experiment": "Generate 3 packages on known historical dark voyages; engage maritime law firm to review chain-of-custody",
+        "costEur": 8000,
+        "durationWeeks": 8,
+        "killSignal": "Reviewer flags chain-of-custody gaps requiring full restart",
+        "validateSignal": "All 3 packages rated 'court-admissible with normal evidentiary standards'"
+      },
+      {
+        "id": "vv-k3",
+        "hypothesis": "1 maritime authority (Greek HCG / Cypriot DMS) signs at €20-50K for port-state surveillance use case",
+        "experiment": "Pitch to 5 Mediterranean maritime authorities",
+        "costEur": 3000,
+        "durationWeeks": 10,
+        "killSignal": "0 signed",
+        "validateSignal": "≥1 signed at €20K+"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Windward extends into prosecution-grade packaging — captures the buyer with stronger brand and incumbent relationship",
+        "likelihood": "medium",
+        "earlySignal": "Monitor Windward product announcements + customer wins"
+      },
+      {
+        "cause": "Court admissibility of AIS reconstruction challenged in EU jurisdictions — defense lawyers find chain-of-custody gaps",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test vv-k2; monitor EU sanctions cases"
+      },
+      {
+        "cause": "Prosecution buyers have brutal 12-24 month B2G sales cycles — burn rate exceeds revenue ramp",
+        "likelihood": "high",
+        "earlySignal": "Kill-test vv-k1 conversion velocity"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.3,
+      "reaches10mArrBy36mo": 0.15,
+      "totalFailureBy36mo": 0.4,
+      "basisOfEstimate": "Evidence-products for prosecutors have 12-24 month cycles, high ACV at €200-300K. €10M ARR = 30-50 accounts × €200-300K — feasible only with EU-wide pull (EPPO + 10-15 member states + OFAC EMEA). The new buyer (personally-liable ship managers) created by EU 14th sanctions is the upside catalyst — but unproven at scale."
+    }
   },
   {
     "id": "agecare-compliance",
@@ -579,7 +1050,100 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.55
     },
-    "ycRfsCorrelation": "YC wants government workflow automation that improves cost-effectiveness. CareClear automates EOPYY reimbursement compliance for elder care providers, replacing manual paperwork with automated claim processing."
+    "ycRfsCorrelation": "YC wants government workflow automation that improves cost-effectiveness. CareClear automates EOPYY reimbursement compliance for elder care providers, replacing manual paperwork with automated claim processing.",
+    "tlifeAssetRefs": [
+      "winmedica",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "cc-a1",
+        "claim": "Greek Law 5039/2023 created enhanced elder-care provider compliance regime",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cc-a2",
+        "claim": "EOPYY reimbursement clawback risk per agency: €80-150K/year for compliance gaps",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cc-a3",
+        "claim": "KEDASY (Greek elder-care licensing body) covers approximately 5K elder-care providers",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cc-a4",
+        "claim": "WinMedica has commercial relationships with elder-care agencies via pharmacy network",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cc-a5",
+        "claim": "Cornerstone, SAP SuccessFactors don't address elder-care vertical compliance",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "cc-k1",
+        "hypothesis": "3 elder-care agencies sign at €15-40K ACV within 8 weeks",
+        "experiment": "Direct pitch to 15 Attica-region agencies; target signed annual contracts",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "<2 signed",
+        "validateSignal": "≥3 signed at €15K+"
+      },
+      {
+        "id": "cc-k2",
+        "hypothesis": "Platform generates first EOPYY reimbursement audit-trail bundle in <3 weeks per agency, accepted by EOPYY auditors on first submission",
+        "experiment": "Run pilot agency through complete EOPYY cycle; measure audit acceptance",
+        "costEur": 8000,
+        "durationWeeks": 12,
+        "killSignal": "EOPYY auditors reject submission OR cycle takes >6 weeks",
+        "validateSignal": "≥1 successful EOPYY audit acceptance with documented decision letter"
+      },
+      {
+        "id": "cc-k3",
+        "hypothesis": "Agencies achieve ≥30% reduction in compliance-related labor hours (admin staff)",
+        "experiment": "Time-and-motion study on 2 pilot agencies; before/after measurement",
+        "costEur": 3000,
+        "durationWeeks": 16,
+        "killSignal": "<15% reduction OR agency owners don't perceive value",
+        "validateSignal": "≥30% reduction AND agency willing to renew at higher tier"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "EOPYY changes reimbursement rules / digital submission format mid-implementation (Greek regulatory volatility)",
+        "likelihood": "high",
+        "earlySignal": "Track EOPYY directive changes; budget for compliance refactoring"
+      },
+      {
+        "cause": "Agency operators resist software adoption — paper / analog workflows are entrenched, often run by founder-owners ≥60 years old",
+        "likelihood": "high",
+        "earlySignal": "Kill-test cc-k1 cold-conversion rate; agency owner age + tech comfort survey"
+      },
+      {
+        "cause": "Migrant carer labor pool shrinks under EU migration policy shifts, reducing agency revenue and ability to pay",
+        "likelihood": "medium",
+        "earlySignal": "Greek immigration policy + ESM/Frontex trends; agency hiring complaints"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.15,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Compliance liability-transfer products at €15-40K ACV in regulated Greek industries have strong willingness-to-pay precedent (DPO services, GDPR compliance tools). €10M ARR = 250-300 agencies = ~6% market penetration of KEDASY-licensed providers. Bottleneck is sales cycle (slow agency owners) and Greek regulatory volatility."
+    }
   },
   {
     "id": "pm-copilot-southeast-europe",
@@ -674,7 +1238,100 @@ export const ideas: Idea[] = [
       "founderAvailability": 4,
       "composite": 3.3
     },
-    "ycRfsCorrelation": "YC wants AI tools where PMs upload data and ask what to build next. Polis delivers this for SE European B2B SaaS teams — synthesizing customer interviews and usage data into prioritized feature recommendations."
+    "ycRfsCorrelation": "YC wants AI tools where PMs upload data and ask what to build next. Polis delivers this for SE European B2B SaaS teams — synthesizing customer interviews and usage data into prioritized feature recommendations.",
+    "tlifeAssetRefs": [
+      "altp",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "pl-a1",
+        "claim": "Productboard, Dovetail, Maze are tier-1 PM tooling incumbents",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pl-a2",
+        "claim": "SE European B2B SaaS startup count ~500-1000 with PM needs",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pl-a3",
+        "claim": "ALTP tenant SMEs include 20-40 B2B SaaS portfolio teams",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pl-a4",
+        "claim": "Productboard ACV ~$15-50K/year for mid-market teams",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pl-a5",
+        "claim": "LLM-driven PM workflow proven (Dovetail AI, Notion AI, Linear AI features)",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "pl-k1",
+        "hypothesis": "8 ALTP-tenant B2B SaaS teams sign at €5-15K ACV in 8 weeks",
+        "experiment": "Direct pitch to 30 ALTP tenants + 20 external SE Europe B2B SaaS teams",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "<3 signed",
+        "validateSignal": "≥8 signed at €5K+ ACV"
+      },
+      {
+        "id": "pl-k2",
+        "hypothesis": "Polis-generated roadmap scores ≥'useful with minor edits' by 5 PMs in blind comparison vs human-written roadmaps",
+        "experiment": "Generate roadmaps for 5 design-partner teams; blind review",
+        "costEur": 6000,
+        "durationWeeks": 6,
+        "killSignal": "<3/5 prefer Polis output",
+        "validateSignal": "≥4/5 prefer; ≥3 willing to renew at higher tier"
+      },
+      {
+        "id": "pl-k3",
+        "hypothesis": "Customer-interview transcript-to-feature-spec pipeline accuracy ≥80% on test set",
+        "experiment": "100 real customer-interview transcripts; measure accuracy vs human-coded ground truth",
+        "costEur": 5000,
+        "durationWeeks": 6,
+        "killSignal": "<70% accuracy",
+        "validateSignal": "≥80% accuracy with stable variance"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Productboard / Dovetail localize into SE Europe — though small TAM means low priority",
+        "likelihood": "low",
+        "earlySignal": "Monitor incumbent EU expansion announcements"
+      },
+      {
+        "cause": "LLM-driven PM is absorbed as a feature inside larger PM tools (Linear, Notion, Atlassian)",
+        "likelihood": "medium",
+        "earlySignal": "Track incumbent AI-feature releases"
+      },
+      {
+        "cause": "SE European PM budget too thin to support €5-15K ACV — €10M ARR ceiling forces Western EU expansion which puts Polis directly against Productboard",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test pl-k1 conversion rate; expansion-market unit economics modeling"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.15,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Pure SaaS, no regulatory perimeter, no liability transfer — clean unit economics. ALTP captive design partners de-risk first 8-15 customers. €10M ARR requires expansion beyond SE Europe (TAM constraint) which puts Polis up against Productboard directly. Cleanest economics in the catalog; ceiling is the constraint."
+    }
   },
   {
     "id": "pharma-launch-intelligence",
@@ -769,7 +1426,103 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 4.05
     },
-    "ycRfsCorrelation": "YC wants AI product discovery systems with supporting rationale. Launchbase helps pharma commercial teams decide which markets to launch in first, synthesizing pricing data and competitive intelligence."
+    "ycRfsCorrelation": "YC wants AI product discovery systems with supporting rationale. Launchbase helps pharma commercial teams decide which markets to launch in first, synthesizing pricing data and competitive intelligence.",
+    "tlifeAssetRefs": [
+      "winmedica",
+      "elpen",
+      "elnova-dubai",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "lb-a1",
+        "claim": "Citeline (Norstella) is the dominant global pharma launch-intelligence vendor; pricing typically $50-300K ACV per market subscription",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a2",
+        "claim": "SE Europe + GCC pharma launches lack a Citeline-equivalent — fragmented sources, local-language data, KOL networks invisible to global incumbents",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a3",
+        "claim": "T-Life provides live launch cycles via WinMedica's commercial operations and Elnova's GCC presence",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "lb-a4",
+        "claim": "AXIOM / Komodo Health reached ~€100M+ ARR in the US with launch-intelligence + RWE shape",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "Verify pre external memo."
+      },
+      {
+        "id": "lb-a5",
+        "claim": "Mid-size SE Europe / GCC pharma launches per year ~50-100 across the geography",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "lb-k1",
+        "hypothesis": "3 SE Europe pharma commercial directors will pay €30-80K ACV for a launch-intelligence subscription",
+        "experiment": "Cold-pitch via T-Life network + 5 external; target signed LOIs or pilot contracts",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "<2 LOIs in 8 weeks",
+        "validateSignal": "≥3 signed pilots at €30K+ ACV"
+      },
+      {
+        "id": "lb-k2",
+        "hypothesis": "T-Life can produce a proprietary SE Europe launch dataset (3 markets × 5 launches) within 4 weeks that competitors don't have",
+        "experiment": "Build dataset from WinMedica + Elnova ops + KOL interviews",
+        "costEur": 3000,
+        "durationWeeks": 4,
+        "killSignal": "Dataset takes >8 weeks OR matches publicly available Citeline data",
+        "validateSignal": "15+ launches captured with KOL-level data not in Citeline"
+      },
+      {
+        "id": "lb-k3",
+        "hypothesis": "LLM-generated launch-intelligence reports score ≥'useful with minor edits' by 5 pharma commercial directors",
+        "experiment": "Generate 5 reports from MVP; blind review by directors against a baseline (manually-prepared report)",
+        "costEur": 6000,
+        "durationWeeks": 6,
+        "killSignal": "<3/5 rate as useful",
+        "validateSignal": "≥4/5 prefer AI report; ≥1 willing to sign immediate pilot"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Citeline / Komodo Health extend to SE Europe before we reach scale (Norstella has the capital and the pattern-match motive)",
+        "likelihood": "medium",
+        "earlySignal": "Monitor Citeline product release notes and EU job postings"
+      },
+      {
+        "cause": "Data sparsity in SE Europe means the proprietary dataset isn't valuable enough to support €30K+ ACV",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test lb-k2 dataset depth analysis"
+      },
+      {
+        "cause": "WinMedica / Elnova relationships don't translate to non-Tryfon-portfolio buyers (the buyer asks 'who else uses this' and the answer is uncomfortable)",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test lb-k1 — how many cold prospects vs warm intros sign?"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.2,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "AXIOM Komodo got to ~$10M ARR in 30-36 months in the US with similar shape; SE Europe ARPU is ~40-60% of US but TAM is less saturated. The 40% / 20% / 30% bands reflect a stronger-than-average T-Life advantage (warm intros into the first ~10 customers) but a real risk of Citeline EU-extension within 18 months."
+    }
   },
   {
     "id": "pharma-regulatory-ai-agency",
@@ -865,7 +1618,109 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.85
     },
-    "ycRfsCorrelation": "YC wants service businesses that deliver client work at software margins using AI. RegulaFlow is a regulatory affairs agency that produces EMA dossiers using AI, handling work that typically requires large teams of regulatory specialists."
+    "ycRfsCorrelation": "YC wants service businesses that deliver client work at software margins using AI. RegulaFlow is a regulatory affairs agency that produces EMA dossiers using AI, handling work that typically requires large teams of regulatory specialists.",
+    "tlifeAssetRefs": [
+      "elpen",
+      "winmedica",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "rf-a1",
+        "claim": "EMA centralized procedure dossier prep typically costs €80-200K per submission via traditional CROs",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a2",
+        "claim": "EU GMP variation submission volume ~10K+ per year across member states",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a3",
+        "claim": "AI-native agency gross margin model: 65-80% vs 30-45% traditional CRO",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "Hebbia/Harvey/Tropic-type comparables in adjacent domains."
+      },
+      {
+        "id": "rf-a4",
+        "claim": "ELPEN regulatory affairs team provides domain expertise for first 5+ submissions",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a5",
+        "claim": "Veeva Vault RegulatoryOne, Lorenz, ArisGlobal are tier-1 incumbents — all tool-form, not agency-form",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a6",
+        "claim": "Folded scope: pharmareg-ai (EOF/EMA dossier templates + variation IP)",
+        "source": "[INTERNAL — see catalog-cuts.ts]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "rf-k1",
+        "hypothesis": "2 mid-size Greek/Balkan pharma clients will sign €40-100K ACV agency contracts in 12 weeks",
+        "experiment": "Direct pitch via ELPEN network + cold outreach to Vianex, Pharmathen, Sopharma, Hemofarm; target signed engagement letters",
+        "costEur": 5000,
+        "durationWeeks": 12,
+        "killSignal": "0 signed; <3 pilot conversations advanced past first call",
+        "validateSignal": "≥2 signed engagement letters at €40K+"
+      },
+      {
+        "id": "rf-k2",
+        "hypothesis": "AI-assisted EMA variation prep achieves ≥50% time savings vs traditional CRO baseline on a real submission",
+        "experiment": "Run 1 real ELPEN variation through AI-assist + human review; measure hours vs prior-similar variation handled traditionally",
+        "costEur": 8000,
+        "durationWeeks": 8,
+        "killSignal": "<25% time savings OR EMA rejects sections requiring re-prep",
+        "validateSignal": "≥50% time savings AND EMA accepts on first review"
+      },
+      {
+        "id": "rf-k3",
+        "hypothesis": "EMA / national regulators accept AI-prepared dossier sections without flagging the AI involvement as a quality concern",
+        "experiment": "Engage 1 EMA inspector + 1 EOF reviewer (paid consultancy) for pre-submission review of a sample dossier",
+        "costEur": 6000,
+        "durationWeeks": 6,
+        "killSignal": "Either reviewer flags AI-prepared content as below-standard",
+        "validateSignal": "Both reviewers rate content as acceptable; identify specific quality criteria to operationalize"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "EMA/national regulators reject AI-prepared sections without human re-review, killing time-savings model",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test rf-k3 results in weeks 4-6"
+      },
+      {
+        "cause": "Parexel / IQVIA / Labcorp Drug Development ship AI-assisted variants and compete on brand + scale",
+        "likelihood": "medium",
+        "earlySignal": "Monitor top-5 CRO product announcements quarterly"
+      },
+      {
+        "cause": "Greek/Balkan pharma clients are too small/slow to pay for the agency model — €40-100K ACV burns through pipeline faster than the team can deliver",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test rf-k1 conversion rate; sales cycle length"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "AI-native services agencies in adjacent verticals (Hebbia legal, Harvey legal, Tropic procurement) have reached €5-15M ARR in 24-36 months. Regulated pharma services adds 6-12 months of client cycle. €10M ARR = 30-50 clients × €200-300K avg engagement value — feasible given 27 EU member states × 10-30 mid-cap pharma each."
+    }
   },
   {
     "id": "maritime-charter-commercial-ai",
@@ -961,7 +1816,99 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.85
     },
-    "ycRfsCorrelation": "YC wants AI-native agencies that scale without proportional headcount. VoyageDesk uses AI agents to handle fixture negotiations, cargo matching, and voyage planning — work done today by chartering desks of 20+ brokers."
+    "ycRfsCorrelation": "YC wants AI-native agencies that scale without proportional headcount. VoyageDesk uses AI agents to handle fixture negotiations, cargo matching, and voyage planning — work done today by chartering desks of 20+ brokers.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "vd-a1",
+        "claim": "Global maritime chartering involves $200B+ in fixture value annually",
+        "source": "[ESTIMATE — BIMCO / Clarksons data]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vd-a2",
+        "claim": "Standard chartering broker commission is 1.25% of fixture value (BIMCO norm)",
+        "source": "[UNVERIFIED — BIMCO standard, widely cited]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vd-a3",
+        "claim": "Veson Nautical (IMOS/Veslink) is the dominant chartering-software incumbent",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vd-a4",
+        "claim": "Tryfon Fleet provides real-time voyage data and live chartering desk as design partner",
+        "source": "[USER-STATED — see Pragma/Tryfon Fleet venture]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "vd-a5",
+        "claim": "Charter party drafts and port-cost estimates take 8-24 hours of broker/operator time per voyage",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "vd-k1",
+        "hypothesis": "LLM-drafted CP recap reaches 90%+ accuracy vs human-drafted on 50 historical test cases",
+        "experiment": "Fine-tune Llama 3.3 70B on BIMCO clauselib + Tryfon CP corpus; benchmark",
+        "costEur": 10000,
+        "durationWeeks": 6,
+        "killSignal": "<80% accuracy OR human re-edit time >40% of original drafting time",
+        "validateSignal": "≥90% accuracy AND <20% re-edit time"
+      },
+      {
+        "id": "vd-k2",
+        "hypothesis": "3 mid-size shipowner chartering desks (Tryfon + 2 external) will sign pilot at €50-150K ACV in 10 weeks",
+        "experiment": "Pilot pitch + product demo with Tryfon-network shipowners",
+        "costEur": 5000,
+        "durationWeeks": 10,
+        "killSignal": "Only Tryfon signs (1/3)",
+        "validateSignal": "≥2 external + Tryfon = 3 signed pilots"
+      },
+      {
+        "id": "vd-k3",
+        "hypothesis": "Rate Oracle data product (anonymized voyage-rate benchmark) can be sold separately to charterers at €30-80K ACV",
+        "experiment": "Build MVP; pitch to 5 charterer-side prospects; measure willingness to subscribe",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "0/5 willing to subscribe",
+        "validateSignal": "≥2/5 sign data-product contracts"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Veson Nautical ships AI assistance in IMOS within 18 months",
+        "likelihood": "medium",
+        "earlySignal": "Veson product roadmap + acquisitions tracking"
+      },
+      {
+        "cause": "Tryfon-only data isn't sufficient training signal — model quality plateaus",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test vd-k1 results"
+      },
+      {
+        "cause": "Chartering desks won't pay subscription because they capture 1.25% broker commission and the workflow savings don't translate to compensation",
+        "likelihood": "high",
+        "earlySignal": "Kill-test vd-k2 conversion rate; ask explicit willingness-to-pay vs commission"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.35,
+      "basisOfEstimate": "Maritime SaaS rarely reaches €10M ARR (Veson is the exception at ~$50M+). Tryfon fleet data is a real moat — but the buyer (chartering desk) extracts margin from the manual workflow it would replace, which is the Logos-pattern failure mode. Rate Oracle data product is the more defensible second revenue line."
+    }
   },
   {
     "id": "pharmadataforge-llm-training",
@@ -1057,7 +2004,100 @@ export const ideas: Idea[] = [
       "founderAvailability": 2,
       "composite": 3.65
     },
-    "ycRfsCorrelation": "YC wants developer infra simplifying LLM training through better dataset management. PharmaDataForge builds regulation-aware data pipelines for pharma LLMs — handling PII stripping and GxP compliance."
+    "ycRfsCorrelation": "YC wants developer infra simplifying LLM training through better dataset management. PharmaDataForge builds regulation-aware data pipelines for pharma LLMs — handling PII stripping and GxP compliance.",
+    "tlifeAssetRefs": [
+      "elpen",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "pf-a1",
+        "claim": "EU AI Act Article 10 requires high-risk AI systems to have documented training-data governance and provenance",
+        "source": "https://artificialintelligenceact.eu/article/10/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pf-a2",
+        "claim": "GMP Annex 11 + ALCOA+ data-integrity principles apply to training data used in regulated workflows",
+        "source": "[UNVERIFIED — emerging interpretation]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pf-a3",
+        "claim": "Veeva Vault does not currently offer LLM training-data pipeline tooling",
+        "source": "[UNVERIFIED — based on May 2026 product scan]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pf-a4",
+        "claim": "Scale AI, Datology AI, HuggingFace are horizontal training-data platform incumbents",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pf-a5",
+        "claim": "Pharma top-20 spend $1-5M+/year on training-data prep for internal ML/AI",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "pf-k1",
+        "hypothesis": "2 pharma R&D groups sign data-pipeline pilot at €100-200K ACV in 12 weeks",
+        "experiment": "Pitch pharma R&D + IT leads via ELPEN network + cold; demo Veeva-Vault-to-curated-data pipeline",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "<1 LOI in 12 weeks",
+        "validateSignal": "≥2 signed pilots at €100K+"
+      },
+      {
+        "id": "pf-k2",
+        "hypothesis": "Veeva Vault → curated training data → fine-tune Llama 3.3 reference pipeline works end-to-end for deviation analysis use case",
+        "experiment": "Build reference pipeline using ELPEN deviation data; produce fine-tuned model + GAMP5-compatible documentation",
+        "costEur": 15000,
+        "durationWeeks": 10,
+        "killSignal": "Pipeline takes >€50K labor OR model accuracy <baseline+5%",
+        "validateSignal": "Pipeline runs at <€20K marginal cost; model beats GPT-4 by 10%+"
+      },
+      {
+        "id": "pf-k3",
+        "hypothesis": "EMA AI Reflection Paper consultant + regulatory affairs reviewer rate the data-lineage documentation as GMP-compliant",
+        "experiment": "Engage 1 EMA-adjacent consultant for pre-submission lineage review",
+        "costEur": 5000,
+        "durationWeeks": 4,
+        "killSignal": "Reviewer flags lineage gaps requiring full restart",
+        "validateSignal": "Reviewer rates as 'submission-ready with minor edits'"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "HuggingFace / Scale AI vertical-ize into pharma with regulatory data tooling",
+        "likelihood": "medium",
+        "earlySignal": "Track HF / Scale pharma announcements quarterly"
+      },
+      {
+        "cause": "Veeva ships native LLM training-data pipeline inside Vault",
+        "likelihood": "medium",
+        "earlySignal": "Veeva R&D Day keynotes; Vault REST API changelogs"
+      },
+      {
+        "cause": "Pharma AI infrastructure budget concentrates at top-20, leaving mid-market thin — €100K ACV target needs top-20 access which T-Life lacks",
+        "likelihood": "high",
+        "earlySignal": "Kill-test pf-k1 — track mid-market vs top-20 conversion ratio"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.2,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Vertical AI infrastructure is hard to monetize standalone; moat is regulatory expertise + Veeva integration depth. €10M ARR = 50-80 pharma customers × €100-200K — requires top-20 expansion within 24-30 months. The EU AI Act Art. 10 mandate is the structural tailwind that creates 18-24 months of urgency."
+    }
   },
   {
     "id": "porthos-shipping-llm-platform",
@@ -1154,7 +2194,99 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.85
     },
-    "ycRfsCorrelation": "YC wants ML-focused development environments. Porthos gives maritime operators a no-code LLM fine-tuning platform — shipping companies can train models on their proprietary voyage data."
+    "ycRfsCorrelation": "YC wants ML-focused development environments. Porthos gives maritime operators a no-code LLM fine-tuning platform — shipping companies can train models on their proprietary voyage data.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "po-a1",
+        "claim": "BIMCO clauselib and standard CP forms (NYPE, Shelltime, BPVOY) are the foundational maritime contract corpus",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "po-a2",
+        "claim": "Veson, Danaos, AMOS, ShipManager are tier-1 maritime SaaS targets for embedded inference",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "po-a3",
+        "claim": "Open-weight 70B models (Llama 3.3 70B) work for narrow maritime tasks at production accuracy",
+        "source": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "po-a4",
+        "claim": "Tryfon fleet provides ~10-30 vessels of proprietary operations data for fine-tuning",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "po-a5",
+        "claim": "Lambda Labs and NVIDIA NIM are the GPU-cloud benchmarks for embedded inference",
+        "source": "[CONFIRMED via earlier validation]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "po-k1",
+        "hypothesis": "Fine-tuned Llama 3.3 70B reaches ≥85% accuracy on 5 maritime task types (CP analysis, voyage estimation, port report parsing, PSC deficiency interpretation, MARPOL compliance check) vs GPT-4 baseline",
+        "experiment": "Fine-tune on BIMCO + Tryfon corpus; build 100-example test set per task; benchmark",
+        "costEur": 18000,
+        "durationWeeks": 8,
+        "killSignal": "<75% on ≥2 task types OR <5% gain over GPT-4",
+        "validateSignal": "≥85% on all 5 tasks AND ≥10% gain over GPT-4 on 3+ tasks"
+      },
+      {
+        "id": "po-k2",
+        "hypothesis": "2 maritime SaaS vendors (target: Veson, Danaos) sign embedded-inference pilot at €100-300K ACV in 16 weeks",
+        "experiment": "Pitch CTOs + product leaders; demo embedded API; target term-sheet conversation",
+        "costEur": 8000,
+        "durationWeeks": 16,
+        "killSignal": "0/4 vendors advance past first call",
+        "validateSignal": "≥2 signed pilots OR 1 production contract"
+      },
+      {
+        "id": "po-k3",
+        "hypothesis": "Maritime LLM platform can be commercialised as standalone API for shipping operators ($200-1K/month per user)",
+        "experiment": "Launch dev-portal MVP; pitch to 20 shipping operators; measure paid sign-ups",
+        "costEur": 6000,
+        "durationWeeks": 8,
+        "killSignal": "<3 paid sign-ups",
+        "validateSignal": "≥10 paid sign-ups at $200+/mo"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Maritime SaaS incumbents build their own AI in-house using GPT-4/Claude — embedded inference loses to vendor's own integration",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test po-k2 — track vendor AI-integration announcements"
+      },
+      {
+        "cause": "Tryfon-fleet data alone isn't enough; need to license BIMCO + others which raises COGS and reduces moat",
+        "likelihood": "medium",
+        "earlySignal": "Data sourcing analysis in weeks 2-4"
+      },
+      {
+        "cause": "Open-weight models commoditize fine-tuning; Hugging Face vertical-templates erode the wedge",
+        "likelihood": "low",
+        "earlySignal": "Monitor HF Hub for maritime fine-tunes; quarterly review"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.3,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.4,
+      "basisOfEstimate": "Embedded vertical AI infrastructure is hard to monetize standalone — moats come from data + integration depth. The Tryfon-fleet corpus is real but narrow; BIMCO + multi-shipper data is required for scale. €10M ARR = 30-50 SaaS vendors × €200-300K embedded contracts, feasible if 2-3 anchor vendors adopt."
+    }
   },
   {
     "id": "pharma-skills-intelligence",
@@ -1286,7 +2418,135 @@ export const ideas: Idea[] = [
       "founderAvailability": 3,
       "composite": 3.95
     },
-    "ycRfsCorrelation": "YC wants AI for regulated industries and vertical SaaS that incumbents cannot retrofit. Aletheia GxP is the AI-native competency intelligence layer for pharma GMP — Annex 1 (2023) made document-based LMS structurally insufficient, and EU AI Act compliance creates a 36-48 month moat against horizontal AI players who lack GAMP5/Part 11 validation."
+    "ycRfsCorrelation": "YC wants AI for regulated industries and vertical SaaS that incumbents cannot retrofit. Aletheia GxP is the AI-native competency intelligence layer for pharma GMP — Annex 1 (2023) made document-based LMS structurally insufficient, and EU AI Act compliance creates a 36-48 month moat against horizontal AI players who lack GAMP5/Part 11 validation.",
+    "tlifeAssetRefs": [
+      "elpen",
+      "winmedica",
+      "tripoli-hpapi",
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "al-a1",
+        "claim": "EU GMP Annex 1 revised 22 Aug 2022, operative 25 Aug 2023; mandates ongoing competency assessment and event-driven disqualification",
+        "source": "https://health.ec.europa.eu/document/download/e05af55b-38e9-42bf-8495-194bbf0b9262_en",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "al-a2",
+        "claim": "EU AI Act = Reg. 2024/1689; Annex III(4)(b) classifies workforce-decision AI as high-risk; general application 2 Aug 2026",
+        "source": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "al-a3",
+        "claim": "EU AI Act Art. 6(3) provides self-classification exemption when AI is decision-support and humans confirm regulated actions",
+        "source": "https://artificialintelligenceact.eu/article/6/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "al-a4",
+        "claim": "Veeva Vault is true multi-tenant SaaS with no on-premises variant (validates single-tenant-VPC architecture as differentiation)",
+        "source": "https://intuitionlabs.ai/articles/veeva-vault-cloud-content-management-platform-for-life-sciences",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "al-a5",
+        "claim": "21 CFR Part 11 mandates audit-trail + e-signatures for GMP records",
+        "source": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-11",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "al-a6",
+        "claim": "Tripoli HPAPI facility provides 416-equipment training matrix as anchor dataset for design-partner phase",
+        "source": "[USER-STATED — see tlifeAssets.ts#tripoli-hpapi]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "al-a7",
+        "claim": "Veeva Vault Training, MasterControl, ComplianceWire price €60-150/user/yr in EU mid-cap pharma",
+        "source": "[ESTIMATE — based on prior validation work]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "al-a8",
+        "claim": "FDA Jan 2025 draft guidance on AI for regulatory decision-making validates AI-derived evidence on validated software",
+        "source": "https://www.federalregister.gov/documents/2025/01/07/2024-31542/considerations-for-the-use-of-artificial-intelligence-to-support-regulatory-decision-making-for-drug",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "al-k1",
+        "hypothesis": "Tripoli HPAPI design-partner deployment goes live with ≥85% accuracy on Annex 1 §7.4-7.7 competency assessment for sterile manufacturing operators",
+        "experiment": "Deploy MVP at Tripoli; benchmark AI output vs QA-reviewer ground truth on 30+ operator competency records",
+        "costEur": 20000,
+        "durationWeeks": 10,
+        "killSignal": "<70% accuracy OR QA reviewer rejects ≥30% of outputs",
+        "validateSignal": "≥85% accuracy AND QA reviewer rates outputs as 'audit-defensible with minor edits'"
+      },
+      {
+        "id": "al-k2",
+        "hypothesis": "1 external pharma manufacturer signs paid pilot at €100-250K ACV in 12 weeks (Vianex / Pharmathen / DEMO / Lavipharm)",
+        "experiment": "Direct pitch via T-Life network + cold outreach to 8 Greek/Balkan mid-cap pharma QA directors",
+        "costEur": 5000,
+        "durationWeeks": 12,
+        "killSignal": "0 advanced past first call",
+        "validateSignal": "≥1 signed pilot AND 2+ advanced to term-sheet stage"
+      },
+      {
+        "id": "al-k3",
+        "hypothesis": "AI Act Art. 6(3) self-classification holds under regulatory pre-review — no high-risk classification triggered",
+        "experiment": "Engage 1 EU AI Act consultant + 1 EMA-adjacent regulatory reviewer; submit architecture documentation for pre-review",
+        "costEur": 10000,
+        "durationWeeks": 8,
+        "killSignal": "Reviewer recommends high-risk classification (triggering €1-3M conformity assessment burden)",
+        "validateSignal": "Both reviewers confirm Art. 6(3) self-classification valid"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Veeva ships a Vault Skills / Vault Competency module within 18 months — incumbent's installed-base wins on procurement vs greenfield",
+        "likelihood": "medium",
+        "earlySignal": "Track Veeva R&D Day (Sept) keynotes; LinkedIn job postings for Vault Skills PMs; /skills/ /competencies/ in Vault REST API"
+      },
+      {
+        "cause": "AI Act Art. 6(3) self-classification rejected at first regulator review — forces high-risk classification with €1-3M conformity-assessment burden and 6-12 month delay",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test al-k3 results"
+      },
+      {
+        "cause": "HealthStream extends into pharma — public-company P&L capacity + competency-software DNA make it the closest cultural fit",
+        "likelihood": "low",
+        "earlySignal": "Monitor HealthStream pharma announcements; track their NYSE: HSTM filings for vertical-expansion mentions"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.25,
+      "totalFailureBy36mo": 0.25,
+      "basisOfEstimate": "Strongest unit-economic profile in the catalog: liability-transfer product, captive Tripoli design partner, €100-250K ACV at audit-defensible architecture. Veeva ARR multiple (~10-15× revenue at exit) implies €40-60M EV at €4M ARR. The 25% / 45% / 25% bands reflect strong T-Life advantage + Annex 1 mandate-pull + clean unit economics. Bear case: Veeva ships competing module before Y2."
+    },
+    "redTeamFindings": [
+      {
+        "date": "2026-05-16",
+        "verdict": "proceed",
+        "dealKiller": "(no successful kill identified) The companion VaultEdge on-device appliance thesis was killed — Aletheia GxP as single-tenant SaaS in customer-elected EU VPC delivers the same regulatory posture (Part 11 audit, EU residency, no multi-tenant blast radius) without €100-150K capex friction.",
+        "patternMatches": [
+          "Veeva Vault as single-tenant cloud at customer-elected region (Frankfurt, Amsterdam) is the proven architecture",
+          "Aizon (Barcelona) pivoted from on-prem appliance to cloud SaaS specifically because pharma capex cycles killed hardware sales"
+        ],
+        "alternativeThesis": "(none — this is the validated thesis. The VaultEdge alt-thesis got folded back into this entry — see description architecture note + decision log)"
+      }
+    ]
   },
   {
     "id": "longevity-pharmacy-protocol",
