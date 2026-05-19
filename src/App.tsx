@@ -1,11 +1,13 @@
 import { lazy, Suspense, useState, type ReactNode } from "react";
 import { IdeasProvider } from "./hooks/useIdeas";
 import { VenturesProvider } from "./hooks/useVentures";
+import { ProgramProvider } from "./hooks/useProgram";
 import { Layout } from "./components/Layout";
 import { VenturesOverview } from "./components/VenturesOverview";
 import { VentureDetail } from "./components/VentureDetail";
 import type { ViewKey, Idea } from "./types";
 
+const TLifeOpenView = lazy(() => import("./components/TLifeOpenView").then((m) => ({ default: m.TLifeOpenView })));
 const Dashboard = lazy(() => import("./components/Dashboard").then((m) => ({ default: m.Dashboard })));
 const FunnelBoard = lazy(() => import("./components/FunnelBoard").then((m) => ({ default: m.FunnelBoard })));
 const IdeaCatalog = lazy(() => import("./components/IdeaCatalog").then((m) => ({ default: m.IdeaCatalog })));
@@ -28,6 +30,7 @@ export default function App() {
 
   const viewMap: Record<ViewKey, ReactNode> = {
     ventures: <VenturesOverview onOpenVenture={setOpenVentureId} />,
+    open: <TLifeOpenView />,
     dashboard: <Dashboard onSelectIdea={setSelectedIdea} />,
     funnel: <FunnelBoard onSelectIdea={setSelectedIdea} />,
     catalog: <IdeaCatalog onSelectIdea={setSelectedIdea} />,
@@ -38,6 +41,7 @@ export default function App() {
   return (
     <IdeasProvider>
       <VenturesProvider>
+        <ProgramProvider>
         <Layout
           activeView={activeView}
           onViewChange={setActiveView}
@@ -59,6 +63,7 @@ export default function App() {
             onClose={() => setOpenVentureId(null)}
           />
         )}
+        </ProgramProvider>
       </VenturesProvider>
     </IdeasProvider>
   );

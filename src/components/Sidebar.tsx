@@ -7,6 +7,7 @@ import { taskProgress } from "../lib/ventureUtils";
 
 const NAV_ITEMS: { key: ViewKey; label: string; icon: string }[] = [
   { key: "ventures", label: "Ventures", icon: "rocket" },
+  { key: "open", label: "T-Life Open '26", icon: "trophy" },
   { key: "dashboard", label: "Idea Dashboard", icon: "chart" },
   { key: "funnel", label: "Funnel Board", icon: "funnel" },
   { key: "catalog", label: "Idea Catalog", icon: "grid" },
@@ -55,6 +56,13 @@ function NavIcon({ type }: { type: string }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5a1.99 1.99 0 011.41.59l7 7a2 2 0 010 2.82l-5 5a2 2 0 01-2.82 0l-7-7A2 2 0 015 10V5a2 2 0 012-2z" />
         </svg>
       );
+    case "trophy":
+      return (
+        <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 4h8v3a4 4 0 11-8 0V4z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 5h3v2a3 3 0 01-3 3M8 5H5v2a3 3 0 003 3M12 14v3M9 21h6" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -71,7 +79,8 @@ export function Sidebar({
 }) {
   const { ideas, filters, setFilter, clearFilters } = useIdeas();
   const { ventures } = useVentures();
-  const showIdeaFilters = activeView !== "ventures";
+  const showIdeaFilters = activeView !== "ventures" && activeView !== "open";
+  const showActiveVentures = activeView !== "open";
 
   const stageCounts = STAGES.map((s) => ({
     ...s,
@@ -106,7 +115,7 @@ export function Sidebar({
           ))}
         </nav>
 
-        <div className="border-t border-slate-700 px-3 py-4">
+        {showActiveVentures && <div className="border-t border-slate-700 px-3 py-4">
           <div className="mb-2 px-3 text-xs font-medium uppercase tracking-wider text-slate-500">
             Active Ventures
           </div>
@@ -128,7 +137,7 @@ export function Sidebar({
               </button>
             );
           })}
-        </div>
+        </div>}
 
         {showIdeaFilters && (
           <>
