@@ -2,585 +2,6 @@ import type { Idea } from "../types";
 
 export const ideas: Idea[] = [
   {
-    "id": "agetech-yield-wallet",
-    "title": "Seniora",
-    "ycCategory": "Stablecoin Financial Services",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "A yield-bearing stablecoin savings wallet designed for retirees in Greece and Cyprus receiving pension income in EUR, offering 4–6% annual yield versus near-zero bank deposit rates.",
-    "description": "Greek and Cypriot retirees — a demographic that constitutes over 23% of the Greek population and is growing — hold an estimated €80B in bank deposits earning 0.1–0.5% annual interest while inflation erodes purchasing power. The 2010–2018 pension cuts left a generation of retirees structurally under-saved, and traditional wealth management minimums (typically €100K+) exclude the median retiree. Banks have no incentive to raise deposit rates given ECB excess liquidity, and Greek sovereign bonds carry perceived risk after the 2012 restructuring trauma.\n\nSeniora is a MiCA-compliant mobile and web application targeting retirees aged 60–80, offering EURC (Circle's EUR stablecoin) savings accounts that deploy idle balances into short-duration EU sovereign T-bill strategies via regulated DeFi protocols, targeting 4.5–5.5% net yield. Onboarding is KYC-lite for amounts under €10K (MiCA threshold), with progressive verification for larger balances. The UX is deliberately simplified — single balance view, monthly yield statement by post or email, and a family access feature allowing adult children to co-monitor balances. Distribution channels include pharmacies (WinMedica's 2,500+ retail pharmacy network), primary care clinics, and senior community organisations.\n\nNo incumbent targets this segment with stablecoin yield products. Greek neobanks (e.g., Viva Wallet, now JP Morgan-owned) focus on SME payments. The window is narrow: as ECB rates eventually fall further and MiCA implementation matures through 2025–2026, the first mover with pharmacy-channel distribution and elder-UX positioning will be very difficult to dislodge.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greece has the highest old-age dependency ratio in the EU, the deepest deposit rate grievance post-crisis, and WinMedica's pharmacy network is an unmatched physical distribution channel for elder-facing financial products.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Serbia and Romania have large retiree populations with similar bank deposit frustration but require local language UX and regulatory adaptation outside MiCA scope."
-      },
-      {
-        "market": "europe",
-        "fit": "green",
-        "note": "Italy, Portugal, and Spain share the same retiree demographics and deposit rate problem; MiCA passport enables expansion with localised pharmacy or GP-clinic distribution partnerships."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC has a growing expat retiree segment (Greek, European, South Asian) seeking EUR-denominated yield; Elnova Dubai presence provides a regulatory and network bridgehead."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "WinMedica's 2,500-pharmacy retail network is the single most powerful elder-distribution asset in Greece — Seniora can acquire customers at near-zero marginal cost by embedding into pharmacist-patient conversations about financial health.",
-    "tags": [
-      "agetech",
-      "stablecoins",
-      "savings",
-      "retirees",
-      "yield",
-      "mica-compliant",
-      "pharmacy-distribution"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greek bank deposit rates remain at 0.1-0.5% while ECB-rate-linked stablecoin yield products (Circle's USDC earning 4-5% via short-duration treasuries) became MiCA-compliant in June 2024 — for the first time, a regulated EUR-denominated yield product can legally be offered to Greek retail customers outside the banking system. The Bank of Greece's 2024 consumer finance survey showed 62% of retirees are dissatisfied with deposit returns but unwilling to use traditional investment products due to complexity. Pharmacy-based financial product distribution (already proven for insurance products via INTERAMERICAN's pharmacy network) provides a trust-anchored acquisition channel that fintech competitors cannot replicate.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Obtain MiCA CASP authorization; build EUR-to-USDC yield product with automated daily accrual; design simplified onboarding flow tested with 50 retirees in WinMedica pharmacy pilot cohort."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Launch in 100 pharmacies across Attica; reach €2M AUM from 500+ depositors; build trust through monthly paper statements mailed to users (critical for 70+ demographic adoption)."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Expand to 500 pharmacies nationally; €15M AUM; pharmacy distribution agreements create exclusive territorial rights that block competitors from replicating the channel; launch pension-auto-sweep feature with EFKA integration."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "€50M+ AUM; unit economics proven at scale; pharmacy network lock-in and retiree switching inertia create durable moat; explore expansion to Cyprus and Portuguese retiree market via similar pharmacy channels."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€400K-€800K",
-      "capexRatio": "15% capex / 85% opex",
-      "note": "Regulatory setup (MiCA + BOG engagement) is the primary upfront cost; product is software-only with no physical infrastructure; pharmacy distribution uses existing retail footprint."
-    },
-    "competitors": [
-      {
-        "name": "Stabila / Monefit",
-        "type": "startup",
-        "geography": "Estonia/EU",
-        "note": "Yield savings products for retail; not senior-specific or Greece-focused"
-      },
-      {
-        "name": "Piraeus/Alpha Bank digital apps",
-        "type": "incumbent",
-        "geography": "Greece",
-        "note": "Banks offering basic savings; no stablecoin or DeFi yield layer"
-      },
-      {
-        "name": "Bitpanda GO",
-        "type": "startup",
-        "geography": "Austria/EU",
-        "note": "Simplified crypto for retail; not optimized for retiree UX or Greek market"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 2,
-      "tlifeEdge": 2,
-      "competitiveGap": 4,
-      "capitalFit": 4,
-      "regulatoryRisk": 2,
-      "founderAvailability": 2,
-      "composite": 2.8
-    },
-    "ycRfsCorrelation": "YC wants yield-bearing stablecoin accounts within compliance frameworks. Seniora offers Greek and Cypriot retirees a simple savings wallet earning stablecoin yield."
-  },
-  {
-    "id": "shipping-treasury-stablecoin",
-    "title": "HarbourFX",
-    "ycCategory": "Stablecoin Financial Services",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Stablecoin-based treasury and cross-border payment platform for Greek and Cypriot shipping companies managing multi-currency operating costs across 40+ port jurisdictions.",
-    "description": "Greek-owned shipping controls approximately 20% of global deadweight tonnage, yet ship-management treasury operations remain trapped in 1980s correspondent banking infrastructure. A single bulk carrier incurs operating costs in USD (bunker fuel, P&I club calls), EUR (EU port fees, crew from Eastern Europe), and local currencies across 40+ port states. FX conversion and international wire fees consume 1.2–2.5% of gross operating costs per vessel annually — a €15,000–40,000 drag per ship on a fleet of 10 vessels. More critically, settlement delays of 2–5 days on port disbursement accounts create liquidity crises when vessels need immediate bunkering or port authority payments.\n\nHarbourFX provides a multi-stablecoin treasury dashboard — holding USDC, EURC, and XSGD — for ship managers operating from Piraeus, Limassol, and Dubai. Port disbursement agents, crew payroll processors, and bunker traders are onboarded as counterparties who accept stablecoin settlement with same-day finality. The FX layer uses an aggregated AMM route across Uniswap v4 and Curve, with slippage management tuned for the $50K–$500K transaction sizes typical in shipping treasury. Regulatory structure is a Cyprus-licensed Payment Institution under PSD2, with VASP registration covering the stablecoin legs.\n\nPiraeus-based ship managers are uniquely positioned to move first: Cyprus already has the highest concentration of ship management companies per capita in the EU, MiCA creates a compliant stablecoin framework, and the incumbent competition — Citi Treasury, ABN AMRO shipping finance — cannot rebuild their correspondent banking rails fast enough to match on-chain settlement finality. Two fintech players (Velo Labs, KAST) are attacking adjacent shipping finance niches but not the treasury operations layer.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greece and Cyprus together host the world's largest cluster of ship management companies; Tryfon fleet provides the reference customer and operational credibility to close the first 5–10 ship-manager accounts.",
-    "expansionMarkets": [
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "Dubai and Abu Dhabi are the second-largest ship management hubs globally after Piraeus; Elnova's Dubai entity provides a legal and network anchor for VASP licensing under VARA."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Hamburg, Rotterdam, and Oslo ship managers face identical treasury friction; MiCA passport covers expansion but requires dedicated enterprise sales without the T-Life warm network."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Crew sourcing from Croatia, Montenegro, and Romania creates a secondary use case in stablecoin crew payroll, but the ship management decision-makers remain in Greece/Cyprus/UAE."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Tryfon fleet is the reference customer and live proof-of-concept — HarbourFX can be battle-tested on real vessel treasury operations before any external sales motion, de-risking the product-market fit question entirely.",
-    "tags": [
-      "shipping",
-      "stablecoins",
-      "treasury",
-      "cross-border-payments",
-      "mica-compliant",
-      "b2b-fintech"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "MiCA's stablecoin provisions (effective June 2024) created the first legal pathway for a European-regulated entity to offer multi-currency stablecoin treasury products to corporate clients — shipping companies can now hold USDC/EURC as working capital without the legal ambiguity that blocked adoption pre-2024. Correspondent banking costs for shipping treasury operations increased 40% between 2022-2025 due to de-risking of Greek maritime accounts by major clearing banks (Citi, JPMorgan reducing correspondent relationships). Starlink maritime connectivity now enables real-time treasury operations from vessels at sea, eliminating the connectivity gap that made on-vessel financial management impractical before 2023.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Deploy treasury module on 3 Tryfon fleet vessels; build multi-currency settlement rails (USD, EUR, SGD) using Circle and Fireblocks infrastructure; integrate with Greek shipping ERP systems (Danaos, AMOS)."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Onboard 5 external ship management companies in Piraeus; process $2M monthly in port disbursement settlements; build proprietary FX optimization engine trained on shipping payment patterns across 40+ port jurisdictions."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "20+ shipping company clients; $15M monthly settlement volume; proprietary port-agent payment network in 30 ports creates switching costs — competitors would need to rebuild agent relationships from scratch."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "$50M+ monthly volume; apply for EMI license; launch trade finance product (stablecoin-based bunker fuel pre-payment); shipping treasury dataset becomes a defensible asset for credit scoring and working capital optimization."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€500K-€1M",
-      "capexRatio": "25% capex / 75% opex",
-      "note": "Higher seed due to MiCA corporate CASP requirements and need for robust multi-currency infrastructure; Tryfon fleet subsidizes pilot costs significantly."
-    },
-    "competitors": [
-      {
-        "name": "Enigio / Bolero",
-        "type": "startup",
-        "geography": "Global",
-        "note": "Digital trade finance and bill of lading; not focused on treasury stablecoin rails"
-      },
-      {
-        "name": "Circle (USDC enterprise)",
-        "type": "startup",
-        "geography": "US/Global",
-        "note": "Provides USDC infrastructure but no shipping-specific treasury product"
-      },
-      {
-        "name": "Pole Star / ShipMoney",
-        "type": "adjacent",
-        "geography": "Global",
-        "note": "Ship crew payroll and treasury; legacy tech, not stablecoin-native"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 4,
-      "competitiveGap": 4,
-      "capitalFit": 3,
-      "regulatoryRisk": 2,
-      "founderAvailability": 2,
-      "composite": 3.15
-    },
-    "ycRfsCorrelation": "YC wants stablecoin financial infrastructure bridging DeFi and TradFi. HarbourFX gives shipping companies stablecoin treasury management across multiple currencies."
-  },
-  {
-    "id": "pharmaschedule-ai",
-    "title": "PharmaSchedule AI",
-    "ycCategory": "Modern Metal Mills",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Real-time production scheduling and capacity planning software purpose-built for CMO and generic pharmaceutical manufacturers in SE Europe.",
-    "description": "Greek and Balkan pharmaceutical manufacturers still run production planning on spreadsheets and ERP systems that were not designed for the regulatory complexity of pharmaceutical batch manufacturing. Campaign scheduling, equipment cleaning validation cycles, and multi-product line sequencing create interdependencies that generic manufacturing software cannot model. The result is chronic schedule slippage, underutilised capacity, and costly batch failures that hit mid-size manufacturers like WinMedica and ELPEN hardest.\n\nPharmaSchedule AI is a scheduling and capacity planning layer that sits on top of existing ERP systems (SAP, Oracle, local legacy) and applies constraint-based optimisation to pharmaceutical production sequences. It ingests equipment availability, cleaning validation windows, raw material lead times, and regulatory submission deadlines to generate feasible schedules and flag conflicts before they become shutdowns. The system understands GMP batch record logic natively, reducing the translation burden between production planners and QA.\n\nThe nearest competitors are large MES vendors like Werum PAS-X and Rockwell PharmaSuite, which require 18-month implementations and seven-figure licence fees — accessible only to top-10 global pharma. No scheduling-focused SaaS product exists for the 50-500 employee generic manufacturer segment in SE Europe. Post-Brexit regulatory divergence and EU GMP amendments are forcing this cohort to modernise their documentation and scheduling practices now, creating a rare window for a focused product.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "WinMedica Tripoli factory and ELPEN provide direct design-partner access and credibility. Greece has 40+ licensed pharmaceutical manufacturers with no incumbent scheduling SaaS.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbia, Romania, and Bulgaria have significant generic manufacturing bases with the same ERP-gap problem and lower incumbent SaaS penetration."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC is building domestic pharmaceutical manufacturing capacity (Saudi Vision 2030 pharma localisation) and will need scheduling tooling as lines come online 2026-2028."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Larger market but incumbents have stronger footholds; viable as a later expansion once SE Europe reference customers are established."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "WinMedica operates multi-product pharmaceutical lines at Tripoli with known scheduling pain. T-Life can provide the first design partner, a referenceable customer, and regulatory network access across the Greek manufacturer community.",
-    "tags": [
-      "pharma-manufacturing",
-      "scheduling",
-      "saas",
-      "gmp",
-      "erp-integration",
-      "se-europe"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "EU GMP Annex 15 (Qualification and Validation) updates in 2024 tightened changeover documentation requirements, making manual scheduling of multi-product lines significantly more compliance-risky. Greek and Balkan CMOs are experiencing a surge in contract manufacturing demand as Western European pharma companies nearshore production post-COVID, but cannot accept new contracts because their scheduling tools (SAP PP or spreadsheets) cannot optimize across GMP cleaning validation constraints, stability testing windows, and regulatory hold periods simultaneously. AI-powered constraint satisfaction solvers only became practical for pharma-scale scheduling problems (100+ SKUs, 10+ lines) with the compute cost reductions of 2024.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Deploy at WinMedica Tripoli facility as design partner; map all production lines, changeover matrices, and GMP constraints into the scheduling engine; deliver first AI-optimized weekly schedule beating current manual planning by 15%+ capacity utilization."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Integrate with SAP B1 and zenon SCADA at WinMedica; onboard 2 additional Greek CMOs (Pharmathen, Uni-Pharma); build proprietary changeover time dataset across 50+ molecule-to-line combinations."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "8+ CMO customers across Greece and Balkans; proprietary scheduling dataset (changeover times, cleaning validation durations, batch failure correlations) creates optimization advantage no new entrant can match without equivalent production data."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Expand to Turkey and GCC contract manufacturers; launch predictive module that forecasts scheduling bottlenecks 4-6 weeks ahead; integrate with MES layer for closed-loop execution; €1.5M+ ARR."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€250K-€500K",
-      "capexRatio": "15% capex / 85% opex",
-      "note": "Pure software play with low capex; main cost is pharma-domain engineering talent who understand GMP constraints and can translate them into scheduling optimization logic."
-    },
-    "competitors": [
-      {
-        "name": "Preactor (Siemens Opcenter)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Advanced planning and scheduling for manufacturing; expensive, not CMO-specific"
-      },
-      {
-        "name": "Dassault DELMIA Quintics",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Pharma production planning; complex implementation, not tailored to small CMOs"
-      },
-      {
-        "name": "Plataine",
-        "type": "startup",
-        "geography": "Israel/Global",
-        "note": "AI scheduling for discrete manufacturing; not pharma/GMP-specific"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 5,
-      "competitiveGap": 3,
-      "capitalFit": 4,
-      "regulatoryRisk": 3,
-      "founderAvailability": 3,
-      "composite": 3.55
-    },
-    "ycRfsCorrelation": "YC wants software-driven production planning with real-time scheduling. PharmaSchedule AI delivers this for pharmaceutical CMOs — dynamic batch scheduling that optimizes changeover time and cleanroom utilization."
-  },
-  {
-    "id": "batchenergy-io",
-    "title": "BatchEnergy",
-    "ycCategory": "Modern Metal Mills",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Energy cost intelligence and demand-side management for pharmaceutical and chemical batch manufacturing, targeting Greece's high industrial electricity prices.",
-    "description": "Industrial electricity in Greece costs 30-45% more than the EU average for energy-intensive manufacturers, and pharmaceutical manufacturing is energy-heavy: cleanrooms, autoclaves, HVAC validation, cold chain, and continuous freeze-drying all run around the clock. Most mid-size pharma manufacturers have no visibility into energy consumption by batch, by equipment, or by shift. They receive a monthly invoice and have no levers to pull. With Greek electricity prices volatile post-2022 and EU carbon border mechanisms tightening, this is becoming a material P&L issue.\n\nBatchEnergy deploys a lightweight IoT sensor layer on existing equipment combined with a SaaS dashboard that maps energy consumption to individual production batches and equipment cycles. It then connects to day-ahead electricity market pricing and the manufacturer's production schedule to recommend load-shifting: moving non-time-critical operations like autoclave cycles or purified water generation to off-peak windows. The system produces GMP-compliant energy consumption records usable in sustainability reporting and increasingly in EMA dossier submissions requiring environmental impact data.\n\nNo competitor addresses energy management specifically for GMP environments, where the audit trail and validation requirements make generic industrial IoT tools unusable. Siemens and ABB sell energy management systems to large utilities and heavy industry, not to 100-employee pharma plants. The EU's updated GMP Annex 1 and upcoming sustainability disclosure requirements for mid-caps create a compliance pull that makes this a must-have rather than a nice-to-have within 24 months.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greece's above-average industrial electricity costs and concentration of pharma manufacturing in Tripoli, Attica, and Thessaloniki create an acute pain point. WinMedica is the natural first customer.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Romania and Bulgaria have growing generic pharma manufacturing with similar energy cost exposure and even less existing IoT infrastructure."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC manufacturers face high cooling energy costs; sustainability reporting requirements are emerging fast under UAE and Saudi net-zero commitments."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Larger but more competitive; German and Nordic energy management incumbents have footholds, though not in GMP-specific tooling."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "T-Life's WinMedica manufacturing operations provide a pilot site with quantifiable energy costs, and the Elnova Dubai HQ connection opens a GCC channel for the Middle East expansion thesis.",
-    "tags": [
-      "energy-management",
-      "iot",
-      "pharma-manufacturing",
-      "sustainability",
-      "gmp",
-      "cleanroom"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greece's industrial electricity prices hit €180-220/MWh in 2024 (vs EU average of €130/MWh), driven by carbon border adjustment mechanism (CBAM) pre-compliance costs and gas price pass-through, making energy optimization existential for Greek manufacturers. The EU Energy Efficiency Directive recast (2023/1791) mandates energy audits and management systems for enterprises above 85 TJ annual consumption by 2025, creating a regulatory deadline. IoT sensor costs for industrial energy monitoring dropped 60% between 2022-2024, and pharma-grade cleanroom HVAC energy modeling only became computationally feasible with edge computing platforms available since late 2023.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Deploy IoT energy monitoring across WinMedica Tripoli facility (cleanrooms, autoclaves, HVAC, compressed air); build baseline energy consumption model per batch type; identify €50K+ annual savings opportunities."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Implement demand-side management algorithms that shift batch scheduling to off-peak tariff windows without violating GMP hold-time constraints; onboard 2 additional pharma/chemical manufacturers in Attica industrial zone."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "8+ manufacturing sites monitored; proprietary energy-per-batch benchmarking dataset across pharma, chemical, and food manufacturing creates consulting moat — customers cannot get equivalent benchmarks elsewhere."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Launch carbon accounting module aligned with CBAM reporting requirements; expand to GCC industrial zones (high cooling energy costs); €1M+ ARR with proven 15-25% energy cost reduction across customer base."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€300K-€650K",
-      "capexRatio": "35% capex / 65% opex",
-      "note": "Higher capex ratio due to IoT sensor hardware procurement and industrial installation costs; software platform development is the primary opex driver."
-    },
-    "competitors": [
-      {
-        "name": "Schneider Electric EcoStruxure",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Industrial energy management; generic, not pharma-batch-specific"
-      },
-      {
-        "name": "Enel X / AutoGrid",
-        "type": "adjacent",
-        "geography": "Global",
-        "note": "Demand response and energy optimization; not manufacturing-process aware"
-      },
-      {
-        "name": "Rockwell Automation FactoryTalk",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Plant automation with energy modules; requires full Rockwell stack investment"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 5,
-      "competitiveGap": 3,
-      "capitalFit": 4,
-      "regulatoryRisk": 4,
-      "founderAvailability": 3,
-      "composite": 3.65
-    },
-    "ycRfsCorrelation": "YC wants integrated energy management for manufacturing. BatchEnergy optimizes energy costs across pharma batch production — scheduling energy-intensive steps during off-peak hours."
-  },
-  {
-    "id": "lineops-rare",
-    "title": "LineOps Rare",
-    "ycCategory": "Modern Metal Mills",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Manufacturing execution and supply chain visibility platform for small-batch rare disease drug production in emerging pharma markets.",
-    "description": "Rare disease drugs require small, highly specialised production runs — often 10-500 units per batch — with complex cold chain logistics, strict serialisation requirements, and compassionate-use regulatory pathways that differ by country. In GCC and SE Europe, rare disease patients are frequently served by named-patient imports or local small-batch manufacturing under hospital exemptions. These production environments are managed with paper-based batch records, manual cold chain logs, and no digital chain of custody. A single documentation failure can strand a patient without medication for weeks.\n\nLineOps Rare is a lightweight MES and supply chain visibility platform designed specifically for small-batch rare disease manufacturing and named-patient distribution. It digitises batch records, automates serialisation for EU FMD and GCC track-and-trace requirements, and provides a shared visibility layer for manufacturers, hospital pharmacies, and national medicine agencies. The platform is sized for 5-50 person operations and deploys in weeks rather than years. It supports Arabic and Greek alongside English, addressing a real barrier to adoption in target markets.\n\nElnova Pharma, headquartered in Dubai and focused on rare diseases in GCC and MENA, sits exactly at the intersection of this problem. No MES vendor has built for the named-patient and hospital-exemption manufacturing segment — the major vendors (Veeva Vault, Werum) are designed for large commercial manufacturing. GCC countries are simultaneously building domestic pharmaceutical manufacturing capacity and tightening serialisation and pharmacovigilance requirements, creating a compliance-driven adoption window now.",
-    "primaryMarket": "middle-east",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Elnova Pharma's Dubai HQ and rare disease focus in GCC and MENA gives T-Life a direct design-partner relationship in the primary market, with existing regulatory and hospital network connections.",
-    "expansionMarkets": [
-      {
-        "market": "greece-cyprus",
-        "fit": "green",
-        "note": "Greece's hospital pharmacy sector and ELPEN rare disease line provide a strong SE Europe beachhead with direct T-Life portfolio access."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Named-patient and hospital-exemption manufacturing is common in Serbia and Romania; regulatory harmonisation with EU creates a pull for compliant tooling."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "EU rare disease manufacturing is dominated by larger CDMOs, but hospital pharmacy manufacturing (ATMP sector) is growing and underserved by current MES tools."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Elnova Pharma is a direct T-Life portfolio asset in rare diseases with GCC presence. T-Life can provide the founding customer, regional regulatory network, and a clear path to pilot without a cold-start sales problem.",
-    "tags": [
-      "rare-disease",
-      "mes",
-      "small-batch",
-      "serialisation",
-      "gcc",
-      "named-patient",
-      "cold-chain"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "The EU Orphan Regulation revision (2023) and GCC countries' new rare disease national plans (Saudi Arabia 2024, UAE 2023) are accelerating orphan drug approvals, but manufacturing infrastructure for small-batch production (10-500 units) remains critically underdeveloped outside Western Europe. Named-patient and compassionate-use programs under EU Regulation 726/2004 Article 83 are expanding in Greece and the Middle East, creating demand for batch-level traceability that generic MES systems cannot provide at small-batch scale. The EU Falsified Medicines Directive serialisation requirements now extend to hospital preparations and named-patient supplies, requiring manufacturing execution capabilities that did not previously apply to these product categories.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Deploy LineOps at Elnova's first contract manufacturing partner for rare disease formulations; build serialisation and cold-chain tracking module compliant with EU FMD and GCC SFDA requirements."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Process 50+ small batches with full traceability; integrate with 2 named-patient program distributors in UAE and Saudi Arabia; build compassionate-use documentation automation module."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "10+ rare disease manufacturers on platform across Greece, Turkey, and GCC; proprietary small-batch yield optimization dataset (batch failure modes, environmental excursion patterns) creates manufacturing intelligence moat."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Platform becomes the reference MES for orphan drug CMOs in the MENA-SEE corridor; launch predictive quality module that flags batch deviations before they cause failures; expand to cell and gene therapy manufacturing."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€350K-€700K",
-      "capexRatio": "20% capex / 80% opex",
-      "note": "Software-primary with some hardware integration costs for serialisation equipment interfaces; Elnova relationship significantly reduces design-partner acquisition cost."
-    },
-    "competitors": [
-      {
-        "name": "Werum PAS-X (Körber)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Leading pharma MES; overbuilt and expensive for small-batch rare disease lines"
-      },
-      {
-        "name": "Tulip Interfaces",
-        "type": "startup",
-        "geography": "US/Global",
-        "note": "No-code MES for manufacturing; not GMP-validated or rare-disease focused"
-      },
-      {
-        "name": "Apprentice.io",
-        "type": "startup",
-        "geography": "US/Global",
-        "note": "Digital manufacturing platform for pharma; US-centric, not SE Europe present"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 2,
-      "tlifeEdge": 5,
-      "competitiveGap": 3,
-      "capitalFit": 3,
-      "regulatoryRisk": 2,
-      "founderAvailability": 2,
-      "composite": 3.0
-    },
-    "ycRfsCorrelation": "YC wants to modernize manufacturing with software-driven operations. LineOps Rare brings MES capabilities to small-batch rare disease drug production."
-  },
-  {
-    "id": "portlogix-pharma",
-    "title": "PortLogix Pharma",
-    "ycCategory": "Modern Metal Mills",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Integrated sea freight and customs clearance coordination platform for pharmaceutical raw material imports into SE Europe and GCC, built for API and excipient procurement teams.",
-    "description": "Greek and Balkan pharmaceutical manufacturers source 70-90% of their active pharmaceutical ingredients and excipients from India and China. This supply chain runs through Piraeus, Thessaloniki, and increasingly through Jebel Ali for GCC-destined product. Pharmaceutical imports require coordinated handling across freight forwarders, customs agents, cold chain logistics providers, and national medicine agency pre-clearance systems — all currently managed through email threads and WhatsApp groups. Delays at Piraeus due to missing pre-clearance documents routinely hold up production schedules for weeks.\n\nPortLogix Pharma is a coordination and visibility platform that connects pharmaceutical procurement teams with their freight forwarders, customs agents, and logistics providers on a single timeline. It automates pre-clearance document generation for Greek EOF and UAE MOHAP import requirements, flags shipment anomalies against the production schedule, and provides a shared audit trail for GDP compliance. The integration with the scheduling layer (compatible with PharmaSchedule AI) means that a two-week delay in API arrival automatically surfaces in the production plan before it becomes a crisis.\n\nFreight visibility tools like project44 and FourKites exist but are built for retail and automotive supply chains and have no pharmaceutical regulatory intelligence. No tool bridges the gap between freight visibility and GMP import documentation in SE Europe or GCC. Piraeus is now the largest port in the Mediterranean by container volume, handling significant pharmaceutical import flows from Asia — the infrastructure is there, but the software layer is missing. Post-COVID API shortage experiences have made procurement resilience a board-level topic for Greek pharma manufacturers.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Piraeus handles a disproportionate share of SE European pharmaceutical API imports. WinMedica and ELPEN procurement teams are the natural first customers, and T-Life's shipping background provides logistics credibility.",
-    "expansionMarkets": [
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "Jebel Ali is the primary pharmaceutical import hub for GCC; Elnova and growing GCC domestic manufacturers face identical documentation and coordination problems."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Serbian and Romanian manufacturers import through the same routes; regional expansion is straightforward once Greek GDP compliance workflows are validated."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Larger pharma importers already use enterprise TMS systems; the product is most differentiated for the mid-market segment that is underserved across Western Europe."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "The Tryfon shipping fleet and T-Life's deep relationships in Piraeus port operations give this venture a unique angle on the logistics coordination problem that a software-only founder could not replicate.",
-    "tags": [
-      "supply-chain",
-      "logistics",
-      "pharmaceutical-imports",
-      "customs",
-      "gdp-compliance",
-      "piraeus",
-      "api-sourcing"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Post-Red Sea rerouting in 2024 added 10-14 days to India/China-to-Piraeus API shipments, exposing the fragility of pharmaceutical supply chains that had no real-time visibility between port of origin and GMP warehouse receipt. Greece's new Customs Authority digital platform (ICISnet 2.0, launched 2024) created machine-readable customs clearance APIs for the first time, enabling automated GDP-compliant documentation handoffs that were manual paper processes before. EU GDP Annex 16 qualified person release requirements for imported APIs tightened in 2024, making customs clearance coordination a compliance-critical process rather than a pure logistics optimization.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Build integration layer connecting Piraeus Port Authority systems, ICISnet 2.0, and 3 freight forwarders serving WinMedica's API import routes; deliver real-time shipment visibility dashboard with GDP compliance document tracking."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Onboard 5 pharmaceutical importers in Piraeus; automate customs pre-clearance documentation with 80%+ straight-through processing rate; build temperature excursion alerting for cold-chain API shipments."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "15+ pharma importers; proprietary transit time and customs clearance prediction models trained on 1,000+ shipments create planning accuracy that manual processes cannot match; expand to Thessaloniki port."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Dominant pharma logistics coordination platform in Greek ports; expand to Istanbul and Jebel Ali (Dubai) pharmaceutical import corridors; launch supplier qualification module that rates API manufacturers on delivery reliability; €1.2M+ ARR."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€250K-€550K",
-      "capexRatio": "15% capex / 85% opex",
-      "note": "Pure software platform with API integrations; no hardware or physical logistics assets required; main cost is domain engineering for GDP compliance logic and customs integration."
-    },
-    "competitors": [
-      {
-        "name": "Ceva Logistics (pharma division)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "GDP-compliant sea and air pharma freight; large 3PL, not Greece/Balkan specialized"
-      },
-      {
-        "name": "World Courier (AmerisourceBergen)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Specialized pharma logistics; premium price, not focused on SE Europe imports"
-      },
-      {
-        "name": "Hellas Direct Logistics (local brokers)",
-        "type": "adjacent",
-        "geography": "Greece",
-        "note": "Regional freight forwarding; no pharma cold-chain specialization or digital layer"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 4,
-      "competitiveGap": 3,
-      "capitalFit": 4,
-      "regulatoryRisk": 3,
-      "founderAvailability": 4,
-      "composite": 3.45
-    },
-    "ycRfsCorrelation": "YC wants to reduce manufacturing lead times through software. PortLogix Pharma integrates sea freight scheduling with pharma production planning — coordinating API imports with GMP batch schedules."
-  },
-  {
     "id": "altp-techshift",
     "title": "TechShift ALTP",
     "ycCategory": "Modern Metal Mills",
@@ -619,7 +40,7 @@ export const ideas: Idea[] = [
       "industrial-transition"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "Greece's unemployment rate among 45-64 year-olds in manufacturing regions (Tripoli, Volos, Thessaloniki industrial zones) remains at 15-18% as automation displaces traditional roles, while life sciences and tech companies in Athens report 6-9 month hiring cycles for mid-level technical positions — a clear matching failure. The EU Recovery and Resilience Facility allocated €1.3B to Greek digital skills and green transition workforce programs through 2026, creating funded demand for upskilling platforms that can demonstrate employment outcomes. OAED's 2024 digital transformation introduced API-based program enrollment, enabling automated learner-to-program matching that was impossible with the previous paper-based system.",
     "roadToMoat": [
       {
@@ -678,685 +99,6 @@ export const ideas: Idea[] = [
     "ycRfsCorrelation": "YC wants software that transforms industrial operations. TechShift connects displaced manufacturing workers to life sciences roles through AI-matched upskilling pathways."
   },
   {
-    "id": "pharma-facility-spatial-twin",
-    "title": "PharmaTwin",
-    "ycCategory": "Large Spatial Models",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "A large spatial model that automates GMP facility compliance mapping by reasoning over 3D plant geometry to flag contamination risk zones, air flow violations, and EMA inspection gaps before auditors arrive.",
-    "description": "Pharmaceutical manufacturing facilities face relentless EMA and WHO GMP inspection cycles, yet compliance teams still rely on 2D CAD floor plans, paper SOPs, and manual walkthroughs to identify risk. A contamination pathway that is obvious in 3D — an HVAC return positioned downstream of an open dispensing zone — is nearly invisible in a flat drawing reviewed by a junior QA analyst. Failed inspections cost manufacturers weeks of production shutdown and regulatory remediation fees that routinely exceed €2M per event in Southern Europe.\n\nPharmaTwin ingests facility point clouds (from standard LiDAR scans or photogrammetry), equipment placement data, and air handling unit specifications to build a live 3D spatial model of the manufacturing environment. A large spatial model trained on hundreds of GMP facility geometries and corresponding inspection finding databases learns to reason about contamination propagation, personnel flow bottlenecks, and cleaning validation surface coverage in 3D space. It generates a ranked inspection readiness report tied directly to geometry — not a checklist — with proposed physical interventions shown in context. ELPEN and WinMedica facilities are the pilot environment.\n\nSiemens and Rockwell offer digital twin platforms aimed at operational efficiency rather than compliance reasoning. No company has trained a spatial foundation model on GMP inspection outcomes as supervision signal. EMA's push toward risk-based inspection frameworks and the wave of biosimilar manufacturing buildouts across Greece, Cyprus, and the Balkans create a five-year window before a large infrastructure player closes this gap.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "ELPEN and WinMedica are immediate design partners providing facility access, inspection records, and regulatory context. Greece's expanding generic and biosimilar manufacturing base creates a dense local market beyond the T-Life portfolio.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbia, Romania, and Bulgaria host significant pharma manufacturing capacity aligned to EU GMP standards with the same inspection risk profile."
-      },
-      {
-        "market": "europe",
-        "fit": "green",
-        "note": "Germany, Italy, and Spain collectively host the majority of EU GMP-licensed manufacturing sites and represent the largest commercial market."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "Elnova Pharma's Dubai HQ and Saudi Vision 2030 local pharma manufacturing mandates create a natural expansion path with existing T-Life presence."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "ELPEN manufacturing facilities and WinMedica distribution infrastructure are live pilot environments. Elnova Pharma's Middle East operations open the GCC pharma manufacturing market without cold outreach. T-Life has the regulatory relationships to co-author the EMA case study that becomes the sales asset.",
-    "tags": [
-      "pharma",
-      "gmp",
-      "spatial-ai",
-      "compliance",
-      "digital-twin",
-      "manufacturing"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "EMA's revised Annex 1 (effective August 2023) introduced contamination control strategy (CCS) requirements that are inherently spatial — airflow patterns, pressure cascades, and personnel movement paths must be documented and validated as a system, not as individual room specifications. No existing GMP compliance tool models these requirements in 3D. The cost of 3D LiDAR scanning for industrial facilities dropped below €5/sqm in 2024, making full-facility digital twin creation economically viable for mid-sized pharma plants. EU GMP Chapter 3 revisions expected in 2025-2026 will require validated computational fluid dynamics (CFD) models for cleanroom design, creating a regulatory mandate for exactly this capability.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "3D-scan ELPEN and WinMedica manufacturing facilities; build spatial compliance engine that maps Annex 1 CCS requirements onto 3D geometry; deliver first automated inspection readiness report identifying 3D-spatial GMP violations."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Validate with EMA inspector feedback on 2 real audit cycles; onboard 3 additional Greek/Balkan pharma manufacturers; build airflow simulation module integrated with spatial model."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "10+ facilities modeled; proprietary GMP-spatial compliance ruleset (200+ spatial rules mapped to Annex 1, Chapter 3, Chapter 5) creates regulatory IP moat; predictive contamination risk scoring reduces audit findings by 40%+."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Reference customer for EMA digital inspection pilot program; expand to GCC pharma facilities (Saudi FDA modernization); launch facility design module for new cleanroom planning; €2M+ ARR."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€400K-€800K",
-      "capexRatio": "30% capex / 70% opex",
-      "note": "Capex driven by 3D scanning equipment and GPU compute for spatial modeling; ELPEN/WinMedica facilities provide free pilot environments that would cost €100K+ to access commercially."
-    },
-    "competitors": [
-      {
-        "name": "Siemens Xcelerator / Teamcenter",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Digital twin for manufacturing; not GMP-compliance-specific or pharma-workflow-native"
-      },
-      {
-        "name": "AspenTech Mtell",
-        "type": "incumbent",
-        "geography": "US/Global",
-        "note": "Predictive maintenance for pharma plants; not spatial/visual compliance twin"
-      },
-      {
-        "name": "Dassault 3DEXPERIENCE",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "3D facility modeling; broad scope, high cost, not pharma QA/audit workflow"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 5,
-      "competitiveGap": 3,
-      "capitalFit": 3,
-      "regulatoryRisk": 2,
-      "founderAvailability": 2,
-      "composite": 3.15
-    },
-    "ycRfsCorrelation": "YC wants AI that reasons about real-world environments. PharmaTwin creates spatial digital twins of GMP pharmaceutical facilities — mapping cleanroom flows and contamination risk zones."
-  },
-  {
-    "id": "pharma-alpha-intelligence",
-    "title": "PharmaSignal Fund",
-    "ycCategory": "AI-Native Hedge Funds",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "An AI-native long-short equity fund specializing in European generic and specialty pharma, using regulatory filing agents and clinical pipeline intelligence to trade ahead of public consensus.",
-    "description": "European generic pharma equities are systematically mispriced because the analytical inputs required to value them correctly — EMA approval pipelines, reference pricing negotiations across 27 member states, parallel import dynamics, biosimilar market entry timing, and public procurement tender outcomes — are fragmented across dozens of regulatory bodies and available in 20+ languages. Mainstream sell-side analysts lack the language coverage and regulatory depth to process this data continuously. Specialist pharma hedge funds exist in London and Zurich but are discretionary and human-bottlenecked, meaning they can only track a subset of the universe at any given time.\n\nPharmaSignal Fund deploys AI agent swarms that continuously monitor EMA Committee for Medicinal Products decisions, national HTA body reimbursement rulings (NICE, G-BA, HAS, AIFA, and crucially the Greek EOF and Cypriot Ministry of Health), European procurement tender databases, WHO essential medicines list updates, and patent cliff calendars. Agents cross-reference pipeline events against current equity valuations to identify mispricings in mid-cap European generics and rare disease developers. The fund's edge in Southern and Eastern European pharma markets is particularly strong, as local-language regulatory data from Greece, Romania, Serbia, and Bulgaria is effectively invisible to London-based funds. T-Life's operational knowledge of WinMedica's competitive environment informs the initial signal architecture.\n\nThe competitive field in this niche is thin: OrbiMed and Deerfield operate large pharma-focused funds but are US-centric and discretionary. No AI-native fund has built a regulatory-intelligence-first approach targeting European generics specifically. The window is open now because biosimilar market entry in Europe is accelerating through 2026-2028, creating a multi-year period of frequent valuation-moving events that systematic agents can exploit better than human analysts.",
-    "primaryMarket": "europe",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "European listed generic and specialty pharma is the core universe; the fund trades equities listed on European exchanges and the edge derives from European regulatory data supremacy, not geographic proximity to investors.",
-    "expansionMarkets": [
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC sovereign wealth funds and family offices are active LPs in healthcare-focused hedge funds and represent a natural capital-raising market."
-      },
-      {
-        "market": "greece-cyprus",
-        "fit": "green",
-        "note": "Athens-listed pharma names and Greek EOF regulatory signals serve as the highest-conviction initial signal cluster before expanding to pan-European coverage."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Balkan generics manufacturers (Alkaloid in Macedonia, Hemofarm in Serbia) present under-covered equity opportunities as the fund's Balkan regulatory data layer matures."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "WinMedica and ELPEN manufacturing provide insider-grade understanding of European generic pharma competitive dynamics, EMA approval cycles, and tender pricing mechanics that would take an external founder years to acquire — this operational knowledge directly seeds the initial signal model.",
-    "tags": [
-      "ai-hedge-fund",
-      "pharma-equities",
-      "ema-regulatory",
-      "biosimilars",
-      "generics",
-      "european-healthcare"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "EMA's EPAR database and European Medicines Agency's Parallel Distribution notices are now machine-readable APIs (2024 update), enabling systematic tracking of generic approval pipeline velocity that was previously only available to manual analysts. The post-Accord/Sandoz consolidation of EU generics in 2023-2025 created a wave of corporate restructurings with predictable arbitrage patterns in smaller listed generics (Athens, Warsaw, Vienna exchanges). AI-powered patent cliff modeling using European Patent Office bulk data became production-quality in late 2024, enabling systematic identification of molecules entering multi-source competition 18-36 months ahead.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Build PharmaSignal data layer: EMA approval velocity model, EPO patent expiry tracker, and EOPH reimbursement list delta monitor covering 150 European generics companies."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Deploy €3M paper portfolio; publish monthly PharmaSignal Report distributed to 50 seed subscribers to build external validation and surface data errors; begin live trading with €1.5M managed account."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Proprietary dataset tracks 3,000+ molecule-market combinations with historical price impact on approval events; backtest shows statistically significant alpha on EMA Day-0 approval arbitrage unavailable to generalist healthcare funds."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "PharmaSignal dataset licensed to 3 external hedge funds as a data product (€50K/year each), creating revenue independent of fund AUM; live track record enables formal AIF registration and institutional raise."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "high",
-      "estimatedSeedCapital": "€600K-€1.5M",
-      "capexRatio": "25% capex / 75% opex",
-      "note": "Main cost driver is regulatory compliance (AIF structure, ESMA registration) and one senior healthcare analyst needed to validate model outputs against domain knowledge during early trading."
-    },
-    "competitors": [
-      {
-        "name": "EQT Life Sciences (formerly LSP)",
-        "type": "incumbent",
-        "geography": "EU",
-        "note": "European life sciences PE/VC; not AI-native public equities long-short"
-      },
-      {
-        "name": "Perceptive Advisors",
-        "type": "incumbent",
-        "geography": "US",
-        "note": "Healthcare-focused hedge fund; US-centric, no generics/EU pharma specialization"
-      },
-      {
-        "name": "Schroders BioPharma",
-        "type": "incumbent",
-        "geography": "UK/EU",
-        "note": "Biopharma equities fund; generalist, no AI signal layer on generics dynamics"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 4,
-      "competitiveGap": 3,
-      "capitalFit": 3,
-      "regulatoryRisk": 2,
-      "founderAvailability": 2,
-      "composite": 3.0
-    },
-    "ycRfsCorrelation": "YC wants AI-native funds creating new alpha opportunities. PharmaSignal deploys agents to parse European generics pharma filings, pricing data, and supply chain signals."
-  },
-  {
-    "id": "agora-credit-intelligence",
-    "title": "Agora Credit Intelligence",
-    "ycCategory": "AI-Native Hedge Funds",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "An AI-native private credit fund targeting Greek and Cypriot SME lending, using agent-driven underwriting that processes tax authority data, social security records, and sectoral supply chain signals to price risk where banks cannot.",
-    "description": "Greek and Cypriot SMEs remain structurally underserved by bank credit seven years after the NPL crisis. Greek banks have rebuilt capital ratios by dramatically tightening SME lending criteria, and their underwriting processes remain document-heavy, slow (6-12 week decisions), and unable to process the rich alternative data that actually predicts SME creditworthiness in these markets — AADE (Greek tax authority) electronic invoice flows, EFKA social insurance contribution histories, sectoral tourism revenue seasonality, and export invoice aging from the Hellenic Export Credit Insurance Organisation. The result is a persistent credit gap estimated at €8-12B for viable Greek SMEs that cannot access bank financing within their operating cycle.\n\nAgora Credit Intelligence operates as an AI-native private credit fund deploying 12-36 month working capital facilities to Greek and Cypriot SMEs in tourism, food and agri-export, pharmaceutical distribution, and logistics. Agent swarms ingest AADE e-invoicing data (via IAPR API with borrower consent), EFKA contribution records, Bank of Greece sectoral credit registry data, and customs export documentation to build real-time creditworthiness models that update monthly rather than annually. Underwriting decisions are rendered in 72 hours versus 6+ weeks for banks. The fund is structured as an AIFMD-compliant Luxembourg SCSp with Greek and Cypriot feeder vehicles, allowing local family office LP participation without complex cross-border tax structuring.\n\nGreek fintech lenders (Praxia, Pancreta digital arms) exist but are deposit-funded banks constrained by Basel III capital ratios. Pan-European private credit funds (Tikehau, Muzinich) operate in Greece only at ticket sizes above €5M, leaving the €200K-€2M SME sweet spot uncontested by systematic underwriters. The timing is optimal: AADE e-invoicing mandate achieved near-100% coverage in 2024-2025, creating a clean machine-readable financial history for Greek SMEs that did not exist before — the data infrastructure for AI underwriting has only just materialized.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greek AADE e-invoicing data and Cypriot tax registry integration are the proprietary data moat; the credit gap is largest and most actionable in these two markets where T-Life has existing SME relationships.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbian and Romanian SME credit gaps are structurally similar and their tax authority e-invoicing mandates are rolling out in 2025-2026, creating the same data infrastructure one cycle behind Greece."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "EU AI Act compliance for credit scoring creates a regulatory moat for a fund that builds explainable AI underwriting from inception, positioning for pan-EU alternative SME lending expansion."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "UAE SME lending gap is significant but requires separate regulatory licensing via CBUAE; a logical step after establishing track record in Greece-Cyprus and demonstrating AI underwriting accuracy."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "WinMedica's pharmaceutical distribution network and ALTP's SME tenant ecosystem provide deal flow and proprietary sectoral credit intelligence across pharma supply chain, logistics, and health-adjacent SMEs that no external credit fund manager could source independently.",
-    "tags": [
-      "ai-hedge-fund",
-      "private-credit",
-      "sme-lending",
-      "alternative-data",
-      "greek-fintech",
-      "e-invoicing",
-      "working-capital"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greek banks' NPL ratio finally fell below 8% in 2024 after the Hercules APS scheme completions, shifting institutional appetite from NPL workout to new SME credit origination — creating a supply gap that non-bank lenders can fill for the first time in a decade. Bank of Greece's open banking API mandate (PSD2 full enforcement, 2024) now gives licensed credit providers access to real-time SME cash flow data, enabling underwriting models that were technically impossible before. EU Recovery and Resilience Facility disbursements to Greek SMEs created a traceable revenue layer in sectors (green energy, tourism, agri-tech) that makes cash flow modeling significantly more reliable than pre-2022 baselines.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Originate €3M in Greek SME working capital loans (€50K-€200K tickets) across tourism, food processing, and logistics sectors; build proprietary default taxonomy using Bank of Greece open banking data plus TAXIS public filing cross-reference."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Deploy Agora Credit Score — an SME creditworthiness model trained on 60+ variables from open banking, GEMI filings, and sectoral payment behavior; demonstrate 30% lower default rate vs. incumbent bank scoring on the same borrower population."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Loan book reaches €15M with 18-month seasoning data; credit model has seen a full seasonal cycle in tourism and agricultural sectors; begin syndicating performing loans to a Greek institutional co-investor to recycle capital and validate pricing."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Agora Credit Score licensed to 2 Greek factoring companies as a SaaS underwriting tool; proprietary behavioral default model trained on 500+ SME accounts is not replicable by new entrants without equivalent origination history; target €50M AIF raise from EIF and regional family offices."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "high",
-      "estimatedSeedCapital": "€1M-€2.5M",
-      "capexRatio": "5% capex / 95% opex",
-      "note": "Main cost driver is the loan book itself — even at modest initial scale, capital must be deployed as credit principal; regulatory licensing (Bank of Greece payment institution or AIF registration) adds €150-300K in fixed setup costs."
-    },
-    "competitors": [
-      {
-        "name": "Funding Circle",
-        "type": "incumbent",
-        "geography": "UK/EU",
-        "note": "SME lending platform; no Greece presence and not AI-native credit intelligence"
-      },
-      {
-        "name": "Silvr",
-        "type": "startup",
-        "geography": "France/EU",
-        "note": "Revenue-based financing for EU SMEs; limited Balkan/Greek market penetration"
-      },
-      {
-        "name": "NBG Business Banking",
-        "type": "incumbent",
-        "geography": "Greece",
-        "note": "Incumbent Greek bank SME lending; no AI underwriting, slow and collateral-heavy"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 3,
-      "competitiveGap": 3,
-      "capitalFit": 3,
-      "regulatoryRisk": 2,
-      "founderAvailability": 3,
-      "composite": 3.0
-    },
-    "ycRfsCorrelation": "YC wants AI-native investment firms, not legacy strategies with AI bolted on. Agora uses agents to underwrite Greek SME private credit — analyzing bank statements, tax filings, and alternative data."
-  },
-  {
-    "id": "pharmaops-gmp-coach",
-    "title": "PharmaOps",
-    "ycCategory": "AI Guidance for Physical Work",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Real-time multimodal AI coaching for GMP-compliant pharmaceutical manufacturing operators, reducing deviation rates and accelerating line certification.",
-    "description": "Greek and Balkan pharmaceutical manufacturers face a chronic dual crisis: experienced operators are retiring faster than replacements can be trained, and regulators (EMA, HMPA) are tightening post-COVID GMP audit scrutiny. A single deviation on a sterile fill line can trigger a batch rejection worth €200K–€2M, yet training remains paper SOPs and shadowing — unchanged for 30 years. The Tripoli factory archetype — mid-scale EU GMP-certified plant, 150–400 operators, fighting to retain EMA Annex 1 and 21 CFR Part 11 compliance — is replicated across 60+ plants in Greece, Bulgaria, Serbia, and Romania.\n\nPharmaOps embeds smart glasses (RealWear or Vuzix) at critical workstations and streams operator POV video to a vision-language model fine-tuned on GMP process SOPs and equipment manuals. The system delivers step-by-step audio instructions, flags procedural deviations in real time, and logs every action to an immutable audit trail compliant with 21 CFR Part 11 electronic records requirements. Critically, PharmaOps generates the compliance documentation automatically — eliminating the paper batch record burden that consumes 20–30% of operator time. The system is sold as an annual SaaS license per workstation line with a one-time onboarding fee for SOP digitisation.\n\nNo direct competitor operates in the EU pharma SME segment. Sight Machine and Tulip target US discrete manufacturing; they lack GMP audit trail modules and have no EMA regulatory expertise. The timing is acute: EMA's revised Annex 1 (2023) and the incoming EU AI Act Article 6 obligations for high-risk AI in regulated industries create a narrow window for a compliance-first, EU-native entrant to establish before US platforms localise.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "WinMedica/ELPEN Tripoli factory is a live design partner and reference customer. SFEE (Greek pharma federation) has 40+ manufacturing members; HMPA relationships de-risk regulatory approval. Greece is the beachhead before Balkan EU-accession plants face EMA alignment.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbia, Romania, Bulgaria have 60+ GMP plants actively upgrading to EU export standards — identical problem, lower competition, EU accession urgency drives spend."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Mid-scale CMOs in Poland, Portugal, and Czech Republic share the operator-shortage problem but have larger IT budgets and more incumbent competition from Tulip and Parsable."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "Elnova Pharma (Dubai) and Saudi localisation mandates (Vision 2030 pharma manufacturing) create a GCC entry point, though PIC/S vs EMA regulatory divergence requires a separate compliance module."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "WinMedica/ELPEN Tripoli factory is a captive pilot site. T-Life brings GMP regulatory credibility, ALTP as a pharma-tech incubation anchor, and Elnova as the GCC expansion beachhead — three unfair advantages no external team can replicate.",
-    "tags": [
-      "pharma-manufacturing",
-      "gmp-compliance",
-      "computer-vision",
-      "wearables",
-      "operator-training",
-      "annex-11",
-      "21-cfr-part-11"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "The EU GMP Annex 1 revision (effective August 2023) overhauled contamination control strategy requirements, forcing manufacturers to retrain entire operator workforces under tighter documentation standards. Multimodal vision models (GPT-4o, Gemini 1.5) only reached production-grade reliability in 2024, making real-time visual compliance checking economically viable. Greek and Balkan CMOs are under EMA inspection pressure with no scalable training infrastructure.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Sign 2-3 pilot contracts with Greek or Balkan CMOs; deploy MVP coaching flows for 5 core GMP SOPs; generate first audit-trail dataset"
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Proprietary deviation library built from real operator sessions; integration with batch record systems (MES/ERP); measurable reduction in deviation rates cited by pilots"
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "SOP-to-coaching-module auto-generation from uploaded documents; deviation pattern models trained on cross-customer anonymized data create accuracy advantage no competitor can replicate"
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "EOF and EMA inspection readiness module with predictive risk scoring; embedded in QMS workflows of 15+ sites; switching cost equals full retraining program replacement"
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€400K-€700K",
-      "capexRatio": "15% capex / 85% opex",
-      "note": "Main cost driver is regulatory affairs consultant time and multimodal API costs during pilot phase, not hardware"
-    },
-    "competitors": [
-      {
-        "name": "Apprentice.io",
-        "type": "startup",
-        "geography": "USA/EU",
-        "note": "Digital work instructions for pharma manufacturing; no real-time AI coaching layer"
-      },
-      {
-        "name": "Tulip Interfaces",
-        "type": "startup",
-        "geography": "USA/EU",
-        "note": "Manufacturing operations platform; broader scope than GMP-specific coaching"
-      },
-      {
-        "name": "Veeva Vault",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Pharma quality management system; document-centric, not operator-coaching focused"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 5,
-      "competitiveGap": 3,
-      "capitalFit": 3,
-      "regulatoryRisk": 3,
-      "founderAvailability": 3,
-      "composite": 3.4
-    },
-    "ycRfsCorrelation": "YC wants multimodal AI that coaches workers through physical tasks in real-time. PharmaOps delivers this for GMP pharma manufacturing — operators get step-by-step guidance through batch procedures via smart glasses, reducing deviations."
-  },
-  {
-    "id": "seafarer-skill-ai",
-    "title": "Navicore",
-    "ycCategory": "AI Guidance for Physical Work",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI-powered real-time maintenance coaching for cargo ship crews, reducing off-hire days and port-state deficiency notices through step-by-step guided procedures.",
-    "description": "Shipping's maintenance crisis is structural: ITF/STCW crew certification requirements are rising, experienced Chief Engineers are ageing out, and the global officer shortage means vessels increasingly sail with less-experienced engineers performing complex maintenance tasks — engine overhauls, purifier servicing, ballast water treatment system inspections — that were previously supervised by veterans. A single avoidable engine failure costs €50K–€500K in off-hire plus charter penalties. Port State Control (PSC) deficiency notices for maintenance failures are up 18% across Mediterranean flags since 2022. Greek shipowners (the world's largest fleet by DWT) disproportionately feel this pain on aging bulk carriers and tankers.\n\nNavicore installs a rugged tablet and optional head-mounted camera at engine room workstations. The multimodal AI model — trained on OEM maintenance manuals, class society (Bureau Veritas, Lloyd's, DNV) inspection checklists, and historical deficiency notice databases — guides engineers through procedures step-by-step, flags anomalies against sensor readings in real time, and generates ISM Code-compliant maintenance records automatically. Offline-first architecture ensures functionality during connectivity blackouts at sea; records sync to shore-side fleet managers on port arrival. Pricing is per-vessel annual subscription with a one-time equipment fit-out cost.\n\nExisting competitors (Helm Operations, SpecTec AMOS) are CMMS platforms focused on work-order scheduling, not real-time procedural guidance. No player has combined vision AI with ISM Code record generation for the Greek-owned fleet segment. The timing aligns with IMO CII regulations pressuring owners to optimise operations and EU ETS shipping inclusion (2024) making every off-hire day doubly expensive.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greek shipowners control 21% of global DWT with 700+ companies in Piraeus. Tryfon fleet provides a captive pilot. Union of Greek Shipowners relationships compress the sales cycle for fleet-wide rollouts dramatically.",
-    "expansionMarkets": [
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "UAE (Dubai Maritime City) and Saudi Bahri fleet are actively investing in vessel digitalisation; strong T-Life GCC network via Elnova provides deal flow access."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Norwegian, German, and Danish owners are tech-forward but have larger IT departments and will demand deeper MES/CMMS integration before adopting a point solution."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Croatia and Montenegro have small but growing maritime sectors; limited fleet size makes unit economics harder unless bundled with crewing agencies."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Tryfon fleet is a live test environment. T-Life's shipping domain credibility and Piraeus industry relationships compress enterprise sales cycles that would take an outsider 18 months to build from scratch.",
-    "tags": [
-      "maritime",
-      "shipping",
-      "maintenance-guidance",
-      "ism-code",
-      "computer-vision",
-      "offline-first",
-      "fleet-management"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "IMO's STCW Manila Amendments and the 2024 CII rating enforcement under MARPOL have created urgent retraining mandates for crew on fuel-efficient and alternative-fuel vessels. LLM-based voice interfaces now work reliably in low-bandwidth satellite environments (Starlink maritime reached global coverage in 2023). Crewing agencies face a documented skills gap as LNG and methanol dual-fuel vessels enter fleets faster than certified crew can be produced.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Partner with 1-2 Greek shipmanagement companies (e.g. Tsakos, Angelicoussis group); deploy voice-first coaching for engine room maintenance SOPs on 3-5 vessels"
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Incident-near-miss event tagging creates proprietary vessel-type safety corpus; offline-capable edge deployment for satellite-constrained routes"
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Coaching modules auto-adapted per vessel class and flag state; integration with CMMS platforms (AMOS, Helm CONNECT); cross-fleet benchmark data becomes sales asset"
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Vetting inspectors (SIRE 2.0 protocol) reference platform-generated competency records; crew agencies use platform for pre-boarding certification; network of 50+ vessels creates self-reinforcing data loop"
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€500K-€900K",
-      "capexRatio": "25% capex / 75% opex",
-      "note": "Edge deployment hardware per vessel and Starlink integration testing are the primary upfront costs beyond team salaries"
-    },
-    "competitors": [
-      {
-        "name": "Videotel (KVH)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Maritime e-learning platform; pre-recorded courses, no AI adaptive coaching"
-      },
-      {
-        "name": "Seagull Maritime",
-        "type": "incumbent",
-        "geography": "Norway/Global",
-        "note": "Crew competency management software; assessment-focused, not real-time guidance"
-      },
-      {
-        "name": "Thetius",
-        "type": "startup",
-        "geography": "UK",
-        "note": "Maritime innovation consultancy exploring AI; not a product company yet"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 4,
-      "competitiveGap": 4,
-      "capitalFit": 3,
-      "regulatoryRisk": 3,
-      "founderAvailability": 3,
-      "composite": 3.4
-    },
-    "ycRfsCorrelation": "YC wants AI that sees what workers see and provides real-time guidance. Navicore applies this to maritime maintenance — crew members get AI-guided walkthroughs of engine room procedures and safety inspections at sea."
-  },
-  {
-    "id": "eldercare-skill-coach",
-    "title": "Careform",
-    "ycCategory": "AI Guidance for Physical Work",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Real-time AI coaching for migrant home care workers providing clinical-grade guidance on elderly patient procedures, reducing adverse events and accelerating carer accreditation.",
-    "description": "Southern and Central Europe face a structural eldercare workforce crisis that intersects workforce migration with quality-of-care risk. Greece has 450,000+ people over 80 requiring assisted living support, yet only 12,000 formally credentialed home carers — the gap is filled by 130,000+ undocumented or informally employed migrant workers, predominantly from Bulgaria, Albania, Romania, and Ukraine, who lack medical training and perform clinical-adjacent tasks (medication administration, wound care, fall prevention transfers) with zero real-time support. Adverse events — medication errors, pressure ulcer development, transfer injuries — generate €180M annually in avoidable hospitalisation costs in Greece alone. This is the AgeTech/Migration workforce intersection that T-Life has explicitly identified as a venture thesis.\n\nCareform provides a smartphone app that uses the phone camera and voice to guide carers through care procedures in their native language — Bulgarian, Albanian, Romanian, Ukrainian, Arabic — with real-time visual confirmation that the procedure is being executed correctly. The AI flags deviations (wrong medication dose drawn, incorrect wound dressing technique) and escalates to a remote supervising nurse if needed. Care logs are automatically generated in the format required for EOPYY (Greek public insurance) reimbursement claims, which currently requires paper documentation that carers struggle to complete. A companion dashboard gives care agencies and families visibility into care delivery quality. Revenue model: B2B2C via home care agencies and insurance-reimbursed care plans.\n\nNo competitor addresses the migrant carer segment specifically — existing care apps (CarePredict, Seniorcare) target institutional settings and English-language markets. The EU Care Strategy (2022) and Greek national eldercare reform (2024 Ippokratis programme) are creating regulatory tailwinds that reward documented, quality-assured home care delivery, creating a compliance-driven pull for the product.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greece has the highest eldercare workforce informality gap in the EU plus ALTP as a HealthTech ecosystem anchor. EOPYY reimbursement integration makes this a compliance product, not a nice-to-have, for licensed home care agencies.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Bulgaria, Romania, and Serbia are simultaneously origin countries for migrant carers and developing domestic eldercare markets — Careform addresses both sides of the migration corridor."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Germany (500K care worker shortage), Italy, and Austria have large Eastern European migrant carer populations and insurance reimbursement infrastructure that Careform can integrate with."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC countries employ millions of South Asian domestic workers in eldercare and disability support roles with zero skill support infrastructure — Elnova Dubai provides a market entry contact network."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Direct alignment with T-Life's AgeTech and Migration & Workforce Mobility thesis. ALTP positions ALTP-incubated ventures for Greek health ministry pilots. WinMedica's EOPYY reimbursement relationships reduce the insurance integration timeline by 12+ months.",
-    "tags": [
-      "agtech",
-      "eldercare",
-      "migration",
-      "workforce-mobility",
-      "multilingual-ai",
-      "home-care",
-      "eopyy",
-      "clinical-guidance"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greece's new home care licensing law (Law 5039/2023) for the first time requires documented competency verification for home care workers, creating an immediate compliance gap across ~800 licensed providers. The migrant workforce (primarily Albanian, Romanian, Bulgarian) lacks Greek-language training materials, and LLM-based multilingual coaching only became reliable enough for medical-adjacent contexts in 2024. EOPYY reimbursement reform linking payments to documented care quality scores is expected by Q3 2026.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Launch multilingual (Greek, Albanian, Romanian) coaching flows for 10 core care protocols; onboard 3 home care agencies in Athens or Thessaloniki as design partners"
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Compliance documentation auto-generated per session; caregiver competency profiles built; agencies use platform as evidence for EOPYY audits"
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Outcome-linked coaching recommendations emerge from aggregated care event data; integration with scheduling platforms (e.g. Camelo, Connecteam) used by agencies"
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "EOPYY recognizes platform-generated competency records in reimbursement audits; network of 200+ agencies creates cross-client benchmark dataset no new entrant can build quickly"
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€200K-€400K",
-      "capexRatio": "5% capex / 95% opex",
-      "note": "Pure software with multilingual LLM API costs; no hardware required; main spend is regulatory mapping and content localization per language"
-    },
-    "competitors": [
-      {
-        "name": "Honor (Home Instead)",
-        "type": "incumbent",
-        "geography": "USA",
-        "note": "Homecare staffing and training platform; US-centric, no migrant worker AI coaching"
-      },
-      {
-        "name": "Birdie",
-        "type": "startup",
-        "geography": "UK",
-        "note": "Homecare management software for agencies; admin-focused, not skill coaching"
-      },
-      {
-        "name": "CareAcademy",
-        "type": "startup",
-        "geography": "USA",
-        "note": "Caregiver training platform; video-based courses, no real-time adaptive coaching"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 4,
-      "tlifeEdge": 2,
-      "competitiveGap": 4,
-      "capitalFit": 4,
-      "regulatoryRisk": 4,
-      "founderAvailability": 4,
-      "composite": 3.5
-    },
-    "ycRfsCorrelation": "YC wants AI that accelerates skill development for physical work. Careform coaches migrant caregivers through elder care procedures in real-time, bridging language and training gaps in Europe's growing home care workforce."
-  },
-  {
-    "id": "rare-disease-infusion-coach",
-    "title": "InfuGuide",
-    "ycCategory": "AI Guidance for Physical Work",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI-guided home infusion coaching for rare disease patients on enzyme replacement and biologic therapies, enabling safe self-administration and reducing hospital dependency in low-density care settings.",
-    "description": "Rare disease patients on enzyme replacement therapies (ERT), subcutaneous biologics, and intravenous immunoglobulin (IVIG) face a stark choice in markets outside major urban centres: travel 3–6 hours to a hospital infusion centre every 2–4 weeks for life, or risk undertrained home administration. In Greece, the Balkans, and GCC countries, specialist centres are concentrated in one or two cities — a patient with Gaucher disease in Thessaloniki or a Fabry patient in Limassol has essentially no local infusion infrastructure. Nurse home visit programmes exist but are chronically under-resourced: a single rare disease nurse may cover 80+ patients across a region. Elnova Pharma's rare disease portfolio (orphan drugs, GCC distribution) places T-Life directly inside this supply chain problem.\n\nInfuGuide is a tablet-based system — provided in branded kits with the therapy — that walks patients or family caregivers through the full infusion protocol step by step using camera vision: IV line preparation, aseptic technique verification, pump setting confirmation, real-time vital sign monitoring integration, and post-infusion site assessment. The AI is trained on therapy-specific administration protocols (Cerezyme, Fabrazyme, Soliris, etc.) and integrates with the prescribing haematologist's dashboard for remote supervision. Adverse event detection triggers immediate teleconsultation escalation. It is sold as a bundled service fee to pharmaceutical companies (including Elnova) as a patient support programme (PSP) embedded in drug distribution contracts, not as a standalone SaaS — aligning incentives perfectly with pharma commercial teams.\n\nPatient support programmes for rare diseases are a €2.4B global market growing at 14% CAGR. No competitor has built vision-AI-guided infusion coaching for the home setting — existing PSP platforms (Adheris, Patiently) are app-based medication reminders with no procedural guidance capability. EU Orphan Drug Regulation revisions (2023) incentivising patient-centric care delivery create regulatory tailwinds, and GCC health authorities (UAE MOHAP, Saudi MOH) are actively mandating home infusion programmes for rare disease patients under Emiratisation and quality care frameworks.",
-    "primaryMarket": "middle-east",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Elnova Pharma Dubai is a direct distribution channel and design partner for GCC rare disease therapies. UAE MOHAP home care licensing framework is more permissive than EU, enabling faster pilot deployment. GCC rare disease patient registries are underdeveloped — InfuGuide creates data assets as a byproduct.",
-    "expansionMarkets": [
-      {
-        "market": "greece-cyprus",
-        "fit": "green",
-        "note": "WinMedica's orphan drug distribution relationships and EOPYY reimbursement track record make Greece a natural co-launch market with a pre-existing rare disease patient network."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Serbia, Romania, and Bulgaria have active rare disease patient advocacy communities and EU orphan drug access programmes but reimbursement timelines are slower."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Germany and France have home infusion infrastructure but PSP regulations are more restrictive and pharma procurement cycles are longer — a 24-month sales cycle versus 6-month in GCC."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Elnova Pharma is both the distribution channel and the first pharma company customer — this is a product T-Life can build and sell to itself first, derisk commercially, then license to external rare disease pharma companies.",
-    "tags": [
-      "rare-disease",
-      "home-infusion",
-      "patient-support",
-      "elnova",
-      "enzyme-replacement",
-      "pharma-psp",
-      "computer-vision",
-      "gcc"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "The European HTA Regulation (EU 2021/2282), fully applicable from January 2025, is accelerating rare disease drug approvals, increasing the number of patients on home infusion therapy faster than hospital infusion centers can absorb. EOPYY expanded home infusion reimbursement codes in 2024 for enzyme replacement therapies (Gaucher, Fabry, Pompe), creating a funded pathway. Multimodal AI capable of guiding non-clinical users through sterile preparation steps with visual verification only became reliable in 2024-2025.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Design partnership with 1-2 patient advocacy groups (e.g. Greek Gaucher Association) and a rare disease specialty pharmacy; build coaching flows for 2-3 infusion protocols"
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Session adherence and adverse event near-miss data accumulated; integration with specialty pharmacy dispensing systems for closed-loop supply verification"
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Disease-specific complication pattern library built; pharma manufacturers (Sanofi Genzyme, Takeda) evaluate platform for patient support program embedding"
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Pharma company patient support program contracts provide recurring SaaS revenue; EOPYY home infusion audit trail generated automatically; clinical outcome data publishable in peer-reviewed journals strengthens brand moat"
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€600K-€1.1M",
-      "capexRatio": "10% capex / 90% opex",
-      "note": "Main cost drivers are medical device regulatory classification assessment (MDR Class IIa risk), clinical validation studies, and medico-legal liability insurance"
-    },
-    "competitors": [
-      {
-        "name": "Option Care Health",
-        "type": "incumbent",
-        "geography": "USA",
-        "note": "Home infusion services provider; nurse-led model, no AI patient guidance layer"
-      },
-      {
-        "name": "Coram (CVS)",
-        "type": "incumbent",
-        "geography": "USA",
-        "note": "Large home infusion operator; operationally focused, no AI coaching product"
-      },
-      {
-        "name": "Medically Home",
-        "type": "startup",
-        "geography": "USA",
-        "note": "Hospital-at-home platform; broader acute care scope, not rare disease infusion specific"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 4,
-      "competitiveGap": 4,
-      "capitalFit": 3,
-      "regulatoryRisk": 2,
-      "founderAvailability": 2,
-      "composite": 3.1
-    },
-    "ycRfsCorrelation": "YC wants real-time AI coaching for healthcare tasks. InfuGuide guides patients and nurses through complex home infusion protocols for rare disease treatments, reducing medical errors in unsupervised settings."
-  },
-  {
     "id": "construction-site-coach",
     "title": "Siteform",
     "ycCategory": "AI Guidance for Physical Work",
@@ -1396,7 +138,7 @@ export const ideas: Idea[] = [
       "eu-ohs"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "Greece's new Construction Safety Presidential Decree (PD 128/2023) mandates site-specific safety inductions and documented competency records for all workers, including undocumented migrants, creating an immediate compliance liability for contractors. EU AI Act classification of safety coaching tools as limited-risk (not high-risk) means no conformity assessment is required, lowering regulatory barriers to launch. The Greek construction boom driven by €35B NSRF 2021-2027 funds is creating acute skilled labor shortages that push migrant workers into roles without adequate training.",
     "roadToMoat": [
       {
@@ -1492,7 +234,7 @@ export const ideas: Idea[] = [
       "compliance"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nFold-in (2026-05-16): procurement-ghost-detector (Phantomcheck) — ghost-contractor and bid-rigging detection — had the same institutional buyer (Hellenic Court of Auditors / EPPO) as OLAFTrace with weaker tlifeEdge. Portfolio red-team verdict: fold as a second module in OLAFTrace rather than run a parallel sales motion. Procurement-fraud detection is now feature #2 of OLAFTrace.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "The European Public Prosecutor's Office (EPPO) became fully operational across 22 member states in 2023-2024 and opened 1,900+ investigations in its first two years, creating massive demand for corporate structure tracing tools that can map beneficial ownership across multiple EU member state registries. Greece's new Anti-Money Laundering Authority (AMLA, Law 5042/2023) mandated that all legal entities register ultimate beneficial owners in the Central UBO Register with machine-readable APIs by mid-2024. The EU's 6th Anti-Money Laundering Directive (2024) requires cross-border beneficial ownership verification that currently takes auditors 40-80 hours per entity to complete manually across fragmented national registries.",
     "roadToMoat": [
       {
@@ -1588,7 +330,7 @@ export const ideas: Idea[] = [
       "transfer-of-value"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "EFPIA's updated Disclosure Code (2024 revision) expanded transfer-of-value reporting to include digital interactions, virtual advisory boards, and indirect payments through medical education providers — tripling the volume of reportable transactions for mid-sized pharma companies. Greece's IFET enforcement actions increased 300% between 2022-2024, with fines reaching €500K+ per violation, transforming HCP transparency from a compliance exercise to a financial risk management priority. AI anomaly detection on financial transaction patterns only became practical for pharma-scale datasets (50K+ annual HCP interactions) with the cost reductions in embedding models and vector databases in 2024.",
     "roadToMoat": [
       {
@@ -1647,102 +389,6 @@ export const ideas: Idea[] = [
     "ycRfsCorrelation": "YC wants infrastructure for evidence organization in fraud cases. Sentinel monitors healthcare professional payments and transfer-of-value patterns, flagging potential kickback violations."
   },
   {
-    "id": "procurement-ghost-detector",
-    "title": "Phantomcheck",
-    "ycCategory": "Infra for Government Fraud Hunters",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Automated detection of ghost contractors, bid-rigging patterns, and procurement fraud in public sector tender databases across Southeast Europe.",
-    "description": "Greek and Balkan public procurement fraud costs an estimated 3-5% of total public spending annually — ghost companies winning tenders, incumbent suppliers rotating bids to simulate competition, and inflated contract values split below audit thresholds. National audit authorities (the Hellenic Court of Auditors, Bulgaria's National Audit Office) are chronically understaffed and rely on reactive complaint-driven investigations rather than proactive anomaly detection. The EPPO (European Public Prosecutor's Office) prioritized procurement fraud as its 2025-2026 enforcement focus, creating both political will and an institutional buyer for tooling. Phantomcheck ingests structured tender data from ESIDIS (Greek national procurement platform), the EU TED (Tenders Electronic Daily) database, and Balkan national e-procurement portals, then applies statistical pattern detection to identify bid-rigging signals: abnormal bid clustering near winning prices, sequential award rotation among a fixed supplier set, and companies with shared registered addresses or UBO chains winning non-overlapping tenders. Each flagged pattern is packaged as an evidence brief with source citations ready for referral to prosecutors. The system is designed for the workflow of public sector auditors, not data scientists — no SQL, no configuration, case-queue UI with one-click referral export. EU procurement fraud detection tooling is nascent: the EC's ARACHNE tool scores risk pre-award but has no post-award pattern detection. Private sector incumbents (Govtech startups like OpenOpps) focus on opportunity intelligence for suppliers, not fraud detection for auditors. The EPPO's 2024 annual report explicitly cited lack of member-state analytical tooling as an operational bottleneck — this is a stated institutional gap, not an inferred one.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "ESIDIS is one of the most structured and accessible national procurement databases in Southeast Europe, the Hellenic Court of Auditors is a reachable first institutional buyer, and Greek procurement fraud is high-profile enough that a successful case referral creates immediate reputational proof for expansion.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Bulgaria, Romania, and Serbia have EU accession or membership obligations to strengthen procurement oversight and active EPPO jurisdiction — identical buyer persona, higher fraud incidence, structurally weaker incumbent tooling."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "EPPO headquarters in Luxembourg and pan-EU TED database coverage create a natural expansion path, but northern European member states have more mature national audit tooling and shorter procurement fraud case values."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC public procurement reform agendas (Saudi Vision 2030 Nazaha integrity program, UAE ADAA) create demand, but procurement data is less structured and publicly accessible than EU platforms, requiring significant data partnership work."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "T-Life's pharma and shipping operations interact with Greek public procurement for hospital tenders and port contracts — the team has direct visibility into how procurement irregularities manifest operationally, and ALTP's Athens network includes connections to the Ministry of Digital Governance which oversees ESIDIS.",
-    "tags": [
-      "procurement-fraud",
-      "bid-rigging",
-      "public-sector",
-      "pattern-detection",
-      "govtech",
-      "eppo"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greece's ESIDIS (National Electronic Public Procurement System) completed its 2024 upgrade with structured data export APIs, making 10 years of public tender data machine-readable for the first time — previously, this data was trapped in PDF documents across hundreds of contracting authority websites. The EU's revised Public Procurement Directives (2024 enforcement wave) require member states to implement automated fraud detection by 2026, creating a regulatory mandate with no existing solution in the Greek market. Graph neural networks for bid-rigging pattern detection reached production accuracy in 2024, enabling detection of coordinated bidding schemes that statistical methods alone cannot identify.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Ingest 10 years of ESIDIS tender data; build ghost company detection engine (dormant tax registrations winning contracts, directors appearing across multiple winning entities); deliver pilot findings to ADEDY procurement audit division."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Expand to hospital procurement data (EOPYY tenders); detect 50+ bid-rigging patterns; build graph model mapping contractor relationships across 100K+ tender participations."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Proprietary Greek procurement fraud pattern database (500+ detected anomalies with investigation outcomes) creates a detection accuracy moat; onboard 5 regional audit authorities; expand to Bulgarian and Romanian procurement databases."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "EPPO-certified investigation tool for procurement fraud across SE Europe; launch real-time tender monitoring service for contracting authorities (pre-award fraud prevention); explore expansion to EU structural fund disbursement monitoring."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€200K-€450K",
-      "capexRatio": "10% capex / 90% opex",
-      "note": "Software-only platform using publicly available procurement data; main cost is data engineering for heterogeneous government data sources and graph analytics infrastructure."
-    },
-    "competitors": [
-      {
-        "name": "Periscope Data (JAGGAER)",
-        "type": "incumbent",
-        "geography": "USA/EU",
-        "note": "Procurement analytics suite; spend analysis focus, not bid-rigging pattern detection"
-      },
-      {
-        "name": "BiGov (Brazilian)",
-        "type": "startup",
-        "geography": "Brazil",
-        "note": "AI for public procurement integrity; LATAM-focused, EU procurement rules differ"
-      },
-      {
-        "name": "OpenOpps",
-        "type": "adjacent",
-        "geography": "UK/EU",
-        "note": "Public procurement data aggregator; opportunity matching, not fraud detection"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 2,
-      "competitiveGap": 4,
-      "capitalFit": 3,
-      "regulatoryRisk": 3,
-      "founderAvailability": 3,
-      "composite": 3.05
-    },
-    "ycRfsCorrelation": "YC wants tools accelerating fraud investigations through automated document parsing. Phantomcheck detects bid-rigging patterns in Greek and Balkan public procurement."
-  },
-  {
     "id": "shipping-sanctions-tracer",
     "title": "VesselVerity",
     "ycCategory": "Infra for Government Fraud Hunters",
@@ -1780,7 +426,7 @@ export const ideas: Idea[] = [
       "financial-crime"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "EU sanctions enforcement expanded dramatically in 2024 with the 14th sanctions package targeting Russian oil shipping through Greek-managed fleets, creating urgent demand for AIS dark-voyage reconstruction tools from Hellenic Coast Guard and EU Naval Force operations. The UK's Office of Financial Sanctions Implementation (OFSI) and US OFAC both introduced secondary sanctions enforcement against ship management companies in 2024, making sanctions compliance an existential risk for Greek shipowners (who manage 60%+ of EU-flagged tonnage). Satellite AIS data providers (Spire, exactEarth) opened commercial APIs in 2024 with historical data going back to 2019, enabling dark-voyage reconstruction that was previously only available to military intelligence agencies.",
     "roadToMoat": [
       {
@@ -1839,296 +485,6 @@ export const ideas: Idea[] = [
     "ycRfsCorrelation": "YC wants corporate structure tracing and evidence organization. VesselVerity reconstructs dark voyages from AIS gaps and satellite imagery for maritime sanctions evasion investigations."
   },
   {
-    "id": "govflow-gr",
-    "title": "GovFlow",
-    "ycCategory": "AI for Government",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI-native middleware that parses, validates, and routes citizen applications submitted via gov.gr, eliminating manual backlog processing for Greek public agencies.",
-    "description": "Greek public agencies receive hundreds of thousands of digital submissions annually through gov.gr, yet processing remains largely manual — clerks read PDFs, check completeness, and route paperwork by hand. The 2021–2024 digitisation wave created a new problem: more applications arrived faster than the civil service could process them, producing backlogs measured in months for permits, licensing renewals, and social benefit claims. AI-generated application text has compounded this, as LLM-drafted submissions vary in structure and often trip legacy validation rules.\n\nGovFlow sits as an API layer between gov.gr form submissions and each agency's back-office system. It uses document-understanding models fine-tuned on Greek administrative language to extract structured data, flag missing fields, cross-check against national registries (GSIS, EFKA, land registry), and auto-route complete applications while queuing incomplete ones with a plain-language deficiency notice sent to the citizen. No agency needs to rearchitect its ERP — GovFlow plugs in as a webhook processor. Deployment is on-prem or Greek sovereign cloud (GRNET) to meet public-sector data residency requirements.\n\nThe competitive field in Greece is thin: Netcompany and Intrasoft hold large SI contracts but sell custom waterfall projects, not SaaS middleware. European peers like Adeption (Netherlands) and Ampio (Germany) are not localised for Greek regulatory taxonomy or the gov.gr API surface. Greece's EU Recovery Fund obligations require measurable e-government efficiency gains by 2026, creating a procurement tailwind that rewards proven ROI tools over bespoke builds.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "gov.gr is an established, documented API surface; Greek agencies face acute backlog pressure with EU Recovery Fund KPIs due; Cyprus eGov mirrors Greek architecture making it a zero-effort second logo.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbia, North Macedonia, and Albania are in EU accession e-government reform cycles and have similar manual-processing bottlenecks with no local AI vendor."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Portugal and Romania share comparable bureaucratic density and have active EU-funded digitalisation budgets, but procurement cycles are longer and local SI incumbents stronger."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "UAE's digital government is already mature; opportunity is in Saudi Arabia's Absher platform expansion and Qatar post-2022 administrative modernisation, but Arabic NLP adds scope."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "ALTP's public-sector network and WinMedica's experience navigating Greek regulatory bodies (EOF, IDIKA) provide warm intros to ministry procurement officers and credibility as a local operator rather than a foreign SaaS vendor.",
-    "tags": [
-      "ai-government",
-      "document-processing",
-      "greece",
-      "govtech",
-      "workflow-automation",
-      "sovereign-cloud"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "gov.gr processed over 120M digital transactions in 2024, but interoperability between registries (GSIS, ERGA, EFKA, municipal systems) remains manual and error-prone, with 30-40% of applications rejected for procedural rather than substantive reasons. The Greek Digital Governance Ministry's Interoperability Center (KED) published open APIs for 47 registries in 2023-2024, providing the integration surface that did not exist before. LLM-based document parsing now handles Greek bureaucratic language with sufficient accuracy to automate validation logic that previously required trained clerks.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Target 1-2 high-volume application types (building permits, business licenses); build parsing and validation engine; sign pilot with 2-3 law firms or accountancy practices as distribution channel"
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Rejection reason database built from real submissions; automated pre-submission validation catches 80%+ of common errors; integration with 10+ KED APIs"
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Proprietary rejection pattern corpus becomes prediction engine no competitor can replicate; white-label version offered to notaries and municipal offices"
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Network of 500+ professional intermediaries (lawyers, accountants, architects) creates distribution moat; historical approval outcome data enables first-pass success rate guarantees as a commercial differentiator"
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€150K-€350K",
-      "capexRatio": "5% capex / 95% opex",
-      "note": "Pure software integration product; KED APIs are public; main cost is Greek regulatory content mapping and LLM fine-tuning on bureaucratic document corpus"
-    },
-    "competitors": [
-      {
-        "name": "Scrive",
-        "type": "adjacent",
-        "geography": "Nordics/EU",
-        "note": "eSign and identity workflow; document-signing layer only, not full gov.gr agentic middleware"
-      },
-      {
-        "name": "Netcompany",
-        "type": "incumbent",
-        "geography": "Denmark/EU",
-        "note": "Gov IT systems integrator; builds backends for governments, sells to state not citizens"
-      },
-      {
-        "name": "Yuboto",
-        "type": "startup",
-        "geography": "Greece",
-        "note": "Greek SMS/communications API; infrastructure layer, not application workflow automation"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 2,
-      "competitiveGap": 4,
-      "capitalFit": 4,
-      "regulatoryRisk": 2,
-      "founderAvailability": 4,
-      "composite": 3.1
-    },
-    "ycRfsCorrelation": "YC wants software automating government form processing at scale. GovFlow is the AI middleware layer for Greece's gov.gr platform — parsing, validating, and routing citizen applications automatically."
-  },
-  {
-    "id": "pharmareg-ai",
-    "title": "PharmaReg.ai",
-    "ycCategory": "AI for Government",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI co-pilot for pharmaceutical regulatory submissions to EOF and EMA, cutting dossier preparation time by 60% for Greek and Balkan generic manufacturers.",
-    "description": "Pharmaceutical marketing authorisation and variation submissions to the Hellenic National Medicines Organisation (EOF) and the European Medicines Agency require dossiers that run to thousands of pages across the Common Technical Document format. For a mid-sized Greek or Balkan generic manufacturer, a single variation submission costs 3–6 months of regulatory affairs headcount, with a high rate of rejection due to formatting errors, cross-reference inconsistencies, or missing Module 1 administrative documents — many of which are pure bureaucratic paperwork rather than scientific content. The Greek generics sector, which includes ELPEN and several Balkan regional players, spends disproportionately on regulatory affairs overhead relative to revenue.\n\nPharmaReg.ai is a regulatory intelligence platform that ingests existing dossier components, maps them against the current CTD template and EOF/EMA guidance documents (updated in real time via EMA's published feeds), flags gaps and inconsistencies, and auto-generates Module 1 administrative sections including application forms, labelling annexes, and fee calculation worksheets. For variation submissions it uses historical approval data to predict reviewer questions and pre-populate the applicant's response templates. The workflow is auditable, GxP-compliant, and outputs a submission-ready eCTD package.\n\nVeeva Vault RIM and Aris Global serve multinational pharma at six-figure annual contract values — unreachable for Greek and Balkan generics companies with 5–50 person regulatory teams. No AI-native tool targets the EOF regulatory surface specifically. ELPEN and WinMedica together represent an immediately addressable design-partner cohort, and the wave of biosimilar and generic approvals required under Greece's EU Recovery Fund pharmaceutical self-sufficiency commitments creates a near-term volume surge in EOF submissions.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "ELPEN manufacturing and WinMedica's regulatory operations are directly addressable design partners; EOF is a documented, stable regulatory surface; and the Greek generics industry lacks any AI tooling for this workflow.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbia's ALIMS and North Macedonia's MALMED use CTD-aligned submission formats, and several regional generics manufacturers are ELPEN contract partners already."
-      },
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "Elnova Pharma operates in Dubai under UAE MOH and Saudi SFDA regimes — both CTD-based — making the regulatory knowledge graph directly extensible for GCC submissions."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "EMA's centralised procedure is the long-term expansion vector, but competition from Veeva and established CRO tooling increases sales complexity for European majors."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "WinMedica and ELPEN are natural anchor customers and reference accounts; Elnova Pharma's rare disease pipeline creates an orphan-designation submission workflow that is uniquely complex and underserved, differentiating the product from generic CTD tools.",
-    "tags": [
-      "pharma-regulatory",
-      "ai-government",
-      "ectd",
-      "generics",
-      "eof",
-      "ema",
-      "govtech"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "EMA's move to a rolling review process and the new HTA Joint Clinical Assessment under EU 2021/2282 (mandatory from January 2025) have simultaneously increased submission complexity and compressed timelines for Greek and Balkan pharma companies. EOF digitized its submission portal in 2023-2024, creating machine-readable application surfaces. LLMs with long-context windows (Gemini 1.5 Pro, Claude 3.5) can now process entire CTD dossier sections coherently, enabling gap analysis that previously required senior regulatory affairs managers billing at €150-250/hour.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Build CTD Module 2 and 3 gap analysis tool; pilot with 2-3 Greek generic pharma companies (Vianex, Uni-Pharma, Lavipharm); validate against real EOF rejection letters"
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "EOF and EMA query-response template library built from real correspondence; dossier completeness scoring model trained on submission outcomes"
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Proprietary rejection reason and query corpus becomes prediction engine; integration with Veeva Vault RIM used by mid-size pharma companies; expansion to Serbian and Romanian NCA submissions"
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Track record of submission success rates becomes auditable benchmark; partnerships with CROs and regulatory consultancies as white-label channel; 50+ dossier history per client creates deeply personalized workflow that cannot be replicated by a new entrant"
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€400K-€750K",
-      "capexRatio": "10% capex / 90% opex",
-      "note": "Main cost driver is senior regulatory affairs expert time to validate AI outputs and build the ground-truth corpus; LLM API costs are secondary"
-    },
-    "competitors": [
-      {
-        "name": "Veeva Vault RIM",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Regulatory information management system; document management, not AI submission co-pilot"
-      },
-      {
-        "name": "Inato",
-        "type": "startup",
-        "geography": "France",
-        "note": "Clinical trial site matching AI; adjacent but not regulatory submission focused"
-      },
-      {
-        "name": "Certara",
-        "type": "incumbent",
-        "geography": "USA/Global",
-        "note": "Regulatory science and submissions consulting with some software; not AI-native co-pilot"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 4,
-      "tlifeEdge": 5,
-      "competitiveGap": 3,
-      "capitalFit": 3,
-      "regulatoryRisk": 3,
-      "founderAvailability": 3,
-      "composite": 3.55
-    },
-    "ycRfsCorrelation": "YC wants AI that processes government forms cost-effectively. PharmaReg.ai automates pharmaceutical regulatory dossier preparation and submission to EOF and EMA — replacing weeks of manual document assembly."
-  },
-  {
-    "id": "constructpermit-ai",
-    "title": "BuildClear",
-    "ycCategory": "AI for Government",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI-assisted building permit platform that automates the preparation, cross-checking, and e-submission of construction licensing files for Greek architects and developers.",
-    "description": "Greek construction permitting is one of the most document-intensive administrative processes in the EU. A standard new-build permit requires up to 80 documents across topographic surveys, structural calculations, energy performance certificates, urban planning compliance checks, fire safety assessments, and archaeological clearances — each from a different authority with different formatting requirements. The process is handled by private engineers and architects who spend 30–40% of project time on administrative compilation rather than design. The digital portal e-Adeies was launched in 2022 but merely digitised the submission form; it did nothing to reduce the document burden or automate completeness checking.\n\nBuildClear is a SaaS platform for licensed engineers and architectural firms. It ingests a project's parcel data (pulled via the Hellenic Cadastre API), cross-checks applicable urban planning regulations by zone and municipality, generates a dynamic document checklist specific to that project's permit category, and uses AI to pre-fill standardised sections of technical reports from CAD/BIM inputs. It detects common rejection triggers — setback calculation errors, FSI miscalculations, missing archaeological survey zones — before submission. The output is a verified document package with a digital audit trail that engineers sign and submit directly to e-Adeies.\n\nNo startup has attacked this workflow in Greece. Engineering software incumbents (Autocad, ArchiCAD) are design tools, not compliance tools. The 2024 fast-track permitting reform under the Ministry of Environment created a new premium permit lane that requires a pre-validated technical file — which BuildClear directly produces. Greece's post-pandemic construction boom, driven by tourism infrastructure, energy transition projects, and the Elliniko mega-development, is generating permit volume at rates the current workflow cannot absorb.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "The Greek building permit system is uniquely document-dense, e-Adeies provides a submission API, and the current construction boom creates an immediately monetisable pain point for the 30,000+ licensed civil engineers in Greece.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Romania and Bulgaria have comparable permit complexity and active EU-funded construction pipelines, but municipal regulation is fragmented, requiring per-country regulatory mapping investment."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Portugal and Spain share Mediterranean urban planning traditions with similar multi-authority clearance requirements, but local engineering regulatory bodies control submission standards tightly."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "UAE's Trakhees and Dubai Municipality permit processes are high-volume and standardised, with strong appetite for GovTech automation, but the regulatory surface is entirely distinct from the Greek model."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "ALTP (Athens LifeTech Park) development involves complex permit workflows across multiple authorities; T-Life's real estate and infrastructure exposure provides both a design-partner relationship and credibility when selling to Greece's engineering community.",
-    "tags": [
-      "construction-permitting",
-      "ai-government",
-      "govtech",
-      "proptech",
-      "greece",
-      "urban-planning",
-      "bim"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greece's e-Άδειες (e-Adeies) digital building permit platform became mandatory for all prefectures in 2024, digitizing the submission surface but not reducing the complexity of the underlying regulatory requirements (NOK 2012, energy performance regulations, seismic code). The 2024 Greek Urban Planning Reform introduced new fast-track permit categories for energy renovation (tied to €4B Exoikonomo program), creating a high-volume new application type. Multimodal AI that can read architectural drawings and cross-reference them against zoning regulations only became viable in 2024 with GPT-4o vision capabilities.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Automate completeness checks for 3-4 most common permit types (new construction, renovation, change of use); pilot with 5-10 architecture firms in Athens; integrate with e-Adeies API"
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Rejection reason database by municipality and permit type built from real submissions; zoning regulation interpretation library covering 50+ municipalities"
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Drawing-to-regulation cross-reference model trained on approved/rejected pairs; TEE (Technical Chamber of Greece) explores platform endorsement given member demand"
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "TEE or municipal association endorsement creates distribution network of 12,000+ licensed Greek architects; historical approval data by municipality is a proprietary asset making accuracy guarantees commercially credible"
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€350K-€650K",
-      "capexRatio": "15% capex / 85% opex",
-      "note": "Primary cost is multimodal model fine-tuning on Greek architectural drawings and zoning documents, plus legal review of regulatory interpretation outputs"
-    },
-    "competitors": [
-      {
-        "name": "Symbium",
-        "type": "startup",
-        "geography": "USA",
-        "note": "AI zoning and permit research platform; US municipal codes focus, not EU/Greek permitting"
-      },
-      {
-        "name": "Archistar",
-        "type": "startup",
-        "geography": "Australia",
-        "note": "AI property development feasibility with permit intelligence; APAC regulations, not Greece"
-      },
-      {
-        "name": "ePOLEODOMIA",
-        "type": "incumbent",
-        "geography": "Greece",
-        "note": "Greek state digital building permit portal; existing but manual, slow, no AI layer"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 2,
-      "competitiveGap": 4,
-      "capitalFit": 4,
-      "regulatoryRisk": 2,
-      "founderAvailability": 3,
-      "composite": 3.1
-    },
-    "ycRfsCorrelation": "YC wants software that streamlines government administrative workflows. BuildClear automates Greece's notoriously complex building permit process, cross-checking applications against zoning and archaeological regulations."
-  },
-  {
     "id": "agecare-compliance",
     "title": "CareClear",
     "ycCategory": "AI for Government",
@@ -2167,7 +523,7 @@ export const ideas: Idea[] = [
       "age-inclusive-work"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "Law 5039/2023 introduced a new mandatory licensing and quality accreditation framework for KIFI (Closed Care Facilities for the Elderly) and home care providers, with inspections scheduled to begin systematically in 2025-2026 by the new EODY-adjacent inspection body. EOPYY's reimbursement reform is shifting from input-based (bed-days) to outcome-based payments by 2026, requiring providers to document care quality metrics they have never tracked before. Greek elder care remains highly fragmented (1,200+ small KIFI operators) with no existing compliance software infrastructure, creating a greenfield SaaS opportunity.",
     "roadToMoat": [
       {
@@ -2262,7 +618,7 @@ export const ideas: Idea[] = [
       "southern-europe"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "The SE European startup ecosystem reached a critical mass of 200+ B2B SaaS companies in 2024 (Greece, Romania, Bulgaria, Croatia combined), but product management maturity lags — most teams lack dedicated PMs and rely on founders making intuition-based roadmap decisions. LLM-based qualitative research analysis (interview transcript → insight extraction → prioritization) reached production quality in 2024 with Claude 3.5 and GPT-4o's multilingual capabilities covering Greek, Romanian, and Bulgarian. The EU's Digital Services Act compliance wave created a surge of product decisions for SE European SaaS companies that founder-intuition alone cannot navigate.",
     "roadToMoat": [
       {
@@ -2357,7 +713,7 @@ export const ideas: Idea[] = [
       "ai-copilot"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "EMA's DARWIN EU real-world evidence platform (fully operational 2024) and the EU HTA Joint Clinical Assessment (mandatory January 2025) created new data sources and regulatory requirements that pharma launch teams must synthesize — but no existing tool combines regulatory intelligence, payer landscape data, and physician interview analysis for Southern/Eastern European markets. Greece's EOPYY reimbursement committee digitized its decision archive in 2024, making 10 years of pricing and access decisions machine-readable. LLM-based competitive prescribing pattern analysis from IQVIA and local pharmacy data became viable in 2024, enabling launch intelligence that previously required 3-person analytics teams working 6+ months per launch.",
     "roadToMoat": [
       {
@@ -2416,197 +772,6 @@ export const ideas: Idea[] = [
     "ycRfsCorrelation": "YC wants AI product discovery systems with supporting rationale. Launchbase helps pharma commercial teams decide which markets to launch in first, synthesizing pricing data and competitive intelligence."
   },
   {
-    "id": "agetech-product-discovery",
-    "title": "Meridian",
-    "ycCategory": "Cursor for Product Managers",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "Product intelligence platform that helps AgeTech founders in Europe and the GCC translate older adult user research into validated feature roadmaps.",
-    "description": "AgeTech startups across Europe and the Middle East consistently struggle with a specific failure mode: products built by founders in their 30s for users in their 70s, without systematic mechanisms to close the empathy gap. Qualitative research methods—shadowing sessions, cognitive walkthroughs, caregiver interviews—generate rich insight but sit unprocessed. Usage telemetry from older adults is misread because standard engagement metrics do not account for accessibility barriers, digital literacy variation, or caregiver-mediated usage patterns. The result is feature development driven by assumption, high churn in the 60+ cohort, and failed pivots.\n\nMeridian is a product discovery platform purpose-built for the AgeTech vertical. It ingests caregiver interviews, user observation session recordings, accessibility audit reports, and in-app behavioral data, then applies a reasoning layer trained on AgeTech-specific frameworks: task completion by cognitive load, caregiver vs. end-user preference divergence, and feature adoption curves segmented by digital literacy tier. Founders ask 'which features are most likely to drive weekly active use among users aged 72-80 in an assisted living context?' and receive ranked recommendations with supporting evidence clips and implementation complexity scores.\n\nThe AgeTech product intelligence category does not yet exist as a standalone market. Dovetail and Maze serve general UX research; neither has AgeTech-specific models or the caregiver-mediated usage concept. The timing aligns with a wave of European AgeTech funding (EIC, Horizon Europe AgeTech calls) and GCC Silver Economy initiatives in Saudi Vision 2030 and UAE Wellbeing Strategy 2031.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greece has one of Europe's oldest populations (median age 45+) and a nascent but growing AgeTech cluster. T-Life's venture thesis makes this the ideological home market, and ALTP can incubate the founding team with direct access to healthcare system pilots through ELPEN's networks.",
-    "expansionMarkets": [
-      {
-        "market": "europe",
-        "fit": "green",
-        "note": "Northern and Western Europe lead AgeTech investment volume; Meridian's vertical-specific intelligence layer is a strong fit for funded AgeTech startups in Germany, Netherlands, and the Nordics."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Aging demographics across Serbia, Bulgaria, and Romania create demand but AgeTech startup density is low, limiting the initial paying customer base."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "Saudi Vision 2030 and UAE Silver Economy initiatives are nascent but state-backed, creating a path through government innovation programs rather than direct startup sales."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "T-Life's AgeTech thesis is the founding narrative. The venture studio can co-found this with a product leader from ELPEN's patient services division, anchor the seed round, and use the ALTP ecosystem to run the first 3 pilots with Greek eldercare operators.",
-    "tags": [
-      "agetech",
-      "product-discovery",
-      "older-adults",
-      "caregiver-research",
-      "accessibility"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "The EU's European Innovation Partnership on Active and Healthy Ageing allocated €250M for 2024-2027 digital health innovation, with specific funding streams for user-centered AgeTech design — but no purpose-built tooling exists for translating older adult research into product specifications. The WHO's 2024 Global Report on Ageism highlighted systematic design bias in digital products, creating institutional awareness and procurement budgets for inclusive design tools. LLM-based empathy mapping and persona generation from unstructured interview data reached the quality threshold for clinical-adjacent applications in 2024, enabling automated insight extraction from older adult user research at scale.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Build Meridian prototype with ELPEN patient services team; develop older-adult interview protocol library (accessibility-aware, cognitive-load-adjusted); process 50+ caregiver and patient interviews into structured product insights."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "10+ AgeTech startup clients across Europe; build proprietary older-adult UX pattern library (what interaction patterns work for 70+ users with varying digital literacy, motor control, and cognitive profiles)."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "30+ clients; proprietary AgeTech product benchmark dataset (feature adoption by age cohort, accessibility-adjusted usability scores, caregiver vs. end-user preference conflicts) creates insight advantage unique to this vertical."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Standard tool for EU-funded AgeTech projects (EIP-AHA compliance); launch accessibility scoring module that rates products against WCAG 2.2 + age-specific heuristics; expand to GCC elderly care market; €1.2M+ ARR."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€200K-€400K",
-      "capexRatio": "10% capex / 90% opex",
-      "note": "Pure software platform; ELPEN patient services provides free user research access; main cost is UX research methodology development and LLM fine-tuning on older-adult interaction patterns."
-    },
-    "competitors": [
-      {
-        "name": "AARP Foundation",
-        "type": "incumbent",
-        "geography": "USA",
-        "note": "Non-profit ecosystem builder for AgeTech, not a product intelligence platform"
-      },
-      {
-        "name": "CarePredict",
-        "type": "startup",
-        "geography": "USA",
-        "note": "AgeTech product for elder monitoring, a competitor in the space being mapped"
-      },
-      {
-        "name": "Pivotal Ventures",
-        "type": "adjacent",
-        "geography": "USA",
-        "note": "Funds and maps the caretech space, research reports not real-time intelligence"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 3,
-      "competitiveGap": 4,
-      "capitalFit": 5,
-      "regulatoryRisk": 5,
-      "founderAvailability": 3,
-      "composite": 3.6
-    },
-    "ycRfsCorrelation": "YC wants tools that recommend features with implementation breakdowns. Meridian serves AgeTech founders by analyzing caregiver interviews and regulatory requirements to recommend what to build."
-  },
-  {
-    "id": "maritime-pm-intelligence",
-    "title": "Harbourside",
-    "ycCategory": "Cursor for Product Managers",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI product co-pilot for maritime software vendors that converts seafarer feedback, port operator interviews, and voyage data into prioritized roadmaps for ship management platforms.",
-    "description": "The maritime software market is crowded with legacy vendors—Kongsberg, DNV GL software arms, BASS—whose product development cycles run 18-36 months and whose roadmap decisions are driven by the loudest shipowner, not systematic analysis of operator needs. A new generation of maritime SaaS startups (crew management, predictive maintenance, vessel performance optimization) is emerging in Piraeus, Limassol, and Dubai, but their product teams lack the infrastructure to synthesize seafarer feedback, port agent interviews, and AIS behavioral data into coherent feature decisions. Qualitative research in maritime is especially hard: crews speak 15+ languages, feedback is collected informally in port or via WhatsApp, and the actual end-users (officers on board) are rarely accessible for traditional UX research.\n\nHarbourside is a product intelligence platform built for maritime SaaS companies. It ingests multilingual crew feedback exports from vessel management systems, port agent interview transcripts, voyage performance anomaly reports, and support ticket clusters, then applies a reasoning layer to answer questions like 'which workflow in our crew portal generates the most friction for officers on bulk carriers vs. tankers?' or 'what features would most reduce unplanned port calls based on our maintenance ticket patterns?' It outputs structured feature briefs with effort scores calibrated to maritime development team norms and regulatory constraint flags where SOLAS or MLC compliance affects implementation.\n\nNo PM tooling exists specifically for maritime SaaS. The vertical is large enough to support a focused product—global maritime software spend exceeds $3B—but niche enough that US generalist tools will not localize. Piraeus is the largest shipping hub in Europe and the fourth largest globally; co-locating in the ecosystem is itself a competitive moat.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Piraeus concentrates the highest density of shipowners, ship managers, and maritime software vendors outside of Oslo and Singapore. The Tryfon fleet provides a direct reference customer and a live data source for the initial product, collapsing the typical cold-start problem for a vertical AI company.",
-    "expansionMarkets": [
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "Dubai Maritime City and Abu Dhabi Ports are scaling their maritime technology ecosystems aggressively; several Piraeus-based maritime SaaS companies already have UAE offices as a second market."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Croatia and Montenegro have emerging maritime clusters but smaller software vendor ecosystems; useful for crew management feature validation given seafarer nationality mix."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Oslo, Hamburg, and Rotterdam are the next tier maritime hubs with mature SaaS vendors who are the natural expansion customer segment post-Greece."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "The Tryfon fleet is the founding reference customer: real voyage data, real crew feedback loops, and a shipowner's credibility that no outside founder can replicate. T-Life can co-found with a product leader from the maritime tech ecosystem and use fleet data under a data partnership agreement to train the initial reasoning layer.",
-    "tags": [
-      "maritime",
-      "shipping",
-      "product-management",
-      "ai-copilot",
-      "crew-management",
-      "piraeus"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "The maritime software market is undergoing a generational transition as legacy vendors (AMOS, ShipNet, DNV GL software) struggle to incorporate AI capabilities into architectures built in the 2000s, creating an opening for new entrants that can help these vendors modernize their product strategy. Starlink's global maritime coverage (2023) enabled real-time user analytics collection from vessels for the first time, generating product usage data that maritime PM teams have never had access to. The IMO's Maritime Autonomous Surface Ships (MASS) Code (adopted 2024) is forcing maritime software vendors to make fundamental product architecture decisions about autonomy support, creating urgent demand for structured product intelligence.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Deploy with Tryfon fleet's software evaluation process; build maritime-specific product analytics module that captures seafarer interaction patterns (bridge systems, maintenance apps, cargo management); process crew feedback from 5 vessels into structured product requirements."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Onboard 3 maritime software vendors as clients; build proprietary seafarer UX pattern library (what works on bridge displays, how crew interact with maintenance apps in engine rooms, mobile vs. desktop usage patterns at sea)."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "10+ maritime software vendor clients; proprietary maritime product benchmark dataset (feature adoption by vessel type, crew nationality-adjusted UX preferences, regulatory-driven feature demand forecasting) creates a competitive intelligence moat."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Standard PM platform for Piraeus maritime software ecosystem; launch vessel-type-specific product requirement templates; expand to Singapore and London maritime tech hubs; €1.5M+ ARR."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€200K-€400K",
-      "capexRatio": "10% capex / 90% opex",
-      "note": "Pure SaaS platform; Tryfon fleet provides free pilot environment and vessel access; main cost is maritime-domain product engineering talent and Starlink-optimized data collection infrastructure."
-    },
-    "competitors": [
-      {
-        "name": "Jira / Atlassian",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Generic PM tool used by maritime software teams, no domain intelligence"
-      },
-      {
-        "name": "ShipNet",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Legacy ERP for ship management, manual roadmaps, not a product co-pilot"
-      },
-      {
-        "name": "Dataloy",
-        "type": "startup",
-        "geography": "Norway",
-        "note": "Modern voyage management SaaS, adjacent, they need a PM co-pilot themselves"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 2,
-      "tlifeEdge": 4,
-      "competitiveGap": 5,
-      "capitalFit": 5,
-      "regulatoryRisk": 5,
-      "founderAvailability": 3,
-      "composite": 3.7
-    },
-    "ycRfsCorrelation": "YC wants AI product co-pilots for decision-making. Harbourside helps maritime software vendors prioritize features by analyzing ship operator feedback and IMO regulatory changes."
-  },
-  {
     "id": "pharma-regulatory-ai-agency",
     "title": "RegulaFlow",
     "ycCategory": "AI-Native Agencies",
@@ -2644,7 +809,7 @@ export const ideas: Idea[] = [
       "b2b"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nFold-in (2026-05-16): pharmareg-ai (PharmaReg.ai) was an EOF/EMA-dossier AI co-pilot framed as a tool. Portfolio red-team verdict: tool-form loses to agency-form on liability transfer; folded into RegulaFlow. Bring the EOF/EMA submission IP and dossier templates into the RegulaFlow service catalog.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "EMA's rolling review process and the EU Falsified Medicines Directive expansion have created a documentation tsunami that legacy CROs cannot absorb at current headcount. LLM fine-tuning on CTD Module 2-4 structures reached production quality in late 2024, making AI-assisted dossier compilation genuinely reliable. The Greek EOPH digitization mandate (2025) opened a structured data pipeline that did not exist two years ago.",
     "roadToMoat": [
       {
@@ -2740,7 +905,7 @@ export const ideas: Idea[] = [
       "piraeus"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "Baltic Exchange digitized fixture reporting in 2024, making structured real-time freight rate data programmatically accessible for the first time at scale. LLM-based contract parsing can now extract key commercial terms from CP recaps with >95% accuracy, collapsing fixture turnaround from hours to minutes. Post-Red Sea rerouting volatility has made shipowners and charterers acutely aware that human-speed negotiation leaves significant freight arbitrage on the table.",
     "roadToMoat": [
       {
@@ -2799,298 +964,6 @@ export const ideas: Idea[] = [
     "ycRfsCorrelation": "YC wants AI-native agencies that scale without proportional headcount. VoyageDesk uses AI agents to handle fixture negotiations, cargo matching, and voyage planning — work done today by chartering desks of 20+ brokers."
   },
   {
-    "id": "balkan-legal-services-ai",
-    "title": "LexBridge",
-    "ycCategory": "AI-Native Agencies",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI-native cross-border legal agency delivering contract drafting, M&A due diligence, and regulatory opinions across Greece, Cyprus, and the Balkans in 48 hours.",
-    "description": "Companies expanding across Greece, Cyprus, Bulgaria, Romania, and Serbia face a fragmented legal landscape: each jurisdiction has distinct corporate law, FDI rules, and regulatory frameworks, and no single law firm has cost-effective coverage across all five. Mid-market companies — private equity portfolio companies, pharma distributors, shipping subsidiaries — routinely pay €5,000–€20,000 for cross-border legal opinions that take 2–4 weeks, simply because coordinating multi-jurisdictional firms is slow and expensive.\n\nLexBridge is a managed legal agency that uses AI to draft first-pass contracts, due diligence checklists, and regulatory opinions across the five target jurisdictions. The AI layer handles document structuring, jurisdiction-specific clause libraries, and risk flagging; admitted local counsel in each country does final review and signs opinion letters. The client experience is software-like: submit a brief, receive a draft in 48 hours, get a signed opinion in 5 business days. Pricing is fixed-fee per engagement, undercutting Big Law by 50–70%. Cyprus is the natural anchor — it is the most common holding company jurisdiction for Greek and Balkan businesses, with a dense cluster of corporate lawyers and a common law system that AI tools handle well.\n\nLegalTech platforms like Harvey.ai and Clio target US/UK law firms as software customers, not end-client delivery. Local Balkan firms lack AI capability. The EU AI Act's entry into force creates a near-term wave of compliance opinion work that overwhelms existing regional capacity — perfect timing for a fixed-fee AI agency.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Cyprus is the dominant holding jurisdiction for Greek, Balkan, and GCC wealth structures; the island has a deep legal talent pool and English-language common law system that makes AI drafting more reliable.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbia EU accession, Romanian FDI growth, and Bulgarian nearshoring all generate sustained cross-border legal work with no incumbent AI-native player."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC holding structures frequently use Cyprus SPVs, creating natural demand for dual-jurisdiction opinions from GCC-based clients."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "EU AI Act and DORA compliance opinions are a European-wide opportunity, but competition from established legal publishers and Big Law is fierce."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "T-Life's own cross-border structuring across Greece, Cyprus, Dubai, and the Balkans is a live use case; ALTP joint ventures and Elnova corporate documents are immediate pilot engagements without cold outreach.",
-    "tags": [
-      "legal",
-      "cross-border",
-      "ai-agency",
-      "cyprus",
-      "balkans",
-      "m-and-a",
-      "compliance"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "The EU AI Act (effective August 2024) and DORA (January 2025) created a wave of cross-border compliance mandates for firms operating across Greece, Cyprus, Bulgaria, and Romania simultaneously — a multi-jurisdiction problem no single national law firm is optimized for. LLMs can now draft bilingual legal memos (Greek/English) and cross-reference national transpositions of EU directives with sufficient accuracy to pass senior lawyer review. Cyprus's post-Brexit repositioning as an EU fintech and shipping hub has generated a specific surge in Greek-Cypriot corporate structuring work that legacy firms are backlogged on.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Handle 15 cross-border corporate structuring mandates (Greece-Cyprus) and 10 GDPR/AI Act compliance reviews; build a proprietary multi-jurisdiction clause library covering 4 Balkan legal systems."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Launch LexBridge Compliance Monitor — automated regulatory change tracking across 6 jurisdictions feeding client alerts; this creates a retention mechanism and a structured corpus of jurisdiction-specific legal change."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Clause library reaches 10,000+ tagged provisions; LLM fine-tuned on accepted cross-border agreements reduces junior lawyer drafting time by 60%; onboard 3 anchor clients with multi-year retainers."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "LexBridge becomes the only firm with a machine-readable cross-referenced Balkan legal corpus; license the compliance monitoring product to accounting firms and banks as a SaaS tier, decoupling revenue growth from headcount."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€150K-€350K",
-      "capexRatio": "10% capex / 90% opex",
-      "note": "Main cost driver is qualified lawyers in each jurisdiction needed for sign-off; AI reduces their workload but cannot be removed from the signature chain under current EU professional services rules."
-    },
-    "competitors": [
-      {
-        "name": "Harvey AI",
-        "type": "startup",
-        "geography": "USA/Global",
-        "note": "AI legal assistant for large law firms, English-centric, no Balkan jurisdiction depth"
-      },
-      {
-        "name": "Wolters Kluwer",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Enterprise legal management, no Balkan cross-border specialisation"
-      },
-      {
-        "name": "Legaler",
-        "type": "startup",
-        "geography": "Australia/Europe",
-        "note": "Digital law firm platform, document automation focus not cross-border Balkan"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 3,
-      "competitiveGap": 4,
-      "capitalFit": 4,
-      "regulatoryRisk": 4,
-      "founderAvailability": 4,
-      "composite": 3.5
-    },
-    "ycRfsCorrelation": "YC wants agencies leveraging AI to deliver finished client work at scale. LexBridge handles cross-border legal work across Greece, Cyprus, and the Balkans using AI for document review, translation, and compliance."
-  },
-  {
-    "id": "agetech-workforce-transition-agency",
-    "title": "BridgeWork",
-    "ycCategory": "AI-Native Agencies",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI-native workforce transition agency that retrains and places workers aged 45–65 into age-inclusive roles across Southern European employers dealing with demographic shortfalls.",
-    "description": "Greece, Portugal, Italy, and the Balkans face a compounding workforce crisis: declining youth labor supply, mandatory retirement ages that push out experienced workers prematurely, and employers who lack structured programs to retain or redeploy older talent. The 45–65 cohort represents 35–40% of the working population in these markets but receives almost no dedicated placement, reskilling, or outplacement service. Traditional recruitment agencies focus on under-35 candidates; government reskilling programs are slow and disconnected from employer demand.\n\nBridgeWork is an AI-native agency that combines skills assessment, AI-generated reskilling curricula, and employer matching into a managed service sold to both sides: individuals pay a subscription for career navigation, and employers pay placement fees for pre-vetted, reskilled candidates. The AI layer builds personalized 8–12 week reskilling pathways using existing European online learning infrastructure (Coursera, LinkedIn Learning, local vocational platforms), tracks completion, and matches candidates to roles using a skills-adjacency model rather than traditional CV matching. Human career coaches handle the high-touch moments — initial assessment and employer negotiation. Greece is the entry market: it has the highest percentage of workers in the 50–64 bracket in the EU and a nascent age-inclusion policy agenda.\n\nLinkedIn and traditional staffing agencies treat 50+ workers as an afterthought. Age-focused platforms like AARP's network are US-only and non-commercial. The EU's 2025–2030 Active Ageing Strategy and associated funding streams create a policy tailwind and potential public-sector co-funding that no incumbent is positioned to capture in Southern Europe.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greece has the EU's highest share of 50–64 workers as a proportion of the labor force, acute youth emigration shrinking the talent pipeline, and zero specialized age-inclusive placement agencies.",
-    "expansionMarkets": [
-      {
-        "market": "balkans",
-        "fit": "green",
-        "note": "Serbia and Bulgaria face the steepest working-age population declines in Europe, with large industrial employers actively seeking retention solutions for experienced workers."
-      },
-      {
-        "market": "europe",
-        "fit": "green",
-        "note": "Portugal, Italy, and Spain share identical demographic profiles and EU funding access; BridgeWork's multilingual AI stack scales without proportional headcount."
-      },
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "GCC Saudization and Emiratization create demand for structured career transition for mid-career expatriates returning to home countries."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Directly on-thesis for T-Life's Age-Inclusive Work vertical; ALTP as a physical hub for cohort workshops and employer showcases in Athens. WinMedica's 500+ workforce is an immediate pilot for internal age-inclusive reskilling program.",
-    "tags": [
-      "agetech",
-      "workforce",
-      "reskilling",
-      "ai-agency",
-      "age-inclusive-work",
-      "hr-tech",
-      "europe"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greece's 2024 pension reform and EU's Active Ageing Index initiative created both financial pressure and institutional funding channels for 45-65 workers to retrain, with OAED now co-funding approved transition programs. AI-powered skills gap analysis tools matured in 2024 to the point where they can map a 55-year-old's tacit experience onto labor market demand with actionable output rather than generic career advice. The post-COVID labor shortage in technical trades and healthcare support has created genuine employer demand for mid-career career changers that was absent during the pre-2022 period.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Complete 100 transition plans for 45-65 workers; partner with 2 OAED-approved training providers to create a referral loop; build a proprietary outcome database tracking 90-day employment results."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Launch BridgeWork Skills Mirror — a 30-minute diagnostic converting work history into a ranked transferable skills profile with market demand scores; use it as a lead generation tool and employer pitch asset."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "Outcome database has 500+ tracked placements with actual salary and retention data; build employer-side matching product that lets SMEs post roles and receive pre-screened 45+ candidates with validated reskilling plans."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Employer subscription tier (€300/month) generates recurring revenue independent of individual transitions; outcome data makes BridgeWork the most credible evidence base for EU social fund grant applications in the region."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€120K-€280K",
-      "capexRatio": "10% capex / 90% opex",
-      "note": "Main cost driver is career coaching staff and OAED accreditation process; technology spend is modest because the product is primarily advisory with AI as a productivity layer."
-    },
-    "competitors": [
-      {
-        "name": "AARP Foundation Work for Yourself",
-        "type": "incumbent",
-        "geography": "USA",
-        "note": "Non-profit workforce support for 50+ workers, not AI-native, US only"
-      },
-      {
-        "name": "Heidrick & Struggles",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Senior executive placement, addresses top 1%, ignores mid-career transition"
-      },
-      {
-        "name": "Generation (McKinsey)",
-        "type": "startup",
-        "geography": "Global",
-        "note": "Demand-led workforce training, not pharma/biotech-specific"
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 3,
-      "competitiveGap": 4,
-      "capitalFit": 5,
-      "regulatoryRisk": 4,
-      "founderAvailability": 4,
-      "composite": 3.6
-    },
-    "ycRfsCorrelation": "YC wants AI-native agencies with software-like margins. BridgeWork delivers workforce transition services for workers aged 45-65, using AI to replace the manual work of traditional recruitment firms."
-  },
-  {
-    "id": "gcc-migration-relocation-agency",
-    "title": "NomadPath",
-    "ycCategory": "AI-Native Agencies",
-    "ycBatchDate": "Spring 2026",
-    "oneLiner": "AI-native relocation agency handling visa, housing, banking, and employment documentation for GCC-to-Europe and Balkan migration corridors at one-tenth traditional immigration lawyer fees.",
-    "description": "The GCC-to-Europe migration corridor is growing rapidly: skilled workers from Egypt, India, Lebanon, and Pakistan who have been working in Dubai, Riyadh, or Doha increasingly want EU residency options — Greece's Golden Visa reform, Cyprus' Category F investor permits, and Serbia's Digital Nomad Visa. Simultaneously, companies in Greece and the Balkans are actively recruiting skilled diaspora and foreign workers to fill demographic gaps. The process is fragmented across immigration lawyers, relocation agents, housing brokers, and banking advisors — typically costing €3,000–€15,000 per individual and taking 3–6 months, mostly in manual document chasing.\n\nNomadPath delivers end-to-end relocation as a managed service: AI handles document checklist generation, form pre-filling from uploaded IDs and employment records, status tracking, and appointment scheduling across consulates and municipal offices; human immigration consultants handle legal certification and exceptions. The AI layer reduces case manager time per client by 65%, allowing the agency to price at €600–€1,500 per case while still operating at healthy margins. The product is sold B2B to GCC employers and EU employers recruiting from the GCC, and B2C to individuals navigating relocation independently. Cyprus and Greece are the primary receiving jurisdictions — both have streamlined residency pathways and strong demand.\n\nTraditional immigration law firms charge by the hour and have no AI investment. Digital immigration platforms like Boundless focus on the US. The geopolitical moment — GCC diversification away from oil dependence, EU demographic urgency, and Greek/Cypriot government actively courting HNW and skilled migrants — creates a 3–5 year window before incumbents respond.",
-    "primaryMarket": "middle-east",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Dubai and Riyadh are the origin markets where clients sit and where B2B employer partnerships are closed; Elnova Pharma's Dubai HQ provides a physical anchor and employer network for initial B2B client acquisition.",
-    "expansionMarkets": [
-      {
-        "market": "greece-cyprus",
-        "fit": "green",
-        "note": "Greece and Cyprus are the primary destination jurisdictions — all product flows through here, making it a co-primary market rather than a secondary one."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Serbia's Digital Nomad Visa and low cost of living make it an attractive destination for mid-skill GCC migrants; less established corridor but growing fast."
-      },
-      {
-        "market": "europe",
-        "fit": "yellow",
-        "note": "Portugal NHR and Malta residency pathways serve a similar GCC affluent segment; expansion requires separate regulatory expertise but the AI document layer transfers cleanly."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Elnova Pharma Dubai HQ is the physical beachhead for GCC B2B sales; T-Life's Migration & Workforce Mobility thesis makes this a portfolio anchor, not a peripheral bet. ALTP in Athens is a natural soft-landing facility for incoming talent.",
-    "tags": [
-      "migration",
-      "relocation",
-      "ai-agency",
-      "gcc",
-      "visa",
-      "workforce-mobility",
-      "cyprus",
-      "greece"
-    ],
-    "addedDate": "2026-04-01",
-    "notes": "",
-    "whyNow": "Greece's digital nomad visa and Portugal's NHR replacement scheme launched in 2024 just as GCC expat communities began accelerating Europe relocation planning driven by UAE/Saudi nationalization policies (Emiratization targets tightening through 2026). AI document processing can now handle the multi-country apostille and credential recognition pipeline — which was a pure manual bottleneck previously — at 10x the throughput. The €100M+ Greek diaspora remittance corridor from GCC has created established trust networks that make Greece a preferred destination, reducing NomadPath's marketing cost versus a cold market.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "Complete 50 end-to-end GCC-to-Greece relocations; map the full document dependency graph for Egyptian, Lebanese, Indian, and Pakistani passport holders relocating to Greece — the four largest GCC expat nationalities."
-      },
-      {
-        "timeframe": "Month 6-12",
-        "milestone": "Launch NomadPath Visa Tracker — client-facing dashboard showing real-time document status, processing queue position estimates, and proactive alerts; creates daily active usage and referral sharing behavior."
-      },
-      {
-        "timeframe": "Month 12-24",
-        "milestone": "500+ completed relocations create a proprietary processing time database by document type, nationality, and Greek consulate office; use it to guarantee processing timelines that competitors cannot promise without this data."
-      },
-      {
-        "timeframe": "Month 24-36",
-        "milestone": "Launch NomadPath Network — a peer community of completed relocatees providing housing, school, and banking referrals; monetize via partner commissions (banks, schools, landlords) and lock in word-of-mouth in dense GCC expat WhatsApp networks."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€100K-€250K",
-      "capexRatio": "15% capex / 85% opex",
-      "note": "Main cost driver is Arabic/Farsi-speaking case managers and Greek immigration lawyer retainers; technology is a coordination layer rather than a capital-intensive build."
-    },
-    "competitors": [
-      {
-        "name": "Relocate.me",
-        "type": "startup",
-        "geography": "Global",
-        "note": "Job + relocation marketplace, not GCC-to-Europe corridor-specific"
-      },
-      {
-        "name": "Aires Global Mobility",
-        "type": "incumbent",
-        "geography": "USA/Global",
-        "note": "Corporate relocation services for Fortune 500, B2B enterprise focus"
-      },
-      {
-        "name": "Nomad List",
-        "type": "adjacent",
-        "geography": "Global",
-        "note": "Digital nomad community, not a full-stack AI relocation agency"
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 3,
-      "competitiveGap": 3,
-      "capitalFit": 5,
-      "regulatoryRisk": 3,
-      "founderAvailability": 3,
-      "composite": 3.2
-    },
-    "ycRfsCorrelation": "YC wants service businesses using AI internally to scale. NomadPath automates the entire GCC-to-Europe relocation process using AI agents, replacing the high-touch work of traditional relocation consultants."
-  },
-  {
     "id": "pharmadataforge-llm-training",
     "title": "PharmaDataForge",
     "ycCategory": "Make LLMs Easy to Train",
@@ -3128,7 +1001,7 @@ export const ideas: Idea[] = [
       "developer-infra"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "EU AI Act Article 10 (effective August 2025) mandates that AI systems used in healthcare demonstrate training data governance, traceability, and bias documentation — pharma companies that want to deploy LLMs internally must now prove their training data pipelines are compliant, creating demand for regulation-aware data preparation tools. GxP data integrity requirements (ALCOA+ principles under EU GMP Annex 11) were never designed for LLM training workflows, creating a compliance gap that no existing MLOps platform addresses. Fine-tuning costs dropped 90% between 2023-2025 (LoRA, QLoRA), making domain-specific LLM training economically viable for mid-sized pharma companies for the first time.",
     "roadToMoat": [
       {
@@ -3225,7 +1098,7 @@ export const ideas: Idea[] = [
       "piraeus"
     ],
     "addedDate": "2026-04-01",
-    "notes": "",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "The maritime industry generates 5-10TB of unstructured text annually per large shipping company (charter parties, bills of lading, PSC reports, MARPOL logs), but no pre-trained LLM understands maritime domain language — general models hallucinate on BIMCO clause references, confuse vessel classification terminology, and cannot parse charterparty recaps accurately. Maritime data privacy requirements (flag state regulations, commercial confidentiality of fixture details) prevent shipping companies from using cloud-hosted general LLMs, creating demand for on-premise or sovereign-cloud fine-tuned models. The cost of fine-tuning a domain-specific LLM dropped below $10K in 2024 (from $500K+ in 2022), making it viable for a platform to offer maritime LLM training as a service rather than requiring each shipping company to build in-house AI teams.",
     "roadToMoat": [
       {
@@ -3289,7 +1162,7 @@ export const ideas: Idea[] = [
     "ycCategory": "AI for Regulated Industries / Vertical SaaS",
     "ycBatchDate": "Fall 2026",
     "oneLiner": "Continuous, AI-driven competency assurance for pharma GMP manufacturing — the audit-grade skills intelligence layer above Veeva, MasterControl and ComplianceWire.",
-    "description": "EU GMP Annex 1 (operative August 2023) moved the regulatory bar from 'trained' to 'qualified, assessed initially and on an ongoing basis,' with mandatory annual gowning requalification, bi-annual aseptic process simulations per shift, and event-driven disqualification on failed media fills or deviation involvement. A typical 200-operator sterile site now generates 16,000-30,000 trackable competency artifacts per year, all maintained today in spreadsheets, paper files, and disconnected LMS systems. A single FDA Form 483 citing 21 CFR 211.25 (personnel qualifications) costs €0.5-2M to remediate; a Warning Letter €5-25M; a consent decree (Ranbaxy 2013, Genzyme 2010) €100-750M+.\n\nAletheia GxP is an additive intelligence layer — not an LMS replacement — that ingests training records from existing GxP systems (Veeva Vault Training, MasterControl, ComplianceWire, SAP SuccessFactors), maps them to a role-based GMP competency graph, monitors work artifacts (deviations, batch records, eLogbook entries, equipment logs, QA observations) for competency drift, and produces audit-grade continuous competency dashboards. The differentiated UX is the Inspector Mode: a read-only, time-bounded, auditor-credentialed view that any FDA, EMA, EOF, MHRA or PMDA inspector can access during an inspection to verify any operator's competency posture in real time — the artifact a QP shows the inspector at 09:30 on Day 1.\n\nThe wedge sits in white space between document-based GxP LMS (Veeva, MasterControl, ComplianceWire — none model competency as f(observed work outputs, error rates, deviation involvement)) and horizontal AI skills platforms (Workera, Eightfold — none have GAMP5/Part 11/EU AI Act validation). Architecture rule: every AI inference is decision-support, all task-allocation and disqualification decisions remain human-confirmed, classifying the system out of EU AI Act Annex III(4)(b) high-risk under Art. 6(3) — saves €1-3M and 6-12 months vs. high-risk conformity assessment. Three-tier pricing: T1 Core €18 PEPM + €30K/site, T2 Intelligence €26 PEPM + €40K/site, T3 Regulated €32 PEPM + €50K/site (with Inspector Mode and AI Act compliance pack). Reference 500-FTE customer: ~€150K ACV.",
+    "description": "EU GMP Annex 1 (operative August 2023) moved the regulatory bar from 'trained' to 'qualified, assessed initially and on an ongoing basis,' with mandatory annual gowning requalification, bi-annual aseptic process simulations per shift, and event-driven disqualification on failed media fills or deviation involvement. A typical 200-operator sterile site now generates 16,000-30,000 trackable competency artifacts per year, all maintained today in spreadsheets, paper files, and disconnected LMS systems. A single FDA Form 483 citing 21 CFR 211.25 (personnel qualifications) costs €0.5-2M to remediate; a Warning Letter €5-25M; a consent decree (Ranbaxy 2013, Genzyme 2010) €100-750M+.\n\nAletheia GxP is an additive intelligence layer — not an LMS replacement — that ingests training records from existing GxP systems (Veeva Vault Training, MasterControl, ComplianceWire, SAP SuccessFactors), maps them to a role-based GMP competency graph, monitors work artifacts (deviations, batch records, eLogbook entries, equipment logs, QA observations) for competency drift, and produces audit-grade continuous competency dashboards. The differentiated UX is the Inspector Mode: a read-only, time-bounded, auditor-credentialed view that any FDA, EMA, EOF, MHRA or PMDA inspector can access during an inspection to verify any operator's competency posture in real time — the artifact a QP shows the inspector at 09:30 on Day 1.\n\nThe wedge sits in white space between document-based GxP LMS (Veeva, MasterControl, ComplianceWire — none model competency as f(observed work outputs, error rates, deviation involvement)) and horizontal AI skills platforms (Workera, Eightfold — none have GAMP5/Part 11/EU AI Act validation). Architecture rule: every AI inference is decision-support, all task-allocation and disqualification decisions remain human-confirmed, classifying the system out of EU AI Act Annex III(4)(b) high-risk under Art. 6(3) — saves €1-3M and 6-12 months vs. high-risk conformity assessment. Deployment architecture: single-tenant SaaS in customer-elected EU VPC (AWS Frankfurt / Azure Amsterdam / GCP Belgium) per customer data-residency preference — same regulatory posture as an on-prem appliance, without capex friction or hardware inventory. Three-tier pricing: T1 Core €18 PEPM + €30K/site, T2 Intelligence €26 PEPM + €40K/site, T3 Regulated €32 PEPM + €50K/site (with Inspector Mode and AI Act compliance pack). Reference 500-FTE customer: ~€150K ACV.",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
     "primaryMarketRationale": "T-Life owns the design partner. ELPEN (largest independent Greek pharma manufacturer), WinMedica (~€300M revenue commercial arm in BC Partners process), and the Tripoli HPAPI facility (€65M+ investment, EOF-inspected, 416-equipment training matrix) provide a captive first customer with live data, marquee EU reference, and €400K+ committed ARR floor at launch. Greek + Cypriot mid-size generics (Vianex, Pharmathen, DEMO, Lavipharm, Uni-Pharma, Medochemie, Remedica) are 100-800 mfg FTE, family-owned, paper-or-Excel competency systems, and inspectable by EOF/EMA — the highest-pain, lowest-cycle-time beachhead in Europe.",
@@ -3327,7 +1200,7 @@ export const ideas: Idea[] = [
       "elpen"
     ],
     "addedDate": "2026-05-03",
-    "notes": "Phase 0 underwritten: 16-week, €150K budget, modeled on PawDesk template. Go criteria at Week 16: (1) 1 external paying pilot signed €20-50K, (2) Tripoli operational with live data, (3) 3+ pipeline opportunities at term-sheet stage, (4) single-tenant deploy time <6 weeks demonstrable, (5) first-pass GAMP5 categorization completed (Cat 4 platform, Cat 5 AI engine). Top three monitoring signals: Veeva R&D Day for Vault Skills/Vault Competency announcements; HealthStream pharma extension (~30% probability); /skills/ /competencies/ in Vault REST API release notes. Defensibility window vs Veeva: 36-48 months.\n\nValidation log (2026-05-03): Corrected MasterControl ownership (Sixth Street Growth Dec 2022 $1.3B, NOT Hellman & Friedman 2020). Corrected Workera Series B (Mar 2023 led by Jump Capital, NOT Oct 2022 Owl Ventures). Removed Aizon-Insight Partners precedent claim (Aizon investors are Atlantic Bridge / Honeywell Ventures / NewVale; Insight is not on cap table). Sparta acquisition announced 22 Dec 2020 (not Jan 2021), seller New Mountain Capital, $1.3B confirmed. FDA 2023 publication is a CDER discussion paper, not draft guidance (formal AI draft guidance came 2025). Aenova ownership now Kühne Holding (family vehicle), not BC Partners. Annex 1 section numbers (§7.4-7.7, §7.13-7.14, §9.33-9.42) directionally consistent but exact citations require cross-check against EUR-Lex PDF before any external memo. ICH Q10 §2.4 (Resource Management) directionally correct but exact wording unverified. EdCast 2022 acquisition price ($380M) was undisclosed — figure removed from competitor entry trail.",
+    "notes": "Phase 0 underwritten: 16-week, €150K budget, modeled on PawDesk template. Go criteria at Week 16: (1) 1 external paying pilot signed €20-50K, (2) Tripoli operational with live data, (3) 3+ pipeline opportunities at term-sheet stage, (4) single-tenant deploy time <6 weeks demonstrable, (5) first-pass GAMP5 categorization completed (Cat 4 platform, Cat 5 AI engine). Top three monitoring signals: Veeva R&D Day for Vault Skills/Vault Competency announcements; HealthStream pharma extension (~30% probability); /skills/ /competencies/ in Vault REST API release notes. Defensibility window vs Veeva: 36-48 months.\n\nValidation log (2026-05-03): Corrected MasterControl ownership (Sixth Street Growth Dec 2022 $1.3B, NOT Hellman & Friedman 2020). Corrected Workera Series B (Mar 2023 led by Jump Capital, NOT Oct 2022 Owl Ventures). Removed Aizon-Insight Partners precedent claim (Aizon investors are Atlantic Bridge / Honeywell Ventures / NewVale; Insight is not on cap table). Sparta acquisition announced 22 Dec 2020 (not Jan 2021), seller New Mountain Capital, $1.3B confirmed. FDA 2023 publication is a CDER discussion paper, not draft guidance (formal AI draft guidance came 2025). Aenova ownership now Kühne Holding (family vehicle), not BC Partners. Annex 1 section numbers (§7.4-7.7, §7.13-7.14, §9.33-9.42) directionally consistent but exact citations require cross-check against EUR-Lex PDF before any external memo. ICH Q10 §2.4 (Resource Management) directionally correct but exact wording unverified. EdCast 2022 acquisition price ($380M) was undisclosed — figure removed from competitor entry trail.\n\nDecision log (2026-05-16): The companion on-device appliance concept (VaultEdge / on-device-gxp-inference) was red-team-reviewed and returned PASS. Conclusion: ship Aletheia GxP exclusively as single-tenant SaaS in customer-elected VPC. The appliance form-factor buys exactly one incremental thing — physical air-gap — but Annex 1 / Part 11 / EU AI Act Art. 6(3) do not require air-gap, they require validated software + audit trail + data-residency control, all of which single-tenant cloud satisfies. €250-400K of avoided hardware working capital redeploys into 2 more validation engineers and a USDM co-sell. VaultEdge entry decommissioned from catalog.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
     "whyNow": "EU GMP Annex 1 (revised 22 Aug 2022, operative 25 Aug 2023; lyophilizer §8.123 operative Aug 2024) is no longer compatible with read-and-understood LMS as primary system of competency record — §7.4-7.7 mandate ongoing competency assessment with annual gowning requalification, §9.33-9.42 mandate bi-annual APS per shift, §7.13-7.14 codify event-driven disqualification. The EU AI Act (Reg. 2024/1689) Annex III(4)(b) general-application date is 2 Aug 2026, creating a 12-18 month architectural window to self-classify out under Art. 6(3) before deployer obligations crystallize. EMA Reflection Paper on AI in the Medicinal Product Lifecycle (Sept 2024), FDA CDER discussion paper on AI in Drug Manufacturing (Feb/May 2023; formal AI draft guidance followed 2025), and the pending EU Annex 11 revision (final 2025-26) all legitimize AI-derived competency evidence if traceable, explainable, and validated. Eightfold's transformer-embedding architecture is an Annex 11 algorithm-transparency liability; horizontal AI players need $5-10M and 18-24 months to ship GAMP5/Part 11 compliance.",
     "roadToMoat": [
       {
@@ -3416,334 +1289,112 @@ export const ideas: Idea[] = [
     "ycRfsCorrelation": "YC wants AI for regulated industries and vertical SaaS that incumbents cannot retrofit. Aletheia GxP is the AI-native competency intelligence layer for pharma GMP — Annex 1 (2023) made document-based LMS structurally insufficient, and EU AI Act compliance creates a 36-48 month moat against horizontal AI players who lack GAMP5/Part 11 validation."
   },
   {
-    "id": "peoplecert-ai-wrapper",
-    "title": "Praxis Layer",
-    "ycCategory": "AI Tutoring / Workforce Education",
-    "ycBatchDate": "Fall 2026",
-    "oneLiner": "AI-native preparation, simulation and continuous-practice layer for ITIL, PRINCE2 and AXELOS certifications — the Duolingo-meets-LeetCode of regulated workforce credentials.",
-    "description": "PeopleCert (post-AXELOS acquisition from Capita / UK Cabinet Office, completed June 2021 for £380M) sits on ITIL, PRINCE2, MSP and LanguageCert IP and administers (non-exclusively) DevOps and Lean Six Sigma certifications. Group revenue is ~£121M / ~€143M (FY2023; LTM Dec24 broadly flat) at 58% adjusted EBITDA margin. The IP moat is durable because of ISO 17024, Ofqual, and UKVI SELT regulatory perimeter. What is not durable is the preparation layer above it: Accredited Training Organizations charge €1,000-3,000 per learner for classroom or VILT delivery against a static syllabus, with no adaptive practice, no work-artifact-grounded simulation, and no continuous post-credential practice. ChatGPT and Claude can already teach ITIL better than the median ATO — but cannot issue the credential.\n\nPraxis Layer is the AI-native preparation product feeding into PeopleCert exams. €20-40/month subscription, sold to enterprises that already buy ITIL/PRINCE2 vouchers in bulk (BT, Capgemini, Accenture, Deloitte, NHS Digital, Greek public sector). Core product: infinite practice question generation, scenario-based simulation of incident, problem and change management workflows, weakness diagnosis, predicted-pass scoring, and continuous post-credential practice (the 'Anki for ITIL practitioners' insight). Greek/Balkan/MENA beachhead is realistic given language and channel access via T-Life network. Wrapper not competitor: complementary to PeopleCert and ATPs, candidates pass at higher rates → ATPs sell more vouchers, PeopleCert revenue grows.\n\nExit thesis: €5-20M ARR business in 36 months, acquired by an ATP consolidator (QA, ILX, Fast Lane), by Coursera/Pluralsight as a vertical wedge, or by PeopleCert itself defensively. Lower ceiling than the pharma play but lower risk and faster cycle.",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "yellow",
-    "primaryMarketRationale": "Greece + Cyprus is small as endgame but high-fit as wedge: Greek public sector ITIL adoption is mandated for digital transformation programs, T-Life network includes corporate IT services buyers, and Greek/English bilingual delivery differentiates against UK-anchored ATPs. Real prize is EU + MENA expansion via channel partners.",
-    "expansionMarkets": [
-      {
-        "market": "europe",
-        "fit": "green",
-        "note": "Primary market: UK, DACH, Nordics buy 60%+ of ITIL/PRINCE2 vouchers globally. Channel-partner sales motion through ATPs that want AI prep without building it themselves. Year 2 target."
-      },
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "GCC public-sector digital transformation programs (Saudi Vision 2030, UAE We the UAE 2031) drive massive ITIL adoption. Elnova Dubai network provides distribution. €4-8K licensing potential per government contract."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Smaller voucher volume but lower CAC and good content-localization beachhead before Western EU rollout."
-      }
-    ],
-    "stage": "exploring",
-    "tlifeAngle": "Lower priority than the pharma skills-intelligence play (which only T-Life can run). Praxis Layer is a generic wrapper play any AI-fluent founder could attempt — T-Life advantage is GR/MENA channel access and capital efficiency, not unfair product moat.",
-    "tags": [
-      "ai-tutoring",
-      "certification",
-      "peoplecert",
-      "itil",
-      "prince2",
-      "wrapper-play",
-      "workforce-education",
-      "b2b-saas"
-    ],
-    "addedDate": "2026-05-03",
-    "notes": "Lower-ceiling, lower-risk than pharma skills-intelligence (#pharma-skills-intelligence). Realistic 36mo outcome: €5-20M ARR, acquired by ATP consolidator or PeopleCert defensively. Run as Phase 0 only if pharma play stalls or as parallel low-burn experiment.\n\nValidation log (2026-05-03): Corrected PeopleCert revenue from prior €250M figure to actual ~£121M / ~€143M (FY23 / LTM Dec24) — 2× overstatement removed. Removed 90%+ ITIL gross margin claim (not disclosed publicly; group EBITDA margin 58% is the only verified margin figure). Removed €80M+ online proctoring line (implausible — implies >50% of group revenue without disclosure). Corrected EU AI Act citation: Annex III(3)(b) covers educational assessment / learning outcome evaluation; Annex III(3)(d) covers AI proctoring (monitoring prohibited behaviour during tests) — both relevant but distinct. Updated Pluralsight ownership status (lender-owned post Aug 2024, not Vista). Replaced Fast Lane with Global Knowledge in tier-1 ATP list (Fast Lane is hyperscaler/Cisco-anchored). DevOps and Lean Six Sigma framed as PeopleCert-administered, not exclusive AXELOS-style IP.",
-    "whyNow": "PeopleCert acquired AXELOS from Capita/UK Cabinet Office in June 2021 for £380M, consolidating ITIL 4 + PRINCE2 + MSP IP. ITIL 4 Foundation pass rates and time-to-pass have not improved despite 5+ years of generative AI availability — ATPs have no incentive to compress their own delivery margin. EU AI Act Annex III(3)(b) classifies AI for evaluating learning outcomes as high-risk and Annex III(3)(d) classifies AI proctoring (monitoring prohibited behaviour during tests) — both effective Aug 2026 — creating a moat for compliant operators and a barrier for ChatGPT-wrapper hobbyists. PeopleCert online proctoring is a structural revenue line (size not separately disclosed; group total ~£121M) exposed to the AI-detection arms race — a complementary AI prep + simulation product that improves pass rates is a net positive for the certification body, not a threat.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "ITIL 4 Foundation + Practitioner content corpus built; adaptive practice engine live; 3 ATP partners signed in GR + MENA; 500 paying learners at €25/mo; first enterprise deal (50-200 seats) closed."
-      },
-      {
-        "timeframe": "Month 6-18",
-        "milestone": "Expand to PRINCE2 Foundation/Practitioner, DevOps, Agile; 5,000+ paying learners; 10 enterprise deals; channel partnerships with QA, ILX, Fast Lane, Global Knowledge. Content moat: largest curated ITIL/PRINCE2 scenario corpus outside PeopleCert itself."
-      },
-      {
-        "timeframe": "Month 18-36",
-        "milestone": "€5-15M ARR; PeopleCert formal partnership for shared revenue on voucher attach; expand to LanguageCert (UKVI SELT prep); evaluate AWS/Azure/GCP cert verticals as adjacent SKU. Exit window opens at €10M ARR with strategic ATP consolidator or defensive PeopleCert acquisition."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€200-400K",
-      "capexRatio": "5% capex / 95% opex",
-      "note": "Pure SaaS economics. Main costs: 1 content engineer with ITIL expertise (€80K), 1 full-stack engineer (€80K), AI inference (€5-15K/mo at scale), GTM (€60K Year 1)."
-    },
-    "competitors": [
-      {
-        "name": "Coursera (ITIL/PMI)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "MOOC-style ITIL content, no adaptive simulation, no proprietary AI tutor. Vulnerable to vertical specialist."
-      },
-      {
-        "name": "Pluralsight",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Enterprise IT skills, has ITIL paths but generic UX. Vista Equity took private 2021 ($3.5B); ownership transferred Aug 2024 to private credit lenders (Blue Owl, Goldman, BlackRock) after equity write-off — distressed, slower product velocity."
-      },
-      {
-        "name": "QA / ILX / Global Knowledge",
-        "type": "incumbent",
-        "geography": "UK/EU/Global",
-        "note": "Tier-1 ITIL/PRINCE2 ATPs (Global Knowledge won PeopleCert ATP of the Year 2022 Americas). Channel partners not competitors — can be co-opted. Fast Lane is primarily a hyperscaler/Cisco ATP and not tier-1 for ITIL — excluded."
-      },
-      {
-        "name": "Generic ChatGPT/Claude usage",
-        "type": "adjacent",
-        "geography": "Global",
-        "note": "Largest current substitute. Loses to vertical product on accuracy, scenario fidelity, and pass-prediction."
-      },
-      {
-        "name": "PeopleCert MyAxelos",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "PeopleCert's own subscription product. Static content, no AI. Unlikely to ship competing AI tutor before 2027."
-      }
-    ],
-    "competitiveIntensity": "moderate",
-    "scorecard": {
-      "marketSize": 3,
-      "tlifeEdge": 2,
-      "competitiveGap": 3,
-      "capitalFit": 5,
-      "regulatoryRisk": 4,
-      "founderAvailability": 3,
-      "composite": 3.1
-    },
-    "ycRfsCorrelation": "YC wants AI tutors and vertical workforce-education products. Praxis Layer is the AI-native prep + simulation layer above the regulated certification perimeter — wraps PeopleCert's IP without competing with it, sells into enterprises already buying vouchers in bulk."
-  },
-  {
-    "id": "ai-ops-peer-body",
-    "title": "AgentOps Council",
-    "ycCategory": "AI Governance / Standards Bodies",
-    "ycBatchDate": "Fall 2026",
-    "oneLiner": "Author the canonical body of knowledge for agentic AI operations governance — the ITIL of AI systems lifecycle management — and own the regulated-perimeter assessment business for the next 30 years.",
-    "description": "Every billion-dollar regulated-credential business — ITIL, PRINCE2, PMI PMP, Scaled Agile SAFe, ITSQB software testing, IPMA project management — was once a peer-body that authored a framework, achieved ISO 17024 alignment, won one government's procurement endorsement, and then compounded for decades. The EU AI Act (Reg. 2024/1689) creates exactly this regulatory vacuum for AI systems lifecycle governance: high-risk AI deployers must demonstrate qualified personnel performing risk management, data governance, human oversight, and post-market monitoring (Arts. 9-15, 26), but no ISO 17024 scheme exists for 'AI system lifecycle manager,' 'AI risk officer,' or 'agentic workflow auditor.' The 18-24 month window between Aug 2026 (general application) and Aug 2027 (Annex I sectoral) is when the canonical framework gets written.\n\nAgentOps Council is the consortium structure that authors v1 of the Body of Knowledge, achieves ISO 17024 accreditation, and wins one EU member state's procurement endorsement (Greece, via T-Life public-sector access; Estonia, via existing e-government track record; Ireland, given the concentration of EMEA HQs of major US AI labs in Dublin — note: AI Act enforcement runs through national market surveillance authorities + EU AI Office rather than a GDPR-style one-stop-shop, so Ireland advantage is presence-led not legal-domicile-led). Founding members: 3-5 anchor enterprises (one large bank, one large telco, one government digital agency, one pharma — ELPEN/WinMedica anchor), 2 academic institutions (NTUA, UCL or TU Delft), 1 standards body (ETSI or CEN-CENELEC), 2-3 advisory members from former AXELOS / PeopleCert / PMI leadership. Revenue lines (Year 3+): exam fees (€400-800/exam), accredited training organization royalties (15-25%), corporate licensing (€50-200K/yr), government contract endorsements (€500K-5M/contract), continuous CPD subscriptions.\n\nThis is what Scaled Agile (SAFe) did to PMI in the 2010s — authored a framework, sold the certification economy on top, and built a private-equity-backed business that Eurazeo took a majority stake in (Nov 2021) at a valuation reportedly supporting a $300M+ check (third-party revenue estimates ~$25-35M; financials not disclosed). The prize: a structurally moated regulated-perimeter business (ISO accreditation, government endorsement, network effects of accredited trainers) that compounds for 20-30 years and supports billion-dollar enterprise valuations even at modest revenue scale.",
-    "primaryMarket": "europe",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "EU AI Act is the regulatory tailwind that creates the framework vacuum. Brussels-domiciled Council with EU-domain credibility is the only viable shape; Greece and Cyprus are useful only as endorsement-jurisdiction stepping stones, not endgame markets.",
-    "expansionMarkets": [
-      {
-        "market": "greece-cyprus",
-        "fit": "yellow",
-        "note": "Useful as one of the first EU member-state procurement endorsements via T-Life public-sector access. Not a meaningful TAM segment on its own."
-      },
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "GCC AI national strategies (Saudi NAIS, UAE AI Strategy 2031) need governance frameworks; first-mover EU-aligned standard becomes the import. Year 3-4 expansion."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Public-sector digital transformation programs adopt EU-aligned standards by default; minimal direct effort needed."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "T-Life advantages: capital patience for 5-7 year build (no external VC pressure), ELPEN/WinMedica/Tripoli as anchor consortium members across pharma vertical, public-sector relationships in Greece for first endorsement. Disadvantages: this is a consortium-shaped opportunity that does not fit a single-founder venture model and requires a credible international Council Chair (former AXELOS, PMI, IEEE leadership) — recruit-driven, not capital-driven.",
-    "tags": [
-      "ai-governance",
-      "standards-body",
-      "iso-17024",
-      "eu-ai-act",
-      "certification",
-      "peer-body",
-      "long-horizon",
-      "consortium"
-    ],
-    "addedDate": "2026-05-03",
-    "notes": "Highest ceiling, hardest to start. 5-7 year build, consortium-shaped, recruit-driven. Park as long-horizon optionality unless a credible Council Chair (former AXELOS/PMI/IEEE leadership) becomes available. Re-evaluate quarterly as EU AI Act enforcement crystallizes through 2026-27.\n\nValidation log (2026-05-03): Corrected the load-bearing SAFe precedent — the $300M figure cited was Eurazeo's investment amount in the Nov 2021 majority-stake acquisition, NOT SAFe annual revenue (third-party estimates put SAFe revenue ~$25-35M). The correct precedent framing is 'modest-revenue framework body that supports a $1B+ enterprise valuation,' not '$300M ARR'. Corrected SAFe sponsor: Eurazeo, not EQT. Softened Ireland framing — AI Act enforcement runs via national market-surveillance authorities + EU AI Office, not a GDPR-style one-stop-shop, so Ireland advantage is HQ-presence-led not legal-domicile-led. ISACA AAIA confirmed as launched 19 May 2025. IEEE 7000-2021, 7001-2021, 7002-2022 confirmed as published; 7004/7005/7007/7008 in development. CEN-CENELEC JTC 21 (est. Jun 2021) confirmed as lead body for AI Act harmonised standards. Digital Omnibus proposal could push Annex III general application from Aug 2026 to Dec 2027 — monitor.",
-    "whyNow": "EU AI Act entered into force 1 Aug 2024. General application of Annex III high-risk obligations is 2 Aug 2026 — exactly the inflection point that created ITIL (post-1989 UK government IT modernization), Sarbanes-Oxley auditor markets (post-2002), and GDPR DPO certification (post-2018). The 18-24 month window between regulatory effective date and enforcement maturity is when a canonical framework can establish dominance. Microsoft, Google, AWS are racing to publish AI governance content but all are vendor-conflicted and cannot operate the assessment perimeter (regulators will not endorse vendor-led certification of AI deployer competency). The neutral peer-body shape is the only structurally legitimate operator, and no incumbent (PMI, ISACA, IEEE) has yet shipped a comprehensive agentic AI ops framework — IEEE 7000-series is fragmented, ISACA AAIA is a single-cert wrapper, PMI Citizen Developer is adjacent.",
-    "roadToMoat": [
-      {
-        "timeframe": "Year 1",
-        "milestone": "Consortium incorporated (Brussels-domiciled non-profit + commercial subsidiary); 5 anchor founding members signed (1 bank, 1 telco, 1 government agency, 1 pharma anchor via ELPEN, 1 academic); Council Chair recruited (ex-AXELOS/PMI/IEEE leadership); v0.5 Body of Knowledge drafted; ISO 17024 application initiated."
-      },
-      {
-        "timeframe": "Year 2-3",
-        "milestone": "BoK v1.0 published; Foundation + Practitioner exam scheme designed and psychometrically validated; first 5 ATOs accredited; ISO 17024 awarded; first EU member-state procurement endorsement (target: Greece public sector via T-Life network, or Estonia via e-gov track record); 500 candidates pass Foundation exam."
-      },
-      {
-        "timeframe": "Year 3-5",
-        "milestone": "10,000+ certifications issued; 50+ accredited ATOs across EU; Practitioner + Auditor + Architect tier exams launched; 3 EU member-states endorsing; corporate licensing program live; €5-15M revenue, profitable. Acquisition interest from PeopleCert, PMI, ISACA, or PE consolidators (Hg, Vista) emerges."
-      },
-      {
-        "timeframe": "Year 5-7",
-        "milestone": "100K+ certifications; €30-100M revenue; structural moat (ISO accreditation + government endorsements + ATO network) makes displacement uneconomic for new entrants; exit options: sale to PeopleCert/PMI consolidator at €300M-1B, or hold as compounding annuity asset in T-Life portfolio."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€2-5M over 3 years",
-      "capexRatio": "5% capex / 95% opex",
-      "note": "Most cost is Council Chair salary (€200-300K/yr), 3-5 framework authors (€100-150K each), psychometrics consultancy for exam validation (€200-400K), ISO 17024 accreditation process (€150-300K), legal entity + governance (€100-200K), Years 1-3 marketing for first ATO recruitment (€500K). Revenue inflection at Year 3."
-    },
-    "competitors": [
-      {
-        "name": "PeopleCert / AXELOS",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Owns ITIL, PRINCE2, MSP. Most likely to extend into AI ops governance via ITIL 5 or new framework — but slow and ITIL-anchored. 18-24 month window before they ship."
-      },
-      {
-        "name": "PMI (Project Management Institute)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "PMI Citizen Developer cert is adjacent. Possible AI ops cert in 2026-27 but PMI is project-mgmt-anchored, not lifecycle-ops-anchored."
-      },
-      {
-        "name": "ISACA",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Advanced in AI Audit (AAIA) certification. Single-cert wrapper, not a comprehensive framework. Possible partner not competitor."
-      },
-      {
-        "name": "IEEE Standards Association",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "IEEE 7000-series ethics-aligned design standards. Fragmented, not bundled into a credential program. Possible content licensing partner."
-      },
-      {
-        "name": "Vendor-led certs (Microsoft, AWS, Google)",
-        "type": "adjacent",
-        "geography": "Global",
-        "note": "AI-900, AWS AI Practitioner, Google ML certs — all vendor-conflicted, cannot operate neutral assessment perimeter for regulated AI ops."
-      },
-      {
-        "name": "Anthropic / OpenAI / Cohere safety frameworks",
-        "type": "adjacent",
-        "geography": "Global",
-        "note": "Vendor-published responsible AI guidance — not certification frameworks. Useful content sources, not competitors."
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 5,
-      "tlifeEdge": 2,
-      "competitiveGap": 5,
-      "capitalFit": 3,
-      "regulatoryRisk": 3,
-      "founderAvailability": 1,
-      "composite": 3.3
-    },
-    "ycRfsCorrelation": "YC wants AI infrastructure and governance products. AgentOps Council is the regulatory-perimeter play — author the canonical agentic AI ops framework before PMI/ISACA/IEEE bundle one, ride the EU AI Act enforcement curve from 2026-2030, and own the assessment economy for 20-30 years (the SAFe-vs-PMI playbook applied to AI ops)."
-  },
-  {
     "id": "longevity-pharmacy-protocol",
     "title": "WellSpan",
     "ycCategory": "Healthtech / Longevity",
     "ycBatchDate": "Fall 2026",
-    "oneLiner": "Pharmacy-distributed at-home biomarker tracking and ELPEN-formulated supplement protocols for working-age longevity in Greece, Cyprus and the GCC.",
-    "description": "Levine PhenoAge (Levine et al. 2018, *Aging*; Liu et al. 2018, *PLOS Medicine*), GlycanAge (Krištić et al. 2014), Omega-3 Index (Harris & von Schacky 2004; replicated 10-cohort meta-analysis 2017), ApoB (now the preferred ASCVD marker per 2019/2025 ESC/EAS guidelines), HbA1c, hs-CRP, fasting insulin and ~15 other biomarkers now have established mortality- or cardiometabolic-risk prediction power, but operationalising a longevity protocol for a working-age adult in Europe still requires navigating 3 specialists, self-formulating a supplement stack of variable quality, and paying out-of-pocket for tests largely not covered by EOPYY. Function Health (US-only via Quest Diagnostics; ~200K members at $365/yr as of May 2025) explicitly excludes EU; InsideTracker is athlete/fitness-skewed; Levels Health is CGM-narrow. Pharmacist-channel longevity in Greece is fragmented across supplement brands with no biomarker feedback loop.\n\nWellSpan is a pharmacy-distributed longevity protocol: €40-60/month subscription including (i) two quarterly biomarker panels collected via at-home phlebotomy or in-pharmacy draw, run through an EOPYY-contracted lab partner (Bioiatriki is the natural Tier-1 candidate given 72 diagnostic centres in GR/CY and existing EOPYY contracts; partnership is novel — not yet a reimbursed EOPYY workflow), (ii) an algorithmic dashboard tracking 12-15 actionable markers vs age-matched cohort and self-baseline, (iii) a curated supplement stack delivered monthly via the customer's preferred pharmacy — initial stack restricted to compliant food supplements (omega-3, Vit D3+K2, magnesium glycinate, NAC, creatine) since NMN remains a Novel Food in EU pending Commission authorisation post the EFSA May-2026 positive opinion, and rapamycin is prescription-only — and (iv) AI lifestyle coach layered on top. The differentiating asset is the integrated supply chain: ELPEN's pharma manufacturing capability + WinMedica's distribution into the ~10,500-pharmacy Greek market (WinMedica is the manufacturer/distributor, not a pharmacy retailer) + EOF regulatory familiarity — no horizontal competitor can replicate this stack in EU inside 18 months.\n\nGCC expansion via Elnova Dubai opens a parallel market where vertically-integrated pharmacy retail chains (BinSina ~150+ outlets; LIFE Pharmacy ~200+ outlets; Boots ME via Alshaya franchise — retail-only, not vertically integrated) dominate.",
+    "oneLiner": "DTC longevity protocol for Greece and the GCC — €30/mo biomarker subscription via Bioiatriki's 72 walk-in centres, supplements unbundled à-la-carte. No pharmacy commission, no novel at-home phlebotomy.",
+    "description": "Working-age longevity-as-a-subscription has proven product-market fit in the US — Function Health reached ~200K members at $365/yr by May 2025 — but Europe is structurally unserved because Function relies on a Quest Diagnostics partnership it cannot port across the Atlantic. WellSpan addresses Greece, Cyprus and (in year 2-3) the GCC by partnering with Bioiatriki, which already operates 72 EOPYY-contracted diagnostic centres across Greece and Cyprus.\n\nThe model is deliberately stripped down vs the original pharmacy-distributed thesis (which the methodology-v2 red-team killed on Greek pharmacy-commission economics): €30/month subscription buys two quarterly biomarker panels (~12-15 actionable markers: Levine PhenoAge composite, ApoB, HbA1c, hs-CRP, fasting insulin, Omega-3 Index, etc.) drawn at the customer's preferred Bioiatriki centre, an algorithmic dashboard tracking change vs cohort and self-baseline, and an AI lifestyle coach. Supplements are unbundled — customers buy à-la-carte from any pharmacy, or via direct ELPEN/WinMedica drop-ship if/when ELPEN ships an EOF-registered SKU range — so the protocol is supplement-agnostic and supplement margin is upside not load-bearing.\n\nWhy this works where the pharmacy version did not: (i) no 25-30% pharmacy commission, restoring Y1 contribution margin; (ii) Bioiatriki's 72 walk-in centres replace a novel at-home phlebotomy workflow that has no EOPYY reimbursement precedent; (iii) the Bioiatriki partnership becomes the structural moat — they have the lab logistics, EOPYY contracts, and physician relationships no startup can replicate; (iv) DTC matches the Function Health playbook that has proven the working-age longevity-subscription model.\n\nGCC expansion in year 2-3 mirrors the model with Elnova Dubai relationships and a GCC lab partner.",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
-    "primaryMarketRationale": "WinMedica's distribution network into the ~10,500 Greek pharmacies (WinMedica is the pharma manufacturer/distributor; the retail relationship is the moat, not retail ownership) is the most credible single channel for elder/wellness products; ELPEN's manufacturing capability for OTC and food supplements (specific supplement SKU dossier to be developed under EOF) is the second; no other founder team can credibly stand up an integrated, EOF-compliant longevity protocol in EU inside 18 months.",
+    "primaryMarketRationale": "Bioiatriki already operates 72 diagnostic centres in Greece and Cyprus with EOPYY contracts — the channel exists at scale. Greek working-age customers will accept walk-in collection; novel at-home phlebotomy was the wrong wedge. T-Life relationships into Bioiatriki (commercial partnership, not equity) accelerate the deal.",
     "expansionMarkets": [
       {
         "market": "europe",
-        "fit": "green",
-        "note": "Italy, Spain, Portugal share the same pharmacy-as-trust-anchor channel structure and EU food-supplement regulatory framework; expansion via licensed pharmacy chains in Year 2-3."
+        "fit": "yellow",
+        "note": "Italy, Spain, Portugal: similar regulatory frame but no Bioiatriki-equivalent partner; need a parallel lab deal per market. Year 3+."
       },
       {
         "market": "middle-east",
         "fit": "green",
-        "note": "GCC vertically-integrated pharmacy chains + high-disposable-income segment; Elnova Dubai provides distribution bridgehead."
+        "note": "GCC expansion via Elnova Dubai + a GCC lab partner (Bin Sina, LIFE Healthcare diagnostics, or local equivalent). Year 2-3."
       },
       {
         "market": "balkans",
         "fit": "yellow",
-        "note": "Lower per-capita disposable income makes a €40-60/mo subscription harder; pilot in Cyprus before broader Balkan rollout."
+        "note": "Lower per-capita disposable income on a €30/mo subscription; pursue opportunistically via Bioiatriki Cyprus centres for diaspora customers."
       }
     ],
-    "stage": "discovered",
-    "tlifeAngle": "ELPEN's pharma manufacturing capability (food-supplement SKU dossier to be developed under EOF; no existing consumer line as of May 2026 — this is a build) + WinMedica's distribution into the ~10,500-pharmacy Greek market + EOF/EMA regulatory familiarity is a triple-unfair-advantage stack that no horizontal longevity startup can match. Same channel logic that anchors Seniora applies here at higher AOV.",
+    "stage": "evaluating",
+    "tlifeAngle": "T-Life accelerates the Bioiatriki commercial partnership conversation (which is the real moat) via the family pharma network. The WinMedica and ELPEN angle is downgraded from 'integrated supply chain moat' to 'optional supplement drop-ship channel' — supplements are upside not load-bearing. Honest framing.",
     "tags": [
       "longevity",
       "biomarkers",
-      "personalized-nutrition",
-      "elpen",
-      "winmedica",
-      "pharmacy-distribution",
+      "dtc-subscription",
+      "function-health-analog",
+      "bioiatriki",
       "agetech-adjacent",
       "trend-15-longevity",
       "trend-32-personalized-nutrition",
-      "trend-3-elder-tech"
+      "trend-3-elder-tech",
+      "post-red-team-pivot"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Trend match: 36-list #15 (longevity biomarkers actively managed) + #32 (personalized nutrition based on blood work) + #3 (elder tech adjacency). Pairs naturally with Seniora as the wellness-side complement to its fintech-side. Pharmacy distribution is the structural moat — not the biomarker panel or the supplement stack individually.\n\nValidation log (2026-05-16): Corrected EU IVDR reg number to 2017/746 (MDR is 2017/745). Function Health: ~200K members by May 2025 at $365/yr (price cut from $499), not 100K at $500. Removed NMN and rapamycin from headline stack: NMN remains a Novel Food in EU (EFSA positive opinion May 2026 but Commission authorisation pending), rapamycin is prescription-only — both require separate regulatory pathways. Replaced 'Mediclab' with Affidea/InterBalkan/Euromedica as Tier-2 lab options — Mediclab is a single Katerini facility, not a national chain. Reframed WinMedica role: manufacturer/distributor with reach into the ~10,500 Greek pharmacy market, NOT a retailer of 2,500 owned pharmacies (prior phrasing conflated distribution reach with ownership). ELPEN's consumer food-supplement line is a build, not an existing SKU range — flagged accordingly. EOPYY at-home phlebotomy is a novel arrangement (not currently reimbursed). Removed unverified 'ENA' supplement brand from competitor entry. Biomarker mortality-prediction claims primary-sourced (Levine 2018, Krištić 2014, Harris & von Schacky 2004, ESC/EAS 2019/2025).",
-    "whyNow": "Three converging factors. (1) EU Regulation 2017/746 (IVDR; fully applicable 26 May 2022) created clearer compliance pathways for CE-marked self-test devices and IVD home-collection; the companion MDR is Reg 2017/745. (2) Levine PhenoAge and GlycanAge have moved from research to commercial labs; commodity biomarker assembly via Greek tier-1 labs (Bioiatriki, Affidea, InterBalkan, Euromedica) lands at €80-120 per panel even though no branded 'PhenoAge panel' SKU exists yet — a productisation opportunity. (3) Function Health hit ~200K paying members at $365/yr by May 2025 (price cut from $499 earlier in 2024-25), proving the working-age longevity-as-a-subscription model — but Function explicitly excludes EU because of Quest Diagnostics geographic limits. EU is wide open.",
+    "notes": "Trend match: 36-list #15 (longevity biomarkers actively managed) + #32 (personalized nutrition based on blood work).\n\nPivot history: original thesis (pharmacy-distributed via WinMedica + ELPEN-formulated supplements) was red-team-reviewed and returned PASS — see redTeamFindings[0]. Greek pharmacy commission (~25-30%), novel at-home phlebotomy logistics, and ELPEN supplement COGS vs Lanes/Power Health all broke Y1 contribution margin. Current thesis (DTC via Bioiatriki walk-in centres, supplements unbundled) accepts the red-team's alternative thesis. The Bioiatriki partnership is the new load-bearing asset.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "whyNow": "Three converging factors. (1) Function Health hit ~200K paying members at $365/yr by May 2025, proving the working-age longevity-subscription model — but Function explicitly excludes EU because of Quest Diagnostics geographic limits. EU is wide open. (2) EU Regulation 2017/746 (IVDR; fully applicable 26 May 2022) created clearer compliance pathways for biomarker home-collection and CE-marked self-test devices. (3) Levine PhenoAge and GlycanAge have moved from research to commercial labs; commodity biomarker assembly at Bioiatriki / Affidea / InterBalkan lands at €80-120 per panel — productisable.",
     "roadToMoat": [
       {
         "timeframe": "Month 0-6",
-        "milestone": "Pilot 200 customers across 20 WinMedica-supplied pharmacies in Attica; lock in lab partnership with Bioiatriki (Tier 1) or Affidea/InterBalkan (Tier 2); design v1 ELPEN-formulated supplement stack (5 EU-compliant SKUs: omega-3, Vit D3+K2, magnesium glycinate, NAC, creatine); dashboard MVP."
+        "milestone": "Bioiatriki LOI signed with per-panel cost and revenue split; first 200 paid DTC subscribers acquired via paid social + Bioiatriki centre signage; dashboard MVP with 12 markers; Y1 contribution margin >0 demonstrated."
       },
       {
         "timeframe": "Month 6-18",
-        "milestone": "Expand to 200 pharmacies, 5,000 active subscribers, €2.4M ARR; add Cyprus via Medochemie partnership; expand stack to 12 EU-compliant food-supplement SKUs; add NMN only if/when Commission authorises post EFSA May-2026 positive opinion; rapamycin is Rx-only — only added behind a separate physician-supervised pathway (NewCo telemedicine layer or partner clinic referral); launch AI lifestyle coach."
+        "milestone": "2,000+ subscribers across Greece/Cyprus, €0.7-1.2M ARR; AI lifestyle coach launched; first GCC lab partnership LOI; supplement à-la-carte revenue line >€100K (upside not core)."
       },
       {
         "timeframe": "Month 18-36",
-        "milestone": "20,000 subscribers across GR+CY; €10M+ ARR; enter UAE via Elnova distribution; launch female-specific protocol (peri- and post-menopausal markers); proprietary 18-month biomarker dataset becomes a moat for protocol personalisation."
+        "milestone": "10K+ subscribers; €3-6M ARR; GCC launched via Elnova; female-specific protocol (peri/post-menopausal markers); proprietary 18-month biomarker dataset for protocol personalisation; evaluate Italy/Spain via parallel lab partners."
       }
     ],
     "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€500K-€1.2M",
-      "capexRatio": "20% capex / 80% opex",
-      "note": "Main costs are biomarker panel COGS (lab partnership reduces marginal cost to €40-60/panel), pharmacy training and ELPEN supplement formulation R&D for new SKUs (€150K), and customer acquisition (€80-150 CAC blended)."
+      "level": "low",
+      "estimatedSeedCapital": "€400K-€800K",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "DTC pivot drops the ELPEN supplement-formulation critical path (€150K) and inventory working capital. Main costs: Bioiatriki partnership BD, paid acquisition (€80-150 blended CAC), dashboard + AI coach engineering, regulatory advisor."
     },
     "competitors": [
       {
         "name": "Function Health",
         "type": "startup",
         "geography": "US (no EU operation)",
-        "note": "~200K members by May 2025 at $365/yr (cut from $499). Explicit US-only via Quest Diagnostics partnership; cannot enter EU without retooling lab logistics."
+        "note": "~200K members by May 2025 at $365/yr. Explicit US-only via Quest. Closest model match; not a present EU threat but a 12-18 month watch."
       },
       {
         "name": "InsideTracker",
         "type": "startup",
         "geography": "US/EU",
-        "note": "Fitness-skewed, B2C subscription; no pharmacy channel, no integrated supplement formulation, limited longevity-marker depth."
+        "note": "16 years old, still athlete-skewed, capped at $149/yr ultimate plan. Proof that the longevity-protocol category exists; also proof that EU TAM at higher ARPU is harder than the Function trajectory implies."
       },
       {
         "name": "Levels Health",
         "type": "startup",
         "geography": "US",
-        "note": "CGM-led metabolic health; narrow product, no biomarker panel breadth, no EU."
+        "note": "CGM-led metabolic health; narrow product, no EU. Cautionary tale on COGS swallowing the subscription (pivoted away from $40/mo flat in 2024-25)."
       },
       {
-        "name": "InsideOut / Optimallabs",
-        "type": "startup",
-        "geography": "EU/UK",
-        "note": "Early-stage UK biomarker-as-subscription; small (<10K users), no pharmacy channel."
+        "name": "Bioiatriki direct (own-branded panel)",
+        "type": "incumbent",
+        "geography": "Greece/Cyprus",
+        "note": "Largest single competitive risk: Bioiatriki could productise its own longevity panel. Strategy: lock in commercial partnership with exclusivity on personalised-protocol layer for 3-5 years."
       },
       {
         "name": "Local supplement brands (Lanes/Sarantis, Power Health)",
         "type": "incumbent",
         "geography": "Greece",
-        "note": "Lanes (Sarantis Group, Vitamin C leader since 1981) and Power Health (est. 1984, in ~5,000 Greek pharmacies) dominate pharmacy-shelf supplements but have no biomarker feedback loop, no personalisation, commodity pricing."
+        "note": "Could license a dashboard and bolt-on biomarker partnership. Lower-probability competitive entry but plausible 18-24 month threat."
       }
     ],
-    "competitiveIntensity": "open",
+    "competitiveIntensity": "moderate",
     "scorecard": {
       "marketSize": 4,
-      "tlifeEdge": 5,
+      "tlifeEdge": 3,
       "competitiveGap": 4,
-      "capitalFit": 3,
-      "regulatoryRisk": 3,
+      "capitalFit": 4,
+      "regulatoryRisk": 4,
       "founderAvailability": 2,
-      "composite": 3.75
+      "composite": 3.5
     },
-    "ycRfsCorrelation": "YC wants longevity products built on biomarkers people actively manage (#15 in the May-2026 list). WellSpan is the EU-compliant Function Health analog with an unfair distribution moat — pharmacy network + integrated supplement formulation — that incumbents cannot replicate.",
+    "ycRfsCorrelation": "YC wants longevity products built on biomarkers people actively manage (#15 in the May-2026 list). WellSpan post-pivot is the EU-compliant Function Health analog with Bioiatriki as the structural lab partner — drops the pharmacy channel that the methodology v2 red-team killed.",
     "tlifeAssetRefs": [
       "elpen",
       "winmedica",
@@ -3753,14 +1404,14 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "ws-a1",
-        "claim": "EU IVDR = Regulation 2017/746, fully applicable 26 May 2022 (MDR is 2017/745, applicable 26 May 2021)",
+        "claim": "EU IVDR = Regulation 2017/746, fully applicable 26 May 2022",
         "source": "https://eur-lex.europa.eu/eli/reg/2017/746/oj",
         "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "ws-a2",
-        "claim": "Function Health reached ~200K paying members at $365/yr by May 2025 (price cut from $499 earlier in 2024-25)",
+        "claim": "Function Health reached ~200K paying members at $365/yr by May 2025",
         "source": "https://sacra.com/c/function-health/",
         "status": "confirmed",
         "lastChecked": "2026-05-16"
@@ -3774,101 +1425,103 @@ export const ideas: Idea[] = [
       },
       {
         "id": "ws-a4",
-        "claim": "NMN remains a Novel Food in EU; EFSA positive safety opinion May 2026; Commission authorisation pending — not legally sellable as EU food supplement at thesis date",
-        "source": "https://www.nutraingredients.com/Article/2026/05/13/efsa-gives-positive-safety-opinion-on-nmn/",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16",
-        "note": "Excluded from headline supplement stack."
-      },
-      {
-        "id": "ws-a5",
-        "claim": "Levine PhenoAge is published mortality-prediction biomarker (Levine et al. 2018, Aging; Liu et al. 2018, PLOS Medicine)",
+        "claim": "Levine PhenoAge published mortality-prediction biomarker (Levine et al. 2018, Aging; Liu et al. 2018, PLOS Med)",
         "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5940111/",
         "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
-        "id": "ws-a6",
-        "claim": "Greece has ~10,500 community pharmacies",
-        "source": "[ESTIMATE — Greek pharmacist association figure widely cited]",
+        "id": "ws-a5",
+        "claim": "Greek pharmacy commission norm is 25-30% on OTC / food supplements (the load-bearing kill in v1)",
+        "source": "[ESTIMATE — OECD Greek pharmacist margin data, ~4pp above EU average]",
         "status": "estimated",
         "lastChecked": "2026-05-16",
-        "note": "Verify against Panhellenic Pharmaceutical Association annual report before external memo."
+        "note": "Pivot removes pharmacy channel entirely; this assertion now informs why-not-pharmacy, not why-yes-pharmacy."
       },
       {
-        "id": "ws-a7",
-        "claim": "ELPEN has a consumer-facing EOF-registered food-supplement product line",
-        "source": "[REFUTED — not found in May-2026 validation search]",
-        "status": "refuted",
+        "id": "ws-a6",
+        "claim": "Bioiatriki commercial partnership LOI achievable in <6 weeks via T-Life network",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
         "lastChecked": "2026-05-16",
-        "note": "ELPEN has pharma manufacturing capability that could be extended to food supplements — that's a build, not existing IP. See tlifeAssets.ts#elpen for the canonical claim."
+        "note": "Validate via kill-test ws-k1-v2."
       }
     ],
     "killTests": [
       {
-        "id": "ws-k1",
-        "hypothesis": "A working-age Greek/Cypriot retail customer will pay €40-60/month for a pharmacy-distributed biomarker + supplement protocol",
-        "experiment": "Pre-sell to 50 customers via 2 partner pharmacies in Attica with a paper-prototype dashboard and a placeholder supplement stack — collect signed annual commitments at €40/mo",
-        "costEur": 5000,
-        "durationWeeks": 4,
-        "killSignal": "<10 paid sign-ups across 2 pharmacies in 4 weeks",
-        "validateSignal": "≥25 paid sign-ups; ≥40% conversion from pharmacist-led conversation"
+        "id": "ws-k1-v2",
+        "hypothesis": "Bioiatriki will sign a commercial partnership for branded biomarker panel + revenue split at per-panel cost <€55",
+        "experiment": "Direct engagement with Bioiatriki Business Development via T-Life network; target signed LOI",
+        "costEur": 3000,
+        "durationWeeks": 6,
+        "killSignal": "No LOI in 6 weeks — fall back to Affidea or InterBalkan",
+        "validateSignal": "LOI signed, per-panel cost ≤€50, exclusivity on personalised-protocol layer for ≥3 years"
       },
       {
-        "id": "ws-k2",
-        "hypothesis": "ELPEN can produce 5 EU-compliant food-supplement SKUs with EOF dossiers in under 6 months at competitive unit cost",
-        "experiment": "Regulatory-affairs scoping engagement: detailed plan for 5 SKUs (omega-3, D3+K2, magnesium glycinate, NAC, creatine) with EOF dossier path, GMP cost per unit, lead time to first batch",
-        "costEur": 4000,
+        "id": "ws-k2-v2",
+        "hypothesis": "Greek/Cypriot working-age customers will pay €30/mo for a DTC biomarker subscription with walk-in collection",
+        "experiment": "Paid acquisition test (Meta/Google) targeting Athens, Thessaloniki, Limassol; landing page + Stripe checkout for €30/mo annual prepay; measure CPA and conversion",
+        "costEur": 10000,
         "durationWeeks": 6,
-        "killSignal": "EOF dossier path > 6 months OR unit cost >120% of Lanes/Power Health equivalent",
-        "validateSignal": "Dossier path < 4 months for all 5 SKUs AND unit cost ≤ 90% of incumbents"
+        "killSignal": "CAC >€200 OR conversion <1.5% from landing page",
+        "validateSignal": "CAC <€120 AND ≥3% landing-page conversion AND ≥100 paid sign-ups"
       },
       {
-        "id": "ws-k3",
-        "hypothesis": "A Tier-1 Greek lab (Bioiatriki) will partner on an at-home phlebotomy + EOPYY-non-reimbursed biomarker workflow at unit economics that work",
-        "experiment": "Direct engagement with Bioiatriki business-development; target signed LOI with per-panel cost and revenue split",
-        "costEur": 2000,
-        "durationWeeks": 6,
-        "killSignal": "No LOI from any Tier-1 lab (Bioiatriki, Affidea, InterBalkan, Euromedica) in 6 weeks",
-        "validateSignal": "Signed LOI from at least 1 Tier-1 lab at per-panel cost <€55"
+        "id": "ws-k3-v2",
+        "hypothesis": "Y1 unit economics work without supplement margin: €30/mo × 12 = €360 ARPU; with quarterly panel COGS €50 × 2 = €100 + dashboard/ops €40 + CAC €120 = €260 cost; contribution margin €100 (~28%)",
+        "experiment": "Build the actual cost stack and run a 6-month cohort to validate; measure churn",
+        "costEur": 8000,
+        "durationWeeks": 24,
+        "killSignal": "Contribution margin <€60 OR Y1 cohort retention <50%",
+        "validateSignal": "Contribution margin ≥€100 AND Y1 cohort retention ≥65%"
       }
     ],
     "preMortem": [
       {
-        "cause": "Pharmacy channel won't push subscriptions — pharmacist commission too thin vs OTC margin; pharmacists prefer one-shot supplement sales over recurring revenue with sign-up friction",
+        "cause": "Bioiatriki productises its own competing longevity panel without WellSpan — once we prove the demand, they realise they don't need the partner layer",
+        "likelihood": "medium",
+        "earlySignal": "Bioiatriki business-development response posture in kill-test ws-k1-v2: are they negotiating an exclusivity clause or pushing back?"
+      },
+      {
+        "cause": "CAC is too high relative to €30/mo ARPU — paid acquisition burns through capital without compounding organic growth",
         "likelihood": "high",
-        "earlySignal": "Pilot pharmacy commission negotiation in weeks 1-2 — if 'we need 25%+ of subscription revenue' is the floor, the unit economics break"
+        "earlySignal": "Kill-test ws-k2-v2 CPA result in weeks 4-6"
       },
       {
-        "cause": "ELPEN supplement SKU build is critical-path and slips beyond 6 months, killing GTM timing",
-        "likelihood": "medium",
-        "earlySignal": "Kill test ws-k2 results; ELPEN production R&D timeline review at week 4"
-      },
-      {
-        "cause": "Function Health (or copy-cat) enters EU via UK lab partnership (Randox, TDL) before our beachhead solidifies",
-        "likelihood": "medium",
-        "earlySignal": "Function Health UK job postings; Quest/Randox press releases on EU expansion"
+        "cause": "Levine PhenoAge / GlycanAge fad fades; consumer interest in biomarker subscriptions drops post-Function-hype",
+        "likelihood": "low",
+        "earlySignal": "Google Trends + Function Health renewals; monitor quarterly"
       }
     ],
     "probabilityBands": {
-      "reaches1mArrBy18mo": 0.25,
-      "reaches10mArrBy36mo": 0.1,
-      "totalFailureBy36mo": 0.45,
-      "basisOfEstimate": "Function Health hit $50M ARR in 24 months in US on a Quest Diagnostics partnership with frictionless lab logistics. EU subscription-health adoption runs ~30-40% slower than US (Spotify, Netflix benchmarks). Pharmacy-channel partnership adds 6-12 months of negotiation/training. ELPEN supplement-SKU build is critical-path and adds another 3-6 months. Total failure band reflects high probability that one of the three kill tests fails."
+      "reaches1mArrBy18mo": 0.3,
+      "reaches10mArrBy36mo": 0.12,
+      "totalFailureBy36mo": 0.4,
+      "basisOfEstimate": "Pivot improves probabilities vs v1 (25/10/45) by removing the pharmacy-commission killer and ELPEN supplement-build critical path. Function Health hit $50M ARR in 24 months in the US on a similar shape with Quest as the lab partner; Bioiatriki is the EU equivalent. The bear case is that Bioiatriki productises its own panel (the new failure mode) or that EU DTC CAC is too high — these are kill-tested in weeks 6-12 not at the 18-month point."
     },
     "redTeamFindings": [
       {
         "date": "2026-05-16",
         "verdict": "pass",
-        "dealKiller": "The biomarker panel is COGS not a moat — and the pharmacy commission line (Greek OTC norm is ~25-30%) compresses Y1 contribution margin to near-zero or negative before any CAC. Function Health works at $365/yr in US with NO channel haircut; WellSpan is being asked to do the same product at lower ARPU with a 25% channel skim AND novel at-home phlebotomy logistics AND a critical-path ELPEN supplement build. Once Bioiatriki accepts the panel SKU, every other Tier-1 lab (Affidea, InterBalkan, Euromedica) will replicate it — and Lanes/Power Health are 2 phone calls away from licensing a dashboard to bolt onto their 5,000-pharmacy distribution. The preMortem flags pharmacy-commission risk as 'high' but proposes no mitigation; that single line breaks the unit economics.",
+        "dealKiller": "Pharmacy commission (~25-30% Greek norm) + biomarker COGS + ELPEN supplement build = near-zero Y1 contribution margin at €40-60/mo. Function works at $365/yr in US with NO channel haircut.",
         "patternMatches": [
-          "Forward Health ($650M raised → $0, Nov 2024): physical-channel costs (real estate, hardware) swallowed the $150/mo subscription. WellSpan has the same shape with a smaller ARPU.",
-          "Levels Health 2024-25 pivot: started at $40/mo, COGS swallowed it, decoupled hardware from software to survive. WellSpan's biomarker COGS is the same problem.",
-          "InsideTracker (16 years old, still not breakout, capped at $149/yr ultimate plan): proves EU/global TAM at this price point is much smaller than 'Function did $50M ARR in 24 months' implies. Function had Quest's national logistics; WellSpan has pharmacist sign-ups."
+          "Forward Health ($650M raised → $0, Nov 2024): physical-channel costs swallowed the subscription.",
+          "Levels Health 2024-25 pivot: COGS swallowed the $40/mo subscription.",
+          "InsideTracker (16 years old, still capped at $149/yr): EU/global TAM at this price point is smaller than 'Function did $50M ARR in 24 months' implies."
         ],
-        "unitEconomicsConcern": "€480-720/yr ARPU minus 4× biomarker panels (€80-120 each at realistic lab pricing = €320-480/yr) minus supplement COGS at ELPEN GMP-grade lines (likely 110-130% of Lanes/Power Health, not 90%) minus CAC (€80-150 Y1) minus 25% pharmacy commission = €-10 to +€30 Y1 contribution margin. Structurally negative-margin before scale.",
-        "loadBearingAssumption": "ELPEN food-supplement unit cost lands ≤ 90% of Lanes/Power Health (kill-test ws-k2 floor). No public evidence supports this — ELPEN's pharma-grade GMP cost structure is typically HIGHER per supplement unit than incumbents' food-grade lines.",
-        "alternativeThesis": "Drop the pharmacy channel; go DTC + clinic-referral like Function did. Use Bioiatriki's 72 walk-in centres as collection points (kills the novel EOPYY at-home phlebotomy workflow and the 25% pharmacy commission), ship supplements directly to home, charge €30/mo for biomarkers-only and unbundle supplements à-la-carte. The real moat is Bioiatriki's diagnostic network as a partner, not WinMedica/ELPEN as a vertical-integration story."
+        "unitEconomicsConcern": "€480-720/yr ARPU minus 4× panels (€320-480/yr) minus supplement COGS minus CAC (€80-150) minus 25% pharmacy commission = €-10 to +€30 Y1 contribution margin. Structurally negative-margin before scale.",
+        "loadBearingAssumption": "ELPEN food-supplement unit cost lands ≤90% of Lanes/Power Health. No public evidence supports this; pharma-grade GMP cost structure is typically HIGHER per unit than incumbent food-grade lines.",
+        "alternativeThesis": "Drop pharmacy channel; go DTC + clinic-referral like Function did. Use Bioiatriki's 72 walk-in centres as collection points (kills novel EOPYY at-home phlebotomy AND 25% pharmacy commission), ship supplements directly to home, charge €30/mo for biomarkers-only and unbundle supplements à-la-carte."
+      },
+      {
+        "date": "2026-05-16",
+        "verdict": "proceed-with-caveats",
+        "dealKiller": "(post-pivot) Bioiatriki productising their own competing longevity panel — they have the lab logistics and EOPYY relationships; once we prove demand, they can disintermediate. Mitigation: lock exclusivity on personalised-protocol layer for 3-5 years as part of the partnership LOI.",
+        "patternMatches": [
+          "Function Health + Quest (US): proves the lab-partner model works at scale.",
+          "InsideTracker + LabCorp (US): same partnership structure, persisted 16 years."
+        ],
+        "alternativeThesis": "(none — this IS the alt thesis being adopted)"
       }
     ]
   },
@@ -3877,109 +1530,115 @@ export const ideas: Idea[] = [
     "title": "Logos Books",
     "ycCategory": "AI Agents / Vertical SaaS",
     "ycBatchDate": "Fall 2026",
-    "oneLiner": "WhatsApp-native AI bookkeeper for Greek and Cypriot micro-SMEs — posts every receipt, files myDATA in real time, charges per transaction not per seat.",
-    "description": "Greece has on the order of 700-820K SMEs total (Eurostat SBA fact sheet 2024), of which the vast majority (~96% EU-wide pattern) are micro-enterprises under 10 FTE — give or take a 600K micro-SME working number [EST, requires ELSTAT primary-source confirmation]. Outsourcing to a logistis is near-universal driven by myDATA complexity, at typical fees of €100-400/month for a service that consists largely of OCR-ing receipts, posting them to AADE myDATA, and filing periodic VAT returns. Cyprus, Bulgaria, Romania and Northern Italy show structurally similar — though not identical — patterns. The logistis model is structurally exposed: ledger-posting is now an LLM-tractable task with near-zero marginal cost, myDATA real-time invoice transmission has been mandatory since 1 Nov 2021, and Greek Law 5222/2025 sets the B2B peppol e-invoicing mandate at 2 Mar 2026 (large businesses) / Oct 2026 (rest) — the inflection point that puts 90%+ of SME transactions into machine-readable form at AADE. What is missing is a Greek-language WhatsApp UX that meets micro-businesses where they actually are — no portal logins, no desktop software, no formal handover from logistis.\n\nLogos Books is a WhatsApp-native bookkeeping agent. Users forward receipts, supplier invoices, and bank statements; the agent extracts, categorises, and posts each transaction to a cloud ledger, files myDATA submissions in real time, and runs supplier dunning, customer collections, and basic AR/AP triage. Pricing is per-transaction (€0.20-0.50/posting) plus a €15/month base — radically cheaper than a logistis for low-volume businesses, competitive for mid-volume, and structurally aligned with revenue. The product can either replace the logistis entirely or partner with progressive accounting firms as a productivity layer (positioning matters: 'replace your logistis' fights the OEE-licensed accounting profession; 'make your logistis 10x more productive' coopts them).\n\nThe wedge is unfair channel access: WinMedica's distribution into Greek pharmacies gives warm intros to several thousand micro-SMEs with predictable, regulated transaction patterns and existing T-Life trust — the perfect cold-start customer profile. ALTP's industrial-park tenant network adds another 200+ SMEs in adjacent sectors.",
+    "oneLiner": "B2B productivity platform for Greek accounting firms — the AI layer that lets each OEE-licensed logistis run a 10× book without losing the regulatory liability transfer that makes the profession defensible.",
+    "description": "Greek tax law requires returns above turnover thresholds to be signed by an OEE-licensed Class A logistis-forologistis (Art. 38, Law 2873/2000). That signature is the real product the logistis sells — regulatory liability transfer, not workflow. Four years post the myDATA mandate (Nov 2021), 30+ AADE-certified e-invoicing providers (Epsilon Digital, Elorus, SoftOne/ENTERSOFTONE, Impact, EDICOM, Comarch, Protogramma, ...) have failed to disintermediate the logistis precisely because none can absorb that liability.\n\nLogos Books accepts this reality. It sells to the ~8-10K Greek accounting firms (not 600K SMEs) at €99-299/firm/month + €0.05/posting, plus a per-firm setup fee. Each firm books 50-200 SMEs; Logos automates the OCR / categorisation / myDATA submission / dunning / collection workflow so the firm captures the productivity uplift, keeps the signature (and the liability), and grows its book without proportionally adding headcount. Positioning: 'Dext / Karbon / Ignition for Greek logistes' — the only B2B-accounting playbook that has historically worked.\n\nThe wedge is unfair access via T-Life's professional network in Greece + the parallel pitch to ELPEN/WinMedica's own accounting partners as design customers + agora-credit-intelligence's existing AADE myDATA data pipeline. TAM ceiling: 8K firms × €3K ACV = €24M ARR — a real venture outcome on a knowable wedge, not the €2-3M ceiling the direct-to-SME version would have hit.",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greek micro-SME density + mature myDATA real-time invoicing + pending Mar/Oct 2026 B2B peppol mandate + pharmacy and industrial-park channel access = the optimal cold-start environment in Europe. Cyprus follows but at a 2-4 year lag — B2B e-invoicing is not yet mandated there (ViDA mandate from 2030); Cyprus monetises via voluntary onboarding, not regulatory tailwind, until then.",
+    "primaryMarketRationale": "Greek B2B-peppol mandate (Law 5222/2025, effective Mar 2026 large / Oct 2026 rest) creates a forcing function for every firm to adopt new tooling within 18 months. The customer count is concentrated (8-10K firms) and addressable; the SME count (600K) was a distraction.",
     "expansionMarkets": [
       {
         "market": "balkans",
         "fit": "green",
-        "note": "Bulgaria has SAF-T mandate from 2026; Romania has had RO e-Factura since 2024; both have comparable SME density and EU-aligned VAT infrastructure. Same product translates with localisation."
+        "note": "Romania (RO e-Factura live since Jan 2024) and Bulgaria (SAF-T from 2026) have similar firm-sized accounting ecosystems and EU-aligned VAT infrastructure. Same B2B playbook applies."
       },
       {
         "market": "europe",
         "fit": "yellow",
-        "note": "Italy (SdI), Portugal (SAF-T), Spain (TicketBAI) have e-invoicing mandates of varying maturity; product localisation is non-trivial but feasible. Year 2-3."
+        "note": "Italy (SdI), Portugal (SAF-T) have more mature infrastructure but stronger Dext/Karbon/Sage presence; harder competitive entry. Year 3."
       },
       {
         "market": "middle-east",
         "fit": "yellow",
-        "note": "UAE FTA e-invoicing pilot launches Jul 2026; mandatory go-live 1 Jan 2027 for large businesses, phased after; Elnova Dubai presence accelerates entry once mandate goes live."
+        "note": "UAE FTA e-invoicing mandatory Jan 2027 for large firms — parallel opportunity but different professional structure (no logistis equivalent). Year 3."
       }
     ],
-    "stage": "discovered",
-    "tlifeAngle": "WinMedica's distribution into Greek pharmacies = several thousand micro-SME warm intros; ALTP industrial-park tenants add 200+; agora-credit-intelligence pipeline already ingests AADE myDATA data, providing the technical substrate at marginal cost. Logos Books is a logical downstream product of the agora-credit data work.",
+    "stage": "evaluating",
+    "tlifeAngle": "T-Life relationships into Greek mid-size accounting firms (ELPEN/WinMedica's external firms, ALTP tenant firms, family network) + agora-credit-intelligence's existing AADE myDATA pipeline as technical substrate. The pivot removes the dependency on WinMedica's pharmacy-distribution warm-intro to micro-SMEs; the new channel is direct to firms.",
     "tags": [
       "bookkeeping",
-      "ai-agent",
+      "accounting-firms",
+      "b2b-saas",
       "mydata",
-      "sme",
+      "logistes",
       "greece",
-      "whatsapp",
-      "per-transaction-pricing",
       "vertical-saas",
+      "dext-pattern",
       "trend-21-bookkeeping-agents",
       "trend-2-managed-ai-employees",
-      "trend-20-ops-automation"
+      "post-red-team-pivot"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Trend match: 36-list #21 (bookkeeping agents that charge per transaction) + #2 (managed AI employees for businesses) + #20 (ops automation). Pricing model is the load-bearing innovation — per-transaction aligns with the trend explicitly and disarms the logistis incumbent.\n\nValidation log (2026-05-16): Corrected AADE B2B peppol mandate date — Greek Law 5222/2025 sets it at 2 Mar 2026 (large) / Oct 2026 (rest), NOT late 2024 (prior phrasing was off by ~14 months and changed the why-now framing). Flagged TAM trio as estimates: 600K micro-SME count is plausible (Eurostat SBA 2024 indicates ~700-820K total SMEs, ~96% under 10 FTE) but requires ELSTAT primary-source confirmation; the 80% logistis-outsourcing figure and 30K licensed-logistis figure lack public citation. SoftOne is no longer independent — Entersoft acquired Oct 2025, merged entity is ENTERSOFTONE. Pylon and SingularLogic both inside Epsilon Net group (consolidated). Removed Mews from competitor list — it's hospitality PMS, not expense management; replaced with Qonto/Payhawk. Reframed Cyprus expansion — B2B e-invoicing is NOT yet mandatory there (ViDA 2030); Cyprus is voluntary-onboarding territory until then, not a regulatory-tailwind market. WinMedica reframed as manufacturer/distributor with reach into Greek pharmacies (the warm-intro count is several thousand, not a controlled 2,500-pharmacy retail network). Haiku 4.5 cost estimate validated.",
-    "whyNow": "myDATA real-time invoice transmission has been mandatory in Greece since 1 Nov 2021; Greek Law 5222/2025 sets the B2B peppol mandate at 2 Mar 2026 (large) / Oct 2026 (rest) — the 12-month launch window before broad enforcement is the optimal entry window. LLM cost per posted transaction has fallen ~95% since GPT-4 launch (Claude Haiku 4.5 priced $1/$5 per M input/output tokens = ~€0.003 for a typical receipt extract + categorisation), making per-transaction pricing structurally profitable for the first time. EU SAF-T / peppol harmonisation across markets at different maturities (Romania RO e-Factura mandatory since Jan 2024; Bulgaria SAF-T Jan 2026 large; Italy SdI mature since 2019; Portugal SAF-T billing mature, accounting submission delayed to 2028; Spain TicketBAI Basque-only) creates a multi-country product opportunity within a single regulatory family — though each market needs localisation, and Cyprus does not yet have a B2B mandate.",
+    "notes": "Trend match: 36-list #21 (bookkeeping agents) + #2 (managed AI employees). Pricing model evolves: per-firm subscription + per-posting fee, mapping the actual buyer's economics (firm productivity uplift) rather than the SME's commodity-receipt cost.\n\nPivot history: original direct-to-SME thesis was red-team-reviewed and returned PASS — see redTeamFindings[0]. The logistis sells liability transfer (Greek Law 2873/2000 Art. 38), not workflow; the OEE professional-body lobby precedent (pharmacists vs OTC 15-yr block, notaries vs e-conveyancing, lawyers killing LegalZoom-style entrants) made direct-to-SME structurally hostile. Current thesis (B2B for firms) accepts the alternative thesis. Pattern-matches Dext / Karbon / Ignition — the only B2B-accounting playbook that has historically worked.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "whyNow": "Greek Law 5222/2025 sets the B2B peppol mandate at 2 Mar 2026 (large) / Oct 2026 (rest), forcing every Greek accounting firm to adopt new tooling within 18 months. LLM cost per posted transaction has fallen ~95% since GPT-4 launch (Haiku 4.5: ~€0.003 per Greek-receipt extract). Romania RO e-Factura precedent shows accounting-firm SaaS adoption accelerates in the 18-month window post-mandate. AADE has certified 30+ e-invoicing providers but none have built a logistis-channel-first product.",
     "roadToMoat": [
       {
         "timeframe": "Month 0-6",
-        "milestone": "WhatsApp + Telegram + email channels live; AADE myDATA API integration complete; pilot 100 SMEs (50 pharmacies + 50 industrial-park tenants); achieve <€0.20 marginal cost per posted transaction; €15/mo + €0.30/tx pricing validated."
+        "milestone": "Sign 5 design-partner accounting firms (50-200 SMEs each) at €99/mo + €0.05/posting; ship MVP covering receipt OCR + myDATA submission + dunning; achieve <€0.20 marginal cost per posted transaction."
       },
       {
         "timeframe": "Month 6-18",
-        "milestone": "2,000 paying SMEs, €1.2M ARR; accounting-firm partner program (offer firms a €5/SME/mo revenue share if they migrate their book); first 200 Cyprus customers; expand to Bulgaria after SAF-T mandate goes live in early 2026."
+        "milestone": "200 paying firms, €0.6-1.2M ARR; expand to expense reconciliation + payroll filings; first Romania and Bulgaria partner firms post-SAF-T mandate; Karbon/Ignition-style firm-ops layer (engagement letters, billing, time tracking) added."
       },
       {
         "timeframe": "Month 18-36",
-        "milestone": "10K+ SMEs across GR+CY+BG+RO; €6-10M ARR; proprietary dataset of 100M+ posted Greek/Balkan transactions creates a moat for downstream credit-scoring and SME credit product (cross-link to agora-credit-intelligence); evaluate Italy and Portugal entry."
+        "milestone": "1,500-2,500 firms across GR/RO/BG, €4-8M ARR; proprietary dataset of 100M+ posted Greek/Balkan transactions creates moat for downstream SME credit-scoring product (link to agora-credit-intelligence); approach 8-12% market share of Greek logistis firms by Y3."
       }
     ],
     "capitalIntensity": {
       "level": "low",
-      "estimatedSeedCapital": "€200-400K",
+      "estimatedSeedCapital": "€300-600K",
       "capexRatio": "5% capex / 95% opex",
-      "note": "Pure SaaS economics. Main costs: 2 engineers (€160K), AI inference (~€0.005/tx at scale on Haiku/Mistral), AADE certification and accounting partnership BD (€80K), GR-language UX content (€40K)."
+      "note": "Pivoted GTM is firm-by-firm sales (~10× higher ACV than SME) which justifies a sales rep early. Main costs: 2 engineers (€160K), 1 senior firm-AE (€80K), AI inference (~€0.005/tx at scale), AADE certification (€40K), partnership BD (€80K), GR-language firm-operator UX content (€40K)."
     },
     "competitors": [
+      {
+        "name": "Dext (ex-Receipt Bank) → IRIS Software",
+        "type": "incumbent",
+        "geography": "UK/Global",
+        "note": "Pivoted to accountant-channel-only after direct-to-SMB stalled; sold to IRIS Dec 2024. Closest playbook match. Not Greek-tax-aware; minimal EU South footprint."
+      },
+      {
+        "name": "Karbon",
+        "type": "startup",
+        "geography": "US/AU/UK",
+        "note": "Firm-ops platform for accounting practices ($50-100/user/mo). No Greek tax integration. Likely partner not direct competitor."
+      },
       {
         "name": "Epsilon Net (incl. Pylon, Singular Logic)",
         "type": "incumbent",
         "geography": "Greece / Athens SE: EPSr",
-        "note": "Listed Greek accounting/ERP champion since Jul 2020. Owns Pylon ERP (20K+ installs) and acquired SingularLogic ('Epsilon SingularLogic'). Built for accountants, not for SMEs directly. No WhatsApp channel, no per-transaction pricing. Channel partner candidate."
+        "note": "Listed Greek accounting/ERP champion. Built for accountants. Heavy installed base but no AI-first product motion. Closest defensive competitor; could ship a competing AI layer. Channel partner candidate."
       },
       {
         "name": "ENTERSOFTONE (ex-Entersoft + SoftOne)",
         "type": "incumbent",
         "geography": "Greece",
-        "note": "Entersoft acquired SoftOne in Oct 2025; merged entity is the second tier-1 Greek accounting/ERP vendor. Mid-market focused; misses the <10 FTE segment."
+        "note": "Merged Oct 2025. Second tier-1 Greek ERP/accounting vendor. Same competitive dynamics as Epsilon Net."
       },
       {
-        "name": "Pleo / Spendesk / Qonto / Payhawk",
-        "type": "startup",
-        "geography": "EU",
-        "note": "Expense management and SMB banking adjacent. Do not file myDATA, not Greek-tax-aware. (Mews — previously listed — is hospitality PMS, not expense management; removed.)"
-      },
-      {
-        "name": "Xero / QuickBooks",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Generic SME accounting. Not Greek-tax-aware out of the box; cannot file myDATA without third-party integration."
-      },
-      {
-        "name": "Local logistis (OEE-licensed accountants)",
+        "name": "AADE-certified e-invoicing providers (Elorus, Impact, EDICOM, Comarch, Protogramma)",
         "type": "incumbent",
         "geography": "Greece",
-        "note": "Largest competitor by revenue capture (OEE represents ~90K economists; specific licensed-logistis count not pinned to a primary source — flag for ELSTAT/OEE verification). Slow, manual, but trusted. Strategy: coopt as channel partner with revenue share."
+        "note": "30+ providers exist. None has built a firm-channel-first product — they sell to either accountants or SMEs as e-invoicing utility, not firm-productivity SaaS."
+      },
+      {
+        "name": "Local logistis (OEE-licensed)",
+        "type": "incumbent",
+        "geography": "Greece",
+        "note": "The customers, not the competitors. Strategy: coopt as buyer via firm-productivity uplift, preserve their liability-transfer role."
       }
     ],
     "competitiveIntensity": "moderate",
     "scorecard": {
-      "marketSize": 4,
+      "marketSize": 3,
       "tlifeEdge": 3,
-      "competitiveGap": 3,
+      "competitiveGap": 4,
       "capitalFit": 5,
       "regulatoryRisk": 4,
       "founderAvailability": 4,
-      "composite": 3.75
+      "composite": 3.6
     },
-    "ycRfsCorrelation": "YC wants bookkeeping agents that charge per transaction (#21 in the May-2026 list). Logos Books is the WhatsApp-native Greek-SME implementation with unfair pharmacy and industrial-park channel access — the channel solves the cold-start problem that kills most B2B-SaaS-for-SME plays.",
+    "ycRfsCorrelation": "YC wants bookkeeping agents that match the actual buyer's economics (#21 in the May-2026 list). Logos Books post-pivot is the Dext/Karbon pattern applied to Greek accounting firms — coopts the OEE-licensed logistis profession rather than fighting it.",
     "tlifeAssetRefs": [
       "winmedica",
       "altp",
@@ -3988,379 +1647,131 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "lb-a1",
-        "claim": "myDATA real-time invoice transmission has been mandatory in Greece since 1 November 2021",
+        "claim": "myDATA real-time invoice transmission mandatory in Greece since 1 November 2021",
         "source": "https://sovos.com/vat/tax-rules/mydata-greece/",
         "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "lb-a2",
-        "claim": "Greek Law 5222/2025 sets B2B peppol e-invoicing mandate at 2 March 2026 (large businesses) and October 2026 (rest)",
+        "claim": "Greek Law 5222/2025 sets B2B peppol mandate at 2 Mar 2026 (large) / Oct 2026 (rest)",
         "source": "https://edicomgroup.com/blog/greece-mandatory-electronic-invoice",
         "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "lb-a3",
-        "claim": "Romania RO e-Factura B2B mandatory since 1 January 2024 (grace period to May 2024)",
-        "source": "https://www.piroi.com/post/ro-e-factura-mandatory-b2b-from-1-january-2024",
+        "claim": "Greek tax returns above turnover thresholds require OEE-licensed Class A logistis-forologistis signature (Art. 38, Law 2873/2000)",
+        "source": "https://www.greeklawdigest.gr/topics/tax/item/301-accounting-auditing-law-in-greece",
         "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "lb-a4",
-        "claim": "Greek micro-SME count (<10 FTE) ~600K — load-bearing TAM number",
-        "source": "[ESTIMATE — Eurostat SBA 2024 implies ~700-820K total SMEs at ~96% micro-share = ~670-790K micro-SMEs]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16",
-        "note": "Requires ELSTAT structural business statistics primary-source confirmation before external memo."
+        "claim": "AADE has certified 30+ e-invoicing providers; none have disintermediated the logistis in 4 years post-mandate",
+        "source": "https://www.aade.gr/en/mydata/licensed-software-e-invoicing-providers",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
       },
       {
         "id": "lb-a5",
-        "claim": "Epsilon Net listed on Athens Stock Exchange since July 2020 (EPSr); owns Pylon ERP and acquired SingularLogic (now Epsilon SingularLogic)",
-        "source": "https://www.marketscreener.com/quote/stock/EPSILON-NET-S-A-18153983/",
+        "claim": "Dext (ex-Receipt Bank) pivoted to accountant-channel-only and sold to IRIS Dec 2024 — the only B2B-accounting playbook that scaled",
+        "source": "https://dext.com/en/partner",
         "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "lb-a6",
-        "claim": "Entersoft acquired SoftOne in October 2025; merged entity branded ENTERSOFTONE",
-        "source": "[CONFIRMED via May-2026 validation; SoftOne no longer independent]",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
+        "claim": "Greek accounting firm count ~8-10K [ESTIMATE — OEE total professional members ~90K, firm-density derived from ELSTAT business census]",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "Verify against OEE annual report and ELSTAT structural business statistics."
       },
       {
         "id": "lb-a7",
-        "claim": "Claude Haiku 4.5 cost per typical receipt OCR + categorisation transaction is ~€0.003",
+        "claim": "Claude Haiku 4.5 cost per typical receipt OCR + categorisation ~€0.003",
         "source": "https://pricepertoken.com/pricing-page/model/anthropic-claude-haiku-4.5",
         "status": "confirmed",
-        "lastChecked": "2026-05-16",
-        "note": "$1/M input + $5/M output; ~2K input + 200 output tokens per receipt = $0.003 ≈ €0.0028."
-      },
-      {
-        "id": "lb-a8",
-        "claim": "Cyprus has comparable B2B e-invoicing mandate to Greece",
-        "source": "[REFUTED — Cyprus mandates only B2G e-invoicing since 2020; B2B not mandated until ViDA 2030]",
-        "status": "refuted",
-        "lastChecked": "2026-05-16",
-        "note": "Cyprus expansion is voluntary-onboarding only until ViDA 2030 — no regulatory tailwind."
+        "lastChecked": "2026-05-16"
       }
     ],
     "killTests": [
       {
-        "id": "lb-k1",
-        "hypothesis": "Greek micro-SMEs will switch from a logistis to a WhatsApp-native AI bookkeeper at €15/mo + €0.30/tx",
-        "experiment": "Cold-pitch 20 Attica pharmacy owners (a fast-to-reach micro-SME segment with predictable transaction volume) on the switch; require a verbal commitment to a 2-month trial",
-        "costEur": 3000,
-        "durationWeeks": 4,
-        "killSignal": "<2/20 commit to a trial",
-        "validateSignal": "≥7/20 commit; ≥3 sign a 2-month trial contract"
+        "id": "lb-k1-v2",
+        "hypothesis": "5 mid-size Greek accounting firms will sign a design-partner contract at €99/mo + €0.05/posting in 8 weeks",
+        "experiment": "Direct pitch to 20 firms (50-200 SMEs each) via T-Life network + cold outreach; target signed design-partner agreements",
+        "costEur": 5000,
+        "durationWeeks": 8,
+        "killSignal": "<2/20 sign in 8 weeks",
+        "validateSignal": "≥5/20 sign; ≥3 with named-decision-maker timeline for full rollout post-pilot"
       },
       {
-        "id": "lb-k2",
-        "hypothesis": "The agent achieves ≥80% accuracy on Greek receipt-to-myDATA-line-item extraction at <€0.20 marginal cost",
-        "experiment": "Build a WhatsApp prototype + AADE myDATA submission flow; process 1,000 real receipts from 5 friendly pharmacies; measure accuracy vs human-labelled ground truth and per-receipt cost",
+        "id": "lb-k2-v2",
+        "hypothesis": "The agent achieves ≥85% accuracy on Greek receipt-to-myDATA-line-item extraction at <€0.20 marginal cost — firm-grade reliability",
+        "experiment": "Build prototype + AADE myDATA submission; process 5,000 real receipts from 5 design-partner firms; measure accuracy vs firm-labelled ground truth and per-receipt cost",
         "costEur": 8000,
         "durationWeeks": 6,
-        "killSignal": "<60% accuracy OR >€0.30 marginal cost",
-        "validateSignal": "≥80% accuracy AND <€0.20 marginal cost"
+        "killSignal": "<70% accuracy OR >€0.30 marginal cost",
+        "validateSignal": "≥85% accuracy AND <€0.20 marginal cost"
       },
       {
-        "id": "lb-k3",
-        "hypothesis": "Progressive OEE-licensed logistes will adopt Logos Books as a productivity layer rather than fight it",
-        "experiment": "Pitch 5 selected mid-size accounting firms (50-200 SME books) on a revenue-share partnership: their book migrates to Logos, they get €5/SME/mo revshare and reclaim 60% of their time",
-        "costEur": 4000,
-        "durationWeeks": 8,
-        "killSignal": "0/5 accept terms; OEE-association pushback or threat to pull licences",
-        "validateSignal": "≥2/5 sign a revshare LOI for a 50-SME pilot"
+        "id": "lb-k3-v2",
+        "hypothesis": "Firms will see ≥30% time-reclaim per partner on book of 100 SMEs after 90 days",
+        "experiment": "90-day cohort with 3 firms; measure partner hours/week before vs after; survey on willingness to migrate full book at €299/mo Tier-2",
+        "costEur": 6000,
+        "durationWeeks": 14,
+        "killSignal": "<15% time-reclaim OR firms unwilling to upgrade to Tier-2",
+        "validateSignal": "≥30% time-reclaim AND ≥2/3 firms upgrade to Tier-2"
       }
     ],
     "preMortem": [
       {
-        "cause": "AADE myDATA API reliability or rate limits make real-time per-transaction filing economically unviable",
+        "cause": "Epsilon Net or ENTERSOFTONE ships a competing AI productivity layer with their installed-base distribution advantage",
         "likelihood": "medium",
-        "earlySignal": "Kill test lb-k2 stress-tests the API; also direct engagement with AADE certification team in week 1"
+        "earlySignal": "Monitor product releases quarterly; meet with both for partnership/channel discussion in Month 2"
       },
       {
-        "cause": "OEE-licensed logistes lobby for regulatory protection (e.g., 'only licensed logistes can submit myDATA on behalf of others') — kills the direct-to-SME play",
+        "cause": "Firms find the time-reclaim modest (firm partners are paid for liability not labour; time savings don't translate to billable-hour leverage)",
         "likelihood": "medium",
-        "earlySignal": "Monitor OEE statements on AI bookkeeping; commission a legal opinion on the regulatory perimeter in week 2"
+        "earlySignal": "Kill-test lb-k3-v2 results in Month 4"
       },
       {
-        "cause": "Epsilon Net or ENTERSOFTONE ship a WhatsApp / per-transaction product before we hit critical mass",
+        "cause": "Dext / Karbon / Ignition enter Greece directly (Dext via IRIS distribution post-acquisition)",
         "likelihood": "low",
-        "earlySignal": "Monitor product release notes and pricing pages quarterly; incumbents are SaaS-per-seat by DNA — pivoting is hard"
+        "earlySignal": "Monitor Dext EU expansion announcements; the Greek-tax localisation cost is the barrier"
       }
     ],
     "probabilityBands": {
-      "reaches1mArrBy18mo": 0.35,
-      "reaches10mArrBy36mo": 0.12,
-      "totalFailureBy36mo": 0.3,
-      "basisOfEstimate": "Romania RO e-Factura precedent: ~50K SMEs adopted cloud accounting solutions in the first 18 months post-mandate. Greek B2B mandate starts Mar 2026 (large) and Oct 2026 (rest); our 18-mo target window aligns with the steepest part of the adoption curve. €1M ARR requires ~5,000 paying SMEs at our blended €200/yr ACV — feasible at 1% of micro-SME TAM and ~10% share of net-new adopters. Lower bound: lobbyist pushback from logistes; upper bound: full adoption of agent-led bookkeeping by digital-native generation."
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.2,
+      "totalFailureBy36mo": 0.25,
+      "basisOfEstimate": "Pivot materially improves probabilities vs v1 (35/12/30) because the TAM is now reachable (8-10K firms via direct sales, not 600K SMEs via channel) and the Dext/Karbon precedent shows the playbook scales to €100M+ ARR (Dext at peak). €10M ARR target = 3,500 firms × €3K avg ACV = 35-45% market penetration by Y3 — aggressive but not implausible given the mandate-forced adoption window. Failure band reflects competitive risk from Epsilon Net / ENTERSOFTONE shipping a defensive product."
     },
     "redTeamFindings": [
       {
         "date": "2026-05-16",
         "verdict": "pass",
-        "dealKiller": "The Greek logistis is not selling bookkeeping — they're selling regulatory liability transfer. Greek tax law requires returns above turnover thresholds to be signed by an OEE-licensed Class A logistis-forologistis (Article 38, Law 2873/2000). An LLM cannot sign a Greek tax return. AADE has already certified 30+ e-invoicing providers (Epsilon Digital, Elorus, SoftOne/Entersoftone, Impact, EDICOM, Comarch, Protogramma, ...) — four years post-myDATA mandate, ZERO have disintermediated the logistis at scale. The thesis confuses workflow with liability transfer. WhatsApp UX is a cosmetic layer on a problem the founders have misdiagnosed.",
+        "dealKiller": "The Greek logistis is not selling bookkeeping — they're selling regulatory liability transfer. An LLM cannot sign a Greek tax return. 30+ AADE-certified e-invoicing providers exist; ZERO have disintermediated the logistis in 4 years.",
         "patternMatches": [
-          "Wave Accounting → H&R Block (2019, $405M): free-to-acquire SMB accounting; the acquirer spent six years bolting Wave onto Block Advisors human services because the human signature was load-bearing. The acquirer concluded the human was the product.",
-          "Dext / Receipt Bank → IRIS Software (Dec 2024): tried direct-to-SMB, growth flatlined, pivoted hard to 'accountant-channel-only' (homepage now: 'Trusted by 12,000 bookkeeping firms'). Direct-SMB CAC was uneconomic; only the accountant channel scaled.",
-          "FreeAgent → NatWest (£53M, 2018): a decade in, capped at ~150K UK users (a market 6× Greek micro-SME count) and sold to a bank to survive distribution costs. Pricing was £19/mo flat — still couldn't escape the accountant relationship.",
-          "Greek professional-body lobby precedent: Pharmacists' Association blocked OTC supermarket sales for 15+ years (only opened by Troika 2014 memorandum and only partially); Notarial Association has kept e-conveyancing off-limits despite multiple EU infringement cases; Athens Bar killed LegalZoom-style direct-to-consumer entrants (Lawspot, Dikastis). OEE has ~100K members and direct lines to the Ministry of Finance — auto-submission of myDATA on behalf of SMEs will face administrative challenge within 12 months of crossing 1,000 paid customers. Re-rate preMortem from MEDIUM to HIGH."
+          "Wave Accounting → H&R Block (2019): acquirer pivoted to human services because human signature is load-bearing.",
+          "Dext / Receipt Bank → IRIS Dec 2024: pivoted to accountant-channel-only after direct-SMB CAC was uneconomic.",
+          "FreeAgent → NatWest 2018: a decade in, capped at 150K UK users, sold to a bank for distribution.",
+          "Greek professional-body lobby precedent: pharmacists (15-yr OTC block), notaries (e-conveyancing block), lawyers (LegalZoom-style block). OEE has ~100K members and direct Ministry of Finance lines — re-rate OEE-lobby threat from MEDIUM to HIGH."
         ],
-        "unitEconomicsConcern": "Cross-over math: Logos vs €100/mo logistis at ~280 tx/mo; vs €400/mo logistis at ~1,280 tx/mo. ELSTAT-pattern micro-SMEs cluster at 100-375 tx/mo (median monthly turnover €8-15K, avg ticket €40-80). Realistic distribution: ~25% sit in the 150-1,500 tx/mo sweet spot (150-200K SMEs, not 600K); at 5% realistic 3-yr penetration = 8-10K customers, €2-3M ARR ceiling — NOT a venture outcome. P(€10M ARR by 36mo) of 0.12 is generous by ~2×.",
-        "loadBearingAssumption": "Greek SMEs prefer WhatsApp to other channels for business-document exchange. No survey data supports this; DataReportal 2026 Greece shows Viber dominant for Greek SME-to-customer comms; ELTRUN/AUEB SME ICT surveys consistently rank email + Viber > WhatsApp. The 'WhatsApp-native' wedge is founder projection mapped from Brazil/India onto a market where Viber holds business-chat mindshare.",
-        "alternativeThesis": "Sell to the logistis, not the SME. Reframe as B2B productivity SaaS for ~8-10K Greek accounting firms at €99-299/firm/mo + €0.05/posting. Each firm books 50-200 SMEs; capture firm margin uplift not SME spend. Co-opts rather than fights OEE (kill-test lb-k3 becomes the whole company); inherits liability transfer; WinMedica pharmacy reach becomes a referral list to firms serving them, not a direct-CAC channel; pattern-matches the only B2B-accounting playbook that has ever worked (Dext, Karbon, Ignition). TAM: 8K firms × €3K ACV = €24M ARR ceiling — a real venture outcome on a knowable wedge."
-      }
-    ]
-  },
-  {
-    "id": "on-device-gxp-inference",
-    "title": "VaultEdge",
-    "ycCategory": "AI Infrastructure / Regulated Industries",
-    "ycBatchDate": "Fall 2026",
-    "oneLiner": "On-device AI inference appliance for GMP sterile manufacturing — runs fine-tuned LLMs inside air-gapped GAMP5 isolators with full Part 11 audit trail and zero cloud egress.",
-    "description": "Pharma GMP, hospital clinical, and defense data are structurally incompatible with cloud LLM inference: data residency, validated-software constraints (GAMP5 Cat 4/5), 21 CFR Part 11 audit trail, and IP/security concerns mean most operators cannot send batch records, deviations, or patient PHI to OpenAI, Anthropic, or Azure OpenAI. The release of capable 24B-70B parameter open-weight models — Llama 3.3 70B (Meta, Dec 2024), Mistral Small 3.1 (Apache 2.0, 24B), Qwen2.5 (Alibaba, Apache 2.0), gpt-oss 120B + 20B (OpenAI, Aug 2025, Apache 2.0) — changed the economics. EU GMP Annex 1 (Aug 2023), EMA Sept 2024 AI Reflection Paper, and FDA's 2023 CDER AI discussion paper plus the Jan 2025 draft guidance ('Considerations for the Use of AI to Support Regulatory Decision-Making') all made AI-derived evidence regulator-acceptable IF traceable, explainable, and validated — but only on validated software. Cloud LLMs cannot be validated by the operator.\n\nVaultEdge is a turnkey on-device AI appliance: validated hardware unit + fine-tuned model + GAMP5 Cat 4 software wrapper + Part 11 audit trail layer + EU AI Act Art. 6(3) self-classification documentation. Realistic hardware reference architecture: single NVIDIA L40S or RTX PRO 6000 Blackwell (data-centre-licensed, 96GB VRAM, ~€8-12K) in an OEM-validated 4U chassis with redundant PSU, IPMI, hot-swap NVMe, EU-CE certification — BOM €40-70K. Sold per-site at €100-150K all-in plus €30-60K/site annual support. Use cases: batch record review, deviation triage and classification, root-cause analysis assistance, SOP intelligence retrieval, gowning-video review (on-device computer vision). Software runs on private network only, no cloud egress, with cryptographic attestation of model version + decision provenance for every inference. Each unit ships with a pre-validated IQ/OQ/PQ pack so the customer's validation lift is &lt;6 weeks (vs 6-12 months for cloud LLM validation).\n\nDirect Aletheia GxP companion: Aletheia is the SaaS competency intelligence layer; VaultEdge is the on-device inference substrate. Tripoli HPAPI provides the design partnership; ELPEN's broader sterile lines provide validation sites 2-4. Adjacent expansion: hospital pharmacies (FDA Part 11 + HIPAA), defense procurement (CMMC + ITAR), and EU sovereign-AI procurement (GAIA-X aligned).",
-    "primaryMarket": "greece-cyprus",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Tripoli HPAPI is a working design partner; Greek/Balkan/Cypriot pharma manufacturers have lower cloud-LLM political tolerance than UK/US peers (data sovereignty is a felt issue post-2010 crisis); ELPEN's sterile lines provide marquee EU reference customers.",
-    "expansionMarkets": [
-      {
-        "market": "europe",
-        "fit": "green",
-        "note": "Italy, Spain, DACH have strong data-sovereignty preferences and large sterile/aseptic manufacturing footprints. GAIA-X-aligned procurement is a tailwind. Year 2 expansion via the same beachhead logos as Aletheia GxP."
+        "unitEconomicsConcern": "Cross-over math: cluster of 25% of Greek micro-SMEs in 150-1,500 tx/mo sweet spot = 150-200K SMEs; at 5% realistic 3-yr penetration = 8-10K customers × €200-300/yr = €2-3M ARR ceiling. Not a venture outcome.",
+        "loadBearingAssumption": "Greek SMEs prefer WhatsApp to email/Viber for business-document exchange. No survey data supports this; DataReportal 2026 Greece shows Viber dominant for business chat.",
+        "alternativeThesis": "Sell to the logistis, not the SME. Reframe as B2B productivity SaaS for ~8-10K Greek accounting firms at €99-299/firm/mo + €0.05/posting. Each firm books 50-200 SMEs. Coopts OEE; inherits liability transfer; pattern-matches Dext / Karbon / Ignition. TAM: 8K firms × €3K ACV = €24M ARR ceiling."
       },
-      {
-        "market": "middle-east",
-        "fit": "green",
-        "note": "GCC pharma (Hikma, Julphar, SPIMACO) and sovereign-AI procurement (UAE G42, Saudi HUMAIN) both demand on-prem inference. Elnova Dubai presence + ELPEN GCC distribution = warm intros."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Smaller sterile-manufacturing footprint and tighter capex budgets; pursue opportunistically as Aletheia GxP customers convert."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "Direct adjacency to Aletheia GxP and Tripoli HPAPI. Hardware-anchored differentiation — SaaS incumbents (Veeva, MasterControl, ComplianceWire) are multi-tenant-cloud by architecture and cannot ship an air-gapped on-prem inference appliance without breaking their core model. Tripoli's HPAPI containment requirements provide the most demanding design partner in Europe.",
-    "tags": [
-      "on-device-ai",
-      "edge-inference",
-      "gxp",
-      "pharma",
-      "part-11",
-      "gamp5",
-      "data-sovereignty",
-      "regulated-industries",
-      "tripoli",
-      "elpen",
-      "trend-27-on-device-ai",
-      "trend-18-agent-permissions",
-      "trend-2-managed-ai-employees",
-      "trend-34-ai-defense"
-    ],
-    "addedDate": "2026-05-16",
-    "notes": "Trend match: 36-list #27 (on-device AI for healthcare/legal/finance) + #18 (agent permissions, security, audit trails) + #2 (managed AI employees in regulated workflows) + #34 (AI-native defense and compliance tools). Hardware-anchored play — higher capex than pure SaaS, but defensibility profile is qualitatively different and complementary to Aletheia GxP. Aletheia and VaultEdge could ship as a bundle or be founded as a single dual-product company.\n\nValidation log (2026-05-16): Corrected gpt-oss release date — Aug 5 2025 (not 2024). Revised hardware reference: the prior '2x RTX 5090 = €20-40K' path is REFUTED because NVIDIA's consumer-GeForce EULA prohibits data-centre use and a GxP-validated appliance cannot ship with consumer cards; correct hardware reference is NVIDIA L40S or RTX PRO 6000 Blackwell (96GB, ~€8-12K, data-centre-licensed) in an OEM-validated 4U chassis with redundant PSU/IPMI/hot-swap/EU-CE — BOM €40-70K, sticker €100-150K. Comparable DGX Station A100 sticker is €91-137K turnkey. Hardware-inventory line item in capital plan increased from €150-250K to €250-400K to reflect realistic BOM. Corrected Hugging Face Inference Endpoints — VPC-attached managed cloud, not true on-prem; separate TGI/vLLM self-hosting is the real on-prem path. Llama 3.3 70B Q4 quant fits single A100 80GB but NVIDIA NIM recommends 2x80GB for production KV-cache headroom — note in roadmap. NVIDIA Run:ai acquisition closed Dec 2024 (announced Apr 2024). FDA Jan 2025 draft guidance confirmed. Veeva confirmed as multi-tenant-only with no on-prem variant. Aizon confirmed as Barcelona-HQ smart-mfg AI startup ~$30M raised.",
-    "whyNow": "Three converging factors. (1) Open-weight models (Llama 3.3 70B, Mistral Small 3.1, Qwen2.5 72B, gpt-oss 120B/20B — most released Dec 2024 through Aug 2025) crossed the 'good enough for narrow regulated tasks' threshold and run on a single NVIDIA L40S or RTX PRO 6000 Blackwell (96GB, ~€10K) in an OEM-validated chassis (BOM €40-70K — DIY whitebox is cheaper but not sellable as GxP-validated hardware; consumer RTX 5090 is excluded by NVIDIA's data-centre EULA). (2) EU AI Act Art. 6(3) self-classification pathway (effective Aug 2026) gives operators a legal route to deploy decision-support AI without high-risk conformity assessment — but only on validated software. (3) Cloud LLM providers (OpenAI, Anthropic) are still unwilling to sign GxP validation contracts at the model level, leaving a vacuum that on-prem inference appliances fill. Veeva and MasterControl will not enter this hardware category (breaks their multi-tenant model — Veeva is explicit that Vault is true multi-tenant with no on-premises version); horizontal hardware-AI players (Lambda Labs, NVIDIA post-Run:ai acquisition Apr 2024) do not have the GxP validation know-how.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-6",
-        "milestone": "MVP appliance built on Llama 3.3 70B (Q4_K_M quantization fits 80GB; NVIDIA NIM-recommended production headroom is closer to 2x80GB so size hardware accordingly) + Mistral Small 3.1 (24B) for batch record review; Tripoli HPAPI deployment as first design partner; pre-validated IQ/OQ/PQ pack drafted with USDM or PharmaLex; AI Act Art. 6(3) self-classification documentation completed; first external pilot LOI."
-      },
-      {
-        "timeframe": "Month 6-18",
-        "milestone": "5 units deployed across 3 EU pharma sites; expand use cases to deviation triage, root-cause analysis, gowning-video review; achieve <6-week customer validation lift; €0.5-1.2M ARR (incl. support); USDM/PharmaLex co-marketing partnership signed."
-      },
-      {
-        "timeframe": "Month 18-36",
-        "milestone": "30+ units deployed; €4-8M revenue (hardware + recurring); expand to hospital pharmacy (FDA Part 11 + HIPAA), defense (CMMC + ITAR-aware variant), and GAIA-X aligned EU sovereign-AI procurement. Aletheia GxP + VaultEdge bundle becomes the de-facto reference architecture for regulated-industry AI in Southern Europe."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "medium",
-      "estimatedSeedCapital": "€600K-€1.5M",
-      "capexRatio": "40% capex / 60% opex",
-      "note": "Hardware inventory (€250-400K for first 5-10 units at €40-70K BOM each, sized for OEM-validated chassis with data-centre-licensed GPU — not the €20-40K DIY whitebox path which is not GxP-sellable), validation pack development (€150K with USDM/PharmaLex partnership), 2 senior engineers with embedded/GAMP5 background (€240K), regulatory affairs advisor (€60K). Working capital tied up in hardware inventory is the main capital-intensity driver vs Aletheia GxP."
-    },
-    "competitors": [
-      {
-        "name": "NVIDIA DGX / DGX Station (post Run:ai acquisition)",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Turnkey GPU appliances (DGX Station A100 sticker ~€91-137K) but not GMP-validated, no GAMP5 pack, no Part 11 wrapper. NVIDIA acquired Run:ai Apr 2024 for ~$700M; potential channel partner not direct competitor."
-      },
-      {
-        "name": "Hugging Face Inference Endpoints",
-        "type": "startup",
-        "geography": "Global",
-        "note": "VPC-attached managed cloud on AWS/Azure/GCP — NOT true on-prem (true self-hosting requires separate TGI/vLLM deploy). No regulated-industry validation, no audit trail layer."
-      },
-      {
-        "name": "Lambda Labs",
-        "type": "startup",
-        "geography": "US/Global",
-        "note": "Private GPU-cloud and on-prem GPU servers since 2012; no GxP validation pack, hardware-only positioning."
-      },
-      {
-        "name": "Veeva Vault Validation + Vault Training",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Multi-tenant cloud SaaS by architecture; structurally cannot ship an air-gapped appliance without breaking their model. Strategic threat if they OEM a partner box — unlikely before 2028."
-      },
-      {
-        "name": "Aizon",
-        "type": "startup",
-        "geography": "Spain/EU",
-        "note": "Smart-manufacturing AI layered on OSIsoft PI / Werum PAS-X; cloud-deployed, not on-prem-validated."
-      },
-      {
-        "name": "AWS Outposts / Azure Stack Hub",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "On-prem cloud for sovereignty plays; still requires customer to assemble the GxP wrapper. Possible substrate for VaultEdge variant."
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 4,
-      "tlifeEdge": 5,
-      "competitiveGap": 4,
-      "capitalFit": 3,
-      "regulatoryRisk": 4,
-      "founderAvailability": 2,
-      "composite": 3.85
-    },
-    "ycRfsCorrelation": "YC wants on-device AI for regulated industries where data must stay local (#27 in the May-2026 list) and agent permissions/security/audit infrastructure (#18). VaultEdge is the GxP-pharma-first implementation, with Tripoli as design partner and natural bundle with Aletheia GxP — the SaaS+appliance pair becomes the regulated-industry-AI reference architecture for Southern Europe.",
-    "tlifeAssetRefs": [
-      "elpen",
-      "tripoli-hpapi",
-      "t-life-capital"
-    ],
-    "assertions": [
-      {
-        "id": "ve-a1",
-        "claim": "Llama 3.3 70B released by Meta on 6 December 2024",
-        "source": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      },
-      {
-        "id": "ve-a2",
-        "claim": "gpt-oss released by OpenAI on 5 August 2025 (120B + 20B parameter open-weight models, Apache 2.0)",
-        "source": "https://openai.com/index/introducing-gpt-oss/",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      },
-      {
-        "id": "ve-a3",
-        "claim": "NVIDIA consumer GeForce EULA prohibits use of GeForce cards in datacenters (excludes consumer RTX 5090 from validated GxP appliance BOM)",
-        "source": "https://www.nvidia.com/en-us/drivers/geforce-license/",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      },
-      {
-        "id": "ve-a4",
-        "claim": "EU AI Act Art. 6(3) self-classification path is available for AI systems performing narrow preparatory / decision-support tasks where humans retain control over regulated decisions",
-        "source": "https://artificialintelligenceact.eu/article/6/",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      },
-      {
-        "id": "ve-a5",
-        "claim": "Veeva Vault is true multi-tenant SaaS with no on-premises variant",
-        "source": "https://intuitionlabs.ai/articles/veeva-vault-cloud-content-management-platform-for-life-sciences",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      },
-      {
-        "id": "ve-a6",
-        "claim": "NVIDIA acquired Run:ai (announced April 2024, closed December 2024, reported ~$700M)",
-        "source": "https://techcrunch.com/2024/04/24/nvidia-acquires-ai-workload-management-startup-runai/",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      },
-      {
-        "id": "ve-a7",
-        "claim": "GxP-validated OEM appliance BOM with data-centre-licensed GPU (L40S or RTX PRO 6000 Blackwell) lands at €40-70K; DGX Station A100 reference sticker is €91-137K",
-        "source": "[ESTIMATE — build-up from L40S/RTX PRO 6000 ~€8-12K + 4U validated chassis ~€20-35K + redundancy/CE certification overhead]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16",
-        "note": "Get a real BOM quote from Supermicro or Dell EMC at Phase 0 week 2; the prior '€20-40K' figure was DIY-whitebox-only and not GxP-sellable."
-      },
-      {
-        "id": "ve-a8",
-        "claim": "FDA Jan 2025 Draft Guidance: 'Considerations for the Use of AI to Support Regulatory Decision-Making for Drug and Biological Products'",
-        "source": "https://www.federalregister.gov/documents/2025/01/07/2024-31542/considerations-for-the-use-of-artificial-intelligence-to-support-regulatory-decision-making-for-drug",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      }
-    ],
-    "killTests": [
-      {
-        "id": "ve-k1",
-        "hypothesis": "An open-weight 70B model on a single L40S can achieve ≥90% accuracy on Greek-language batch-record review for sterile manufacturing at ≥5 inferences/minute",
-        "experiment": "Acquire 1 L40S + chassis; fine-tune Llama 3.3 70B on 5 real Tripoli batch records (anonymised); benchmark accuracy vs QA-reviewer ground truth and throughput",
-        "costEur": 22000,
-        "durationWeeks": 6,
-        "killSignal": "<80% accuracy OR <2 inferences/minute under realistic prompt load",
-        "validateSignal": "≥90% accuracy AND ≥5 inferences/minute; QA reviewer ranks AI output as 'usable with minor edits'"
-      },
-      {
-        "id": "ve-k2",
-        "hypothesis": "Mid-size EU pharma QA directors will commit budget to a €100-150K capex appliance + €30-60K/yr support, rather than insisting on SaaS opex",
-        "experiment": "Pitch 5 mid-size EU pharma QA directors (Vianex, Pharmathen, Sopharma, Hemofarm, Krka-like) on the appliance economics; target signed LOI with budget approval mechanism",
-        "costEur": 4000,
-        "durationWeeks": 8,
-        "killSignal": "0/5 say 'we can budget within 12 months'; capex friction kills every conversation",
-        "validateSignal": "≥2/5 sign LOI with named-decision-maker timeline"
-      },
-      {
-        "id": "ve-k3",
-        "hypothesis": "USDM Life Sciences or PharmaLex can deliver a GAMP5 Cat 4/5 validation pack for VaultEdge in <6 months at <€200K",
-        "experiment": "Scoping engagement with both; request fixed-price proposal for IQ/OQ/PQ + Cat-5 AI engine validation + AI Act Art. 6(3) documentation",
-        "costEur": 10000,
-        "durationWeeks": 6,
-        "killSignal": "Both quote >€400K or >9 months",
-        "validateSignal": "At least one quotes <€200K AND <6 months"
-      }
-    ],
-    "preMortem": [
-      {
-        "cause": "Pharma buyers will not accept capex hardware sales — they want SaaS opex with no on-prem footprint; €100-150K capex is a non-starter for procurement",
-        "likelihood": "high",
-        "earlySignal": "Kill test ve-k2 results in weeks 6-8 — if 0/5 LOI, pivot to managed-on-prem SaaS pricing model"
-      },
-      {
-        "cause": "Open-weight model quality plateaus on free-text deviation analysis — Llama 3.3 70B / Mistral Small not good enough for the most valuable use case (root-cause inference)",
-        "likelihood": "medium",
-        "earlySignal": "Kill test ve-k1 results; also monitor gpt-oss 120B benchmarks on regulated-document tasks"
-      },
-      {
-        "cause": "Veeva ships an OEM partner appliance (e.g., Vault Edge via NVIDIA partnership) and absorbs the category before we hit critical mass",
-        "likelihood": "low",
-        "earlySignal": "Monitor Veeva R&D Day (Sept) keynotes; track Vault REST API release notes for on-prem hooks; LinkedIn job postings for 'Vault Edge' or on-prem PMs"
-      }
-    ],
-    "probabilityBands": {
-      "reaches1mArrBy18mo": 0.2,
-      "reaches10mArrBy36mo": 0.08,
-      "totalFailureBy36mo": 0.5,
-      "basisOfEstimate": "Hardware-anchored sales in regulated pharma have 9-15 month cycles (Aizon, Werum PAS-X benchmarks); €100-150K ACV requires VP-Quality budget approval, which is the friction surface where ve-k2 will likely fail. Bundling with Aletheia GxP (SaaS) materially de-risks GTM — the standalone band above is conservative because of capex pushback. If bundled, multiply success probabilities ~1.5×. Total failure band reflects ~50% probability that one of capex-budget-approval (ve-k2) or model-quality (ve-k1) kill tests fails outright."
-    },
-    "redTeamFindings": [
       {
         "date": "2026-05-16",
-        "verdict": "pass",
-        "dealKiller": "The appliance form-factor solves a problem the market has already solved differently. Veeva sole-tenant Frankfurt/Amsterdam, AWS Outposts, Azure Stack Hub, GCP Dedicated, and Aletheia GxP itself as single-tenant-in-customer-VPC all deliver the security and sovereignty outcome (Part 11 audit, EU residency, no multi-tenant blast radius) WITHOUT asking a VP-Quality to sign a €100-150K capex PO against a depreciating GPU. The appliance buys exactly one incremental thing: physical air-gap. But Annex 1 / Part 11 / EU AI Act Art. 6(3) do NOT require physical air-gap — they require validated software + audit trail + data-residency control, all of which a single-tenant cloud satisfies. The thesis is selling a hardware solution to a regulatory problem that is actually a software-validation problem. That is the classic 'appliance trap': 75%-failure-rate hardware economics on top of a problem already covered by 50%-failure-rate SaaS, with €250-400K of inventory working capital tied up while you find out.",
+        "verdict": "proceed-with-caveats",
+        "dealKiller": "(post-pivot) Epsilon Net / ENTERSOFTONE ship a competing AI layer with installed-base distribution advantage. Mitigation: design partner with 1 of them as channel rather than fight head-to-head — convert defensive risk into distribution.",
         "patternMatches": [
-          "Bigfinite / Aizon (Barcelona, ~$30M raised since 2014): pivoted from on-prem manufacturing-AI appliance toward cloud SaaS layered on OSIsoft PI / Werum PAS-X precisely because pharma capex cycles strangled the hardware motion. 12 years in, not a category winner — proves the GTM is exhausting.",
-          "Werum PAS-X edge / Körber smart-MES boxes: edge-compute MES boxes have repeatedly collapsed into the parent SaaS roadmap; 'edge' became a feature not a company. Same fate looms for VaultEdge inside Veeva/MasterControl.",
-          "Element AI / Petuum / generic enterprise-AI appliance plays (2017-2021): died of validation-cost and sales-cycle exhaustion (9-15 month cycles per the thesis's own basis-of-estimate), not model quality. VaultEdge inherits that exact cycle."
+          "Dext + IRIS: post-pivot Dext scaled accountant-channel to €100M+ ARR before acquisition.",
+          "Karbon: firm-ops platform reaching $40M+ ARR by 2023."
         ],
-        "unitEconomicsConcern": "200-FTE sterile site, Veeva/MasterControl SaaS = €12-30K/yr opex, signed at director level, no capex committee. VaultEdge = €100-150K capex + €30-60K/yr support = 5-yr TCO €250-450K vs SaaS €60-150K — 3-4× more expensive AND requires VP-Quality + Finance + IT sign-off (3 budget owners vs 1). Public evidence of €100K+ pharma-AI-hardware POs at mid-size EU pharma in 2024-25 is near-zero outside DGX research deployments at top-20 pharma. Thesis's own kill-test ve-k2 rates capex acceptance as high-likelihood failure.",
-        "loadBearingAssumption": "If Aletheia GxP died tomorrow, VaultEdge would still be a venture-scale company. The thesis effectively concedes this is false — probabilityBands.basisOfEstimate says 'multiply success probabilities ~1.5× if bundled.' Translation: standalone economics don't clear venture-scale. That is bundling-as-life-support, not bundling-as-strategy.",
-        "alternativeThesis": "Skip the box. Ship Aletheia GxP as single-tenant SaaS in customer-elected VPC (AWS Frankfurt / Azure Frankfurt / Azure Stack Hub), with the GAMP5 Cat 4 validation pack and Part 11 audit layer as the wedge. Same sovereignty story, same regulator-acceptable validation pack, zero inventory working capital, opex-line-item buying motion, SaaS multiples on exit. The €250-400K of capex-tied working capital redeploys into 2 more validation engineers and a USDM co-sell — which is where the actual moat lives."
+        "alternativeThesis": "(none — this IS the alt thesis being adopted)"
       }
     ]
   }
