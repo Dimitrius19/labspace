@@ -9,8 +9,9 @@ const BriefLibrary = lazy(() => import("./program/BriefLibrary").then((m) => ({ 
 const ApplicantFunnel = lazy(() => import("./program/ApplicantFunnel").then((m) => ({ default: m.ApplicantFunnel })));
 const MentorsRoster = lazy(() => import("./program/MentorsRoster").then((m) => ({ default: m.MentorsRoster })));
 const TeamsBoard = lazy(() => import("./program/TeamsBoard").then((m) => ({ default: m.TeamsBoard })));
+const JuryBoard = lazy(() => import("./program/JuryBoard").then((m) => ({ default: m.JuryBoard })));
 
-type SubTab = "overview" | "outreach" | "briefs" | "funnel" | "mentors" | "teams";
+type SubTab = "overview" | "outreach" | "briefs" | "funnel" | "mentors" | "teams" | "jury";
 
 const PHASE_STATUS_STYLE: Record<ProgramPhaseStatus, { dot: string; chip: string }> = {
   upcoming: { dot: "bg-slate-300", chip: "bg-slate-100 text-slate-600" },
@@ -45,6 +46,7 @@ export function TLifeOpenView() {
   const institutionsSigned = Object.values(overrides.outreach).filter((o) => o.status === "signed").length;
   const mentorsTracked = (overrides.mentors ?? []).length;
   const teamsTracked = (overrides.teams ?? []).length;
+  const juryEligible = (overrides.teams ?? []).filter((t) => t.status === "demo-day-qualified" || t.status === "studio-offered").length;
 
   return (
     <div className="flex h-full flex-col">
@@ -70,6 +72,7 @@ export function TLifeOpenView() {
             <TabBtn label="Funnel" badge={applicantsTracked > 0 ? String(applicantsTracked) : undefined} active={tab === "funnel"} onClick={() => setTab("funnel")} />
             <TabBtn label="Mentors" badge={mentorsTracked > 0 ? String(mentorsTracked) : undefined} active={tab === "mentors"} onClick={() => setTab("mentors")} />
             <TabBtn label="Teams" badge={teamsTracked > 0 ? String(teamsTracked) : undefined} active={tab === "teams"} onClick={() => setTab("teams")} />
+            <TabBtn label="Jury" badge={juryEligible > 0 ? String(juryEligible) : undefined} active={tab === "jury"} onClick={() => setTab("jury")} />
           </nav>
         </div>
       </header>
@@ -99,6 +102,11 @@ export function TLifeOpenView() {
         {tab === "teams" && (
           <Suspense fallback={<TabFallback />}>
             <TeamsBoard />
+          </Suspense>
+        )}
+        {tab === "jury" && (
+          <Suspense fallback={<TabFallback />}>
+            <JuryBoard />
           </Suspense>
         )}
       </div>
@@ -219,6 +227,37 @@ function OverviewTab() {
           {p0Open} P0 task{p0Open === 1 ? "" : "s"} open · {milestonesDone}/{program.milestones.length} milestones complete
         </div>
       </section>
+
+      {/* Phase advancement nudge */}
+      {(() => {
+        const activePhases = program.phases.filter((p) => p.status === "active");
+        const readyPhases = activePhases.filter((phase) => {
+          const phaseTasks = program.tasks.filter((t) => t.phaseId === phase.id);
+          const phaseMilestones = program.milestones.filter((m) => m.phaseId === phase.id);
+          const tasksAllDone = phaseTasks.length > 0 && phaseTasks.every((t) => t.done);
+          const milestonesAllDone = phaseMilestones.length === 0 || phaseMilestones.every((m) => m.done);
+          return tasksAllDone && milestonesAllDone;
+        });
+        if (readyPhases.length === 0) return null;
+        return (
+          <section className="rounded-xl border border-emerald-300 bg-emerald-50 p-4">
+            <div className="text-[11px] font-medium uppercase tracking-wider text-emerald-800">Ready to advance</div>
+            {readyPhases.map((phase) => (
+              <div key={phase.id} className="mt-2 flex items-center justify-between gap-3">
+                <div className="text-sm text-emerald-900">
+                  Phase {phase.number} <span className="font-semibold">{phase.title}</span> — all tasks and milestones complete.
+                </div>
+                <button
+                  onClick={() => setPhaseStatus(phase.id, "complete")}
+                  className="rounded-full bg-emerald-600 px-3 py-1 text-[11px] font-semibold text-white hover:bg-emerald-700"
+                >
+                  Mark complete →
+                </button>
+              </div>
+            ))}
+          </section>
+        );
+      })()}
 
       {/* Phases — clickable status */}
       <section>

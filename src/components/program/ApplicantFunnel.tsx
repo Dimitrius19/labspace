@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useProgram, type ApplicantStage, type ApplicantRole, type Applicant } from "../../hooks/useProgram";
+import { useProgram, applicantComposite, type ApplicantStage, type ApplicantRole, type Applicant } from "../../hooks/useProgram";
 import { ApplicantDetailModal } from "./ApplicantDetailModal";
 
 const STAGES: { key: ApplicantStage; label: string; accent: string }[] = [
@@ -177,7 +177,16 @@ export function ApplicantFunnel() {
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
         {STAGES.map((stage) => {
-          const stageApplicants = overrides.applicants.filter((a) => a.stage === stage.key);
+          const stageApplicants = overrides.applicants
+            .filter((a) => a.stage === stage.key)
+            .slice() // copy before sort
+            .sort((a, b) => {
+              const sa = overrides.applicantScores?.[a.id];
+              const sb = overrides.applicantScores?.[b.id];
+              const ca = sa ? applicantComposite(sa) : -1;
+              const cb = sb ? applicantComposite(sb) : -1;
+              return cb - ca;
+            });
           const target = TARGETS[stage.key];
           const pct = Math.min(100, Math.round((stageApplicants.length / target) * 100));
           return (
@@ -206,6 +215,7 @@ export function ApplicantFunnel() {
                     key={a.id}
                     applicant={a}
                     hasNote={!!overrides.applicantNotes[a.id]}
+                    composite={overrides.applicantScores?.[a.id] ? applicantComposite(overrides.applicantScores[a.id]) : null}
                     onAdvance={() => {
                       const idx = STAGES.findIndex((s) => s.key === a.stage);
                       if (idx < STAGES.length - 1) {
@@ -239,6 +249,7 @@ export function ApplicantFunnel() {
 function ApplicantCard({
   applicant,
   hasNote,
+  composite,
   onAdvance,
   onRetreat,
   onRemove,
@@ -248,6 +259,7 @@ function ApplicantCard({
 }: {
   applicant: Applicant;
   hasNote: boolean;
+  composite: number | null;
   onAdvance: () => void;
   onRetreat: () => void;
   onRemove: () => void;
@@ -256,6 +268,14 @@ function ApplicantCard({
   canRetreat: boolean;
 }) {
   const role = ROLES.find((r) => r.key === applicant.role)!;
+  const scoreClass =
+    composite === null
+      ? "bg-slate-100 text-slate-400"
+      : composite >= 4
+      ? "bg-emerald-100 text-emerald-800"
+      : composite >= 3
+      ? "bg-amber-100 text-amber-800"
+      : "bg-rose-100 text-rose-700";
   return (
     <div className="rounded-md border border-slate-200 bg-white px-2 py-1.5 shadow-sm">
       <button onClick={onOpen} className="block w-full text-left">
@@ -267,9 +287,14 @@ function ApplicantCard({
             </div>
             <div className="text-[10px] text-slate-500">{applicant.institution}</div>
           </div>
-          <span className={`flex-shrink-0 rounded-full px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wider ${role.chip}`}>
-            {role.label[0]}
-          </span>
+          <div className="flex flex-shrink-0 flex-col items-end gap-0.5">
+            <span className={`rounded-full px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wider ${role.chip}`}>
+              {role.label[0]}
+            </span>
+            <span className={`rounded px-1 py-0.5 text-[9px] font-bold ${scoreClass}`} title={composite === null ? "No score yet" : `Composite ${composite.toFixed(2)}/5`}>
+              {composite === null ? "—" : composite.toFixed(1)}
+            </span>
+          </div>
         </div>
       </button>
       <div className="mt-1.5 flex items-center justify-between text-[10px]">

@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { useProgram, type ApplicantStage, type ApplicantRole } from "../../hooks/useProgram";
+import { useProgram, applicantComposite, type ApplicantStage, type ApplicantRole, type ApplicantScore } from "../../hooks/useProgram";
+
+const SCORE_DIMS: { key: keyof ApplicantScore; label: string; help: string }[] = [
+  { key: "technical", label: "Technical / domain depth", help: "CV signal, breadth, depth of relevant work" },
+  { key: "motivation", label: "Motivation quality", help: "200-word answer quality, fit to thesis area" },
+  { key: "commitment", label: "Time commitment realism", help: "8-12 hrs/week feasibility given other load" },
+  { key: "diversity", label: "Diversity contribution", help: "Uni mix, role mix, gender mix, background variety" },
+];
 
 const STAGES: { key: ApplicantStage; label: string }[] = [
   { key: "applied", label: "Applied" },
@@ -13,9 +20,10 @@ const STAGES: { key: ApplicantStage; label: string }[] = [
 const ROLES: ApplicantRole[] = ["hacker", "hustler", "designer", "domain"];
 
 export function ApplicantDetailModal({ applicantId, onClose }: { applicantId: string; onClose: () => void }) {
-  const { overrides, setApplicantStage, setApplicantNote, removeApplicant } = useProgram();
+  const { overrides, setApplicantStage, setApplicantNote, setApplicantScore, removeApplicant } = useProgram();
   const applicant = overrides.applicants.find((a) => a.id === applicantId);
   const teamWithMember = (overrides.teams ?? []).find((t) => t.memberIds.includes(applicantId));
+  const score = overrides.applicantScores?.[applicantId];
   const [draft, setDraft] = useState<string>("");
 
   useEffect(() => {
@@ -103,16 +111,58 @@ export function ApplicantDetailModal({ applicantId, onClose }: { applicantId: st
           </section>
 
           <section>
+            <div className="flex items-baseline justify-between">
+              <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Scoring rubric</div>
+              {score && (
+                <div className="text-[11px] text-slate-500">
+                  Composite: <span className="font-bold text-slate-900">{applicantComposite(score).toFixed(2)}</span> / 5
+                </div>
+              )}
+            </div>
+            <div className="mt-2 space-y-2">
+              {SCORE_DIMS.map((dim) => {
+                const val = score?.[dim.key] ?? 0;
+                return (
+                  <div key={dim.key} className="flex items-center gap-3">
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xs font-medium text-slate-700">{dim.label}</div>
+                      <div className="text-[10px] text-slate-400">{dim.help}</div>
+                    </div>
+                    <div className="flex flex-shrink-0 gap-0.5">
+                      {[0, 1, 2, 3, 4, 5].map((n) => (
+                        <button
+                          key={n}
+                          onClick={() => setApplicantScore(applicantId, { [dim.key]: n })}
+                          className={`h-6 w-6 rounded text-[11px] font-semibold transition-colors ${
+                            val === n
+                              ? "bg-slate-900 text-white"
+                              : val >= n && n > 0
+                              ? "bg-violet-100 text-violet-700"
+                              : "bg-slate-100 text-slate-400 hover:bg-slate-200"
+                          }`}
+                          aria-label={`Set ${dim.label} to ${n}`}
+                        >
+                          {n}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          <section>
             <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Notes</div>
             <p className="mt-0.5 text-[11px] text-slate-400">
-              Use this for scoring rubric notes (technical 0–5, motivation 0–5, commitment 0–5, diversity 0–5) or any interview observations.
+              Interview observations, references, follow-ups.
             </p>
             <textarea
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               onBlur={saveNote}
               rows={8}
-              placeholder="tech: 4 / motivation: 5 / commitment: 4 / diversity: 4&#10;Strong portfolio. Interviewed Nov 12 — exceptional Go background, no React but very willing to learn."
+              placeholder="Strong portfolio. Interviewed Nov 12 — exceptional Go background, no React but very willing to learn. Referred by ThinkBiz NTUA chair."
               className="mt-2 w-full rounded-md border border-slate-200 px-3 py-2 font-mono text-xs"
             />
             <div className="mt-1 flex items-center justify-between text-[10px] text-slate-400">

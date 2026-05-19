@@ -150,6 +150,33 @@ export function TeamsBoard() {
   );
 }
 
+function rankMentorsForBrief(
+  mentors: Mentor[],
+  brief: { id: string; title: string; ycCategory: string } | null
+): { mentor: Mentor; matchScore: number }[] {
+  if (!brief) return mentors.map((m) => ({ mentor: m, matchScore: 0 }));
+  const ideaFull = ideas.find((i) => i.id === brief.id);
+  const haystack = [
+    brief.title.toLowerCase(),
+    brief.ycCategory.toLowerCase(),
+    ...(ideaFull?.tags ?? []).map((t) => t.toLowerCase()),
+  ];
+  const score = (mentor: Mentor): number => {
+    const tokens = mentor.specialty.toLowerCase().split(/[\s/,&·-]+/).filter(Boolean);
+    let s = 0;
+    for (const tok of tokens) {
+      if (tok.length < 3) continue;
+      for (const h of haystack) {
+        if (h.includes(tok)) s += 1;
+      }
+    }
+    return s;
+  };
+  return mentors
+    .map((m) => ({ mentor: m, matchScore: score(m) }))
+    .sort((a, b) => b.matchScore - a.matchScore);
+}
+
 function Stat({ label, value, sub }: { label: string; value: string; sub: string }) {
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-4">
@@ -326,14 +353,16 @@ function TeamCard(props: TeamCardProps) {
               }}
               className="mt-2 w-full rounded border border-slate-200 px-2 py-1 text-xs"
             >
-              <option value="">+ Assign mentor…</option>
-              {mentors
-                .filter((m) => !team.mentorIds.includes(m.id))
-                .map((m) => (
-                  <option key={m.id} value={m.id}>
-                    {m.name} ({m.kind === "advisor" ? "Advisor" : "SME"} · {m.specialty})
-                  </option>
-                ))}
+              <option value="">+ Assign mentor… (sorted by specialty match)</option>
+              {rankMentorsForBrief(
+                mentors.filter((m) => !team.mentorIds.includes(m.id)),
+                brief
+              ).map(({ mentor: m, matchScore }) => (
+                <option key={m.id} value={m.id}>
+                  {matchScore > 0 ? "★ " : ""}
+                  {m.name} ({m.kind === "advisor" ? "Advisor" : "SME"} · {m.specialty})
+                </option>
+              ))}
             </select>
           )}
         </div>

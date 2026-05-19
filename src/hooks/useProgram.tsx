@@ -85,6 +85,40 @@ export interface ActivityEntry {
 
 const ACTIVITY_CAP = 50;
 
+export interface ApplicantScore {
+  technical: number;
+  motivation: number;
+  commitment: number;
+  diversity: number;
+}
+
+export interface JuryVote {
+  id: string;
+  judgeName: string;
+  pathToLaunch: number;
+  technical: number;
+  commercial: number;
+  audience: number;
+  notes?: string;
+}
+
+// Path-to-launch is weighted 2x per the plan.
+const JURY_WEIGHTS = { pathToLaunch: 2, technical: 1, commercial: 1, audience: 1 } as const;
+
+export function juryWeightedScore(v: JuryVote): number {
+  const total =
+    v.pathToLaunch * JURY_WEIGHTS.pathToLaunch +
+    v.technical * JURY_WEIGHTS.technical +
+    v.commercial * JURY_WEIGHTS.commercial +
+    v.audience * JURY_WEIGHTS.audience;
+  const denom = JURY_WEIGHTS.pathToLaunch + JURY_WEIGHTS.technical + JURY_WEIGHTS.commercial + JURY_WEIGHTS.audience;
+  return total / denom; // 0-5
+}
+
+export function applicantComposite(s: ApplicantScore): number {
+  return (s.technical + s.motivation + s.commitment + s.diversity) / 4;
+}
+
 export interface ProgramOverrides {
   taskDone: Record<string, boolean>;
   milestoneDone: Record<string, boolean>;
@@ -97,6 +131,8 @@ export interface ProgramOverrides {
   teams: Team[];
   activity: ActivityEntry[];
   applicantNotes: Record<string, string>;
+  applicantScores: Record<string, ApplicantScore>;
+  juryVotes: Record<string, JuryVote[]>;
   updatedAt: string;
 }
 
@@ -112,6 +148,8 @@ const DEFAULT_OVERRIDES: ProgramOverrides = {
   teams: [],
   activity: [],
   applicantNotes: {},
+  applicantScores: {},
+  juryVotes: {},
   updatedAt: "",
 };
 
@@ -128,6 +166,8 @@ function ensureDefaults(raw: Partial<ProgramOverrides>): ProgramOverrides {
     teams: raw.teams ?? [],
     activity: raw.activity ?? [],
     applicantNotes: raw.applicantNotes ?? {},
+    applicantScores: raw.applicantScores ?? {},
+    juryVotes: raw.juryVotes ?? {},
     updatedAt: raw.updatedAt ?? "",
   };
 }
@@ -181,6 +221,7 @@ interface UseProgramReturn {
   addApplicantsBulk: (applicants: Omit<Applicant, "id">[]) => void;
   setApplicantStage: (applicantId: string, stage: ApplicantStage) => void;
   setApplicantNote: (applicantId: string, note: string) => void;
+  setApplicantScore: (applicantId: string, score: Partial<ApplicantScore>) => void;
   removeApplicant: (applicantId: string) => void;
   // mentors
   addMentor: (m: Omit<Mentor, "id">) => void;
@@ -195,6 +236,9 @@ interface UseProgramReturn {
   unassignMember: (teamId: string, applicantId: string) => void;
   assignMentorToTeam: (teamId: string, mentorId: string) => void;
   unassignMentorFromTeam: (teamId: string, mentorId: string) => void;
+  addJuryVote: (teamId: string, vote: Omit<JuryVote, "id">) => void;
+  updateJuryVote: (teamId: string, voteId: string, patch: Partial<JuryVote>) => void;
+  removeJuryVote: (teamId: string, voteId: string) => void;
   clearActivity: () => void;
   reset: () => void;
 }
@@ -448,6 +492,29 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     [setOverrides]
   );
 
+  const setApplicantScore = useCallback(
+    (applicantId: string, patch: Partial<ApplicantScore>) => {
+      setOverrides((prev) => {
+        const existing = prev.applicantScores[applicantId] ?? { technical: 0, motivation: 0, commitment: 0, diversity: 0 };
+        const next: ApplicantScore = { ...existing, ...patch };
+        // Clamp 0-5
+        const clamp = (n: number) => Math.max(0, Math.min(5, Math.round(n)));
+        const cleaned: ApplicantScore = {
+          technical: clamp(next.technical),
+          motivation: clamp(next.motivation),
+          commitment: clamp(next.commitment),
+          diversity: clamp(next.diversity),
+        };
+        return {
+          ...prev,
+          applicantScores: { ...prev.applicantScores, [applicantId]: cleaned },
+          updatedAt: stamp(),
+        };
+      });
+    },
+    [setOverrides]
+  );
+
   const removeApplicant = useCallback(
     (applicantId: string) => {
       setOverrides((prev) => ({
@@ -628,6 +695,53 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     [setOverrides]
   );
 
+  const addJuryVote = useCallback(
+    (teamId: string, vote: Omit<JuryVote, "id">) => {
+      setOverrides((prev) => {
+        const team = (prev.teams ?? []).find((t) => t.id === teamId);
+        const newVote: JuryVote = { ...vote, id: genId("v") };
+        return {
+          ...prev,
+          juryVotes: {
+            ...prev.juryVotes,
+            [teamId]: [...(prev.juryVotes[teamId] ?? []), newVote],
+          },
+          activity: pushActivity(prev, "jury-vote", `+ vote from ${vote.judgeName} for ${team?.name ?? teamId}`),
+          updatedAt: stamp(),
+        };
+      });
+    },
+    [setOverrides]
+  );
+
+  const updateJuryVote = useCallback(
+    (teamId: string, voteId: string, patch: Partial<JuryVote>) => {
+      setOverrides((prev) => ({
+        ...prev,
+        juryVotes: {
+          ...prev.juryVotes,
+          [teamId]: (prev.juryVotes[teamId] ?? []).map((v) => (v.id === voteId ? { ...v, ...patch } : v)),
+        },
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
+  const removeJuryVote = useCallback(
+    (teamId: string, voteId: string) => {
+      setOverrides((prev) => ({
+        ...prev,
+        juryVotes: {
+          ...prev.juryVotes,
+          [teamId]: (prev.juryVotes[teamId] ?? []).filter((v) => v.id !== voteId),
+        },
+        updatedAt: stamp(),
+      }));
+    },
+    [setOverrides]
+  );
+
   const clearActivity = useCallback(() => {
     setOverrides((prev) => ({ ...prev, activity: [], updatedAt: stamp() }));
   }, [setOverrides]);
@@ -654,6 +768,7 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     addApplicantsBulk,
     setApplicantStage,
     setApplicantNote,
+    setApplicantScore,
     removeApplicant,
     addMentor,
     updateMentor,
@@ -666,6 +781,9 @@ export function ProgramProvider({ children }: { children: ReactNode }) {
     unassignMember,
     assignMentorToTeam,
     unassignMentorFromTeam,
+    addJuryVote,
+    updateJuryVote,
+    removeJuryVote,
     clearActivity,
     reset,
   };
