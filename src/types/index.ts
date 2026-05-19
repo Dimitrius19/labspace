@@ -94,6 +94,18 @@ export interface ProbabilityBands {
   basisOfEstimate: string;         // 1-3 sentences anchoring the numbers to base rates
 }
 
+export type RedTeamVerdict = "pass" | "revise" | "proceed-with-caveats" | "proceed";
+
+export interface RedTeamFinding {
+  date: string;                         // YYYY-MM-DD
+  verdict: RedTeamVerdict;
+  dealKiller: string;                   // the single strongest argument to kill
+  patternMatches: string[];             // 2-4 named precedents from adjacent failures
+  unitEconomicsConcern?: string;        // 1-3 sentences on margin/CAC/cap-table reality
+  loadBearingAssumption?: string;       // the assumption NOT in `assertions` that has to hold
+  alternativeThesis: string;            // a stronger reframe of the same opportunity
+}
+
 export interface Idea {
   id: string;
   title: string;
@@ -123,6 +135,7 @@ export interface Idea {
   preMortem?: FailureMode[];
   probabilityBands?: ProbabilityBands;
   tlifeAssetRefs?: string[]; // ids from tlifeAssets.ts
+  redTeamFindings?: RedTeamFinding[];
 }
 
 export interface LocalOverrides {
