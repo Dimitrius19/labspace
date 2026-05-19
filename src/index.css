@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+/* Print-friendly memo export. Trigger via Cmd-P / Ctrl-P from any open idea panel.
+   Renders just the memo content; hides app chrome, editable widgets, and the
+   legacy scorecard. */
+@media print {
+  body {
+    background: white !important;
+  }
+  /* Hide everything except the memo content tree */
+  body * {
+    visibility: hidden;
+  }
+  [data-memo-content], [data-memo-content] * {
+    visibility: visible;
+  }
+  [data-memo-content] {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+  /* Hide editable / interactive widgets inside memo */
+  [data-memo-hide] {
+    display: none !important;
+  }
+  /* Strip pastel backgrounds for ink economy */
+  .bg-rose-50,
+  .bg-rose-50\/40,
+  .bg-emerald-50,
+  .bg-blue-50,
+  .bg-blue-50\/50,
+  .bg-violet-50,
+  .bg-amber-50,
+  .bg-slate-50,
+  .bg-slate-100,
+  .bg-indigo-50 {
+    background: white !important;
+  }
+  /* Ensure borders are visible in print */
+  .border-rose-200,
+  .border-blue-100,
+  .border-blue-200,
+  .border-slate-100,
+  .border-slate-200 {
+    border-color: #999 !important;
+  }
+  @page {
+    size: A4;
+    margin: 0.6in;
+  }
+}

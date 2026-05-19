@@ -231,7 +231,7 @@ export const ideas: Idea[] = [
       "eu-ohs"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 2 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "Greece's new Construction Safety Presidential Decree (PD 128/2023) mandates site-specific safety inductions and documented competency records for all workers, including undocumented migrants, creating an immediate compliance liability for contractors. EU AI Act classification of safety coaching tools as limited-risk (not high-risk) means no conformity assessment is required, lowering regulatory barriers to launch. The Greek construction boom driven by €35B NSRF 2021-2027 funds is creating acute skilled labor shortages that push migrant workers into roles without adequate training.",
     "roadToMoat": [
       {
@@ -295,17 +295,19 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "sf-a1",
-        "claim": "Greek Presidential Decree PD 128/2023 created enhanced construction safety obligations",
+        "claim": "Greek Presidential Decree PD 128/2023 — UNVERIFIED; not located in Greek Government Gazette / legal databases (kodiko.gr, taxheaven.gr)",
         "source": "[UNVERIFIED]",
         "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "lastChecked": "2026-05-16",
+        "note": "MATERIAL: prior thesis named PD 128/2023 as 'why now' regulatory tailwind. Citation could not be verified; might be wrong number or non-existent. Re-verify against et.gr Government Gazette before any external memo."
       },
       {
         "id": "sf-a2",
-        "claim": "EU NSRF allocates €26B to Greek construction over 2021-27",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "EU NSRF 2021-27 total budget €26.2B (€20.9B EU + €5.3B national) across ALL sectors; construction-specific allocation is a subset (transport gets ~15.3% = ~€4B), not the full €26B",
+        "source": "https://espa.io/en/new-nsrf-2021-27-whats-new-resources-of-26-billion-euros-2/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior thesis implied €26B all for construction; corrected to total NSRF across sectors."
       },
       {
         "id": "sf-a3",
@@ -420,7 +422,7 @@ export const ideas: Idea[] = [
       "compliance"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nFold-in (2026-05-16): procurement-ghost-detector (Phantomcheck) — ghost-contractor and bid-rigging detection — had the same institutional buyer (Hellenic Court of Auditors / EPPO) as OLAFTrace with weaker tlifeEdge. Portfolio red-team verdict: fold as a second module in OLAFTrace rather than run a parallel sales motion. Procurement-fraud detection is now feature #2 of OLAFTrace.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nFold-in (2026-05-16): procurement-ghost-detector (Phantomcheck) — ghost-contractor and bid-rigging detection — had the same institutional buyer (Hellenic Court of Auditors / EPPO) as OLAFTrace with weaker tlifeEdge. Portfolio red-team verdict: fold as a second module in OLAFTrace rather than run a parallel sales motion. Procurement-fraud detection is now feature #2 of OLAFTrace.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 2 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "The European Public Prosecutor's Office (EPPO) became fully operational across 22 member states in 2023-2024 and opened 1,900+ investigations in its first two years, creating massive demand for corporate structure tracing tools that can map beneficial ownership across multiple EU member state registries. Greece's new Anti-Money Laundering Authority (AMLA, Law 5042/2023) mandated that all legal entities register ultimate beneficial owners in the Central UBO Register with machine-readable APIs by mid-2024. The EU's 6th Anti-Money Laundering Directive (2024) requires cross-border beneficial ownership verification that currently takes auditors 40-80 hours per entity to complete manually across fragmented national registries.",
     "roadToMoat": [
       {
@@ -483,10 +485,11 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "ot-a1",
-        "claim": "EU structural funds total €380B over 2021-27 programming period",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "EU Cohesion Policy 2021-27: €392B current prices (€330B 2018 prices); €380B was not an accurate EC figure",
+        "source": "https://ec.europa.eu/regional_policy/funding/available-budget_en",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior €380B refuted; correct figure €392B (current) or €330B (2018 prices)."
       },
       {
         "id": "ot-a2",
@@ -504,9 +507,9 @@ export const ideas: Idea[] = [
       },
       {
         "id": "ot-a4",
-        "claim": "Sayari, Kharon, Refinitiv World-Check are adjacent corporate-intelligence vendors but US-private-sector focused",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "Sayari raised $40M Series C 2021 (subsequent rounds expanding); Kharon is established sanctions/CFIUS intel vendor; Refinitiv World-Check is LSEG-owned legacy screening database",
+        "source": "https://sayari.com/resources/sayari-labs-secures-40m-series-c/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
@@ -615,7 +618,7 @@ export const ideas: Idea[] = [
       "transfer-of-value"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 2 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "EFPIA's updated Disclosure Code (2024 revision) expanded transfer-of-value reporting to include digital interactions, virtual advisory boards, and indirect payments through medical education providers — tripling the volume of reportable transactions for mid-sized pharma companies. Greece's IFET enforcement actions increased 300% between 2022-2024, with fines reaching €500K+ per violation, transforming HCP transparency from a compliance exercise to a financial risk management priority. AI anomaly detection on financial transaction patterns only became practical for pharma-scale datasets (50K+ annual HCP interactions) with the cost reductions in embedding models and vector databases in 2024.",
     "roadToMoat": [
       {
@@ -680,16 +683,16 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "se-a1",
-        "claim": "EFPIA Disclosure Code mandates HCP transfer-of-value transparency across 33 European countries",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "EFPIA Disclosure Code covers 33 European countries (Austria through Ukraine including UK, Turkey, Russia, Serbia)",
+        "source": "https://www.efpia.eu/media/25837/efpia-disclosure-code.pdf",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "se-a2",
-        "claim": "Greek Law 4316/2014 and national variants enforce anti-kickback rules for HCP interactions",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "Greek Law 4316/2014 Article 66 prohibits HCP gifts >€15 (incl. VAT); mandates ToV disclosure via EOF website within 6 months of calendar year-end",
+        "source": "https://iclg.com/practice-areas/pharmaceutical-advertising-laws-and-regulations/greece",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
@@ -805,7 +808,7 @@ export const ideas: Idea[] = [
       "financial-crime"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 3 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "EU sanctions enforcement expanded dramatically in 2024 with the 14th sanctions package targeting Russian oil shipping through Greek-managed fleets, creating urgent demand for AIS dark-voyage reconstruction tools from Hellenic Coast Guard and EU Naval Force operations. The UK's Office of Financial Sanctions Implementation (OFSI) and US OFAC both introduced secondary sanctions enforcement against ship management companies in 2024, making sanctions compliance an existential risk for Greek shipowners (who manage 60%+ of EU-flagged tonnage). Satellite AIS data providers (Spire, exactEarth) opened commercial APIs in 2024 with historical data going back to 2019, enabling dark-voyage reconstruction that was previously only available to military intelligence agencies.",
     "roadToMoat": [
       {
@@ -868,16 +871,16 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "vv-a1",
-        "claim": "EU 14th Russia sanctions package added personal liability for EU ship managers facilitating sanction circumvention",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "EU Council Regulation 2024/1745 (24 Jun 2024, 14th sanctions package) expanded Article 12 anti-circumvention to cover 'knowingly and intentionally' + 'aware...and accepting that possibility' — captures ship managers and other facilitators, not exclusively ship-manager-targeted but materially expands personal exposure",
+        "source": "https://www.consilium.europa.eu/en/press/press-releases/2024/06/24/14th-package-of-sanctions-on-russia-s-war-of-aggression-against-ukraine-eu-lists-additional-69-individuals-and-47-entities/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "vv-a2",
-        "claim": "AIS dark-voyage detection methodology proven by Windward, Pole Star, Spire",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "AIS dark-voyage detection methodology proven by Windward, Pole Star (dark vessel detection + AIS spoofing typologies), Spire",
+        "source": "https://www.polestarglobal.com/use-cases/dark-vessel-detection/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
@@ -896,10 +899,11 @@ export const ideas: Idea[] = [
       },
       {
         "id": "vv-a5",
-        "claim": "Windward valued at $200M+ as public company; primary competitor in compliance space (not prosecution)",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "claim": "Windward: AIM IPO Dec 2021 at £126.5M (~$167M); March 2025 mkt cap ~$231M; FTV Capital ~$270M acquisition + delisting 2025",
+        "source": "https://www.calcalistech.com/ctechnews/article/sy311ob00hyl",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Windward is being delisted under FTV Capital ownership — public-company framing now outdated."
       }
     ],
     "killTests": [
@@ -994,7 +998,7 @@ export const ideas: Idea[] = [
       "age-inclusive-work"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 1 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "Law 5039/2023 introduced a new mandatory licensing and quality accreditation framework for KIFI (Closed Care Facilities for the Elderly) and home care providers, with inspections scheduled to begin systematically in 2025-2026 by the new EODY-adjacent inspection body. EOPYY's reimbursement reform is shifting from input-based (bed-days) to outcome-based payments by 2026, requiring providers to document care quality metrics they have never tracked before. Greek elder care remains highly fragmented (1,200+ small KIFI operators) with no existing compliance software infrastructure, creating a greenfield SaaS opportunity.",
     "roadToMoat": [
       {
@@ -1058,10 +1062,11 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "cc-a1",
-        "claim": "Greek Law 5039/2023 created enhanced elder-care provider compliance regime",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "claim": "Greek elder-care regulatory framework — pending re-citation against actual elder-care statute; Law 5039/2023 (FEK A' 83/2023) is the Tempi rail-disaster + transport law, NOT elder-care",
+        "source": "[REFUTED — citation wrong]",
+        "status": "refuted",
+        "lastChecked": "2026-05-16",
+        "note": "MATERIAL ERROR. Need to identify correct Greek elder-care statute (likely KEDASY-related Law 4837/2021 or successor). Until verified, the thesis 'why now' regulatory tailwind is unsupported."
       },
       {
         "id": "cc-a2",
@@ -1370,7 +1375,7 @@ export const ideas: Idea[] = [
       "ai-copilot"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 1 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "EMA's DARWIN EU real-world evidence platform (fully operational 2024) and the EU HTA Joint Clinical Assessment (mandatory January 2025) created new data sources and regulatory requirements that pharma launch teams must synthesize — but no existing tool combines regulatory intelligence, payer landscape data, and physician interview analysis for Southern/Eastern European markets. Greece's EOPYY reimbursement committee digitized its decision archive in 2024, making 10 years of pricing and access decisions machine-readable. LLM-based competitive prescribing pattern analysis from IQVIA and local pharmacy data became viable in 2024, enabling launch intelligence that previously required 3-person analytics teams working 6+ months per launch.",
     "roadToMoat": [
       {
@@ -1457,11 +1462,11 @@ export const ideas: Idea[] = [
       },
       {
         "id": "lb-a4",
-        "claim": "AXIOM / Komodo Health reached ~€100M+ ARR in the US with launch-intelligence + RWE shape",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
+        "claim": "Komodo Health reached ~$200M revenue in 2024 (>$100M+ original claim was conservative)",
+        "source": "https://getlatka.com/companies/komodo-health",
+        "status": "confirmed",
         "lastChecked": "2026-05-16",
-        "note": "Verify pre external memo."
+        "note": "Understated; revised upward."
       },
       {
         "id": "lb-a5",
@@ -1562,7 +1567,7 @@ export const ideas: Idea[] = [
       "b2b"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nFold-in (2026-05-16): pharmareg-ai (PharmaReg.ai) was an EOF/EMA-dossier AI co-pilot framed as a tool. Portfolio red-team verdict: tool-form loses to agency-form on liability transfer; folded into RegulaFlow. Bring the EOF/EMA submission IP and dossier templates into the RegulaFlow service catalog.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nFold-in (2026-05-16): pharmareg-ai (PharmaReg.ai) was an EOF/EMA-dossier AI co-pilot framed as a tool. Portfolio red-team verdict: tool-form loses to agency-form on liability transfer; folded into RegulaFlow. Bring the EOF/EMA submission IP and dossier templates into the RegulaFlow service catalog.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 2 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "EMA's rolling review process and the EU Falsified Medicines Directive expansion have created a documentation tsunami that legacy CROs cannot absorb at current headcount. LLM fine-tuning on CTD Module 2-4 structures reached production quality in late 2024, making AI-assisted dossier compilation genuinely reliable. The Greek EOPH digitization mandate (2025) opened a structured data pipeline that did not exist two years ago.",
     "roadToMoat": [
       {
@@ -1627,17 +1632,19 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "rf-a1",
-        "claim": "EMA centralized procedure dossier prep typically costs €80-200K per submission via traditional CROs",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "EMA MAA agency fees alone €172.8K-€865.2K (2024 EMA fee schedule); traditional CRO dossier-prep services add €80-200K for compilation/eCTD publishing only, excluding clinical/CMC writing",
+        "source": "https://www.ema.europa.eu/en/about-us/fees-payable-european-medicines-agency",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior figure was partial-scope only; clarified."
       },
       {
         "id": "rf-a2",
-        "claim": "EU GMP variation submission volume ~10K+ per year across member states",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "EU GMP variation submission volume ~20-30K+ per year across national + centralized procedures (Medicines for Europe 2019); prior '10K+' was conservative floor",
+        "source": "https://www.medicinesforeurope.com/wp-content/uploads/2020/01/ESE_2019_Medicine-for-Europe_AESGP_Variation_WEB.pdf",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Understated; corrected upward."
       },
       {
         "id": "rf-a3",
@@ -1760,7 +1767,7 @@ export const ideas: Idea[] = [
       "piraeus"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 3 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "Baltic Exchange digitized fixture reporting in 2024, making structured real-time freight rate data programmatically accessible for the first time at scale. LLM-based contract parsing can now extract key commercial terms from CP recaps with >95% accuracy, collapsing fixture turnaround from hours to minutes. Post-Red Sea rerouting volatility has made shipowners and charterers acutely aware that human-speed negotiation leaves significant freight arbitrage on the table.",
     "roadToMoat": [
       {
@@ -1823,23 +1830,24 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "vd-a1",
-        "claim": "Global maritime chartering involves $200B+ in fixture value annually",
-        "source": "[ESTIMATE — BIMCO / Clarksons data]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "Global maritime chartering fixture value annually — UNCLEAR; no public BIMCO/Clarksons aggregate; Veson cites $25B managed via IMOS as a partial reference",
+        "source": "https://veson.com/learn-commercial-maritime-software/",
+        "status": "unverified",
+        "lastChecked": "2026-05-16",
+        "note": "Prior $200B+ figure not publicly attributable; treat as estimate."
       },
       {
         "id": "vd-a2",
-        "claim": "Standard chartering broker commission is 1.25% of fixture value (BIMCO norm)",
-        "source": "[UNVERIFIED — BIMCO standard, widely cited]",
-        "status": "unverified",
+        "claim": "Standard chartering broker commission 1.25% is industry custom embedded in NYPE/Shelltime forms, not formally a BIMCO standard (BIMCO publishes the contracts; the rate is customary)",
+        "source": "https://www.handybulk.com/shipbrokers-commission/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "vd-a3",
-        "claim": "Veson Nautical (IMOS/Veslink) is the dominant chartering-software incumbent",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "Veson Nautical (IMOS) is the industry-standard chartering-software incumbent since 2003: 21K+ users, 200+ orgs, 50K voyages, $25B trade managed",
+        "source": "https://veson.com/products/imos/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
@@ -1948,7 +1956,7 @@ export const ideas: Idea[] = [
       "developer-infra"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 1 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "EU AI Act Article 10 (effective August 2025) mandates that AI systems used in healthcare demonstrate training data governance, traceability, and bias documentation — pharma companies that want to deploy LLMs internally must now prove their training data pipelines are compliant, creating demand for regulation-aware data preparation tools. GxP data integrity requirements (ALCOA+ principles under EU GMP Annex 11) were never designed for LLM training workflows, creating a compliance gap that no existing MLOps platform addresses. Fine-tuning costs dropped 90% between 2023-2025 (LoRA, QLoRA), making domain-specific LLM training economically viable for mid-sized pharma companies for the first time.",
     "roadToMoat": [
       {
@@ -2033,9 +2041,9 @@ export const ideas: Idea[] = [
       },
       {
         "id": "pf-a4",
-        "claim": "Scale AI, Datology AI, HuggingFace are horizontal training-data platform incumbents",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "Scale AI ~$29B valuation with $870M 2024 revenue (Bloomberg); DatologyAI $46M Series A May 2024; HuggingFace ~$4.5B valuation",
+        "source": "https://en.wikipedia.org/wiki/Scale_AI",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
@@ -2138,7 +2146,7 @@ export const ideas: Idea[] = [
       "piraeus"
     ],
     "addedDate": "2026-04-01",
-    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 2 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "The maritime industry generates 5-10TB of unstructured text annually per large shipping company (charter parties, bills of lading, PSC reports, MARPOL logs), but no pre-trained LLM understands maritime domain language — general models hallucinate on BIMCO clause references, confuse vessel classification terminology, and cannot parse charterparty recaps accurately. Maritime data privacy requirements (flag state regulations, commercial confidentiality of fixture details) prevent shipping companies from using cloud-hosted general LLMs, creating demand for on-premise or sovereign-cloud fine-tuned models. The cost of fine-tuning a domain-specific LLM dropped below $10K in 2024 (from $500K+ in 2022), making it viable for a platform to offer maritime LLM training as a service rather than requiring each shipping company to build in-house AI teams.",
     "roadToMoat": [
       {
@@ -2201,17 +2209,18 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "po-a1",
-        "claim": "BIMCO clauselib and standard CP forms (NYPE, Shelltime, BPVOY) are the foundational maritime contract corpus",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "BIMCO clauselib + standard CP forms (NYPE 2015, Shelltime 4, BPVOY voyage forms) are the foundational maritime contract corpus; BIMCO maintains the clause library",
+        "source": "https://www.bimco.org/contractual-affairs/bimco-clauses/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "po-a2",
-        "claim": "Veson, Danaos, AMOS, ShipManager are tier-1 maritime SaaS targets for embedded inference",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "claim": "Veson (IMOS), Danaos, AMOS (now SpecTec/Kongsberg/IFS lineage), DNV ShipManager are tier-1 maritime SaaS",
+        "source": "https://dmc.danaos-projects.com/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "AMOS ownership corrected to SpecTec/Kongsberg/IFS lineage; ShipManager is DNV branded."
       },
       {
         "id": "po-a3",
@@ -2332,7 +2341,7 @@ export const ideas: Idea[] = [
       "elpen"
     ],
     "addedDate": "2026-05-03",
-    "notes": "Phase 0 underwritten: 16-week, €150K budget, modeled on PawDesk template. Go criteria at Week 16: (1) 1 external paying pilot signed €20-50K, (2) Tripoli operational with live data, (3) 3+ pipeline opportunities at term-sheet stage, (4) single-tenant deploy time <6 weeks demonstrable, (5) first-pass GAMP5 categorization completed (Cat 4 platform, Cat 5 AI engine). Top three monitoring signals: Veeva R&D Day for Vault Skills/Vault Competency announcements; HealthStream pharma extension (~30% probability); /skills/ /competencies/ in Vault REST API release notes. Defensibility window vs Veeva: 36-48 months.\n\nValidation log (2026-05-03): Corrected MasterControl ownership (Sixth Street Growth Dec 2022 $1.3B, NOT Hellman & Friedman 2020). Corrected Workera Series B (Mar 2023 led by Jump Capital, NOT Oct 2022 Owl Ventures). Removed Aizon-Insight Partners precedent claim (Aizon investors are Atlantic Bridge / Honeywell Ventures / NewVale; Insight is not on cap table). Sparta acquisition announced 22 Dec 2020 (not Jan 2021), seller New Mountain Capital, $1.3B confirmed. FDA 2023 publication is a CDER discussion paper, not draft guidance (formal AI draft guidance came 2025). Aenova ownership now Kühne Holding (family vehicle), not BC Partners. Annex 1 section numbers (§7.4-7.7, §7.13-7.14, §9.33-9.42) directionally consistent but exact citations require cross-check against EUR-Lex PDF before any external memo. ICH Q10 §2.4 (Resource Management) directionally correct but exact wording unverified. EdCast 2022 acquisition price ($380M) was undisclosed — figure removed from competitor entry trail.\n\nDecision log (2026-05-16): The companion on-device appliance concept (VaultEdge / on-device-gxp-inference) was red-team-reviewed and returned PASS. Conclusion: ship Aletheia GxP exclusively as single-tenant SaaS in customer-elected VPC. The appliance form-factor buys exactly one incremental thing — physical air-gap — but Annex 1 / Part 11 / EU AI Act Art. 6(3) do not require air-gap, they require validated software + audit trail + data-residency control, all of which single-tenant cloud satisfies. €250-400K of avoided hardware working capital redeploys into 2 more validation engineers and a USDM co-sell. VaultEdge entry decommissioned from catalog.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.",
+    "notes": "Phase 0 underwritten: 16-week, €150K budget, modeled on PawDesk template. Go criteria at Week 16: (1) 1 external paying pilot signed €20-50K, (2) Tripoli operational with live data, (3) 3+ pipeline opportunities at term-sheet stage, (4) single-tenant deploy time <6 weeks demonstrable, (5) first-pass GAMP5 categorization completed (Cat 4 platform, Cat 5 AI engine). Top three monitoring signals: Veeva R&D Day for Vault Skills/Vault Competency announcements; HealthStream pharma extension (~30% probability); /skills/ /competencies/ in Vault REST API release notes. Defensibility window vs Veeva: 36-48 months.\n\nValidation log (2026-05-03): Corrected MasterControl ownership (Sixth Street Growth Dec 2022 $1.3B, NOT Hellman & Friedman 2020). Corrected Workera Series B (Mar 2023 led by Jump Capital, NOT Oct 2022 Owl Ventures). Removed Aizon-Insight Partners precedent claim (Aizon investors are Atlantic Bridge / Honeywell Ventures / NewVale; Insight is not on cap table). Sparta acquisition announced 22 Dec 2020 (not Jan 2021), seller New Mountain Capital, $1.3B confirmed. FDA 2023 publication is a CDER discussion paper, not draft guidance (formal AI draft guidance came 2025). Aenova ownership now Kühne Holding (family vehicle), not BC Partners. Annex 1 section numbers (§7.4-7.7, §7.13-7.14, §9.33-9.42) directionally consistent but exact citations require cross-check against EUR-Lex PDF before any external memo. ICH Q10 §2.4 (Resource Management) directionally correct but exact wording unverified. EdCast 2022 acquisition price ($380M) was undisclosed — figure removed from competitor entry trail.\n\nDecision log (2026-05-16): The companion on-device appliance concept (VaultEdge / on-device-gxp-inference) was red-team-reviewed and returned PASS. Conclusion: ship Aletheia GxP exclusively as single-tenant SaaS in customer-elected VPC. The appliance form-factor buys exactly one incremental thing — physical air-gap — but Annex 1 / Part 11 / EU AI Act Art. 6(3) do not require air-gap, they require validated software + audit trail + data-residency control, all of which single-tenant cloud satisfies. €250-400K of avoided hardware working capital redeploys into 2 more validation engineers and a USDM co-sell. VaultEdge entry decommissioned from catalog.\n\nPortfolio decision-log (2026-05-16): SURVIVED 3-cluster portfolio red-team review. Catalog cut from 40 to 15 high-conviction theses. See tlifeAssets.ts for canonical T-Life asset claims.\n\nAssertion validation pass (2026-05-16): 1 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "EU GMP Annex 1 (revised 22 Aug 2022, operative 25 Aug 2023; lyophilizer §8.123 operative Aug 2024) is no longer compatible with read-and-understood LMS as primary system of competency record — §7.4-7.7 mandate ongoing competency assessment with annual gowning requalification, §9.33-9.42 mandate bi-annual APS per shift, §7.13-7.14 codify event-driven disqualification. The EU AI Act (Reg. 2024/1689) Annex III(4)(b) general-application date is 2 Aug 2026, creating a 12-18 month architectural window to self-classify out under Art. 6(3) before deployer obligations crystallize. EMA Reflection Paper on AI in the Medicinal Product Lifecycle (Sept 2024), FDA CDER discussion paper on AI in Drug Manufacturing (Feb/May 2023; formal AI draft guidance followed 2025), and the pending EU Annex 11 revision (final 2025-26) all legitimize AI-derived competency evidence if traceable, explainable, and validated. Eightfold's transformer-embedding architecture is an Annex 11 algorithm-transparency liability; horizontal AI players need $5-10M and 18-24 months to ship GAMP5/Part 11 compliance.",
     "roadToMoat": [
       {
@@ -2470,10 +2479,11 @@ export const ideas: Idea[] = [
       },
       {
         "id": "al-a7",
-        "claim": "Veeva Vault Training, MasterControl, ComplianceWire price €60-150/user/yr in EU mid-cap pharma",
-        "source": "[ESTIMATE — based on prior validation work]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "Veeva Vault pricing $50-200/user/month = $600-2,400/user/yr (NOT €60-150/user/yr); MasterControl ~$40-60K total annual base; ComplianceWire similar enterprise tier",
+        "source": "https://www.itqlick.com/veeva-vault/pricing",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "MATERIAL: prior figure was off by ~10×. Revised pricing significantly tightens unit-economic comparison: incumbents are MORE expensive than thesis assumed, which is BETTER for Aletheia GxP positioning at €100-250K ACV."
       },
       {
         "id": "al-a8",
@@ -3080,7 +3090,7 @@ export const ideas: Idea[] = [
       "trend-20-ops-automation"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Deliberately built outside the T-Life portfolio comfort zone. Highest conviction of the 'beyond-pharma-shipping' set per honest founder review — clearest pain, clearest buyer (adult child not 70+ themselves), no scary trust-acquisition problem.",
+    "notes": "Deliberately built outside the T-Life portfolio comfort zone. Highest conviction of the 'beyond-pharma-shipping' set per honest founder review — clearest pain, clearest buyer (adult child not 70+ themselves), no scary trust-acquisition problem.\n\nAssertion validation pass (2026-05-16): 4 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "Three converging factors. (1) Sandwich-generation peak: Gen X parents are aging into the 70s en masse over 2024-2030; AARP caregiver population grew 18% from 2015-2020 (43M → 53M). (2) Plaid + Stripe + HIPAA-compliant infrastructure stack is mature; AI medical-visit summarization actually works in 2025-26. (3) Prior attempts (Carely $15M raised, Caring Village, CareZone-→-Walmart) all stalled; the category gap is real and the product-design lesson (build for the adult child, not the family-as-monolith) is now obvious.",
     "roadToMoat": [
       {
@@ -3157,32 +3167,33 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "tr-a1",
-        "claim": "~40M unpaid family caregivers in US (AARP / Census Bureau 2020); ~53M counting informal caregivers",
-        "source": "[ESTIMATE — AARP 2020 Caregiving in the US]",
-        "status": "estimated",
+        "claim": "~53M unpaid family caregivers in US (AARP/NAC 2020 Caregiving in the US); rising to ~63M per AARP 2024 Valuing the Invaluable update",
+        "source": "https://press.aarp.org/2020-5-14-Caregiving-in-the-US-Report",
+        "status": "confirmed",
         "lastChecked": "2026-05-16",
         "note": "Verify against AARP 2024 update."
       },
       {
         "id": "tr-a2",
-        "claim": "AARP 2024 caregiver report: 84% wished for a 'digital tool that doesn't exist'",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "55% of 50+ caregivers use one or more digital tools to coordinate care (AARP 2024)",
+        "source": "https://www.mcknightshomecare.com/news/aarp-55-percent-of-family-caregivers-use-tech-to-coordinate-care/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16",
-        "note": "Headline stat; verify exact wording + source."
+        "note": "Prior claim ('84% wished for a tool that doesn't exist') was unsupported and replaced."
       },
       {
         "id": "tr-a3",
-        "claim": "Carely raised ~$15M Series A 2020-21 era; stalled at <$5M ARR",
-        "source": "[ESTIMATE — Crunchbase / industry rumor]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "Carely (Care-Monster Inc.) raised ~$3.1M total (LOUD Capital + Aging2.0), NOT a $15M Series A. Stalled at sub-€5M ARR is the right pattern-match.",
+        "source": "https://pitchbook.com/profiles/company/101132-47",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior $15M figure was wrong; the stall pattern still holds but at a smaller raise."
       },
       {
         "id": "tr-a4",
-        "claim": "CareZone acquired by Walmart 2020 for ~$200M; shuttered 2022",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "CareZone tech/IP acquired by Walmart June 2020 for ~$200M; migrated to Walmart Wellness which retired 31 Jan 2023",
+        "source": "https://hitconsultant.net/2020/06/16/walmart-acquires-carezone-medication-management/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
@@ -3298,7 +3309,7 @@ export const ideas: Idea[] = [
       "trend-5-trades-matching"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Boundary-expansion thesis demonstrating the methodology applies outside agetech. Real TAM, proven marketplace pattern (Bolt/Wolt EU), genuine pain (heat-pump installer shortage is a Bundestag-level political concern). Match for May-2026 trend #5.",
+    "notes": "Boundary-expansion thesis demonstrating the methodology applies outside agetech. Real TAM, proven marketplace pattern (Bolt/Wolt EU), genuine pain (heat-pump installer shortage is a Bundestag-level political concern). Match for May-2026 trend #5.\n\nAssertion validation pass (2026-05-16): 6 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "Three converging factors. (1) EU REPowerEU mandates 30M new heat pumps by 2030; current installer capacity hits ~10M ceiling — installer-capacity-gap is the rate-limiting step on EU decarbonization. (2) German government has explicitly named trades-shortage as economic-policy priority (BMWi 2024 report); regulatory tailwinds for marketplaces that increase supply utilization. (3) Bolt/Wolt have de-risked the EU services-marketplace pattern; insurance-backed guarantee economics now well-understood (Allianz Hausrat, AXA partner ecosystems).",
     "roadToMoat": [
       {
@@ -3375,44 +3386,48 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "tk-a1",
-        "claim": "EU skilled-trades shortage ~1.5M+ workers (Eurostat / Cedefop)",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "EU construction sector needs ~2M+ workers by 2030 (ITUC/EURES 2024); broader skilled-trades shortage estimates vary",
+        "source": "https://www.ela.europa.eu/sites/default/files/2025-06/EURES_Report_on_labour_shortages_and_surpluses_2024.pdf",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior 1.5M+ Eurostat/Cedefop attribution wasn't pinpointable; ITUC/EURES 2024 is the sourceable figure."
       },
       {
         "id": "tk-a2",
-        "claim": "Germany short ~400K tradespeople (ZDH 2024 figure)",
-        "source": "[UNVERIFIED — widely cited German trade-association figure]",
-        "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "claim": "Germany handwerk shortage: ~125,500 registered open positions; demand 'well over 200,000' (ZDH 2024) — NOT 400K",
+        "source": "https://www.zdh.de/daten-und-fakten/kennzahlen-des-handwerks/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior 400K figure refuted; correct ZDH 2024 figure is ~125-200K."
       },
       {
         "id": "tk-a3",
-        "claim": "EU REPowerEU targets 30M heat pumps by 2030 (vs ~3M installed 2024)",
-        "source": "[ESTIMATE — EU REPowerEU communication]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "EU REPowerEU targets 30M cumulative heat pumps by 2030; 10M additional hydronic units by 2027 (EHPA / EC)",
+        "source": "https://ehpa.org/policy-2/repowereu-and-the-eu-heat-pump-action-plan/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Target confirmed; sub-claim about '~3M installed 2024' was annual-vs-cumulative confusion."
       },
       {
         "id": "tk-a4",
-        "claim": "Germany missed its 500K-heat-pump-per-year 2024 target primarily due to installer shortage",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "claim": "Germany missed 500K-heat-pump 2024 target (only ~200K installed); PRIMARY cause was policy uncertainty (Building Energy Act debate) + falling gas prices, NOT installer shortage",
+        "source": "https://www.cleanenergywire.org/news/heat-pump-sales-germany-drop-more-half-first-months-2024",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior thesis framing was wrong on causation. Installer shortage is secondary not primary. Weakens 'installer shortage as why-now' argument; thesis still defensible on REPowerEU pipeline + HomeServe pattern."
       },
       {
         "id": "tk-a5",
-        "claim": "HomeServe (UK) revenue ~£800M+ (legacy non-tech)",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
+        "claim": "HomeServe (UK) revenue ~£1.1B (FY2024); ~£800M+ is the conservative floor",
+        "source": "https://homeservegroup.com/s/hsv-ltd-anual-report-and-accounts-2024-2.pdf",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "tk-a6",
-        "claim": "Bolt valued $6B+ (2024); proven EU services-marketplace pattern",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "Bolt valued €6.3B at 2025 secondary sale (down from €7.4B peak 2022)",
+        "source": "https://sifted.eu/articles/bolt-valuation-secondary-share-sale",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       }
     ],
@@ -3515,7 +3530,7 @@ export const ideas: Idea[] = [
       "trend-17-human-verification"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Biggest TAM in the agetech subset ($28B/yr elder fraud in US alone). Regulatory complexity is the rate-limiter; product simplicity is the wedge. Map to May-2026 trend #3 (elder tech) and #17 (digital human verification — the deepfake-defense layer).",
+    "notes": "Biggest TAM in the agetech subset ($28B/yr elder fraud in US alone). Regulatory complexity is the rate-limiter; product simplicity is the wedge. Map to May-2026 trend #3 (elder tech) and #17 (digital human verification — the deepfake-defense layer).\n\nAssertion validation pass (2026-05-16): 4 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "Three converging factors. (1) Elder fraud losses tripled 2020-2024 with AI voice-cloning maturity; FBI IC3 2024 report names elder fraud as top growth crime category. (2) OTC hearing aids regulatory unlock (FDA Aug 2022) shifted primary interface from screen to voice for the 30M+ Americans with hearing loss; voice-first banking is now table stakes. (3) BaaS infrastructure (Treasury Prime, Synctera US; Bancorp Europe; SolarisBank/Solaris) mature enough to ship a banking-app product in 6-9 months without owning a charter.",
     "roadToMoat": [
       {
@@ -3592,17 +3607,19 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "st-a1",
-        "claim": "US elder fraud losses ~$28B/yr (FBI IC3 + FTC 2024)",
-        "source": "[ESTIMATE — FBI IC3 2024 figure widely cited]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "US elder fraud losses: ~$4.9B reported to FBI IC3 in 2024 (147K complaints, +43% YoY); AARP BankSafe extrapolates total inclusive of unreported losses at ~$28B",
+        "source": "https://www.aarp.org/money/scams-fraud/fbi-report-fraud-2024/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Original $28B figure is AARP-extrapolation (incl. unreported), not FBI IC3 direct. Clarified."
       },
       {
         "id": "st-a2",
-        "claim": "Voice deepfake scams grew >300% in 2024 (FTC, IC3)",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "claim": "Voice-phishing / vishing grew 260-442% in 2024 (industry vendors: Keepnet H1→H2, DeepStrike YoY); not a direct FTC/IC3 stat",
+        "source": "https://deepstrike.io/blog/vishing-statistics-2025",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Re-sourced from industry vendors; FTC/IC3 attribution removed."
       },
       {
         "id": "st-a3",
@@ -3620,17 +3637,18 @@ export const ideas: Idea[] = [
       },
       {
         "id": "st-a5",
-        "claim": "~95M Europeans over 65 (Eurostat)",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
+        "claim": "~97M Europeans 65+ (Eurostat: EU pop 449.3M Jan 2024, 21.6% aged 65+)",
+        "source": "https://ec.europa.eu/eurostat/statistics-explained/index.php/Population_structure_and_ageing",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "st-a6",
-        "claim": "Carefull raised ~$10M; closest US-market competitor; non-bank product",
-        "source": "[ESTIMATE — Crunchbase]",
-        "status": "estimated",
-        "lastChecked": "2026-05-16"
+        "claim": "Carefull (US senior fraud monitoring) raised ~$19.7M total ($3.2M seed 2021 + $16.5M Series A Oct 2023)",
+        "source": "https://techcrunch.com/2023/10/11/carefull-lands-16-5m-to-shield-seniors-from-financial-fraud/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Prior $10M figure understated by ~2×."
       },
       {
         "id": "st-a7",
@@ -3740,7 +3758,7 @@ export const ideas: Idea[] = [
       "trend-1-loneliness"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Highest-upside / highest-variance bet in the catalog. Build ONLY with the exactly-right founder. Bimodal: $1B+ or kill in 18 months. The ethical surface is the rate-limiter not the technology.",
+    "notes": "Highest-upside / highest-variance bet in the catalog. Build ONLY with the exactly-right founder. Bimodal: $1B+ or kill in 18 months. The ethical surface is the rate-limiter not the technology.\n\nAssertion validation pass (2026-05-16): 4 assertion(s) patched against primary sources. See assertions[] for updated sources, statuses, and notes. Material corrections flagged in individual assertion 'note' fields.",
     "whyNow": "Three converging factors. (1) AI character memory crossed the dignity threshold in 2025 — Replika 30M users, Character.ai 20M+ MAU prove the category exists; the senior-specific product is the open white space. (2) Voice quality (ElevenLabs Turbo, OpenAI advanced voice) is now genuinely human-grade on consumer hardware. (3) EU AI Act enters general application Aug 2026 — Annex III(1)(c) governs 'AI systems intended to be used to influence emotional state' and may classify senior-targeted companions as high-risk; the 12-18 month window before enforcement matures is the design + market-entry window.",
     "roadToMoat": [
       {
@@ -3817,30 +3835,31 @@ export const ideas: Idea[] = [
     "assertions": [
       {
         "id": "rv-a1",
-        "claim": "Loneliness in 70+ has health consequences equivalent to smoking 15 cigarettes/day (Holt-Lunstad meta-analysis 2015)",
-        "source": "[UNVERIFIED — widely cited Holt-Lunstad figure]",
-        "status": "unverified",
-        "lastChecked": "2026-05-16"
+        "claim": "Loneliness mortality risk equivalent to ~15 cigarettes/day (Holt-Lunstad 2010 PLOS Medicine meta-analysis; reaffirmed 2015 Perspectives on Psychological Science)",
+        "source": "https://journals.sagepub.com/doi/10.1177/1745691614568352",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16",
+        "note": "Original framing from 2010 PLOS Medicine; 2015 paper reaffirmed and expanded."
       },
       {
         "id": "rv-a2",
-        "claim": "Replika ~30M users at peak (2024)",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
+        "claim": "Replika reached >30M users by August 2024 (CEO statement)",
+        "source": "https://en.wikipedia.org/wiki/Replika",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "rv-a3",
-        "claim": "Character.ai team acquired by Google ~$2.7B Aug 2024",
-        "source": "[UNVERIFIED]",
-        "status": "unverified",
+        "claim": "Google licensing deal with Character.ai team (Shazeer/De Freitas + team to DeepMind) ~$2.7B Aug 2024 — non-exclusive license, not full acquisition",
+        "source": "https://www.entrepreneur.com/business-news/google-rehires-ai-pioneer-noam-shazeer-in-27-billion-deal/480378",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
         "id": "rv-a4",
-        "claim": "ElliQ (Intuition Robotics) raised ~$80M+ for physical-companion-robot product for seniors",
-        "source": "[ESTIMATE]",
-        "status": "estimated",
+        "claim": "ElliQ (Intuition Robotics) raised ~$83M total per Aug 2023 round",
+        "source": "https://techcrunch.com/2023/08/29/eldercare-robot-elliq-nabs-another-25-million-in-funding/",
+        "status": "confirmed",
         "lastChecked": "2026-05-16"
       },
       {
@@ -3909,6 +3928,1446 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.15,
       "totalFailureBy36mo": 0.55,
       "basisOfEstimate": "Bimodal outcome distribution. Bear case (55% probability): dies on ethics backlash, AI Act classification, or cohort fatigue within 18-24 months. Bull case (15% probability of reaching €10M ARR): becomes the senior-specific category-defining product — Replika reached $X ARR in 4-5 years; senior version has higher ARPU + family-tier upsell. Median outcome: $1-3M ARR niche product at 36 months. Founder availability is the binding gate — needs exactly-right team."
+    }
+  },
+  {
+    "id": "pawmetric-pet-health",
+    "title": "Pawmetric",
+    "ycCategory": "Pet Tech / Health Monitoring",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "AI-powered wearable + app for dog/cat health monitoring — gait, activity, food intake, vital signs. The Fitbit for pets that owners actually keep using.",
+    "description": "$140B+ global pet industry; almost no tech beyond food, grooming, and a few failed Fitbit-for-dogs attempts (Whistle/Mars Petcare, FitBark). The pet-humanization trend is structural (Gen Z + Millennial owners treat pets as family), aging-dog population is growing (median lifespan +18% since 2000s), US vet spend is $35B+ and rising 8% YoY, pet insurance is the fastest-growing P&C category, and AI-enabled commodity sensors finally make continuous health monitoring viable at consumer price points.\n\nPawmetric is a collar/harness wearable + app that tracks activity, sleep, gait, and vital signs continuously; detects anomalies (gait change as osteoarthritis precursor, decreased activity as pain signal, weight loss as disease indicator); alerts owners to 'vet check recommended' moments with confidence-graded recommendations; integrates with pet insurance partners for premium reduction; and upsells vet tele-consult when an anomaly is detected.\n\nPricing: €180-220 hardware + €15-25/mo subscription. ARPU €180-300/yr after first year. The wedge over Whistle/Fi: AI-grade anomaly detection (not just GPS tracking) + integrated insurance partner economics.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "UK + DACH + Nordics have the highest pet-humanization indices and wearable-comfort; insurance partner ecosystem is mature (Lemonade Pet EU, Petplan, ManyPets, Trupanion EU).",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "UK + DACH + Nordics primary; Italy/Spain/France secondary."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC pet humanization is rising but smaller TAM."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Small TAM; useful as founder-pilot geography."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower disposable income on €15-25/mo subscription."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life portfolio relevance. Founder must build their own pet-industry network + insurance partnerships.",
+    "tags": [
+      "pet-tech",
+      "wearable",
+      "iot",
+      "consumer",
+      "ai-health",
+      "beyond-tlife",
+      "trend-33-pet-health"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion idea — deliberately outside T-Life portfolio frame; tlifeAssetRefs is just t-life-capital (funding only, no operating edge).",
+    "whyNow": "Three converging factors. (1) Pet humanization at all-time high; US median household pet spend up 30% 2019-2024. (2) Pet insurance market growing 25% YoY — insurers pay for monitoring that reduces claim severity. (3) Pet wearable sensors now commodity-priced; cellular IoT modules under €15 BOM enables full-time connectivity without WiFi.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP wearable + app shipping; pre-sell 500 units at €200 + €20/mo via Kickstarter + paid social; insurance LOI from Lemonade Pet EU or ManyPets; anomaly detection model trained on 5K dog activity profiles."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5K paying customers = €1-1.5M ARR; vet tele-consult upsell live; gait-change-detects-osteoarthritis-X-months-before-vet-diagnosis case study published; first major retail partnership (PetSmart EU / Maxi Zoo / Fressnapf)."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "30-50K customers = €8-15M ARR; expand to cats (different sensor profile); GLP-1-for-pets companion app (Zoetis Librela monitoring); approach Mars Petcare / Hill's / Nestlé for acquisition or strategic deal."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€1.8M",
+      "capexRatio": "30% capex / 70% opex",
+      "note": "Hardware inventory + tooling + manufacturing setup. Pure-software unit economics improve in Year 2 as hardware refresh cycles begin."
+    },
+    "competitors": [
+      {
+        "name": "Whistle (Mars Petcare)",
+        "type": "incumbent",
+        "geography": "US/EU",
+        "note": "GPS-focused; weak AI; brand distribution via Mars retail. Vulnerable on AI-grade anomaly detection."
+      },
+      {
+        "name": "Fi Collar",
+        "type": "startup",
+        "geography": "US",
+        "note": "~€15M ARR estimate; GPS-anchored; expanding to health monitoring. US-only."
+      },
+      {
+        "name": "FitBark",
+        "type": "startup",
+        "geography": "US",
+        "note": "Activity tracker; flat growth; product limited."
+      },
+      {
+        "name": "Tractive",
+        "type": "startup",
+        "geography": "Austria/EU",
+        "note": "GPS-anchored; ~€60M revenue [ESTIMATE]; profitable but limited AI."
+      },
+      {
+        "name": "PetSafe / SureFlap (Radio Systems)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Hardware-focused on doors/cameras; not health-monitoring."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 3,
+      "regulatoryRisk": 5,
+      "founderAvailability": 3,
+      "composite": 3.3
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #33 (pet health monitoring; $140B industry, almost no tech). Pet wearable category exists but no AI-grade anomaly detection + insurance economics player.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "pw-a1",
+        "claim": "Global pet industry ~$140B+",
+        "source": "[ESTIMATE — APPA / Euromonitor]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pw-a2",
+        "claim": "US vet spend ~$35B+ growing 8% YoY",
+        "source": "[ESTIMATE — APPA / IBISWorld]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pw-a3",
+        "claim": "Fi Collar reached ~€15M ARR",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pw-a4",
+        "claim": "Tractive (Austria) revenue ~€60M; profitable",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pw-a5",
+        "claim": "Pet insurance EU market growing >25% YoY",
+        "source": "[ESTIMATE — McKinsey / Swiss Re]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pw-a6",
+        "claim": "Zoetis Librela (GLP-1-class anti-NGF drug for dog osteoarthritis) launched 2024 — opens monitoring market for treatment efficacy",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "pw-k1",
+        "hypothesis": "Pre-sell 200 units at €200 + €20/mo via Kickstarter + Meta paid acquisition at <€80 CAC",
+        "experiment": "€10K paid test budget + Kickstarter campaign; measure conversion + CAC",
+        "costEur": 12000,
+        "durationWeeks": 8,
+        "killSignal": "<80 pre-orders OR CAC >€150",
+        "validateSignal": "≥200 pre-orders AND CAC <€80"
+      },
+      {
+        "id": "pw-k2",
+        "hypothesis": "Anomaly detection model achieves ≥85% true-positive on canine osteoarthritis gait-change in 6-month cohort",
+        "experiment": "60-dog cohort with vet-confirmed osteoarthritis diagnoses; train + validate",
+        "costEur": 30000,
+        "durationWeeks": 24,
+        "killSignal": "<70% true-positive OR >25% false-positive",
+        "validateSignal": "≥85% TP AND <15% FP"
+      },
+      {
+        "id": "pw-k3",
+        "hypothesis": "Pet insurance partnership LOI from Lemonade Pet EU / ManyPets / Petplan with premium-discount mechanism",
+        "experiment": "Direct BD with 3 EU pet insurers",
+        "costEur": 5000,
+        "durationWeeks": 12,
+        "killSignal": "0 advanced past actuarial review",
+        "validateSignal": "≥1 signed LOI with premium-discount %"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Whistle/Mars ships comparable AI in Mars retail-distributed product, capturing the category",
+        "likelihood": "medium",
+        "earlySignal": "Mars Petcare R&D announcements + retail product refresh"
+      },
+      {
+        "cause": "Hardware ergonomics fail (chewing, water damage, battery life) and cohort retention <50% in Year 1",
+        "likelihood": "high",
+        "earlySignal": "Kill-test pw-k1 hardware returns + 6-month subscription churn"
+      },
+      {
+        "cause": "Customer acquisition CAC too high for €300/yr ARPU — €100+ CAC × 24-month LTV doesn't unit-economic",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test pw-k1 CAC + cohort retention modeling"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.35,
+      "basisOfEstimate": "Pet wearables have proven product-market fit at modest scale (Fi Collar ~€15M, Tractive ~€60M). €10M ARR = 30-50K paying subscribers at €240-300/yr — feasible in 24-36 months IF retention >70% (the hardware-ergonomic-quality gate) and CAC <€100. Mars Petcare ships AI within 18 months is the bear scenario."
+    }
+  },
+  {
+    "id": "hearthpro-hvac-subscription",
+    "title": "HearthPro",
+    "ycCategory": "Home Services Subscription / HVAC",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Pan-European subscription HVAC + plumbing care — €25-40/mo annual contracts with insurance-backed guarantee, smart-thermostat optimization, and heat-pump specialist support.",
+    "description": "HomeServe (UK) proved the model: ~£800M revenue selling boiler-and-plumbing subscription cover to UK households at £15-30/mo. The model exists nowhere else in EU at scale. Germany, France, Netherlands, Spain, Italy all have similar housing stock + recurring HVAC need (boilers, heat pumps, water heaters), zero strong subscription incumbent (Vaillant/Bosch sell hardware, not service subscriptions). EU REPowerEU mandates 30M new heat-pump installations by 2030, creating €X billion of ongoing maintenance demand.\n\nHearthPro is the pan-EU residential HVAC + plumbing subscription: €25-40/mo annual contracts; covered annual visit + 24/7 emergency callout + parts/labor with insurance-backed guarantee (Allianz/AXA partner); smart-thermostat integration (Nest, Ecobee, Tado) for predictive maintenance and energy optimization; heat-pump specialist add-on (€10/mo); trades supply aggregated on the back-end (overlap with Tekton if same founding team).\n\nThe wedge vs HomeServe UK: HomeServe is non-tech, non-cross-border. HearthPro builds AI dispatching + insurance partnership EU-native + heat-pump specialty as the primary acquisition hook.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany + UK + Netherlands are the biggest TAMs by housing stock + heat-pump installation pipeline. Start with 1 German city for density.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "Germany / UK / Netherlands / France / Iberia."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC HVAC is centralized building-management not residential subscription."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower disposable income on €30/mo cover; opportunistic."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM; pilot geography only."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life dependency. Could share founding team / back-end trades supply with Tekton.",
+    "tags": [
+      "hvac",
+      "home-services",
+      "subscription",
+      "insurance",
+      "heat-pumps",
+      "trades",
+      "beyond-tlife",
+      "trend-26-subscription-services"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion idea — deliberately outside T-Life portfolio frame; tlifeAssetRefs is just t-life-capital (funding only, no operating edge).",
+    "whyNow": "Three converging factors. (1) EU REPowerEU pipeline puts 30M new heat pumps into EU homes by 2030 — each needs annual maintenance + €X/yr service revenue. (2) HomeServe UK pattern is proven at ~£800M revenue but un-extended across EU. (3) Allianz / AXA / Munich Re have mature insurance-as-a-service products for backed-guarantee economics.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Single-city launch (Munich or Hamburg); 500 paying subscriptions at €30/mo; trades supply: 20 verified plumbers + HVAC technicians; insurance LOI from Allianz Hausrat or AXA."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "10K subscriptions across 5 German cities + 1 UK city; €3-4M ARR; heat-pump specialist add-on launched; smart-thermostat partnerships (Tado, Bosch)."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "100K subscriptions across Germany + UK + Netherlands; €30-40M revenue; commercial-side platform for facility management."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.5-3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Per-city launch costs (€100-200K each) + insurance-claims-reserve working capital + AI dispatching engineering."
+    },
+    "competitors": [
+      {
+        "name": "HomeServe (UK)",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "Legacy UK. ~£800M revenue. Non-tech, slow."
+      },
+      {
+        "name": "British Gas Homecare",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "Centrica subsidiary; UK-only; aging customer base."
+      },
+      {
+        "name": "Hometree (UK)",
+        "type": "startup",
+        "geography": "UK",
+        "note": "VC-backed HomeServe modernization; UK-only; raised ~€90M."
+      },
+      {
+        "name": "Vaillant / Bosch / Viessmann (manufacturers)",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Hardware-anchored; offer service contracts via dealer networks; not subscription platforms."
+      },
+      {
+        "name": "Local boiler-cover insurance (Allianz, AXA standalone)",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Insurance products without service coordination; tools to white-label vs compete."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.05
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #26 (subscription pest/services model — but applied to HVAC). EU REPowerEU is the structural tailwind.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "hp-a1",
+        "claim": "HomeServe UK revenue ~£800M (legacy non-tech)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hp-a2",
+        "claim": "EU REPowerEU targets 30M heat pumps by 2030",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hp-a3",
+        "claim": "Hometree (UK) raised ~€90M",
+        "source": "[ESTIMATE — Crunchbase]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hp-a4",
+        "claim": "EU residential heat-pump installations grew >50% 2022-24",
+        "source": "[ESTIMATE — EHPA European Heat Pump Association]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hp-a5",
+        "claim": "Allianz / AXA insurance-as-a-service mature for backed-guarantee partnerships",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "hp-k1",
+        "hypothesis": "Acquire 500 subscriptions at €30/mo in Munich (or Hamburg) within 6 months at <€80 CAC",
+        "experiment": "Paid acquisition + door-to-door + plumber-cross-referral",
+        "costEur": 40000,
+        "durationWeeks": 26,
+        "killSignal": "<200 subs OR CAC >€150",
+        "validateSignal": "≥500 subs AND CAC <€80"
+      },
+      {
+        "id": "hp-k2",
+        "hypothesis": "Insurance LOI from Allianz / AXA / Munich Re for backed-guarantee model at claims rate <3%",
+        "experiment": "Direct BD; pitch backed-guarantee economics",
+        "costEur": 8000,
+        "durationWeeks": 12,
+        "killSignal": "0/3 advance to term sheet",
+        "validateSignal": "≥1 signed LOI"
+      },
+      {
+        "id": "hp-k3",
+        "hypothesis": "Trades supply (20 verified plumbers + HVAC techs in 1 city) at <€500 each acquisition",
+        "experiment": "Field-team-led acquisition + credential verification",
+        "costEur": 12000,
+        "durationWeeks": 10,
+        "killSignal": "<10 acquired OR cost >€1000 each",
+        "validateSignal": "≥20 acquired at <€500 each AND ≥2 jobs/week capacity each"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "HomeServe (or Centrica) extends to Germany before HearthPro reaches scale",
+        "likelihood": "medium",
+        "earlySignal": "HomeServe EU job postings + acquisition announcements"
+      },
+      {
+        "cause": "Insurance claims rate >3% blows up unit economics; insurance partner pulls out",
+        "likelihood": "medium",
+        "earlySignal": "First 1K subscriptions claims-rate measurement at Month 9"
+      },
+      {
+        "cause": "Tradespeople prefer direct relationships and platform supply-side acquisition stalls",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test hp-k3 trades-acquisition rate"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.25,
+      "totalFailureBy36mo": 0.25,
+      "basisOfEstimate": "HomeServe UK proved €X recurring-revenue model at ~£800M scale over 30 years. HearthPro extends pan-EU + tech-enabled. €10M ARR = 25-35K subscriptions at €30-40/mo — feasible in 5 German cities + 1 UK in 24-36 months."
+    }
+  },
+  {
+    "id": "tessera-brand-resale",
+    "title": "Tessera",
+    "ycCategory": "Resale Infrastructure / Sustainability",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "White-label resale platform for fashion + lifestyle brands — every brand wants to own its secondary market and reclaim the 30% margin Vinted/Depop takes.",
+    "description": "Global resale market is $20-30B+ growing 15-20% YoY. Vinted, Depop, ThredUp, Vestiaire Collective dominate but charge 15-30% take rates and own the customer relationship. Brands (Patagonia 'Worn Wear', Levi's 'Levi's Authorized Vintage', Coach 'Coach (Re)Loved', REI 'Re/Supply') are launching their own resale programs to (i) reclaim the margin, (ii) own the customer for lifetime value, (iii) meet sustainability commitments. Building this in-house is hard — authentication, condition grading, payments, logistics, customer service.\n\nTrove (US, raised ~$77M) is the US-market leader in resale-as-a-service. UK + EU is underserved. EU ESPR (Ecodesign for Sustainable Products Regulation) and Digital Product Passports (effective 2025-2030) are pushing brands toward circularity at regulatory level.\n\nTessera is the EU-focused brand-owned-resale stack: white-label storefront, computer-vision authentication, AI condition grading, logistics integration (returns + outbound), payment + customer service. Brand keeps the customer + 80-85% of resale revenue; Tessera takes 8-12% take rate vs Vinted's 25%. Plus setup fee per brand €10-50K.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "UK + DACH + Nordics + France: biggest fashion resale + sustainability-mandated brands + Gen Z buyer base. Italy/Spain secondary.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "UK / DACH / Nordics / France core; Italy / Spain secondary."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC luxury resale market exists but smaller TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller TAM; opportunistic."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Niche TAM only."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life dependency.",
+    "tags": [
+      "resale",
+      "circular-economy",
+      "fashion-tech",
+      "white-label",
+      "espr",
+      "beyond-tlife",
+      "trend-22-brand-resale"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion idea — deliberately outside T-Life portfolio frame; tlifeAssetRefs is just t-life-capital (funding only, no operating edge).",
+    "whyNow": "Three converging factors. (1) EU ESPR + Digital Product Passport regulation (effective 2025-2030) push brands toward circularity at the EU-regulatory level. (2) Gen Z + Millennial buyers demand resale options; sustainability is purchase criterion. (3) AI authentication + grading just became accurate enough to deploy at brand-grade quality.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP white-label storefront + AI authentication + grading; 3 design-partner brands in UK + DACH at €20-30K setup + 10% take rate; first €100K GMV processed."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "15-25 brand customers across UK + DACH + France; €5-8M GMV at 10% take rate = €500-800K revenue; Digital Product Passport integration; first major brand (€100M+ revenue) signed."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "60-100 brands; €30-50M GMV; €3-5M revenue; expand to non-fashion verticals (home goods, sporting equipment, electronics)."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1.2M",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Pure SaaS + marketplace economics. Main costs: 3 engineers + 1 brand-BD + AI training + first-customer onboarding."
+    },
+    "competitors": [
+      {
+        "name": "Trove",
+        "type": "startup",
+        "geography": "US",
+        "note": "B2B resale-as-a-service. Raised ~$77M. US-anchored; limited EU presence."
+      },
+      {
+        "name": "Recurate",
+        "type": "startup",
+        "geography": "US",
+        "note": "B2B resale. Raised ~$14M. US-anchored."
+      },
+      {
+        "name": "Faume (FR), Reflaunt (UK/Asia)",
+        "type": "startup",
+        "geography": "EU",
+        "note": "Smaller EU players; less mature stack."
+      },
+      {
+        "name": "Vinted, Depop, ThredUp, Vestiaire Collective",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "C2C marketplaces; take 15-30% margin; own customer relationship. The competitor brands want to bypass."
+      },
+      {
+        "name": "Build-in-house (Patagonia Worn Wear pattern)",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Largest competitive option; many brands try this and fail on tech/ops."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 4,
+      "regulatoryRisk": 4,
+      "founderAvailability": 3,
+      "composite": 3.1
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #22 (brand-owned resale; every brand wants to control their secondary market). Trove proves the pattern in US; EU is the open market.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "ts-a1",
+        "claim": "Global resale market $20-30B+ growing 15-20% YoY",
+        "source": "[ESTIMATE — ThredUp 2024 Resale Report]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a2",
+        "claim": "Trove (US) raised ~$77M total funding",
+        "source": "[ESTIMATE — Crunchbase]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a3",
+        "claim": "EU ESPR effective 2024-2030 with Digital Product Passport rollout",
+        "source": "[UNVERIFIED — EU Reg 2024/1781 ESPR]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a4",
+        "claim": "Vinted, Depop take rates 15-30% on transactions",
+        "source": "[UNVERIFIED — public pricing pages]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ts-a5",
+        "claim": "Patagonia Worn Wear is the brand-owned-resale archetype; ~€X revenue",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ts-k1",
+        "hypothesis": "3 mid-size EU fashion brands (€20-100M revenue) sign €20-30K setup + 10% take rate within 12 weeks",
+        "experiment": "Direct BD with 25 EU brand sustainability/operations leads",
+        "costEur": 8000,
+        "durationWeeks": 12,
+        "killSignal": "<1 signed",
+        "validateSignal": "≥3 signed brands at €20K+ setup"
+      },
+      {
+        "id": "ts-k2",
+        "hypothesis": "AI authentication + condition grading achieves ≥85% accuracy on test set of 500 product photos at <€0.50 per item",
+        "experiment": "Build CV model on Vinted/Depop public listings; benchmark",
+        "costEur": 18000,
+        "durationWeeks": 10,
+        "killSignal": "<70% accuracy OR >€1 per item cost",
+        "validateSignal": "≥85% accuracy AND <€0.50 per item"
+      },
+      {
+        "id": "ts-k3",
+        "hypothesis": "First brand processes €100K GMV in first 6 months at 10% take rate (€10K revenue, marginal-positive)",
+        "experiment": "Run pilot brand end-to-end; measure GMV + take",
+        "costEur": 15000,
+        "durationWeeks": 26,
+        "killSignal": "<€30K GMV OR brand pulls out",
+        "validateSignal": "≥€100K GMV AND brand renews"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Trove enters EU directly with capital advantage and brand-relationships head-start",
+        "likelihood": "medium",
+        "earlySignal": "Trove EU job postings; partnership announcements"
+      },
+      {
+        "cause": "Brands prefer to build in-house with Shopify-app integrations rather than license white-label stack",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test ts-k1 conversion + reason-for-decline analysis"
+      },
+      {
+        "cause": "Vinted launches brand-storefront product, pulling brand-owned resale back into C2C marketplace economics",
+        "likelihood": "low",
+        "earlySignal": "Vinted product announcements; partnership PRs"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.2,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Trove proved €77M-raise viable in US; EU has 5-10× brands × ~3× brand revenue concentration. €10M revenue = 100-150 brands at €60K avg ACV — feasible in 36 months with focused EU GTM."
+    }
+  },
+  {
+    "id": "advisorbot-auto-service",
+    "title": "AdvisorBot",
+    "ycCategory": "Vertical AI / Auto Service",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "AI voice/chat agent for auto dealership service departments — answers the same 15 questions 24/7, books appointments, upsells maintenance, recovers the 30% of customer inquiries currently lost.",
+    "description": "70%+ of dealership profit is service + parts. Service advisors are short-staffed (US dealership average 2-4 advisors handling 50+ inquiries/day), and 30-40% of inbound service calls go to voicemail or are abandoned. CDK Global and Reynolds & Reynolds DMS systems are entrenched but their AI capabilities are weak. Dealership customer experience NPS is among the lowest in retail (avg -20 to +10). Dealers will pay for anything that captures the lost service revenue currently bleeding to indie shops + manufacturer-owned service centers.\n\nAdvisorBot is an AI service advisor (voice + chat + text + email) that handles inbound inquiries 24/7, books appointments via DMS integration (CDK / Reynolds), answers FAQs (recall status, oil change interval, warranty, etc.), quotes service work with menu pricing, upsells maintenance based on vehicle history, and hands off complex cases to human advisors with full context.\n\nPricing: $500-1500/store/month subscription. Each US dealership ~$6-18K/yr; 18K US dealerships × ~50% adoption = $50-160M TAM in US alone; ~30K EU dealerships add equivalent TAM.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "EU dealership landscape is fragmented but more open to non-CDK incumbents. Start with mid-size German dealership groups (Porsche / VW / Mercedes service networks).",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "Germany / UK / France / Italy / Netherlands — large dealership counts + fragmented DMS landscape."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC luxury dealership market; lower TAM but high ARPU."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Small TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower-ARPU dealership tier; opportunistic."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life dependency.",
+    "tags": [
+      "vertical-ai",
+      "auto-dealership",
+      "voice-ai",
+      "service-department",
+      "dms-integration",
+      "beyond-tlife",
+      "trend-11-auto-service-advisor"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion idea — deliberately outside T-Life portfolio frame; tlifeAssetRefs is just t-life-capital (funding only, no operating edge).",
+    "whyNow": "Three converging factors. (1) Voice AI quality crossed dealership-acceptable threshold in 2024-25 (ElevenLabs, OpenAI Realtime API). (2) US + EU dealer profit margins compressing post-COVID; service is the rate-limiter and any tech that captures lost calls pays back fast. (3) CDK Global cybersecurity incident June 2024 + 14-day outage destroyed dealer trust in incumbent monoculture — opens DMS-adjacent product opportunities.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP voice + chat agent + appointment booking; 3 design-partner dealerships in Germany at $1K/store/mo; DMS integration validated with at least 1 major (CDK or Reynolds equivalent EU)."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 dealerships across DE + UK + France = €600-800K ARR; multi-language support; manufacturer (OEM) partnership conversations initiated."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "500-800 dealerships = €5-10M ARR; expand to US via DMS partnership; OEM-channel sales (VW Group, BMW, Mercedes service network)."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€400K-€900K",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Pure SaaS. Main costs: 2 voice-AI engineers + 1 DMS-integration engineer + 1 dealer-BD."
+    },
+    "competitors": [
+      {
+        "name": "CDK Global",
+        "type": "incumbent",
+        "geography": "US/Global",
+        "note": "Dominant US DMS. June 2024 cybersecurity outage destroyed dealer trust. Weak AI capabilities."
+      },
+      {
+        "name": "Reynolds & Reynolds",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Second-tier US DMS. Closed ecosystem; weak AI."
+      },
+      {
+        "name": "Conversica",
+        "type": "incumbent",
+        "geography": "US/Global",
+        "note": "B2B conversational AI; generic; not auto-vertical-deep."
+      },
+      {
+        "name": "DriveCentric",
+        "type": "startup",
+        "geography": "US",
+        "note": "Auto-sales-focused AI; ~$10M ARR [ESTIMATE]; sales not service."
+      },
+      {
+        "name": "Numa (US)",
+        "type": "startup",
+        "geography": "US",
+        "note": "Auto service-department AI; raised ~$40M; US-anchored. Closest direct competitor for US market."
+      },
+      {
+        "name": "Pinewood, Reynolds Europe, Keyloop",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "EU DMS players; same dynamic as CDK/Reynolds US."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 4,
+      "regulatoryRisk": 4,
+      "founderAvailability": 3,
+      "composite": 3.1
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #11 (AI service advisor for dealerships; answers same 15 questions 24/7). Numa proves the US pattern; EU is open.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "ab-a1",
+        "claim": "70%+ of dealership profit is service + parts (US norm)",
+        "source": "[UNVERIFIED — NADA Data]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ab-a2",
+        "claim": "30-40% of inbound service calls abandoned or go to voicemail",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ab-a3",
+        "claim": "Numa (US) raised ~$40M for auto service AI",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ab-a4",
+        "claim": "~18K US dealerships, ~30K EU dealerships",
+        "source": "[ESTIMATE — NADA / ACEA]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ab-a5",
+        "claim": "CDK Global June 2024 cybersecurity outage lasted ~14 days, affected ~15K dealerships",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ab-k1",
+        "hypothesis": "3 mid-size German dealership groups sign $1K/store/month pilot in 10 weeks",
+        "experiment": "Direct BD with 15 German dealerships",
+        "costEur": 6000,
+        "durationWeeks": 10,
+        "killSignal": "<1 signed",
+        "validateSignal": "≥3 signed pilots"
+      },
+      {
+        "id": "ab-k2",
+        "hypothesis": "Voice agent handles ≥80% of common service inquiries (booking, FAQ, recall lookup) without human handoff",
+        "experiment": "30-day pilot with 1 design-partner dealership; measure auto-resolution rate",
+        "costEur": 15000,
+        "durationWeeks": 12,
+        "killSignal": "<60% auto-resolution",
+        "validateSignal": "≥80% auto-resolution AND dealer NPS ≥+30"
+      },
+      {
+        "id": "ab-k3",
+        "hypothesis": "DMS integration (CDK Global EU / Pinewood / Keyloop) viable with read-write access to appointment schedule",
+        "experiment": "Engage 1 DMS vendor for API partnership; validate technical feasibility",
+        "costEur": 8000,
+        "durationWeeks": 8,
+        "killSignal": "DMS denies API access OR requires >€100K integration fee",
+        "validateSignal": "API access secured at <€20K integration fee"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Numa expands to EU directly, capturing the market with US-tested product",
+        "likelihood": "medium",
+        "earlySignal": "Numa EU job postings; partnership announcements"
+      },
+      {
+        "cause": "CDK Global / Pinewood ship native AI bundled into DMS, undercutting standalone product on price",
+        "likelihood": "medium",
+        "earlySignal": "CDK / Pinewood product announcements + acquisitions"
+      },
+      {
+        "cause": "Dealership procurement is slow (3-6 month cycles even for $1K/mo product) — burn rate exceeds revenue ramp",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test ab-k1 sales cycle length"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.2,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Numa US precedent; service-department AI is high willingness-to-pay vertical. €10M ARR = 700-1000 dealerships at €10-15K avg ACV — feasible in 36 months with focused EU GTM + OEM channel."
+    }
+  },
+  {
+    "id": "concierge-new-parents",
+    "title": "Concierge",
+    "ycCategory": "Family Operations / New Parents",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Family operating system for new parents — shared calendar, feeding/sleep tracking, pediatric AI advisor, family communication. The OTHER sandwich-generation product (counterpart to Trellis for aging parents).",
+    "description": "60M+ households with kids under 5 in US + EU combined. Existing solutions are fragmented: BabyCenter app (Everyday Health, declining), Huckleberry (sleep-only, ~$10M ARR), Glow Baby (early stage), paper notes, scattered WhatsApp groups, calendar apps. Parents in dual-career households (now 70%+ of new-parent households) need real coordination tools urgently. The buyer is the new parent + grandparent; willingness-to-pay is high (every other purchase decision is being made on baby-anxiety).\n\nConcierge is Trellis's sibling product for the other end of the family-care spectrum:\n• Shared baby/toddler calendar with care-provider invites (grandparents, daycare, babysitters)\n• Feeding + sleep + milestone tracking with AI summarization for pediatrician visits\n• Photo journal with auto-share to family + auto-organized milestones\n• Pediatric AI advisor (AAP/NHS-trained) + family-doctor-loop integration\n• Care-coordinator integration (nanny payroll via Sittercity, daycare communication via Brightwheel)\n\nPricing: €15-30/mo per family. Family = 2 parents + 1-2 grandparents + 1-2 babies/toddlers.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "UK + DACH + Nordics for digital adoption among new parents. France/Italy/Spain secondary (family-culture-aligned).",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "UK / DACH / Nordics primary."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has young parent demographic but conservative cultural attitudes about AI in family life."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Strong family-culture but small TAM; pilot geography."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower digital-tool spend by new parents."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life dependency. Could share back-end and team with Trellis (sandwich-generation family-ops umbrella).",
+    "tags": [
+      "family-ops",
+      "new-parents",
+      "consumer-saas",
+      "pediatrics",
+      "ai-advisor",
+      "beyond-tlife",
+      "trend-20-family-ops"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion idea — deliberately outside T-Life portfolio frame; tlifeAssetRefs is just t-life-capital (funding only, no operating edge).",
+    "whyNow": "Three converging factors. (1) Dual-career households at all-time high; both parents working full-time forces coordination not just communication. (2) Remote work + flexible schedules increase the surface area for who-does-what coordination. (3) AI pediatric-advisor quality is finally good enough; AAP / NHS guidance + LLM gives reliable everyday answers without needing a doctor.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with calendar + feeding/sleep tracker + photo journal + AI pediatric advisor; pre-sell 200 families at €25/mo annual prepay via paid social + content."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5K families = €1.2-1.8M ARR; partnership with one major content platform (BabyCenter / What to Expect / Mumsnet) for distribution."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "30-50K families = €8-15M ARR; expand to daycare-integration B2B revenue; pilot HR employee-benefit channel (employer pays for employees' parental concierge)."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€400K-€800K",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Pure SaaS. Main costs: 2 engineers + content + brand + paid acquisition test budget."
+    },
+    "competitors": [
+      {
+        "name": "BabyCenter (Everyday Health)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Largest content/community brand for new parents; aging product; declining engagement."
+      },
+      {
+        "name": "Huckleberry",
+        "type": "startup",
+        "geography": "US",
+        "note": "Sleep-coaching-focused; ~$10M ARR [ESTIMATE]; narrow product."
+      },
+      {
+        "name": "Glow Baby",
+        "type": "startup",
+        "geography": "US",
+        "note": "Early-stage; cycle-tracking lineage; not family-ops-focused."
+      },
+      {
+        "name": "Brightwheel",
+        "type": "startup",
+        "geography": "US",
+        "note": "Daycare-side software; partnership candidate."
+      },
+      {
+        "name": "Cozi Family Organizer",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Generic family calendar; not new-parent-specific."
+      },
+      {
+        "name": "Notion + WhatsApp + iCloud (the actual incumbent)",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Current default. Inefficient but free."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 5,
+      "regulatoryRisk": 4,
+      "founderAvailability": 4,
+      "composite": 3.35
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #20 (family ops automation: forms, scheduling, logistics) and #4 (action apps that do things, not apps to stare at).",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "co-a1",
+        "claim": "60M+ households with kids under 5 in US + EU combined",
+        "source": "[ESTIMATE — Census / Eurostat]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "co-a2",
+        "claim": "Dual-career households now 70%+ of new-parent households in US/EU",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "co-a3",
+        "claim": "Huckleberry (sleep) ~$10M ARR",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "co-a4",
+        "claim": "BabyCenter user base declining post-2020",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "co-a5",
+        "claim": "AAP and NHS pediatric guidance is well-structured and LLM-trainable",
+        "source": "[CONFIRMED — public guidelines]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "co-k1",
+        "hypothesis": "Pre-sell 200 families at €25/mo annual prepay in 6 weeks via Meta paid acquisition at CAC <€60",
+        "experiment": "€8K paid acquisition test budget; new-parent demographic targeting",
+        "costEur": 10000,
+        "durationWeeks": 6,
+        "killSignal": "<50 sign-ups OR CAC >€120",
+        "validateSignal": "≥200 sign-ups AND CAC <€60"
+      },
+      {
+        "id": "co-k2",
+        "hypothesis": "MVP retention >70% at 90 days (clear product-value perception)",
+        "experiment": "Deploy MVP to 100 design-partner families; measure cohort retention",
+        "costEur": 40000,
+        "durationWeeks": 14,
+        "killSignal": "<50% 90-day retention",
+        "validateSignal": "≥70% retention AND ≥3 features used weekly"
+      },
+      {
+        "id": "co-k3",
+        "hypothesis": "Distribution partnership with 1 major content platform (BabyCenter / What to Expect / Mumsnet / The Bump) in 12 weeks",
+        "experiment": "Direct BD with content platforms",
+        "costEur": 4000,
+        "durationWeeks": 12,
+        "killSignal": "0 advanced past initial meeting",
+        "validateSignal": "≥1 signed distribution LOI"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "BabyCenter (Everyday Health) launches own AI version of the product with brand + distribution moat",
+        "likelihood": "medium",
+        "earlySignal": "BabyCenter / Everyday Health product announcements + AI staffing"
+      },
+      {
+        "cause": "Notion + Apple Family Sharing + Google Family Link satisfy enough use cases that paid product loses to free alternatives",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test co-k1 willingness-to-pay survey"
+      },
+      {
+        "cause": "Pediatric AI advisor liability concerns slow adoption (insurance, regulatory)",
+        "likelihood": "low",
+        "earlySignal": "Engage 1 health-tech lawyer for product-liability review in Month 2"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.5,
+      "reaches10mArrBy36mo": 0.25,
+      "totalFailureBy36mo": 0.2,
+      "basisOfEstimate": "Huckleberry $10M-class precedent shows new-parent willingness-to-pay. Family-ops integrated product has higher ARPU + better retention than narrow point-products. €10M ARR = 30-50K families × €240-300/yr — feasible in 36 months."
+    }
+  },
+  {
+    "id": "proof-humanity-verification",
+    "title": "Proof",
+    "ycCategory": "AI Safety / Identity Verification",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Deepfake-resistant identity verification API — every platform needs to verify 'this is a real human' within 2 years. Plug-and-play voice + video + behavioral proof-of-humanity.",
+    "description": "AI deepfakes broke selfie-based KYC, voice authentication, and video-call identity verification in 2024-25. Worldcoin's iris-scan approach is dystopian; passive cryptographic attestation (Apple Private Access Tokens, Google Play Integrity) is partial; no commercial-grade plug-and-play API exists for 'this user is verifiably a human.'\n\nProof is verification-as-a-service: behavioral biometric (typing rhythm, mouse movement, voice cadence) + cryptographic device attestation + optional liveness check + Apple/Google Private Access Token integration. Sold to banks, social platforms, dating apps, content platforms, and regulated marketplaces. Pricing: per-verification ($0.10-1.00 depending on confidence level) + enterprise subscription tier.\n\nThe wedge over Persona / Onfido / Jumio / Veriff is the AI-deepfake-resistant focus: existing KYC vendors are still tuned for selfie + document, which deepfakes destroyed in 2024-25. Proof is the next-generation layer.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "EU AI Act + GDPR + deepfake-regulation pressure creates EU-native demand. Banks, social platforms, regulated marketplaces.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "EU AI Act + GDPR + deepfake regulation creates structural demand."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has KYC demand but conservative regulatory frame on biometrics."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Pilot geography only."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller TAM."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life dependency.",
+    "tags": [
+      "identity-verification",
+      "deepfake-defense",
+      "ai-safety",
+      "kyc",
+      "biometric",
+      "beyond-tlife",
+      "trend-17-human-verification"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion idea — deliberately outside T-Life portfolio frame; tlifeAssetRefs is just t-life-capital (funding only, no operating edge).",
+    "whyNow": "Three converging factors. (1) AI deepfakes (voice + video) destroyed traditional KYC selfie + document checks in 2024-25; new layer needed. (2) EU AI Act creates regulatory pressure for deployer obligations on human verification. (3) Apple / Google ship Private Access Tokens making device-level attestation feasible as ingredient.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP API with behavioral biometric + device attestation; 5 design-partner platforms (1 dating app, 1 social platform, 1 marketplace, 2 bank-adjacent fintech)."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 paying customers, €1-1.5M ARR; deepfake voice detection model >95% accuracy; first major bank or social platform signed."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "200-300 customers, €5-10M ARR; AI Act conformity-attestation product line; partnership with Apple Private Access Token / Google Play Integrity ecosystem."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€800K-€1.5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "AI engineering + sales team. Main costs: 3 ML engineers + 1 enterprise-AE + GPU training compute."
+    },
+    "competitors": [
+      {
+        "name": "Persona",
+        "type": "startup",
+        "geography": "US/Global",
+        "note": "KYC / identity-verification platform. ~$1.5B valuation 2021. Strong but tuned for selfie+document era; vulnerable on deepfake."
+      },
+      {
+        "name": "Onfido (Entrust)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Acquired by Entrust 2024. KYC focused; same selfie-era vulnerability."
+      },
+      {
+        "name": "Jumio, Au10tix, Veriff, Sumsub",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "KYC layer; same vulnerability profile."
+      },
+      {
+        "name": "Worldcoin",
+        "type": "startup",
+        "geography": "Global",
+        "note": "Iris-scan biometric for proof-of-humanity. Dystopian framing + hardware-dependent."
+      },
+      {
+        "name": "Apple Private Access Tokens / Google Play Integrity",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Device-attestation infrastructure. Partner not competitor — Proof builds on top."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 2.9
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #17 (digital verification you're a real human; every platform will need this within 2 years).",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "pr-a1",
+        "claim": "Voice deepfake fraud grew >300% in 2024 (FTC IC3)",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pr-a2",
+        "claim": "Persona valued ~$1.5B 2021",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pr-a3",
+        "claim": "Onfido acquired by Entrust 2024",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pr-a4",
+        "claim": "Apple Private Access Tokens + Google Play Integrity ship device-attestation primitives",
+        "source": "[CONFIRMED — public APIs]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "pr-a5",
+        "claim": "EU AI Act creates deployer obligations for AI-content-moderation that require human verification at scale",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "pr-k1",
+        "hypothesis": "Behavioral biometric model achieves ≥90% accuracy on 1K test set distinguishing human from AI-bot session",
+        "experiment": "Build model on public datasets (ASVspoof, behavioral-biometric benchmarks); test on synthesized AI-bot sessions",
+        "costEur": 20000,
+        "durationWeeks": 10,
+        "killSignal": "<80% accuracy",
+        "validateSignal": "≥90% accuracy"
+      },
+      {
+        "id": "pr-k2",
+        "hypothesis": "5 design-partner platforms sign API pilot at €5-30K/mo within 12 weeks",
+        "experiment": "Direct BD with dating apps (Bumble, Hinge EU), social platforms (BeReal, Mastodon), marketplaces, fintech",
+        "costEur": 8000,
+        "durationWeeks": 12,
+        "killSignal": "<2 signed",
+        "validateSignal": "≥5 signed pilots"
+      },
+      {
+        "id": "pr-k3",
+        "hypothesis": "Apple / Google partner-ecosystem access (Private Access Token integration) viable",
+        "experiment": "Engage Apple developer relations + Google Trust & Safety; confirm API access",
+        "costEur": 4000,
+        "durationWeeks": 6,
+        "killSignal": "Either Apple OR Google denies partner access",
+        "validateSignal": "Both ecosystems accessible without exclusivity requirement"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Persona / Onfido pivot to deepfake-defense and consume the category with installed-base distribution",
+        "likelihood": "high",
+        "earlySignal": "Persona/Onfido product roadmap quarterly tracking"
+      },
+      {
+        "cause": "Apple / Google ship native deepfake-resistant attestation as OS feature, eliminating the third-party need",
+        "likelihood": "medium",
+        "earlySignal": "Apple WWDC + Google I/O keynotes; iOS/Android beta features"
+      },
+      {
+        "cause": "EU AI Act / GDPR classify behavioral biometric as 'special category data' requiring extra consent — slows adoption",
+        "likelihood": "medium",
+        "earlySignal": "EDPB / CJEU guidance on behavioral biometric; engage privacy lawyer Month 2"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.3,
+      "reaches10mArrBy36mo": 0.15,
+      "totalFailureBy36mo": 0.45,
+      "basisOfEstimate": "Identity-verification API category has €100M+ winners (Persona, Onfido, Jumio). Deepfake-resistant focus is the wedge; KYC incumbents are vulnerable. Bear case: Persona absorbs the category. Bull case: become the deepfake-defense layer above all KYC vendors."
+    }
+  },
+  {
+    "id": "stoa-small-group-social",
+    "title": "Stoa",
+    "ycCategory": "Consumer Social / Small-Group",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Group chats as products — purpose-built spaces for 5-15 person hobby groups, friend circles, book clubs, mastermind groups. The anti-feed, anti-algorithm, anti-AI-slop social product.",
+    "description": "WhatsApp + Discord dominate small-group communication but are designed for scale and noise. Trend #6 in May-2026 list: people want small social, group chats as products, no feeds, no AI slop. Geneva (acquired by Discord 2022), Marco Polo, Telegram have variants but no breakout. The gap: a designed-for-purpose product for 5-15 person ongoing groups with rich structure (calendars, polls, shared documents, persistent threads, ambient presence).\n\nStoa is the small-group-as-product platform: 5-15 person ongoing groups (book clubs, masterminds, friend circles, hobby groups); rich structure (shared calendar, polls, decisions, threads, ambient presence indicators); no feeds, no algorithm, no AI slop, no growth-hacking; premium tier with AI-summarized recaps + scheduling agent + searchable history; family-loop variant for extended family.\n\nPricing: $5-10/mo per group (paid by 1-2 members for the whole group). Low ARPU; volume-game. Path to €10M = ~100K paid groups at €100/yr — niche but real.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "yellow",
+    "primaryMarketRationale": "Smaller WhatsApp dominance in some EU markets (Telegram strong in Eastern Europe/Russia, Signal in privacy-conscious DACH/Nordics) opens experimentation; Mediterranean has cultural alignment with designated small-group spaces.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "DACH / Nordics (privacy concern) + Mediterranean (family-group culture)."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC small-group culture; WhatsApp dominant."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Small TAM; pilot."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Telegram strong; lower willingness-to-pay."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No T-Life dependency.",
+    "tags": [
+      "consumer-social",
+      "small-group",
+      "messaging",
+      "community",
+      "anti-feed",
+      "beyond-tlife",
+      "trend-6-small-social"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "Boundary-expansion idea — deliberately outside T-Life portfolio frame; tlifeAssetRefs is just t-life-capital (funding only, no operating edge).",
+    "whyNow": "Three converging factors. (1) WhatsApp fatigue + Discord too noisy + algorithm skepticism reaching peak among Gen Z + Millennials. (2) AI slop in feeds creating demand for human-only spaces. (3) Geneva (Discord-acquired 2022) and Marco Polo validated the small-group product category exists; no breakout product yet.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with 5-15 person groups + rich structure (calendar, polls, threads); 500 active groups; freemium model with 20% paid conversion target."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5K active groups, 20% paid at €5/mo per group = €60K MRR; premium AI recap feature; family-loop variant launched."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "50K active groups, 30% paid = €1M MRR = €12M ARR; expand to verticalised group types (mastermind / book club / hobby community / family)."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€600K-€1.2M",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Pure consumer SaaS. Main costs: 3 engineers + 1 community manager + brand. Distribution is the hard part not infrastructure."
+    },
+    "competitors": [
+      {
+        "name": "WhatsApp Groups",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Dominant; free; designed for scale not purpose. The competitor is its ubiquity."
+      },
+      {
+        "name": "Discord",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Designed for large communities; small-group experience is poor; acquired Geneva 2022 but didn't integrate."
+      },
+      {
+        "name": "Geneva (Discord-acquired)",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Acquired by Discord 2022; product status unclear. Was closest small-group competitor."
+      },
+      {
+        "name": "Marco Polo",
+        "type": "startup",
+        "geography": "US",
+        "note": "Video-message group chat; ~$30M ARR [ESTIMATE]; declining engagement."
+      },
+      {
+        "name": "Telegram",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Channel/group hybrid; weak structure for ongoing purposeful groups."
+      },
+      {
+        "name": "Signal",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Privacy-focused; basic group chat; not purpose-built."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 3,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 4,
+      "regulatoryRisk": 4,
+      "founderAvailability": 3,
+      "composite": 2.85
+    },
+    "ycRfsCorrelation": "Maps to May-2026 36-list trend #6 (small social; group chats as products; no feeds, no AI slop).",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "assertions": [
+      {
+        "id": "so-a1",
+        "claim": "Geneva acquired by Discord 2022",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "so-a2",
+        "claim": "Marco Polo ~$30M ARR; declining engagement",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "so-a3",
+        "claim": "WhatsApp + Discord dominant for small-group comms across EU + US",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "so-a4",
+        "claim": "Gen Z + Millennial 'anti-feed' sentiment is documented (Pew, Edelman)",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "so-a5",
+        "claim": "Telegram strong in Eastern Europe and Russia; Signal in DACH/Nordics",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "so-k1",
+        "hypothesis": "100 active 5-15 person groups recruited within 6 weeks at <€20 per group acquisition",
+        "experiment": "Reddit + Twitter + creator partnerships; measure organic+paid acquisition",
+        "costEur": 8000,
+        "durationWeeks": 6,
+        "killSignal": "<40 groups OR cost >€50/group",
+        "validateSignal": "≥100 groups AND <€20/group"
+      },
+      {
+        "id": "so-k2",
+        "hypothesis": "20% paid conversion at €5/mo per group from active free groups within 90 days",
+        "experiment": "Run 90-day cohort with premium features; measure paid conversion",
+        "costEur": 15000,
+        "durationWeeks": 14,
+        "killSignal": "<10% paid conversion",
+        "validateSignal": "≥20% paid conversion AND >70% paid renewal at 3 months"
+      },
+      {
+        "id": "so-k3",
+        "hypothesis": "Active groups retain >60% activity at 90 days (engagement, not just signed up)",
+        "experiment": "Measure 90-day group activity rate from kill-test so-k1 cohort",
+        "costEur": 4000,
+        "durationWeeks": 14,
+        "killSignal": "<40% activity rate",
+        "validateSignal": "≥60% activity rate"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Discord pivots Geneva product back to small-group focus, capturing the category with installed-base distribution",
+        "likelihood": "medium",
+        "earlySignal": "Discord product announcements; Geneva product activity tracking"
+      },
+      {
+        "cause": "WhatsApp ships group-product features (polls, calendar, threads) that close the gap to acceptable",
+        "likelihood": "high",
+        "earlySignal": "Meta product announcements; WhatsApp Business features"
+      },
+      {
+        "cause": "B2C consumer social acquisition CAC is fundamentally hostile at €5/mo ARPU — cohort never reaches viability",
+        "likelihood": "high",
+        "earlySignal": "Kill-test so-k1 acquisition cost"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.25,
+      "reaches10mArrBy36mo": 0.1,
+      "totalFailureBy36mo": 0.5,
+      "basisOfEstimate": "Consumer social is the hardest venture category; bimodal outcomes. €10M ARR requires 80-100K paid groups at €100/yr — Discord-scale in a niche. Weakest entry of the boundary-expansion 7 honestly. Build only if founder has unusual community-design + organic-growth chops."
     }
   }
 ];

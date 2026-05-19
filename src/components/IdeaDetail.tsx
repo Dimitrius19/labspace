@@ -403,6 +403,7 @@ export function IdeaDetail({
 
       <div
         ref={panelRef}
+        data-memo-content
         className="relative ml-auto w-[480px] overflow-y-auto border-l border-slate-200 bg-white shadow-xl"
       >
         {/* Header */}
@@ -411,23 +412,36 @@ export function IdeaDetail({
             <h2 className="text-lg font-bold text-slate-900">{idea.title}</h2>
             <p className="mt-1 text-sm text-slate-500">{idea.oneLiner}</p>
           </div>
-          <button
-            onClick={onClose}
-            className="rounded-md p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
-          >
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+          <div className="flex items-center gap-1" data-memo-hide>
+            <button
+              onClick={() => window.print()}
+              title="Print memo (Cmd/Ctrl-P also works)"
+              className="rounded-md p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+              </svg>
+            </button>
+            <button
+              onClick={onClose}
+              className="rounded-md p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
 
         <div className="space-y-6 p-6">
           {/* Stage + Meta */}
           <div className="flex items-center gap-4">
-            <StageSelector
-              value={idea.stage}
-              onChange={(stage) => updateStage(idea.id, stage)}
-            />
+            <div data-memo-hide>
+              <StageSelector
+                value={idea.stage}
+                onChange={(stage) => updateStage(idea.id, stage)}
+              />
+            </div>
             <span className="rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
               {idea.ycCategory}
             </span>
@@ -602,9 +616,11 @@ export function IdeaDetail({
             <TLifeAssetRefsSection refs={idea.tlifeAssetRefs} />
           )}
 
-          {/* Go/No-Go Scorecard */}
+          {/* Go/No-Go Scorecard — legacy, hidden in memo print */}
           {idea.scorecard && (
-            <ScorecardSection idea={idea} />
+            <div data-memo-hide>
+              <ScorecardSection idea={idea} />
+            </div>
           )}
 
           {/* Competitive Landscape */}
@@ -677,18 +693,25 @@ export function IdeaDetail({
             </div>
           </div>
 
-          {/* Notes */}
+          {/* Notes — interactive textarea; in print, show the notes as a read-only block instead */}
           <div>
             <h3 className="mb-2 text-sm font-semibold text-slate-700">
-              Team Notes
+              {idea.notes ? "Decision Log & Notes" : "Team Notes"}
             </h3>
-            <textarea
-              value={idea.notes}
-              onChange={(e) => updateNotes(idea.id, e.target.value)}
-              placeholder="Add notes about this idea..."
-              className="w-full rounded-md border border-slate-200 p-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              rows={4}
-            />
+            <div data-memo-hide>
+              <textarea
+                value={idea.notes}
+                onChange={(e) => updateNotes(idea.id, e.target.value)}
+                placeholder="Add notes about this idea..."
+                className="w-full rounded-md border border-slate-200 p-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                rows={4}
+              />
+            </div>
+            {idea.notes && (
+              <div className="hidden whitespace-pre-wrap rounded-md border border-slate-200 p-3 text-xs leading-relaxed text-slate-700 print:block">
+                {idea.notes}
+              </div>
+            )}
           </div>
 
           <p className="text-xs text-slate-400">Added: {idea.addedDate}</p>
