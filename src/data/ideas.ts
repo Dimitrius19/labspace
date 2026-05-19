@@ -3643,10 +3643,10 @@ export const ideas: Idea[] = [
     "ycCategory": "Healthtech / Longevity",
     "ycBatchDate": "Fall 2026",
     "oneLiner": "Pharmacy-distributed at-home biomarker tracking and ELPEN-formulated supplement protocols for working-age longevity in Greece, Cyprus and the GCC.",
-    "description": "Levine PhenoAge, GlycanAge, Omega-3 Index, ApoB, HbA1c, hs-CRP, fasting insulin and ~20 other biomarkers now have established mortality-prediction power, but operationalising a longevity protocol for a working-age adult in Europe still requires navigating 3 specialists, self-formulating a supplement stack of variable quality, and paying out-of-pocket for tests not covered by EOPYY or private insurance. Function Health (US-only) and InsideTracker (fitness-skewed) are not legally compliant for the EU market without significant retooling. Pharmacist-channel longevity in Greece is fragmented across local supplement brands with no biomarker feedback loop.\n\nWellSpan is a pharmacy-distributed longevity protocol: €40-60/month subscription including (i) two quarterly biomarker panels collected via at-home phlebotomy or in-pharmacy draw partnership with EOPYY-contracted labs, (ii) an algorithmic dashboard tracking 12-15 actionable markers vs age-matched cohort and self-baseline, (iii) a personalised ELPEN-formulated supplement stack delivered monthly via the customer's preferred WinMedica pharmacy, and (iv) AI lifestyle coach (sleep, training, fasting) layered on top. The differentiating asset is the integrated supply chain: ELPEN/WinMedica owns the supplement formulation, the EOF-registered food-supplement regulatory dossier, and the 2,500+ pharmacy distribution channel — no horizontal competitor (Function, InsideTracker, Levels Health, Optimallabs) can replicate this in EU inside 18 months.\n\nGCC expansion via Elnova Dubai opens a parallel market of high-disposable-income expats and locals where the same pharmacy-distribution model is even more powerful given the dominance of vertically-integrated chains (BinSina, Boots Middle East, LIFE Pharmacy).",
+    "description": "Levine PhenoAge (Levine et al. 2018, *Aging*; Liu et al. 2018, *PLOS Medicine*), GlycanAge (Krištić et al. 2014), Omega-3 Index (Harris & von Schacky 2004; replicated 10-cohort meta-analysis 2017), ApoB (now the preferred ASCVD marker per 2019/2025 ESC/EAS guidelines), HbA1c, hs-CRP, fasting insulin and ~15 other biomarkers now have established mortality- or cardiometabolic-risk prediction power, but operationalising a longevity protocol for a working-age adult in Europe still requires navigating 3 specialists, self-formulating a supplement stack of variable quality, and paying out-of-pocket for tests largely not covered by EOPYY. Function Health (US-only via Quest Diagnostics; ~200K members at $365/yr as of May 2025) explicitly excludes EU; InsideTracker is athlete/fitness-skewed; Levels Health is CGM-narrow. Pharmacist-channel longevity in Greece is fragmented across supplement brands with no biomarker feedback loop.\n\nWellSpan is a pharmacy-distributed longevity protocol: €40-60/month subscription including (i) two quarterly biomarker panels collected via at-home phlebotomy or in-pharmacy draw, run through an EOPYY-contracted lab partner (Bioiatriki is the natural Tier-1 candidate given 72 diagnostic centres in GR/CY and existing EOPYY contracts; partnership is novel — not yet a reimbursed EOPYY workflow), (ii) an algorithmic dashboard tracking 12-15 actionable markers vs age-matched cohort and self-baseline, (iii) a curated supplement stack delivered monthly via the customer's preferred pharmacy — initial stack restricted to compliant food supplements (omega-3, Vit D3+K2, magnesium glycinate, NAC, creatine) since NMN remains a Novel Food in EU pending Commission authorisation post the EFSA May-2026 positive opinion, and rapamycin is prescription-only — and (iv) AI lifestyle coach layered on top. The differentiating asset is the integrated supply chain: ELPEN's pharma manufacturing capability + WinMedica's distribution into the ~10,500-pharmacy Greek market (WinMedica is the manufacturer/distributor, not a pharmacy retailer) + EOF regulatory familiarity — no horizontal competitor can replicate this stack in EU inside 18 months.\n\nGCC expansion via Elnova Dubai opens a parallel market where vertically-integrated pharmacy retail chains (BinSina ~150+ outlets; LIFE Pharmacy ~200+ outlets; Boots ME via Alshaya franchise — retail-only, not vertically integrated) dominate.",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
-    "primaryMarketRationale": "WinMedica is the single most powerful pharmacy-distribution asset in Greece for elder/wellness-facing financial and health products; ELPEN OTC and food-supplement formulation is the second; no other founder team can credibly stand up an integrated, EOF-compliant longevity protocol in EU inside 18 months.",
+    "primaryMarketRationale": "WinMedica's distribution network into the ~10,500 Greek pharmacies (WinMedica is the pharma manufacturer/distributor; the retail relationship is the moat, not retail ownership) is the most credible single channel for elder/wellness products; ELPEN's manufacturing capability for OTC and food supplements (specific supplement SKU dossier to be developed under EOF) is the second; no other founder team can credibly stand up an integrated, EOF-compliant longevity protocol in EU inside 18 months.",
     "expansionMarkets": [
       {
         "market": "europe",
@@ -3665,7 +3665,7 @@ export const ideas: Idea[] = [
       }
     ],
     "stage": "discovered",
-    "tlifeAngle": "ELPEN food-supplement formulation capability + WinMedica 2,500-pharmacy distribution + EOF/EMA regulatory familiarity is a triple-unfair-advantage stack that no horizontal longevity startup can match. Same channel logic that anchors Seniora applies here at higher AOV.",
+    "tlifeAngle": "ELPEN's pharma manufacturing capability (food-supplement SKU dossier to be developed under EOF; no existing consumer line as of May 2026 — this is a build) + WinMedica's distribution into the ~10,500-pharmacy Greek market + EOF/EMA regulatory familiarity is a triple-unfair-advantage stack that no horizontal longevity startup can match. Same channel logic that anchors Seniora applies here at higher AOV.",
     "tags": [
       "longevity",
       "biomarkers",
@@ -3679,16 +3679,16 @@ export const ideas: Idea[] = [
       "trend-3-elder-tech"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Trend match: 36-list #15 (longevity biomarkers actively managed) + #32 (personalized nutrition based on blood work) + #3 (elder tech adjacency). Pairs naturally with Seniora as the wellness-side complement to its fintech-side. Pharmacy distribution is the structural moat — not the biomarker panel or the supplement stack individually.",
-    "whyNow": "Three converging factors. (1) EU Regulation 2017/745 (IVDR) created clearer compliance pathways for at-home phlebotomy and CE-marked biomarker kits from May 2022. (2) Levine PhenoAge and GlycanAge have moved from research to commercial labs (Greek labs Mediclab and Bioiatriki now offer them at €80-120 per panel). (3) Function Health hit 100K+ paying members at $500/yr in 2024-25, proving the working-age longevity-as-a-subscription model — but Function explicitly excludes EU customers because of cross-border lab logistics. EU is wide open.",
+    "notes": "Trend match: 36-list #15 (longevity biomarkers actively managed) + #32 (personalized nutrition based on blood work) + #3 (elder tech adjacency). Pairs naturally with Seniora as the wellness-side complement to its fintech-side. Pharmacy distribution is the structural moat — not the biomarker panel or the supplement stack individually.\n\nValidation log (2026-05-16): Corrected EU IVDR reg number to 2017/746 (MDR is 2017/745). Function Health: ~200K members by May 2025 at $365/yr (price cut from $499), not 100K at $500. Removed NMN and rapamycin from headline stack: NMN remains a Novel Food in EU (EFSA positive opinion May 2026 but Commission authorisation pending), rapamycin is prescription-only — both require separate regulatory pathways. Replaced 'Mediclab' with Affidea/InterBalkan/Euromedica as Tier-2 lab options — Mediclab is a single Katerini facility, not a national chain. Reframed WinMedica role: manufacturer/distributor with reach into the ~10,500 Greek pharmacy market, NOT a retailer of 2,500 owned pharmacies (prior phrasing conflated distribution reach with ownership). ELPEN's consumer food-supplement line is a build, not an existing SKU range — flagged accordingly. EOPYY at-home phlebotomy is a novel arrangement (not currently reimbursed). Removed unverified 'ENA' supplement brand from competitor entry. Biomarker mortality-prediction claims primary-sourced (Levine 2018, Krištić 2014, Harris & von Schacky 2004, ESC/EAS 2019/2025).",
+    "whyNow": "Three converging factors. (1) EU Regulation 2017/746 (IVDR; fully applicable 26 May 2022) created clearer compliance pathways for CE-marked self-test devices and IVD home-collection; the companion MDR is Reg 2017/745. (2) Levine PhenoAge and GlycanAge have moved from research to commercial labs; commodity biomarker assembly via Greek tier-1 labs (Bioiatriki, Affidea, InterBalkan, Euromedica) lands at €80-120 per panel even though no branded 'PhenoAge panel' SKU exists yet — a productisation opportunity. (3) Function Health hit ~200K paying members at $365/yr by May 2025 (price cut from $499 earlier in 2024-25), proving the working-age longevity-as-a-subscription model — but Function explicitly excludes EU because of Quest Diagnostics geographic limits. EU is wide open.",
     "roadToMoat": [
       {
         "timeframe": "Month 0-6",
-        "milestone": "Pilot 200 customers across 20 WinMedica pharmacies in Attica; lock in lab partnership with Bioiatriki or Mediclab; design v1 ELPEN-formulated supplement stack (5 SKUs: omega-3, Vit D3+K2, magnesium glycinate, NAC, creatine); dashboard MVP."
+        "milestone": "Pilot 200 customers across 20 WinMedica-supplied pharmacies in Attica; lock in lab partnership with Bioiatriki (Tier 1) or Affidea/InterBalkan (Tier 2); design v1 ELPEN-formulated supplement stack (5 EU-compliant SKUs: omega-3, Vit D3+K2, magnesium glycinate, NAC, creatine); dashboard MVP."
       },
       {
         "timeframe": "Month 6-18",
-        "milestone": "Expand to 200 pharmacies, 5,000 active subscribers, €2.4M ARR; add Cyprus via Medochemie partnership; expand stack to 12 SKUs incl. NMN and rapamycin (where legal); launch AI lifestyle coach."
+        "milestone": "Expand to 200 pharmacies, 5,000 active subscribers, €2.4M ARR; add Cyprus via Medochemie partnership; expand stack to 12 EU-compliant food-supplement SKUs; add NMN only if/when Commission authorises post EFSA May-2026 positive opinion; rapamycin is Rx-only — only added behind a separate physician-supervised pathway (NewCo telemedicine layer or partner clinic referral); launch AI lifestyle coach."
       },
       {
         "timeframe": "Month 18-36",
@@ -3706,7 +3706,7 @@ export const ideas: Idea[] = [
         "name": "Function Health",
         "type": "startup",
         "geography": "US (no EU operation)",
-        "note": "100K+ members at $500/yr; explicit US-only because of cross-border lab logistics. Cannot enter EU without retooling."
+        "note": "~200K members by May 2025 at $365/yr (cut from $499). Explicit US-only via Quest Diagnostics partnership; cannot enter EU without retooling lab logistics."
       },
       {
         "name": "InsideTracker",
@@ -3727,10 +3727,10 @@ export const ideas: Idea[] = [
         "note": "Early-stage UK biomarker-as-subscription; small (<10K users), no pharmacy channel."
       },
       {
-        "name": "Local supplement brands (Lanes, Power Health, ENA)",
+        "name": "Local supplement brands (Lanes/Sarantis, Power Health)",
         "type": "incumbent",
         "geography": "Greece",
-        "note": "Sell SKUs through pharmacies but no biomarker feedback loop, no personalisation, commodity pricing."
+        "note": "Lanes (Sarantis Group, Vitamin C leader since 1981) and Power Health (est. 1984, in ~5,000 Greek pharmacies) dominate pharmacy-shelf supplements but have no biomarker feedback loop, no personalisation, commodity pricing."
       }
     ],
     "competitiveIntensity": "open",
@@ -3751,10 +3751,10 @@ export const ideas: Idea[] = [
     "ycCategory": "AI Agents / Vertical SaaS",
     "ycBatchDate": "Fall 2026",
     "oneLiner": "WhatsApp-native AI bookkeeper for Greek and Cypriot micro-SMEs — posts every receipt, files myDATA in real time, charges per transaction not per seat.",
-    "description": "Greece has ~600K SMEs with <10 FTE, of which ~480K (80%) outsource bookkeeping to a logistis charging €100-400/month for a service that consists largely of OCR-ing receipts, posting them to AADE myDATA, and filing periodic VAT returns. Cyprus, Bulgaria, Romania and Northern Italy show identical structural patterns. The logistis model is structurally exposed: ledger-posting is now an LLM-tractable task with near-zero marginal cost, and myDATA's compulsory real-time invoice transmission (mandatory since 1 Nov 2021, with the AADE peppol-style B2B mandate from late 2024) has already moved 90% of the data into machine-readable form. What is missing is a Greek-language WhatsApp UX that meets micro-businesses where they actually are — no portal logins, no desktop software, no formal handover from logistis.\n\nLogos Books is a WhatsApp-native bookkeeping agent. Users forward receipts, supplier invoices, and bank statements; the agent extracts, categorises, and posts each transaction to a cloud ledger, files myDATA submissions in real time, and runs supplier dunning, customer collections, and basic AR/AP triage. Pricing is per-transaction (€0.20-0.50/posting) plus a €15/month base — radically cheaper than a logistis for low-volume businesses, competitive for mid-volume, and structurally aligned with revenue. The product can either replace the logistis entirely or partner with progressive accounting firms as a productivity layer (positioning matters: 'replace your logistis' fights 30K Greek accounting professionals; 'make your logistis 10x more productive' coopts them).\n\nThe wedge is unfair channel access: WinMedica's 2,500-pharmacy network = 2,500 micro-SMEs with predictable, regulated transaction patterns and existing T-Life trust — the perfect cold-start customer profile. ALTP's industrial-park tenant network adds another 200+ SMEs in adjacent sectors.",
+    "description": "Greece has on the order of 700-820K SMEs total (Eurostat SBA fact sheet 2024), of which the vast majority (~96% EU-wide pattern) are micro-enterprises under 10 FTE — give or take a 600K micro-SME working number [EST, requires ELSTAT primary-source confirmation]. Outsourcing to a logistis is near-universal driven by myDATA complexity, at typical fees of €100-400/month for a service that consists largely of OCR-ing receipts, posting them to AADE myDATA, and filing periodic VAT returns. Cyprus, Bulgaria, Romania and Northern Italy show structurally similar — though not identical — patterns. The logistis model is structurally exposed: ledger-posting is now an LLM-tractable task with near-zero marginal cost, myDATA real-time invoice transmission has been mandatory since 1 Nov 2021, and Greek Law 5222/2025 sets the B2B peppol e-invoicing mandate at 2 Mar 2026 (large businesses) / Oct 2026 (rest) — the inflection point that puts 90%+ of SME transactions into machine-readable form at AADE. What is missing is a Greek-language WhatsApp UX that meets micro-businesses where they actually are — no portal logins, no desktop software, no formal handover from logistis.\n\nLogos Books is a WhatsApp-native bookkeeping agent. Users forward receipts, supplier invoices, and bank statements; the agent extracts, categorises, and posts each transaction to a cloud ledger, files myDATA submissions in real time, and runs supplier dunning, customer collections, and basic AR/AP triage. Pricing is per-transaction (€0.20-0.50/posting) plus a €15/month base — radically cheaper than a logistis for low-volume businesses, competitive for mid-volume, and structurally aligned with revenue. The product can either replace the logistis entirely or partner with progressive accounting firms as a productivity layer (positioning matters: 'replace your logistis' fights the OEE-licensed accounting profession; 'make your logistis 10x more productive' coopts them).\n\nThe wedge is unfair channel access: WinMedica's distribution into Greek pharmacies gives warm intros to several thousand micro-SMEs with predictable, regulated transaction patterns and existing T-Life trust — the perfect cold-start customer profile. ALTP's industrial-park tenant network adds another 200+ SMEs in adjacent sectors.",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
-    "primaryMarketRationale": "Greek SME density (600K) + myDATA real-time invoicing infrastructure + pharmacy and industrial-park channel access = the optimal cold-start environment in Europe. Cyprus follows immediately with shared regulatory frame and lower CAC.",
+    "primaryMarketRationale": "Greek micro-SME density + mature myDATA real-time invoicing + pending Mar/Oct 2026 B2B peppol mandate + pharmacy and industrial-park channel access = the optimal cold-start environment in Europe. Cyprus follows but at a 2-4 year lag — B2B e-invoicing is not yet mandated there (ViDA mandate from 2030); Cyprus monetises via voluntary onboarding, not regulatory tailwind, until then.",
     "expansionMarkets": [
       {
         "market": "balkans",
@@ -3769,11 +3769,11 @@ export const ideas: Idea[] = [
       {
         "market": "middle-east",
         "fit": "yellow",
-        "note": "UAE FTA e-invoicing mandate from 2026 creates a parallel structural opportunity; Elnova Dubai presence accelerates entry."
+        "note": "UAE FTA e-invoicing pilot launches Jul 2026; mandatory go-live 1 Jan 2027 for large businesses, phased after; Elnova Dubai presence accelerates entry once mandate goes live."
       }
     ],
     "stage": "discovered",
-    "tlifeAngle": "WinMedica 2,500-pharmacy network = 2,500 micro-SME warm intros; ALTP industrial-park tenants add 200+; agora-credit-intelligence pipeline already ingests AADE myDATA data, providing the technical substrate at marginal cost. Logos Books is a logical downstream product of the agora-credit data work.",
+    "tlifeAngle": "WinMedica's distribution into Greek pharmacies = several thousand micro-SME warm intros; ALTP industrial-park tenants add 200+; agora-credit-intelligence pipeline already ingests AADE myDATA data, providing the technical substrate at marginal cost. Logos Books is a logical downstream product of the agora-credit data work.",
     "tags": [
       "bookkeeping",
       "ai-agent",
@@ -3788,8 +3788,8 @@ export const ideas: Idea[] = [
       "trend-20-ops-automation"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Trend match: 36-list #21 (bookkeeping agents that charge per transaction) + #2 (managed AI employees for businesses) + #20 (ops automation). Pricing model is the load-bearing innovation — per-transaction aligns with the trend explicitly and disarms the logistis incumbent.",
-    "whyNow": "myDATA real-time invoice transmission has been mandatory in Greece since 1 Nov 2021, and the B2B peppol-style mandate from late 2024 means 90%+ of SME transactions are now in machine-readable form at AADE. LLM cost per posted transaction has fallen ~95% since GPT-4 launch (Mistral Small and Claude Haiku 4.5 can extract a Greek receipt for &lt;€0.003), making per-transaction pricing structurally profitable for the first time. EU SAF-T harmonisation (Bulgaria 2026, Romania already live, Italy SdI mature, Portugal SAF-T mature) creates a multi-country product opportunity within a single regulatory family.",
+    "notes": "Trend match: 36-list #21 (bookkeeping agents that charge per transaction) + #2 (managed AI employees for businesses) + #20 (ops automation). Pricing model is the load-bearing innovation — per-transaction aligns with the trend explicitly and disarms the logistis incumbent.\n\nValidation log (2026-05-16): Corrected AADE B2B peppol mandate date — Greek Law 5222/2025 sets it at 2 Mar 2026 (large) / Oct 2026 (rest), NOT late 2024 (prior phrasing was off by ~14 months and changed the why-now framing). Flagged TAM trio as estimates: 600K micro-SME count is plausible (Eurostat SBA 2024 indicates ~700-820K total SMEs, ~96% under 10 FTE) but requires ELSTAT primary-source confirmation; the 80% logistis-outsourcing figure and 30K licensed-logistis figure lack public citation. SoftOne is no longer independent — Entersoft acquired Oct 2025, merged entity is ENTERSOFTONE. Pylon and SingularLogic both inside Epsilon Net group (consolidated). Removed Mews from competitor list — it's hospitality PMS, not expense management; replaced with Qonto/Payhawk. Reframed Cyprus expansion — B2B e-invoicing is NOT yet mandatory there (ViDA 2030); Cyprus is voluntary-onboarding territory until then, not a regulatory-tailwind market. WinMedica reframed as manufacturer/distributor with reach into Greek pharmacies (the warm-intro count is several thousand, not a controlled 2,500-pharmacy retail network). Haiku 4.5 cost estimate validated.",
+    "whyNow": "myDATA real-time invoice transmission has been mandatory in Greece since 1 Nov 2021; Greek Law 5222/2025 sets the B2B peppol mandate at 2 Mar 2026 (large) / Oct 2026 (rest) — the 12-month launch window before broad enforcement is the optimal entry window. LLM cost per posted transaction has fallen ~95% since GPT-4 launch (Claude Haiku 4.5 priced $1/$5 per M input/output tokens = ~€0.003 for a typical receipt extract + categorisation), making per-transaction pricing structurally profitable for the first time. EU SAF-T / peppol harmonisation across markets at different maturities (Romania RO e-Factura mandatory since Jan 2024; Bulgaria SAF-T Jan 2026 large; Italy SdI mature since 2019; Portugal SAF-T billing mature, accounting submission delayed to 2028; Spain TicketBAI Basque-only) creates a multi-country product opportunity within a single regulatory family — though each market needs localisation, and Cyprus does not yet have a B2B mandate.",
     "roadToMoat": [
       {
         "timeframe": "Month 0-6",
@@ -3812,22 +3812,22 @@ export const ideas: Idea[] = [
     },
     "competitors": [
       {
-        "name": "Epsilon Net / SoftOne",
+        "name": "Epsilon Net (incl. Pylon, Singular Logic)",
         "type": "incumbent",
-        "geography": "Greece",
-        "note": "Tier-1 Greek accounting software. Built for accountants, not for SMEs directly. No WhatsApp channel, no per-transaction pricing. Channel partner candidate."
+        "geography": "Greece / Athens SE: EPSr",
+        "note": "Listed Greek accounting/ERP champion since Jul 2020. Owns Pylon ERP (20K+ installs) and acquired SingularLogic ('Epsilon SingularLogic'). Built for accountants, not for SMEs directly. No WhatsApp channel, no per-transaction pricing. Channel partner candidate."
       },
       {
-        "name": "Pylon / Singular Logic",
+        "name": "ENTERSOFTONE (ex-Entersoft + SoftOne)",
         "type": "incumbent",
         "geography": "Greece",
-        "note": "ERP-anchored, mid-market focused. Misses the &lt;10 FTE segment entirely."
+        "note": "Entersoft acquired SoftOne in Oct 2025; merged entity is the second tier-1 Greek accounting/ERP vendor. Mid-market focused; misses the <10 FTE segment."
       },
       {
-        "name": "Mews / Pleo / Spendesk",
+        "name": "Pleo / Spendesk / Qonto / Payhawk",
         "type": "startup",
         "geography": "EU",
-        "note": "Expense management adjacent. Do not file myDATA, not Greek-tax-aware."
+        "note": "Expense management and SMB banking adjacent. Do not file myDATA, not Greek-tax-aware. (Mews — previously listed — is hospitality PMS, not expense management; removed.)"
       },
       {
         "name": "Xero / QuickBooks",
@@ -3836,10 +3836,10 @@ export const ideas: Idea[] = [
         "note": "Generic SME accounting. Not Greek-tax-aware out of the box; cannot file myDATA without third-party integration."
       },
       {
-        "name": "Local logistis (30K accountants)",
+        "name": "Local logistis (OEE-licensed accountants)",
         "type": "incumbent",
         "geography": "Greece",
-        "note": "Largest competitor by revenue capture. Slow, manual, but trusted. Strategy: coopt as channel partner with revenue share."
+        "note": "Largest competitor by revenue capture (OEE represents ~90K economists; specific licensed-logistis count not pinned to a primary source — flag for ELSTAT/OEE verification). Slow, manual, but trusted. Strategy: coopt as channel partner with revenue share."
       }
     ],
     "competitiveIntensity": "moderate",
@@ -3860,7 +3860,7 @@ export const ideas: Idea[] = [
     "ycCategory": "AI Infrastructure / Regulated Industries",
     "ycBatchDate": "Fall 2026",
     "oneLiner": "On-device AI inference appliance for GMP sterile manufacturing — runs fine-tuned LLMs inside air-gapped GAMP5 isolators with full Part 11 audit trail and zero cloud egress.",
-    "description": "Pharma GMP, hospital clinical, and defense data are structurally incompatible with cloud LLM inference: data residency, validated-software constraints (GAMP5 Cat 4/5), 21 CFR Part 11 audit trail, and IP/security concerns mean most operators cannot send batch records, deviations, or patient PHI to OpenAI, Anthropic, or Azure OpenAI. The 2025-26 release of capable 7B-70B parameter models (Llama 3.3 70B, Mistral Small, Qwen2.5, gpt-oss) that run on a single A100 or pair of RTX 5090s changed the economics. EU GMP Annex 1 (Aug 2023), EMA Sept 2024 AI Reflection Paper, and FDA CDER's 2023 AI discussion paper plus the 2025 draft guidance all made AI-derived evidence regulator-acceptable IF traceable, explainable, and validated — but only on validated software. Cloud LLMs cannot be validated by the operator.\n\nVaultEdge is a turnkey on-device AI appliance: validated hardware unit + fine-tuned model + GAMP5 Cat 4 software wrapper + Part 11 audit trail layer + EU AI Act Art. 6(3) self-classification documentation. Sold per-site €80-150K hardware + €30-60K/site annual support. Use cases: batch record review, deviation triage and classification, root-cause analysis assistance, SOP intelligence retrieval, gowning-video review (on-device computer vision). Software runs on private network only, no cloud egress, with cryptographic attestation of model version + decision provenance for every inference. Each unit ships with a pre-validated IQ/OQ/PQ pack so the customer's validation lift is &lt;6 weeks (vs 6-12 months for cloud LLM validation).\n\nDirect Aletheia GxP companion: Aletheia is the SaaS competency intelligence layer; VaultEdge is the on-device inference substrate. Tripoli HPAPI provides the design partnership; ELPEN's broader sterile lines provide validation sites 2-4. Adjacent expansion: hospital pharmacies (FDA Part 11 + HIPAA), defense procurement (CMMC + ITAR), and EU sovereign-AI procurement (GAIA-X aligned).",
+    "description": "Pharma GMP, hospital clinical, and defense data are structurally incompatible with cloud LLM inference: data residency, validated-software constraints (GAMP5 Cat 4/5), 21 CFR Part 11 audit trail, and IP/security concerns mean most operators cannot send batch records, deviations, or patient PHI to OpenAI, Anthropic, or Azure OpenAI. The release of capable 24B-70B parameter open-weight models — Llama 3.3 70B (Meta, Dec 2024), Mistral Small 3.1 (Apache 2.0, 24B), Qwen2.5 (Alibaba, Apache 2.0), gpt-oss 120B + 20B (OpenAI, Aug 2025, Apache 2.0) — changed the economics. EU GMP Annex 1 (Aug 2023), EMA Sept 2024 AI Reflection Paper, and FDA's 2023 CDER AI discussion paper plus the Jan 2025 draft guidance ('Considerations for the Use of AI to Support Regulatory Decision-Making') all made AI-derived evidence regulator-acceptable IF traceable, explainable, and validated — but only on validated software. Cloud LLMs cannot be validated by the operator.\n\nVaultEdge is a turnkey on-device AI appliance: validated hardware unit + fine-tuned model + GAMP5 Cat 4 software wrapper + Part 11 audit trail layer + EU AI Act Art. 6(3) self-classification documentation. Realistic hardware reference architecture: single NVIDIA L40S or RTX PRO 6000 Blackwell (data-centre-licensed, 96GB VRAM, ~€8-12K) in an OEM-validated 4U chassis with redundant PSU, IPMI, hot-swap NVMe, EU-CE certification — BOM €40-70K. Sold per-site at €100-150K all-in plus €30-60K/site annual support. Use cases: batch record review, deviation triage and classification, root-cause analysis assistance, SOP intelligence retrieval, gowning-video review (on-device computer vision). Software runs on private network only, no cloud egress, with cryptographic attestation of model version + decision provenance for every inference. Each unit ships with a pre-validated IQ/OQ/PQ pack so the customer's validation lift is &lt;6 weeks (vs 6-12 months for cloud LLM validation).\n\nDirect Aletheia GxP companion: Aletheia is the SaaS competency intelligence layer; VaultEdge is the on-device inference substrate. Tripoli HPAPI provides the design partnership; ELPEN's broader sterile lines provide validation sites 2-4. Adjacent expansion: hospital pharmacies (FDA Part 11 + HIPAA), defense procurement (CMMC + ITAR), and EU sovereign-AI procurement (GAIA-X aligned).",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
     "primaryMarketRationale": "Tripoli HPAPI is a working design partner; Greek/Balkan/Cypriot pharma manufacturers have lower cloud-LLM political tolerance than UK/US peers (data sovereignty is a felt issue post-2010 crisis); ELPEN's sterile lines provide marquee EU reference customers.",
@@ -3900,12 +3900,12 @@ export const ideas: Idea[] = [
       "trend-34-ai-defense"
     ],
     "addedDate": "2026-05-16",
-    "notes": "Trend match: 36-list #27 (on-device AI for healthcare/legal/finance) + #18 (agent permissions, security, audit trails) + #2 (managed AI employees in regulated workflows) + #34 (AI-native defense and compliance tools). Hardware-anchored play — higher capex than pure SaaS, but defensibility profile is qualitatively different and complementary to Aletheia GxP. Aletheia and VaultEdge could ship as a bundle or be founded as a single dual-product company.",
-    "whyNow": "Three converging factors. (1) Open-weight models (Llama 3.3, Mistral, Qwen2.5, gpt-oss) crossed the 'good enough for narrow regulated tasks' threshold in 2025 and run on commodity hardware (single A100 or 2x RTX 5090 ≈ €20-40K). (2) EU AI Act Art. 6(3) self-classification pathway (effective Aug 2026) gives operators a legal route to deploy decision-support AI without high-risk conformity assessment — but only on validated software. (3) Cloud LLM providers (OpenAI, Anthropic) are still unwilling to sign GxP validation contracts at the model level, leaving a vacuum that on-prem inference appliances fill. Veeva and MasterControl will not enter this hardware category (breaks their multi-tenant model); horizontal hardware-AI players (Lambda Labs, Run:ai) do not have the GxP validation know-how.",
+    "notes": "Trend match: 36-list #27 (on-device AI for healthcare/legal/finance) + #18 (agent permissions, security, audit trails) + #2 (managed AI employees in regulated workflows) + #34 (AI-native defense and compliance tools). Hardware-anchored play — higher capex than pure SaaS, but defensibility profile is qualitatively different and complementary to Aletheia GxP. Aletheia and VaultEdge could ship as a bundle or be founded as a single dual-product company.\n\nValidation log (2026-05-16): Corrected gpt-oss release date — Aug 5 2025 (not 2024). Revised hardware reference: the prior '2x RTX 5090 = €20-40K' path is REFUTED because NVIDIA's consumer-GeForce EULA prohibits data-centre use and a GxP-validated appliance cannot ship with consumer cards; correct hardware reference is NVIDIA L40S or RTX PRO 6000 Blackwell (96GB, ~€8-12K, data-centre-licensed) in an OEM-validated 4U chassis with redundant PSU/IPMI/hot-swap/EU-CE — BOM €40-70K, sticker €100-150K. Comparable DGX Station A100 sticker is €91-137K turnkey. Hardware-inventory line item in capital plan increased from €150-250K to €250-400K to reflect realistic BOM. Corrected Hugging Face Inference Endpoints — VPC-attached managed cloud, not true on-prem; separate TGI/vLLM self-hosting is the real on-prem path. Llama 3.3 70B Q4 quant fits single A100 80GB but NVIDIA NIM recommends 2x80GB for production KV-cache headroom — note in roadmap. NVIDIA Run:ai acquisition closed Dec 2024 (announced Apr 2024). FDA Jan 2025 draft guidance confirmed. Veeva confirmed as multi-tenant-only with no on-prem variant. Aizon confirmed as Barcelona-HQ smart-mfg AI startup ~$30M raised."
+    "whyNow": "Three converging factors. (1) Open-weight models (Llama 3.3 70B, Mistral Small 3.1, Qwen2.5 72B, gpt-oss 120B/20B — most released Dec 2024 through Aug 2025) crossed the 'good enough for narrow regulated tasks' threshold and run on a single NVIDIA L40S or RTX PRO 6000 Blackwell (96GB, ~€10K) in an OEM-validated chassis (BOM €40-70K — DIY whitebox is cheaper but not sellable as GxP-validated hardware; consumer RTX 5090 is excluded by NVIDIA's data-centre EULA). (2) EU AI Act Art. 6(3) self-classification pathway (effective Aug 2026) gives operators a legal route to deploy decision-support AI without high-risk conformity assessment — but only on validated software. (3) Cloud LLM providers (OpenAI, Anthropic) are still unwilling to sign GxP validation contracts at the model level, leaving a vacuum that on-prem inference appliances fill. Veeva and MasterControl will not enter this hardware category (breaks their multi-tenant model — Veeva is explicit that Vault is true multi-tenant with no on-premises version); horizontal hardware-AI players (Lambda Labs, NVIDIA post-Run:ai acquisition Apr 2024) do not have the GxP validation know-how.",
     "roadToMoat": [
       {
         "timeframe": "Month 0-6",
-        "milestone": "MVP appliance built on Llama 3.3 70B + Mistral Small for batch record review; Tripoli HPAPI deployment as first design partner; pre-validated IQ/OQ/PQ pack drafted with USDM or PharmaLex; AI Act Art. 6(3) self-classification documentation completed; first external pilot LOI."
+        "milestone": "MVP appliance built on Llama 3.3 70B (Q4_K_M quantization fits 80GB; NVIDIA NIM-recommended production headroom is closer to 2x80GB so size hardware accordingly) + Mistral Small 3.1 (24B) for batch record review; Tripoli HPAPI deployment as first design partner; pre-validated IQ/OQ/PQ pack drafted with USDM or PharmaLex; AI Act Art. 6(3) self-classification documentation completed; first external pilot LOI."
       },
       {
         "timeframe": "Month 6-18",
@@ -3920,20 +3920,26 @@ export const ideas: Idea[] = [
       "level": "medium",
       "estimatedSeedCapital": "€600K-€1.5M",
       "capexRatio": "40% capex / 60% opex",
-      "note": "Hardware inventory (€150-250K for first 5-10 units), validation pack development (€150K with USDM/PharmaLex partnership), 2 senior engineers with embedded/GAMP5 background (€240K), regulatory affairs advisor (€60K). Working capital tied up in hardware inventory is the main capital-intensity driver vs Aletheia GxP."
+      "note": "Hardware inventory (€250-400K for first 5-10 units at €40-70K BOM each, sized for OEM-validated chassis with data-centre-licensed GPU — not the €20-40K DIY whitebox path which is not GxP-sellable), validation pack development (€150K with USDM/PharmaLex partnership), 2 senior engineers with embedded/GAMP5 background (€240K), regulatory affairs advisor (€60K). Working capital tied up in hardware inventory is the main capital-intensity driver vs Aletheia GxP."
     },
     "competitors": [
       {
-        "name": "NVIDIA DGX + Run:ai / Lambda Labs",
+        "name": "NVIDIA DGX / DGX Station (post Run:ai acquisition)",
         "type": "incumbent",
         "geography": "Global",
-        "note": "Sell GPU appliances but not GMP-validated, no GAMP5 pack, no Part 11 wrapper. Channel partners not direct competitors."
+        "note": "Turnkey GPU appliances (DGX Station A100 sticker ~€91-137K) but not GMP-validated, no GAMP5 pack, no Part 11 wrapper. NVIDIA acquired Run:ai Apr 2024 for ~$700M; potential channel partner not direct competitor."
       },
       {
-        "name": "Hugging Face Inference Endpoints (on-prem)",
+        "name": "Hugging Face Inference Endpoints",
         "type": "startup",
         "geography": "Global",
-        "note": "Generic on-prem inference; no regulated-industry validation, no audit trail layer."
+        "note": "VPC-attached managed cloud on AWS/Azure/GCP — NOT true on-prem (true self-hosting requires separate TGI/vLLM deploy). No regulated-industry validation, no audit trail layer."
+      },
+      {
+        "name": "Lambda Labs",
+        "type": "startup",
+        "geography": "US/Global",
+        "note": "Private GPU-cloud and on-prem GPU servers since 2012; no GxP validation pack, hardware-only positioning."
       },
       {
         "name": "Veeva Vault Validation + Vault Training",
