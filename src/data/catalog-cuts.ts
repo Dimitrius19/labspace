@@ -155,5 +155,107 @@ export const catalogCuts: CatalogCut[] = [
     "title": "Agora Credit Intelligence",
     "composite": 3.0,
     "reason": "Private credit fund wearing AI clothing — loan book IS the product; capital intensity 'high' because it's a fund not a startup. AIFMD + Bank of Greece supervision + balance-sheet risk = wrong vehicle."
+  },
+  {
+    "id": "careschool-credentialing",
+    "title": "CareSchool",
+    "composite": 3.6,
+    "reason": "FOLD → CareStaff. National-authority recognition pathway is 24-36 months/jurisdiction; standalone is grant-funded not venture. Folded into CareStaff as agency-side onboarding + Filipino/Indian pipeline module — uses CareStaff's distribution."
+  },
+  {
+    "id": "homematch-discharge",
+    "title": "HomeMatch",
+    "composite": 3.35,
+    "reason": "FOLD → CareStaff. NHS-internal Discharge2Assess + sub-€100 placement fee + 18-month NHS procurement cycle = unviable standalone. Folded into CareStaff as Hospital Discharge Intake module; solves HomeMatch's two-sided cold-start (CareStaff supplies the agency side) and gives CareStaff a hospital land-and-expand vector."
+  },
+  {
+    "id": "ltcbridge-insurance",
+    "title": "LTCBridge",
+    "composite": 3.1,
+    "reason": "KILL — TAM ceiling is 30-60 EU LTC carriers × €500K = €15-30M ARR ceiling, services-business not venture; €2T funding-gap stat is societal not addressable; module-vendor pivot to Sapiens/Guidewire is a partnership business not venture."
+  },
+  {
+    "id": "silverwealth-decumulation",
+    "title": "SilverWealth",
+    "composite": 3.05,
+    "reason": "KILL — Zero T-Life edge by founder admission; real incumbents are Avaloq + FNZ + Generali/AXA/Allianz internal platforms (not Riskalyze); selling €100-300/advisor/mo into mutualistic banks already paying Avaloq is a feature not a wedge."
+  },
+  {
+    "id": "geropath-chronic-coordination",
+    "title": "GeroPath",
+    "composite": 2.9,
+    "reason": "KILL — Payor sales cycles (NHS ICB, German Krankenkassen, Spanish regions) are 24-36 months minimum; €800K-€2M seed cannot fund 50 payor-providers by M36; Cerner Population Health + Optum + Cegedim already in the payor-coordination layer."
+  },
+  {
+    "id": "talentbridge-refugee-integration",
+    "title": "TalentBridge",
+    "composite": 3.4,
+    "reason": "FOLD → MobiVisa. AMIF/ESF+ grant-driven Y1 revenue is a tell of NGO-tech business; the workflow (matching + credentialing + compliance) is a feature of broader visa-automation. Folded into MobiVisa as displaced-worker / humanitarian-status module."
+  },
+  {
+    "id": "tradesglobal-cross-border-placement",
+    "title": "TradesGlobal",
+    "composite": 3.2,
+    "reason": "KILL — Placement-fee economics don't compound: revenue resets annually, gross margins eaten by source-country recruitment CAC (30-60% of fee in practice); Hays/Randstad already tried this for 20 years and earn ~5% net."
+  },
+  {
+    "id": "nurseconnect-healthcare-mobility",
+    "title": "NurseConnect",
+    "composite": 3.1,
+    "reason": "KILL — Same placement-fee structural flaw + 1000+ existing agencies + NHS Professionals/Avant entrenched + WHO Code of Practice = operational drag not software wedge; staffing-agency P&L with software veneer."
+  },
+  {
+    "id": "skillbridge-eqf-credentialing",
+    "title": "SkillBridge EU",
+    "composite": 3.1,
+    "reason": "KILL — National-authority recognition pathway is geological (ENIC-NARIC + 27 ministries × 24-36 months per jurisdiction); EU-Horizon-grant-funded research consortium, not a VC business."
+  },
+  {
+    "id": "defensetender-eu-procurement",
+    "title": "DefenseTender",
+    "composite": 3.2,
+    "reason": "KILL — EU defense procurement is sovereign-direct (EDF capital-to-capital), ITAR/export-control gates a startup can't carry, Hensoldt/Leonardo/PGZ have in-house bid teams + Frost & Sullivan/Avascent already, founders have no security-clearance access."
+  },
+  {
+    "id": "housingflow-affordable",
+    "title": "HousingFlow",
+    "composite": 3.05,
+    "reason": "KILL — EU affordable-housing developers are <€20M revenue, capital-constrained, 4-7% project margins; €30-150K ACV is sticker-shock for the buyer; Procore already lost this market; municipal cycles 18 months."
+  },
+  {
+    "id": "agrolabor-seasonal",
+    "title": "AgroLabor",
+    "composite": 3.05,
+    "reason": "KILL as priced — Mediterranean farmers operate at 8-12% margin; €30-100/worker/month is 3-10% of total labor cost on top of wages, won't be paid. Real buyer is supermarket/CSRD; if revised would be different product (sell to Carrefour/Tesco scope-3 compliance, not farmers)."
+  },
+  {
+    "id": "foundry-reshoring",
+    "title": "FoundryEU",
+    "composite": 3.4,
+    "reason": "FOLD → PowerShift. Standalone loses to McKinsey/BCG (board-level one-offs don't recur); 'government-incentive matching' is a finder-fee business not SaaS. Folded into PowerShift as Industrial Footprint extension — exactly what PowerShift's CFO buyer needs for reshoring decisions."
+  },
+  {
+    "id": "visiontrack-megaproject",
+    "title": "VisionTrack",
+    "composite": 3.6,
+    "reason": "KILL — NEOM thesis is stale post-$40B 2024 scope cuts (The Line shortened 170km→2.4km); $1T capex number is fiction now; contractor compliance on NEOM already locked up by PwC/Bain seconded teams inside Royal Commission program offices."
+  },
+  {
+    "id": "femaleonboard-gcc",
+    "title": "FemaleOnboard",
+    "composite": 3.4,
+    "reason": "FOLD → EduSkills. Standalone ACV math is brutal: UAE board mandate touches ~150 listed companies with median 2-3 female board seats; female-employee count per company small. Folded into EduSkills as Workforce Compliance Suite — shared MHRSD/MoHRE compliance plumbing."
+  },
+  {
+    "id": "healthcityops-gcc",
+    "title": "HealthCityOps",
+    "composite": 3.15,
+    "reason": "KILL — Epic + Cerner + InterSystems already at Cleveland Clinic AD, KAMC, SEHA; layer-on-top is the graveyard category in hospital IT (absorbed into EHR roadmap or starved by integration politics); €2-5M seed for 12-24 month cycles is not venture-shaped."
+  },
+  {
+    "id": "returneeops-gcc-nationals",
+    "title": "ReturneeOps",
+    "composite": 3.25,
+    "reason": "KILL — TAM math doesn't work: 100K returnees/year × 5K placeable × €30-100K ACV per employer = €10-15M ARR ceiling; McKinsey Saudi Future Champions + Misk + Tawteen already own PIF-portfolio relationships; niche workflow tool not venture."
   }
 ];
