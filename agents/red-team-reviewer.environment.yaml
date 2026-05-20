@@ -1,0 +1,15 @@
+name: red-team-reviewer-env
+description: |
+  Environment for the Red-Team Reviewer agent. Mounts the labspace repo at
+  /workspace (provided via session resources), reads the catalog, opens PRs
+  via GitHub MCP. Unrestricted networking required for web_search +
+  api.githubcopilot.com.
+
+config:
+  type: cloud
+  networking:
+    type: unrestricted
+
+metadata:
+  purpose: red-team
+  catalog: labspace
