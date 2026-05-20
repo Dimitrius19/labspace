@@ -5395,5 +5395,2878 @@ export const ideas: Idea[] = [
       "basisOfEstimate": "Consumer social is the hardest venture category; bimodal outcomes. €10M ARR requires 80-100K paid groups at €100/yr — Discord-scale in a niche. Weakest entry of the boundary-expansion 7 honestly. Build only if founder has unusual community-design + organic-growth chops."
     },
     "industry": "consumer"
+  },
+  {
+    "id": "carestaff-home-care-ops",
+    "title": "CareStaff",
+    "ycCategory": "Agetech B2B Ops",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Workforce management OS for EU + GCC home-care agencies — scheduling, training, payroll, compliance, family-portal. Replaces paper + WhatsApp + Excel for the fragmented care-agency market.",
+    "description": "EU home-care market is ~€90B+ growing 6% YoY but fragmented across 100K+ agencies, most running on paper rotas + WhatsApp coordination. Greek Law 5039/2023 (transport-anchored but tightening worker-classification across services) + EU Posted Workers Directive + national tax/social-security reporting create a compliance burden the typical 20-50 carer agency cannot absorb. CareStaff is a vertical SaaS: care-worker scheduling, qualification tracking, family-facing portal, EOPYY / EU social-security reporting, payroll integration, mobile time-and-task tracking for carers. Sells at €40-80/carer/month or €5-15K/agency/year. Liability transfer is the wedge — agencies pay to make compliance documented and inspectable.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Mediterranean + DACH have the largest fragmented home-care markets; Greek/Italian agencies are 80% paper-based and most exposed to tightening regulation.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC home-care market growing 20% YoY with national-care policies (UAE Senior Citizens Law 2023, Saudi Vision 2030 care expansion)."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "green",
+        "note": "Family-network beachhead; T-Life can warm intros to 50+ GR agencies."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower ACV; regulatory frame less mature."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "T-Life pharmacy + ELPEN network gives warm intros to several hundred Greek home-care agencies; no other direct edge.",
+    "tags": [
+      "agetech",
+      "b2b-saas",
+      "home-care",
+      "workforce-ops",
+      "compliance",
+      "eu-structural",
+      "trend-3-elder-tech"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU GMP-equivalent for care-quality regulation tightening across member states; mandated digital reporting in DE/NL/SE/FR by 2025-26; migrant carer workforce (15-25% annual churn) makes manual record-keeping infeasible at scale.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP scheduling + carer mobile app + payroll connector; 20 design-partner Greek agencies; €40K MRR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "200 agencies across GR + IT + ES; €1.5M ARR; EU AMIF/ESF+ co-funding for migrant-carer integration module."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "1,500 agencies across EU + GCC; €10M ARR; family-portal + insurance reimbursement integration."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€400K-€900K",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Pure SaaS. 2 engineers + 1 carer-domain advisor + GR/EU localization. Per-agency CAC <€500 via T-Life network."
+    },
+    "competitors": [
+      {
+        "name": "ezypay, CareLineLive (UK)",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "UK-focused; weak EU compliance integration."
+      },
+      {
+        "name": "Connecteam",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Generic frontline workforce; not care-vertical."
+      },
+      {
+        "name": "Local paper/Excel + payroll bureau",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Actual incumbent for 80% of agencies."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 5,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.55
+    },
+    "ycRfsCorrelation": "Vertical SaaS for a regulated, fragmented agency market — liability-transfer thesis; recurring revenue; multi-country growth via EU regulatory tailwind.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "careschool-credentialing",
+    "title": "CareSchool",
+    "ycCategory": "Care Worker Credentialing",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "EQF-aligned care-worker training + credentialing platform — portable across EU member states. Sells to home-care agencies, retirement homes, public health systems struggling to qualify migrant carers fast enough.",
+    "description": "EU faces ~1M care-worker shortage by 2030 (Cedefop) and existing credentialing systems (German Pflegekraft, French Aide-Soignante, Greek βοηθός νοσηλευτή) don't recognize each other or migrant qualifications without 6-18 month re-training. CareSchool is an EQF-aligned digital credentialing + training platform: AI-driven competency assessment, multi-language training modules (Romanian, Polish, Albanian, Filipino, Arabic), cross-border qualification recognition agreements with national authorities. Sells to: agencies + retirement homes + public health systems at €30-60/learner. The wedge: credential-portability replaces 12-month re-qualification cycles with 8-12 weeks.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany / Italy / Spain / Greece have the deepest shortfalls and most regulated credential systems. Greek Ministry of Migration cooperation is a T-Life-warm-intro asset.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC nurse/carer placement market (~$X billion annually); same credentialing pain."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "green",
+        "note": "Pilot geography; Greek agency network."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Source market; low ACV."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "T-Life ALTP industrial-park + WinMedica pharmacy network for design-partner pilots; founder must build national-authority relationships independently.",
+    "tags": [
+      "agetech",
+      "credentialing",
+      "eu-talent-pool",
+      "workforce-mobility",
+      "edtech",
+      "trend-12-agent-training"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU Care Strategy 2022 + EU Talent Pool 2024 + EU Health Workforce Strategy 2025 all push for credential portability; existing systems incompatible. Aging EU care demand needs Filipino + Indian + African pipelines.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Greek βοηθός νοσηλευτή pilot with 3 agencies; EQF mapping for 1 trade."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5 EU member states' care credentials mapped; 5K learners; €0.5M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "30 EU + GCC employers; 50K learners; €5-8M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Content + LMS infra + national-authority BD-heavy."
+    },
+    "competitors": [
+      {
+        "name": "EQF / Europass Mobility Toolkit",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Government tooling; not learner-grade."
+      },
+      {
+        "name": "Coursera, Udemy",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Not care-vertical, no credentialing recognition."
+      },
+      {
+        "name": "Local nursing schools / Berufsschulen",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Slow, country-locked."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 3,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.6
+    },
+    "ycRfsCorrelation": "Workforce mobility infrastructure for a regulated profession at acute shortage — credentialing portability is the wedge.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "homematch-discharge",
+    "title": "HomeMatch",
+    "ycCategory": "Hospital Discharge / Care Marketplace",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "B2B matching platform connecting hospital discharge coordinators to vetted home-care providers — reduces 30-day readmission risk and unblocks hospital-bed turnover.",
+    "description": "EU hospitals lose 1.5-3% of bed capacity to 'bed blockers' waiting for home-care placement after discharge (~€10B/year cost). NHS England declared this a top-3 operational issue in 2024. Existing process is manual: discharge nurse phones 5-10 agencies hoping someone has capacity. HomeMatch is a real-time supply-demand match: agencies post availability + specialism; hospitals post patient profile + insurance + start date; AI matches in <2 hours; sub-€100/patient placement fee. Sells to: hospitals (discharge coordinators), insurers, and ICBs (Integrated Care Boards) UK / regional health authorities EU.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "UK (NHS) and Germany are the deepest pain points; both have central buyers (ICBs, Krankenkassen).",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC hospitals expanding; less mature discharge process."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM; pilot."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller TAM."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Minimal T-Life edge. Could pilot with Greek private hospitals (HHG, Mitera, Iaso) via T-Life network.",
+    "tags": [
+      "agetech",
+      "hospital-discharge",
+      "b2b-marketplace",
+      "nhs",
+      "bed-blocking"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "NHS bed-blocking crisis (highest in 25 years); German Pflegereform 2025 mandates discharge-coordination KPIs; aging EU population accelerates bed-pressure year over year.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "1 UK hospital trust + 30 partner agencies; 100 placements; £30K MRR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "10 UK hospitals + 30 partner agencies per region; £1-2M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "50 hospitals UK + DE; €8-10M ARR; expand to step-down care + rehab placements."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Two-sided marketplace; supply-side acquisition via existing care-agency networks (CareStaff partnership candidate)."
+    },
+    "competitors": [
+      {
+        "name": "Discharge2Assess (NHS internal)",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "Internal tooling; not multi-agency matching."
+      },
+      {
+        "name": "Birdie (UK)",
+        "type": "startup",
+        "geography": "UK",
+        "note": "Home-care provider software; not discharge-matching."
+      },
+      {
+        "name": "Manual phone-call discharge",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Current default."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 5,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.35
+    },
+    "ycRfsCorrelation": "Two-sided B2B marketplace at hospital ↔ home-care interface; structural EU healthcare-system pain.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "carehomeos-assisted-living",
+    "title": "CareHomeOS",
+    "ycCategory": "Vertical SaaS / Senior Living Ops",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Operating system for European + GCC assisted-living and retirement village operators — occupancy, EHR-light, family portal, compliance, billing, staff rota. Vertical replacement for Excel + Outlook + Whatsapp.",
+    "description": "EU assisted-living + retirement villages number ~30K facilities (€80B+ revenue); GCC is in mid-build (NEOM, Aljada, Diriyah include senior-living components). Operators run on point-tools (PointClickCare US-dominant; ResidentEcho / Person Centred Software UK; nothing native EU mid-market). CareHomeOS is the vertical EHR-light + ops platform: resident profile + care plan, family portal, billing/insurance integration, staff rota + training tracking, occupancy + waitlist management, compliance documentation for national inspectorate audits (KEFEK Greece, MDK Germany, CQC UK, HIQA Ireland). Sells at €15-30/resident/month or €30-100K/facility/year.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Iberia + Mediterranean see fastest new-build; UK/Germany have largest existing footprint with weakest software penetration.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC senior-living market in early build; greenfield deployment easier than retrofit."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Small TAM; pilot geography."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower facility density."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "T-Life pharmacy + ELPEN network gives warm intros to Greek/Cypriot operators (5-15 facilities each); no other edge.",
+    "tags": [
+      "agetech",
+      "assisted-living",
+      "ehr-light",
+      "b2b-saas",
+      "occupancy",
+      "trend-3-elder-tech"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU population 80+ doubling 2020-2050; new-build assisted living wave in Spain, Italy, Portugal, GCC; PE roll-up of facilities (€30B+ deals 2020-25) demands operating-discipline software.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with rota + billing + family-portal; 5 design-partner facilities (3 GR, 2 ES)."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "100 facilities; €2M ARR; insurance integration; national-inspectorate audit-report generation."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "1,000 facilities across EU + GCC; €15M ARR; expand to step-down rehab + memory-care specialty."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€600K-€1.2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Vertical SaaS. 3 engineers + 1 care-ops domain advisor + multi-country regulatory."
+    },
+    "competitors": [
+      {
+        "name": "PointClickCare",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "US-dominant; weak EU regulatory adaptation."
+      },
+      {
+        "name": "Person Centred Software (UK)",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "UK-focused; aging product."
+      },
+      {
+        "name": "ResidentEcho",
+        "type": "startup",
+        "geography": "UK/EU",
+        "note": "Care-home record-keeping; not full OS."
+      },
+      {
+        "name": "Local Excel + Outlook + paper",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Current default."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.4
+    },
+    "ycRfsCorrelation": "Multi-country vertical SaaS at €30-100K/facility ACV; PE roll-up wave provides distribution + buyer-readiness.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "medadherence-pharmacy",
+    "title": "MedAdherence Pharmacy",
+    "ycCategory": "Agetech B2B Pharmacy",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "B2B medication-adherence platform for pharmacy chains and retail pharmacy groups serving elderly polypharmacy patients — reduces adverse events, increases prescription pull-through, generates EHR-feedback data sold to pharma.",
+    "description": "55%+ of 65+ patients are on ≥5 medications (polypharmacy); 50% are non-adherent. Adverse drug events cause ~25% of EU elder hospital admissions (Lancet 2024). Existing solutions are scattered: blister-pack vendors (Webster, MedAvail), pharmacy POS systems, paper. MedAdherence is a pharmacy-side platform: AI-driven adherence prediction, automated refill reminders to family + carer, MDS (Monitored Dosage System) preparation workflow, blister-pack integration, MTM (Medication Therapy Management) consultation booking, integration with national e-prescription systems (eRx Greece, e-Rezept Germany). Sells at €100-300/pharmacy/month + per-patient fee for premium tier.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany / Italy / Spain / Greece have densest pharmacy networks + mature e-prescription rails.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC pharmacy chains (BinSina, LIFE) buy operations tech; lower priority than EU."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "green",
+        "note": "WinMedica pharmacy distribution = T-Life unfair edge here."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower priority."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "WinMedica's distribution into ~10,500 Greek pharmacies is the strongest non-pharma T-Life leverage — pharmacist conversations open quickly via existing relationships.",
+    "tags": [
+      "agetech",
+      "pharmacy-saas",
+      "polypharmacy",
+      "medication-adherence",
+      "winmedica-warm-channel",
+      "eu-erx"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU e-prescription rollouts 2023-26 (Germany e-Rezept, Greek eRx mature) make digital adherence trackable; aging polypharmacy population growing; pharma manufacturers paying for real-world-adherence data.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with adherence + family alerts; 30 Greek pharmacies via WinMedica warm channel; €30K MRR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "500 pharmacies across GR + IT + DE; €1.5M ARR; MTM consultation booking + pharma data partnership signed."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "5,000 pharmacies EU; €15M ARR; expand to chronic-disease management + clinical-trial recruitment."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Pure SaaS + pharmacy CAC. WinMedica channel reduces customer-acquisition cost meaningfully."
+    },
+    "competitors": [
+      {
+        "name": "Webster Care, MedAvail",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Hardware-anchored MDS blister-pack; weak software."
+      },
+      {
+        "name": "Pharmacy POS vendors (PharmaCloud, Pharmaserv)",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Adjacent; not adherence-focused."
+      },
+      {
+        "name": "BetterRx, EveryDose",
+        "type": "startup",
+        "geography": "US",
+        "note": "Consumer-side adherence; B2C model. Not pharmacy-channel."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 3,
+      "competitiveGap": 3,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.4
+    },
+    "ycRfsCorrelation": "Pharmacy-channel agetech with the strongest T-Life distribution leverage in the catalog after Aletheia.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "ltcbridge-insurance",
+    "title": "LTCBridge",
+    "ycCategory": "LTC Insurance Infrastructure",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Long-term-care insurance underwriting + claims operations platform for EU + GCC insurers — closes the €2T+ LTC funding gap by giving insurers the tooling to launch products that didn't economically work before.",
+    "description": "EU faces €2-3T+ long-term-care funding gap by 2050 (OECD); LTC insurance penetration is ~5% (vs ~13% US) because insurers can't price + administer the products efficiently. LTCBridge is the underwriting + claims SaaS: actuarial pricing model integration, eligibility-trigger assessment workflow (ADL/IADL grading), care-plan recommendation, claims-payout automation, fraud detection. Sells to: insurance carriers, reinsurers, government LTC schemes (German Pflegeversicherung, French APA, Greek EOPYY long-stay). €200K-€1M ACV per insurer.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany (Pflegeversicherung) is the deepest existing market; Italy + France passing reforms 2025-26 open new entrants.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC LTC nascent; Saudi National Aging Strategy 2024 + UAE Senior Citizens Law 2023 open the market longer-term."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Small TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower priority."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No direct T-Life portfolio edge; could leverage WinMedica's insurance partnership relationships if extended into LTC.",
+    "tags": [
+      "agetech",
+      "long-term-care",
+      "insurance-saas",
+      "actuarial",
+      "ltc-funding-gap"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "German Pflegereform 2025; French La Sécurité sociale 5e risque debate; Italian DDL non-autosufficienza expected 2026. Multiple European LTC reforms create insurer-side demand for new pricing + claims infrastructure.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with ADL assessment + actuarial connector; 1 German insurer or mutual fund pilot."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5 EU insurers; €2M ARR; French + Italian product launch."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "30 insurers + 5 sovereign schemes; €15-25M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.5M-€3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Insurance-grade compliance + actuarial integration; deep regulatory + actuarial hires required."
+    },
+    "competitors": [
+      {
+        "name": "Sapiens, Guidewire",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Generic insurance platforms; weak LTC-specialty."
+      },
+      {
+        "name": "Genworth, John Hancock (US LTC carriers)",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Product carriers not infra. Different problem."
+      },
+      {
+        "name": "Workday LTC modules",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "HR-side, not carrier-side."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 3.1
+    },
+    "ycRfsCorrelation": "Insurance-infrastructure play with €2T+ funding gap as structural tailwind; long sales cycle but venture-scale TAM.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "silverwealth-decumulation",
+    "title": "SilverWealth",
+    "ycCategory": "Wealth Mgmt for Retirees",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Pension-decumulation advisory SaaS for European mid-tier wealth managers — AI-driven income strategies for the 70M+ EU retirees nobody serves between €50K and €500K of investable assets.",
+    "description": "European wealth management serves ~€100M+ HNW with concierge service and <€50K with robo-advisors; the €50-500K segment (60M+ EU retirees, ~€8T of investable assets) is structurally underserved. The decumulation problem — turn savings into reliable income through 25-30 years of retirement — is harder than accumulation and unaddressed by retail banks. SilverWealth is a B2B SaaS sold to regional wealth managers, mutualistic banks, credit unions, and pension-plan administrators: AI-driven income strategies, longevity-aware drawdown, tax-optimal sequence-of-returns, family-shared dashboard. €100-300/advisor/month at scale.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Italy + Spain + France + Germany have the largest mid-tier retiree segments; mutual-bank distribution.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC expat retiree segment growing; smaller TAM."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Small TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower TAM."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No direct T-Life portfolio edge.",
+    "tags": [
+      "agetech",
+      "fintech",
+      "wealth-management",
+      "decumulation",
+      "dc-pension"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "DC pension dominance (~70% of EU pension assets now); first cohort of fully-DC-funded retirees hits 70+ in 2025-30 with no accumulation-trained advisor or product for them. PEPP (Pan-European Personal Pension Product) regulatory frame matures.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with drawdown engine + tax-sequence; 5 design-partner regional banks in IT or ES."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 wealth managers; €1.5M ARR; PEPP integration."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 wealth managers; €10M ARR; expand to corporate pension administrators."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€1.8M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Actuarial + AI engineering + wealth-mgmt BD."
+    },
+    "competitors": [
+      {
+        "name": "Money Guided Retirement",
+        "type": "startup",
+        "geography": "US",
+        "note": "US-focused."
+      },
+      {
+        "name": "RobustWealth, Riskalyze",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "Advisor tooling; not decumulation-deep."
+      },
+      {
+        "name": "Local wealth-mgmt incumbent (Generali, AXA, Allianz)",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Have asset gathering, weak decumulation tooling."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.05
+    },
+    "ycRfsCorrelation": "B2B SaaS for an underserved retiree wealth segment; mass-affluent decumulation is the structural EU pension-system gap.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "geropath-chronic-coordination",
+    "title": "GeroPath",
+    "ycCategory": "Integrated Care Coordination",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Chronic-disease care-path coordination platform for elderly multi-condition patients — links GP, specialist, home care, pharmacy, and family in one timeline. Sells to integrated health systems and payors.",
+    "description": "60% of EU 65+ have 2+ chronic conditions; care coordination across GP/specialist/pharmacy/home-care is paper-and-fax-based. Each handoff drops information; ~30% of medication errors and ~20% of readmissions trace to coordination failure (BMJ Quality 2023). GeroPath is the integrated-care-path platform sold to payor-providers (NHS ICBs, Spanish autonomous health regions, German Krankenkassen, Greek EOPYY): patient timeline aggregating all provider touchpoints, AI-flagged escalation events, family-shared view, gap-in-care alerts. €30-60/patient/year via payor.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "UK NHS ICBs + Spanish autonomous regions are the most-buying buyers; both have central-payor structures.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC healthcare cities scaling; weaker integrated-care concept."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "EOPYY-anchored; T-Life pilot geography."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower payor sophistication."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Marginal T-Life angle via Greek private hospitals + WinMedica pharmacy data.",
+    "tags": [
+      "agetech",
+      "chronic-care",
+      "integrated-care",
+      "payor-saas",
+      "ehr-overlay"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU integrated-care reforms (Spanish Coordinación, Italian PNRR DM77, NHS Long Term Plan); aging population multiplies chronic burden; payor cost-containment pressure.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Pilot with 1 NHS ICB or Spanish region; 5K patients; €100K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "10 ICBs/regions; 200K patients; €5M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "50 payor-providers; 2M patients; €25M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Integration + payor BD heavy; healthcare-IT compliance."
+    },
+    "competitors": [
+      {
+        "name": "Epic, Cerner integrated care modules",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "EHR-anchored; not payor-side."
+      },
+      {
+        "name": "Babylon, Ada Health",
+        "type": "incumbent",
+        "geography": "EU/UK",
+        "note": "Patient-facing; not coordination."
+      },
+      {
+        "name": "Local PHRs + spreadsheets",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Current default."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 2.9
+    },
+    "ycRfsCorrelation": "Payor-side integrated-care SaaS; ICB/region B2G sales cycle drag but venture-scale TAM.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "mobivisa-employer-permits",
+    "title": "MobiVisa",
+    "ycCategory": "Workforce Mobility Infrastructure",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Agentic visa & work-permit automation for employers bringing skilled workers across EU and EU↔GCC borders — replaces immigration-lawyer billables with software, takes 70% of cycle time out, owns the document pipeline.",
+    "description": "EU + EU↔GCC employer-sponsored work-permit cycle is 8-26 weeks of immigration-lawyer + employer-HR + government-portal back-and-forth; average cost €5-25K per move; 80% of work is form-filling, document chasing, status tracking. MobiVisa is the agentic platform: ingests employer + employee data, generates submissions for 27 EU member states + UAE + KSA + Qatar, tracks government responses, manages renewals + dependents + tax-residency. Sells at €1500-5000/permit (lawyer pricing minus 60%) or €30K-€300K/year enterprise subscription for high-volume employers.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany + Netherlands + Ireland are the deepest tech-talent corridors; UAE + Saudi are largest GCC. Pan-EU multi-jurisdiction is the wedge incumbents can't match.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC corporate mobility growing fast; Vision 2030 + UAE D33 mandate skilled-foreign-hire pipelines."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Source markets; smaller direct ACV."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Minimal T-Life portfolio edge; could pilot with WinMedica / ELPEN HR teams for warm intro.",
+    "tags": [
+      "workforce-mobility",
+      "visa-automation",
+      "agentic",
+      "hr-tech",
+      "blue-card",
+      "eu-talent-pool"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU Blue Card revision (Dir 2021/1883) + EU Talent Pool 2024 + Saudi Premium Iqama + UAE Golden Visa expansion + post-Brexit UK skilled-worker route — all accelerate cross-border employer-sponsored hires.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP for DE + UK Blue Card + Tier 2; 10 design-partner SMB tech employers; 50 permits processed."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5 EU jurisdictions + 2 GCC; 200 employers; €3M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "All EU-27 + GCC + UK + Switzerland; 2000 employers; €25M ARR; payroll + tax-residency integration."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Multi-jurisdiction regulatory + product engineering; immigration-lawyer co-counsel partnership needed for liability transfer."
+    },
+    "competitors": [
+      {
+        "name": "Fragomen, Deloitte Immigration",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Lawyer model; expensive; slow."
+      },
+      {
+        "name": "Localyze, Boundless, Topia",
+        "type": "startup",
+        "geography": "Global",
+        "note": "Newer SaaS; Localyze (~$50M raised) closest EU competitor."
+      },
+      {
+        "name": "Local immigration lawyers",
+        "type": "incumbent",
+        "geography": "Country-by-country",
+        "note": "Fragmented incumbents."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 3,
+      "composite": 3.4
+    },
+    "ycRfsCorrelation": "Agentic immigration-automation — replaces immigration-lawyer billables with software; €500B+ EU cross-border-talent flow as TAM proxy.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "talentbridge-refugee-integration",
+    "title": "TalentBridge",
+    "ycCategory": "Refugee Workforce Integration",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "B2B platform for European employers integrating refugees, displaced workers, and humanitarian-status hires — skills mapping, language assessment, EU AMIF co-funding administration, employer compliance.",
+    "description": "EU hosts 6M+ Ukrainian refugees + 3M+ asylum-seekers; employers want to hire (acute labor shortage) but the integration overhead (language, credentialing, payroll status, compliance) blocks the match. EU AMIF (Asylum, Migration and Integration Fund) + ESF+ co-fund integration services — €4B+ annually deployed but mostly through NGOs at low-margin per-placement. TalentBridge is a B2B platform: employer + worker matching for refugee/displaced hires, language-assessment integration, EQF credential mapping, AMIF/ESF+ funding administration, compliance + reporting. €300-1500/placement + ongoing per-employee fee.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "DE/PL/AT/NL host the largest refugee + displaced-worker populations; deepest hiring demand from manufacturing + logistics.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has Syrian + Sudanese refugee labor pools but conservative integration policies."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Refugee transit country; small employer-side TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Transit; smaller TAM."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No direct T-Life portfolio edge.",
+    "tags": [
+      "workforce-mobility",
+      "refugee-integration",
+      "amif",
+      "esf-plus",
+      "language-credentialing"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Ukraine displacement + Syria-Yemen-Sudan refugee flows + EU Talent Pool 2024 + DE Migration Pact 2024 — multiple converging policy tailwinds.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "DE pilot with 20 mid-size manufacturers; 200 Ukrainian placements; €200K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "DE + AT + NL + PL; 50 employers; 2K placements; €2M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "20 EU countries; 200 employers; €15M ARR; expand to public-sector hiring."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Mostly content + matching + AMIF admin; grant-business-component bridges Y1 revenue."
+    },
+    "competitors": [
+      {
+        "name": "Tent Partnership for Refugees",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Brand-coordination, not platform."
+      },
+      {
+        "name": "Catalyst (US)",
+        "type": "startup",
+        "geography": "US",
+        "note": "US-focused refugee tech."
+      },
+      {
+        "name": "Local job centers + NGOs",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Fragmented, low-quality matching."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.4
+    },
+    "ycRfsCorrelation": "EU AMIF + ESF+ tailwind for refugee employment platform; B2B SaaS with grant-funded Y1 ramp.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "tradesglobal-cross-border-placement",
+    "title": "TradesGlobal",
+    "ycCategory": "Cross-Border Skilled Trades",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Cross-border skilled-trades placement platform — Eastern European electricians, plumbers, HVAC techs placed into German/Dutch/Belgian/Scandinavian construction projects with full visa + credential + compliance handling.",
+    "description": "Germany alone short 125K+ tradespeople (ZDH 2024); Netherlands, Belgium, Sweden similar deficits. Poland/Romania/Bulgaria/Ukraine have surplus skilled trades workforce. Current movement is informal (subcontractor chains with grey-economy risk) or expensive (staffing agencies taking 25-40% margin). TradesGlobal is the platform: worker credentialing + EU posted-worker compliance + visa (where needed for Ukraine) + on-site placement + payroll routing. €5-15K placement fee + recurring payroll/compliance fee. Sells to: German Generalunternehmer, Dutch construction groups, Scandinavian contractors.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "DE construction + DACH industrial trades are the deepest demand; Poland + Romania are the deepest supply.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC construction labor is Asia-sourced; different model."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "green",
+        "note": "Source markets; recruitment infrastructure here."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No direct T-Life portfolio edge.",
+    "tags": [
+      "workforce-mobility",
+      "skilled-trades",
+      "construction",
+      "posted-workers",
+      "cross-border"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU REPowerEU + Renovation Wave + Energy Transition + Construction Defense Boom (2025-2030 build cycle); tradespeople shortage is rate-limiting; EU Posted Workers Directive 2024 update.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "PL→DE corridor; 50 placements; €200K commission revenue."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5 corridors; 1K placements; €4M ARR; compliance + payroll product attached."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "20 corridors; 8K placements/year; €25M ARR; partnership w/ Tekton for residential-trades cross-sell."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1M-€2.5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Marketplace + compliance + payroll infrastructure; worker-acquisition costs significant."
+    },
+    "competitors": [
+      {
+        "name": "Hays Talent Solutions, Randstad",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Generic staffing; high-margin; weak EU-cross-border."
+      },
+      {
+        "name": "Manpower Skilled Trades",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Same."
+      },
+      {
+        "name": "Local subcontractor chains",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Current default; grey-economy exposure."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 3,
+      "composite": 3.2
+    },
+    "ycRfsCorrelation": "Workforce mobility marketplace at a structural EU labor-shortage flashpoint; high ticket + recurring compliance revenue.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "nurseconnect-healthcare-mobility",
+    "title": "NurseConnect",
+    "ycCategory": "International Healthcare Staffing",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "International healthcare-worker placement platform — Philippines, India, Kenya, Egypt → EU and GCC hospitals + care systems. Credentialing + language + visa + onboarding + compliance + retention.",
+    "description": "EU short ~1M healthcare workers by 2030; UK NHS gap 100K+ now; Germany gap 200K+; Saudi + UAE need 200K+ over 5 years. Philippines + India + Kenya + Egypt have credentialed pipelines + national-emigration policies that support outflow. Current placement is fragmented (1000+ agencies, brand new EU regulation Health Workforce Strategy 2025 tightening standards). NurseConnect is the modern placement platform: credential conversion to EU/GCC standards, language training (B2 German for Pflegekraft), visa workflow, employer onboarding, post-arrival retention tooling. €5-15K placement fee + ongoing employer retention SaaS.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "UK + Germany + Ireland + Saudi + UAE are the deepest demand markets; Philippines + India + Kenya + Egypt the deepest supply.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC healthcare-city builds need Asian + East-African nurses."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM; rotating destination market."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Source markets but smaller volumes than Asia."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No direct T-Life portfolio edge.",
+    "tags": [
+      "workforce-mobility",
+      "healthcare-staffing",
+      "international-recruitment",
+      "ethical-recruitment",
+      "nhs",
+      "gcc-healthcare"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "WHO Code of Practice 2010 (ethical recruitment) + EU Health Workforce Strategy 2025 + UK National Workforce Plan 2023-33 + Saudi 2030 healthcare scaling — multiple structural tailwinds.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Philippines → UK NHS pilot; 100 nurses; £1M placement revenue."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5 corridors; 1K nurses placed annually; €15M revenue."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "20 corridors; 5K placements/year; €60M revenue; expand to doctors + allied health."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.5M-€3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Recruitment + credentialing + visa + retention; source-country relationships + EU regulatory compliance."
+    },
+    "competitors": [
+      {
+        "name": "Hays Healthcare, NHS Professionals",
+        "type": "incumbent",
+        "geography": "Global/UK",
+        "note": "Existing players; weak end-to-end platform."
+      },
+      {
+        "name": "Avant Healthcare",
+        "type": "incumbent",
+        "geography": "US",
+        "note": "US-focused."
+      },
+      {
+        "name": "Local staffing agencies (1000+ EU + GCC)",
+        "type": "incumbent",
+        "geography": "Fragmented",
+        "note": "Current default; mixed quality."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 3,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.1
+    },
+    "ycRfsCorrelation": "Largest workforce-mobility TAM in the catalog; ethical-recruitment-compliant platform is the post-WHO-Code wedge.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "skillbridge-eqf-credentialing",
+    "title": "SkillBridge EU",
+    "ycCategory": "Cross-Credentialing Infrastructure",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "EU cross-credentialing platform for regulated professions (nursing, engineering, finance, legal, teaching) — turns 12-18 month country-by-country recognition cycles into 8-12 weeks.",
+    "description": "30M+ EU workers in regulated professions face 12-18 month qualification-recognition cycles when moving between member states (EU Recognition of Professional Qualifications Directive 2005/36 + 2013 amendment). The bureaucracy blocks talent mobility; EU Talent Pool 2024 explicitly identifies this as a top barrier. SkillBridge is the multi-jurisdiction recognition platform: EQF-anchored credential mapping, country-specific top-up training delivery, application + tracking with national authorities, compensating-measures fulfillment. Sells to employers (€500-2000/employee), individuals (premium tier), and government authorities (national recognition body licensing).",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "DACH + Nordics + UK are deepest demand for credentialed cross-border hires; Poland/Romania/Italy deepest supply.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC employers hire EU-credentialed nurses, engineers; cross-credentialing matters."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM; T-Life pilot geography."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Source markets."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "No direct T-Life portfolio edge.",
+    "tags": [
+      "workforce-mobility",
+      "credentialing",
+      "regulated-professions",
+      "eqf",
+      "eu-talent-pool"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU Talent Pool 2024 + EU Professional Card 2026 + post-Brexit UK divergence creates demand for tooling that abstracts away country-by-country mess.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Polish + Romanian nurses → Germany/Netherlands pilot; 500 recognitions completed."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "10 EU jurisdictions × 5 professions; 5K recognitions; €3M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "All EU + UK + Switzerland × 20 professions; €20M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Heavy multi-jurisdiction regulatory + national-authority BD work."
+    },
+    "competitors": [
+      {
+        "name": "ENIC-NARIC network",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Government info network; not transactional platform."
+      },
+      {
+        "name": "WES (World Education Services)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Credential evaluation; not full-process."
+      },
+      {
+        "name": "National-authority direct apps",
+        "type": "adjacent",
+        "geography": "EU country-by-country",
+        "note": "Current default; slow."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 3.1
+    },
+    "ycRfsCorrelation": "Structural EU mobility infrastructure; €X billion of trapped credentialing time as TAM proxy; partner-with-government model.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "diaspora-return",
+    "title": "DiasporaReturn",
+    "ycCategory": "Diaspora Return Platform",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Reverse-migration platform — Greek, Italian, Portuguese, Irish diaspora professionals returning home — sold to government re-attraction programs and corporates building local engineering / R&D teams.",
+    "description": "Greece, Italy, Portugal lost 5-15% of skilled workforce to brain drain (2008-2018 crisis era); recent demographic reversal (remote work + tax incentives) is bringing some back but at scale, return is friction-heavy (tax residency, professional credentialing, schooling for kids, housing). Greek 50% income-tax discount for returnees (Law 4646/2019), Portuguese RNH (until 2024 then partial rollback), Italian Impatriati regime — all create policy tailwinds. DiasporaReturn is the platform: tax residency + relocation + credentialing + corporate placement, sold to government re-attraction agencies (Greek 'rebrain Greece') and corporates building tech hubs (Athens, Lisbon, Milan, Dublin).",
+    "primaryMarket": "greece-cyprus",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Greece is the deepest diaspora-return market (2M+ Greek-origin diaspora globally with tax-incentive eligibility); T-Life network strong here.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "green",
+        "note": "Italy (60M+ diaspora), Portugal (5M+), Ireland (70M+) all have established programs."
+      },
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has Lebanese + Egyptian + Iranian diaspora pull; smaller policy support."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller TAM."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "T-Life network in Athens + Cyprus gives warm distribution + Greek government / Enterprise Greece relationship potential.",
+    "tags": [
+      "workforce-mobility",
+      "diaspora-return",
+      "brain-drain",
+      "tax-incentive",
+      "rebrain-greece"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Greek demographic deficit (population shrinking 1%/yr); remote work makes return viable; tax incentives mature; tech-hub formation in Athens/Lisbon at peak.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Greek pilot with Enterprise Greece partnership; 200 returnees placed."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "Greece + Italy + Portugal; 2K returnees; €2M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "+ Ireland + Spain + GCC corridor; 10K returnees; €15M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€400K-€800K",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Mostly content + workflow + government BD."
+    },
+    "competitors": [
+      {
+        "name": "Enterprise Greece, AICEP Portugal",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Government agencies; not transactional platforms."
+      },
+      {
+        "name": "Boundless, EOR providers (Deel, Remote)",
+        "type": "startup",
+        "geography": "Global",
+        "note": "Adjacent EOR; not return-specific."
+      },
+      {
+        "name": "Immigration lawyers",
+        "type": "incumbent",
+        "geography": "Country-by-country",
+        "note": "Expensive, no scale."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 3,
+      "tlifeEdge": 4,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 4,
+      "founderAvailability": 3,
+      "composite": 3.65
+    },
+    "ycRfsCorrelation": "Niche TAM but real structural pain; T-Life warm-channel advantage; government-co-fundable Y1 revenue.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "gcc-nationalize",
+    "title": "GCCNationalize",
+    "ycCategory": "GCC Nationalization Compliance",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Saudization / Emiratization / Omanization compliance platform for GCC employers — track national-workforce quotas, automate Nitaqat / Tawteen / Emiratization reporting, recommend hiring strategies to hit quota at lowest fully-loaded cost.",
+    "description": "GCC nationalization mandates (Saudi Nitaqat program, UAE Emiratization 5%-per-year-by-2026, Oman SME quotas, Bahrain BD reporting) require employers to hire and retain set percentages of nationals or face escalating penalties (fines, visa restrictions, government-contract exclusion). Compliance is complex: thousands of job categories, multiple tiers, dynamic quotas. Current tools are Excel + Word + portal scraping. GCCNationalize is the compliance + analytics platform: real-time quota tracking, vacancy-suitability matching, training-budget optimization, government-portal reporting automation. €50K-€500K ACV per employer.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi Nitaqat is the deepest compliance burden (most employees, most categories); UAE Emiratization the most aggressive (new 5%/year mandate).",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "EU member states don't have national-workforce quotas; not applicable."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not applicable."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Not applicable."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova Dubai presence + T-Life GCC network is the only T-Life leverage; founder must build local employer relationships independently.",
+    "tags": [
+      "workforce-mobility",
+      "gcc",
+      "nationalization",
+      "compliance",
+      "nitaqat",
+      "emiratization",
+      "vision-2030"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Saudi Vision 2030 mid-decade enforcement push (2025-2030); UAE Emiratization 5%+ private-sector mandate by 2026; multi-billion-dirham penalties live since 2024.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Riyadh pilot with 5 mid-size employers; €500K ACV avg; €2.5M ARR potential."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "100 GCC employers across Saudi + UAE + Oman; €15M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "500 employers; €60M ARR; expand to Africanization-equivalent programs in Egypt + Nigeria + South Africa."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1.2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Pure SaaS + government-portal integration + GCC employer BD."
+    },
+    "competitors": [
+      {
+        "name": "MUDAD, Qiwa (Saudi government portals)",
+        "type": "incumbent",
+        "geography": "Saudi",
+        "note": "Government infrastructure; not employer-side analytics."
+      },
+      {
+        "name": "Local payroll/HRMS (PaySpace, BambooHR ME)",
+        "type": "incumbent",
+        "geography": "ME",
+        "note": "HR-focused; not nationalization-deep."
+      },
+      {
+        "name": "Excel + consultants",
+        "type": "adjacent",
+        "geography": "GCC",
+        "note": "Current default for most employers."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 5,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.85
+    },
+    "ycRfsCorrelation": "Highest-conviction MENA B2B idea — regulatory force creates non-discretionary spend; structural Vision-2030 tailwind.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "gulfplace-asia-labor",
+    "title": "GulfPlace",
+    "ycCategory": "GCC Ethical Migrant-Labor Marketplace",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Asia → GCC low-skilled and semi-skilled labor placement platform — construction, hospitality, domestic, logistics. Replaces opaque labor brokers with transparent platform + liability-transfer for ethical-recruitment compliance.",
+    "description": "GCC migrant workforce is ~30M people; placement market ~$10B+ annually. Current ecosystem is fragmented across 10K+ recruitment agencies in Philippines, India, Bangladesh, Nepal, Sri Lanka, Kenya, Ethiopia. Worker abuse, recruitment-fee fraud (worker pays >$1K to broker), passport-confiscation, wage-theft — all documented and structurally enabled by lack of transparency. Following Qatar World Cup reforms + ILO C-189 (domestic worker) + UAE Kafala reform (2022) + Saudi Wage Protection System, the demand for ethical-recruitment infrastructure is structural. GulfPlace is platform: pre-departure verification, contract transparency, wage-tracking via WPS integration, grievance mechanism, retention SaaS for employers. €500-2000 placement fee + employer recurring SaaS.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi + UAE are deepest demand markets; Philippines + Bangladesh + Kenya are deepest supply.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "EU CSRD compliance creates supply-chain-labor reporting demand from EU buyers of GCC services."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not source market."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Not source market."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova Dubai + T-Life GCC network for first 5-10 employer relationships.",
+    "tags": [
+      "workforce-mobility",
+      "gcc-migrant-labor",
+      "ethical-recruitment",
+      "wage-protection",
+      "csrd"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Saudi WPS + UAE Wage Protection + Qatar reforms + ILO + EU corporate sustainability reporting (CSRD scope-3 labor): all push employers toward ethical-recruitment transparency.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Philippines → UAE construction pilot; 500 placements; €750K revenue."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "Philippines + Bangladesh + Kenya → Saudi + UAE + Qatar; 5K placements/yr; €15M revenue."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "10 corridors; 30K placements/yr; €100M revenue; expand to EU CSRD-driven buyers."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.2M-€3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Two-sided marketplace + compliance infra + boots-on-ground in source countries."
+    },
+    "competitors": [
+      {
+        "name": "Pinoy Jobs, Workabroad",
+        "type": "incumbent",
+        "geography": "Philippines",
+        "note": "Source-country job boards; weak placement."
+      },
+      {
+        "name": "Local PEAs (Private Employment Agencies)",
+        "type": "incumbent",
+        "geography": "Source + dest",
+        "note": "Fragmented, often abusive."
+      },
+      {
+        "name": "Catalyst, Tent, Refugio (ethical-recruitment NGOs)",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Non-platform NGOs."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 3.3
+    },
+    "ycRfsCorrelation": "Largest GCC TAM in the workforce-mobility cluster; ethical-recruitment + CSRD compliance is the wedge.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "powershift-energy-procurement",
+    "title": "PowerShift",
+    "ycCategory": "Industrial Energy Procurement",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Industrial energy-procurement platform for EU manufacturers managing REPowerEU + CBAM + electrification mandates — PPA matching, grid-arbitrage, carbon accounting, government-incentive filing.",
+    "description": "EU manufacturers face 5-10× electricity cost vs US peers + CBAM (Carbon Border Adjustment Mechanism, full force Jan 2026) + REPowerEU electrification mandates. Procurement teams at mid-size manufacturers (50-500 GWh/year) lack tooling to navigate PPAs, demand-response markets, government incentives. PowerShift is the SaaS + advisory: PPA marketplace integration, grid-arbitrage optimization, automated carbon accounting (CBAM + CSRD scope-2), government-incentive matching (€XB available under EU Innovation Fund + national schemes). €50-300K ACV per manufacturer.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany + Italy + France + Spain industrial heartlands; CBAM exposure highest at metals, cement, chemicals.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC industrial electricity is subsidized; less procurement-software demand."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM; T-Life ELPEN energy-procurement is a design partner candidate."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller industrial base."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "ELPEN + Tripoli energy-procurement teams could be design partners; not unique advantage but warm.",
+    "tags": [
+      "eu-structural",
+      "energy",
+      "cbam",
+      "repowereu",
+      "ppa",
+      "carbon-accounting"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "CBAM full enforcement Jan 2026; REPowerEU industrial-electrification targets; EU Innovation Fund €40B+ deployment 2024-2030; gas-price volatility post-Ukraine making energy CFO-level concern.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with ELPEN + Tripoli + 3 external mid-size manufacturers; €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 manufacturers; €5M ARR; PPA marketplace + CBAM reporting integrated."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 manufacturers; €30M ARR; expand to Eastern Europe industrial; carbon-credit trading layer."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1M-€2.5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Energy + carbon expertise + PPA marketplace integration; sales motion to CFOs not just procurement."
+    },
+    "competitors": [
+      {
+        "name": "Pexapark (PPA)",
+        "type": "startup",
+        "geography": "EU",
+        "note": "PPA-marketplace focused; not full procurement."
+      },
+      {
+        "name": "Sympower, Voltalia",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Demand-response specialist."
+      },
+      {
+        "name": "In-house procurement + Excel",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Current default."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.5
+    },
+    "ycRfsCorrelation": "EU structural energy transition + CBAM creates non-discretionary CFO-level spend on procurement optimization.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "construction-home"
+  },
+  {
+    "id": "defensetender-eu-procurement",
+    "title": "DefenseTender",
+    "ycCategory": "EU Defense B2G",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Pan-EU defense-procurement platform for mid-size defense suppliers — navigate EDA / European Defence Fund / individual member-state RFPs as €100B+ EU defense spending growth deploys.",
+    "description": "EU defense spending grew from €214B (2021) to projected €326B (2025) and accelerating post-Ukraine; new instruments (European Defence Fund €8B + EDIRPA + ASAP + EDIP) deploy capital across 27 member states with fragmented procurement rules. Mid-size defense suppliers (e.g., Greek Hellenic Aerospace, Italian Leonardo subsidiaries, German Hensoldt, Polish PGZ) can't keep up. DefenseTender is the tender-aggregation + compliance + bid-management platform: aggregates EU + member state RFPs, AI-summarizes requirements, manages bid responses, tracks award lifecycle. €100-500K ACV per supplier.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany + Poland + France + Italy + UK are largest defense markets; SE Europe (Greece, Bulgaria, Romania) growing fastest from low base.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC defense procurement is sovereign-direct; different model."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "T-Life Greek-defense-sector adjacent; HAI + EAS warm channels possible."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller markets but growing."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Minimal T-Life portfolio edge; possible Greek-defense-sector relationships via family network.",
+    "tags": [
+      "eu-structural",
+      "defense",
+      "procurement",
+      "edf",
+      "rearm-europe",
+      "b2g"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU rearmament — €326B defense spending 2025, growing 8-12% YoY; ReArm Europe 2024 plan; ASAP (€500M); EDIP regulation 2025; AI-readiness in defense procurement.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with EDF + 3 member-state RFP aggregation; 5 design-partner suppliers."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 suppliers; €5M ARR; EU + all 27 member-state RFP coverage."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 suppliers; €30M ARR; expand to defense-specific compliance modules (ITAR, export control, supply chain)."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Aggregation + bid-management + defense-sector security clearances."
+    },
+    "competitors": [
+      {
+        "name": "TenderEd, B2Gov",
+        "type": "startup",
+        "geography": "EU",
+        "note": "Generic public procurement; weak defense-specialty."
+      },
+      {
+        "name": "EDF Portal direct",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Government portal; not supplier-side tooling."
+      },
+      {
+        "name": "Consulting firms (Frost & Sullivan)",
+        "type": "adjacent",
+        "geography": "Global",
+        "note": "Advisory not platform."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 2,
+      "composite": 3.2
+    },
+    "ycRfsCorrelation": "EU rearmament structural pull-through; high-ACV B2B SaaS; defense-sector compliance is the moat.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "govtech-identity"
+  },
+  {
+    "id": "housingflow-affordable",
+    "title": "HousingFlow",
+    "ycCategory": "Affordable Housing Developer SaaS",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Affordable-housing developer workflow platform for EU member states deploying RRF + cohesion-funded housing — permitting, financing, tenant placement, government-grant reporting.",
+    "description": "EU housing crisis is structural: Spain (1M-unit deficit), Ireland (300K), Italy (200K), Greece (post-Athens-fire-rebuilds). RRF + cohesion-fund + national-program capital is deployed (€XB) but developer execution is bottlenecked by paperwork (permits + grant filings + tenant placement + multi-year reporting). HousingFlow is the developer workflow OS: project pipeline management, government-grant tracking, permitting workflow, contractor management, tenant placement + waiting lists, RRF/cohesion reporting. Sells to: affordable-housing developers + housing associations + municipal authorities. €30-150K ACV.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Spain + Ireland + Italy + Greece deepest demand; housing associations / municipal developers are buyers.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC has different housing model (national-housing programs); GulfPlace-adjacent."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM but T-Life construction-network access possible."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower priority."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Marginal T-Life edge through ALTP / construction-adjacent tenants.",
+    "tags": [
+      "eu-structural",
+      "affordable-housing",
+      "rrf",
+      "cohesion-fund",
+      "developer-saas"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU housing crisis at peak political attention; RRF housing component €50B+ deployment; ECB rate cuts 2024-25 making housing finance more viable.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "MVP with 5 developers in 2 markets; €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 developers; €5M ARR; expand to municipal authorities."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 developers + 50 municipalities; €30M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Multi-country regulatory + grant-reporting + developer BD."
+    },
+    "competitors": [
+      {
+        "name": "PropertyTree (UK)",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "UK landlord software."
+      },
+      {
+        "name": "Procore, Buildertrend",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Construction PM; not affordable-housing-specific."
+      },
+      {
+        "name": "Local Excel + Word + national-portal",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Current default."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.05
+    },
+    "ycRfsCorrelation": "EU structural housing-crisis backed by RRF capital deployment; affordable-housing developer is the under-served buyer.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "construction-home"
+  },
+  {
+    "id": "hospitalstaff-eu",
+    "title": "HospitalStaff",
+    "ycCategory": "Hospital Staffing AI",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "AI-driven staffing platform for European hospitals — locum doctors, bank/agency nurses, rota optimization, retention analytics. Replaces fax + paper + spreadsheet rota systems at €30-100K/hospital ACV.",
+    "description": "EU hospital staffing crisis: UK NHS short 100K+, Germany Kliniken short 200K+, French CHU + Italian SSN ~200K combined. Current staffing is fax-and-phone for locum doctors, paper rotas for nurses, agency-staff at 30-40% premium with no central visibility. HospitalStaff is the integrated platform: rota optimization with AI matching, locum doctor marketplace, bank-nurse pool management, retention analytics + early-warning, integration with hospital EHR + HR. €50K-€300K ACV per hospital.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "UK NHS (largest single buyer in the world) + German Kliniken + Italian SSN.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "GCC healthcare-cities building; same staffing crunch."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Smaller TAM; T-Life private-hospital network for pilot."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Lower priority."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Marginal T-Life edge via Greek private hospital relationships (HHG, Iaso, Mitera).",
+    "tags": [
+      "agetech-adjacent",
+      "hospital-staffing",
+      "nhs",
+      "kliniken",
+      "rota-optimization",
+      "locum-marketplace"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU healthcare workforce crisis is top-3 political issue across UK + Germany + Italy + Greece; aging clinical workforce; post-COVID burnout-driven exits; structural shortfall projected to worsen 2025-2030.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "1 NHS trust + 1 German Klinikum pilot; 1K shifts coordinated."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "10 NHS trusts + 5 German hospitals; €5M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "50 hospitals UK + DE + IT; €25M ARR; NurseConnect partnership integration."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.2M-€2.5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Hospital-IT integration + multi-jurisdiction HR + workforce-marketplace dynamics."
+    },
+    "competitors": [
+      {
+        "name": "NHS Professionals",
+        "type": "incumbent",
+        "geography": "UK",
+        "note": "NHS-internal; weak product."
+      },
+      {
+        "name": "Locum's Nest, Patchwork (UK)",
+        "type": "startup",
+        "geography": "UK",
+        "note": "Locum-marketplace; UK-only."
+      },
+      {
+        "name": "SAP SuccessFactors, Workday",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Generic HRMS; weak hospital-specialty."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 1,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.3
+    },
+    "ycRfsCorrelation": "EU healthcare workforce crisis at political peak; high-ACV B2B SaaS at intersection of agetech demand + workforce mobility supply.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "agrolabor-seasonal",
+    "title": "AgroLabor",
+    "ycCategory": "Mediterranean Agricultural Workforce",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Seasonal-agricultural-labor management and compliance platform for Mediterranean agricultural producers — Spain (1.5M seasonal workers), Italy (1M), Greece (300K), Portugal (200K). Combines workforce + compliance + payroll + housing.",
+    "description": "Mediterranean agriculture employs 3-5M seasonal workers annually (Moroccans, Albanians, Romanians, Ukrainians, sub-Saharan Africans). Current management is informal (caporalato in Italy, kafala-equivalent labor abuses documented across), regulatory pressure rising (EU 2024 Directive 2024/1233 on platform work + national reforms). AgroLabor is the integrated platform: worker recruitment + verification, contract + payroll + tax compliance, housing/transport coordination, employer reporting to national labor authorities. Sells at €30-100/worker/month or per-farm subscription.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Spain (Almería, Murcia, Huelva) + Italy (Puglia, Sicily, Calabria) + Greece (Thessaly, Crete) + Portugal (Alentejo).",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC agriculture small; not priority."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "T-Life pilot geography."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Source markets."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Marginal T-Life edge.",
+    "tags": [
+      "workforce-mobility",
+      "agriculture",
+      "seasonal-labor",
+      "caporalato",
+      "csrd"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU Directive 2024/1233 (platform work) + Italian Decreto Caporalato + Spanish RD Trabajadores del Campo + EU CSRD scope-3 labor reporting from supermarket buyers (Carrefour, Tesco etc.).",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Greek tomato/strawberry farms pilot; 5K worker placements."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "Spain + Italy + Greece; 100 farms; 50K workers; €3M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "Pan-Mediterranean; 1000 farms; 500K workers; €25M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€800K-€1.5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Multi-jurisdiction labor + farm BD + CSRD reporting infrastructure."
+    },
+    "competitors": [
+      {
+        "name": "SeasonalJobs.eu",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Job board, not platform."
+      },
+      {
+        "name": "Local caporali / labor brokers",
+        "type": "incumbent",
+        "geography": "IT/ES/GR",
+        "note": "Current default; abusive."
+      },
+      {
+        "name": "EURES (EU job mobility)",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Government portal."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 3.05
+    },
+    "ycRfsCorrelation": "Regulatory pressure on caporalato + CSRD buyer-side demand drives compliant-platform formalization.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "foundry-reshoring",
+    "title": "FoundryEU",
+    "ycCategory": "Reshoring Infrastructure",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Manufacturing-reshoring SaaS for EU SMB manufacturers — supply-chain mapping, government-incentive matching, capital-investment financing, customer migration from Asia-sourced supply.",
+    "description": "EU manufacturing reshoring + nearshoring is structural policy (Chips Act €43B, Net-Zero Industry Act 2024, ASAP €500M for defense components, German Strategie Industrie 2030). Mid-size manufacturers (€10-200M revenue) are the rate-limiter — they want to reshore but can't navigate financing + permitting + supply-chain redesign without consulting firms charging €500K+. FoundryEU is the SaaS + advisory hybrid: supply-chain mapping + risk-scoring, government-incentive matching (EU + member state), capital-investment financing (EIB + ECB pathways), customer migration analytics. €100-500K ACV.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Germany + Italy + France + Spain + Czechia + Poland are the deepest manufacturing bases; deepest reshoring opportunity.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "yellow",
+        "note": "GCC industrial diversification (Vision 2030 industry build-out); different model."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "T-Life manufacturing-network design-partner candidates."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Reshoring destinations from Asia."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "ELPEN + Tripoli could be design partners (pharma manufacturing reshoring); marginal edge.",
+    "tags": [
+      "eu-structural",
+      "reshoring",
+      "manufacturing",
+      "chips-act",
+      "supply-chain",
+      "net-zero-industry"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "EU Chips Act + Net-Zero Industry Act + Critical Raw Materials Act + ASAP defense reshoring + post-Ukraine + post-pandemic supply-chain risk; €X billion incentive capital underdeployed because of execution bottleneck.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Pilot with 5 mid-size DE/IT manufacturers; €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 manufacturers; €5M ARR; capital-financing partnership w/ KfW + EIB."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 manufacturers; €30M ARR; expand to North America near-shoring."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1M-€2.5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Multi-disciplinary expertise (supply chain + finance + government incentives + manufacturing)."
+    },
+    "competitors": [
+      {
+        "name": "McKinsey, BCG, Roland Berger (reshoring practices)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "High-cost consulting; not productized."
+      },
+      {
+        "name": "Procurious, SourceDay",
+        "type": "startup",
+        "geography": "Global",
+        "note": "Supply-chain visibility; not reshoring-deep."
+      },
+      {
+        "name": "Local economic development agencies",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "Public-sector; slow."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 2,
+      "composite": 3.4
+    },
+    "ycRfsCorrelation": "EU industrial-sovereignty structural tailwind + €100B+ incentive capital + SMB execution bottleneck = venture-scale opportunity.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "construction-home"
+  },
+  {
+    "id": "portshift-port-modernization",
+    "title": "PortShift",
+    "ycCategory": "Port Operations Modernization",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Port-operations modernization platform for Mediterranean + Northern European ports — workforce management for aging dockworkers, automation transition, container-flow optimization, multi-modal handoff with rail + truck.",
+    "description": "European ports face structural aging-dockworker problem (median 50+, 30% retirement-eligible by 2030), accelerating automation (Rotterdam, Antwerp, Hamburg, Piraeus), and bottleneck pressure from shifting trade routes (Red Sea disruption, North Sea capacity). Existing port-IT (Navis, Konecranes, ABB) is hardware-anchored. PortShift is the workforce + ops layer: rota + skill-mapping for aging workforce, automation-transition training, container-flow AI, multi-modal handoff to rail + truck operators. €300K-€2M ACV per port; 100+ commercial ports in EU.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Piraeus + Rotterdam + Antwerp + Hamburg + Gioia Tauro + Algeciras are top EU ports; T-Life Greek-shipping network gives Piraeus warm channel.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "green",
+        "note": "Saudi Red Sea Port + Jebel Ali + Hamad expanding; structural growth."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "green",
+        "note": "Piraeus is T-Life-adjacent (Tryfon shipping)."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Smaller ports; lower priority."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Tryfon shipping + Piraeus relationships are real warm channel; closest non-pharma T-Life edge in this batch.",
+    "tags": [
+      "maritime",
+      "ports",
+      "workforce-mobility",
+      "automation",
+      "container-flow",
+      "ten-t"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Red Sea disruption (2024) + post-pandemic port congestion + EU port modernization mandates + aging dockworker workforce retiring; €X billion EU TEN-T port-investment capital underdeployed because of operational complexity.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Piraeus pilot (PCT-COSCO + PPA); €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "5 EU ports + 1 GCC port; €5M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "20 ports EU + GCC; €25M ARR; rail + truck-fleet handoff product."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.5M-€3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Port-IT integration + workforce-management + multi-modal complexity."
+    },
+    "competitors": [
+      {
+        "name": "Navis (Konecranes)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Terminal operating system; hardware-anchored."
+      },
+      {
+        "name": "ABB Ports",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Automation hardware-and-software."
+      },
+      {
+        "name": "Local port-IT custom builds",
+        "type": "adjacent",
+        "geography": "EU",
+        "note": "Current default per port."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 4,
+      "competitiveGap": 3,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.45
+    },
+    "ycRfsCorrelation": "Maritime cluster extension with T-Life shipping-adjacent warm channel; large ACV + structural workforce + automation tailwind.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "maritime"
+  },
+  {
+    "id": "visiontrack-megaproject",
+    "title": "VisionTrack",
+    "ycCategory": "GCC Megaproject Compliance",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Vision 2030 / We the UAE 2031 megaproject compliance + reporting platform for contractors and subcontractors working on NEOM, Diriyah, Trojena, ADIA megaprojects.",
+    "description": "Saudi PIF + UAE megaprojects represent $1T+ committed capex over 2025-2030 (NEOM $500B+, Diriyah $40B+, Red Sea $30B+, ADIA infrastructure). Contractors face byzantine compliance (Saudization quotas, ESG, supply-chain transparency, IT security, sustainable construction). Current is Excel + PowerPoint. VisionTrack is the compliance + reporting platform: real-time KPI tracking against project-specific mandates, automated reporting to PIF / Royal Commission, supplier compliance cascade, audit-trail. Sells at €500K-€5M ACV per major contractor.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi Arabia (NEOM + Diriyah + Red Sea + Trojena) is largest megaproject TAM in the world; UAE secondary.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "EU megaprojects (HS2, Stuttgart 21, Crossrail) different model; lower priority."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not applicable."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Not applicable."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova Dubai + T-Life GCC network for first 3-5 contractor relationships.",
+    "tags": [
+      "middle-east-structural",
+      "vision-2030",
+      "megaproject",
+      "compliance",
+      "neom",
+      "diriyah"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Vision 2030 mid-decade execution push (2025-2030); UAE D33 mandate; ADIA infrastructure portfolio scaling; multi-billion-dirham megaproject delays driving demand for better tracking.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "NEOM-tier1-subcontractor pilot; €500K ACV."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "20 megaproject contractors; €15M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "Across NEOM + Diriyah + ADIA + WSL world cup; €60M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.5M-€3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Saudi/UAE BD-heavy; ARAMCO/PIF security clearances."
+    },
+    "competitors": [
+      {
+        "name": "Oracle Primavera, Procore",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Construction PM; not Vision-2030-compliance-deep."
+      },
+      {
+        "name": "Local Big4 advisory (PwC, KPMG, EY)",
+        "type": "incumbent",
+        "geography": "GCC",
+        "note": "Consulting; not platform."
+      },
+      {
+        "name": "Custom Excel reports",
+        "type": "adjacent",
+        "geography": "GCC",
+        "note": "Current default."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 5,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 2,
+      "composite": 3.6
+    },
+    "ycRfsCorrelation": "Highest GCC TAM in catalog ($1T+ capex flow); compliance-platform liability-transfer is the wedge.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "govtech-identity"
+  },
+  {
+    "id": "femaleonboard-gcc",
+    "title": "FemaleOnboard",
+    "ycCategory": "GCC Female Workforce Integration",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Female-workforce integration platform for GCC enterprises post-2017 labor reforms — compliance + training + culture-fit + retention for the female national workforce mandates that Saudi + UAE + Bahrain now require.",
+    "description": "Saudi female labor-force participation jumped from 17% (2017) to 33% (2024) on the Vision 2030 trajectory of 30%-by-2030 (already exceeded); UAE Cabinet Resolution 2022 mandates female-representation in listed companies. Employers face a real onboarding gap: nuance training (workplace culture, sponsorship norms), retention (highest female-employee turnover in MEA region), mentorship matching, compliance reporting. FemaleOnboard is the SaaS: onboarding journey, mentor matching, retention analytics, compliance reporting to MHRSD (Saudi) / MoHRE (UAE). €50K-€500K ACV.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi (deepest pipeline expansion) + UAE (most mandate-pressure) + Bahrain.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "EU has different gender-equality framework; less platform-applicable."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not applicable."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Not applicable."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova + T-Life GCC HR network for first design partners.",
+    "tags": [
+      "middle-east-structural",
+      "gcc",
+      "female-workforce",
+      "vision-2030",
+      "retention",
+      "compliance"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Saudi Vision 2030 female-participation targets exceeded but retention catastrophic; UAE 2022 board-gender mandate; Bahrain 30%-target by 2025; female-investor-grade rules in Saudi listed-company governance.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "5 Riyadh-based PIF-affiliated enterprises pilot; €1.5M ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 GCC enterprises; €10M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 enterprises across Saudi + UAE + Bahrain + Qatar; €30M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1.2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "HR-SaaS + GCC cultural-context content + compliance integration."
+    },
+    "competitors": [
+      {
+        "name": "BambooHR, Workday, SAP SuccessFactors",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Generic HRMS; weak GCC-specialty."
+      },
+      {
+        "name": "Local Big4 advisory",
+        "type": "incumbent",
+        "geography": "GCC",
+        "note": "Consulting."
+      },
+      {
+        "name": "Sira / Glassdoor MEA",
+        "type": "startup",
+        "geography": "ME",
+        "note": "Employer-review focus; not onboarding."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.4
+    },
+    "ycRfsCorrelation": "Vision 2030 + UAE 2022 + Bahrain 2025 mandates create non-discretionary spend; mid-decade execution gap.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "healthcityops-gcc",
+    "title": "HealthCityOps",
+    "ycCategory": "GCC Healthcare Ops",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Operations platform for GCC healthcare-city + new-hospital build-outs — King Abdulaziz Medical City, Cleveland Clinic Abu Dhabi, NEOM Health Cluster, Diriyah Health District. Replaces project-by-project custom-built ops.",
+    "description": "GCC healthcare expansion $50B+ committed (Saudi Health Sector Transformation, UAE We the UAE Health pillar, Qatar Healthcare 2030, Cleveland Clinic Abu Dhabi expansion). Each project re-invents operational software from scratch (Epic + custom integrations + Excel). HealthCityOps is the integrated ops platform: physician scheduling, patient pathway, supply-chain, insurance integration (Bupa, AXA Gulf, Daman), Saudization tracking. €500K-€5M ACV per facility.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi (largest scale) + UAE (most advanced) + Qatar.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "EU hospital build-outs different model."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "T-Life pilot geography for spec; small TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not applicable."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova + T-Life ELPEN GCC pharma distribution gives weak warm channel.",
+    "tags": [
+      "middle-east-structural",
+      "gcc-healthcare",
+      "hospital-ops",
+      "epic-overlay",
+      "vision-2030"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Saudi Health Sector Transformation 2030 ($X billion); UAE specialized-hospital build (Cleveland Clinic + Mayo + Johns Hopkins partnerships); Qatar healthcare 2030; aging GCC nationals.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "1 KSA + 1 UAE healthcare-city pilot; €1M ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "10 facilities; €15M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "50 facilities GCC; €60M ARR; expand to Egypt + Jordan + Iraq."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€2M-€5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Healthcare-IT integration + GCC-regulatory + multi-million-dollar deployments."
+    },
+    "competitors": [
+      {
+        "name": "Epic, Cerner",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "EHR core; HealthCityOps as ops-layer-on-top."
+      },
+      {
+        "name": "InterSystems",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Same."
+      },
+      {
+        "name": "Local consulting + custom build",
+        "type": "adjacent",
+        "geography": "GCC",
+        "note": "Current default per project."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 2,
+      "regulatoryRisk": 2,
+      "founderAvailability": 2,
+      "composite": 3.15
+    },
+    "ycRfsCorrelation": "GCC healthcare build-out demand; hospital-IT integration is the moat; long sales cycles but multi-million ACV.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "agetech"
+  },
+  {
+    "id": "remitfleet-gcc-payroll",
+    "title": "RemitFleet",
+    "ycCategory": "GCC Migrant-Labor Payroll + Remittance",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Corporate payroll + remittance platform for GCC employers managing migrant-labor wages — direct to Asian + African destination accounts at sub-1% cost, with full WPS + ethical-recruitment compliance + family-shared financial wellness app.",
+    "description": "GCC migrant workforce (~30M) remits $X billion annually; current remittance is via MoneyGram/Western Union (5-8% fees) + employer payroll via WPS (Wage Protection System mandatory). Employers want to (a) cut remittance margin from workforce bill, (b) increase retention via family-financial-wellness benefit, (c) comply with WPS + ILO C-189 + UAE Wage Protection. RemitFleet is the integrated corporate-payroll + remittance + family-wellness platform. Sells at €100/worker/year + percentage on remittance corridor.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi + UAE + Qatar are largest employer markets; Philippines + India + Bangladesh + Kenya are remittance destinations.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "EU corporate-migrant-labor remittance smaller TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not source market scale."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "T-Life pilot via Greek-resident migrant labor employers; small."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova + T-Life GCC network for first 5 employer customers.",
+    "tags": [
+      "fintech",
+      "gcc-migrant-labor",
+      "remittance",
+      "wps",
+      "corporate-payroll"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "GCC WPS enforcement maturity (Saudi 2025); UAE Wage Protection coverage 2024; rising worker-retention focus from Vision 2030 implementation; ethical-recruitment (post-Qatar reform) compliance pressure.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "1 KSA construction-group pilot; 5K workers; €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 employers; 200K workers; €15M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 employers; 1M+ workers; €60M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1.5M-€3M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Multi-corridor remittance + WPS integration + employer-side BD."
+    },
+    "competitors": [
+      {
+        "name": "MoneyGram, Western Union",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Retail remittance; high margin; not employer-integrated."
+      },
+      {
+        "name": "Sarwa, Hala, Tabby",
+        "type": "startup",
+        "geography": "ME",
+        "note": "GCC fintech; mostly consumer-side."
+      },
+      {
+        "name": "Bank-integrated WPS",
+        "type": "incumbent",
+        "geography": "GCC",
+        "note": "Banks offer WPS; not remittance-attached."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 5,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.5
+    },
+    "ycRfsCorrelation": "GCC structural labor-flow + WPS regulatory frame + ethical-recruitment buyer demand = corporate-fintech wedge.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "fintech"
+  },
+  {
+    "id": "govprocure-gcc",
+    "title": "GovProcure GCC",
+    "ycCategory": "GCC Public Procurement",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Public-sector procurement platform for GCC governments + sovereign-wealth-fund subsidiaries — replaces Excel + Word bid management with AI-driven RFP analysis, supplier matching, and post-award compliance.",
+    "description": "GCC governments deploy $200B+/year in procurement across Vision 2030 + We the UAE 2031 + Qatar Vision 2030; current is paper + Excel + national-portal (Etimad Saudi, eSupply UAE) without supplier-side intelligence. GovProcure is the supplier-side platform: aggregates GCC government RFPs across all major portals + agencies, AI-summarizes requirements, manages bid responses, tracks award lifecycle, automates post-award compliance. €100K-€1M ACV per supplier.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi (Etimad, largest spend) + UAE (eSupply) + Qatar.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "EU has DefenseTender (different vertical) and existing players."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "T-Life Greek-supplier-to-GCC angle marginal."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not applicable."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova + T-Life GCC network for first design partners.",
+    "tags": [
+      "middle-east-structural",
+      "gcc-procurement",
+      "etimad",
+      "vision-2030",
+      "b2g"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Vision 2030 + UAE D33 + Qatar 2030 procurement deployment; localization (Saudi Made + Made in UAE + Made in Qatar) preferences in tender criteria mandating compliance trackability.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "5 mid-size GCC suppliers pilot; €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 suppliers; €5M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 suppliers; €30M ARR; expand to public-sector buyer-side."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€600K-€1.5M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Government-portal integration + supplier BD + GCC localization-rule expertise."
+    },
+    "competitors": [
+      {
+        "name": "Etimad / eSupply (government portals)",
+        "type": "incumbent",
+        "geography": "GCC",
+        "note": "Government infrastructure; not supplier-side."
+      },
+      {
+        "name": "SAP Ariba, Coupa",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Generic procurement; weak GCC-localization."
+      },
+      {
+        "name": "Big4 GCC procurement advisory",
+        "type": "incumbent",
+        "geography": "GCC",
+        "note": "Consulting."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.4
+    },
+    "ycRfsCorrelation": "Government-procurement supplier-side platform; structural Vision-2030 deployment + localization mandates.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "govtech-identity"
+  },
+  {
+    "id": "returneeops-gcc-nationals",
+    "title": "ReturneeOps",
+    "ycCategory": "GCC National Returnees",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "GCC national returnee professional-onboarding platform — Saudi + UAE + Kuwaiti + Qatari nationals returning from international education (UK/US/Australia) into local employment. Skills mapping, culture-bridge, employer matching + retention.",
+    "description": "100K+ GCC nationals annually graduate from international universities (UK 30K+ Saudi, US 50K+ across all GCC, Australia 20K+) and face a 12-24 month return-integration challenge. Current process is manual employer-by-employer. Returnees have higher salary expectations + Western workplace experience; employers struggle with retention (50%+ leave first job within 24 months). ReturneeOps is the platform: skills mapping to GCC employer needs, culture-bridge content (workplace norms vs Western experience), matching to PIF-portfolio + family-business + government roles, retention analytics. €30-100K ACV per major employer.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi (KSU + KAU + international returns + PIF need) + UAE (NEOM + Mubadala portfolio).",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "Different model; not applicable directly."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "DiasporaReturn parallel; not GCC-applicable."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not applicable."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova + T-Life GCC network.",
+    "tags": [
+      "middle-east-structural",
+      "gcc-nationals",
+      "returnee",
+      "human-capability",
+      "vision-2030"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Saudi Human Capability Development Program (5-year, $X billion); UAE National Education Strategy; GCC Vision-2030 talent-attraction emphasis; international-student-return cohort hitting peak 2025-2030.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "5 PIF-portfolio + 3 family-business pilots; €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "50 GCC employers; €5M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "300 employers + 5 GCC government re-attraction programs; €25M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€500K-€1.2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Content + matching + culture-bridge + employer BD."
+    },
+    "competitors": [
+      {
+        "name": "MENA-focused recruiters (GulfTalent, Bayt)",
+        "type": "incumbent",
+        "geography": "ME",
+        "note": "Generic recruitment."
+      },
+      {
+        "name": "McKinsey Saudi Future Champions",
+        "type": "incumbent",
+        "geography": "GCC",
+        "note": "Consulting."
+      },
+      {
+        "name": "Local employer in-house programs",
+        "type": "adjacent",
+        "geography": "GCC",
+        "note": "Current default."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 3,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 4,
+      "founderAvailability": 3,
+      "composite": 3.25
+    },
+    "ycRfsCorrelation": "GCC human-capability development structural priority + Vision-2030 + 5-10 year talent-attraction window.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
+  },
+  {
+    "id": "eduskills-gcc",
+    "title": "EduSkills GCC",
+    "ycCategory": "GCC Vocational Education",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "GCC post-secondary vocational + technical-skills platform — Saudi 30%-by-2030 vocational target requires building the skills-to-jobs infrastructure that doesn't exist; UAE TVET pipeline expanding fast; Kuwait + Bahrain following.",
+    "description": "GCC vocational + technical-education enrollment is structurally underweight (Saudi <10% of youth vs OECD average 40%) but national strategies target rapid catch-up. Existing Coursera + edX + local TVET institutions don't align to GCC labor-market signals or Saudization/Emiratization quotas. EduSkills is the platform: GCC-labor-market-aligned curriculum, employer-validated certifications, AI-driven skills-gap matching, integration with Vision-2030 + Emiratization quota tracking. Sells at €30-80/learner + €100-500K/year enterprise licensing.",
+    "primaryMarket": "middle-east",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "Saudi (largest TAM by far) + UAE (most mandate pressure) + Kuwait + Bahrain.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "Different system; not applicable."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "T-Life small angle via ALTP-equivalent."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Not applicable."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Elnova + T-Life GCC network for first employer partners.",
+    "tags": [
+      "middle-east-structural",
+      "gcc",
+      "tvet",
+      "vocational",
+      "saudization",
+      "human-capability"
+    ],
+    "addedDate": "2026-05-16",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.",
+    "whyNow": "Saudi 30%-by-2030 vocational target; UAE TVET roadmap (Cabinet 2024); GCC + global outflow of low-skilled workers (post-Kafala); structural need for nationals in mid-skill jobs.",
+    "roadToMoat": [
+      {
+        "timeframe": "Month 0-6",
+        "milestone": "Saudi vocational-college pilot + 5 employer partners; €500K ARR."
+      },
+      {
+        "timeframe": "Month 6-18",
+        "milestone": "20 colleges + 50 employers; €5M ARR."
+      },
+      {
+        "timeframe": "Month 18-36",
+        "milestone": "GCC-wide; 100 colleges + 300 employers; €30M ARR."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "medium",
+      "estimatedSeedCapital": "€1M-€2M",
+      "capexRatio": "10% capex / 90% opex",
+      "note": "Multi-stakeholder (government + colleges + employers); content + AI + integration heavy."
+    },
+    "competitors": [
+      {
+        "name": "Coursera, edX",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Higher-ed; not vocational-deep."
+      },
+      {
+        "name": "Skill GCC, Bayt Learning",
+        "type": "startup",
+        "geography": "ME",
+        "note": "Smaller, weaker product."
+      },
+      {
+        "name": "Local TVET institutions",
+        "type": "incumbent",
+        "geography": "GCC",
+        "note": "Existing structure; partner not competitor."
+      }
+    ],
+    "competitiveIntensity": "moderate",
+    "scorecard": {
+      "marketSize": 4,
+      "tlifeEdge": 2,
+      "competitiveGap": 4,
+      "capitalFit": 3,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.25
+    },
+    "ycRfsCorrelation": "GCC structural vocational gap + multi-billion-riyal Human Capability Development capital + 5-10 year window.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "workforce-saas"
   }
 ];
