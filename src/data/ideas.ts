@@ -2567,6 +2567,20 @@ export const ideas: Idea[] = [
           "Aizon (Barcelona) pivoted from on-prem appliance to cloud SaaS specifically because pharma capex cycles killed hardware sales"
         ],
         "alternativeThesis": "(none — this is the validated thesis. The VaultEdge alt-thesis got folded back into this entry — see description architecture note + decision log)"
+      },
+      {
+        "date": "2026-05-20",
+        "verdict": "revise",
+        "dealKiller": "The 36-48 month Veeva defensibility window is already gone. Veeva announced AI Agents for Quality availability April 2026 — three months from Phase 0 kickoff — with full Vault rollout through 2026. The thesis is priced as a greenfield AI-native wedge against document-LMS incumbents who 'need 18-24 months to ship.' In reality the incumbent ships into the same buyer (QA/QP) inside the same validated stack (Vault) on the same regulatory clock (Annex 1 + AI Act Art. 6(3)) before Aletheia closes its second external logo. The wedge collapses to a 6-9 month feature gap, not a 36-48 month moat.",
+        "patternMatches": [
+          "Aizon (Barcelona, Feb 2024 Series C $20M led by NewVale Capital): a decade in pharma manufacturing AI, still sub-€20M ARR, had to pivot product into eBR to find a wedge Veeva/Werum had not closed — proves AI-native pharma manufacturing players get squeezed below escape velocity even with strong tech and EU base.",
+          "Veeva Vault absorption pattern: QualityDocs → QMS → Training all bolted on as adjacent modules at ~70% incumbent-default win rate; standalone GxP point solutions (ZenQMS, Qualio) capped at $20-30M ARR before sale.",
+          "ValGenesis VAL AI Assistant (INTERPHEX 2025) + Smart GxP: validation incumbent already shipping AI lifecycle layer to the same QA buyer, with 25-35% EU installed-base distribution Aletheia does not have.",
+          "Workera / Eightfold horizontal entries into pharma: zero GxP logo wins announced 2024-2026. The GAMP5/Part 11 moat is real — but it protects Veeva from Workera, not Aletheia from Veeva."
+        ],
+        "unitEconomicsConcern": "Pilot signal is €20-50K (kill-test al-k2 validateSignal), target ACV is €100-250K — a 3-5× expansion ask of validation-conservative QDs after pilot. GAMP5 Cat 4+5 validation, single-tenant VPC per customer, USDM attestation, and 6-9 month sales cycles imply €250-400K fully-loaded onboarding cost per logo. At 35-48 logos for Series A on a small seed team, sales+validation capacity (not demand) is the binding constraint; the 2.1× burn multiple optimism is ~40% off once per-tenant validation cost is amortised honestly.",
+        "loadBearingAssumption": "That a Greek/Balkan/Turkish mid-cap QA Director will sign a €100-250K ACV with a pre-revenue T-Life portfolio company rather than wait 12-18 months for Veeva AI Agents for Quality (announced April 2026) or MasterControl Manufacturing AI to ship the same competency-intelligence capability inside the GxP-validated system they already run. Procurement gravity in regulated pharma defaults to the validated incumbent; assertions[] verify regulation and pricing but never test whether the buyer prefers a new vendor over a feature-wait. This is the same buyer-behaviour question Logos Books got right (logistis won't be disintermediated) and that Aletheia has not asked.",
+        "alternativeThesis": "Reframe as a Veeva/MasterControl/Honeywell-TrackWise co-sell overlay, not a standalone platform. Ship the Annex-1 competency graph + Inspector Mode as a CERTIFIED OVERLAY on top of Vault Training / TrackWise Digital at €25-50K/site + revenue-share on incumbent seat expansion. Buyer becomes the incumbent's customer-success org (not the QA Director cold); GAMP5 validation rides the incumbent's umbrella attestation; Tripoli becomes lighthouse case study not moat. Lower TAM ceiling (€8-15M ARR vs €40-60M) but matches Dext→IRIS and Sparta→Honeywell precedents — channel-inside the validated stack, not against it. If Veeva/MasterControl/Honeywell partnerships all reject within 90 days, that is the kill signal and capital returns."
       }
     ],
     "industry": "pharma-life-sciences"
