@@ -5439,7 +5439,7 @@ export const ideas: Idea[] = [
       "carer-pipeline"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "EU GMP-equivalent for care-quality regulation tightening across member states; mandated digital reporting in DE/NL/SE/FR by 2025-26; migrant carer workforce (15-25% annual churn) makes manual record-keeping infeasible at scale.",
     "roadToMoat": [
       {
@@ -5495,7 +5495,96 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "agetech"
+    "industry": "agetech",
+    "assertions": [
+      {
+        "id": "cs-a1",
+        "claim": "EU home-care market ~€90B+ growing 6% YoY across ~100K+ care agencies",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cs-a2",
+        "claim": "Greek home-care agency count ~3-5K with rapid post-COVID growth",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cs-a3",
+        "claim": "EU Posted Workers Directive 2024 update + DE Pflegereform 2025 + NL Wlz reforms mandate digital reporting",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cs-a4",
+        "claim": "Folded scope: HomeMatch (hospital discharge intake) + CareSchool (agency onboarding + credentialing) modules",
+        "source": "[INTERNAL — see catalog-cuts.ts]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "cs-a5",
+        "claim": "WinMedica + ELPEN network gives warm intros to several hundred Greek home-care agencies",
+        "source": "[USER-STATED — see tlifeAssets.ts]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "cs-k1",
+        "hypothesis": "20 Greek home-care agencies sign €40-80/carer/month or €5-15K/agency/year in 8 weeks",
+        "experiment": "Direct outreach via WinMedica + ELPEN warm channel",
+        "costEur": 5000,
+        "durationWeeks": 8,
+        "killSignal": "<8 signed",
+        "validateSignal": "≥20 signed at €5K+ ACV"
+      },
+      {
+        "id": "cs-k2",
+        "hypothesis": "Mobile carer-app sustained DAU >60% after 90 days (the real product-retention test)",
+        "experiment": "Pilot with 50 carers across 3 agencies; measure shift-completion + time-and-task usage",
+        "costEur": 15000,
+        "durationWeeks": 14,
+        "killSignal": "<40% DAU at 90 days",
+        "validateSignal": "≥60% DAU + carer NPS ≥+30"
+      },
+      {
+        "id": "cs-k3",
+        "hypothesis": "EU Posted Workers + DE Pflegereform reporting outputs validated against actual regulatory submission cycle in 1 jurisdiction",
+        "experiment": "Run real agency through full annual reporting cycle; engage 1 EU labor-law consultant for audit",
+        "costEur": 8000,
+        "durationWeeks": 16,
+        "killSignal": "Regulatory reviewer rejects digital outputs OR requires manual re-keying",
+        "validateSignal": "Submissions accepted on first review"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Buyer-side CAC into thousands of sub-50-FTE agencies eats unit economics — agencies pay €5-15K but acquisition cost is €1-3K each in field-sales motion",
+        "likelihood": "high",
+        "earlySignal": "Kill-test cs-k1 conversion rate at 8 weeks; cohort acquisition cost vs ACV"
+      },
+      {
+        "cause": "Incumbent payroll/HR providers (CCH, Datev, ADP) add care-vertical modules and bundle at zero marginal price",
+        "likelihood": "medium",
+        "earlySignal": "Monitor CCH/Datev EU product announcements; engage 1 mid-market HR-vendor for partnership"
+      },
+      {
+        "cause": "T-Life network exhausted after first 30-50 GR agencies; non-Greek expansion requires building country-by-country pharmacy networks",
+        "likelihood": "medium",
+        "earlySignal": "Cohort by acquisition-channel; if >70% T-Life-warm intros after 6 months, expansion thesis untested"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.22,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Strongest agetech B2B per cluster red-team after MedAdherence. T-Life warm-channel real for Greek beachhead; HomeMatch + CareSchool fold-in expands cross-sell. €10M ARR = ~700 agencies at €15K ACV — feasible if expansion beyond GR validates. Buyer-CAC is the binding constraint."
+    }
   },
   {
     "id": "carehomeos-assisted-living",
@@ -5535,7 +5624,7 @@ export const ideas: Idea[] = [
       "trend-3-elder-tech"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "EU population 80+ doubling 2020-2050; new-build assisted living wave in Spain, Italy, Portugal, GCC; PE roll-up of facilities (€30B+ deals 2020-25) demands operating-discipline software.",
     "roadToMoat": [
       {
@@ -5597,7 +5686,97 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "agetech"
+    "industry": "agetech",
+    "assertions": [
+      {
+        "id": "ch-a1",
+        "claim": "EU assisted-living + retirement-village facility count ~30K with €80B+ aggregate revenue",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ch-a2",
+        "claim": "PE roll-up activity in EU senior-living €30B+ deal value 2020-25 (Orpea, DomusVi, Korian etc.)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ch-a3",
+        "claim": "PointClickCare dominant US assisted-living EHR; weak EU regulatory adaptation per cross-cutting view",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ch-a4",
+        "claim": "Greek/Cypriot assisted-living facility count <500; T-Life warm channel for first 5-10 design partners",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ch-a5",
+        "claim": "GCC senior-living new-build wave includes NEOM senior + Aljada + Diriyah components",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16",
+        "note": "GCC opportunity dampened by NEOM 2024 scope cuts; verify Aljada + Diriyah remain on track."
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ch-k1",
+        "hypothesis": "5 design-partner facilities (PE-owned for scale leverage) sign €30-80K/facility/year in 12 weeks",
+        "experiment": "Direct BD with PE-owned senior-living groups in DE/ES/IT",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "<2 signed",
+        "validateSignal": "≥3 PE-owned signed + 1 family-operated"
+      },
+      {
+        "id": "ch-k2",
+        "hypothesis": "Multi-jurisdiction inspector reporting (CQC UK + MDK DE + KEFEK GR) validated end-to-end",
+        "experiment": "Build reports + run dry-run inspection with 1 customer per jurisdiction",
+        "costEur": 20000,
+        "durationWeeks": 16,
+        "killSignal": "Inspector rejects any jurisdiction's report",
+        "validateSignal": "All 3 jurisdictions accept reports at first review"
+      },
+      {
+        "id": "ch-k3",
+        "hypothesis": "1 PE roll-up group (managing 20+ facilities) signs platform-wide agreement at €1M+ ACV",
+        "experiment": "Direct outreach to PE deal partners + portfolio operating partners",
+        "costEur": 5000,
+        "durationWeeks": 14,
+        "killSignal": "No PE group advances past initial discussion",
+        "validateSignal": "≥1 signed platform-wide + 1 pipeline LOI"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "PointClickCare adapts to EU regulatory complexity and uses US-customer reference advantage",
+        "likelihood": "medium",
+        "earlySignal": "PCC EU job postings + acquisition activity"
+      },
+      {
+        "cause": "PE roll-ups choose internal builds over third-party SaaS (the Orpea data-platform pattern)",
+        "likelihood": "medium",
+        "earlySignal": "Track 5 PE-owned groups for internal-build announcements"
+      },
+      {
+        "cause": "Integration complexity per jurisdiction (CQC UK ≠ MDK DE ≠ HIQA IE) drives per-customer onboarding cost above SaaS margin",
+        "likelihood": "high",
+        "earlySignal": "Kill-test ch-k2 reveals true onboarding cost per jurisdiction"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.22,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Real venture shape per cluster red-team — €30-100K/facility ACV survives EU enterprise sales; PE roll-up provides distribution funnel (one buyer = 20-200 facilities). PCC EU-adaptation timing is the competitive risk."
+    }
   },
   {
     "id": "medadherence-pharmacy",
@@ -5637,7 +5816,7 @@ export const ideas: Idea[] = [
       "eu-erx"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "EU e-prescription rollouts 2023-26 (Germany e-Rezept, Greek eRx mature) make digital adherence trackable; aging polypharmacy population growing; pharma manufacturers paying for real-world-adherence data.",
     "roadToMoat": [
       {
@@ -5693,7 +5872,96 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "agetech"
+    "industry": "agetech",
+    "assertions": [
+      {
+        "id": "ma-a1",
+        "claim": "55%+ of EU 65+ patients on ≥5 medications (polypharmacy); 50% non-adherent",
+        "source": "[ESTIMATE — Lancet 2024 + EU Geriatric Society]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ma-a2",
+        "claim": "Adverse drug events cause ~25% of EU elder hospital admissions",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ma-a3",
+        "claim": "WinMedica distribution into ~10,500 Greek pharmacies — the strongest non-pharma T-Life leverage",
+        "source": "[USER-STATED — see tlifeAssets.ts]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ma-a4",
+        "claim": "Germany e-Rezept mandatory Jan 2024; Greek eRx mature; Italy SAR transitioning to e-prescription",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ma-a5",
+        "claim": "Pharma manufacturers pay $100K-$1M+ per indication for real-world adherence data (Komodo Health, Trinity Life Sciences precedent)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ma-k1",
+        "hypothesis": "30 Greek pharmacies via WinMedica warm channel sign €100-300/pharmacy/month in 8 weeks",
+        "experiment": "WinMedica-led outreach + pharmacist webinars",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "<10 signed",
+        "validateSignal": "≥20 signed at €100+/month"
+      },
+      {
+        "id": "ma-k2",
+        "hypothesis": "Adherence improvement measurable: ≥15% reduction in 90-day non-adherence within design-partner cohort",
+        "experiment": "180-day cohort across 3 pharmacies and 200 polypharmacy patients",
+        "costEur": 18000,
+        "durationWeeks": 26,
+        "killSignal": "<5% improvement",
+        "validateSignal": "≥15% improvement AND patient/family NPS ≥+30"
+      },
+      {
+        "id": "ma-k3",
+        "hypothesis": "1 pharma manufacturer data-partnership LOI for real-world adherence dataset at €100K+ in 16 weeks",
+        "experiment": "Pitch top-10 pharma R&D data buyers",
+        "costEur": 5000,
+        "durationWeeks": 16,
+        "killSignal": "0 advances past initial data-quality review",
+        "validateSignal": "≥1 signed data-license LOI"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Pharmacy POS vendors (PharmaCloud, Pharmaserv) ship adherence as bundled feature, undercutting standalone",
+        "likelihood": "medium",
+        "earlySignal": "POS-vendor product announcements; PharmaCloud product roadmap quarterly"
+      },
+      {
+        "cause": "Pharma data buyers shift to direct EHR-data collection (Veeva Crossix, Komodo Health) bypassing pharmacy channel",
+        "likelihood": "medium",
+        "earlySignal": "Veeva + Komodo Health product expansion announcements"
+      },
+      {
+        "cause": "Pharmacist resistance to digital workflow at point-of-sale (the 2024 Greek pharmacist eRx adoption struggles)",
+        "likelihood": "low",
+        "earlySignal": "WinMedica + ELPEN pharmacist-network feedback in first 30 pharmacies"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.25,
+      "totalFailureBy36mo": 0.25,
+      "basisOfEstimate": "Strongest T-Life leverage in the 30-batch per cross-cutting red-team — WinMedica distribution is real CAC compression. €10M ARR = ~3,500-5,000 pharmacies at €200/month + pharma data revenue — feasible across GR + IT + DE in 24-36 months."
+    }
   },
   {
     "id": "mobivisa-employer-permits",
@@ -5735,7 +6003,7 @@ export const ideas: Idea[] = [
       "refugee-integration"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "EU Blue Card revision (Dir 2021/1883) + EU Talent Pool 2024 + Saudi Premium Iqama + UAE Golden Visa expansion + post-Brexit UK skilled-worker route — all accelerate cross-border employer-sponsored hires.",
     "roadToMoat": [
       {
@@ -5791,7 +6059,96 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "workforce-saas"
+    "industry": "workforce-saas",
+    "assertions": [
+      {
+        "id": "mv-a1",
+        "claim": "EU Blue Card Directive revised 2021/1883; EU Talent Pool launched 2024; UK skilled-worker route post-Brexit live",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "mv-a2",
+        "claim": "Localyze raised ~$50M (Series B 2022); strongest EU-focused competitor",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "mv-a3",
+        "claim": "Average employer-sponsored work-permit cycle 8-26 weeks at €5-25K per move via immigration-lawyer model",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "mv-a4",
+        "claim": "Folded scope: TalentBridge (refugee + displaced-worker integration with AMIF/ESF+ admin) module",
+        "source": "[INTERNAL]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "mv-a5",
+        "claim": "EU pan-jurisdiction + GCC corridor coverage is the cited Localyze gap",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "mv-k1",
+        "hypothesis": "10 SMB tech employers (50-500 FTE) sign €30-100K/year enterprise pilot in 12 weeks",
+        "experiment": "Direct BD to EU tech-hub HR teams + cold outreach",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "<3 signed",
+        "validateSignal": "≥6 signed at €30K+ ACV"
+      },
+      {
+        "id": "mv-k2",
+        "hypothesis": "Multi-jurisdiction coverage (DE + UK + NL + Ireland + 1 GCC) operational with permits processed end-to-end",
+        "experiment": "Build for 5 jurisdictions; process 20 real permits across them",
+        "costEur": 35000,
+        "durationWeeks": 18,
+        "killSignal": "Permit failure rate >10% OR cycle time >50% of lawyer-billable baseline",
+        "validateSignal": "<5% failure AND ≥40% cycle-time reduction"
+      },
+      {
+        "id": "mv-k3",
+        "hypothesis": "Immigration-lawyer co-counsel partnership for liability transfer in 14 weeks",
+        "experiment": "Engage 3 EU immigration-law firms for co-counsel agreement",
+        "costEur": 5000,
+        "durationWeeks": 14,
+        "killSignal": "0 firms advance past initial liability-risk review",
+        "validateSignal": "≥1 signed co-counsel framework"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Localyze pivots to multi-jurisdiction + GCC corridor before MobiVisa reaches scale",
+        "likelihood": "medium",
+        "earlySignal": "Localyze product announcements + acquisition activity"
+      },
+      {
+        "cause": "Immigration-lawyer liability layer is harder to replace than agentic-automation thesis assumes — case-rejection liability blocks pure-software model",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test mv-k3 reveals true liability-transfer requirements"
+      },
+      {
+        "cause": "AI accuracy fails on edge cases (unusual employment status, dependent visa complexity) → manual escalation rate too high to maintain SaaS margins",
+        "likelihood": "low",
+        "earlySignal": "Kill-test mv-k2 escalation rate measurement"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.22,
+      "totalFailureBy36mo": 0.28,
+      "basisOfEstimate": "Cross-cutting red-team's #3 portfolio pick. Real wedge vs Localyze (multi-jurisdiction + GCC corridor). EU Talent Pool 2024 + Blue Card revision = genuine why-now. €10M ARR = ~200 employers × €50K ACV — feasible in DACH + Nordics + UK."
+    }
   },
   {
     "id": "diaspora-return",
@@ -5830,7 +6187,7 @@ export const ideas: Idea[] = [
       "rebrain-greece"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "Greek demographic deficit (population shrinking 1%/yr); remote work makes return viable; tax incentives mature; tech-hub formation in Athens/Lisbon at peak.",
     "roadToMoat": [
       {
@@ -5886,7 +6243,98 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "workforce-saas"
+    "industry": "workforce-saas",
+    "assertions": [
+      {
+        "id": "dr-a1",
+        "claim": "Greek Law 4646/2019 provides 50% income-tax discount for returnees for 7 years",
+        "source": "[UNVERIFIED — Greek tax-code reference]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "dr-a2",
+        "claim": "Italian Impatriati regime (Decreto Crescita 2019, amended 2023) provides 30-70% taxable-income reduction for returnees",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "dr-a3",
+        "claim": "Portuguese NHR (Non-Habitual Resident) regime partially rolled back end-2024 — only IFICI replacement available 2025+",
+        "source": "[UNVERIFIED — recent policy change]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16",
+        "note": "Tailwind weakening per cross-cutting red-team."
+      },
+      {
+        "id": "dr-a4",
+        "claim": "Greek diaspora globally ~2-5M with tax-incentive eligibility (post-2008 brain-drain cohort returning)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "dr-a5",
+        "claim": "Enterprise Greece runs 'reBrainGreece' attraction program with government funding for return-services partners",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16",
+        "note": "T-Life warm-channel asset."
+      }
+    ],
+    "killTests": [
+      {
+        "id": "dr-k1",
+        "hypothesis": "Enterprise Greece partnership LOI for return-services platform in 8 weeks",
+        "experiment": "Direct BD via T-Life government relationships",
+        "costEur": 4000,
+        "durationWeeks": 8,
+        "killSignal": "No LOI from Enterprise Greece OR equivalent (AICEP Portugal)",
+        "validateSignal": "≥1 signed LOI with named return-program co-development"
+      },
+      {
+        "id": "dr-k2",
+        "hypothesis": "100 paying returnees placed into corporate roles in first 6 months at €1-3K placement fee + €500 platform sub",
+        "experiment": "Direct acquisition via LinkedIn + diaspora community channels + Greek tech-hub employers",
+        "costEur": 25000,
+        "durationWeeks": 26,
+        "killSignal": "<40 placements OR placement fee <€500 actual realized",
+        "validateSignal": "≥100 placements + ≥€100K revenue"
+      },
+      {
+        "id": "dr-k3",
+        "hypothesis": "5 Greek/Italian/Portuguese corporate customers (tech-hubs, family offices) sign €30-80K ACV in 12 weeks",
+        "experiment": "Direct BD with companies expanding R&D / commercial teams in returnee hubs",
+        "costEur": 5000,
+        "durationWeeks": 12,
+        "killSignal": "<2 signed",
+        "validateSignal": "≥3 signed at €30K+ ACV"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Tax-incentive policy reversal continues (Portuguese NHR already rolled back; Greek Law 4646 contested politically)",
+        "likelihood": "medium",
+        "earlySignal": "Track parliamentary tax-reform calendars in GR/IT/PT/ES"
+      },
+      {
+        "cause": "TAM caps at €10-20M ARR as cross-cutting agent flagged — niche even with T-Life warm channel",
+        "likelihood": "high",
+        "earlySignal": "Re-evaluate composite + bands at Month 12 against real placement velocity"
+      },
+      {
+        "cause": "Competing programs (EU Talent Pool, individual country 'come-home' campaigns) crowd the space",
+        "likelihood": "low",
+        "earlySignal": "Monitor Enterprise Greece + AICEP partnership exclusivity carve-outs in kill-test dr-k1"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.12,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Niche but capital-efficient bet with real T-Life government-channel advantage. Cross-cutting red-team explicitly flagged TAM ceiling at €10-20M ARR; accept as focused seed bet not unicorn. €1M ARR achievable on government co-funding + 200-500 returnees + corporate-side SaaS."
+    }
   },
   {
     "id": "gcc-nationalize",
@@ -5927,7 +6375,7 @@ export const ideas: Idea[] = [
       "vision-2030"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "Saudi Vision 2030 mid-decade enforcement push (2025-2030); UAE Emiratization 5%+ private-sector mandate by 2026; multi-billion-dirham penalties live since 2024.",
     "roadToMoat": [
       {
@@ -5983,7 +6431,97 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "workforce-saas"
+    "industry": "workforce-saas",
+    "assertions": [
+      {
+        "id": "gn-a1",
+        "claim": "Saudi Nitaqat program tier-based national-workforce quotas with escalating fines for non-compliance; UAE Emiratization 2% increase per year mandate (2022-26 cumulative ~10%)",
+        "source": "[UNVERIFIED — Saudi MHRSD + UAE MoHRE published]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gn-a2",
+        "claim": "GCC private-sector employer count ~200K+ enterprises with quota obligations across Saudi + UAE + Bahrain + Oman",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gn-a3",
+        "claim": "Saudi Nitaqat penalties include work-visa freezes, government-contract exclusion, and per-vacancy fines that scale with company size",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gn-a4",
+        "claim": "Current GCC HR tooling for nationalization is Excel + national-portal scraping (Qiwa, MUDAD, Tasheel)",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gn-a5",
+        "claim": "Big4 GCC consulting (PwC, KPMG, EY) bills nationalization advisory at €X00K per engagement",
+        "source": "[ESTIMATE — Big4 GCC labor practice norms]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16",
+        "note": "The Big4 grip on this market is the structural risk — see cross-cutting red-team finding."
+      }
+    ],
+    "killTests": [
+      {
+        "id": "gn-k1",
+        "hypothesis": "5 Riyadh-based mid-size employers (50-500 nationals) sign €100-300K ACV pilot in 12 weeks",
+        "experiment": "Direct BD via Elnova + cold outreach to MHRSD + PIF-portfolio HR contacts",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "<2 signed in 12 weeks",
+        "validateSignal": "≥3 signed at €100K+ ACV with named-decision-maker timeline"
+      },
+      {
+        "id": "gn-k2",
+        "hypothesis": "Quota-tracking + vacancy-suitability matching engine achieves ≥90% accuracy vs ground-truth Saudization audit",
+        "experiment": "Build engine on 3 employers' historical 24-month workforce data; benchmark",
+        "costEur": 18000,
+        "durationWeeks": 10,
+        "killSignal": "<75% accuracy OR >€50K to build core engine",
+        "validateSignal": "≥90% accuracy + <€30K marginal cost per new employer onboarding"
+      },
+      {
+        "id": "gn-k3",
+        "hypothesis": "Big4 reseller or co-sell LOI from PwC / KPMG / EY GCC labor practice within 14 weeks",
+        "experiment": "Direct partnership pitch — coopt Big4 rather than fight them",
+        "costEur": 5000,
+        "durationWeeks": 14,
+        "killSignal": "0 Big4 advance past initial meeting",
+        "validateSignal": "≥1 signed reseller/co-sell agreement with revenue-share"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Saudi MHRSD / UAE MoHRE build the optimization layer themselves on top of Qiwa/MUDAD/Tasheel",
+        "likelihood": "medium",
+        "earlySignal": "Track government-portal feature releases quarterly; engage portal product teams"
+      },
+      {
+        "cause": "Big4 doesn't partner — forks the IP after the pilot and resells under their brand at 4× markup",
+        "likelihood": "high",
+        "earlySignal": "Kill-test gn-k3 negotiation posture: are they negotiating co-sell or just discovery?"
+      },
+      {
+        "cause": "Political stability / quota-policy shifts (e.g., Saudi mid-decade Vision-2030 reset reduces enforcement)",
+        "likelihood": "low",
+        "earlySignal": "MHRSD policy announcements; Vision 2030 mid-term review 2026"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.5,
+      "reaches10mArrBy36mo": 0.25,
+      "totalFailureBy36mo": 0.25,
+      "basisOfEstimate": "Highest-conviction MENA bet in the catalog per cross-cutting red-team. Non-discretionary regulatory spend with multi-million-dirham penalties; Big4 captures half the market and the Big4-partnership posture in gn-k3 is the binary gate. €10M ARR = ~100 employers × €100K avg, plausible if Big4 partners or if direct-to-employer SMB pricing tier validated."
+    }
   },
   {
     "id": "gulfplace-asia-labor",
@@ -6027,7 +6565,7 @@ export const ideas: Idea[] = [
       "no-marketplace"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): REVISE-KEEP. Stripped the worker-placement marketplace (boots-on-ground recruitment cost in source countries that staffing-agency incumbents have failed to compound on for 20 years) and repositioned as WPS + CSRD compliance SaaS. Same regulatory tailwind; different unit economics; non-discretionary buyer budget.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): REVISE-KEEP. Stripped the worker-placement marketplace (boots-on-ground recruitment cost in source countries that staffing-agency incumbents have failed to compound on for 20 years) and repositioned as WPS + CSRD compliance SaaS. Same regulatory tailwind; different unit economics; non-discretionary buyer budget.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "Saudi WPS + UAE Wage Protection + Qatar reforms + ILO + EU corporate sustainability reporting (CSRD scope-3 labor): all push employers toward ethical-recruitment transparency.",
     "roadToMoat": [
       {
@@ -6083,7 +6621,96 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "workforce-saas"
+    "industry": "workforce-saas",
+    "assertions": [
+      {
+        "id": "gu-a1",
+        "claim": "GCC migrant workforce ~30M; placement market historically $10B+/year but compressing under reform pressure",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gu-a2",
+        "claim": "Saudi WPS + UAE WPS + Qatar WPS all live; mandatory wage-payment audit-trail with multi-million-dirham penalties",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gu-a3",
+        "claim": "EU CSRD scope-3 labor reporting from EU buyers of GCC services (Carrefour, Tesco etc.) phased 2024-26",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gu-a4",
+        "claim": "Qatar World Cup reforms + ILO C-189 + UAE Kafala reform 2022 = ethical-recruitment regulatory pressure",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gu-a5",
+        "claim": "Revised thesis (2026-05-16): compliance SaaS not placement marketplace; sells to GCC employers + EU buyers, not workers",
+        "source": "[INTERNAL — see red-team finding]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "gu-k1",
+        "hypothesis": "2 mid-size GCC employer + 1 EU buyer compliance LOI in 14 weeks at €30-150K ACV each",
+        "experiment": "Direct BD: 2 GCC construction/hospitality groups + 3 EU retailers sourcing from GCC",
+        "costEur": 6000,
+        "durationWeeks": 14,
+        "killSignal": "0 advance past initial review",
+        "validateSignal": "≥3 LOIs signed"
+      },
+      {
+        "id": "gu-k2",
+        "hypothesis": "WPS-integrated audit trail + CSRD scope-3 reporting module ships and exports valid output",
+        "experiment": "Build + run 1 month of real employer + EU-buyer data through it",
+        "costEur": 18000,
+        "durationWeeks": 14,
+        "killSignal": "Reporting outputs rejected by EU CSRD auditor OR WPS reconciliation accuracy <95%",
+        "validateSignal": "All outputs accepted; ≥99% WPS reconciliation"
+      },
+      {
+        "id": "gu-k3",
+        "hypothesis": "Technical proof: ethical-recruitment chain-of-custody audit-trail validated as court-admissible by 1 GCC labor lawyer",
+        "experiment": "Build evidence packages for 3 placement scenarios; engage lawyer for review",
+        "costEur": 5000,
+        "durationWeeks": 8,
+        "killSignal": "Lawyer flags chain-of-custody gaps requiring redesign",
+        "validateSignal": "All 3 packages rated court-admissible"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "WPS portal vendors (in Saudi/UAE/Qatar) absorb compliance layer + reporting natively, undercutting third-party",
+        "likelihood": "medium",
+        "earlySignal": "MUDAD + Tasheed + Qatar WPS product roadmaps"
+      },
+      {
+        "cause": "EU CSRD enforcement weakens or scope-3 labor reporting is softened in 2025-26 omnibus review",
+        "likelihood": "medium",
+        "earlySignal": "EC sustainability-reporting policy calendar"
+      },
+      {
+        "cause": "Big4 GCC labor practices capture the compliance market via embedded consulting",
+        "likelihood": "low",
+        "earlySignal": "Big4 product/partnership posture — Big4 absorbing this is also distribution upside if structured correctly"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.35,
+      "basisOfEstimate": "REVISE-KEEP per red-team. Stripped placement marketplace (boots-on-ground recruitment economics don't compound) to compliance SaaS. €10M ARR = ~80-150 GCC employers + EU buyers × €50-100K — feasible if WPS + CSRD enforcement holds. Tied to 2 different regulatory enforcement curves; double-dependent."
+    }
   },
   {
     "id": "powershift-energy-procurement",
@@ -6126,7 +6753,7 @@ export const ideas: Idea[] = [
       "reshoring"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "CBAM full enforcement Jan 2026; REPowerEU industrial-electrification targets; EU Innovation Fund €40B+ deployment 2024-2030; gas-price volatility post-Ukraine making energy CFO-level concern.",
     "roadToMoat": [
       {
@@ -6182,7 +6809,97 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "construction-home"
+    "industry": "construction-home",
+    "assertions": [
+      {
+        "id": "ps-a1",
+        "claim": "EU CBAM (Carbon Border Adjustment Mechanism) enters full force Jan 2026 with quarterly reporting + escalating embedded-emissions financial charge",
+        "source": "[UNVERIFIED — Reg (EU) 2023/956]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16",
+        "note": "Politically softened twice (2024 omnibus); tailwind real but slower than written."
+      },
+      {
+        "id": "ps-a2",
+        "claim": "EU REPowerEU mandates 30M cumulative heat pumps + accelerated industrial electrification by 2030",
+        "source": "[CONFIRMED via earlier validation]",
+        "status": "confirmed",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ps-a3",
+        "claim": "EU industrial electricity 2-5× US Gulf Coast cost; CBAM-exposed sectors are metals, cement, chemicals, fertilizers, hydrogen, electricity",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ps-a4",
+        "claim": "Folded scope: FoundryEU (Industrial Footprint / reshoring) module",
+        "source": "[INTERNAL]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ps-a5",
+        "claim": "Pexapark closest competitor; PPA-only focus; weaker on CBAM + scope-2 integration",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "ps-k1",
+        "hypothesis": "ELPEN + Tripoli + 3 external mid-size manufacturers (50-500 GWh/yr) sign €100-200K pilot in 16 weeks",
+        "experiment": "T-Life warm channel + cold outreach to DE/IT chemical + metals SMBs",
+        "costEur": 6000,
+        "durationWeeks": 16,
+        "killSignal": "<2 external signed",
+        "validateSignal": "≥3 external + 2 T-Life = 5 pilots committed"
+      },
+      {
+        "id": "ps-k2",
+        "hypothesis": "CBAM reporting module produces submission-ready output validated by 1 EU customs/tax consultant",
+        "experiment": "Build module + run 1 quarter of real CBAM data through it",
+        "costEur": 14000,
+        "durationWeeks": 10,
+        "killSignal": "Reviewer flags submission gaps requiring re-keying",
+        "validateSignal": "Output accepted at first review with normal evidentiary standards"
+      },
+      {
+        "id": "ps-k3",
+        "hypothesis": "Reshoring (Industrial Footprint) module: 2 manufacturer customers expand from procurement to reshoring-decision use case at +€50K module fee",
+        "experiment": "Cross-sell to existing PowerShift customers",
+        "costEur": 4000,
+        "durationWeeks": 16,
+        "killSignal": "<1 cross-sells",
+        "validateSignal": "≥2 customers expand at +€50K module fee"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "CBAM further politically softened or delayed (2024 omnibus already simplified; 2026 EC review possible)",
+        "likelihood": "medium",
+        "earlySignal": "Track EC trade-policy calendar + industry-association lobbying"
+      },
+      {
+        "cause": "Pexapark extends scope to CBAM + scope-2 and captures the PPA-anchored buyers",
+        "likelihood": "medium",
+        "earlySignal": "Monitor Pexapark product announcements + funding rounds"
+      },
+      {
+        "cause": "Gas prices fall + electricity prices normalize → CFO budget for procurement optimization shrinks",
+        "likelihood": "low",
+        "earlySignal": "EU gas/electricity price index + manufacturer EBITDA pressure tracking"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.22,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Real liability-transfer SaaS at CFO budget line; CBAM forcing function is genuine but politically variable. €10M ARR = 50-80 manufacturers × €100-200K — feasible in DE/IT/ES core. FoundryEU fold-in adds reshoring cross-sell."
+    }
   },
   {
     "id": "hospitalstaff-eu",
@@ -6222,7 +6939,7 @@ export const ideas: Idea[] = [
       "locum-marketplace"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "EU healthcare workforce crisis is top-3 political issue across UK + Germany + Italy + Greece; aging clinical workforce; post-COVID burnout-driven exits; structural shortfall projected to worsen 2025-2030.",
     "roadToMoat": [
       {
@@ -6278,7 +6995,96 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "agetech"
+    "industry": "agetech",
+    "assertions": [
+      {
+        "id": "hs-a1",
+        "claim": "EU healthcare worker shortfall ~1M+ by 2030 (Cedefop, WHO Europe)",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hs-a2",
+        "claim": "UK NHS short ~100K+; German Kliniken short ~200K+; Italian SSN + French CHU combined ~200K",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hs-a3",
+        "claim": "Locum's Nest + Patchwork dominant UK locum-marketplace incumbents; structurally UK-locked (NHS Workforce Alliance contracts, IR35 plumbing)",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hs-a4",
+        "claim": "NHS Trust agency-staff premium 30-40% over substantive employee cost",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "hs-a5",
+        "claim": "EU cross-border clinical-credential recognition Directive 2005/36 + 2013 update enables multi-jurisdiction healthcare staffing — the wedge Locum's Nest/Patchwork haven't built",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "hs-k1",
+        "hypothesis": "1 NHS trust + 1 German Klinikum sign €100-300K pilot in 16 weeks",
+        "experiment": "Direct BD to NHS Workforce Alliance + German hospital-group HR + Greek private-hospital network",
+        "costEur": 8000,
+        "durationWeeks": 16,
+        "killSignal": "<1 signed in 16 weeks",
+        "validateSignal": "≥2 signed pilots"
+      },
+      {
+        "id": "hs-k2",
+        "hypothesis": "Multi-jurisdiction clinical-credential recognition + rota integration operational across 3 EU jurisdictions",
+        "experiment": "Build for UK + DE + IT; run 1 month of cross-border locum placements",
+        "costEur": 30000,
+        "durationWeeks": 18,
+        "killSignal": "Credential-recognition pathway fails in any jurisdiction OR placement-failure rate >5%",
+        "validateSignal": "All 3 jurisdictions operational; <2% failure"
+      },
+      {
+        "id": "hs-k3",
+        "hypothesis": "Cost-per-shift to NHS Trust ≤90% of agency-staff premium baseline",
+        "experiment": "Pilot with 1 NHS Trust over 90 days; measure cost vs Workforce Alliance reference",
+        "costEur": 12000,
+        "durationWeeks": 14,
+        "killSignal": "Cost ≥agency-staff baseline",
+        "validateSignal": "≤90% cost AND clinical-leader satisfaction ≥+30 NPS"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Locum's Nest + Patchwork expand from UK to EU before HospitalStaff reaches multi-jurisdiction scale",
+        "likelihood": "medium",
+        "earlySignal": "Locum's Nest + Patchwork EU job postings + product announcements"
+      },
+      {
+        "cause": "NHS Trust + Klinikum + SSN in-house builds (each has procurement preference for sovereign solutions)",
+        "likelihood": "medium",
+        "earlySignal": "Track 5 EU hospital-IT internal-build announcements"
+      },
+      {
+        "cause": "Cross-border clinical-reciprocity blocks at country-by-country implementation (Directive 2005/36 implementation lag in 5+ member states)",
+        "likelihood": "high",
+        "earlySignal": "Engage 3 national medical councils + identify member-state-specific blockers"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.22,
+      "totalFailureBy36mo": 0.3,
+      "basisOfEstimate": "Cluster red-team's #2 EU pick. Locum's Nest/Patchwork UK-locked = multi-jurisdiction wedge is real. €10M ARR = ~30-50 trusts/hospitals × €200-300K — feasible with NHS-multi-trust + 1 German hospital group anchor."
+    }
   },
   {
     "id": "portshift-port-modernization",
@@ -6318,7 +7124,7 @@ export const ideas: Idea[] = [
       "ten-t"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "Red Sea disruption (2024) + post-pandemic port congestion + EU port modernization mandates + aging dockworker workforce retiring; €X billion EU TEN-T port-investment capital underdeployed because of operational complexity.",
     "roadToMoat": [
       {
@@ -6374,7 +7180,97 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "maritime"
+    "industry": "maritime",
+    "assertions": [
+      {
+        "id": "po-a1",
+        "claim": "Tryfon shipping operates from Piraeus; family network includes PCT-COSCO + PPA relationships",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "po-a2",
+        "claim": "Median European dockworker age ~50+; 25-30% retirement-eligible by 2030",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "po-a3",
+        "claim": "Navis (Konecranes) dominant terminal operating system; explicitly avoids HR/rota/upskilling layer",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16",
+        "note": "The structural separability vs Navis is the key wedge."
+      },
+      {
+        "id": "po-a4",
+        "claim": "EU TEN-T port-investment programme €X B underdeployed because of operational + workforce complexity",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "po-a5",
+        "claim": "Red Sea disruption + post-pandemic congestion + container-flow shifts created acute port-modernization pressure 2024-26",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "po-k1",
+        "hypothesis": "Piraeus pilot (PCT-COSCO or PPA) signed in 12 weeks at €300-800K ACV via T-Life warm channel",
+        "experiment": "Direct BD via Tryfon shipping network",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "No Piraeus pilot LOI in 12 weeks",
+        "validateSignal": "≥1 signed at €300K+"
+      },
+      {
+        "id": "po-k2",
+        "hypothesis": "Workforce-management module validated as separable from Navis TOS (i.e., integrates via API without disrupting Navis)",
+        "experiment": "Technical proof-of-concept with 1 Navis-running terminal",
+        "costEur": 18000,
+        "durationWeeks": 14,
+        "killSignal": "Integration breaks Navis workflow OR requires Navis-vendor permission",
+        "validateSignal": "Clean API integration; Navis-agnostic operation"
+      },
+      {
+        "id": "po-k3",
+        "hypothesis": "1 non-Greek EU port (Rotterdam, Antwerp, Hamburg, Algeciras) signs pilot LOI in 18 weeks",
+        "experiment": "Outreach via Piraeus reference customer + EU port-association events",
+        "costEur": 8000,
+        "durationWeeks": 18,
+        "killSignal": "0 non-Greek pilot",
+        "validateSignal": "≥1 signed pilot"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Navis launches workforce overlay or acquires the category from a smaller competitor",
+        "likelihood": "medium",
+        "earlySignal": "Konecranes M&A activity + Navis product announcements"
+      },
+      {
+        "cause": "Sovereign port-ops vendors (Hutchison Ports software, DP World tooling) push competing internal product to subsidiary ports",
+        "likelihood": "medium",
+        "earlySignal": "Track DPW + Hutchison product investments"
+      },
+      {
+        "cause": "Aging dockworker workforce retires faster than tooling adoption cycle → operational gap widens but customer can't buy at right pace",
+        "likelihood": "low",
+        "earlySignal": "Port-association labor data + retirement-cohort modeling"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.35,
+      "basisOfEstimate": "Real T-Life leverage (Tryfon + Piraeus = warm channel); Navis-separability is the technical gate. €10M ARR = ~30-50 ports × €300-800K — feasible across EU + GCC. Long sales cycles per port (12-18 months) is the rate-limiter."
+    }
   },
   {
     "id": "remitfleet-gcc-payroll",
@@ -6413,7 +7309,7 @@ export const ideas: Idea[] = [
       "corporate-payroll"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "GCC WPS enforcement maturity (Saudi 2025); UAE Wage Protection coverage 2024; rising worker-retention focus from Vision 2030 implementation; ethical-recruitment (post-Qatar reform) compliance pressure.",
     "roadToMoat": [
       {
@@ -6469,7 +7365,96 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "fintech"
+    "industry": "fintech",
+    "assertions": [
+      {
+        "id": "rf-a1",
+        "claim": "GCC migrant workforce ~30M+; total remittance outflows from GCC ~$120B+/year",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a2",
+        "claim": "Saudi WPS (Wage Protection System) coverage mandatory + enforced 2024-25; UAE WPS via Tasheel since 2009",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a3",
+        "claim": "Western Union / MoneyGram / Lulu typical corridor margin 5-8% on GCC→Asia/Africa remittance",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a4",
+        "claim": "EU CSRD scope-3 labor reporting (effective 2024-26 phased) creates EU-buyer audit demand on GCC migrant-labor supply chain",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "rf-a5",
+        "claim": "ILO C-189 (Domestic Workers) + UAE Kafala reform (2022) + Qatar reforms post-World-Cup create ethical-recruitment pressure",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "rf-k1",
+        "hypothesis": "1 KSA construction or hospitality group with 2-5K migrant workers signs €500K pilot in 14 weeks",
+        "experiment": "Direct BD via Elnova + T-Life GCC network",
+        "costEur": 8000,
+        "durationWeeks": 14,
+        "killSignal": "0 advance past CFO review",
+        "validateSignal": "≥1 signed at €500K+ ACV"
+      },
+      {
+        "id": "rf-k2",
+        "hypothesis": "WPS-integrated payroll + remittance corridor operational at <1% blended take rate (vs 5-8% incumbent) for first 1K workers",
+        "experiment": "Build corridor + run 3-month live cohort",
+        "costEur": 30000,
+        "durationWeeks": 18,
+        "killSignal": "Effective take rate >2% OR corridor failure rate >5%",
+        "validateSignal": "≤1% take rate AND >99% corridor success"
+      },
+      {
+        "id": "rf-k3",
+        "hypothesis": "CSRD scope-3 labor-reporting export module wins 1 EU buyer (Carrefour, Tesco, Lidl etc.) as paying customer at €100-300K",
+        "experiment": "Direct pitch to EU CSRD compliance teams sourcing from GCC",
+        "costEur": 4000,
+        "durationWeeks": 18,
+        "killSignal": "0 EU buyer interest",
+        "validateSignal": "≥1 signed at €100K+ AND second pipeline conversation"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Banks (Emirates NBD, Saudi Awwal, SABB) integrate WPS + remittance natively and undercut on price",
+        "likelihood": "medium",
+        "earlySignal": "Bank product announcements; SAMA/CBUAE regulatory positioning on bank-led remittance"
+      },
+      {
+        "cause": "Regulatory KYC/AML burden on transferring high-volume corridor payments exceeds infrastructure budget",
+        "likelihood": "medium",
+        "earlySignal": "Engage 1 GCC AML lawyer early; map corridor compliance gates pre-launch"
+      },
+      {
+        "cause": "Corridor price war from new fintech entrants (Wio, Tabby, Lulu Money) compresses margin",
+        "likelihood": "low",
+        "earlySignal": "Monitor competitor pricing quarterly; differentiation must be employer-channel not corridor-rate"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.35,
+      "basisOfEstimate": "Highest-conviction MENA bet alongside GCCNationalize per cluster red-team. Employer-channel + WPS-integration is the wedge that excludes consumer-remittance incumbents. €10M ARR = ~200K workers × €30/worker + corridor take = feasible in 24-36 months on KSA + UAE flagships."
+    }
   },
   {
     "id": "govprocure-gcc",
@@ -6508,7 +7493,7 @@ export const ideas: Idea[] = [
       "b2g"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED. Survived 5-agent evaluation of the 30-idea B2B batch; see catalog-cuts.ts for the 17 cuts and their reasoning.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "Vision 2030 + UAE D33 + Qatar 2030 procurement deployment; localization (Saudi Made + Made in UAE + Made in Qatar) preferences in tender criteria mandating compliance trackability.",
     "roadToMoat": [
       {
@@ -6564,7 +7549,96 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "govtech-identity"
+    "industry": "govtech-identity",
+    "assertions": [
+      {
+        "id": "gp-a1",
+        "claim": "GCC government procurement ~$200B+/year across Vision 2030 + We the UAE 2031 + Qatar 2030",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gp-a2",
+        "claim": "Saudi Etimad + UAE eSupply + Qatar Mawared dominant national procurement portals — government-facing, not supplier-facing",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gp-a3",
+        "claim": "Saudi 'Made in Saudi' + UAE 'Made in UAE' + Qatar 'Tasdeer' localization mandates require compliance tracking in tender bids",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gp-a4",
+        "claim": "Govini precedent: $X00M+ valuation on US SAM.gov supplier-intelligence layer",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "gp-a5",
+        "claim": "Big4 GCC consulting captures most enterprise-scale procurement-advisory budget; SMB suppliers underserved",
+        "source": "[ESTIMATE — cross-cutting red-team]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "gp-k1",
+        "hypothesis": "5 mid-size GCC suppliers (€10-100M revenue) sign €50-150K/year pilot in 12 weeks",
+        "experiment": "Direct BD to GCC SMB suppliers via Elnova + chambers of commerce",
+        "costEur": 6000,
+        "durationWeeks": 12,
+        "killSignal": "<2 signed",
+        "validateSignal": "≥3 signed at €50K+ ACV"
+      },
+      {
+        "id": "gp-k2",
+        "hypothesis": "Etimad + eSupply API integration operational with real-time RFP-discovery + bid-status tracking",
+        "experiment": "Build API connectors + validate against 6 months of historical tender data",
+        "costEur": 22000,
+        "durationWeeks": 14,
+        "killSignal": "Either portal denies API access OR data freshness >48h",
+        "validateSignal": "Both portals integrated AND <12h data freshness"
+      },
+      {
+        "id": "gp-k3",
+        "hypothesis": "Localization-rule library (Made in Saudi/UAE/Qatar tracking) reduces tender preparation time ≥40% in customer-validated test",
+        "experiment": "Time-and-motion study on 3 customers × 5 tenders each",
+        "costEur": 8000,
+        "durationWeeks": 14,
+        "killSignal": "<20% time reduction",
+        "validateSignal": "≥40% reduction validated by procurement leads"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "GCC governments build supplier-side analytics on top of Etimad/eSupply themselves (Saudi Vision 2030 has a Digital Government Authority)",
+        "likelihood": "medium",
+        "earlySignal": "Track DGA + UAE TDRA product roadmaps"
+      },
+      {
+        "cause": "Localization rules change frequently with policy shifts (Made-in-Saudi % thresholds revised multiple times 2020-25)",
+        "likelihood": "medium",
+        "earlySignal": "MISA + UAE MoIAT policy announcements"
+      },
+      {
+        "cause": "Big4 captures market via embedded consulting at PIF-portfolio + Sovereign-affiliated suppliers despite SMB underservice gap",
+        "likelihood": "low",
+        "earlySignal": "If Big4 partner/reseller LOI achievable, this becomes positive distribution; engage early"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.22,
+      "totalFailureBy36mo": 0.28,
+      "basisOfEstimate": "One of two MENA bets per cross-cutting red-team that escape Big4 capture (SMB-supplier focus). Govini-on-SAM.gov positioning per agent's REVISE recommendation. €10M ARR = ~100-150 suppliers × €70K ACV — feasible across Saudi + UAE + Qatar."
+    }
   },
   {
     "id": "eduskills-gcc",
@@ -6607,7 +7681,7 @@ export const ideas: Idea[] = [
       "female-workforce-integration"
     ],
     "addedDate": "2026-05-16",
-    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.",
+    "notes": "v1-depth entry; v2 upgrade after red-team evaluation.\n\nRed-team verdict (2026-05-16): PROCEED with fold-in. Modules absorbed: see description final paragraph.\n\nMethodology v2 propagated (2026-05-16): assertions + killTests + preMortem + probabilityBands now populated. Many assertions flagged [ESTIMATE] / [UNVERIFIED]; follow-on validation pass can promote to confirmed.",
     "whyNow": "Saudi 30%-by-2030 vocational target; UAE TVET roadmap (Cabinet 2024); GCC + global outflow of low-skilled workers (post-Kafala); structural need for nationals in mid-skill jobs.",
     "roadToMoat": [
       {
@@ -6663,6 +7737,95 @@ export const ideas: Idea[] = [
     "tlifeAssetRefs": [
       "t-life-capital"
     ],
-    "industry": "workforce-saas"
+    "industry": "workforce-saas",
+    "assertions": [
+      {
+        "id": "eu-a1",
+        "claim": "Saudi vocational enrollment target 30% by 2030 (Human Capability Development Program); current ~10%",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "eu-a2",
+        "claim": "UAE TVET roadmap (Cabinet Resolution 2024) + Saudi Human Capability Development Program (~$X billion 5-yr)",
+        "source": "[UNVERIFIED]",
+        "status": "unverified",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "eu-a3",
+        "claim": "Saudization + Emiratization quota tracking integration is the wedge over generic vocational platforms (Coursera, edX)",
+        "source": "[USER-STATED]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "eu-a4",
+        "claim": "Folded scope: FemaleOnboard (female workforce integration + MHRSD/MoHRE compliance) module = Workforce Compliance Suite",
+        "source": "[INTERNAL]",
+        "status": "user-stated",
+        "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "eu-a5",
+        "claim": "PIF-owned vocational schools (Saudi Skills Institute etc.) capture government-led spend — private platform must layer differently",
+        "source": "[ESTIMATE]",
+        "status": "estimated",
+        "lastChecked": "2026-05-16"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "eu-k1",
+        "hypothesis": "1 Saudi vocational college + 5 employer partners sign pilot at €200-400K combined in 14 weeks",
+        "experiment": "Direct BD via Elnova + Misk + MHRSD relationships",
+        "costEur": 7000,
+        "durationWeeks": 14,
+        "killSignal": "0 college signed OR <2 employer partners",
+        "validateSignal": "≥1 college + ≥5 employer partners committed"
+      },
+      {
+        "id": "eu-k2",
+        "hypothesis": "Saudization quota-tracking + skills-gap matching integrated end-to-end across 1 employer's workforce of 200+",
+        "experiment": "Build + run 90-day cohort with employer customer",
+        "costEur": 18000,
+        "durationWeeks": 18,
+        "killSignal": "<70% accuracy OR employer doesn't renew",
+        "validateSignal": "≥85% accuracy + employer expands to Tier-2 (Workforce Compliance Suite)"
+      },
+      {
+        "id": "eu-k3",
+        "hypothesis": "Workforce Compliance Suite (folded FemaleOnboard module) wins 1 additional customer beyond original EduSkills pilot at +€100K module fee",
+        "experiment": "Cross-sell to existing employer customers; pitch UAE board-mandate compliance angle",
+        "costEur": 5000,
+        "durationWeeks": 12,
+        "killSignal": "0 cross-sells in 12 weeks",
+        "validateSignal": "≥1 customer adds Workforce Compliance Suite module"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "PIF-owned vocational schools capture government-led spend before private platform reaches escape velocity",
+        "likelihood": "high",
+        "earlySignal": "PIF + MHRSD vocational-school product announcements; HCDP capital deployment tracker"
+      },
+      {
+        "cause": "Vocational stigma persists despite government targets (Saudi families resist sending children to vocational vs university)",
+        "likelihood": "medium",
+        "earlySignal": "Vocational-enrollment data 2025-26 vs HCDP targets"
+      },
+      {
+        "cause": "Localization rules dilute model — too many country/sector-specific compliance variants to maintain at SaaS margin",
+        "likelihood": "medium",
+        "earlySignal": "Kill-test eu-k2 reveals per-employer customization burden"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.35,
+      "reaches10mArrBy36mo": 0.18,
+      "totalFailureBy36mo": 0.35,
+      "basisOfEstimate": "MENA structural bet with 5-10 year HCDP window. FemaleOnboard fold-in adds compliance-suite cross-sell. €10M ARR = ~50-80 employer customers × €150K avg — feasible if PIF doesn't capture. Highest-risk MENA entry of the surviving 5."
+    }
   }
 ];
