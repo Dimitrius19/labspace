@@ -50,6 +50,62 @@ export const SCORECARD_DIMENSIONS: { key: keyof Omit<Scorecard, "composite">; la
   { key: "founderAvailability", label: "Founder Availability", weight: 0.10 },
 ];
 
+// ---------- Methodology v2: structured assertions, kill tests, pre-mortem ----------
+// Optional on existing entries; required on new high-conviction theses.
+
+export type AssertionStatus =
+  | "confirmed"
+  | "estimated"
+  | "user-stated"
+  | "unverified"
+  | "refuted";
+
+export interface Assertion {
+  id: string;
+  claim: string;
+  source: string; // URL, "[USER-STATED]", "[ESTIMATE]", "[REFUTED]", "[UNVERIFIED]"
+  status: AssertionStatus;
+  lastChecked: string; // YYYY-MM-DD
+  note?: string;
+}
+
+export interface KillTest {
+  id: string;
+  hypothesis: string;        // "X is true"
+  experiment: string;        // "Do Y for N weeks"
+  costEur: number;
+  durationWeeks: number;
+  killSignal: string;        // observable outcome that kills the idea
+  validateSignal: string;    // observable outcome that proceeds the idea
+}
+
+export type FailureLikelihood = "high" | "medium" | "low";
+
+export interface FailureMode {
+  cause: string;
+  likelihood: FailureLikelihood;
+  earlySignal: string;       // what you'd watch for in the first 90 days
+}
+
+export interface ProbabilityBands {
+  reaches1mArrBy18mo: number;      // 0-1
+  reaches10mArrBy36mo: number;     // 0-1
+  totalFailureBy36mo: number;      // 0-1; can co-exist with low values above (not partitioning)
+  basisOfEstimate: string;         // 1-3 sentences anchoring the numbers to base rates
+}
+
+export type RedTeamVerdict = "pass" | "revise" | "proceed-with-caveats" | "proceed";
+
+export interface RedTeamFinding {
+  date: string;                         // YYYY-MM-DD
+  verdict: RedTeamVerdict;
+  dealKiller: string;                   // the single strongest argument to kill
+  patternMatches: string[];             // 2-4 named precedents from adjacent failures
+  unitEconomicsConcern?: string;        // 1-3 sentences on margin/CAC/cap-table reality
+  loadBearingAssumption?: string;       // the assumption NOT in `assertions` that has to hold
+  alternativeThesis: string;            // a stronger reframe of the same opportunity
+}
+
 export interface Idea {
   id: string;
   title: string;
@@ -73,6 +129,13 @@ export interface Idea {
   tags: string[];
   addedDate: string;
   notes: string;
+  // Methodology v2 fields (optional during transition):
+  assertions?: Assertion[];
+  killTests?: KillTest[];
+  preMortem?: FailureMode[];
+  probabilityBands?: ProbabilityBands;
+  tlifeAssetRefs?: string[]; // ids from tlifeAssets.ts
+  redTeamFindings?: RedTeamFinding[];
 }
 
 export interface LocalOverrides {
