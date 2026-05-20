@@ -189,7 +189,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.15,
       "totalFailureBy36mo": 0.25,
       "basisOfEstimate": "RRF/ESF+ co-funding subsidizes Y1-2 revenue significantly — €1M ARR is achievable mostly on grants. €10M ARR requires expansion beyond Greek-only TAM (DACH, Italy, Iberia displaced-worker programs) and proven placement-rate model — harder. Generation/Multiverse hit $50M+ but each took 5-7 years."
-    }
+    },
+    "industry": "workforce-saas"
   },
   {
     "id": "construction-site-coach",
@@ -382,7 +383,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.18,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "Construction SaaS has tough 12-18 month sales cycles. Main contractor buyer with insurance discount + NSRF pull is more credible than direct-to-migrant-worker. €10M ARR = 100-150 contractors × €70-100K — requires expansion to DACH or Iberia within 24 months. The cross-cutting red-team flag (AI-Guidance-for-Physical-Work pattern) puts a real cap on this thesis."
-    }
+    },
+    "industry": "construction-home"
   },
   {
     "id": "olaf-trace-eu-funds",
@@ -578,7 +580,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.2,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "B2G evidence-products have brutal sales cycles but high ACV (€100-250K). €10M ARR = 40-100 accounts × €100-250K — plausible across EU-27 + EPPO + OLAF. T-Life's Ministry of Development warm intros compress Greek first-sale; pan-EU pull-through depends on Greek case-file proof. Only entry in the catalog where the proprietary beneficial-ownership graph is a genuine data moat that compounds over time."
-    }
+    },
+    "industry": "govtech-identity"
   },
   {
     "id": "pharma-kickback-sentinel",
@@ -768,7 +771,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.22,
       "totalFailureBy36mo": 0.25,
       "basisOfEstimate": "Compliance SaaS in pharma has hard budget lines and €60-150K ACV is well within range. €10M ARR = 100 customers × €100K average. 27 EFPIA member countries × 5-10 mid-cap pharma each = ~150-300 target accounts. Strongest unit-economic profile of the pharma cluster keepers."
-    }
+    },
+    "industry": "pharma-life-sciences"
   },
   {
     "id": "shipping-sanctions-tracer",
@@ -957,7 +961,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.15,
       "totalFailureBy36mo": 0.4,
       "basisOfEstimate": "Evidence-products for prosecutors have 12-24 month cycles, high ACV at €200-300K. €10M ARR = 30-50 accounts × €200-300K — feasible only with EU-wide pull (EPPO + 10-15 member states + OFAC EMEA). The new buyer (personally-liable ship managers) created by EU 14th sanctions is the upside catalyst — but unproven at scale."
-    }
+    },
+    "industry": "maritime"
   },
   {
     "id": "agecare-compliance",
@@ -1148,7 +1153,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.15,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "Compliance liability-transfer products at €15-40K ACV in regulated Greek industries have strong willingness-to-pay precedent (DPO services, GDPR compliance tools). €10M ARR = 250-300 agencies = ~6% market penetration of KEDASY-licensed providers. Bottleneck is sales cycle (slow agency owners) and Greek regulatory volatility."
-    }
+    },
+    "industry": "agetech"
   },
   {
     "id": "pm-copilot-southeast-europe",
@@ -1336,7 +1342,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.15,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "Pure SaaS, no regulatory perimeter, no liability transfer — clean unit economics. ALTP captive design partners de-risk first 8-15 customers. €10M ARR requires expansion beyond SE Europe (TAM constraint) which puts Polis up against Productboard directly. Cleanest economics in the catalog; ceiling is the constraint."
-    }
+    },
+    "industry": "workforce-saas"
   },
   {
     "id": "pharma-launch-intelligence",
@@ -1527,7 +1534,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.2,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "AXIOM Komodo got to ~$10M ARR in 30-36 months in the US with similar shape; SE Europe ARPU is ~40-60% of US but TAM is less saturated. The 40% / 20% / 30% bands reflect a stronger-than-average T-Life advantage (warm intros into the first ~10 customers) but a real risk of Citeline EU-extension within 18 months."
-    }
+    },
+    "industry": "pharma-life-sciences"
   },
   {
     "id": "pharma-regulatory-ai-agency",
@@ -1727,7 +1735,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.18,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "AI-native services agencies in adjacent verticals (Hebbia legal, Harvey legal, Tropic procurement) have reached €5-15M ARR in 24-36 months. Regulated pharma services adds 6-12 months of client cycle. €10M ARR = 30-50 clients × €200-300K avg engagement value — feasible given 27 EU member states × 10-30 mid-cap pharma each."
-    }
+    },
+    "industry": "pharma-life-sciences"
   },
   {
     "id": "maritime-charter-commercial-ai",
@@ -1916,7 +1925,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.18,
       "totalFailureBy36mo": 0.35,
       "basisOfEstimate": "Maritime SaaS rarely reaches €10M ARR (Veson is the exception at ~$50M+). Tryfon fleet data is a real moat — but the buyer (chartering desk) extracts margin from the manual workflow it would replace, which is the Logos-pattern failure mode. Rate Oracle data product is the more defensible second revenue line."
-    }
+    },
+    "industry": "maritime"
   },
   {
     "id": "pharmadataforge-llm-training",
@@ -2105,7 +2115,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.2,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "Vertical AI infrastructure is hard to monetize standalone; moat is regulatory expertise + Veeva integration depth. €10M ARR = 50-80 pharma customers × €100-200K — requires top-20 expansion within 24-30 months. The EU AI Act Art. 10 mandate is the structural tailwind that creates 18-24 months of urgency."
-    }
+    },
+    "industry": "pharma-life-sciences"
   },
   {
     "id": "porthos-shipping-llm-platform",
@@ -2295,7 +2306,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.18,
       "totalFailureBy36mo": 0.4,
       "basisOfEstimate": "Embedded vertical AI infrastructure is hard to monetize standalone — moats come from data + integration depth. The Tryfon-fleet corpus is real but narrow; BIMCO + multi-shipper data is required for scale. €10M ARR = 30-50 SaaS vendors × €200-300K embedded contracts, feasible if 2-3 anchor vendors adopt."
-    }
+    },
+    "industry": "maritime"
   },
   {
     "id": "pharma-skills-intelligence",
@@ -2556,7 +2568,8 @@ export const ideas: Idea[] = [
         ],
         "alternativeThesis": "(none — this is the validated thesis. The VaultEdge alt-thesis got folded back into this entry — see description architecture note + decision log)"
       }
-    ]
+    ],
+    "industry": "pharma-life-sciences"
   },
   {
     "id": "longevity-pharmacy-protocol",
@@ -2793,7 +2806,8 @@ export const ideas: Idea[] = [
         ],
         "alternativeThesis": "(none — this IS the alt thesis being adopted)"
       }
-    ]
+    ],
+    "industry": "agetech"
   },
   {
     "id": "sme-bookkeeping-agent",
@@ -3043,7 +3057,8 @@ export const ideas: Idea[] = [
         ],
         "alternativeThesis": "(none — this IS the alt thesis being adopted)"
       }
-    ]
+    ],
+    "industry": "fintech"
   },
   {
     "id": "trellis-family-ops",
@@ -3262,7 +3277,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.25,
       "totalFailureBy36mo": 0.2,
       "basisOfEstimate": "Carely's stall ($5M ARR over 5 years) is the bear case; the failure mode was product breadth over depth. The bull case: better product (adult-child-first, AI medical summarization, financial monitoring) + content marketing engine + clear pricing. €10M ARR = ~30K paying families at $300/yr = 0.075% penetration of US caregiver pop alone, or ~0.1% of EU+US combined — feasible at venture pace. Probability of reaching €1M is the highest in the agetech subset (clearest buyer, clearest pain)."
-    }
+    },
+    "industry": "agetech"
   },
   {
     "id": "tekton-eu-trades",
@@ -3482,7 +3498,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.2,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "EU services-marketplace pattern (Bolt, Wolt, Helpling, MyBuilder UK) reaches €10-100M+ revenue in 4-7 years. Trades-specific has higher ticket size (€500-5K/job vs €20-50/ride) but slower acquisition. €10M ARR = €60-80M GMV at 13-15% take rate, or 60K-80K jobs/year — feasible with 3-5 major-city density. Top risk: EU platform-work directive (2024) creates worker-classification overhang."
-    }
+    },
+    "industry": "construction-home"
   },
   {
     "id": "steward-elder-banking",
@@ -3709,7 +3726,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.18,
       "totalFailureBy36mo": 0.4,
       "basisOfEstimate": "Neo-banks reach €1M ARR in 18-24 months typically (Monzo, Revolut, Chime patterns). Senior-focused product has lower viral acquisition (adult-child must initiate; trust takes longer) but higher ARPU. €10M ARR = 35-50K family-tier subscriptions at €200-300/yr — feasible in 24-36 months IF bank-partnership lands in Month 0-6. The biggest risk is the bank-partner gate."
-    }
+    },
+    "industry": "agetech"
   },
   {
     "id": "reverie-ai-companion",
@@ -3928,7 +3946,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.15,
       "totalFailureBy36mo": 0.55,
       "basisOfEstimate": "Bimodal outcome distribution. Bear case (55% probability): dies on ethics backlash, AI Act classification, or cohort fatigue within 18-24 months. Bull case (15% probability of reaching €10M ARR): becomes the senior-specific category-defining product — Replika reached $X ARR in 4-5 years; senior version has higher ARPU + family-tier upsell. Median outcome: $1-3M ARR niche product at 36 months. Founder availability is the binding gate — needs exactly-right team."
-    }
+    },
+    "industry": "agetech"
   },
   {
     "id": "pawmetric-pet-health",
@@ -4137,7 +4156,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.18,
       "totalFailureBy36mo": 0.35,
       "basisOfEstimate": "Pet wearables have proven product-market fit at modest scale (Fi Collar ~€15M, Tractive ~€60M). €10M ARR = 30-50K paying subscribers at €240-300/yr — feasible in 24-36 months IF retention >70% (the hardware-ergonomic-quality gate) and CAC <€100. Mars Petcare ships AI within 18 months is the bear scenario."
-    }
+    },
+    "industry": "consumer"
   },
   {
     "id": "hearthpro-hvac-subscription",
@@ -4340,7 +4360,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.25,
       "totalFailureBy36mo": 0.25,
       "basisOfEstimate": "HomeServe UK proved €X recurring-revenue model at ~£800M scale over 30 years. HearthPro extends pan-EU + tech-enabled. €10M ARR = 25-35K subscriptions at €30-40/mo — feasible in 5 German cities + 1 UK in 24-36 months."
-    }
+    },
+    "industry": "construction-home"
   },
   {
     "id": "tessera-brand-resale",
@@ -4542,7 +4563,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.2,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "Trove proved €77M-raise viable in US; EU has 5-10× brands × ~3× brand revenue concentration. €10M revenue = 100-150 brands at €60K avg ACV — feasible in 36 months with focused EU GTM."
-    }
+    },
+    "industry": "retail-circular"
   },
   {
     "id": "advisorbot-auto-service",
@@ -4750,7 +4772,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.2,
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "Numa US precedent; service-department AI is high willingness-to-pay vertical. €10M ARR = 700-1000 dealerships at €10-15K avg ACV — feasible in 36 months with focused EU GTM + OEM channel."
-    }
+    },
+    "industry": "auto"
   },
   {
     "id": "concierge-new-parents",
@@ -4958,7 +4981,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.25,
       "totalFailureBy36mo": 0.2,
       "basisOfEstimate": "Huckleberry $10M-class precedent shows new-parent willingness-to-pay. Family-ops integrated product has higher ARPU + better retention than narrow point-products. €10M ARR = 30-50K families × €240-300/yr — feasible in 36 months."
-    }
+    },
+    "industry": "consumer"
   },
   {
     "id": "proof-humanity-verification",
@@ -5160,7 +5184,8 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.15,
       "totalFailureBy36mo": 0.45,
       "basisOfEstimate": "Identity-verification API category has €100M+ winners (Persona, Onfido, Jumio). Deepfake-resistant focus is the wedge; KYC incumbents are vulnerable. Bear case: Persona absorbs the category. Bull case: become the deepfake-defense layer above all KYC vendors."
-    }
+    },
+    "industry": "govtech-identity"
   },
   {
     "id": "stoa-small-group-social",
@@ -5368,6 +5393,7 @@ export const ideas: Idea[] = [
       "reaches10mArrBy36mo": 0.1,
       "totalFailureBy36mo": 0.5,
       "basisOfEstimate": "Consumer social is the hardest venture category; bimodal outcomes. €10M ARR requires 80-100K paid groups at €100/yr — Discord-scale in a niche. Weakest entry of the boundary-expansion 7 honestly. Build only if founder has unusual community-design + organic-growth chops."
-    }
+    },
+    "industry": "consumer"
   }
 ];

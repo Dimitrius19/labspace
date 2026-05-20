@@ -94,6 +94,31 @@ export interface ProbabilityBands {
   basisOfEstimate: string;         // 1-3 sentences anchoring the numbers to base rates
 }
 
+export type Industry =
+  | "pharma-life-sciences"
+  | "maritime"
+  | "agetech"
+  | "construction-home"
+  | "consumer"
+  | "fintech"
+  | "workforce-saas"
+  | "govtech-identity"
+  | "retail-circular"
+  | "auto";
+
+export const INDUSTRIES: { key: Industry; label: string }[] = [
+  { key: "pharma-life-sciences", label: "Pharma & Life Sciences" },
+  { key: "maritime", label: "Maritime & Shipping" },
+  { key: "agetech", label: "Agetech & Senior Care" },
+  { key: "construction-home", label: "Construction & Home Services" },
+  { key: "consumer", label: "Consumer (Family, Pet, Social)" },
+  { key: "fintech", label: "Fintech & SMB Software" },
+  { key: "workforce-saas", label: "Workforce & Productivity SaaS" },
+  { key: "govtech-identity", label: "GovTech, Compliance & Identity" },
+  { key: "retail-circular", label: "Retail & Circular Economy" },
+  { key: "auto", label: "Auto" },
+];
+
 export type RedTeamVerdict = "pass" | "revise" | "proceed-with-caveats" | "proceed";
 
 export interface RedTeamFinding {
@@ -136,6 +161,7 @@ export interface Idea {
   probabilityBands?: ProbabilityBands;
   tlifeAssetRefs?: string[]; // ids from tlifeAssets.ts
   redTeamFindings?: RedTeamFinding[];
+  industry?: Industry;
 }
 
 export interface LocalOverrides {
