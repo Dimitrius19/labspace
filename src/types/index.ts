@@ -340,7 +340,7 @@ export interface IntlPrecedent {
   url?: string;
 }
 
-export interface RedTeamFinding {
+export interface GovRedTeamFinding {
   axis:
     | "incumbent-overlap"
     | "political-third-rail"
@@ -382,7 +382,7 @@ export interface GovIdea {
   blueOceanAngle: string;
   greekContext: string;           // why Greece specifically, what the Greek twist is
   intlPrecedents: IntlPrecedent[];
-  redTeam: RedTeamFinding[];
+  redTeam: GovRedTeamFinding[];
   buyerObjection: string;         // simulated GS-level pushback
   buyerHook: string;              // what would make them forward it to the minister
   rubric: GovRubric;
