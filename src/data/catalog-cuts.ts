@@ -258,4 +258,155 @@ export const catalogCuts: CatalogCut[] = [
     "composite": 3.25,
     "reason": "KILL — TAM math doesn't work: 100K returnees/year × 5K placeable × €30-100K ACV per employer = €10-15M ARR ceiling; McKinsey Saudi Future Champions + Misk + Tawteen already own PIF-portfolio relationships; niche workflow tool not venture."
   }
+,
+  {
+    "id": "construction-site-coach",
+    "title": "Siteform",
+    "composite": 3.5,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. AI-Guidance-for-Physical-Work pattern — already killed in catalog 3× (PharmaOps, Navicore, Careform). Procore + Autodesk Construction Cloud + Triax own the site-data SOR; smart-glasses coaching is feature inside their roadmap."
+  },
+  {
+    "id": "pm-copilot-southeast-europe",
+    "title": "Polis",
+    "composite": 3.3,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Tries to displace Jira/Monday/Asana SOR in SE-European market; PM-copilot is a feature inside those incumbents' AI roadmaps. Buyer-channel mismatch + incumbent foreclosure."
+  },
+  {
+    "id": "pharma-launch-intelligence",
+    "title": "Launchbase",
+    "composite": 4.05,
+    "reason": "PORTFOLIO_RESHAPE.md (2026-05-21): SUSPEND. Launchbase alt-thesis (Vault-CRM overlay) is the same incumbent-foreclosure problem squared — sits on top of Veeva Vault CRM which itself ships AI inside the validated stack. Red-team 2026-05-20 confirmed."
+  },
+  {
+    "id": "pharma-regulatory-ai-agency",
+    "title": "RegulaFlow",
+    "composite": 3.85,
+    "reason": "PORTFOLIO_RESHAPE.md (2026-05-21): SUSPEND. RegulaFlow alt-thesis (ProPharma/NNIT white-label) hits the same buyer-channel problem at the agency layer. Red-team 2026-05-20 surfaced incumbent-foreclosure pattern at the regulatory-affairs CRO tier."
+  },
+  {
+    "id": "maritime-charter-commercial-ai",
+    "title": "VoyageDesk",
+    "composite": 3.85,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Q88 + Sea/net + Veson IMOS already own the charter-desk SOR; AI overlay is incumbent roadmap. Same pattern as seafarer-skill-ai (already archived)."
+  },
+  {
+    "id": "pharma-skills-intelligence",
+    "title": "Aletheia GxP",
+    "composite": 3.95,
+    "reason": "PORTFOLIO_RESHAPE.md (2026-05-21): SUSPEND. Aletheia GxP alt-thesis (Vault Training overlay) requires Veeva commercial relationship T-Life does not have and cannot manufacture in <6 months. Red-team 2026-05-20 confirmed Veeva Vault AI Agents Quality (April 2026) ships AI inside the validated stack ahead of any challenger Phase 0 gate."
+  },
+  {
+    "id": "trellis-family-ops",
+    "title": "Trellis",
+    "composite": 3.7,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Consumer family-ops app doesn't match the new infrastructure-to-incumbents thesis; no SOR-friendly motion to a regulated buyer."
+  },
+  {
+    "id": "tekton-eu-trades",
+    "title": "Tekton",
+    "composite": 3.2,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. EU vocational training/certification SORs (national EQF authorities + Pearson/PeopleCert) already occupy the seat; T-Life has no channel into them."
+  },
+  {
+    "id": "steward-elder-banking",
+    "title": "Steward",
+    "composite": 3.1,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Tries to compete with incumbent fintech/private-banking platforms for elderly; bank-vendor SOR (Avaloq, FNZ, Temenos) ships compliance modules ahead. Same kill pattern as SilverWealth."
+  },
+  {
+    "id": "reverie-ai-companion",
+    "title": "Reverie",
+    "composite": 2.9,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Consumer AI companion — competes with ChatGPT/Claude/Replika consumer products; no B2B-infrastructure motion; outside new thesis scope."
+  },
+  {
+    "id": "hearthpro-hvac-subscription",
+    "title": "HearthPro",
+    "composite": 3.05,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. HVAC subscription model tries to disintermediate installer-dealer SOR; ServiceTitan + Jobber own the SMB-trades vertical SaaS seat. Buyer-channel mismatch."
+  },
+  {
+    "id": "tessera-brand-resale",
+    "title": "Tessera",
+    "composite": 3.1,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Resale/recommerce competes with Vestiaire/Vinted/StockX consumer SORs; not infrastructure-to-incumbents shape."
+  },
+  {
+    "id": "advisorbot-auto-service",
+    "title": "AdvisorBot",
+    "composite": 3.1,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Auto-service chatbot tries to disintermediate dealership/mechanic SOR; Mitchell1 + Reynolds + CDK own the DMS seat with AI roadmap."
+  },
+  {
+    "id": "concierge-new-parents",
+    "title": "Concierge",
+    "composite": 3.35,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Consumer concierge — competes with nanny-agency + Care.com SORs; not infrastructure shape; outside new thesis."
+  },
+  {
+    "id": "proof-humanity-verification",
+    "title": "Proof",
+    "composite": 2.9,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Identity-verification SORs (Onfido, Persona, Veriff, Worldcoin) already entrenched; AI-detection overlay ships inside their stack within 12 months. Classic incumbent-foreclosure shape."
+  },
+  {
+    "id": "stoa-small-group-social",
+    "title": "Stoa",
+    "composite": 2.85,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Consumer social network — competes with Meta/Discord/WhatsApp SORs; not infrastructure shape."
+  },
+  {
+    "id": "carestaff-home-care-ops",
+    "title": "CareStaff",
+    "composite": 3.55,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Birdie, CareLineLive, Access Care Planning own the UK/EU home-care SOR with AI-driven scheduling/care-planning in 2025-26 roadmaps. Same Aya/Doctari foreclosure pattern that killed original HospitalStaff thesis."
+  },
+  {
+    "id": "carehomeos-assisted-living",
+    "title": "CareHomeOS",
+    "composite": 3.4,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Nourish, Person Centred Software, Cura Systems own the EU assisted-living SOR; layer-on-top is the graveyard category. Same pattern as HealthCityOps (already archived)."
+  },
+  {
+    "id": "gcc-nationalize",
+    "title": "GCCNationalize",
+    "composite": 3.85,
+    "reason": "PORTFOLIO_RESHAPE.md (2026-05-21): SUSPEND. ZenHR + Bayzat + Microsoft Saudi (Tawteen workflows inside Dynamics 365) ship nationalisation compliance modules ahead of any challenger Phase 0 gate; T-Life has no Gulf HR-vendor commercial channel. Same incumbent-AI release-cycle pattern as the 9/9 red-team set."
+  },
+  {
+    "id": "gulfplace-asia-labor",
+    "title": "GulfPlace",
+    "composite": 3.35,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. ZenHR + Bayzat + Workforce.ae own the GCC labor-market SOR; placement-fee economics also don't compound. Combined incumbent + structural failure."
+  },
+  {
+    "id": "powershift-energy-procurement",
+    "title": "PowerShift",
+    "composite": 3.5,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. SAP Ariba + Coupa + Schneider Electric EcoStruxure already own the procurement SOR with energy modules. Industrial-procurement SaaS seat is foreclosed."
+  },
+  {
+    "id": "portshift-port-modernization",
+    "title": "PortShift",
+    "composite": 3.45,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Navis (Kalmar) + Konecranes + Port Community Systems consortia own port-operations SOR with sovereign procurement. Layer-on-top is foreclosed; political procurement cycles are 36+ months."
+  },
+  {
+    "id": "remitfleet-gcc-payroll",
+    "title": "RemitFleet",
+    "composite": 3.5,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. GCC WPS-compliant payroll SORs (Bayzat, ZenHR, GreatDay HR, Microsoft Dynamics 365 Saudi instance) already cover wage-protection mandates. Same buyer-channel mismatch."
+  },
+  {
+    "id": "govprocure-gcc",
+    "title": "GovProcure GCC",
+    "composite": 3.4,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. SAP Ariba + Etimad (Saudi gov platform) + UAE federal tender platforms are the SORs; B2G procurement-data overlay loses on framework foreclosure. Same RM6387 pattern."
+  },
+  {
+    "id": "eduskills-gcc",
+    "title": "EduSkills GCC",
+    "composite": 3.25,
+    "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Saudi HRDF/Tawteen + UAE MoHRE + Tahaluf platforms are the SORs; corporate training SaaS competes with Pluralsight/Coursera/Cornerstone. Combined sovereign + commercial foreclosure."
+  }
 ];
