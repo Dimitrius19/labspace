@@ -166,3 +166,38 @@ All three variants share the hardened 6-filter pre-screen + 2-round adversarial 
 **Methodology calibration:** every Phase 0 candidate gets ≥1 round of adversarial review before funding; ≥2 rounds before founder/CEO recruitment. The 0% PASS rate is uncomfortable but evidence the bar is correctly set.
 
 **Next gate:** execute on the 3 funded Phase 0 bets. No additional sourcing planned for this cycle. Add a 4th bet only if (a) a Phase 0 fails cleanly and the reserve can be redirected, OR (b) a candidate organically surfaces from operating reality.
+
+---
+
+## 12. v2 mandate coherence findings (2026-05-21 night, post-PR-#8)
+
+After the 3 Phase 0 bets were funded, an independent architect review challenged whether the broadened v2 mandate is actually coherent or a kitchen-sink rationalization. **Verdict: partially-coherent.** Honest acknowledgement here so the structural risk is visible going into execution.
+
+### Load-bearing assumption of v2 mandate
+That a single principal (Dimitri) + a single balance sheet (T-Life Capital) + a single Greek/Brussels network constitute *substrate* general enough to support three structurally different business shapes (M&A roll-up, B2B SaaS, services firm) simultaneously — rather than three unrelated bets sharing a brand.
+
+### The strongest steel-man for v2
+The 13-of-14 v1 kill rate is evidence that v1's "build-from-zero AI venture studio" targeted a structurally extinct opportunity in mid-2026. Broadening to three motion types is the *disciplined* response. Each motion has a different defensible edge: MedAdherence-RWE = capital + asset edge; DG-Studies-Tooling = network + working-capital edge; FamilyOffice-Memos = pure relational edge. All three share the hardened 6-filter pre-screen + 2-round red-team methodology — **the process is the studio, even if the products differ.**
+
+### The strongest counter
+The three bets do not share operating substrate; they share only Dimitri and a brand. The networks invoked are different networks: Greek pharma (Motion B) ≠ Brussels EFPIA policy (Motion A) ≠ Greek peer-family + industrial mid-caps (Motion C). Talent does not compound: M&A operator ≠ Brussels SaaS BD ≠ peer-family advisor. Playbooks do not compound. Reputation does not compound. The one resource that IS shared — Dimitri's attention — is also the scarcest, and the three bets COMPETE for it rather than reinforce each other.
+
+**Survival math:** If each bet has independent ~50% probability of passing its Week-16 kill test (generous given the 0% cumulative red-team pass rate), the expected outcome is ~12.5% all 3 survive, ~37.5% exactly 1 survives, ~37.5% exactly 2 survive, ~12.5% none survive. In the most-likely *single* outcome (exactly 1 survives), the studio overhead is pure dead weight versus solo execution.
+
+### Three pre-committed adjustments
+
+**Adjustment 1 — Force explicit cross-bet substrate per pair, written into the spec.** Each of the 3 bets must have a named cross-bet contribution it makes to ≥1 other bet. If no such contribution can be written, the bet does not belong in the studio — fund it solo or kill it. Initial named substrate (subject to validation in Phase 0):
+
+| From | To | Cross-bet contribution |
+|---|---|---|
+| FamilyOffice-Memos corporate-diligence book | MedAdherence-RWE | Source pharma-tail acquisition targets via Greek industrial diligence engagements |
+| DG-Studies-Tooling AI Act Art. 50 disclosure layer | MedAdherence-RWE | RWE-data-product compliance layer shared infra |
+| MedAdherence-RWE pharma-network closeness | FamilyOffice-Memos | Pharma family-office anchors (ELPEN Triantafyllou, Pharmathen Vivartia) as warm-intro candidates |
+
+**Adjustment 2 — Stage-gate the studio itself at Week 16, not just the bets.** Pre-commit in writing: **if <2 of 3 bets pass kill tests at Week 16, collapse to solo execution of the survivor and explicitly write down the studio structure.** Do not run a "studio of one." This pre-commitment exists to prevent loss-aversion relitigation when the moment arrives — the rule is set now, when it's cheap.
+
+**Adjustment 3 — Cap Dimitri's allocation to FamilyOffice-Memos at ≤40% during Phase 0.** Put a named operator on MedAdherence-RWE and DG-Studies-Tooling with personal P&L accountability by Week 8. Without this, Phase 0 collapses to the same single-attention-bottleneck failure mode v1 suffered — just spread across three workstreams instead of one. If Week-8 named-operator gate is missed for a bet, that bet is killed at Week 8 (not Week 16) to free Dimitri's time for the survivors.
+
+### What this changes
+
+Nothing in the 3 funded specs is REVOKED — but the studio's organizing logic is now disciplined by three pre-committed rules instead of an open-ended "we'll figure it out." If even ONE of the 3 adjustments cannot be honored (e.g., no named operator surfaces for MedAdherence-RWE by Week 8), the studio structure self-collapses by design. That's the point: structural risk made visible and pre-committed at the moment of funding, not relitigated under emotional load 12 weeks from now.

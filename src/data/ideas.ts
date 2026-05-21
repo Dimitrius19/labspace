@@ -563,12 +563,12 @@ export const ideas: Idea[] = [
     "killTests": [
       {
         "id": "fom-k1",
-        "hypothesis": "Combined Year-1 ARR pipeline ≥€350K by Week 16, composed of: ≥2 family-office anchor retainers at ≥€80K each AND/OR ≥3 paid corporate M&A diligence engagements at ≥€40K each. Binary kill.",
-        "experiment": "Wk 1-4: build AI memo stack (Hebbia/Rogo + Pitchbook + CapIQ + Mergermarket) + 2 demo memos on recent public Greek deals (e.g. Mytilineos-Metlen transformation, Pancreta-Attica merger). Wk 5-10: 8-12 meetings via family channel with anchor candidates (Kontominas/Daskalantonakis/Vassilakis/Cypriot tier) + 6-8 corporate-diligence pitches (Greek industrial mid-caps doing acquisitions). Wk 11-16: close.",
+        "hypothesis": "SHARPENED post-round-2 RT: pipeline ≠ cash. Three CUMULATIVE gates, any single miss = binary kill. (a) ≥1 anchor family retainer COUNTERSIGNED + first €20K invoice PAID by Week 12; (b) ≥1 corporate M&A diligence SOW signed + 30% deposit received + dated kickoff by Week 14; (c) Week-16 cumulative cash-collected ≥€60K + locked Month-9 deliverable calendar.",
+        "experiment": "Wk 1-4: build AI memo stack (Hebbia/Rogo + Pitchbook + CapIQ + Mergermarket) + 2 demo memos on recent public Greek deals (Mytilineos-Metlen transformation, Helleniq Energy ADNOC stake or Pancreta-Attica merger). Wk 5-10: 8-12 meetings via family channel with anchor candidates (Kontominas/Daskalantonakis/Vassilakis/Cypriot Loutsios tier) + 6-8 corporate-diligence pitches (Greek industrial mid-caps with active acquisition pipeline). Wk 11-12: close ≥1 anchor with countersigned retainer + €20K invoice paid. Wk 13-14: close ≥1 corporate SOW with 30% deposit + dated kickoff. Wk 15-16: validate cumulative cash ≥€60K + locked Month-9 deliverable calendar.",
         "costEur": 45000,
         "durationWeeks": 16,
-        "killSignal": "Combined pipeline <€350K (KEY GATE — failing this kills the bet per T_LIFE_VENTURE_STUDIO_THESIS.md v2)",
-        "validateSignal": "Combined pipeline ≥€350K with concrete deliverable scope and 30-day kickoff dates"
+        "killSignal": "Any single miss of the three cumulative gates: (a) no anchor retainer countersigned + €20K paid by Wk 12, OR (b) no corporate SOW with 30% deposit + kickoff date by Wk 14, OR (c) Week-16 cumulative cash <€60K, OR (d) no documented Month-9 deliverable calendar = binary kill.",
+        "validateSignal": "All three gates pass simultaneously: anchor cash €20K + corporate deposit + Week-16 cumulative cash ≥€60K + locked Month-9 deliverable calendar with named scope."
       }
     ],
     "preMortem": [
@@ -608,6 +608,21 @@ export const ideas: Idea[] = [
         "unitEconomicsConcern": "Spec claims Big-4 floor is €350K/memo making €90K retainer a steal, but real competitor is NOT Big 4 — it's (a) a €100-150K all-in in-house generalist analyst that the family already trusts, (b) Pictet/UBS bundled into existing PB relationship at zero marginal cost, (c) Eurobank Private's deal team for Greek mid-market. The €60-120K retainer sits in a no-mans-land: too expensive to be a casual second opinion, too cheap to justify exclusive deal-flow disclosure. WTP likely caps at €50-70K for 3-4 clients, not €90-120K for 8.",
         "loadBearingAssumption": "That 5-8 rival Greek/Cypriot UHNW families will simultaneously share their actual €5-50M deal pipeline with the same peer-family advisor. There is zero empirical precedent for this scaling past 2-3 clients in any Mediterranean peer-advisory market — Greek families are notoriously omerta-grade on deal flow, and 'Dimitri is one of us' cuts both ways: he is ALSO a potential rival principal whose own T-Life capital could front-run a deal he was shown. The 'no co-invest discipline' clause is honest but does not solve the perception problem.",
         "alternativeThesis": "Reposition from 'outsourced deal desk for 8 families' to 'AI-augmented memo subscription for 2-3 anchor families + Greek industrial M&A diligence for corporates' (cross-sells into candidate #1 EU-AI-Act buyers). Target Year-1: 2 anchors x €120K + 3-4 corporate one-off diligence engagements at €40-60K each = €380-480K. Honest plateau €500-600K, not €700-800K. Founder-fit drops to 7/10 because corporate diligence is less 'peer-family' and more 'transactional consultant.' Sourcing agent's p=0.55 should drop to p=0.30-0.35; founder-fit 8.5/10 holds ONLY if Dimitri accepts the smaller ceiling and explicitly rejects the 30-name fiction. Otherwise: kill in favor of candidate #1 (EU AI Act / DORA) which has a verifiable 5-name buyer list, harder deadline-driven WTP, and no peer-confidentiality blocker."
+      },
+      {
+        "date": "2026-05-21",
+        "verdict": "revise",
+        "dealKiller": "Corporate-diligence cross-sell is a wishful ARR-gap-filler, not a real wedge: Greek industrial mid-caps (Mytilineos/Titan/Viohalco/Quest) already procure transaction diligence from PwC/Deloitte/EY + Karatzas/Kyriakides Georgopoulos at predictable price points with named-partner audit-trail comfort, and a one-person AI-augmented shop cannot offer the signed-opinion liability cover an M&A committee needs — so the €40-60K corporate engagements stall at 1 of 3-4 forecast, dropping combined pipeline below the €350K Week-16 gate even if the 2 family anchors close.",
+        "patternMatches": [
+          "ARR-gap-backfill-via-wishful-pivot: corporate cross-sell exists only to refill ARR after anchors were cut from 8 to 2",
+          "perceived-rival-principal: T-Life cap-table still reads as competitor regardless of 'no co-invest' clause",
+          "throughput-ceiling-disguised-as-plateau: 2-3 engineer team hard-caps at 3 concurrent engagements, not 5+",
+          "signed-retainer-is-not-delivered-work: Week-16 pipeline metric can pass while Month-9 cash collection reveals dormant retainers",
+          "founder-fit-cliff-below-7: corporate diligence grind collapses principal-level fit faster than 7/10 estimate suggests"
+        ],
+        "unitEconomicsConcern": "The Wk-16 pipeline test accepts SIGNED RETAINERS as a pass signal, but signed ≠ delivered ≠ collected. A retainer can sit dormant after 2 memos if the family loses interest; a corporate SOW can drift past kickoff if the buyer's M&A committee asks for Big-4 co-sign. Replace pipeline with cash-collected + deposit + countersignature to close the loophole.",
+        "loadBearingAssumption": "AT LEAST ONE anchor family actively discloses live deal pipeline within 90 days AND the same network produces 3+ corporate diligence engagements where a one-person shop's memo is accepted as committee-grade WITHOUT Big-4 / Greek-law-firm co-sign — both must be simultaneously true with no Greek peer-advisory precedent at that scale.",
+        "alternativeThesis": "If the round-2 kill test fails on the corporate gate (Wk 14), naturally collapse to single-anchor super-served lifestyle practice: 1 family @ €150-180K Family Investment Office Outsource scope, €200-250K plateau, 1 AI engineer, founder-fit back to 8/10. Reclassify as 'founder-runway hedge' not growth bet. Do NOT adopt this spec ex-ante — let the sharpened kill test do the selection. The naturally-collapse branch is the v3 if needed."
       }
     ]
   },
