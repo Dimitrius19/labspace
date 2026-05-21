@@ -1,5 +1,8 @@
 # Phase 0 Execution Plan — 3-Bet Portfolio
 
+> **SUPERSEDED 2026-05-21 by [`PORTFOLIO_RESHAPE.md`](./PORTFOLIO_RESHAPE.md).**
+> Retained as historical record of the pre-red-team plan. After 9 consecutive adversarial reviews (6 PASS, 3 REVISE, 0 PROCEED-clean), the 3-bet portfolio was collapsed to 2 infrastructure-to-incumbents bets (HospitalStaff-API + MedAdherence-PIS-module) totalling €160K Phase 0 + €40K reserve. The three bets below — Aletheia GxP, GCCNationalize, and the original HospitalStaff Trust-pilot framing — are all suspended pending re-spec.
+
 **Prepared:** 16 May 2026
 **Catalog state at PR:** [`Dimitrius19/labspace#6`](https://github.com/Dimitrius19/labspace/pull/6) — 39 ideas at v2 depth, 100+ sourced assertions, 41 archived cuts.
 
