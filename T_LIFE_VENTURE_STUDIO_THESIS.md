@@ -152,12 +152,17 @@ All three variants share the hardened 6-filter pre-screen + 2-round adversarial 
 | ID | Title | Phase 0 commit | Status |
 |---|---|---|---|
 | `medadherence-pharmacy` | MedAdherence-RWE | €40K | Buy-side play; 2 binary kill tests by Week 14 |
-| `dg-studies-tooling` (NEW) | DG-Studies-Tooling | €40K (proposed) | Infrastructure-to-incumbents; sell AI tooling to FWC primes |
+| `dg-studies-tooling` | DG-Studies-Tooling | €40K | Infrastructure-to-incumbents; sell AI tooling to FWC primes |
+| `family-office-memos` | FamilyOffice-Memos (NEW) | €45K | Dimitri-runnable 2-anchor + corporate-diligence hybrid; €500-600K plateau |
 
-**Catalog:** 5 ideas total (4 from prior + 1 new).
+**Catalog:** 6 ideas total (5 from prior + 1 new).
 
-**Reserve:** €120K (down from €160K after DG-Studies-Tooling allocation).
+**Reserve:** €75K (down from €120K after FamilyOffice-Memos allocation).
 
-**Sourcing batch 02:** in flight under v2 brief.
+**Studio total Phase 0 commit:** €125K across 3 bets.
 
-**Next gate:** sourcing batch 02 results + round-1 red-team on any new candidates that emerge.
+**Cumulative red-team outcome (3 rounds across catalog + sourcing batches 01 + 02):** 15 KILL + 4 REVISE out of 19. **0 outright PASS at any point.** All 3 funded bets were REVISE-class survivors that adopted their round-1 red-team alternativeThesis verbatim.
+
+**Methodology calibration:** every Phase 0 candidate gets ≥1 round of adversarial review before funding; ≥2 rounds before founder/CEO recruitment. The 0% PASS rate is uncomfortable but evidence the bar is correctly set.
+
+**Next gate:** execute on the 3 funded Phase 0 bets. No additional sourcing planned for this cycle. Add a 4th bet only if (a) a Phase 0 fails cleanly and the reserve can be redirected, OR (b) a candidate organically surfaces from operating reality.

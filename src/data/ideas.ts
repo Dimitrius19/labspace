@@ -429,6 +429,189 @@ export const ideas: Idea[] = [
     ]
   },
   {
+    "id": "family-office-memos",
+    "title": "FamilyOffice-Memos",
+    "ycCategory": "AI-Augmented Family-Office Memo + Corporate Diligence Hybrid",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "Dimitri-runnable services firm: AI-augmented memo subscription for 2-3 anchor Greek + Cypriot UHNW family-office anchors, PLUS Greek industrial M&A diligence engagements for corporate clients. €500-600K plateau, off-balance-sheet, no VC.",
+    "description": "Born from round-1 red-team REVISE on the original Family-Office Memos thesis. The original spec claimed 8 anchor family-office clients × €90K retainer = €720K Year-1, but the red-team surfaced a structural problem: the 30-name buyer list was overstated at the persona level (Latsis Paneuropean, Vardinoyannis, Niarchos, Demetra all have in-house teams or use Big 4), and Greek peer-family confidentiality (chinese-walls between rival families: Vardinoyannis vs Latsis vs Restis) caps the realistic client count at 2-3 anchors, not 8.\n\nThe round-1 alternative-thesis adopted verbatim: REPOSITION from 'outsourced deal desk for 8 families' to '2-3 anchor family memo subscription + cross-sell Greek industrial M&A diligence to corporates.' The hybrid widens TAM beyond family-only without dropping the family-trust moat. Year-1: 2 anchors × €120K + 3-4 corporate one-off diligence at €40-60K each = €380-480K. Honest plateau €500-600K. Founder-fit drops from 8.5 to 7/10 (corporate work is less 'peer-family' than the original framing, more transactional consultant).\n\nDimitri operates personally with 2-3 AI engineers + 0-2 domain experts (sector specialists on retainer per engagement). AI agents do 80%+ of memo drafting (Hebbia/Rogo/AlphaSense-class tooling); Dimitri owns reference calls, final judgment, and presentation. Studio motion is CASH-FLOW services firm, not venture build — never raises VC, off-balance-sheet from T-Life Capital.",
+    "primaryMarket": "greece-cyprus",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "2-3 named family-office anchors (mid-tier Greek + Cypriot tier — Kontominas, Daskalantonakis, Cypriot Loutsios/Christodoulou/Shacolas where rival-family chinese-walls don't block) + 3-5 corporate M&A diligence clients via Greek industrial peer network.",
+    "expansionMarkets": [
+      {
+        "market": "europe",
+        "fit": "yellow",
+        "note": "Possible Year-2+ via Bird & Bird Brussels EU M&A referral network; secondary, not Year-1."
+      },
+      {
+        "market": "middle-east",
+        "fit": "red",
+        "note": "Not pursued — Gulf family-office market is structurally different and out of scope."
+      },
+      {
+        "market": "balkans",
+        "fit": "yellow",
+        "note": "Cyprus is in scope; broader Balkans is not."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Most family-network-load-bearing thesis in the catalog. Dimitri is a fourth-generation peer who runs the family's own capital — peer-family trust is the moat that SaaS and Big 4 cannot replicate. Corporate diligence cross-sell leverages the same Greek industrial relationships used by other studio bets (Mytilineos, Titan, Viohalco, Quest, etc.).",
+    "tags": [
+      "dimitri-runnable",
+      "family-network-edge",
+      "cash-flow-services",
+      "off-balance-sheet",
+      "2-anchor-plateau",
+      "phase0-funded"
+    ],
+    "addedDate": "2026-05-21",
+    "notes": "RE-SPEC v2 2026-05-21 night (born from round-1 REVISE). Original Family-Office Memos thesis claimed 8 anchor families × €90K = €720K Year-1. Round-1 red-team surfaced: (a) 30-name buyer list was persona-inflated — top names (Latsis, Vardinoyannis, Niarchos, Demetra) have in-house teams; (b) peer-family chinese-walls cap realistic client count at 2-3 anchors; (c) Hebbia/Rogo/AlphaSense already commoditize memo drafting at $50-200K/seat for funds; (d) WTP caps at €50-70K for 3-4 clients not €90-120K for 8.\n\nAdopted alt-thesis: REPOSITION to '2-anchor memo subscription + corporate M&A diligence hybrid.' Plateau €500-600K Year-1. Founder-fit 7/10 (down from 8.5/10).\n\nFunded as 3rd Phase 0 bet under v2 studio mandate. Phase 0 commit €45K; 16-week binary kill: ≥2 anchor family retainers ≥€80K AND/OR ≥3 paid corporate diligence engagements ≥€40K (combined Year-1 ARR pipeline ≥€350K).\n\nStudio total: 3 funded bets, ~€125K Phase 0 commit, ~€75K reserve.",
+    "whyNow": "Two windows aligned: (a) AI memo-drafting tools (Hebbia, Rogo, AlphaSense) have matured to production quality in 2025-2026 — a peer-family advisor with these tools genuinely delivers what a junior PE associate produces, at 1/5 the cost; (b) Greek industrial M&A deal flow is at a 10-year high (RRF tail + ESPA + post-COVID consolidation) — corporate clients need fast diligence on €10-50M acquisitions that Big 4 charges €300K+ for. The hybrid model captures the cross-cycle in both windows.",
+    "roadToMoat": [
+      {
+        "timeframe": "Phase 0 — Week 0-16",
+        "milestone": "≥2 family-office anchor retainers ≥€80K AND/OR ≥3 paid corporate M&A diligence engagements ≥€40K. Combined Year-1 ARR pipeline ≥€350K. Binary kill if not met."
+      },
+      {
+        "timeframe": "Phase 1 — Month 4-12",
+        "milestone": "Build to €380-480K cash revenue. 2 family anchors + 3-4 corporate diligence engagements live. AI memo stack production-grade; 1 retained domain expert (sector specialist) on retainer."
+      },
+      {
+        "timeframe": "Phase 2 — Month 12-36",
+        "milestone": "Plateau €500-600K cash. Optional EU expansion (year-2+) via Bird & Bird referral network. Off-balance-sheet, no VC. Cash distributions to Dimitri / family at studio level."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€45K Phase 0 → €200-300K Year-1 ops cost (Dimitri salary + 2-3 AI engineers + domain expert retainer + data subscriptions Pitchbook/Mergermarket/CapIQ)",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "Personally operated by Dimitri. NO recruited CEO needed. Off-balance-sheet from T-Life Capital. Honest plateau €500-600K cash — not venture-shaped."
+    },
+    "competitors": [
+      {
+        "name": "In-house generalist analyst at family office",
+        "type": "incumbent",
+        "geography": "Greece",
+        "note": "Real competitor — €100-150K all-in for a single in-house analyst the family already trusts. Our wedge: 2-3× breadth via AI + senior judgment at €80-120K retainer."
+      },
+      {
+        "name": "Pictet, Lombard Odier, UBS Family Advisory",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Bundled into existing PB relationship at zero marginal cost. Wedge for us: Greek-peer-family trust + Greek-deal-flow specialization their generalist desks don't have."
+      },
+      {
+        "name": "Eurobank Private, Alpha Private deal teams",
+        "type": "incumbent",
+        "geography": "Greece",
+        "note": "Adjacent — they serve Greek mid-market with deal sourcing but conflict of interest as potential co-investors. We are advisor-only (no carry, no co-invest)."
+      },
+      {
+        "name": "Hebbia, Rogo, AlphaSense (AI memo tooling)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Substrate — we USE these. Differentiation = senior judgment + peer-family Rolodex + Greek-market depth they do NOT have."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 2,
+      "tlifeEdge": 5,
+      "competitiveGap": 3,
+      "capitalFit": 5,
+      "regulatoryRisk": 2,
+      "founderAvailability": 5,
+      "composite": 3.7
+    },
+    "ycRfsCorrelation": "Cash-flow services firm; AI-augmented professional services; family-network-edged.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "fintech",
+    "assertions": [
+      {
+        "id": "fom-a1",
+        "claim": "Greek + Cypriot UHNW family-office addressable persona for outsourced memo desk is realistically 8-12 families (mid-tier Kontominas / Daskalantonakis / Vassilakis / Cypriot Loutsios / Christodoulou / Shacolas), NOT 30. Top names (Latsis Paneuropean, Vardinoyannis, Niarchos, Demetra Holdings) have in-house teams or use Big 4. Peer-family chinese-walls cap realistic concurrent client count at 2-3 anchors.",
+        "source": "research/sourcing-02-redteam-round1.md (red-team verified against Campden Wealth 2025 + PwC Global FO Deals 2024)",
+        "status": "confirmed",
+        "lastChecked": "2026-05-21",
+        "note": "MATERIAL: the original 8-anchor framing was a 4× persona inflation. Spec corrected to 2-3 anchors + corporate diligence hybrid."
+      },
+      {
+        "id": "fom-a2",
+        "claim": "AI memo-drafting tools (Hebbia, Rogo, AlphaSense, S&P CapIQ Copilot) deliver production-quality memos at $50-200K/seat for institutional funds. Differentiator collapses to senior judgment + peer-family Rolodex, NOT product. This is a services firm, not a SaaS company.",
+        "source": "https://www.hebbia.com/resources/rogo-competitors",
+        "status": "confirmed",
+        "lastChecked": "2026-05-21"
+      },
+      {
+        "id": "fom-a3",
+        "claim": "Big 4 transaction advisory bills €350K+ per memo. Real competition is NOT Big 4 — it's (a) €100-150K in-house generalist analyst; (b) Pictet/UBS bundled OCIO at zero marginal cost; (c) Eurobank/Alpha Private deal teams. WTP caps at €50-70K for 3-4 clients, not €90-120K for 8.",
+        "source": "research/familyoffice-rt.json unitEconomicsConcern",
+        "status": "estimated",
+        "lastChecked": "2026-05-21"
+      },
+      {
+        "id": "fom-a4",
+        "claim": "Greek industrial M&A deal flow is at a 10-year high in 2025-2026 — RRF tail, ESPA, post-COVID consolidation, Mytilineos/Metlen transformation, Greek banking re-privatization. Corporate clients need fast €10-50M acquisition diligence at price points below Big 4's €300K+ floor.",
+        "source": "https://www.tovima.com/finance/greek-construction-giants-post-e18-6b-project-backlog/amp/",
+        "status": "estimated",
+        "lastChecked": "2026-05-21"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "fom-k1",
+        "hypothesis": "Combined Year-1 ARR pipeline ≥€350K by Week 16, composed of: ≥2 family-office anchor retainers at ≥€80K each AND/OR ≥3 paid corporate M&A diligence engagements at ≥€40K each. Binary kill.",
+        "experiment": "Wk 1-4: build AI memo stack (Hebbia/Rogo + Pitchbook + CapIQ + Mergermarket) + 2 demo memos on recent public Greek deals (e.g. Mytilineos-Metlen transformation, Pancreta-Attica merger). Wk 5-10: 8-12 meetings via family channel with anchor candidates (Kontominas/Daskalantonakis/Vassilakis/Cypriot tier) + 6-8 corporate-diligence pitches (Greek industrial mid-caps doing acquisitions). Wk 11-16: close.",
+        "costEur": 45000,
+        "durationWeeks": 16,
+        "killSignal": "Combined pipeline <€350K (KEY GATE — failing this kills the bet per T_LIFE_VENTURE_STUDIO_THESIS.md v2)",
+        "validateSignal": "Combined pipeline ≥€350K with concrete deliverable scope and 30-day kickoff dates"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Peer-family confidentiality blocks even 2 concurrent anchors — Vardinoyannis-tier won't share deal flow with Kontominas-tier advisor (chinese walls deeper than expected)",
+        "likelihood": "medium",
+        "earlySignal": "First 2 meetings reveal each anchor's actual willingness to disclose pipeline. If both decline confidential deal sharing, pivot heavier into corporate diligence (no chinese-wall issue)."
+      },
+      {
+        "cause": "Hebbia/Rogo/AlphaSense move down-market and offer family-office tier productized service at €30-50K/yr, eating the AI-memo-tooling moat layer below us",
+        "likelihood": "medium",
+        "earlySignal": "Watch Hebbia/Rogo product announcements 2025-2026 for family-office-tier launch. If detected, our differentiation collapses to pure-services (Dimitri's judgment + Rolodex), which is fine but caps growth."
+      },
+      {
+        "cause": "Founder-fit deteriorates — corporate diligence work is less 'peer-family' than memo subscription; Dimitri ends up doing transactional consulting at 30+ hours/week which kills enjoyment",
+        "likelihood": "medium",
+        "earlySignal": "After 4 months, measure Dimitri's actual hours-per-week and enjoyment score. If corporate work >50% AND enjoyment <6/10, scale back corporate book to family-only and accept lower revenue plateau."
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.15,
+      "reaches10mArrBy36mo": 0.02,
+      "totalFailureBy36mo": 0.35,
+      "basisOfEstimate": "REVISED honest p after round-1 red-team. €1M ARR is UNLIKELY by design — spec explicitly caps at €500-600K plateau. €10M ARR explicitly impossible (lifestyle services firm, not venture). High P(stable at €300-500K) ~0.50. P(total failure: <€150K Year-1 + Dimitri exit) = 0.35. The bet is cash-flow durability + founder-fit, not scale."
+    },
+    "redTeamFindings": [
+      {
+        "date": "2026-05-21",
+        "verdict": "revise",
+        "dealKiller": "The 30-name buyer list is materially overstated. Latsis (Paneuropean) and Vardinoyannis are €11B+ groups with full in-house investment teams; Niarchos works through SNF (grant-making) and Costamare/TEMES has its own deal arm under Achilles Constantakopoulos; Demetra Holdings is a listed company using Big 4 not a private FO. Realistic addressable persona is closer to 8-12 families (mid-tier Kontominas/Daskalantonakis/Cypriot tier), not 30 — which collapses Year-1 from 5x€90K=€450K to 3x€75K~=€225K once peer-confidentiality friction (chinese walls between rival Greek families) blocks 40-50% of the named list from sharing deal flow with the same advisor.",
+        "patternMatches": [
+          "trust-moat-but-tiny-TAM: the same family-network signal that opens the first 2-3 doors closes the next 5 because rival families (Vardinoyannis vs Latsis vs Restis) won't share an advisor",
+          "junior-PE-associate-in-disguise: 30-50 memos/yr * 6-10 reference calls * Dimitri-only = 240-400 reference-call hours + committee presentations, structurally indistinguishable from a 1-2 person boutique that always plateaus at 5-8 clients",
+          "AI-margin-eaten-by-trust-tax: Hebbia/Rogo/AlphaSense already do 80% memo drafting at $50-200K/seat for funds; differentiator collapses to 'Dimitri's judgment + Rolodex' which is pure-services not productized",
+          "OCIO-already-exists: 80% of FOs use external advisors (Campden 2025); Pictet/Lombard Odier/UBS Family Advisory + Greek private banks (Eurobank, Alpha) already serve this need with deeper books and lower marginal cost"
+        ],
+        "unitEconomicsConcern": "Spec claims Big-4 floor is €350K/memo making €90K retainer a steal, but real competitor is NOT Big 4 — it's (a) a €100-150K all-in in-house generalist analyst that the family already trusts, (b) Pictet/UBS bundled into existing PB relationship at zero marginal cost, (c) Eurobank Private's deal team for Greek mid-market. The €60-120K retainer sits in a no-mans-land: too expensive to be a casual second opinion, too cheap to justify exclusive deal-flow disclosure. WTP likely caps at €50-70K for 3-4 clients, not €90-120K for 8.",
+        "loadBearingAssumption": "That 5-8 rival Greek/Cypriot UHNW families will simultaneously share their actual €5-50M deal pipeline with the same peer-family advisor. There is zero empirical precedent for this scaling past 2-3 clients in any Mediterranean peer-advisory market — Greek families are notoriously omerta-grade on deal flow, and 'Dimitri is one of us' cuts both ways: he is ALSO a potential rival principal whose own T-Life capital could front-run a deal he was shown. The 'no co-invest discipline' clause is honest but does not solve the perception problem.",
+        "alternativeThesis": "Reposition from 'outsourced deal desk for 8 families' to 'AI-augmented memo subscription for 2-3 anchor families + Greek industrial M&A diligence for corporates' (cross-sells into candidate #1 EU-AI-Act buyers). Target Year-1: 2 anchors x €120K + 3-4 corporate one-off diligence engagements at €40-60K each = €380-480K. Honest plateau €500-600K, not €700-800K. Founder-fit drops to 7/10 because corporate diligence is less 'peer-family' and more 'transactional consultant.' Sourcing agent's p=0.55 should drop to p=0.30-0.35; founder-fit 8.5/10 holds ONLY if Dimitri accepts the smaller ceiling and explicitly rejects the 30-name fiction. Otherwise: kill in favor of candidate #1 (EU AI Act / DORA) which has a verifiable 5-name buyer list, harder deadline-driven WTP, and no peer-confidentiality blocker."
+      }
+    ]
+  },
+  {
     "id": "sme-bookkeeping-agent",
     "title": "Logos Books",
     "ycCategory": "AI Agents / Vertical SaaS",
