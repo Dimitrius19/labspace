@@ -240,6 +240,195 @@ export const ideas: Idea[] = [
     "industry": "agetech"
   },
   {
+    "id": "dg-studies-tooling",
+    "title": "DG-Studies-Tooling",
+    "ycCategory": "EU FWC AI Infrastructure",
+    "ycBatchDate": "Fall 2026",
+    "oneLiner": "AI evaluation-augmentation toolkit licensed to existing EU Commission FWC primes (Ecorys, Ramboll, ICF, Technopolis, CEPS, CASE, ADE, Particip). Picks-and-shovels supplier to the consortia that already hold the references, FSC clearances, turnover, and 4-year cycle lock-in — but lack credible AI productization beyond Big-4 in-house tools they cannot access.",
+    "description": "Born from the 2026-05-21 round-1 red-team kill of the original DG-Studies thesis (AI-native services-CRO targeting EU Commission Framework Contracts). The red-team found the prime-conversion path empirically blocked: Big-4 cannibalization is already underway in 2025-2026 (Deloitte Zora $840M AI-consulting run-rate, EY.ai shipping, managed-services pivot), FWC reference/turnover/FSC gates block Greek SME prime entry on €2M+ lots, AI Act Art. 50 disclosure (Aug 2026) erodes the 'hidden AI under partner rate' arbitrage, and subcontractor-to-prime conversion has no documented precedent at this scale.\n\nThe alternative thesis adopted verbatim: PIVOT to selling AI tooling TO the consortia, NOT against them. The 4-5 non-Big-4 FWC primes (Ecorys, Ramboll, ICF, Technopolis, CEPS, CASE, ADE, Particip) hold references + FSC + turnover + 4-year cycle lock-in, but lack credible in-house AI productization (Big-4's Zora/EY.ai are proprietary, won't license out). T-Life's Brussels EFPIA-adjacent reach opens 3-5 named primes faster than DG desk officers. Different buyer (consortium PM, not DG), different cycle (3-6 month B2B SaaS), different moat (EU-FWC-template-aware AI corpus + AI Act Art. 50 compliance layer the primes need but cannot afford to build de-novo). Sells at €200-500K/yr per consortium.",
+    "primaryMarket": "europe",
+    "primaryMarketFit": "green",
+    "primaryMarketRationale": "4-5 named EU FWC primes (Ecorys NL, Ramboll DK, ICF US/EU, Technopolis BE, CEPS BE, CASE PL, ADE BE, Particip DE). EU Commission FWC market is ~€600M/yr DG studies spend; these consortia capture 60-80% of it.",
+    "expansionMarkets": [
+      {
+        "market": "middle-east",
+        "fit": "red",
+        "note": "Not relevant — EU FWC-specific."
+      },
+      {
+        "market": "greece-cyprus",
+        "fit": "yellow",
+        "note": "Greek-language MS-transposition work is a wedge but small TAM."
+      },
+      {
+        "market": "balkans",
+        "fit": "red",
+        "note": "Not relevant."
+      }
+    ],
+    "stage": "discovered",
+    "tlifeAngle": "Tryfon family Brussels reach via EFPIA-adjacent pharma policy contacts opens consortium PM/Head of Public Sector meetings at the 4-5 named primes that competitors cannot reach cold. Family balance sheet covers the 90-180-day EU payment cycle that would strain a pure-SaaS challenger. This is an infrastructure-to-incumbents bet — exactly the morning filter that the catalog reshape was built around.",
+    "tags": [
+      "infrastructure-to-incumbents",
+      "eu-fwc-primes",
+      "ai-act-art50-compliance",
+      "picks-and-shovels",
+      "brussels-network-edge",
+      "phase0-funded"
+    ],
+    "addedDate": "2026-05-21",
+    "notes": "Born from round-1 red-team of sourcing-batch-01 (verdict: revise). Original DG-Studies thesis (subcontractor-to-prime aspirant on €0.8-2.5M EC evaluation lots) was killed by 3 independent vectors: (1) Big-4 cannibalization underway in 2025-2026 not deferred; (2) FWC reference/turnover/FSC gates block Greek SME prime entry; (3) subcontractor-to-prime has no documented precedent at scale.\n\nAdopted the redTeamFindings[0].alternativeThesis verbatim: sell AI tooling TO the consortia as picks-and-shovels supplier. Different buyer (consortium PM), different cycle (3-6mo B2B SaaS), different moat. €200-500K/yr per consortium × 3-5 consortia = €0.6-2.5M ARR base case.\n\nFunded as 2nd Phase 0 bet alongside MedAdherence-RWE under the v2 studio mandate (see T_LIFE_VENTURE_STUDIO_THESIS.md §§8-11). Phase 0 commit €40K; 16-week binary kill on 2 paid pilots at €30K each with named non-Big-4 FWC primes.",
+    "whyNow": "Three windows aligned: (a) Big-4 productization is ahead-of-schedule (Deloitte Zora $840M run-rate Q1-2026; EY.ai shipping; PwC ChatPwC; KPMG Clara) — the non-Big-4 primes feel competitive pressure RIGHT NOW; (b) AI Act Art. 50 disclosure mandate (in force Aug 2026) creates a compliance-pull for AI-augmented deliverables to EU institutions — primes must show machine-readable AI labeling and disclosure; (c) 2027-2028 FWC lot renewals begin tender prep mid-2026 — primes need AI capability stories for their bid submissions NOW.",
+    "roadToMoat": [
+      {
+        "timeframe": "Phase 0 — Week 0-16",
+        "milestone": "2 paid pilots at €30K each with named non-Big-4 FWC primes (target: Ecorys + ICF EU or Ramboll + Technopolis). Binary kill: signed POs or kill."
+      },
+      {
+        "timeframe": "Phase 1 — Month 4-12",
+        "milestone": "Convert 1 pilot to €200-500K/yr SaaS contract; second consortium in design-partner pipeline; AI Act Art. 50 disclosure layer + MS-transposition graph + stakeholder embeddings live."
+      },
+      {
+        "timeframe": "Phase 2 — Month 12-36",
+        "milestone": "3-4 of 5-8 named primes on contract; €1.5-2.5M ARR. Re-evaluate prime-conversion in 2029-2031 once tooling is embedded across 4+ consortia (the original DG-Studies thesis becomes a possible PHASE 3, not Phase 0)."
+      }
+    ],
+    "capitalIntensity": {
+      "level": "low",
+      "estimatedSeedCapital": "€40K Phase 0 → €500K-€1M direct from T-Life balance sheet if Week-16 gate passes",
+      "capexRatio": "5% capex / 95% opex",
+      "note": "B2B SaaS to 5-8 named buyers; no enterprise sales force needed. EU 90-180-day payment cycle managed off family balance sheet. NEVER needs VC if it validates."
+    },
+    "competitors": [
+      {
+        "name": "Deloitte Zora, EY.ai, PwC ChatPwC, KPMG Clara",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Proprietary in-house AI tools for Big-4 only; NOT licensed externally. Non-Big-4 primes cannot access. We sell to the non-Big-4 set that Big-4 won't supply."
+      },
+      {
+        "name": "Ecorys, Ramboll, ICF, Technopolis, CEPS, CASE, ADE, Particip",
+        "type": "incumbent",
+        "geography": "EU",
+        "note": "BUYERS, not competitors. They hold references + FSC + turnover + cycle lock-in but lack in-house AI productization."
+      },
+      {
+        "name": "Generic LLM tooling (Anthropic, OpenAI direct API, Microsoft Copilot)",
+        "type": "incumbent",
+        "geography": "Global",
+        "note": "Substrate, not competitor. Our differentiation = EU-FWC-template-aware corpus + MS-transposition graph + AI Act Art. 50 compliance layer the primes cannot affordably build de-novo."
+      }
+    ],
+    "competitiveIntensity": "open",
+    "scorecard": {
+      "marketSize": 3,
+      "tlifeEdge": 3,
+      "competitiveGap": 4,
+      "capitalFit": 4,
+      "regulatoryRisk": 3,
+      "founderAvailability": 3,
+      "composite": 3.3
+    },
+    "ycRfsCorrelation": "Infrastructure-to-incumbents shape (morning filter pattern); AI Act Art. 50 compliance window opens Aug 2026.",
+    "tlifeAssetRefs": [
+      "t-life-capital"
+    ],
+    "industry": "govtech-identity",
+    "assertions": [
+      {
+        "id": "dgs-a1",
+        "claim": "EU Commission DG studies + evaluation spend is ~€600M/yr across DG SANTE/GROW/EMPL/CONNECT FWCs; 60-80% captured by 4-5 named non-Big-4 prime consortia (Ecorys, Ramboll, ICF, Technopolis) with the balance to Big-4 advisory practices.",
+        "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32018R1046",
+        "status": "estimated",
+        "lastChecked": "2026-05-21",
+        "note": "[ESTIMATE — needs verification against EC TED data]"
+      },
+      {
+        "id": "dgs-a2",
+        "claim": "Deloitte AI-consulting run-rate $840M as of Q1 2026; EY.ai shipping; PwC ChatPwC live; KPMG Clara public-sector module shipped 2025. Big-4 cannibalization is real and accelerating, not deferred to 2028.",
+        "source": "https://www.deloitte.com/us/en/insights/industry/government-public-sector-services/government-trends/2025/scaling-ai-in-government.html",
+        "status": "confirmed",
+        "lastChecked": "2026-05-21"
+      },
+      {
+        "id": "dgs-a3",
+        "claim": "AI Act Art. 50 transparency obligations apply from August 2026 — AI-generated content in EU institution deliverables must be machine-readable-labeled and disclosed. Creates compliance-pull for AI Act Art. 50 disclosure layer at the prime level.",
+        "source": "https://artificialintelligenceact.eu/article/50/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-21"
+      },
+      {
+        "id": "dgs-a4",
+        "claim": "FWC scoring requires references (similar contracts last 3 years), turnover up to 2x contract value, FSC clearance held by the bidding entity. These gates structurally exclude a Greek SME from prime status on €2M+ lots — but DO NOT block licensing AI tooling TO the existing primes.",
+        "source": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/work-as-an-expert",
+        "status": "confirmed",
+        "lastChecked": "2026-05-21"
+      }
+    ],
+    "killTests": [
+      {
+        "id": "dgs-k1",
+        "hypothesis": "2 paid pilots at €30K each with named non-Big-4 FWC primes (target set: Ecorys, Ramboll, ICF, Technopolis, CEPS, CASE) within 16 weeks. Pilots scope = MS-transposition graph + AI Act Art. 50 disclosure layer + draft-evaluation RAG pipeline on 1 real DG SANTE or DG GROW evaluation deliverable each.",
+        "experiment": "Brussels outreach via EFPIA-adjacent pharma-policy network to consortium PM / Head of Public Sector at the 5-6 named primes. Cold-pitch back-up via LinkedIn-second-degree intros. Build prototype RAG pipeline + Art. 50 disclosure layer pre-Week-4 to demo.",
+        "costEur": 32000,
+        "durationWeeks": 16,
+        "killSignal": "0 signed paid pilots (KEY GATE — failing kills the bet per T_LIFE_VENTURE_STUDIO_THESIS.md v2)",
+        "validateSignal": "≥2 signed paid pilots at €30K with concrete deliverable scope and Sep-Dec 2026 timeline"
+      },
+      {
+        "id": "dgs-k2",
+        "hypothesis": "At least 1 of the pilots converts to a €200-400K/yr SaaS contract by Week 28 (Phase 1 gate)",
+        "experiment": "Deliver Pilot 1 with measurable improvement on consortium's bid-write throughput; pitch annual SaaS at pilot conclusion",
+        "costEur": 18000,
+        "durationWeeks": 28,
+        "killSignal": "0 conversions to annual contract (Phase 1 kill — pilot-only conversion means we have a services business not a SaaS business)",
+        "validateSignal": "≥1 signed annual SaaS contract at ≥€200K/yr"
+      }
+    ],
+    "preMortem": [
+      {
+        "cause": "Big-4 release their AI tooling externally (Deloitte Zora-as-a-service to non-Big-4 primes)",
+        "likelihood": "low",
+        "earlySignal": "Track Deloitte/EY/PwC/KPMG AI-tooling external-licensing announcements; if any major releases happen pre-Week-16, halt and reassess"
+      },
+      {
+        "cause": "Non-Big-4 primes build internally — Ecorys/Ramboll launch in-house AI tooling using Anthropic/OpenAI direct",
+        "likelihood": "medium",
+        "earlySignal": "Each named prime's 2025-2026 annual report + LinkedIn job postings for AI Engineering Lead / Head of AI / similar"
+      },
+      {
+        "cause": "EU procurement reform (Q2-2026 Public Procurement Act + Financial Reg recast) restructures FWC framework, eliminating or reshaping the 4-year cycle that creates the moat",
+        "likelihood": "medium",
+        "earlySignal": "Track Bruegel + EU institutional commentary on procurement reform 2026; monitor Council/Parliament inter-institutional process"
+      }
+    ],
+    "probabilityBands": {
+      "reaches1mArrBy18mo": 0.45,
+      "reaches10mArrBy36mo": 0.1,
+      "totalFailureBy36mo": 0.4,
+      "basisOfEstimate": "€1M ARR feasible if 3-4 of 5-8 named primes convert at €200-400K/yr. €10M ARR explicitly UNLIKELY by design — buyer set is small and concentrated. Higher P(failure) than MedAdherence-RWE reflects: (a) non-Big-4 primes may build internally with Anthropic/OpenAI direct; (b) EU procurement reform mid-thesis; (c) family Brussels-reach is real but un-tested for this specific buyer set."
+    },
+    "redTeamFindings": [
+      {
+        "date": "2026-05-21",
+        "verdict": "revise",
+        "dealKiller": "The thesis assumes a 12-month window where Big-4 'preserve the bill' while a Greek SME with no FWC track record converts a single subcontracted lit-review into prime status on a 2027-2028 lot. All three legs are weak: (a) Big-4 are already pivoting public-sector consulting to outcome-based/managed-services with embedded AI margin capture (Deloitte Zora, EY.ai, $840M Deloitte AI-consulting run-rate; managed-services projected ~20% of consulting revenue) - they will NOT 'preserve the bill' through 2027; (b) FWC scoring requires references plus turnover up to 2x contract value plus FSC clearance held by the entity, and SME-friendly rules apply to small lots (€25K-ish), NOT €0.8-2.5M evaluation lots where 3-5 consortia incumbents (CEPS, CASE, Ecorys, ICF, Ramboll, Technopolis, Particip, ADE) re-aggregate every 4 years; (c) the 'subcontractor->prime in 2027' path has no documented precedent at this scale - FWC primes choose subcontractors precisely because they are non-threatening, and the cascade is designed to lock in incumbents.",
+        "patternMatches": [
+          "Pyramid-cannibalization-window-too-short: incumbents already shipping AI productization in 2025-2026, not waiting until 2028",
+          "Reference-list-moat-real: turnover-2x rule and 'similar contracts in last 3 years' eliminate de-novo entrant at €2M+ lots",
+          "Sovereign-build-creep: Draghi/Letta direction = double Horizon to €175B, EU Competitiveness Fund €409B, JRC 2025-27 work programme expanding policy-support role - exact opposite of 'JRC capacity-capped forever'",
+          "Procurement-reform-wildcard: Q2-2026 Public Procurement Act proposal + 'Made in Europe' criteria + Financial Reg recast Sep-2024 - rules change mid-thesis, FWC structure may shift before 2027 lot renewals",
+          "Clearance-as-disqualifier: FSC must be held by the bidding entity at submission; Greek NSA timeline + personnel PSCs typically 9-18 months; a new Greek SME cannot self-clear in time for 2027 lots that begin tender prep in 2026",
+          "Buyer-not-customer-confusion: DG desk officer 'signed acceptance' on a subcontracted deliverable is not procurement evidence - prime sells to DG, sub sells to prime",
+          "AI-Act-transparency-headwind: Article 50 applies Aug-2026; AI-generated content in deliverables to EU institutions must be machine-readable-labeled and disclosed - tightens, doesn't loosen, the 'AI hidden under partner rate' arbitrage"
+        ],
+        "unitEconomicsConcern": "The 8-12x margin gap assumes Big-4 hold €1,400-2,000/hr senior + €600-900/hr junior rates static while AI commoditizes RAG/summarization. Wrong reference frame: FWCs are blended-rate, fixed-price-per-task; under reopened FWCs in 2026-2027, Big-4 will rebid at AI-augmented blended rates 30-50% lower and absorb the arbitrage themselves. The 1/8 cost claim survives ~18 months, not the 4-year FWC cycle. Also, EU pays 90-180 days late on €0.8-2.5M tickets; covering 3-5 simultaneous engagements requires €3-8M working capital - 'family balance sheet' may not stretch.",
+        "loadBearingAssumption": "Big-4 will 'AI-enable consultants while preserving the bill' for 24+ months. Evidence from 2025-2026 contradicts: Deloitte/EY/PwC/KPMG public-sector P&Ls already migrating to managed-services + outcome-based pricing, $840M AI-consulting run-rate at Deloitte, 30% AI-centric EY India projects. The window collapses before 2027 lot renewals where DG-Studies would graduate to prime.",
+        "alternativeThesis": "Pivot to 'AI evaluation-augmentation toolkit licensed/white-labeled TO existing FWC primes' (Ecorys, Ramboll, ICF, Technopolis, CEPS, CASE) as the buyer. They have the references, FSC, turnover, and 4-year lock-in but lack credible AI productization beyond Big-4 in-house tools they can't access. Sell €200-500K/yr SaaS per consortium: MS-transposition graph, stakeholder embeddings, draft-evaluation RAG pipeline, AI-Act-compliant disclosure layer. T-Life's Brussels reach opens 3-5 named primes faster than DG desk officers. Margin lower (50-65% gross vs. consulting), but bypass the FSC/reference/turnover gates entirely and ride the same €600M/yr spend as a picks-and-shovels supplier. Re-evaluate prime-conversion in 2029-2031 once tooling is embedded across 4+ consortia. Phase-0 kill test: 2 paid pilots at €30K each with named non-Big-4 FWC primes within 16 weeks - binary signed POs or kill."
+      }
+    ]
+  },
+  {
     "id": "sme-bookkeeping-agent",
     "title": "Logos Books",
     "ycCategory": "AI Agents / Vertical SaaS",
