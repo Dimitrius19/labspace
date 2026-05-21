@@ -1,0 +1,159 @@
+{
+  "ministry": "rural-development",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "agri-efet-inspection-prioritisation",
+      "originalComposite": 4.45,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "EFET inspection prioritisation copilot survives second-pass cleanly — only top-5 idea fully insulated from OPEKEPE political contagion, fits απευθείας ανάθεση tier, UK FSA LightGBM precedent published in 2025 with explicit AI-transparency record, and EFET Governor is a single-decision-maker on a benign political surface.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 5,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.33,
+      "blockers": [
+        "EFET Governor seat has historically rotated with ministerial reshuffles — Rural Development minister Tsiaras's appointee is the relevant champion; warm-intro path not yet established and must be built via the SecGen Food & Agro-business.",
+        "Founder bench (ex-EFET inspector + food-supply-chain engineer) is shallower in Athens than the EFET pitch implies; EFET inspectors are career civil servants and rarely move to startups — expect 60-90 days of bench-building.",
+        "UK FSA FHRS-AI (LightGBM) is a statistical risk-rating system, not an agentic loop — the precedent supports the thesis but a hostile buyer can argue 'FSA is risk-scoring, not drafting inspection-orders' as a positioning challenge. Must lead the demo with the εντολή-ελέγχου drafting, not the ranking."
+      ],
+      "next30days": "Build the side-by-side demo: yesterday's EFET regional inspection plan vs the agent's recommended list using RASFF feed + public business-operator registry on one Περιφέρεια. Warm-intro path to EFET Governor via SecGen Food & Agro-business; gate the founder hunt to one ex-EFET inspector identified through PASEGES network.",
+      "evidenceLinks": [
+        "https://www.gov.uk/algorithmic-transparency-records/food-standards-agency-food-hygiene-rating-scheme-ai",
+        "https://www.food.gov.uk/research/cutting-edge-regulator/modernisation-of-the-risk-rating-system-for-food-establishments-in-the-uk",
+        "https://www.publictechnology.net/2025/02/12/environment/food-standards-agency-brings-ai-to-meat-inspection/",
+        "https://www.efet.gr/index.php/en/homeen/mission-responsibilites"
+      ]
+    },
+    {
+      "ideaId": "agri-elga-claims-triage",
+      "originalComposite": 4.25,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "ELGA claims triage agent survives second-pass: Agroseguro 2025 claims hit €804M (second-highest decade), Andalusia +40% YoY, Spain mandating insurance over €500k turnover, and Thessaly farmers actively striking over payout delays in Feb 2026 — political tailwind is exactly the 5 the original brief claimed. Pilot procurability the soft spot, not the buyer.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 5
+      },
+      "compositeNew": 4.0,
+      "blockers": [
+        "Pilot tier €150-300k sits in the same awkward middle as the AADE myDATA/bank anomaly idea — too big for απευθείας ανάθεση (€60k), smaller than a clean ESPA innovation call. Needs the Thessaly Recovery Plan envelope (€2.3B allocated) carve-out or RRF disaster-recovery wedge.",
+        "PASEGES and the tractor-convoy farmer unions are actively radicalised in Feb 2026; even a surveyor-in-the-loop triage will need explicit union endorsement before any field deployment, not after.",
+        "ELGA is currently embroiled in a political fight over private-insurance integration (Tsiaras pushing private insurers into the agri-sector, farmers opposing) — the agent risks being labelled as the technical wedge for the privatisation agenda. Framing must be 'accelerate public ELGA payouts', explicitly NOT 'enable private-insurer underwriting'.",
+        "USDA RMA + Agroseguro + ESA Sen4CAP substrate makes the tech feasibility narrative easy, but no published EU public-insurer parallel exists — ELGA would be a first-mover among public schemes, which is upside for blue-ocean but adds reference-class risk."
+      ],
+      "next30days": "Identify a single Περιφέρεια (Thessaly is the obvious one given Daniel/Elias backlog but politically hot — Crete or Western Greece for a quieter pilot). Produce a retro-analysis on one closed weather event (e.g. Cretan Nov-2024 storms) showing target metric: % claims under 30 days. Warm-intro to ELGA Director of Claims via SecGen Rural Development. Pre-line PASEGES endorsement-letter language befo",
+      "evidenceLinks": [
+        "https://www.reinsurancene.ws/severe-weather-in-andalusia-tests-spains-agricultural-insurance-framework-morningstar-dbrs/",
+        "https://greekreporter.com/2026/02/13/tractors-athens-greek-farmers-strike/",
+        "https://athens-times.com/hatzidakis-e1-billion-in-farmer-payments-by-end-june-action-plan-for-thessaly/",
+        "https://farmonaut.com/blogs/agriculture-crop-insurance-2025-smart-ai-parametric",
+        "https://www.planet.com/pulse/satellite-data-and-ai-the-shift-to-data-driven-agriculture-insurance/",
+        "https://www.esri.com/about/newsroom/blog/federal-crop-insurance-maps-compliance"
+      ]
+    },
+    {
+      "ideaId": "opekepe-cap-audit-trail-builder",
+      "originalComposite": 4.0,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "OPEKEPE audit-trail builder fundamentally reshapes after Jan 1 2026 OPEKEPE→AADE merger — the buyer is no longer 'new OPEKEPE Governor' but AADE under Hatzidakis, and the Greek government's own 2026 plan explicitly cites 'high-resolution satellite imagery and AI' for the new digital geospatial map. Hot tailwind, but Neuropublic incumbency transferred whole into AADE and the political-third-rail wo",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 2,
+        "studioFit": 3
+      },
+      "compositeNew": 3.17,
+      "blockers": [
+        "STRUCTURAL REFRAME: OPEKEPE was dissolved 1 Jan 2026 and its 624 staff + all systems + accreditations transferred to AADE under a 3-year no-movement freeze. The 'new OPEKEPE Governor' champion described in the original idea does not exist — the buyer is now ΓΓ Διοίκησης / Governor AADE (Hatzidakis-aligned). This converges this idea uncomfortably close to the AADE ELENXIS Auditor Copilot already in the portfolio; risk of internal cannibalisation.",
+        "Neuropublic (OPEKEPE's prime since 2006) transferred its contract base intact into AADE. Greek-press coverage names Neuropublic's principal as personally implicated in the AGROGI digital-grazing-map dissolution story — incumbent overlap is now ALSO a reputational landmine, not just commercial friction.",
+        "Political third-rail wound persists post-merger: parliamentary committee on OPEKEPE fraud is ongoing, EPPO requested immunity-lifting of 11 MPs in March 2026, and the EU imposed a €392.2M correction + 5% flat cut in June 2025. ANY 'AI audit tool over CAP files' framing risks being labelled either as cover-up enabler (opposition narrative) or scapegoat-finder (farmer-union narrative) within the same week.",
+        "Lock-in risk has gone UP not down: 3-year staff-movement freeze means the same ex-OPEKEPE inspector pool that drove the scandal-era processes is the user base. Champion turnover within 18 months is plausible if the EPPO probe escalates.",
+        "Pilot procurability degraded: AADE procurement is heavier than OPEKEPE's was; €250-450k tier remains structurally above απευθείας ανάθεση and the AADE-side ESPA innovation envelopes are already lined up around ELENXIS, TP, and myDATA-anomaly work."
+      ],
+      "next30days": "Do NOT pitch standalone. Refile this as a module of the finance-aade ELENXIS Auditor Copilot — specifically the 'CAP-files line of work' that the merged AADE-OPEKEPE unit will need to audit retroactively. Validate this framing with one ex-OPEKEPE Internal Audit Director within 30 days; if convergence is judged real, retire this idea-card and fold the agent loop into the ELENXIS roadmap.",
+      "evidenceLinks": [
+        "https://en.parapolitika.gr/economy/124192/opecepe-dissolves-january-1-integration-into-aade-announced/",
+        "https://en.parapolitika.gr/economy/102335/greek-agricultural-agency-opekepe-transitions-to-aade-new-era/",
+        "https://www.milletnews.com/greece/govt-shuts-down-opekepe-shifts-farm-payments-to-tax-authority",
+        "https://www.eppo.europa.eu/en/media/news/greece-new-developments-eppos-probe-large-scale-agricultural-subsidy-fraud",
+        "https://en.protothema.gr/2025/11/28/eleven-questions-on-agricultural-subsidies-to-be-paid-explained-by-kostis-hatzidakis/",
+        "https://www.tovima.com/politics/greek-farming-scandal-where-did-e466-mln-go/",
+        "https://www.neuropublic.gr/en/case-studies/organismoi-pliromon/",
+        "https://jrc-cbm.readthedocs.io/en/latest/dias4cbm_intro.html"
+      ]
+    },
+    {
+      "ideaId": "agri-livestock-registry-compliance",
+      "originalComposite": 3.6,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Livestock-registry compliance idea gets a tailwind from the explicit 2026 government plan ('electronic tagging of every sheep and goat, data stored in a new database linked directly to OSDE and AADE') — this is now an OFFICIAL initiative not just a market opportunity. But the same AADE-merger reframe that hits the audit-trail builder applies here: champion shifts from Vet Directorate to AADE+Vet j",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [
+        "Founder pool (veterinary epidemiologist + animal-data engineer) is the binding constraint — even tighter than the customs-ops insider gap. Greek veterinary epidemiologists are concentrated in academia (AUA, Thessaly Vet) and rarely co-found.",
+        "The government has already announced the digital-tagging programme as a 2026 deliverable — the question is who builds the reconciliation layer above it. Spain SITRAN + France BDNI are mature substrates that any EU procurement office will reference; 'we'll build a Greek SITRAN' is not a venture pitch, it's a Neuropublic line item.",
+        "Political-contagion wound from OPEKEPE persists for sheep-and-goat work specifically: phantom-flock declarations were the headline scandal mechanism. Framing as 'animal-health and feta-PDO defence' (per original buyerHook) is correct but the Greek-press will still call it the OPEKEPE clean-up tool.",
+        "Champion split: Regional Vet Directorate (Min. Rural Dev) + AADE (post-merger paying agency role) + ΓΓ Animal Health. Three-headed buyer is structurally harder than EFET's single Governor.",
+        "Pilot tier €150-250k clears απευθείας ανάθεση comfortably for a single Περιφέρεια, but the multi-buyer sign-off pushes effective time-to-pilot to 12+ months."
+      ],
+      "next30days": "Park as a Product-2 candidate behind a (hypothetical) AADE-CAP-files engagement — only revisit if the audit-trail-builder reframe (item above) gains traction inside AADE. Use the 30 days to map the named Greek veterinary epidemiologists and Cretan/Thessalonican feta-PDO control bodies; do not approach Vet Directorate without a co-founder candidate signed in principle.",
+      "evidenceLinks": [
+        "https://en.protothema.gr/2025/11/28/eleven-questions-on-agricultural-subsidies-to-be-paid-explained-by-kostis-hatzidakis/",
+        "https://www.thelocal.es/20250319/the-paperwork-you-need-to-complete-to-have-farm-animals-in-spain",
+        "https://en.parapolitika.gr/economy/102335/greek-agricultural-agency-opekepe-transitions-to-aade-new-era/"
+      ]
+    },
+    {
+      "ideaId": "agri-export-certification-agent",
+      "originalComposite": 3.55,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Export certification agent thesis still solid but degraded by second-pass: TRACES-NT already mandates electronic-only phytosanitary certificates (paper obsolete) and IPPC ePhyto Hub is live — the 'TRACES is a form' framing in original buyerHook is partially outdated. ICQRF 2026 traceability tightening and Alibaba-ICQRF 892-GI expansion show the Italian PDO incumbents are pulling further ahead.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 2.83,
+      "blockers": [
+        "TRACES NT moved from form to electronic-mandatory rail since 2024 — the wedge 'we draft the cert from registry data' shrinks as ePhyto Hub and IPPC connection mature; multinational tooling can plausibly close the gap in 18-24 months.",
+        "Buyer is the most fragmented of the five: ΔΑΟΚ Περιφερειακές Διευθύνσεις (ministry side) + ELGO Dimitra + AGROCERT + Enterprise Greece. No single Governor-equivalent champion.",
+        "ICQRF Italy's 2026 tightening of traceability under the Active Processing regime + the 892-GI Alibaba protection deal show the Italian PDO-control ecosystem has 5+ years of head-start; any Greek 'we'll do for feta what Italy does for parmigiano' pitch reads as catch-up not breakthrough.",
+        "Founder profile (ex-ELGO Dimitra or ex-DG SANTE + supply-chain engineer) is the second-rarest in the top 5 after the customs-ops insider; we don't have a candidate sourced today.",
+        "Pilot tier €200-400k on a single PDO category is the awkward-middle procurement zone again — Enterprise Greece export-promotion budget could ride it, but that's a Ministry of Economy, not Rural Development, buyer."
+      ],
+      "next30days": "Hard park. Do not approach ΔΑΟΚ or ELGO Dimitra until (a) a credible founder is signed and (b) we have a sharper wedge than 'pre-fill TRACES'. Possible reframe to explore in a one-day workshop: olive-oil fraud forensics for ICQRF-equivalent Greek role rather than export-certificate drafting — this borrows the EFET inspection thesis and may be a stronger Product 2 behind the EFET copilot.",
+      "evidenceLinks": [
+        "https://webgate.ec.europa.eu/IMSOC/tracesnt-help/Content/en/documents-certificates/phyto/phyto-for-export/create-a-phyto-for-export.html",
+        "https://www.ippc.int/en/news/european-commission-traces-welcomed-to-the-ippc-ephyto-solutionn/",
+        "https://news.italianfood.net/2026/03/27/italy-and-alibaba-renew-pact-to-safeguard-892-gis/",
+        "https://regulatory.mxns.com/en/quality-protection-fraud-repression-italy",
+        "https://www.oliveoiltimes.com/business/europe/olive-oil-a-leading-focus-in-italys-crackdown-on-food-fraud/140794"
+      ]
+    }
+  ]
+}

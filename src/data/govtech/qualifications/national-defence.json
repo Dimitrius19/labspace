@@ -1,0 +1,121 @@
+{
+  "ministry": "national-defence",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "defence-procurement-clause-checker",
+      "originalComposite": 4.35,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "The only defence idea where studioFit clears 4. Bounded public corpus (Law 3978/2011, EU 2009/81, GDDIA opinions) means no classified data, no on-prem cleared deployment, and a recruitable co-founder (Greek defence-procurement lawyer, identifiable pool of ~30-50). UK MoD Defence Digital and US Tradewinds AI Marketplace precedents confirm the pattern is live in 2025. GDDIA is publicly publishing te",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 4.0,
+      "blockers": [
+        "Recruit a Greek defence-procurement lawyer co-founder with 5+ years GDDIA or Karatzas/Zepos-equivalent experience.",
+        "Pilot scoped against ONE in-flight tender with quantified time-to-publication target (50% reduction).",
+        "Avoid touching classified annexes in v1 — public-corpus only — to keep deployment light and clearance unnecessary for v1.",
+        "Apply to HCDI 2nd Innovation Challenge as a soft-landing path."
+      ],
+      "next30days": "The only defence idea where studioFit clears 4. Bounded public corpus (Law 3978/2011, EU 2009/81, GDDIA opinions) means no classified data, no on-prem cleared deployment, and a recruitable co-founder (Greek defence-procurement lawyer, identifiable pool of ~30-50). UK MoD Defence Digital and US Tradewinds AI Marketplace precedents confirm the pattern is live in 2025. GDDIA is publicly publishing te",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "defence-aegean-osint-fusion-agent",
+      "originalComposite": 3.95,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "The most operationally compelling idea but the worst studio-fit. Precedent freshness is overwhelming: Anduril Lattice signed a $20B US Army enterprise agreement in March 2026, Helsing is closing a $1.2B round at $18B valuation, Tekever has £270M+ of UK MoD orders, Palantir signed a £240M UK MoD enterprise agreement Dec 2025. The category is unambiguously real. But the founder bar is brutal: an ex-",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 3,
+        "studioFit": 2
+      },
+      "compositeNew": 2.83,
+      "blockers": [
+        "Cleared ex-Hellenic Navy O-5+ (KEPIH or J2/J3) signs founder paper before any T-Life cheque.",
+        "Defence-VC co-investor (NATO Innovation Fund, EDF-NATO DIANA partner, Helsing-pattern) LOIs minimum EUR 1.5M of the seed.",
+        "First wedge is OSINT-only (Greek + Turkish open-source) — explicitly NOT classified sensor fusion in v1 — to defer the clearance gate by 12 months.",
+        "Apply to HCDI Innovation Challenge unmanned-systems / C4I call as a co-funded proof point."
+      ],
+      "next30days": "The most operationally compelling idea but the worst studio-fit. Precedent freshness is overwhelming: Anduril Lattice signed a $20B US Army enterprise agreement in March 2026, Helsing is closing a $1.2B round at $18B valuation, Tekever has £270M+ of UK MoD orders, Palantir signed a £240M UK MoD enterprise agreement Dec 2025. The category is unambiguously real. But the founder bar is brutal: an ex-",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "defence-export-marketwatch-agent",
+      "originalComposite": 3.8,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Second-best studio-fit after the procurement clause-checker. No classified data ingest (TED, NSPA RFIs, GCC portals, defence press are all public/licensed-commercial), pilot budget EUR 180-400k is in-band, and the single buyer (General Secretariat for Defence Industry) shortens the sales cycle. EAS restructuring as a political backdrop is real but unstable — the GS could change with a minister res",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 4,
+        "lockInRisk": 3,
+        "studioFit": 4
+      },
+      "compositeNew": 3.5,
+      "blockers": [
+        "Land ex-MFA defence-attaché or ex-EAS export-desk officer as commercial co-founder.",
+        "Get a written letter of interest from GS Defence Industry before the seed closes.",
+        "Pilot scoped to 90-day produce-50-opportunities milestone with attaché-comparable hit-rate measurement.",
+        "Pre-buy Janes / Forecast International data licences cost into the seed model (~EUR 80-150k/yr)."
+      ],
+      "next30days": "Second-best studio-fit after the procurement clause-checker. No classified data ingest (TED, NSPA RFIs, GCC portals, defence press are all public/licensed-commercial), pilot budget EUR 180-400k is in-band, and the single buyer (General Secretariat for Defence Industry) shortens the sales cycle. EAS restructuring as a political backdrop is real but unstable — the GS could change with a minister res",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "defence-conscript-ops-agent",
+      "originalComposite": 3.75,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Holds together structurally but is dragged down by lock-in risk: deferment fairness is a third-rail topic — any flagged unfairness becomes a press story, and the next defence minister can cancel the contract overnight to politically distance. Buyer is GEETHA Personnel (Directorate B1) plus Stratologia directorate — reachable but requires an ex-officer intermediary; not warm to T-Life today. Sensit",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 2,
+        "studioFit": 3
+      },
+      "compositeNew": 2.83,
+      "blockers": [
+        "Position strictly as decision-support — humans approve every non-routine deferment.",
+        "Recruit ex-Stratologia officer co-founder AND an Athens-based data-protection counsel as advisor before signing any pilot.",
+        "Build a published fairness-metrics dashboard from day one as institutional armour against the press-cycle risk.",
+        "Pilot scoped to a single Stratologia branch (e.g. Athens or Thessaloniki) for a single conscription cycle."
+      ],
+      "next30days": "Holds together structurally but is dragged down by lock-in risk: deferment fairness is a third-rail topic — any flagged unfairness becomes a press story, and the next defence minister can cancel the contract overnight to politically distance. Buyer is GEETHA Personnel (Directorate B1) plus Stratologia directorate — reachable but requires an ex-officer intermediary; not warm to T-Life today. Sensit",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "defence-supply-chain-anomaly-agent",
+      "originalComposite": 2.8,
+      "originalVerdict": "kill",
+      "qualification": "fail",
+      "headline": "Source kill stands and the hostile pass confirms it. The political-third-rail finding (any flag on a politically-connected vendor terminates the relationship) is structural and uncovered by any redesign T-Life can fund. Lock-in risk is the worst in the portfolio: every government change and every minister reshuffle changes the protected-vendor list, and the operator becomes the messenger to be sho",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 1,
+        "studioFit": 2
+      },
+      "compositeNew": 2.17,
+      "blockers": [],
+      "next30days": "Source kill stands and the hostile pass confirms it. The political-third-rail finding (any flag on a politically-connected vendor terminates the relationship) is structural and uncovered by any redesign T-Life can fund. Lock-in risk is the worst in the portfolio: every government change and every minister reshuffle changes the protected-vendor list, and the operator becomes the messenger to be sho",
+      "evidenceLinks": []
+    }
+  ]
+}

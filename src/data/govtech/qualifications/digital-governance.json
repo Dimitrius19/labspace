@@ -1,0 +1,164 @@
+{
+  "ministry": "digital-governance",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "digital-gov-llm-eval-redteam",
+      "originalComposite": 4.6,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Forced-buy surface: Greek AI Act competent-authority timeline (Aug 2025 designation, Dec 2026 transposition) plus newly created Special Secretariat for AI inside the renamed Ministry of Digital Governance and AI = the buyer literally cannot ship without a Greek-language eval substrate. Precedents (AISI/AI Security Institute, AI Verify Moonshot, DINUM Albert eval) all verified operational in 2025-2",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.83,
+      "blockers": [
+        "Hiring a credible AI-policy lawyer with Greek-EU AI Act fluency is the bottleneck — ILSP/Athena RC ML researchers are easier to recruit than this profile",
+        "Risk of being mistaken for a notified body; must position as pre-conformity assistance, not the legally binding assessor",
+        "Open-sourcing the Greek benchmark (the buyerHook commitment) is a tax on capital efficiency — must scope the open-source surface tightly"
+      ],
+      "next30days": "Identify the named lead of the Special Secretariat for AI and Data Governance inside the renamed Ministry of Digital Governance and AI; request a 30-minute scoping meeting · Draft a 4-page memo mapping AI Act Annex IV requirements to a Greek-specific eval rubric; share with one friendly ministry CDO (Migration or AADE) for reaction",
+      "evidenceLinks": [
+        "https://www.aisi.gov.uk/about",
+        "https://aiverifyfoundation.sg/project-moonshot/",
+        "https://github.com/aiverify-foundation/moonshot",
+        "https://greekcitytimes.com/2025/07/01/greek-ministry-of-digital-governance-renamed-to-include-artificial-intelligence-reflecting-strategic-ai-focus/",
+        "https://seelegal.org/news/greece-makes-the-first-step-in-implementation-of-the-ai-act/",
+        "https://www.legal500.com/guides/chapter/greece-artificial-intelligence/",
+        "https://huggingface.co/ilsp",
+        "https://annales-des-mines.org/wp-content/uploads/2025/04/RI_2025_05_7-LIA-generative-dans-ladministration-francaise-le-cas-d-Albert-U.-TAN.pdf"
+      ]
+    },
+    {
+      "ideaId": "digital-gov-citizen-concierge",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "PM-level tailwind and operational precedent are fully fresh: Bürokratt is actively rolling out LLM/RAG across Estonian agencies through 2025, TAMM 3.0 + AutoGov is now the global benchmark (Oct 2025), and the Ministry was renamed to include AI in July 2025. The mitos process-graph is a real public asset no other vendor is traversing. Single significant blocker is Netcompany's incumbency claim on t",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.45,
+      "blockers": [
+        "Netcompany (ex-Intrasoft) will argue extension of gov.gr is theirs by incumbency — must contract for the agent runtime + Greek NLU layer, not the portal",
+        "EU AI Act art. 6 high-risk classification for essential public services — needs ISO 42001-style ops, human-in-loop on every submission, transparency notice",
+        "Per-ministry API rate limits and back-office endpoint inconsistency — orchestration depends on ministries cooperating, which is a political handshake not a technical one",
+        "TaxisNet auth + Wallet.gov.gr credential pre-fetch requires explicit ΓΓΠΣΨΔ data-protection sign-off (DPIA)"
+      ],
+      "next30days": "Memo-ready pitch to the gov.gr product owner + General Secretary for Information Systems & Digital Governance; lead with the 'Greek-language process-graph traversal' framing, not 'gov.gr agent' · Pick 3 high-traffic cross-ministerial journeys to demo end-to-end (vehicle transfer, business start-up, change-of-address) — cite KEP foot-traffic baseline by periphery",
+      "evidenceLinks": [
+        "https://www.ria.ee/en/state-information-system/personal-services/burokratt",
+        "https://reforms-investments.ec.europa.eu/projects/burokratt-programme-and-national-virtual-assistant-platform-and-ecosystem_en",
+        "https://www.dge.gov.ae/en/news/dge-abu-dhabi-launches-tamm-3",
+        "https://www.dge.gov.ae/en/news/2025-gitex-tamm-4",
+        "https://pair.gov.sg/",
+        "https://greekcitytimes.com/2025/07/01/greek-ministry-of-digital-governance-renamed-to-include-artificial-intelligence-reflecting-strategic-ai-focus/",
+        "https://gr.linkedin.com/company/grnet"
+      ]
+    },
+    {
+      "ideaId": "digital-gov-civil-servant-process-assistant",
+      "originalComposite": 4.15,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Strongest precedent freshness in the batch: UK Redbox at 2,000+ civil servants Feb 2025 and growing 150/week; Pair Singapore at 60,000+ users with 46% admin-time savings; GovTech Singapore published an Agentic AI Primer April 2025. France Services Albert pilot will NOT be generalized as-is per Jan 2026 DINUM statement — this is a useful lesson, not a kill (the back-office productivity story is sti",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 4
+      },
+      "compositeNew": 4.15,
+      "blockers": [
+        "M365 Copilot ministry-wide rollout via Azure Athens landed-zone is the dominant procurement narrative; we must be a plug-in, not a competitor",
+        "Albert at France Services will not be generalized in current form (DINUM, Jan 2026) — we need to internalize why and pre-empt the same failure pattern (likely: insufficient task fit at front-line + cost)",
+        "KEP/civil-servant change-management is harder than the tech; need an ex-civil-servant operations lead, not just an engineer",
+        "Διαύγεια publication metadata pre-fill must clear legal validation — admin acts have specific publishability rules"
+      ],
+      "next30days": "Read the DINUM Albert-at-France-Services post-mortem in detail; write a 1-page 'what we do differently' brief · Validate the M365 Copilot plug-in story with a Microsoft Greece account exec — confirm Azure Athens landed-zone timeline and plug-in extensibility model",
+      "evidenceLinks": [
+        "https://ai.gov.uk/knowledge-hub/use-cases/redbox/",
+        "https://ai.gov.uk/blogs/one-year-of-iai-reimagining-government-through-artificial-intelligence/",
+        "https://pair.gov.sg/",
+        "https://www.undp.org/policy-centre/singapore/blog/pairing-ai-public-sector-impact-singapore",
+        "https://www.weka.fr/actualite/administration/article/albert-l-outil-d-ia-generative-experimente-a-france-services-ne-sera-pas-generalise-209194/",
+        "https://www.journaldunet.com/intelligence-artificielle/1538445-albert-l-ia-generative-de-l-etat-passe-a-l-echelle/"
+      ]
+    },
+    {
+      "ideaId": "digital-gov-state-cross-ministerial-pull",
+      "originalComposite": 3.95,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "10DS / Evidence House precedent verified fresh (community of 500+ engineers/analysts across UK government, 2025). Singapore PMO + Pair confirmed. Estonia X-Road remains the substrate reference. The kill risk is NOT precedent — it is the political-third-rail axis: every government change re-opens the contract. Επικρατείας anchor is the mitigation but it is not yet a permanent function. Pilot procur",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 3,
+        "pilotProcurability": 2,
+        "lockInRisk": 3,
+        "studioFit": 4
+      },
+      "compositeNew": 3.33,
+      "blockers": [
+        "Pilot procurability at 2: each ministry endpoint requires a separate political handshake; not designable in 6 months",
+        "Political-appointee dependency — contract durability is tied to PM tenure unless we land inside Επικρατείας as a permanent function",
+        "GDPR + Hellenic DPA scrutiny on cross-ministerial joining is structural, not a one-time DPIA — we need a permanent privacy lawyer in the founding team",
+        "Engineer security clearance pathway in Greece is not well-documented for non-state-owned vendors; sovereign-hosting on GRNet is the only credible answer",
+        "Founder-market-fit at 3: requires an ex-civil-servant with Επικρατείας access who is recruitable but not abundant"
+      ],
+      "next30days": "Scope a non-political pilot use case: parliamentary-questions desk officers (a permanent function across governments) rather than PM-office strategy work · Open conversation with GRNet leadership about the sovereign-hosting story before approaching Επικρατείας — this neutralises the trust objection in advance",
+      "evidenceLinks": [
+        "https://moderncivilservice.blog.gov.uk/2023/07/19/delivering-government-innovation-with-evidence-house/",
+        "https://www.civil-service-careers.gov.uk/evidence-house/",
+        "https://patchworkhub.org/job/data-scientist-economist-10-downing-street",
+        "https://pair.gov.sg/",
+        "https://grnet.gr/en/company/",
+        "https://www.legal500.com/guides/chapter/greece-artificial-intelligence/"
+      ]
+    },
+    {
+      "ideaId": "digital-gov-accessibility-agent",
+      "originalComposite": 3.65,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Greece fully implemented Law 4994/2022 transposing the EAA, in force June 28 2025. EETT enforces digital-service compliance with fines €10k-€100k. The European Commission separately called on Greece to fully transpose (March 2025), signalling political pressure. Buyer is identifiable (ΓΓΠΣΨΔ accessibility lead + EETT) but the political tailwind is regulator-driven rather than PM-directive, and Deq",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.33,
+      "blockers": [
+        "Two buyers (ΓΓΠΣΨΔ accessibility lead + EETT) with no clear single decision-maker — slower than a single-champion sale",
+        "Global scanner incumbents (Deque, Siteimprove, Level Access) have public-sector references and will pitch direct",
+        "Greek-plain-language rewriting from καθαρευουσιάνικη legalese is the moat — but it is also the hardest part to build and demo convincingly without a content-licensing arrangement with ΓΓΠΣΨΔ",
+        "ESAmEA endorsement is necessary for political weight but adds a third stakeholder",
+        "Studio fit at 3: this is a compliance-platform play, less agentic than the other four; risk of becoming a forms-and-PDFs SaaS"
+      ],
+      "next30days": "Validate that EETT is genuinely the enforcement authority for gov.gr properties (vs only private-sector digital services) — read Law 4994/2022 implementing decree carefully · Build a 30-second demo: take one bureaucratic gov.gr form, run Greek plain-language rewrite, show before/after WCAG 2.2 AA compliance — this must be impressive or kill the idea",
+      "evidenceLinks": [
+        "https://accessible-eu-centre.ec.europa.eu/content-corner/news/european-commission-calls-greece-fully-transpose-eaa-2025-03-19_en",
+        "https://www.allaccessible.org/blog/european-accessibility-act-eaa-compliance-guide",
+        "https://www.zeya.com/newsletters/new-eu-accessibility-requirements-what-businesses-greece-need-know",
+        "https://web-accessibility-checker.com/en/blog/eaa-fines-by-country",
+        "https://aiopsgroup.com/accessibility-legislation-greece/"
+      ]
+    }
+  ]
+}

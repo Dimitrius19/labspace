@@ -1,0 +1,101 @@
+{
+  "ministry": "education",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "education-teacher-placement-agent",
+      "originalComposite": 4.25,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Strong idea, but founderMarketFit (3), pilotProcurability (3), and lockInRisk (3) each carry real mitigation work. The composite drops from 4.25 to 3.5 under the hostile axes because the original rubric over-weighted agenticFit and Greek-moat and under-weighted procurement reality. Conditional on: (a) ex-ΓΓ Πρωτοβάθμιας/Δευτεροβάθμιας identified and signed as co-founder/advisor within 90 days, (b)",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "Identify and warm-introduce 3 ex-ΓΓ Πρωτοβάθμιας/Δευτεροβάθμιας candidates by 2026-09-01. · Draft AI-Act Annex III conformity-assessment workplan as a separate sellable artefact.",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "education-school-inspection-drafting",
+      "originalComposite": 4.25,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Passes the hostile second-pass with no axis below 5. Strongest idea in the Education portfolio across every reachability/procurement/political axis. This is the idea T-Life should put a founding team into first.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "Identify and warm-introduce an Attica or Thessaloniki ΠΕΚΕΣ coordinator by 2026-07-01. · Spin up founding team via T-Life Open 2026 hackathon track — RAG + structured drafting is a perfect 48-hour buildable demo.",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "education-substitute-teacher-matching",
+      "originalComposite": 4.2,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Composite drops from 4.2 to 3.6 mostly on precedentFreshness (the UK Teaching Vacancies citation overclaims, and ePupil is unconfirmed). The idea is still strong on procurement, founder-fit, and political exposure — but the pitch deck needs to be re-written to honestly own the absence of a direct international precedent and lean instead on adjacent gig-marketplace dispatch precedents. Conditional ",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "Rewrite the international-precedent slide before any minister-level pitch. · Warm-introduce a Crete or N. Aegean Περιφερειακός Διευθυντής by 2026-08-31.",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "education-kedasy-special-ed-matching",
+      "originalComposite": 4.15,
+      "originalVerdict": "promote",
+      "qualification": "fail",
+      "headline": "Composite drops from 4.15 to 2.75 because the original rubric did not capture three real-world frictions: (a) founder recruitment for the ΑμεΑ-respected co-founder is structurally hard, (b) the pilot does not fit απευθείας ανάθεση and triggers a longer procurement path, (c) the three-headed ministry buyer slows champion-mapping. Two axes (founderMarketFit = 2, pilotProcurability = 2) drop the comp",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "Park venture in T-Life pipeline as '2027 Q4 re-qualification candidate'. · Maintain quarterly precedent-watch on UK EHCP digital-transformation procurements (likely closest analog).",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "education-eclass-learning-recommendation",
+      "originalComposite": 2.5,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "Hostile pass confirms and slightly hardens the original 'park' verdict. The kill-severity GRNet incumbent finding from the original red team becomes a pilotProcurability = 1 and studioFit = 2 in this pass. The addition of Oak National Academy as a free-substrate precedent worsens the pitch from the original rubric's perspective. Recommendation: convert PARK to FAIL for the venture path. The only v",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "No further work. Remove from active pipeline.",
+      "evidenceLinks": []
+    }
+  ]
+}

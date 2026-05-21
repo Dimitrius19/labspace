@@ -1,0 +1,101 @@
+{
+  "ministry": "interior",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "interior-kede-shared-services-stack",
+      "originalComposite": 4.4,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Composite 4.5, no axis below 4, no kill. KEDE is a permanent statutory body, the Caddy/Albert/Bürokratt precedent stack is all-live in 2026, and the buyer-aggregation thesis matches T-Life's venture-studio capital model. This is the Interior anchor.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 4.5,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "interior-kep-in-a-box-copilot",
+      "originalComposite": 4.2,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Composite 3.83 just under the pass bar, with pilotProcurability and buyerReachability both at 3 due to the two-buyer MoU dependency. Promote to pass status conditional on a pre-pitched ΓΓΠΣΨΔ MoU letter and one island-mayor design-partner LoI. Sequence after the KEDE anchor lands.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.83,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "interior-municipal-press-cabinet-drafter",
+      "originalComposite": 3.95,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Composite 3.0 with one axis at 2 (buyerReachability). The 332-door political-voice sales motion is structurally off-thesis for the studio, but RRF-visibility-obligation framing could create a single-buyer wrapper. Park behind the KEDE anchor; revisit only if a charismatic island-mayor design partner volunteers.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "interior-citizen-complaint-routing",
+      "originalComposite": 3.15,
+      "originalVerdict": "promote",
+      "qualification": "fail",
+      "headline": "Composite 2.5, three axes at 2 or below, weak moat against incumbent CRMs adding AI features. Park indefinitely behind the KEDE anchor; do not revisit as a standalone venture. May resurface as a feature inside the KEDE shared-services product once that lands.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 2.5,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "interior-election-day-ops-agent",
+      "originalComposite": 2.95,
+      "originalVerdict": "promote",
+      "qualification": "fail",
+      "headline": "Confirmed kill. Composite 1.67 on the hostile axes; three axes at 1. The 2019 Singular Logic glitch made election technology the most radioactive surface in Greek govtech, and there is no buyer hook in any current cycle. Do not pitch. Re-evaluate in 2030+ only if EU AI Act guidance changes and a multi-cycle political détente emerges.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 1.67,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    }
+  ]
+}

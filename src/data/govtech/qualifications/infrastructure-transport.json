@@ -1,0 +1,159 @@
+{
+  "ministry": "infrastructure-transport",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "infrastructure-contractor-progress-monitor",
+      "originalComposite": 4.4,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Έργο-Watch survives second-pass: Network Rail's Bentley-built Severn Tunnel digital twin and the North & East Route SaaS digital-twin procurement (deadline 9 Dec 2025) plus NHAI's mandatory monthly drone uploads to Data Lake give live, 2025-2026-fresh cover for a ministry-side oversight agent; RRF Aug-2026 milestone pressure is the buying urgency.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 5,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 4
+      },
+      "compositeNew": 4.5,
+      "blockers": [
+        "Major contractors (ΓΕΚ ΤΕΡΝΑ, AVAX, Mytilineos, Άκτωρ) will try to reframe any oversight tool as a contractor-PM extension — needs GS-Υποδομών level air cover that the agent reports to the Διευθύνουσα Υπηρεσία only and never touches contractor dashboards.",
+        "Concession contracts on Patras-Pyrgos / North Road Axis cross governments and have multi-year change-control clauses; agent outputs must be framed as 'internal civil-service drafts' not 'official findings' to avoid triggering contractual dispute mechanisms.",
+        "Vision-validation of drone/site-photo claims (e.g. TBM advance, earthworks volumes) is the technically hardest sub-loop and is the first thing a hostile reviewer will probe — needs a tight scoped first-pilot work-package list and a clear 'human signs the memo' boundary.",
+        "RRF disbursement window closes August 2026 — pilot procurement must clear by Q1 2026 to ride the milestone-evidence tailwind; after that the political urgency drops by half."
+      ],
+      "next30days": "Lock a single major-project pilot triplet (one Metro, one road axis, one concession) and pre-register an €80-150k 4-month pilot with GS-Υποδομών as 'RRF/CEF milestone evidence-pack automation' rather than 'contractor oversight'; in parallel, recruit the NTUA civil-engineer co-founder from the EYDE/oversight directorate alumni list before approaching the major-project oversight director.",
+      "evidenceLinks": [
+        "https://www.networkrail.co.uk/our-work/digital-railway/",
+        "https://www.find-tender.service.gov.uk/Notice/068850-2025",
+        "https://www.railwaygazette.com/in-depth/infrastructure-creating-a-living-replica-of-the-severn-tunnel/70309.article",
+        "https://www.roadvision.ai/blog/drone-survey-requirements-in-nhai-projects-what-contractors-must-know-in-2025",
+        "https://www.constructionworld.in/transport-infrastructure/highways-and-roads-infrastructure/-nhai-mandates-drone-surveillance-for-all-highway-projects-/27742",
+        "https://highways.dot.gov/sites/fhwa.dot.gov/files/FHWA-HRT-24-055.pdf",
+        "https://infobridge.fhwa.dot.gov/Page/infobridge_update_notes",
+        "https://greekcitytimes.com/2026/02/23/greece-hits-53-percent-eu-rrf-milestones-2026-deadline/"
+      ]
+    },
+    {
+      "ideaId": "transport-driving-test-scheduler",
+      "originalComposite": 4.25,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "ΔίπλωμαFlow survives: DVSA's May-2026 booking reform (Kainos-built Driver Services Platform replacing 20-year-old TARS, learner-only booking, bot mitigation) is a strong fresh precedent that is *still not* a full agentic scheduler — Greece can leapfrog rather than copy. GS-Μεταφορών is reachable via 1555 KPI pressure and the per-περιφέρεια union folklore is exactly the Greek-language moat foreign ",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 4,
+        "studioFit": 5
+      },
+      "compositeNew": 4.33,
+      "blockers": [
+        "Driving-school owners' lobby is the original political-third-rail wound and remains the binding constraint — needs minister-level framing as 'reducing wait-times for citizens' with explicit guarantees that school-allocated slots are preserved during the pilot.",
+        "Examiner-union collective agreements limit hours/day and geographic mobility per περιφέρεια; the constraint-satisfaction model must encode these as hard constraints, not preferences, or the first reschedule that violates them kills the pilot.",
+        "gov.gr backend integration is gated by Digital Governance; the per-περιφέρεια Μεταφορών backends are heterogeneous (some still Excel) — pilot scope must be a single περιφέρεια where the backend is API-reachable, or the integration cost balloons.",
+        "DVSA's Kainos contract (build-out through 2026-2028) shows that foreign government buyers chose 'big SI rebuild' over 'agent on top' — the buyer objection 'why not just rebuild the booking system' is real and must be pre-empted with a clear agent-layer narrative."
+      ],
+      "next30days": "Land a 90-day single-περιφέρεια pilot offer (Attica or Thessaloniki) framed around the PM-office gov.gr citizen-satisfaction scorecard; in parallel, recruit an NTUA/AUEB OR scheduling-optimisation co-founder and an ex-Δ/νση Οδικής Κυκλοφορίας advisor to encode the union work-rules; pre-draft the απευθείας ανάθεση procurement memo at €60k tier so it can be signed within 30 days of champion approval",
+      "evidenceLinks": [
+        "https://www.government-transformation.com/transformation/dvsa-announces-digital-overhaul-of-driving-test-booking-system",
+        "https://www.priplus.co.uk/news/uk-driving-test-booking-changes-2026-how-dvsa-is-banning-bots-and-scalpers-to-slash-wait-times",
+        "https://passrates.uk/guide/dvsa-booking-rule-change-may-2026",
+        "https://myfirst.com/driving-test-booking-rules-are-changing-in-2026-what-every-learner-and-new-driver-needs-to-know/",
+        "https://www.driving.org/new-dvsa-test-booking-rules-take-effect-today-but-critics-say-they-are-already-backfiring/"
+      ]
+    },
+    {
+      "ideaId": "transport-kteo-anomaly-agent",
+      "originalComposite": 4.2,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "KTEO-Sentinel survives: clean blue-ocean (no Greek SI sells fraud-pattern analytics into KTEO oversight), strong agentic loop on tabular + photo evidence, founder pair (data-scientist + automotive analyst) is recruitable in Athens, and 2023-2024 KTEO scandals leave standing political tailwind at the inspectorate level. Defamation-defensibility is the live blocker, not regulatory.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 3,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.17,
+      "blockers": [
+        "Defamation/legal-defensibility of anomaly memos is the buyer's killer question — every flagged centre must have a documented audit-trail with reproducible thresholds (>3σ on which baselines?) and a 'human inspector confirms before any enforcement' boundary, or the first sued inspectorate kills the reference.",
+        "Private-KTEO sector is concentrated and some operators have political backing — pilot scope must stay strictly internal prioritisation memos, never public-facing rankings; a single leak of a draft list during the pilot kills the political tailwind.",
+        "GDPR public-interest legal basis (ν.4624/2019) is available but a full DPIA on cross-referencing odometer + insurance + import-customs data is non-trivial — needs DPA-coordinated review before pilot day 1.",
+        "Precedent freshness is the weakest axis here — DVSA MOT analytics and DGT-ITV cross-referencing are 2023-2024 and not extensively documented; the buyer hook leans more on the parliamentary-question pressure than on 'X did this and it worked'."
+      ],
+      "next30days": "Book the Δ/ντή Τεχνικού Ελέγχου for a 60-min meeting framed around 'parliamentary-question-ready evidence pack from the 2023-2024 scandal backlog'; in parallel, retro-run anomaly detection on a sanitised slice of public KTEO statistics to produce a same-week demo of 3-5 historical anomalies; line up the ex-customs/Μεταφορών officer co-founder profile to give the team domain credibility on inspecti",
+      "evidenceLinks": [
+        "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency",
+        "https://www.tuvsud.com/en"
+      ]
+    },
+    {
+      "ideaId": "transport-vehicle-registry-intake",
+      "originalComposite": 3.85,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "ΟχημαDocs is conditional: EUCARIS is operational in 2026 (32 countries, integrated with the EU Once-Only Technical System after the Nov-2024 OOTS Projectathon on vehicle registries) so the cross-border data substrate is fresher than the original red-team noted — but Netcompany/Intracom incumbency on the registry stack is the live wound, the procurement is a single περιφέρεια απευθείας ανάθεση, and",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 5,
+        "pilotProcurability": 4,
+        "lockInRisk": 3,
+        "studioFit": 4
+      },
+      "compositeNew": 3.83,
+      "blockers": [
+        "Netcompany/Intracom built parts of the registry backend — 'why didn't the SI extend their roadmap?' is the central buyer objection; the 'agent layer on top, not instead of' framing is correct but requires explicit GS-Μεταφορών-level air cover before pilot day 1 or it gets routed through Netcompany as a change request.",
+        "EUCARIS access is gated by the Greek national-contact-point (ΥΠΟΜΕ + AADE customs); without real EUCARIS calls the agent falls back to manual cross-reference and loses half the multilingual-extraction story.",
+        "Lock-in risk is medium-high — vehicle-registry workflow is exactly the kind of surface that gets absorbed by the next big SI tender; agent must be embedded in clerk daily-ops (not background batch) within the first 6 months to be sticky.",
+        "Pilot is citizen-friendly (no political enemy) but the political tailwind is weak — no minister has named vehicle-registry friction as a priority, so the champion path is mid-level Δ/ντής Μεταφορών rather than GS-level; 12-month rather than 6-month pilot timeline is the realistic case.",
+        "Ex-customs/Μεταφορών officer co-founder profile is the studio's named edge here — but specifically the registry/clerk workflow knowledge needs an ex-περιφερειακή Μεταφορών clerk, not just an ex-customs officer; the recruit is narrower than the founder profile suggests."
+      ],
+      "next30days": "Treat as a fast-follow on the contractor-progress and driving-test pilots rather than a parallel pitch; spend 30 days on (a) producing a multilingual-extraction demo on 20 anonymised real-world German/French/Italian registration dossiers and (b) recruiting an ex-περιφερειακή Μεταφορών clerk as domain co-founder before approaching the Δ/ντή Μεταφορών. Do not pitch standalone until the Netcompany fr",
+      "evidenceLinks": [
+        "https://interoperable-europe.ec.europa.eu/collection/egovernment/document/eucaris-european-car-and-driving-licence-information-system",
+        "https://www.eucaris.net/",
+        "https://en.wikipedia.org/wiki/EUCARIS",
+        "https://ecoceu.com/blog/eucaris/what-is-eucaris/",
+        "https://businessdeen.com/the-role-of-eucaris-in-fighting-vehicle-crime/"
+      ]
+    },
+    {
+      "ideaId": "transport-rtsa-road-safety-analytics",
+      "originalComposite": 3.7,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "ΑσφαλήςΟδός fails hostile second-pass: Greece's 22% fatality drop in 2025 (148 lives saved, leading EU progress) means the political-pressure premise has *softened* — RTSA can credibly point to existing NRSO/NTUA + ELSTAT + ΕΛΑΣ Τροχαίας analytics as the source of the win, weakening 'why an agent now?'; concessionaire-touching politics on naming hotspots is unchanged; founder pool is thin; data-sh",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 2.83,
+      "blockers": [
+        "2025 fatality results (517 deaths, -22% YoY, 2nd-best EU performer) remove the urgent press-cycle tailwind that the original park-verdict assumed — the buying question becomes 'why now, when we're already winning?' and the agent has no good answer.",
+        "RTSA is a newly stood-up authority with thin staffing — the 'analyst who will operate the agent' role doesn't exist yet at scale; pilot must train-the-buyer simultaneously with building, which doubles delivery risk.",
+        "Naming any concession road segment (Egnatia, Patras-Pyrgos, Olympia Odos) as a high-risk hotspot touches concession contracts that cross governments and have multi-year reputation-protection clauses — exactly the lock-in / studio-fit zone we said we'd avoid.",
+        "Founder profile (PhD-grade NTUA transportation engineer + LLM/data engineer + ex-ΕΛΑΣ Τροχαίας + concessionaire safety-lead advisory) is the thinnest pool of all five — original red-team flagged this and the 2025-2026 data shows no widening of the pool.",
+        "Inter-ministerial MoU for ΕΛΑΣ crash-data sharing remains the binding 3-6 month critical-path item; combined with no champion-named urgency, the pilot timeline pushes past 12 months and capital efficiency drops below threshold."
+      ],
+      "next30days": "Do not pursue. Re-open only if (a) a 2026 H2 fatality reversal restores the press cycle, OR (b) RTSA explicitly publishes an open call for evidence-based intervention tooling with a named champion, OR (c) the studio independently lands an ex-ΕΛΑΣ Τροχαίας or concessionaire safety-lead founder who can be redeployed onto this brief.",
+      "evidenceLinks": [
+        "https://news.gtp.gr/2026/01/07/greece-reports-improvement-in-road-safety-in-2025/",
+        "https://greekreporter.com/2026/03/25/greece-leads-eu-road-safety-22-percent-drop-fatalities/",
+        "https://transport.ec.europa.eu/news-events/news/eu-road-deaths-drop-3-2025-2026-03-24_en",
+        "https://www.nrso.ntua.gr/data/",
+        "https://transport.ec.europa.eu/background/road-safety-statistics-2025_en",
+        "https://www.itf-oecd.org/road-safety-annual-report-2025"
+      ]
+    }
+  ]
+}

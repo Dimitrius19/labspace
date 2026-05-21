@@ -1,0 +1,152 @@
+{
+  "ministry": "migration-asylum",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "migration-coi-drafting-copilot",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "COI drafting is the cleanest EU-AI-Act-safe wedge in the ministry, and Commission high-risk guidance now explicitly carves preparatory translation/summarisation OUT of the high-risk regime. Conditional only because the precedent stack (SEM internal pilot 2025-2026, BAMF MILo-as-LLM) is softer on re-verification than the original memo implied; the design path is clear, the precedent footing is what",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 3,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.83,
+      "blockers": [
+        "Refugee-law co-founder must be signed before the first ministry conversation; pitching without that credibility shield is a wasted shot.",
+        "UNHCR Greece briefing must precede ministry signature, not follow it.",
+        "Source whitelist must be published openly at contract signature; any whisper of a closed/opaque source list ends the political cover."
+      ],
+      "next30days": "Identify and meet three candidate refugee-law co-founders (Asylum Service alumni, GCR veterans, refugee-law academics) in Athens. · Read the Commission's February 2026 high-risk guidance on the preparatory-task carve-out end-to-end; draft the legal-positioning memo that frames COI drafting as preparatory.",
+      "evidenceLinks": [
+        "https://artificialintelligenceact.eu/annex/3/",
+        "https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3",
+        "https://www.twobirds.com/en/insights/2026/the-commission's-draft-high-risk-ai-guidelines-under-the-eu-ai-act-a-first-read",
+        "https://www.sem.admin.ch/sem/en/home.html",
+        "https://www.uscis.gov/sites/default/files/document/foia/COI_LP_RAIO.pdf",
+        "https://www.dhs.gov/ai/use-case-inventory/uscis",
+        "https://www.bamf.de/EN/Behoerde/Informationszentrum/MILo/milo-node.html",
+        "https://www.swissinfo.ch/eng/foreign-affairs/how-switzerland-and-europe-use-ai-tech-for-migration-control/88822424"
+      ]
+    },
+    {
+      "ideaId": "migration-residence-permit-triage",
+      "originalComposite": 4.3,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Operational triage with hard prohibitions on nationality/religion/ethnicity as routing inputs is the safest fundamental-rights posture in the sweep; political tailwind on residence-permit backlog is durable across governments. Pass, with the UK Streaming Tool history baked into the contract as a fairness-audit commitment.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 4.0,
+      "blockers": [
+        "Incumbent SI (Intracom/Byte) API access for the underlying case-management substrate. Without it the agent layer cannot read state. Mitigation path: pitch the Digital Governance ministry as the inter-agency-API broker.",
+        "Streaming Tool history must be addressed in the proposal, not glossed: published rule set, hard-banned routing inputs, independent fairness audit at month 3 and month 12, Hellenic Data Protection Authority review.",
+        "Greek-document OCR quality on aged or low-quality scans is the one technical watch-item."
+      ],
+      "next30days": "Map Law 4251/2014 and successor instruments into a rule-engine spec for at least three permit categories (employment, family reunification, renewals). · Identify and meet two immigration-law co-founder candidates (former Migration Policy Directorate, or 4251-fluent practitioners).",
+      "evidenceLinks": [
+        "https://ind.nl/en/asylum-procedures-in-the-netherlands",
+        "https://asylumineurope.org/wp-content/uploads/2025/05/AIDA-NL_2024Update.pdf",
+        "https://www.migrationsverket.se/en/about-the-swedish-migration-agency/statistics/asylum.html",
+        "https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3",
+        "https://artificialintelligenceact.eu/high-level-summary/"
+      ]
+    },
+    {
+      "ideaId": "migration-press-qa-draft",
+      "originalComposite": 4.2,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Single-decision-maker buyer, no fundamental-rights surface, fast to demo, and the UK precedent has matured: the Redbox-to-Assist transition shows departmental specialisations win where horizontal chatbots stalled. Migration-specific source integrations (Alkyoni, EUAA, Coast Guard) ARE the moat. Pass, fastest pilot in the sweep.",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 3,
+        "studioFit": 4
+      },
+      "compositeNew": 4.17,
+      "blockers": [
+        "Digital Governance ministry launching a horizontal Greek-equivalent of Albert/Redbox before the migration-specific moat is dug deep. Speed-to-deploy is the only mitigation.",
+        "Press office is small and unlikely to drive a competitive procurement on its own; need the minister's chief of staff to bless an apevtheias anathesi at the €30-60k tier.",
+        "Disclosure question: ministry may want zero public disclosure of agent use, which is fine for the tool but constrains studio's ability to market the deployment."
+      ],
+      "next30days": "Identify former Ministry of Migration & Asylum press-office staffer or parliamentary-affairs official to advise. · Map the source registry: Alkyoni public statistics, Coast Guard arrival data, Eurostat migration tables, EUAA dashboards, Διαύγεια published acts. List which require integrations vs. scraping.",
+      "evidenceLinks": [
+        "https://digitaltrade.blog.gov.uk/2026/02/04/from-redbox-to-assist-building-ai-tools-that-balance-innovation-and-trust/",
+        "https://ai.gov.uk/blogs/redbox-reflections-5-key-lessons-from-building-and-sunsetting-our-government-ai-chatbot/",
+        "https://ai.gov.uk/knowledge-hub/tools/redbox/",
+        "https://ai.gov.uk/blogs/one-year-of-i-ai-reimagining-government-through-artificial-intelligence/"
+      ]
+    },
+    {
+      "ideaId": "migration-interview-transcription",
+      "originalComposite": 4.1,
+      "originalVerdict": "promote",
+      "qualification": "fail",
+      "headline": "EU AI Act preparatory-task carve-out is helpful but stacks against unverifiable Migrationsverket/IND precedent (axis at 2), GDPR Article 9 consent-flow burden, low-resource-language ASR quality floor, and capital intensity that pushes the pilot tier above the apevtheias-anathesi sweet spot. Originally promoted in the source set, but the qualification fail is driven by precedent freshness collapse ",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 2,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 2.83,
+      "blockers": [
+        "GDPR Article 9 consent flow in the applicant's source language, with documented free-and-informed consent, is the rate-limiting step.",
+        "Tigrinya / Pashto / Sudanese-Arabic / southern-Afghan-Dari ASR quality floor must be measured BEFORE the political pitch; shipping below-threshold confidence creates ECHR exposure.",
+        "Greek sovereign cloud / on-prem deployment cost stack pushes capital efficiency below the pilot tier the rest of the sweep operates in.",
+        "Migrationsverket / IND precedent re-verification in Swedish / Dutch sources before the memo is sent to the Secretary General; the originally cited precedents are softer than implied."
+      ],
+      "next30days": "Run an ASR-quality benchmark on Tigrinya, Pashto, Dari, and Sudanese Arabic against a public test set; publish a per-language confidence floor internally before any ministry conversation. · Get Migrationsverket and IND precedent verification through Swedish-language and Dutch-language sources, or direct contact with the agencies. Stop citing them as 'confirmed operational' until verified.",
+      "evidenceLinks": [
+        "https://www.migrationsverket.se/en/you-want-to-apply/asylum.html",
+        "https://ind.nl/en/asylum-procedures-in-the-netherlands",
+        "https://asylumineurope.org/wp-content/uploads/2025/05/AIDA-NL_2024Update.pdf",
+        "https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3"
+      ]
+    },
+    {
+      "ideaId": "migration-decision-letter-merits-drafting",
+      "originalComposite": 3.45,
+      "originalVerdict": "kill",
+      "qualification": "fail",
+      "headline": "Original kill stands. EU AI Act Annex III Section 7(d) is written for exactly this product; the December 2027 enforcement date is a delay, not a reprieve; and the press-cycle dynamics around 'AI denied this family asylum' are unmanageable for a Greek venture studio. Kill, do not re-open within the 2026-2027 horizon.",
+      "axes": {
+        "buyerReachability": 1,
+        "precedentFreshness": 1,
+        "founderMarketFit": 1,
+        "pilotProcurability": 1,
+        "lockInRisk": 1,
+        "studioFit": 1
+      },
+      "compositeNew": 1.0,
+      "blockers": [
+        "EU AI Act Annex III Section 7(d) — high-risk classification applied at the point of intended use; full compliance regime from 2 December 2027 with significant pre-enforcement scrutiny already from Commission and supervisory authorities.",
+        "Political third rail — UNHCR, NGO sector, Greek Ombudsman, National Commission for Human Rights, and ECHR petitioners all in the litigation chain.",
+        "No founder team can carry the public credibility burden in the current political environment."
+      ],
+      "next30days": "Do not engage. Allocate the team's attention to the four passes and the one conditional. · Set a 24-month calendar reminder to re-examine ONLY if (a) another member state ships a merits-drafting deployment that survives an ECHR challenge AND (b) Greek FRIA tooling and Commission high-risk guidance has matured into a defensible compliance posture. Neither condition is in sight.",
+      "evidenceLinks": [
+        "https://artificialintelligenceact.eu/annex/3/",
+        "https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3",
+        "https://www.twobirds.com/en/insights/2026/the-commission's-draft-high-risk-ai-guidelines-under-the-eu-ai-act-a-first-read",
+        "https://verfassungsblog.de/regulating-ai-at-europes-borders/"
+      ]
+    }
+  ]
+}

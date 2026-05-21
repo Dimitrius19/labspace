@@ -76,6 +76,12 @@ export function VenturesProvider({ children }: { children: ReactNode }) {
   const [refreshTick, setRefreshTick] = useState(0);
 
   useEffect(() => {
+    // The /api/ventures Edge Function only exists on Vercel. In `vite dev`
+    // it always 404s and pollutes the console — skip it entirely.
+    if (import.meta.env.DEV) {
+      setSyncStatus("disabled");
+      return;
+    }
     let cancelled = false;
     setSyncStatus("loading");
     setSyncError(null);

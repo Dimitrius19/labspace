@@ -1,0 +1,157 @@
+{
+  "ministry": "culture",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "archaeology-permit-triage-ephorate",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Ephorate permit-triage survives hostile second-pass cleanly: every intl precedent (SIGECweb, Arches-for-HERs, POP) is operational in 2025-2026 as registry/casework backbone with no agentic Greek-corpus drafting layer; RRF Culture envelope is actively disbursing through Aug 2026 with €27.3M ODAP digital overhaul as proof of procurement appetite; two founder finalists are recruitable in 90 days.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.5,
+      "blockers": [
+        "RRF deadline Aug 2026: every milestone in Greece 2.0 must close by 26 August 2026, which compresses the procurement window — pilot kickoff must be inside FY2026 H1 or it slips out of the RRF envelope into ESPA 2027+ on slower terms.",
+        "ΣΕΑ (Σύλλογος Ελλήνων Αρχαιολόγων) hostility is the binding political risk and must be defused before the first GS-level meeting — ΣΕΑ-observable evaluation and a named-archaeologist-only sign-off design need to be in the memo, not in the rebuttal.",
+        "Italy's MiC × Europeana partnership (Dec 2025, 10M records into the data space by end 2026) and France's POP relaunch (15 Dec 2025) raise the bar on the 'why not adopt the Italian/French stack' objection — the Greek-language + KN 5351 / Law 4858 + Αρχαιολογικόν Δελτίον moat needs front-loaded evidence in the pitch.",
+        "Two-finalist founder pair (ex-Ephorate Α' βαθμού archaeologist + Atypon-grade ML engineer) is identified but not signed; one of the two is post-retirement which compresses to a single binding hire."
+      ],
+      "next30days": "Run the founder-finalist interviews to a signed offer on the archaeologist track (the binding hire) and pre-table a memo with the GS for Antiquities + one regional Ephorate Director (Western Attica preferred) for a 6-month pilot scoped to ~1,000 retro γνωμοδοτήσεις, sized to fit απευθείας ανάθεση + RRF innovation-pilot, with ΣΕΑ-observable evaluation built into the protocol.",
+      "evidenceLinks": [
+        "https://pro.europeana.eu/post/a-new-mic-europeana-foundation-partnership-to-strengthen-italy-s-leadership-in-europe-s-digital-heritage",
+        "https://www.archesproject.org/archesforherslaunch/",
+        "https://pop.culture.gouv.fr/",
+        "https://news.gtp.gr/2025/05/05/greece-launches-e27-3m-digital-overhaul-of-museums-and-archaeological-sites/",
+        "https://greece20.gov.gr/en/commission-disburses-the-4th-payment-in-grants-to-greece-under-the-rrf/",
+        "https://intarch.ac.uk/journal/issue58/8/full-text.html"
+      ]
+    },
+    {
+      "ideaId": "archaeology-epigraphy-ocr-agent",
+      "originalComposite": 4.0,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Epigraphy OCR is conditional because DeepMind Aeneas (Nature paper + open-source predictingthepast.com, July 2025) has commoditised exactly the restoration/attribution layer the original memo treated as moat — the surviving wedge is operationalisation inside a Greek state institution (Epigraphic Museum / Academy of Athens) with EpiDoc workflow integration, not the model itself.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.5,
+      "blockers": [
+        "DeepMind Aeneas (July 2025, open-source, free interactive site, integrated with Belgian schools) and the Aeneas-powered Ithaca upgrade convert the original blue-ocean axis into a 'why not just wrap Aeneas?' objection — the new defensible moat is squeeze/photogrammetry ingestion, Greek-only letterform OCR (which Aeneas does not do — it is text-in/text-out), and EpiDoc apparatus drafting inside the Epigraphic Museum CMS.",
+        "Founder pool — senior Greek epigraphist with Oxford/Cambridge/Heidelberg credentials willing to leave tenure for a startup — is a single-digit recruit pool; 90-day hire is plausible only via secondment or post-retirement, not a clean lateral move.",
+        "Pilot procurability sits in the awkward middle: ELIDEK/ESPA research-pilot tier (€60-150k) is feasible but not part of the RRF Culture envelope core, so this idea does not benefit from the 26 Aug 2026 RRF drawdown deadline as a forcing function.",
+        "Studio fit is lower — prestige product with academic credibility upside but no cross-ministerial leverage; only justifies the founder hire if it ships on the same Greek-archaeological-NLP substrate as the permit-triage product."
+      ],
+      "next30days": "Re-scope as Product 2 on the permit-triage company's data layer (shared Greek archaeological corpus + retrieval substrate). Within 30 days, run a one-day technical audit of where Aeneas ends and the Greek-OCR/letterform/EpiDoc-apparatus wedge begins, and validate one paid feasibility study (<€20k) with the Epigraphic Museum Director on a closed subset of ~500 inscriptions.",
+      "evidenceLinks": [
+        "https://deepmind.google/blog/aeneas-transforms-how-historians-connect-the-past/",
+        "https://www.infoq.com/news/2025/08/google-deepmind-aeneas/",
+        "https://www.technologyreview.com/2025/07/23/1120574/deepmind-ai-aeneas-helps-historians-interpret-latin-inscriptions/",
+        "https://github.com/google-deepmind/predictingthepast",
+        "https://www.eagle-network.eu/ithaca-restoring-and-attributing-greek-inscriptions-using-artificial-intelligence/"
+      ]
+    },
+    {
+      "ideaId": "archaeology-site-monitoring-remote-sensing",
+      "originalComposite": 3.3,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Site-monitoring stays conditional: EAMENA hit its 10-year mark in Feb 2025 with no productised Greek deployment and Carabinieri TPC still uses imagery non-agentically — the surface is genuinely blue-ocean — but capex-heavy pilot (€250-600k drones + imagery) is above απευθείας ανάθεση, founder pair is two disjoint sub-networks, and flagging unauthorised construction is the most politically combusti",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 2.83,
+      "blockers": [
+        "Capital intensity (drone fleet + sub-metre imagery licensing) pushes pilot above the απευθείας ανάθεση tier and into a slow ESPA/RRF capex line that will not close inside the 26 Aug 2026 RRF window.",
+        "Founder-market fit is the binding constraint: remote-sensing engineer (NTUA / NOA bench) and archaeologist with site-management depth exist but in non-overlapping Athens sub-networks — no two-finalists path identified, unlike permit-triage.",
+        "Political third-rail risk is high — every flagged unauthorised structure is a landowner-municipal conflict; the Halkidiki / Cycladic-coast scandal narrative cuts both ways (PR upside, lawsuit downside).",
+        "Sub-metre change-detection over olive-tree-noisy Aegean landscape carries a real false-positive cost; the guard-team workflow has to absorb FP triage or it collapses on first deployment."
+      ],
+      "next30days": "Park as a Product 3 candidate behind permit-triage + epigraphy. Spend the 30 days only on (a) founder discovery — map ex-NOA / ex-NTUA Earth Observation Lab graduates with archaeology interest, and (b) a memo on whether a Coast-Guard / Πυροσβεστική + Ephorate joint procurement vehicle exists that could absorb the capex line.",
+      "evidenceLinks": [
+        "https://peoplingthepast.com/2025/02/21/blog-post-104-eamena-project-ten-years-documenting-endangered-archaeology-in-the-middle-east-and-north-africa/",
+        "https://eamena.org/",
+        "https://cultura.gov.it/carabinieritpc",
+        "https://tpcweb.carabinieri.it/SitoPubblico/home",
+        "https://news.gtp.gr/2025/05/05/greece-launches-e27-3m-digital-overhaul-of-museums-and-archaeological-sites/"
+      ]
+    },
+    {
+      "ideaId": "culture-museum-collection-cataloguing",
+      "originalComposite": 3.25,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Museum cataloguing is conditional because the surface is being aggressively occupied — Italy MiC × Europeana (Dec 2025, 10M records by end 2026), France POP relaunched 15 Dec 2025 — and ΕΚΤ remains the institutional custodian inside Greece; the only ride-in path is as a per-typology drafting layer inside an ΕΚΤ partnership, never as a head-on procurement.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [
+        "ΕΚΤ (National Documentation Centre) controls the catalogue substrate and EU-cofinancing routing; without an ΕΚΤ MoU before the first museum-director conversation, the bid is outflanked on procurement.",
+        "Founder pool requires a museum-curator with CIDOC-CRM/LIDO fluency — narrower than the archaeologist pool, and T-Life's network is thinner here than in classical antiquities.",
+        "Italy MiC × Europeana 10M-record aggregation by end 2026 and France POP's December 2025 relaunch raise the 'why not federate into Europeana with the existing tooling?' objection — Greek-language drafting alone is not a sufficient wedge if EKT goes the federation route.",
+        "Long-tail object typologies (ceramics by region/period, sculpture taxa, numismatic series, lithics) need per-typology training data and curator-graded gold sets — high upfront data-engineering cost before any pilot demo."
+      ],
+      "next30days": "Do not pursue solo. Treat as latent Product 4. Within 30 days, run one exploratory meeting with ΕΚΤ executive director to test whether a per-typology drafting partnership (T-Life builds the model layer, ΕΚΤ keeps catalogue custody) is welcomed; if not, mothball until permit-triage is shipping.",
+      "evidenceLinks": [
+        "https://pro.europeana.eu/post/a-new-mic-europeana-foundation-partnership-to-strengthen-italy-s-leadership-in-europe-s-digital-heritage",
+        "https://pop.culture.gouv.fr/",
+        "https://www.dataspace-culturalheritage.eu/en/news/a-new-mic-europeana-foundation-partnership-to-strengthen-italy-s-leadership-in-europe-s-digital-heritage",
+        "https://intarch.ac.uk/journal/issue58/8/full-text.html"
+      ]
+    },
+    {
+      "ideaId": "culture-cultural-grant-evaluation",
+      "originalComposite": 3.15,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "Hostile second-pass converts park to fail: EKKOMED itself has announced 'algorithmic evaluation' of proposals and a new digital Registry of Audiovisual Creation Experts at e-services.ekkomed.gr, while simultaneously Cineuropa documented Greek film professionals denouncing EKKOMED's cash-rebate dysfunction — the buyer is internally reforming and externally contested, neither of which leaves room fo",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 2
+      },
+      "compositeNew": 2.67,
+      "blockers": [
+        "EKKOMED (Hellenic Film and Audiovisual Center) has self-announced algorithmic proposal evaluation and a new in-house digital Registry — the agentic-copilot pitch competes with the buyer's own publicly-staked reform, not with a vacuum.",
+        "Cineuropa April 2026 reporting on cash-rebate delays and professional-body denunciation means the buyer is in defensive-political-fire mode; outside vendors near grant decisions attract immediate hostile press.",
+        "Arts Council England's published AI position statement constrains AI use to internal Microsoft CoPilot only — the international precedent is 'cautious, human-only-assessor, no third-party model' which is the opposite of what this idea proposes.",
+        "T-Life's founder network is in classical antiquities and deep-tech, not modern Greek arts administration — no credible co-founder bench in sight.",
+        "Studio fit is the lowest in the portfolio: no cross-ministerial leverage, no shared Greek-archaeological-NLP substrate with permit-triage / epigraphy / museum cataloguing."
+      ],
+      "next30days": "Do not pursue. Revisit only if the new EKKOMED leadership commissions an outside copilot via direct ministry sponsorship, AND a Greek-arts-administration co-founder with Festival d'Athènes / ex-EKK credibility materialises independently.",
+      "evidenceLinks": [
+        "https://www.artscouncil.org.uk/ai-arts-council-england-public-position-statement-writing-and-assessment-funding-applications",
+        "https://www.artscouncil.org.uk/research-and-data/responsible-ai-arts-council-england",
+        "https://cineuropa.org/en/newsdetail/480224/",
+        "https://www.ekkomed.gr/selective-programs/funding-framework-for-greek-cinema-for-2026/",
+        "https://cineuropa.org/en/newsdetail/490923"
+      ]
+    }
+  ]
+}

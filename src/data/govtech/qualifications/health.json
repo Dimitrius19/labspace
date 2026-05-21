@@ -1,0 +1,122 @@
+{
+  "ministry": "health",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "health-patient-correspondence",
+      "originalComposite": 4.1,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "IDIKA CEO is direct buyer (owns myHealth gov.gr inbox — the substrate) and is the most reachable, most digitally-fluent named champion in Greek health; lockInRisk is 5 because IDIKA CEO is a permanent statutory role and myHealth is statutory infrastructure that survives government change. Pilot budget (€50-100k) is the lowest in the entire ministry stack — below any tender threshold. Albert+Caddy ",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 5,
+        "studioFit": 4
+      },
+      "compositeNew": 4.25,
+      "blockers": [
+        "Hard enforcement of the 'clinician is sole author of record' rule — the agent must restate the clinician's interpretation verbatim; any drift toward independent clinical interpretation flips MDR posture.",
+        "Co-design with IDIKA on myHealth API contract before pilot launch; do not assume current sandbox terms extend.",
+        "Establish doctor-union (ΟΕΝΓΕ / ΕΙΝΑΠ) engagement plan: this agent is positioned as a doctor's correspondence assistant, never as 'AI talking to patients.'"
+      ],
+      "next30days": "IDIKA CEO is direct buyer (owns myHealth gov.gr inbox — the substrate) and is the most reachable, most digitally-fluent named champion in Greek health; lockInRisk is 5 because IDIKA CEO is a permanent statutory role and myHealth is statutory infrastructure that survives government change. Pilot budget (€50-100k) is the lowest in the entire ministry stack — below any tender threshold. Albert+Caddy ",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "health-pre-authorisation-drafter",
+      "originalComposite": 4.45,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Cleanest MDR posture in the entire health portfolio — purely administrative drafting on the clinician's behalf, not a clinical decision. studioFit=5: this is the only health idea where the EU AI Act high-risk classification can be confidently avoided. EOPYY is a single national payer = single-buyer leverage. The precedent picture is mixed (Olive AI dead Oct 2023, but Cohere Health is operational a",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 3,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 4,
+        "studioFit": 5
+      },
+      "compositeNew": 4.1,
+      "blockers": [
+        "REMOVE Olive AI from intlPrecedents in health.ts — it is defunct since Oct 2023. Replace with Cohere Health alone, with explicit acknowledgement that the category includes failures, and Humata Health (Olive's PA business successor) as a watchpoint.",
+        "Engineer the EOPYY-portal integration path before pilot signing — score assumed PDF-out + human submission for v1 if no clean API exists.",
+        "Pre-empt 'EOPYY criteria change quarterly' objection with a regression-test harness against Διαύγεια bulletins, demoed in the first pitch."
+      ],
+      "next30days": "Cleanest MDR posture in the entire health portfolio — purely administrative drafting on the clinician's behalf, not a clinical decision. studioFit=5: this is the only health idea where the EU AI Act high-risk classification can be confidently avoided. EOPYY is a single national payer = single-buyer leverage. The precedent picture is mixed (Olive AI dead Oct 2023, but Cohere Health is operational a",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "health-chronic-prescription-review",
+      "originalComposite": 4.05,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Sits exactly on the pass line. Buyer reach and lock-in are perfect (IDIKA CEO directly owns the e-prescription rail). Estonia INXBASE has been operational since 2016 — the most durable, structurally-identical precedent in the health stack. BUT: MDR Class IIa is not a 'moat,' it is a real €200-400k + 12-18mo cost before national rollout, and the EU AI Act (Aug 2026 baseline) classifies this kind of",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 5,
+        "founderMarketFit": 3,
+        "pilotProcurability": 2,
+        "lockInRisk": 5,
+        "studioFit": 2
+      },
+      "compositeNew": 3.8,
+      "blockers": [
+        "Bring in a strategic co-investor or grant programme (EU Horizon, EIT Health, or a notified-body partnership) to underwrite the MDR Class IIa CE-mark before commiting T-Life seed capital to the regulatory pathway.",
+        "Phase 1 of pilot must run as 'advisory information only' (not severity-classifying CDS) to avoid MDR Class IIa trigger during the 90-day pilot; CE-mark begins after pilot success demonstrates demand.",
+        "Confirm with IDIKA CEO that they will host the air-gapped deployment and underwrite the data-protection posture — without IDIKA endorsement this idea is uninvestable.",
+        "Track the EU Digital Omnibus extension (current proposal: AI MedDevs to 2 Aug 2028) — material to MDR/AI Act timing model."
+      ],
+      "next30days": "Sits exactly on the pass line. Buyer reach and lock-in are perfect (IDIKA CEO directly owns the e-prescription rail). Estonia INXBASE has been operational since 2016 — the most durable, structurally-identical precedent in the health stack. BUT: MDR Class IIa is not a 'moat,' it is a real €200-400k + 12-18mo cost before national rollout, and the EU AI Act (Aug 2026 baseline) classifies this kind of",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "health-discharge-summary-drafter",
+      "originalComposite": 4.4,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Originally the joint-#2 composite; falls to conditional on the hostile second pass because of two soft kills: (a) the named champion is a hospital Clinical Director rather than IDIKA CEO — hospital chiefs rotate with political appointments, weakening lockInRisk; and (b) the MDR posture is contestable. The 'scribing not deciding' designed-around is defensible TODAY but the EU AI Act enforcement fro",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.7,
+      "blockers": [
+        "Secure IDIKA CEO as co-sponsor before the hospital Clinical Director — IDIKA must underwrite the AHFY push-back integration AND provide political cover that survives a hospital-director change.",
+        "Commission a written MDR/AI Act legal opinion (Greek notified body, e.g. EOF or partner) BEFORE pilot launch — confirm that the human-approval gate keeps the agent off the MDR Class IIa register. Without this, the studioFit score collapses further.",
+        "Position as a NHS-DSUM-class collaboration: 'we are shipping in Athens what NHS England shipped at Chelsea & Westminster.' Use that precedent in every conversation; press the GOSH TORTUS Oct 2025 go-live as proof.",
+        "Pilot scope must be a single ward in a single hospital with a known modern HIS — do not over-commit to multi-hospital rollout in the pilot tranche."
+      ],
+      "next30days": "Originally the joint-#2 composite; falls to conditional on the hostile second pass because of two soft kills: (a) the named champion is a hospital Clinical Director rather than IDIKA CEO — hospital chiefs rotate with political appointments, weakening lockInRisk; and (b) the MDR posture is contestable. The 'scribing not deciding' designed-around is defensible TODAY but the EU AI Act enforcement fro",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "health-eody-epi-signal",
+      "originalComposite": 3.65,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "Re-scored down from park to fail on the hostile second pass. Every axis the new rubric pressure-tests goes against this idea: champion is not reachable in 60 days (needs ministerial cover for the data-access carve-out and primary-legislation work); pilot is €300-600k over 12 months on air-gapped infrastructure — wrong shape for a T-Life seed bet; founder pool (epidemiologist + privacy-eng + senior",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 1,
+        "lockInRisk": 3,
+        "studioFit": 2
+      },
+      "compositeNew": 2.15,
+      "blockers": [
+        "Re-evaluate only if: (a) an EODY Director-level sponsor emerges who will underwrite the data-access carve-out via ministerial decree, AND (b) a Horizon Europe / DG SANTE / EIT Health grant covers the air-gapped pilot capital outside T-Life seed, AND (c) RIVM or UKHSA is willing to be a reference partner.",
+        "Until those conditions are met, surface this idea inside a separate 'national-grant track' folder, not on the studio pipeline."
+      ],
+      "next30days": "Re-scored down from park to fail on the hostile second pass. Every axis the new rubric pressure-tests goes against this idea: champion is not reachable in 60 days (needs ministerial cover for the data-access carve-out and primary-legislation work); pilot is €300-600k over 12 months on air-gapped infrastructure — wrong shape for a T-Life seed bet; founder pool (epidemiologist + privacy-eng + senior",
+      "evidenceLinks": []
+    }
+  ]
+}

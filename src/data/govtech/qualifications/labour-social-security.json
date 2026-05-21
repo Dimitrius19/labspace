@@ -1,0 +1,101 @@
+{
+  "ministry": "labour-social-security",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "efka-pension-calc-copilot",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Top-of-stack idea survives hostile re-pass. Buyer reachability is strong — EFKA Governor + GS Social Insurance are named, single-ministry, no inter-ministerial sign-off. Precedent freshness is solid: Caddy is operational and scaling, Albert is being extended via France-Germany sovereign-AI agreement through 2030. Founder-market fit is realistic in Athens — ex-EFKA actuaries exist in private actuar",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "sepe-inspection-prioritiser",
+      "originalComposite": 4.2,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Strongest international-precedent freshness in the set: Spain's Herramienta Lucha contra el Fraude is operational and being expanded under the 2025-2027 Strategic Labour Inspection Plan; the Spain story is a direct 1:1 analogue for ΣΕΠΕ. Buyer reachability via the ΣΕΠΕ Special Secretary + GS Labour is single-channel and approachable. Pilot procurability is realistic at <€55k single-region for a 12",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "efka-appeal-response-drafter",
+      "originalComposite": 4.15,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Highest average in the hostile re-pass. Sister-product to pension-calc copilot — same founder stack, same Greek-legal-corpus moat, same drafting-with-provenance architecture, but a separate buyer (EFKA appeals-directorate head) and a separate budget line. Precedent freshness is solid: UK Caddy is operational with documented RCT productivity numbers, France Albert is in production. Studio fit is ex",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "dypa-jobseeker-match-agent",
+      "originalComposite": 3.7,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Below the pass bar. Buyer reachability via the ΔΥΠΑ Governor is straightforward and precedent freshness is high — France Travail Albert is operational and being scaled under the France-Germany sovereign-AI agreement. But three axes drag this down. Pilot procurability is weak because the EU AI Act classifies employment-matching by public services as Annex III high-risk, which forces a conformity-as",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "labour-new-mother-handoff-agent",
+      "originalComposite": 3.65,
+      "originalVerdict": "promote",
+      "qualification": "fail",
+      "headline": "Hostile re-pass confirms the original 'park' verdict and pushes it toward 'fail'. Buyer reachability is the weakest in the set: a triple champion is required (ΓΓΠΣΨΔ Digital Governance GS for the platform, EFKA Governor for the data, GS Family Policy for the mandate) and ΓΓΠΣΨΔ considers cross-system orchestration their own 2027 roadmap — directly competitive, not adjacent. Founder-market fit is t",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [],
+      "next30days": "",
+      "evidenceLinks": []
+    }
+  ]
+}

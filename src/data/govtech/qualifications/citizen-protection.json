@@ -1,0 +1,122 @@
+{
+  "ministry": "citizen-protection",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "police-report-drafting-agent",
+      "originalComposite": 4.4,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Composite 3.90 (one notch under pass threshold). No kill findings. studioFit=5, pilotProcurability=4, precedentFreshness=4 are all strong. founderMarketFit=3 is the binding constraint and is designable through targeted Athens recruiting. Promotable to pass with co-founder signed.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 4,
+        "lockInRisk": 3,
+        "studioFit": 5
+      },
+      "compositeNew": 3.9,
+      "blockers": [
+        "Axon Draft One confirmed deployed at scale (SFPD testing Oct 2024, confirmed June 2025); EFF transparency criticism and state laws (Utah SB 180, California SB 524) actively regulating in 2025 — the surface is real, hot, and regulated.",
+        "Hampshire precedent in the source file is misattributed: the actual 2025 Hampshire deployment is 'Bobbi' (non-emergency citizen-facing AI virtual assistant), NOT an officer voice-to-report scribe. Precedent freshness still solid via Axon + UK Home Office Microsoft 365 Copilot trials + Carabinieri pilots.",
+        "Athens Greek-ASR talent pool exists (NTUA SAIL roots, Whisper-Greek/Greek-GPT-2 medical-ASR research published 2025) but police-domain-tuned ASR is a niche skill. Ex-ΕΛΑΣ co-founder is genuinely scarce; findable through GS Public Order alumni network with effort. founderMarketFit=3 is the binding constraint that knocks composite under 4.0."
+      ],
+      "next30days": "Recruit the ex-ΕΛΑΣ co-founder before any pilot conversation; without one the buyer meeting goes nowhere. · Commission a DPIA template in advance (not after the pilot request) — turn HDPA exposure from a blocker into a procurement asset.",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "police-press-comms-drafting",
+      "originalComposite": 3.85,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Composite 4.05 but lockInRisk=2 blocks pass tier. Designable via multi-ministry expansion + Trojan-horse positioning into police-report-drafting. Lowest-risk entry into Citizen Protection.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 2,
+        "studioFit": 5
+      },
+      "compositeNew": 4.05,
+      "blockers": [
+        "Composite crosses 4.0 BUT lockInRisk=2 forces conditional under the 'no axis < 3' clause. Off-the-shelf LLM + Greek fine-tune + RAG over press archive is straightforward; the press archive itself is the only meaningful moat, and ΕΛΑΣ comms could rebuild it with any competitor within weeks.",
+        "Precedent freshness=5: UK Redbox (GDS i.AI), France Albert (DINUM, sovereign LLM, open-source release), US GSA/18F pilots all confirmed and expanding in 2024-2025. Strong de-risking from analogous EU sovereign-LLM precedents.",
+        "buyerReachability=3: Head of ΕΛΑΣ comms is a single named person (good for direct-award) but the team is six people and budgets are micro. Strategic value to T-Life is the foothold in ΕΛΑΣ, not the comms-office revenue."
+      ],
+      "next30days": "Treat as a Trojan horse, not as a standalone venture. Price the pilot at break-even (€25-30k) and use it to build the relationship for police-report-drafting-agent. · Mitigate lockInRisk by bundling the press-archive RAG layer with a multi-ministry comms-drafting product (could serve Migration, Health, Tourism comms offices too) — single-vertical product is too easy to displace.",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "police-100-dispatch-triage",
+      "originalComposite": 3.3,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Composite 3.05, two axes at 2, studioFit borderline. Conditional rather than fail because the shadow-mode framing salvages it AND precedent freshness is strong. Park until ΕΛΑΣ relationship exists.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 3.05,
+      "blockers": [
+        "Verified via WebSearch: Annex III of EU AI Act explicitly classifies 'AI systems intended to be used to evaluate and classify emergency calls by natural persons or to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid' as HIGH-RISK. This is Article 6 high-risk, NOT Article 5 prohibited. Conformity assessment, CE marking, DPIA, FRIA all required. Enforceable from 2 August 2026.",
+        "Precedent freshness=5: Carbyne c-Lite + Event Assist + Admin Assist (GA 2025) deployed across multiple US 911 centres; UK 999 AI pilots; NL 112 decision-support trials. Surface is hot and validated.",
+        "founderMarketFit=2: requires three-person founder team (ex-100-centre supervisor + senior Greek-speech-systems engineer + EU AI Act compliance lead). The compliance-lead role is the hardest to fill in Athens; after HDPA Decision 45/2025 every Greek AI-compliance senior is gun-shy on ΕΛΑΣ-adjacent work."
+      ],
+      "next30days": "Defer until police-report-drafting-agent and police-press-comms-drafting have produced a ΕΛΑΣ relationship; do NOT lead with this venture. · If pursued, ship as Annex III conformity-assessed product from day one — compliance is the moat, not a tax. Hire the AI Act compliance lead before the engineer.",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "citizen-protection-sis2-query-helper",
+      "originalComposite": 2.95,
+      "originalVerdict": "promote",
+      "qualification": "fail",
+      "headline": "Composite 2.4 below fail threshold. No kill finding but the score-driven fail is robust: every operational axis is constrained, and the assistive-only repositioning becomes a fundamentally different (and weaker) product. Recommend kill.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 2,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 3,
+        "studioFit": 4
+      },
+      "compositeNew": 2.4,
+      "blockers": [
+        "Composite 2.4 fails on score alone. No single axis=1 (no structural kill) but four axes at 2 is a death-by-paper-cuts profile.",
+        "buyerReachability=2: SIRENE Bureau Greece is ~10-20 people total; the addressable buyer surface is microscopic.",
+        "precedentFreshness=2: NO deployed AI assistive layer on SIS II / SIENA exists publicly. Europol has not shipped one; BKA internal tooling not transferable. Greenfield = no de-risking evidence."
+      ],
+      "next30days": "If salvaged at all, reposition as a SIENA training tool for the broader investigator base (a few hundred users not 20), priced as training-content not as a data product. But this is a different venture, not a redesign. · Otherwise: drop. Use the saved capital on the report-drafting venture's ASR moat.",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "police-predictive-policing-individuals",
+      "originalComposite": 2.45,
+      "originalVerdict": "promote",
+      "qualification": "fail",
+      "headline": "Retained in qualification per instruction. Killed on EU AI Act Article 5(1)(d) prohibited practice + off-thesis for T-Life + no legal procurement path. The kill is regulatory and structural; composite 1.0 is consistent with the kill but not its cause.",
+      "axes": {
+        "buyerReachability": 1,
+        "precedentFreshness": 1,
+        "founderMarketFit": 1,
+        "pilotProcurability": 1,
+        "lockInRisk": 1,
+        "studioFit": 1
+      },
+      "compositeNew": 1.0,
+      "blockers": [
+        "EU AI Act Article 5(1)(d) absolutely prohibits AI systems used to make risk assessments of natural persons to predict the risk of a person committing a criminal offence based on profiling or personality traits. Prohibition entered into force 2 February 2025.",
+        "Off-thesis for T-Life. T-Life ventures are administrative-productivity agents, not enforcement-decision-automation. This venture violates the studio's stated thesis.",
+        "No legal procurement path under EU AI Act. Hellenic DPA Decision 45/2025 against Smart Policing demonstrates the DPA will block even less-prohibited biometric-policing procurements; predictive-policing-of-individuals is structurally unprocurable.",
+        "Per task instruction: Article 5 prohibitions ranked in the top-5 by source composite MUST be kept and scored honestly low. This idea ranks #5 by source composite (2.45) so it is retained here."
+      ],
+      "next30days": "None. The kill is structural (regulatory prohibition + studio thesis violation + no procurement path). Cannot be designed around without becoming a fundamentally different product (e.g. area-based pattern analysis), at which point it is a different venture, not a redesign.",
+      "evidenceLinks": []
+    }
+  ]
+}

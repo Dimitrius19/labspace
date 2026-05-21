@@ -179,7 +179,15 @@ export interface FilterState {
   search: string;
 }
 
-export type ViewKey = "ventures" | "dashboard" | "funnel" | "catalog" | "geography" | "category";
+export type ViewKey =
+  | "ventures"
+  | "dashboard"
+  | "funnel"
+  | "catalog"
+  | "geography"
+  | "category"
+  | "govtech"
+  | "mvp";
 
 export const STAGES: { key: Stage; label: string; color: string }[] = [
   { key: "discovered", label: "Discovered", color: "slate" },
@@ -292,4 +300,144 @@ export const HEALTH_COLORS: Record<Health, { bg: string; text: string; dot: stri
   "on-track": { bg: "bg-emerald-50", text: "text-emerald-700", dot: "bg-emerald-500", label: "On track" },
   "at-risk": { bg: "bg-amber-50", text: "text-amber-700", dot: "bg-amber-500", label: "At risk" },
   blocked: { bg: "bg-rose-50", text: "text-rose-700", dot: "bg-rose-500", label: "Blocked" },
+};
+
+// ---------- Government / Public Sector ideas ----------
+
+export type MinistryKey =
+  | "digital-governance"
+  | "finance-aade"
+  | "interior"
+  | "justice"
+  | "national-defence"
+  | "foreign-affairs"
+  | "migration-asylum"
+  | "citizen-protection"
+  | "climate-civil-protection"
+  | "health"
+  | "education"
+  | "labour-social-security"
+  | "development"
+  | "environment-energy"
+  | "infrastructure-transport"
+  | "maritime-insular"
+  | "rural-development"
+  | "tourism"
+  | "culture"
+  | "social-cohesion-family"
+  | "state-cross-cutting";
+
+export type PitchReady = "concept" | "memo" | "demo" | "pilot";
+export type Verdict = "promote" | "park" | "kill";
+export type AgenticFit = "high" | "medium" | "low";
+
+export interface IntlPrecedent {
+  country: string;
+  program: string;
+  ministry?: string;
+  year?: string;
+  outcome?: string;
+  url?: string;
+}
+
+export interface RedTeamFinding {
+  axis:
+    | "incumbent-overlap"
+    | "political-third-rail"
+    | "regulatory-blocker"
+    | "technical-infeasibility"
+    | "founder-fit"
+    | "language-moat";
+  severity: "kill" | "wound" | "clear";
+  note: string;
+}
+
+export interface GovRubric {
+  agenticFit: number;        // 1-5
+  blueOcean: number;         // 1-5
+  timeToPilot: number;       // 1-5 (5 = fast)
+  politicalTailwind: number; // 1-5
+  capitalEfficiency: number; // 1-5
+  greekLanguageMoat: number; // 1-5
+  composite: number;
+}
+
+export const GOV_RUBRIC_DIMENSIONS: { key: keyof Omit<GovRubric, "composite">; label: string; weight: number }[] = [
+  { key: "agenticFit", label: "Agentic fit", weight: 0.25 },
+  { key: "blueOcean", label: "Blue ocean", weight: 0.20 },
+  { key: "timeToPilot", label: "Time to pilot", weight: 0.15 },
+  { key: "politicalTailwind", label: "Political tailwind", weight: 0.15 },
+  { key: "capitalEfficiency", label: "Capital efficiency", weight: 0.10 },
+  { key: "greekLanguageMoat", label: "Greek-language moat", weight: 0.15 },
+];
+
+export interface GovIdea {
+  id: string;
+  ministry: MinistryKey;
+  title: string;
+  oneLiner: string;
+  problem: string;
+  agentLoop: string[];            // ordered steps the agent performs on Tuesday morning
+  userInsideMinistry: string;     // who actually uses it (e.g. "ΣτΕ rapporteur clerk")
+  blueOceanAngle: string;
+  greekContext: string;           // why Greece specifically, what the Greek twist is
+  intlPrecedents: IntlPrecedent[];
+  redTeam: RedTeamFinding[];
+  buyerObjection: string;         // simulated GS-level pushback
+  buyerHook: string;              // what would make them forward it to the minister
+  rubric: GovRubric;
+  verdict: Verdict;
+  verdictRationale: string;
+  pitchReady: PitchReady;
+  championProfile: string;
+  estimatedPilotBudget: string;   // tier or range
+  founderProfile: string;         // who should run this
+  tags: string[];
+  addedDate: string;              // YYYY-MM-DD
+}
+
+export interface GovOverrides {
+  [govIdeaId: string]: {
+    verdict?: Verdict;
+    pitchReady?: PitchReady;
+    notes?: string;
+    updatedAt?: string;
+  };
+}
+
+export const MINISTRIES: { key: MinistryKey; label: string; shortLabel: string; greek: string; accent: string }[] = [
+  { key: "digital-governance", label: "Digital Governance", shortLabel: "Digital Gov", greek: "Ψηφιακής Διακυβέρνησης", accent: "violet" },
+  { key: "finance-aade", label: "Finance / AADE", shortLabel: "Finance", greek: "Οικονομικών / ΑΑΔΕ", accent: "emerald" },
+  { key: "interior", label: "Interior", shortLabel: "Interior", greek: "Εσωτερικών", accent: "blue" },
+  { key: "justice", label: "Justice", shortLabel: "Justice", greek: "Δικαιοσύνης", accent: "amber" },
+  { key: "national-defence", label: "National Defence", shortLabel: "Defence", greek: "Εθνικής Άμυνας", accent: "slate" },
+  { key: "foreign-affairs", label: "Foreign Affairs", shortLabel: "MFA", greek: "Εξωτερικών", accent: "sky" },
+  { key: "migration-asylum", label: "Migration & Asylum", shortLabel: "Migration", greek: "Μετανάστευσης & Ασύλου", accent: "rose" },
+  { key: "citizen-protection", label: "Citizen Protection", shortLabel: "Police", greek: "Προστασίας του Πολίτη", accent: "indigo" },
+  { key: "climate-civil-protection", label: "Climate Crisis & Civil Protection", shortLabel: "Civil Protection", greek: "Κλιματικής Κρίσης & Πολιτικής Προστασίας", accent: "red" },
+  { key: "health", label: "Health", shortLabel: "Health", greek: "Υγείας", accent: "teal" },
+  { key: "education", label: "Education", shortLabel: "Education", greek: "Παιδείας", accent: "yellow" },
+  { key: "labour-social-security", label: "Labour & Social Security", shortLabel: "Labour", greek: "Εργασίας & Κοιν. Ασφάλισης", accent: "orange" },
+  { key: "development", label: "Development", shortLabel: "Development", greek: "Ανάπτυξης", accent: "lime" },
+  { key: "environment-energy", label: "Environment & Energy", shortLabel: "Energy", greek: "Περιβάλλοντος & Ενέργειας", accent: "green" },
+  { key: "infrastructure-transport", label: "Infrastructure & Transport", shortLabel: "Transport", greek: "Υποδομών & Μεταφορών", accent: "cyan" },
+  { key: "maritime-insular", label: "Maritime & Insular Policy", shortLabel: "Maritime", greek: "Ναυτιλίας & Νησιωτικής Πολιτικής", accent: "sky" },
+  { key: "rural-development", label: "Rural Development & Food", shortLabel: "Rural Dev", greek: "Αγροτικής Ανάπτυξης", accent: "lime" },
+  { key: "tourism", label: "Tourism", shortLabel: "Tourism", greek: "Τουρισμού", accent: "fuchsia" },
+  { key: "culture", label: "Culture", shortLabel: "Culture", greek: "Πολιτισμού", accent: "purple" },
+  { key: "social-cohesion-family", label: "Social Cohesion & Family", shortLabel: "Family", greek: "Κοιν. Συνοχής & Οικογένειας", accent: "pink" },
+  { key: "state-cross-cutting", label: "State / Cross-cutting", shortLabel: "State", greek: "Επικρατείας", accent: "zinc" },
+];
+
+export const VERDICT_COLORS: Record<Verdict, { dot: string; text: string; bg: string; label: string }> = {
+  promote: { dot: "bg-emerald-500", text: "text-emerald-700", bg: "bg-emerald-50", label: "Promote" },
+  park:    { dot: "bg-amber-500",   text: "text-amber-700",   bg: "bg-amber-50",   label: "Park" },
+  kill:    { dot: "bg-rose-500",    text: "text-rose-700",    bg: "bg-rose-50",    label: "Kill" },
+};
+
+export const PITCH_READY_LABEL: Record<PitchReady, string> = {
+  concept: "Concept",
+  memo: "Memo-ready",
+  demo: "Demo-ready",
+  pilot: "Pilot in flight",
 };

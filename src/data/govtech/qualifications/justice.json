@@ -1,0 +1,138 @@
+{
+  "ministry": "justice",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "justice-echr-monitor-agent",
+      "originalComposite": 3.95,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "First product to ship: small surface, GS-level single decision-maker, fits απευθείας ανάθεση tier, no AI Act high-risk classification.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 3,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.33,
+      "blockers": [
+        "Need to quantify the gap vs. current Νομικό Συμβούλιο Strasbourg desk to defuse the 'duplicate-of-existing-function' objection in the first pitch.",
+        "Precedent set (i.AI Consult, Belastingdienst triage) is adjacent rather than exact ECHR-routing — must front-load the proof-of-concept rather than lean on intl precedent."
+      ],
+      "next30days": "Run an FOI / public-data exercise to compute median 'Strasbourg decision → Greek directorate memo' lag for the last 24 months, then book an exploratory meeting with the Νομικό Συμβούλιο through T-Life's administrative-law network.",
+      "evidenceLinks": [
+        "https://hudoc.echr.coe.int/eng?i=001-102533",
+        "https://ai.gov.uk"
+      ]
+    },
+    {
+      "ideaId": "justice-rapporteur-copilot",
+      "originalComposite": 4.25,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Highest-ceiling idea but pilot procurability is the choke point; conditional on either landing a ΣτΕ-direct innovation pilot or stacking RRF e-justice funding.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 4,
+        "pilotProcurability": 2,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 3.67,
+      "blockers": [
+        "Albert's flagship France Services deployment was publicly walked back in Jan 2026 — the marquee EU sovereign-LLM precedent is partially collapsed and must be re-framed (Albert API persists; the chatbot did not).",
+        "€250-450k pilot is structurally above απευθείας ανάθεση; needs an RRF e-justice envelope or innovation-pilot carve-out with ΣτΕ-direct commissioning.",
+        "EU AI Act Annex III compliance is now deferred to Dec 2027 (May 2026 Digital Omnibus deal), which buys design runway — but rapporteur copilot still falls inside high-risk classification once enforced.",
+        "Warm-intro path to ΣτΕ President is plausible but not currently in hand; needs a retired-πάρεδρος bridge before any pitch."
+      ],
+      "next30days": "Identify and secure one retired ΣτΕ πάρεδρος as paid founding advisor — without that bridge, neither the warm intro nor the credibility hold.",
+      "evidenceLinks": [
+        "https://acteurspublics.fr/articles/de-chatbot-experimental-a-socle-interministeriel-pour-lia-de-letat-le-parcours-dalbert-ia/",
+        "https://www.weka.fr/actualite/administration/article/albert-l-outil-d-ia-generative-experimente-a-france-services-ne-sera-pas-generalise-209194/",
+        "https://www.insideprivacy.com/artificial-intelligence/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/",
+        "https://ai.gov.uk/projects/caddy/"
+      ]
+    },
+    {
+      "ideaId": "justice-jurisprudence-search-agent",
+      "originalComposite": 3.85,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Best run as Product 2 inside the rapporteur-copilot company — shared corpus, but standalone the dual-buyer GTM is too thin for an early-stage studio bet.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.67,
+      "blockers": [
+        "Sakkoulas/Nomos lobby is the dominant constituency in Greek legal publishing and will respond to a head-on positioning — must lead with the 'sovereign internal index' framing, not 'database replacement'.",
+        "Dual buyer (ministry + private bar) doubles GTM; should not be the studio's first solo bet from this ministry.",
+        "Independent founder hire only justified if rapporteur-copilot pilot also commits."
+      ],
+      "next30days": "Pause as a standalone bet; gate this to the rapporteur-copilot commitment. Within 30 days, validate corpus availability and dedup feasibility with one ΣτΕ jurisprudence expert as a paid feasibility study (<€10k).",
+      "evidenceLinks": [
+        "https://ai.gov.uk"
+      ]
+    },
+    {
+      "ideaId": "justice-foreign-case-file-translator",
+      "originalComposite": 3.35,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Re-scope to low-resource source languages (Albanian/Arabic/Urdu→Greek legal) as a Justice+Migration cross-ministry product; founder bench is the blocker, not the thesis.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.17,
+      "blockers": [
+        "Low-resource-MT specialist for Albanian/Arabic/Urdu→Greek legal register does not exist in Athens today; founder hire would need to be international relocation or extended remote.",
+        "Ορκωτός-μεταφραστής regulated certification caps value capture — model output is unusable in court without sworn sign-off; margin sits with the human, not the agent.",
+        "Multinational MT (DeepL, Google) is improving fast on the high-volume pairs; the moat collapses unless scoped narrowly."
+      ],
+      "next30days": "Run a one-day re-scoping workshop: validate whether the low-resource subset (Albanian/Arabic/Urdu/Pashto) is large enough as a standalone wedge, or whether this only makes sense as a feature of the migration-asylum portfolio.",
+      "evidenceLinks": [
+        "https://www.dhs.gov/ai/use-case-inventory/uscis",
+        "https://etcjournal.com/2025/10/28/government-ai-initiatives-to-reduce-wait-lines/"
+      ]
+    },
+    {
+      "ideaId": "justice-court-scheduling-agent",
+      "originalComposite": 2.75,
+      "originalVerdict": "kill",
+      "qualification": "fail",
+      "headline": "Hostile second pass confirms the original kill: speculative champion, weak intl precedent on web search, OR/scheduling skill mix off-thesis, full-ΕΣΗΔΗΣ procurement.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 2,
+        "founderMarketFit": 2,
+        "pilotProcurability": 1,
+        "lockInRisk": 3,
+        "studioFit": 2
+      },
+      "compositeNew": 2.0,
+      "blockers": [
+        "No verified production court-docket scheduling agent in the EU after focused search; Bürokratt is a substrate, not a court-scheduling deployment.",
+        "Pilot tier (€400-700k inclusive of AI Act conformity) requires full ΕΣΗΔΗΣ — incompatible with studio 6-month pilot horizon.",
+        "Counsel-side calendar data is structurally unavailable in Greek practice; optimiser is materially weaker than the brief implies.",
+        "Judicial-independence framing means the champion has to be a single reform-minded chamber president personally — speculative and non-portable to scale.",
+        "Skill mix (OR + scheduling) does not share the legal-NLP / Greek-corpus moat the rest of the Justice portfolio is built around."
+      ],
+      "next30days": "Do not pursue. Revisit only if a named chamber president personally commissions the work via direct ministry sponsorship and OSDDY exposes a clean scheduling-write API.",
+      "evidenceLinks": [
+        "https://burokratt.ee"
+      ]
+    }
+  ]
+}

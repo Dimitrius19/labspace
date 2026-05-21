@@ -12,6 +12,8 @@ const NAV_ITEMS: { key: ViewKey; label: string; icon: string }[] = [
   { key: "catalog", label: "Idea Catalog", icon: "grid" },
   { key: "geography", label: "By Geography", icon: "globe" },
   { key: "category", label: "By YC Category", icon: "tag" },
+  { key: "govtech", label: "Public Sector", icon: "building" },
+  { key: "mvp", label: "MVP Demos", icon: "sparkle" },
 ];
 
 function NavIcon({ type }: { type: string }) {
@@ -55,6 +57,18 @@ function NavIcon({ type }: { type: string }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5a1.99 1.99 0 011.41.59l7 7a2 2 0 010 2.82l-5 5a2 2 0 01-2.82 0l-7-7A2 2 0 015 10V5a2 2 0 012-2z" />
         </svg>
       );
+    case "building":
+      return (
+        <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h6" />
+        </svg>
+      );
+    case "sparkle":
+      return (
+        <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1M12 8a4 4 0 100 8 4 4 0 000-8z" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -71,7 +85,7 @@ export function Sidebar({
 }) {
   const { ideas, filters, setFilter, clearFilters } = useIdeas();
   const { ventures } = useVentures();
-  const showIdeaFilters = activeView !== "ventures";
+  const showIdeaFilters = activeView !== "ventures" && activeView !== "govtech" && activeView !== "mvp";
 
   const stageCounts = STAGES.map((s) => ({
     ...s,

@@ -1,0 +1,153 @@
+{
+  "ministry": "development",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "espa-screening-copilot",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "ESPA Screening Copilot is the cleanest pass in the batch: ESPA 2021-2027 runs to ~2029 (n+3) so the screening surface area persists past the RRF cliff, intermediate-body Presidents (EFEPAE, EYDE-ETAK) are directly reachable, the retrospective-replay pilot methodology de-risks the Διοικητικό Πρωτοδικείο objection, and an ex-EYSEKT/EFEPAE reviewer is a more findable founder than the audit or RRF tec",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 3,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.17,
+      "blockers": [
+        "DG REGIO Arachne is widely deployed (19 MS + UK as of March 2023) but does post-disbursement risk-scoring, not application-stage screening — buyer will still ask 'why not Arachne extension' and we need a one-pager that draws the line cleanly.",
+        "No clean 'ESPA innovation-pilot direct-award' procurement vehicle surfaced in 2026 search — pilot likely lands as €55k απευθείας ανάθεση against the retrospective-replay framing, but if scope creeps past €60k we slip into a real tender.",
+        "CPR Art. 74 keeps the final eligibility decision with the human committee — the entire product must be designed as recommendation + draft, never autonomous decision; any pilot KPI must measure committee-agreement, not throughput in isolation.",
+        "Greek deficiency-letter register is genuinely formulaic per call article — moat is real but needs a labeled corpus of 200+ prior letters per intermediate body to bootstrap, which is a data-access negotiation in itself."
+      ],
+      "next30days": "Pick one intermediate body (EFEPAE preferred, ~50k applications backlog history) and pitch a retrospective-replay pilot on one closed 2024 call: replay committee verdicts on N=100 historical applications, target ≥95% agreement and 80% drafting-time saved. Frame the procurement as a €55k απευθείας ανάθεση against the President's discretionary budget; have the founder hunt running in parallel (ex-EY",
+      "evidenceLinks": [
+        "https://employment-social-affairs.ec.europa.eu/policies-and-activities/funding/european-social-fund-plus-esf/what-arachne_en",
+        "https://espa.gr/",
+        "https://commission.europa.eu/funding-tenders/managing-eu-funds/control-procedures/arachne_en"
+      ]
+    },
+    {
+      "ideaId": "rrf-milestone-tracker",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "RRF Milestone Tracker is conditional, not pass: Italy ReGiS + Portugal Recuperar Portugal precedents are operational and fresh (Portugal's 8th payment request approved Jan 2026, 196 milestones remaining), but the RRF instrument itself ends Aug 2026 with final claims Sept 2026 — the named surface area collapses in ~16 months, forcing a hard pivot to ESPA 2021-2027 + cohesion-funds 2027+ that must b",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 4,
+        "lockInRisk": 2,
+        "studioFit": 4
+      },
+      "compositeNew": 3.78,
+      "blockers": [
+        "Lock-in risk is the binding constraint: the RRF closes 31 Aug 2026 with payment-claim drafting tail to ~end-2026; by the time a pilot signs in Q3-2026 we are pitching against ~1 payment cycle, which is a structurally short reference for the studio.",
+        "Italy ReGiS + Portugal Recuperar are member-state systems-of-record; CION-side FENIX at DG ECFIN already digests submissions. Buyer will probe whether a Greek bespoke draft-generation layer is worth procuring for the residual ~2 tranches vs absorbing it into OPS via Netcompany.",
+        "Founder pool is narrow: an ex-Special-Secretariat-RRF technocrat senior enough to credibly walk into a payment-request meeting is a fewer-than-5-name list in Athens, and several are committed to consultancy roles through 2026.",
+        "Pivot path to ESPA 2021-2027 milestone-equivalents (intermediate indicators on regional and sectoral OPs) is real but the data shape and the buyer (GS Public Investments rather than Special Secretary RRF) differ enough that this is a near-relaunch, not a renewal."
+      ],
+      "next30days": "Decide go/no-go on a 1-tranche compressed pilot (€45-60k απευθείας ανάθεση, 2 line ministries, Q2-Q3 2026 cycle) only if the founder is signed within 30 days. In parallel produce a 2-page 'RRF-to-cohesion bridge memo' that shows how the same agent retargets to the ESPA 2021-2027 indicator framework and any new cohesion-RRF-successor instrument the Commission proposes for the 2028-2034 MFF; without",
+      "evidenceLinks": [
+        "https://commission.europa.eu/business-economy-euro/economic-recovery/recovery-and-resilience-facility/country-pages/greeces-recovery-and-resilience-plan_en",
+        "https://recuperarportugal.gov.pt/2026/01/23/portugal-da-mais-um-passo-na-execucao-do-prr-com-avaliacao-positiva-do-8-o-pedido-de-pagamento-pela-comissao-europeia/",
+        "https://area.rgs.mef.gov.it/canali/230/bacheca/news/666665/regis:_la_piattaforma_e_le_iniziative_per_il_pnrr",
+        "https://greece20.gov.gr/en/",
+        "https://economy-finance.ec.europa.eu/role-eu-funds-over-forecast-horizon_en"
+      ]
+    },
+    {
+      "ideaId": "espa-audit-trail-synthesis",
+      "originalComposite": 4.35,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Post-Disbursement Audit-Trail Synthesis is conditional: ECA Special Report 14/2026 on RRF traceability and transparency is fresh political ammunition for EDEL, and the cross-substrate Greek moat (OPS + KIMDIS + Διαύγεια + ESIDIS) is genuine — but founder-market fit is the binding constraint (ex-EDEL or ex-Big-4-public-sector-audit director is the scarcest profile in the development batch) and cros",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 5,
+        "studioFit": 4
+      },
+      "compositeNew": 3.45,
+      "blockers": [
+        "Founder bench is the constraint: an ex-EDEL Director or ex-Big-4 public-sector-audit partner willing to operate-found is a sub-10-name list in Athens, and the closest competing offers (Big-4 partnership, ECA secondment) are well-paid.",
+        "Cross-substrate API access — OPS (Netcompany), KIMDIS (different vendor), Διαύγεια (gov.gr stack), ESIDIS (different vendor again) — requires four separate consent loops and a DPIA per integration; realistic critical path is 9-12 months before integrated demo.",
+        "ECA + EDEL standards demand evidence-sufficiency the agent must co-design with the auditor itself; if EDEL is not a formal design partner from day one, the output pack will fail acceptance and the first finding kills the reference.",
+        "Pilot budget €80-120k sits above the clean απευθείας ανάθεση tier (€60k) — likely needs an ESPA-funded technical-assistance envelope or a multi-year framework with EDEL as the co-design partner, which extends time-to-revenue.",
+        "Italy ReGiS already runs an evidence-vault function; buyer can ask 'why not just procure ReGiS for Greece' — the Greek-language and cross-substrate stitching is the answer but it must be visibly differentiated in the pitch."
+      ],
+      "next30days": "Pause GTM and run a focused 30-day founder hunt: one EDEL Director-level or Big-4 public-sector-audit partner who will co-found at studio terms. In parallel, draft a co-design MOU with EDEL that scopes a 1-fund-type pilot (e.g. ERDF only) with EDEL as evidence-pack co-author. Do not approach the Special Secretariat for ESPA until the founder is signed and the EDEL design-partner MOU is verbally ag",
+      "evidenceLinks": [
+        "https://www.eca.europa.eu/ECAPublications/SR-2026-14/SR-2026-14_EN.pdf",
+        "https://www.eca.europa.eu/en/publications/SR-2026-06",
+        "https://www.eipa.eu/courses/audit-anti-fraud-in-rrf-and-esifs/",
+        "https://commission.europa.eu/funding-tenders/managing-eu-funds/control-procedures/arachne_en"
+      ]
+    },
+    {
+      "ideaId": "development-strategic-investment-drafter",
+      "originalComposite": 3.95,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Strategic Investment File Drafter is conditional: Enterprise Greece CEO (Marinos Giannopoulos) is reachable and Law 4864/2021 has been freshly amended by Law 5164/2024 (live framework), but the IDA Ireland precedent does not include an AI-drafting layer (only diagnostic and concierge tools), the founder pool (ex-Enterprise-Greece screener or ex-Big-4 Strategic-Investment-desk director) is narrow, ",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 2,
+        "founderMarketFit": 2,
+        "pilotProcurability": 4,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.4,
+      "blockers": [
+        "International precedent freshness is weaker than the original red-team suggested: IDA Ireland's 2026 stack is diagnostic + concierge, not LLM-drafted file generation; UAE TAMM is an end-to-end permit agent but on a different surface (business permits, not Strategic Investment classification). No 'AI-drafting investor-onboarding' precedent we can point at sits in 2025-2026.",
+        "Big-4 firms (KPMG/EY/Deloitte/PwC Athens) charge €80-200k per file and will actively defend the surface; the 'sell to both sides' counter requires Enterprise Greece to formally signal that AI-drafted files are acceptable, which is a political ask before any tool sale.",
+        "Founder profile is narrow: an ex-Enterprise-Greece screener who has lived inside the inter-ministerial committee is a sub-5-name list, and an ex-Big-4 Strategic-Investment partner switching to a tool-vendor seat means leaving high-comp partnership equity behind.",
+        "Applicant-side SaaS pricing (€5-15k/file) is unvalidated at volume — only 50-80 Strategic Investment files filed per year nationally; at €10k average that is €500-800k TAM on the applicant side, which is too thin to be the primary revenue line.",
+        "Law 4864/2021 + Law 5164/2024 amendments mean the statutory file template is in flux; the drafting agent has to track the implementing decisions which can move quarterly."
+      ],
+      "next30days": "Two parallel tracks: (1) book a 30-min discovery with the Enterprise Greece CEO via a warm intro to test appetite for a reviewer-side copilot (Enterprise Greece pays, applicants don't) — this collapses to a single-buyer thesis and avoids the unproven applicant SaaS bet; (2) founder hunt for an ex-Enterprise-Greece screener or ex-Strategic-Investment-desk Big-4 senior manager. Re-qualify after Trac",
+      "evidenceLinks": [
+        "https://www.enterprisegreece.gov.gr/en/strategic-investments/",
+        "https://ependyseis.mindev.gov.gr/en/stratigikes/p/institutional-context",
+        "https://www.idaireland.com/",
+        "https://www.law-services.gr/legal-articles-and-media/foreign-investments/a-new-framework-for-strategic-investments-in-greece-the-new-rules-for-flagship-investments/"
+      ]
+    },
+    {
+      "ideaId": "development-gemi-sme-compliance-copilot",
+      "originalComposite": 3.95,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "GEMI / Επιχειρώ SME Compliance Copilot fails the second-pass: the studio is a govtech-ventures studio buying into ministry-procurement theses, but this idea's buyer is the SME founder and the ministerial relationship is an enabling MOU at best — studio-fit is structurally wrong even though the GEMI sanctions framework going live 1 Jan 2026 creates real founder-side urgency.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 1,
+        "lockInRisk": 3,
+        "studioFit": 2
+      },
+      "compositeNew": 2.7,
+      "blockers": [
+        "Studio-fit is the killer: T-Life Capital's thesis is govtech-procurement-driven (ministry buys, sole-source pilot, RRF/ESPA envelopes). This is a consumer/SMB SaaS bet where the ministerial relationship is an MOU for API access, not a procurement vehicle — wrong wedge for the studio.",
+        "Greek accountants are the de-facto compliance channel for SMEs and are the actual gatekeeper; an 'accountant-augmenting' positioning is fine for a venture but doesn't change that the buyer is the SME owner or the accountant, neither of which the studio's GTM is wired for.",
+        "Επιχειρώ + GEMI portal automation is genuinely brittle; KED auth keeps a founder in the loop on every submission which caps the agentic depth of the loop (mostly a draft-prep + submit-walkthrough product).",
+        "Pilot procurability is effectively zero: the development ministry will sign an MOU for API access but will not write a contract — capital efficiency is high but only because revenue must come from the SME funnel, which is a startup-not-studio motion.",
+        "Even with the Jan 2026 sanctions tailwind, the path to first €100k of ARR is a B2C/B2SMB performance-marketing motion (Workable/Beat-alumni instinct) that pays for paid acquisition before reaching profitability — not a fit for the studio's capital model."
+      ],
+      "next30days": "Kill from the studio pipeline. Refer the idea to a Workable/Beat/InstaShop-alumni operator as a standalone consumer-SaaS startup and offer the studio's GEMI/Επιχειρώ MOU as an asset-contribution if and when that operator commits. Reclaim the Development-ministry slot for a higher-procurability bet (e.g. an Επιχειρώ-side reviewer copilot for the GS for Industry & Trade who is now enforcing the Jan-",
+      "evidenceLinks": [
+        "https://globallawexperts.com/gemi-compliance-greece/",
+        "https://www.businessportal.gr/en/home-en/",
+        "https://www.kyckr.com/blog/greece-company-registry-guide"
+      ]
+    }
+  ]
+}

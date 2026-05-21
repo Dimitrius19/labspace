@@ -1,0 +1,276 @@
+import type { GovIdea } from "../../../types";
+
+export const financeAadeIdeas: GovIdea[] = [
+  {
+    id: "aade-elenxis-auditor-copilot",
+    ministry: "finance-aade",
+    title: "ELENXIS Auditor Copilot (Ελεγκτής-Copilot)",
+    oneLiner:
+      "Agentic copilot that sits on top of ELENXIS, drafts audit letters, structures the case file, and suggests next checks for every open audit case.",
+    problem:
+      "AADE auditors (Ελεγκτές) spend 40-60% of an audit cycle on drafting (κλήση σε ακρόαση, σημείωμα διαπιστώσεων, εκθέσεις ελέγχου) and on manually cross-pulling data from myDATA, TAXISnet, ERGANI and land registry. ELENXIS is a form-driven case-management system, not an assistive one, so seasoned auditors burn hours on Word, and junior auditors close fewer than 6 cases/quarter. The political directive is to raise audits closed and euros recovered without hiring 1,000 more auditors.",
+    agentLoop: [
+      "Read the open ELENXIS case file (taxpayer ID, audit scope, prior letters) and the auditor's Tuesday-morning queue",
+      "Pull the taxpayer's myDATA invoice ledger, TAXISnet declarations, Ergani payroll, land registry holdings and prior ELENXIS findings via authorised APIs",
+      "Run anomaly templates (input-VAT > output-VAT for >3 quarters, supplier-buyer ratio drift, gross-margin outside sector band) and flag the top 5 lines to review",
+      "Draft the next required document in Greek civil-service register (κλήση, σημείωμα διαπιστώσεων, ερωτηματολόγιο) citing exact ledger lines and statute (ν. 4174/2013, ν. 4987/2022 ΚΦΔ)",
+      "Suggest the next 3 investigative steps with effort/recovery estimate so the auditor picks one with a click",
+      "Log every action, citation and prompt to an audit trail file attached to the ELENXIS case (AI Act high-risk traceability)",
+    ],
+    userInsideMinistry:
+      "ΑΑΔΕ Ελεγκτής (audit officer) at ΚΕΦΟΜΕΠ (large-taxpayer office) and ΚΕΜΕΕΠ (high-net-worth office); secondarily, the audit-team supervisor reviewing case quality.",
+    blueOceanAngle:
+      "Greek SIs sell ELENXIS form modules, not agentic drafting. No Greek vendor has shipped a Greek-language legal-citation drafting agent. International precedent (UK Caddy at DBT, Belastingdienst post-toeslagen case-triage) is well-understood, but no one has localised the workflow into ΚΦΔ language and ELENXIS hooks.",
+    greekContext:
+      "Greek tax-audit letters have a fixed rhetorical register, statute-citation pattern and ΚΦΔ procedural sequence that English-capable agents cannot ship cleanly. ΚΕΦΟΜΕΠ/ΚΕΜΕΕΠ are small enough (a few hundred auditors) for a deep pilot, and AADE's audit-recovery target is a published number the Governor is judged on.",
+    intlPrecedents: [
+      { country: "United Kingdom", program: "GDS i.AI — Caddy caseworker copilot", ministry: "DBT / Citizens Advice", year: "2024", outcome: "Drafts replies, summarises case files, closes routine cases without escalation; open-sourced.", url: "https://ai.gov.uk" },
+      { country: "Netherlands", program: "Belastingdienst case-triage agents (post-toeslagenaffaire)", ministry: "Belastingdienst", year: "2024", outcome: "Human-in-the-loop triage; copilot model adopted explicitly to avoid automated decisions.", url: "https://taxadmin.ai/country/netherlands-ai-country-report/" },
+      { country: "United States", program: "VA / USCIS RAIO caseworker copilots", year: "2024", outcome: "Caseworker drafting assistants in production for benefits and asylum-officer COI drafting." },
+    ],
+    redTeam: [
+      { axis: "incumbent-overlap", severity: "wound", note: "Netcompany-Intrasoft built and maintains ELENXIS — they will object to any vendor 'inside' the case-management workflow. Mitigation: position as overlay/add-on calling ELENXIS APIs, not a replacement module, and aim for an innovation-pilot ESPA route rather than a framework tender." },
+      { axis: "regulatory-blocker", severity: "wound", note: "EU AI Act classifies tax-enforcement decision-support as high-risk; GDPR DPIA mandatory; toeslagenaffaire makes automated risk scores a third rail. Mitigation: strictly copilot-only (auditor signs every output), full audit trail, no scoring of natural persons without inspector sign-off." },
+      { axis: "political-third-rail", severity: "clear", note: "Audit drafting is internal productivity, not enforcement decision — politically defensible as 'auditors do more, not different'." },
+      { axis: "language-moat", severity: "clear", note: "Greek ΚΦΔ register, statute citation patterns and ELENXIS form vocabulary are deep moats no multinational ships today." },
+      { axis: "technical-infeasibility", severity: "clear", note: "myDATA APIs and TAXISnet hooks are documented; ELENXIS access requires authorised contractor status but is feasible via existing AADE digital-transformation programme." },
+    ],
+    buyerObjection:
+      "AADE Governor: 'Show me the euros. How many more closed audits per auditor per quarter, and how many additional euros recovered? I have Netcompany already inside ELENXIS — why you and not a change request to them?' The pitch lives or dies on a 10-auditor pilot with a measurable closed-case uplift, not on agentic-AI rhetoric.",
+    buyerHook:
+      "A 90-day, 10-auditor pilot at ΚΕΦΟΜΕΠ with pre-registered metrics: (a) closed cases per auditor per month, (b) median draft-to-issue time, (c) euros assessed per case. If we lift (a) by 25%+ at constant quality, this becomes part of the Governor's parliamentary report. Position explicitly as overlay on Netcompany-Intrasoft's ELENXIS, not replacement.",
+    rubric: { agenticFit: 5, blueOcean: 4, timeToPilot: 4, politicalTailwind: 5, capitalEfficiency: 4, greekLanguageMoat: 5, composite: 4.55 },
+    verdict: "promote",
+    verdictRationale:
+      "Agent does end-to-end auditor draft+cite+suggest loop replacing named person-hours (agentic fit 5). Greek-language ΚΦΔ moat is core. UK Caddy and Dutch Belastingdienst precedent de-risk procurement narrative. Incumbent overlap is real but designable around as an ELENXIS overlay. No kill-severity red-team finding. Composite 4.55 well above 3.8 threshold.",
+    pitchReady: "memo",
+    championProfile:
+      "AADE Governor or ΓΓ Διοίκησης AADE; secondary champion: head of ΚΕΦΟΜΕΠ. The Governor publishes audit-recovery numbers to parliament, so they own the metric this product moves.",
+    estimatedPilotBudget: "€80-150k for a 90-day, 10-auditor pilot via innovation-pilot direct award; €1.5-3M for ministry-wide rollout post-pilot.",
+    founderProfile: "Founder pair: (1) ex-AADE auditor or ex-Big-4 Greek tax-controversy partner with ΚΦΔ fluency, (2) senior ML engineer with retrieval/legal-LLM background. Greek-citizen lead required for AADE security clearance.",
+    tags: ["auditor-copilot", "elenxis", "agentic-fit-5", "greek-language-moat", "ai-act-high-risk"],
+    addedDate: "2026-05-21",
+  },
+  {
+    id: "aade-mydata-bank-anomaly-agent",
+    ministry: "finance-aade",
+    title: "myDATA × Bank-Flow Anomaly Agent",
+    oneLiner:
+      "Agent that cross-checks the myDATA e-invoice ledger against bank-payment flows and flags suspicious mismatches (fictitious invoicing, unpaid declared sales, unbanked cash sales) into ELENXIS as ranked audit leads.",
+    problem:
+      "myDATA has captured the e-invoice layer since 2024, but AADE's cross-check against actual bank settlement is partial and largely manual at the special-audit units. Fictitious-invoice rings and 'declared-but-never-paid' sales (used to reclaim VAT or window-dress) survive because no one is joining the two ledgers at scale. Italy and the UK have proven the ROI of exactly this join.",
+    agentLoop: [
+      "Ingest the daily myDATA delta (issued + received invoices per VAT number) and the bank-data exchange feed AADE receives under ν. 4174/2013 art. 15",
+      "Match invoices to bank settlements within a tolerance window (amount, counterparty, date) per VAT number",
+      "Run anomaly rules (declared-and-unsettled > X% of turnover, repeated counterparties with no banking trace, round-amount cash patterns above 500€ threshold)",
+      "Score each VAT number with a transparent rule-based risk score plus an LLM-generated narrative ('why this taxpayer is suspicious in plain Greek')",
+      "Push the top N leads/week into ELENXIS as draft audit cases with attached evidence pack and proposed audit scope",
+      "Track which leads converted to a closed audit and how many euros recovered, and learn rule weights from outcomes",
+    ],
+    userInsideMinistry: "ΑΑΔΕ data analyst at the Διεύθυνση Επιχειρησιακού Σχεδιασμού (audit-targeting unit); ΥΕΔΔΕ (special audit unit) lead.",
+    blueOceanAngle:
+      "myDATA-bank-flow join is a published AADE roadmap item but nobody has shipped an agentic version that drafts the audit case, only dashboards. Italy's VeRA does the join but on Italian SDI, not myDATA; no Greek vendor has fine-tuned this stack on Greek banking-message formats.",
+    greekContext: "myDATA is mandatory since 2024 — Greece is one of the few EU states with a real-time e-invoice ledger to join against. Bank-data exchange under art. 15 is already in place. Political tailwind is high: VAT gap is a published Eurostat metric and a recurring press attack line.",
+    intlPrecedents: [
+      { country: "Italy", program: "VeRA + Agenzia Entrate AI VAT chatbot", ministry: "Agenzia delle Entrate / Sogei", year: "2022-2026", outcome: "VeRA flagged ~1 million high-risk VAT cases in 2022; 2026 Budget Law extends an AI-based VAT settlement procedure linking e-invoices to payment data.", url: "https://www.vatcalc.com/italy/italy-ai-tackling-vat-fraud/" },
+      { country: "United Kingdom", program: "HMRC Connect (Quantexa contract extension)", ministry: "HMRC", year: "2024-2026", outcome: "£175M Quantexa contract; £4.6bn additional tax recovered in 2024/25 via cross-source data joins.", url: "https://thenextweb.com/news/quantexa-hmrc-ai-tax-fraud-sovereignty" },
+      { country: "EU (Eurofisc)", program: "Transaction Network Analysis (TNA)", ministry: "DG TAXUD, Eurofisc", year: "2019-2025", outcome: "By 2023, identified 3,500 fraudsters and €12.7bn in suspicious transactions.", url: "https://taxation-customs.ec.europa.eu/taxation/vat/vat-and-administrative-cooperation/eurofisc_en" },
+    ],
+    redTeam: [
+      { axis: "regulatory-blocker", severity: "wound", note: "Joining bank data to taxpayer ledgers is a DPIA-heavy operation under GDPR + EU AI Act high-risk. Mitigation: rule-based scoring (explainable), DPIA up front, mandatory human review before ELENXIS lead creation, no automated decisions on natural persons." },
+      { axis: "incumbent-overlap", severity: "wound", note: "Sogei (Italy) and Quantexa (UK) are credible 'why not buy theirs?' objections. Mitigation: Greek-language narrative generation, myDATA schema specificity and on-prem deployment in AADE's data centre." },
+      { axis: "political-third-rail", severity: "clear", note: "VAT-fraud crackdown is a political winner in Greece, and bank data is already legally shared with AADE." },
+      { axis: "technical-infeasibility", severity: "wound", note: "Real-time bank-flow feed quality and matching tolerances are non-trivial — fuzzy counterparty resolution at Greek-name scale is hard. Mitigation: start in batch mode on closed-month data, not live." },
+      { axis: "language-moat", severity: "clear", note: "Greek counterparty name resolution (διακριτικός τίτλος vs επωνυμία, transliteration variants) is a defensible language-layer moat." },
+    ],
+    buyerObjection:
+      "AADE Governor: 'Italy already does this with Sogei. The Commission funds TNA. Why is a Greek startup the answer rather than a contract extension to Netcompany-Intrasoft to wire this in?' The buyer wants a precise euro-per-lead claim and a credible answer on why Greek context demands a separate stack.",
+    buyerHook: "A measurable VAT-gap impact study: a 3-month closed-case pilot processing one prior quarter of myDATA + bank data, with a target of 200 new audit leads of which ≥25% close with a positive assessment. Pair the demo with a parliamentary-quality brief on euros recoverable in year 1.",
+    rubric: { agenticFit: 4, blueOcean: 3, timeToPilot: 3, politicalTailwind: 5, capitalEfficiency: 3, greekLanguageMoat: 4, composite: 3.75 },
+    verdict: "park",
+    verdictRationale:
+      "High strategic relevance and strong political tailwind, but blue-ocean score is depressed by Italy's VeRA and HMRC Connect having shipped at scale, and incumbent-overlap risk with Netcompany-Intrasoft is real. Composite 3.75 falls just below promote threshold (3.8). Park as a fast-follow on the auditor copilot — the copilot opens the AADE door and this rides in as the lead-generation layer.",
+    pitchReady: "concept",
+    championProfile: "AADE Governor + Director of Strategic Audit Planning; needs joint air cover from the General Secretariat for Tax Policy at the Ministry of Finance because of the DPIA optics.",
+    estimatedPilotBudget: "€200-400k pilot (data engineering heavy); €3-6M production rollout.",
+    founderProfile: "Founder pair: data-engineering lead with banking/payments background (ex-Profile, ex-Viva) + economist-of-tax-evasion. Greek-citizen lead for on-prem AADE deployment.",
+    tags: ["mydata", "vat-fraud", "bank-data", "ai-act-high-risk"],
+    addedDate: "2026-05-21",
+  },
+  {
+    id: "aade-vat-carousel-graph-agent",
+    ministry: "finance-aade",
+    title: "VAT Carousel & Missing-Trader Graph Agent",
+    oneLiner:
+      "Graph-reasoning agent over myDATA + ΓΕΜΗ + bank-counterparty data that identifies suspected VAT carousels and missing-trader chains and hands a packaged case to ΥΕΔΔΕ investigators.",
+    problem:
+      "Carousel and missing-trader fraud is the single largest line in the Greek VAT gap. Detection today is reactive (a buffer goes missing, then chains are reconstructed) and largely manual at ΥΕΔΔΕ. Proactive graph reasoning at the country scale needs a model that fuses myDATA invoice graph with ΓΕΜΗ company-officer overlap and bank counterparties, and writes an investigator-ready case memo in Greek.",
+    agentLoop: [
+      "Build a daily counterparty-transaction graph from myDATA (edges = invoices), enriched with ΓΕΜΗ officers, VAT-registration dates, and known-fraudster blacklist",
+      "Run carousel-pattern detectors (closed cycles ≥3 hops, short-lived counterparties with high turnover, cross-border buffer patterns) and rank by suspected VAT-at-risk",
+      "Cluster suspected rings and assign each cluster a confidence score plus a plain-Greek narrative explaining the pattern",
+      "Auto-draft an investigator briefing pack (entity diagram, suspected role per node, key invoices, suggested next data requests)",
+      "Hand off to ΥΕΔΔΕ via the existing case-intake channel; log evidence chain for AI-Act compliance",
+      "Learn ring-pattern weights from outcomes (which clusters became actual cases, which were dismissed)",
+    ],
+    userInsideMinistry: "ΥΕΔΔΕ (Special Anti-Fraud Audit Unit) investigator; ΑΑΔΕ data analyst on the VAT-fraud desk.",
+    blueOceanAngle:
+      "EU TNA exists at the cross-border level but is sparse on domestic Greek rings. Spain's TESEO and Italy's VeRA show graph-reasoning on tax data works; no Greek incumbent ships a graph-native agent on myDATA. Linkurious (FR) has the tech but no Greek footprint.",
+    greekContext: "Greek company-officer overlap patterns and shell-company conventions (e.g. ΑΦΜs issued and shuttered fast, address clusters in specific Athens postcodes) are domain-specific and not in any off-the-shelf model. ΓΕΜΗ is uniquely useful and uniquely Greek.",
+    intlPrecedents: [
+      { country: "EU", program: "Transaction Network Analysis (Eurofisc)", ministry: "DG TAXUD", year: "2019-2025", outcome: "€12.7bn in suspicious transactions flagged by 2023.", url: "https://www.vatcalc.com/eu/eu-transaction-network-analysis-tna-fights-vat-fraud/" },
+      { country: "Spain", program: "AEAT TESEO (graph-based fraud detection) + INFONOR", ministry: "AEAT", year: "2023-2026", outcome: "Graph-theory-based detection of fraud rings among UHNWI and corporate networks deployed in production.", url: "https://taxadmin.ai/country/spain-ai-country-report/" },
+      { country: "Brazil", program: "Receita Federal HARPIA", ministry: "Receita Federal", year: "2024", outcome: "Detected fraud schemes worth R$350M+ using AI on customs and tax data.", url: "https://blog.fdstributario.com.br/en/brazil-receita-federal-lanca-tecnologia-de-ia-que-detecta-fraudes-de-r-350-milhoes-2024/" },
+    ],
+    redTeam: [
+      { axis: "incumbent-overlap", severity: "wound", note: "AADE's BI/analytics team plus Netcompany-Intrasoft already have a partial graph view. Mitigation: ship a working ranked-leads pipeline before any meeting, not a methodology pitch." },
+      { axis: "regulatory-blocker", severity: "wound", note: "Graph fraud-scoring of legal persons is lower-risk than natural persons under AI Act, but officer-overlap brings natural-person data into scope. Strict DPIA, no auto-action, investigator-in-the-loop required." },
+      { axis: "technical-infeasibility", severity: "wound", note: "Entity resolution at Greek-name scale and counterparty-bank linkage are heavy lifts; demo quality depends on data access timeline." },
+      { axis: "political-third-rail", severity: "clear", note: "Anti-carousel work has PM-level air cover." },
+      { axis: "language-moat", severity: "clear", note: "Greek shell-pattern conventions and ΓΕΜΗ enrichment are defensible knowledge." },
+      { axis: "founder-fit", severity: "wound", note: "Requires a senior graph-ML engineer plus a former ΥΕΔΔΕ insider; this team is rare in Athens." },
+    ],
+    buyerObjection: "ΓΓ Διοίκησης AADE: 'TNA already gives me cross-border. My in-house team can do the domestic graph. What's left that you do better?' Answer must be a concrete Greek-pattern detector running on real myDATA in a demo.",
+    buyerHook: "Pre-register 5 known historical Greek carousel cases, ingest the myDATA window before they broke, and show the agent would have flagged ≥3 of them. Then ask for a paid analytics-only pilot on closed-month data.",
+    rubric: { agenticFit: 4, blueOcean: 3, timeToPilot: 2, politicalTailwind: 5, capitalEfficiency: 2, greekLanguageMoat: 4, composite: 3.4 },
+    verdict: "park",
+    verdictRationale:
+      "High-value workload but procurement path is slow (likely full ΕΣΗΔΗΣ tender given scope), data access alone is a 9-month negotiation, and capital intensity is higher than ideal. Composite 3.40 — clean park: develop technique on synthetic + closed-month data while the auditor copilot opens the door.",
+    pitchReady: "concept",
+    championProfile: "AADE Governor + Director of ΥΕΔΔΕ; secondary co-sponsor: General Secretariat for Tax Policy.",
+    estimatedPilotBudget: "€400k-1M pilot; €5-8M production.",
+    founderProfile: "Senior graph-ML lead + ex-ΥΕΔΔΕ / ex-financial-crimes forensic accountant.",
+    tags: ["graph", "carousel-fraud", "uydde", "mydata"],
+    addedDate: "2026-05-21",
+  },
+  {
+    id: "aade-icisnet-customs-anomaly",
+    ministry: "finance-aade",
+    title: "ICISnet Customs Declaration Anomaly Agent",
+    oneLiner:
+      "Agent that scores every customs declaration on ICISnet for misclassification, undervaluation and origin-laundering risk, and drafts the pre-clearance check request for the customs officer at Piraeus, Thessaloniki and the Bulgarian border crossings.",
+    problem:
+      "Greek customs at Piraeus is one of the largest EU entry gates; declarations are screened mostly by experienced officer intuition plus a thin rule layer. Misclassification (HS-code games to dodge duty) and undervaluation are systemic. Brazil's HARPIA shows AI on customs data finds anomalies humans miss; nobody has shipped this on ICISnet.",
+    agentLoop: [
+      "Pull the rolling 24-hour ICISnet declaration queue with importer, HS code, value, origin, route",
+      "Score each declaration against (a) historical HS-code/origin/value distribution for this importer, (b) sector benchmarks, (c) known origin-laundering patterns, (d) prior customs-audit outcomes",
+      "Flag the top-N high-risk declarations and explain in plain Greek why each is suspect",
+      "Draft the officer's pre-clearance check request (additional documents, physical inspection recommendation) ready for sign-off",
+      "Track outcomes (cleared / additional duty / penalty) and update model",
+      "Generate a weekly trend report for the Director of Customs",
+    ],
+    userInsideMinistry: "ΑΑΔΕ Τελωνειακός Υπάλληλος (customs officer) at Piraeus 1st/2nd Customs House, Thessaloniki Customs and Promachonas land crossing.",
+    blueOceanAngle: "Brazil HARPIA is the textbook precedent; no EU-Mediterranean port has shipped a public agentic equivalent. Intracom-Netcompany built ICISnet but does not ship anomaly-detection AI on top of it.",
+    greekContext: "Piraeus port volume + Balkan land-crossing patterns are specifically Greek/regional and not represented in any imported model. Customs officer drafting register and Greek-language declaration text are language-moat surfaces.",
+    intlPrecedents: [
+      { country: "Brazil", program: "Receita Federal HARPIA (customs risk)", ministry: "Receita Federal", year: "2024", outcome: "Detected R$350M+ fraud; productionised on customs declaration pipeline.", url: "https://blog.fdstributario.com.br/en/brazil-receita-federal-lanca-tecnologia-de-ia-que-detecta-fraudes-de-r-350-milhoes-2024/" },
+      { country: "United Kingdom", program: "HMRC Connect (Quantexa) — extended into customs", ministry: "HMRC", year: "2024-2026", outcome: "Cross-source detection at scale across HMRC including customs lines.", url: "https://thenextweb.com/news/quantexa-hmrc-ai-tax-fraud-sovereignty" },
+      { country: "EU", program: "DG TAXUD Customs Risk Management Framework", year: "2024", outcome: "Member states required to use risk-based controls; AI deployments encouraged." },
+    ],
+    redTeam: [
+      { axis: "incumbent-overlap", severity: "wound", note: "Netcompany-Intrasoft owns ICISnet — every change request goes through them. Mitigation: build as a side-car analytics service consuming ICISnet feeds, returning officer-actionable signals via a separate UI." },
+      { axis: "political-third-rail", severity: "clear", note: "Anti-smuggling/anti-undervaluation is politically safe; Piraeus customs revenue is a known KPI." },
+      { axis: "technical-infeasibility", severity: "wound", note: "Real-time ICISnet feed access is a hard procurement gate; falling back to T+1 batch is acceptable for risk scoring but kills the 'pre-clearance' framing." },
+      { axis: "language-moat", severity: "clear", note: "Officer-facing Greek drafting + Balkan trade-pattern context." },
+      { axis: "founder-fit", severity: "wound", note: "Needs an ex-customs operations insider; this network is small. Mitigation: ex-DG TAXUD Brussels secondee or Piraeus Port Authority veteran." },
+    ],
+    buyerObjection: "Director of Customs: 'I have 4,000 declarations a day at Piraeus. Show me you reduce false positives on the current rules and add 5% new true positives. Anything less is a slide deck.'",
+    buyerHook: "Closed-month retro study on 6 months of Piraeus declarations: show ≥5 additional true-positive cases the current rules missed, with documented duty-recoverable euro estimate. That memo gets forwarded to the Governor.",
+    rubric: { agenticFit: 4, blueOcean: 4, timeToPilot: 3, politicalTailwind: 3, capitalEfficiency: 3, greekLanguageMoat: 3, composite: 3.45 },
+    verdict: "park",
+    verdictRationale:
+      "Strong blue-ocean (no Greek precedent) and reasonable agentic fit, but lower political tailwind than VAT-gap fights, and incumbent-overlap with Netcompany-Intrasoft on ICISnet is real. Composite 3.45 — park while the auditor copilot beachhead lands.",
+    pitchReady: "concept",
+    championProfile: "ΑΑΔΕ Director of Customs at Piraeus 1st Customs House; secondary: General Secretariat for Customs at AADE.",
+    estimatedPilotBudget: "€200-400k 6-month retro + live shadow-mode pilot; €2-4M production.",
+    founderProfile: "Ex-customs operations lead (Piraeus or DG TAXUD) + senior ML engineer with tabular-anomaly background.",
+    tags: ["customs", "icisnet", "piraeus", "anomaly"],
+    addedDate: "2026-05-21",
+  },
+  {
+    id: "aade-transfer-pricing-review-agent",
+    ministry: "finance-aade",
+    title: "Transfer-Pricing Review Agent for ΚΕΦΟΜΕΠ",
+    oneLiner:
+      "Agent for ΚΕΦΟΜΕΠ (large-taxpayer office) auditors that ingests a multinational's transfer-pricing documentation file, benchmarks intra-group financial transactions and royalties against comparables, and drafts the deficiency-letter sections in Greek.",
+    problem:
+      "Transfer-pricing audits at ΚΕΦΟΜΕΠ are document-heavy and chronically under-resourced. A single audit can mean 1,000+ pages of TP docs to read across multiple languages, plus Amadeus/Orbis benchmarking. Spain's AEAT and OECD CTP have flagged TP as a top revenue-recoverable area for AI assistance; AADE has not shipped a working tool.",
+    agentLoop: [
+      "Ingest the taxpayer's Master File, Local File and Country-by-Country report",
+      "Extract intra-group transactions (financial, royalty, services, tangible) into a structured table",
+      "Run a comparables search against Amadeus/Orbis (or open-source proxies) for each transaction type and produce an arm's-length range",
+      "Flag transactions outside the interquartile range with confidence and Greek-language rationale, citing OECD TP Guidelines and ν. 4172/2013",
+      "Draft the deficiency-letter section per flagged transaction in Greek with statute citations and proposed adjustment",
+      "Generate the comparables-defence appendix the auditor will cite if the taxpayer disputes",
+    ],
+    userInsideMinistry: "ΑΑΔΕ ΚΕΦΟΜΕΠ TP auditor; supervisor of TP audit-team.",
+    blueOceanAngle: "Spain AEAT is the only EU precedent shipping automated TP risk analytics in production. Big-4 firms have proprietary TP tools (Exactera, Aibidia) but ship taxpayer-side, not authority-side. No Greek vendor offers a Greek-language TP-authority copilot.",
+    greekContext: "Greek TP regulation (ν. 4172/2013, ΠΟΛ.1142/2015) and the specific Greek register of TP-deficiency letters are not in any imported product. ΚΕΦΟΜΕΠ is small enough for a tight deep pilot.",
+    intlPrecedents: [
+      { country: "Spain", program: "AEAT TP risk analytics + INFONOR", ministry: "AEAT", year: "2025-2026", outcome: "2026 Tax Control Plan formalises automated TP risk analysis on intra-group transactions.", url: "https://www.uhy-fay.com/en/blog/2026-spanish-tax-control-plan-key-transfer-pricing-insights/" },
+      { country: "OECD / CIAT", program: "WP-06-2025 study on AI for Transfer Pricing", year: "2025", outcome: "Multi-jurisdiction working paper documenting tax-authority AI use on TP; sets the legitimacy frame.", url: "https://www.ciat.org/wp-06-2025-estudio-sobre-inteligencia-artificial-aplicada-a-los-precios-de-transferencia/" },
+      { country: "United Kingdom", program: "HMRC Connect — TP/large-business module", ministry: "HMRC", year: "2024", outcome: "Large-business risk targeting using Connect graph + LLM extraction from filings." },
+    ],
+    redTeam: [
+      { axis: "incumbent-overlap", severity: "clear", note: "Big-4 ship taxpayer-side; no Greek SI ships authority-side TP analytics today." },
+      { axis: "regulatory-blocker", severity: "wound", note: "OECD-aligned TP analysis must be defensible in court (MAP/APA proceedings). Mitigation: every output traceable to OECD chapter, statute, and comparable source — no opaque scoring." },
+      { axis: "political-third-rail", severity: "clear", note: "Multinationals are a politically friendly target for revenue recovery." },
+      { axis: "language-moat", severity: "clear", note: "Greek deficiency-letter register and Greek statute citation are language moats." },
+      { axis: "founder-fit", severity: "wound", note: "Requires a former Big-4 TP partner who switches sides — a small recruit pool. Mitigation: advisor seat for a retired AADE TP director." },
+      { axis: "technical-infeasibility", severity: "clear", note: "Comparables data is licensable; LLM extraction from TP docs is a tractable problem (Aibidia and Exactera prove it taxpayer-side)." },
+    ],
+    buyerObjection: "ΚΕΦΟΜΕΠ Director: 'TP audits already recover real euros — my best auditor closes 4 a year. How many can they close with this, and is the comparables defence court-proof?'",
+    buyerHook: "A retro pilot on 5 closed TP cases: show the agent would have produced the same deficiency letters in 1/4 the time, with comparable defences that survived independent review. Then ask for 5 live cases as a pilot.",
+    rubric: { agenticFit: 5, blueOcean: 4, timeToPilot: 4, politicalTailwind: 3, capitalEfficiency: 4, greekLanguageMoat: 4, composite: 4.15 },
+    verdict: "promote",
+    verdictRationale:
+      "Agentic fit 5 (end-to-end loop: ingest TP file → run comparables → draft deficiency letter). Clean incumbent landscape on authority-side. Spain precedent and OECD CIAT working paper de-risk procurement. Composite 4.15. No kill-severity finding. Promote as parallel beachhead to the auditor copilot — they share infrastructure.",
+    pitchReady: "memo",
+    championProfile: "ΚΕΦΟΜΕΠ Director + AADE ΓΓ Διοίκησης. The Director publishes case-closure numbers to the Governor monthly.",
+    estimatedPilotBudget: "€120-200k for a 6-month, 5-auditor pilot; €2-3M for ΚΕΦΟΜΕΠ-wide rollout.",
+    founderProfile: "Founder pair: ex-Big-4 Greek TP partner + senior LLM-and-tabular engineer. Greek-citizen lead.",
+    tags: ["transfer-pricing", "kefomep", "large-taxpayer", "agentic-fit-5"],
+    addedDate: "2026-05-21",
+  },
+  {
+    id: "aade-cash-register-anomaly-agent",
+    ministry: "finance-aade",
+    title: "Cash-Register (Ταμειακή Μηχανή) Signal-Anomaly Agent",
+    oneLiner: "Agent that monitors the live signal feed from every Greek certified cash register and flags merchants whose Z-report pattern, POS-tap rate or no-receipt-on-card-payment events look anomalous.",
+    problem:
+      "Cash-register-bypass and POS-tap-without-receipt remain a meaningful slice of the VAT gap. AADE already mandates certified cash registers and the POS-cash-register interconnection rule went into effect — but enforcement of anomalies is patchy and the analytics layer is owned by ESPs (electronic service providers) and large telcos.",
+    agentLoop: [
+      "Ingest the daily Z-report + POS-link telemetry feed AADE already collects",
+      "Score each merchant on (a) Z-report gaps, (b) POS-tap vs receipt-issued mismatch, (c) hour-of-day patterns vs sector benchmark, (d) sudden volume drops at known cash-heavy ATMs",
+      "Rank merchants for on-site Πληροφοριακή Επιθεώρηση visit by the local DOY",
+      "Generate the inspector's pre-visit briefing in Greek with the specific anomalies to ask about",
+      "Track outcome (fine / clear) and update model",
+    ],
+    userInsideMinistry: "ΑΑΔΕ ΥΕΔΔΕ field inspector for cash-register compliance; ΔΟΥ local audit teams.",
+    blueOceanAngle: "This is the most contested surface area on the list. ESPs (Epsilon Net, SoftOne, Singular, Cosmote e-Value) already process the telemetry as part of their certified cash-register offerings, and several pitch AADE on analytics layers. Italy's e-receipt/POS interconnection rule (2026) shows the same wave globally.",
+    greekContext: "Cash-register rules are Greek-specific (Z-report format, POS-tap mandates under ν. 4972/2022) but the surface is crowded by every Greek ESP.",
+    intlPrecedents: [
+      { country: "Italy", program: "Mandatory cash-register / POS-payment digital link (2026 budget law)", ministry: "Agenzia delle Entrate", year: "2026", outcome: "Merchants must link payment terminals to certified cash registers via Agenzia portal.", url: "https://www.vatupdate.com/2025/11/06/new-ai-based-vat-settlement-procedure-in-italys-2026-budget-law/" },
+      { country: "Hungary", program: "Online cash-register data feed", ministry: "NAV", year: "2014-present", outcome: "Real-time receipt telemetry to authority since 2014; well-documented VAT-gap impact." },
+    ],
+    redTeam: [
+      { axis: "incumbent-overlap", severity: "kill", note: "Epsilon Net, SoftOne, Singular and Cosmote already ship cash-register telemetry analytics to AADE-adjacent buyers and to merchants. They will bundle 'AI anomaly detection' as a free feature on their existing ESP contracts. A standalone startup overlay on this telemetry is a tender we will lose on price and incumbency. No clean carve-out exists." },
+      { axis: "political-third-rail", severity: "wound", note: "Cash-register crackdowns on small merchants are politically toxic during cost-of-living press cycles; AADE will be conservative on adoption." },
+      { axis: "language-moat", severity: "wound", note: "Z-report format is structured numeric data — language moat is weak." },
+      { axis: "regulatory-blocker", severity: "clear", note: "Legal authority exists for the telemetry already." },
+      { axis: "technical-infeasibility", severity: "clear", note: "Tabular-anomaly problem is tractable; the issue is not technical." },
+    ],
+    buyerObjection: "Director of Compliance: 'Epsilon Net already gives me this in their ESP package. Why pay separately?' There is no good answer that doesn't depend on a Big-4-style consulting wrap, which is not the T-Life shape.",
+    buyerHook: "None credible at startup scale. This is a feature inside an ESP, not a venture.",
+    rubric: { agenticFit: 3, blueOcean: 1, timeToPilot: 3, politicalTailwind: 2, capitalEfficiency: 4, greekLanguageMoat: 2, composite: 2.4 },
+    verdict: "kill",
+    verdictRationale:
+      "Kill-severity incumbent-overlap finding (Epsilon Net / SoftOne / Singular / Cosmote already ship this as a feature on their certified-ESP contracts). Composite 2.40, well below 3.0 threshold, and blue-ocean score 1. No carve-out path. Reject.",
+    pitchReady: "concept",
+    championProfile: "n/a — would have been ΥΕΔΔΕ Director of Compliance, but no viable wedge against incumbent ESPs.",
+    estimatedPilotBudget: "n/a (kill).",
+    founderProfile: "n/a (kill).",
+    tags: ["cash-register", "incumbent-overlap-kill"],
+    addedDate: "2026-05-21",
+  },
+];

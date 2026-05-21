@@ -1,0 +1,154 @@
+{
+  "ministry": "environment-energy",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "energy-res-permit-crosschecker",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "RES Permit Cross-Checker survives second-pass with a stronger thesis than the original red-team allowed for: Law 5299/2026 (Government Gazette 5 May 2026, 16 days before this qualification) cuts wind-farm licensing from 10 years to 1.5 years and imposes binding deadlines on ΥΠΕΝ engineers, making the four-corner Natura/archaeology/forestry/grid cross-check the acute operational bottleneck of the y",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.83,
+      "blockers": [
+        "Law 5299/2026 REAAs exempt projects inside acceleration areas from environmental permitting and special ecological assessment — the agent's addressable surface shrinks to (a) all permits outside REAAs and (b) the exemption-certificate process inside REAAs (still requires ΥΠΕΝ assessment within 30/20 days). Position is the exemption-certificate triage + outside-REAA full review, not the cleared-zone happy path.",
+        "Citizen-opposition narrative risk is real: an 'AI approving wind farms' headline kills the politics overnight. The pitch must be framed as 'engineer co-pilot under binding L.5299/2026 deadlines', never as autonomous approval, and the ΓΓ must be willing to defend that frame in parliament.",
+        "HEDNO/IPTO grid-availability data is not a public API at the granularity needed — pilot must start with the published capacity tables (T+1 freshness) and negotiate a live feed in phase 2; if Netcompany or Intracom move first on RAAEY's L.5299/2026 implementation tender, the data-access window narrows."
+      ],
+      "next30days": "Book a 45-min Γενικό Γραμματέα Ενέργειας meeting (warm intro via NTUA Energy Policy bench or the Bernitsas/Rokas energy regulatory partner network) to pre-register a 5-engineer RES Directorate pilot scoped to (i) exemption-certificate triage inside REAAs and (ii) full four-corner review outside REAAs, with the binding L.5299/2026 deadlines as the KPI clock. Ask for RRF Component 1.4 / 'Greece 2.0'",
+      "evidenceLinks": [
+        "https://bernitsaslaw.com/2026/05/07/law-52992026-accelerating-the-energy-transition-greeces-new-regulatory-framework-for",
+        "https://commission.europa.eu/business-economy-euro/economic-recovery/recovery-and-resilience-facility/country-pages/greeces-recovery-and-resilience-plan_en",
+        "https://www.neso.energy/industry-information/connections-reform",
+        "https://www.ofgem.gov.uk/sites/default/files/2025-04/Summary-Decision-Document-TMO4-package.pdf",
+        "https://caneurope.org/acceleration-areas-progress/",
+        "https://energy.ec.europa.eu/topics/renewable-energy/renewable-energy-directive-targets-and-rules/renewable-energy-directive_en"
+      ]
+    },
+    {
+      "ideaId": "environment-eia-drafting-agent",
+      "originalComposite": 4.15,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "ΜΠΕ Drafting & Review Agent for ΔΙΠΑ survives second-pass: L.5299/2026 only exempts REAA projects, leaving the full Cat A/A1/A2 backlog under L.4014/2011 intact (data centres, large industrial, infrastructure, non-REAA RES), and the ΔΙΠΑ Director remains the cleanest technocratic buyer in ΥΠΕΝ with no entrenched SI on the review side.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 4,
+        "lockInRisk": 4,
+        "studioFit": 5
+      },
+      "compositeNew": 3.83,
+      "blockers": [
+        "Founder recruit is the binding constraint — needs an environmental engineer with 5+ years inside LDK / ENVECO / ECOS or DG ENV consulting bench. Athens pool is ~15-25 credible names; co-founder equity package must be modelled before approach.",
+        "Consultancy lobby (LDK / ENVECO / ECOS) sells EIA drafting as a service and will read any ministry-side review copilot as a vector to their own market — the pitch must be ring-fenced to the ΔΙΠΑ-side review workflow only, never sold to consultancies as a drafting tool until the ministry beachhead is signed.",
+        "Greek environmental-legal corpus + L.4014/2011 + JMD 1958/2012 + the annual amendment churn requires a dedicated legal-engineering loop; first-pass review tooling must trace every flag to statute + template field or the first ΣτΕ challenge to an EIA approval that cited the tool kills the reference.",
+        "No fresh sovereign-AI EIA precedent in 2026 (UK Planning Inspectorate, Ireland An Bord Pleanála are still manual review). Blue ocean is real but the 'why now' story is weaker than the RES permit cross-checker — must lean on L.4014 backlog metrics, not international precedent."
+      ],
+      "next30days": "Two parallel tracks for 30 days: (a) 90-day structured founder hunt across LDK / ENVECO / ECOS / Draxis senior engineers with prior ΔΙΠΑ exposure, (b) retro-pilot offer to ΔΙΠΑ on 10 closed Cat A2 files (in-kind, NDA-bound) to produce a same-quality-in-25%-time deficiency-report benchmark. Do not approach the Γενική Διευθύντρια Περιβαλλοντικής Πολιτικής until both the founder is signed and the ret",
+      "evidenceLinks": [
+        "https://data-catalogue.operandum-project.eu/dataset/law-4014-2011-implementation-of-the-eia-directive-in-greece",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0195925517303943",
+        "https://bernitsaslaw.com/2026/05/07/law-52992026-accelerating-the-energy-transition-greeces-new-regulatory-framework-for",
+        "https://www.wfw.com/articles/investing-in-data-centres-in-greece-overview-of-the-legal-framework/"
+      ]
+    },
+    {
+      "ideaId": "environment-emissions-inventory-ied",
+      "originalComposite": 3.45,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Industrial Emissions / IED Reporting Agent stays conditional in second-pass: NL RIVM emissions registry + satellite fusion remains the cleanest precedent but is not new in 2026, and Greek industrial-lobby risk (Titan / HELLENiQ / Motor Oil) plus TROPOMI spatial-resolution constraints on small-installation attribution keep this firmly behind the two promotes in sequencing.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [
+        "Founder triplet (industrial-emissions engineer ex-ELINYAE / DG ENV + remote-sensing engineer + LLM-tooling engineer) is the rarest co-founder configuration of the five — three-body assembly significantly delays time-to-first-pilot vs. two-body teams elsewhere.",
+        "Titan / HELLENiQ / Motor Oil cement-and-refining lobbies are powerful and will read a satellite-anomaly screening tool as a strategic threat — the agent must launch on E-PRTR reporting-load reduction (operator-friendly framing) before any anomaly-flagging is publicly visible, or the buyer is politically blocked before the first contract.",
+        "Sentinel-5P TROPOMI spatial resolution (~5.5x3.5 km nadir) is inadequate for clean attribution to individual Greek installations outside the Aspropyrgos / Megalopoli / Volos clusters; Climate TRACE / MethaneSAT are cited in EU IED discussions but not deployed in Greek-government context — the satellite-fusion narrative is weaker than the original red-team framed it.",
+        "No fresh 2026 sovereign-AI IED precedent — NL RIVM, DE UBA pilots are 2023-2024 vintage; the 'why now' urgency is the EEA reporting calendar, not a peer-government deployment that the GS can cite at minister level."
+      ],
+      "next30days": "Park as a third-priority side-car behind the two promotes. Use 30 days to (a) commission a deskwork study scoring all ~700 Greek IED installations on TROPOMI-attributability (which clusters survive the resolution constraint, which need ground-truth fusion) and (b) map the three founder slots against ELINYAE, NOA Beyond Centre, and the LDK/ENVECO emissions bench. Do not approach the Directorate of ",
+      "evidenceLinks": [
+        "https://environment.ec.europa.eu/topics/water/water-framework-directive_en",
+        "https://www.rivm.nl/en/soil-and-water",
+        "https://www.dutchwatersector.com/news/how-dutch-innovation-strengthens-the-future-of-water-quality-monitoring-in-europe-and-beyond"
+      ]
+    },
+    {
+      "ideaId": "environment-water-quality-monitoring",
+      "originalComposite": 3.3,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Water-Quality Monitoring Fusion Agent stays conditional but improves on a fresh tailwind: revised WFD entered into force as Directive (EU) 2026/805 on 11 May 2026 (10 days before this qualification), adding PFAS, microplastics, pharmaceuticals and mandatory effect-based monitoring — but the multi-buyer fragmentation (ΥΠΕΝ / EYDAP / EYATH / Περιφέρειες) and the July 2025 reshuffle that expanded EYD",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.0,
+      "blockers": [
+        "Directive (EU) 2026/805 adds PFAS, microplastics, pharmaceuticals and effect-based monitoring obligations on Greece — a fresh deadline clock that the Special Secretariat for Waters now has to absorb. The conditional upgrade hinges on whether the Special Secretary makes this an explicit 2027 milestone with budget; without that, this remains park.",
+        "Multi-buyer fragmentation persists despite the July 2025 announcement of a 'new role' for EYDAP/EYATH — until the Maximos-led water reorganisation actually consolidates a single procuring entity (or names ΥΠΕΝ's GS Natural Environment & Waters as lead buyer), the pilot path stays multi-headed and we should not invest GTM hours.",
+        "RIVM is consistently cited in Greek policy discourse as the reference operating model but no public-sector 2025-2026 agentic deployment is in evidence — the precedent is 'Dutch innovation' brand strength rather than a single deployed system the GS can copy.",
+        "Greek-language moat is thin (WFD templates are EU-harmonised, English-pivot) — without a Greek-NER + tributary-name + Bathing-Waters-toponym defensibility story, the moat collapses under any multinational telemetry vendor (Wärtsilä, Schneider, etc.) entering the surface.",
+        "Founder pair (environmental engineer + telemetry/MLOps engineer with EYDAP/EYATH relationships) requires a utility-sector insider that is harder to recruit than the LDK/ENVECO bench for the EIA agent."
+      ],
+      "next30days": "Hold as conditional. Use 30 days to (a) confirm whether the Special Secretariat for Waters has named the EU 2026/805 transposition as a 2027 milestone with budget, (b) read the Maximos water-reorganisation announcement against the actual ΥΠΕΝ org chart to see if a single procuring entity exists, (c) speculatively model a ΥΠΕΝ-only WFD reporting pilot (no EYDAP/EYATH dependency in phase 1) to de-ri",
+      "evidenceLinks": [
+        "https://environment.ec.europa.eu/topics/water/water-framework-directive_en",
+        "https://en.protothema.gr/2025/07/23/announcements-on-water-today-from-maximos-new-role-for-eydap-and-eyath-and-ppc-model/",
+        "https://io.hcmr.gr/science-for-society/support-to-policies/wfd/",
+        "https://www.rivm.nl/en/soil-and-water",
+        "https://www.dutchwatersector.com/news/how-dutch-innovation-strengthens-the-future-of-water-quality-monitoring-in-europe-and-beyond"
+      ]
+    },
+    {
+      "ideaId": "energy-grid-interconnection-triage",
+      "originalComposite": 3.3,
+      "originalVerdict": "kill",
+      "qualification": "fail",
+      "headline": "Grid Interconnection Queue Triage Agent fails second-pass for exactly the reason the original red-team called: HEDNO/IPTO own the queue and the data, RAAEY cannot politically score private applicants, and the only fresh peer (UK NESO TMO4+, approved April 2025, rolling out through autumn 2025-early 2026) is being executed inside the system operator itself — not by an external agent. No founder, no",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 1,
+        "lockInRisk": 3,
+        "studioFit": 2
+      },
+      "compositeNew": 2.33,
+      "blockers": [
+        "NESO TMO4+ ('first ready, first needed, first connected', readiness + strategic alignment criteria, gate-2 offers issued early 2026) was executed by the system operator with the regulator's air cover — the analogous path in Greece runs through HEDNO/IPTO, not through an external venture. The fresh precedent confirms the incumbent-overlap kill rather than relieving it.",
+        "RAAEY cannot publicly score or rank private grid applicants without absorbing years of ΣτΕ litigation; the only legally clean framing is internal scenario tooling for RAAEY analysts, which (a) collapses the buyer to a small staff unit, (b) eliminates the agentic 'recommendation list' narrative, and (c) crashes pilot procurability to par with any other internal-tooling RFP.",
+        "Spain MITECO milestone-based access/connection forfeiture is policy reform, not an external agent; Germany BNetzA is public dashboards. No deployable external-agent precedent exists in EU peers for the surface we'd be selling into.",
+        "Founder recruit (ex-RAAEY / ex-HEDNO grid-planning insider + ML engineer) is in the single-digit Athens pool and has every reason to stay inside the system operators given the L.5299/2026 implementation work coming their way."
+      ],
+      "next30days": "No GTM activity. Recycle the value into the RES Permit Cross-Checker (energy-res-permit-crosschecker) as a sub-feature: grid-capacity status at the nominated substation is already in that agent's loop — the queue-triage value lives there as 'is your substation realistic given the published capacity table'. Do not maintain this as a standalone surface.",
+      "evidenceLinks": [
+        "https://www.neso.energy/industry-information/connections-reform",
+        "https://www.ofgem.gov.uk/sites/default/files/2025-04/Summary-Decision-Document-TMO4-package.pdf",
+        "https://beale-law.com/article/how-tmo4-is-changing-uk-grid-connections-and-accelerating-net-zero/",
+        "https://www.burges-salmon.com/articles/102k9bq/grid-connection-queue-reform-tmo4-approval-key-points-to-be-aware-of/",
+        "https://bernitsaslaw.com/2026/05/07/law-52992026-accelerating-the-energy-transition-greeces-new-regulatory-framework-for"
+      ]
+    }
+  ]
+}

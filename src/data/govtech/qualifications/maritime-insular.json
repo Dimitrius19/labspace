@@ -1,0 +1,155 @@
+{
+  "ministry": "maritime-insular",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "maritime-barren-line-subsidy-optimiser",
+      "originalComposite": 4.65,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Barren-Line Subsidy Optimiser survives hostile second-pass: 2025 subsidy envelope inflated to €167M across 77 PSO routes (up from €90M in 2019), June 24 2026 Northern-Greece cargo-ferry tender is a fresh in-flight procurement, EC Reg. 3577/92 cabotage State-aid regime is the moat, founder pair is recruitable inside Athens.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.5,
+      "blockers": [
+        "Operator lobby (Attica Group, Seajets, Minoan) will frame any AIS-vs-contract reconciliation as 'punitive automation' — the GS needs a published pitch as 'objective audit-trail for parliament / DG MOVE', not 'penalty engine'.",
+        "AIS commercial-licence cost (MarineTraffic / Spire) plus weather-bulletin scraping is a real OPEX line that must be modelled into the €55-90k direct-award pilot, not buried in 'data costs'.",
+        "Greek άγονη-γραμμή σύμβαση templates and ministerial decisions are scattered across ΦΕΚ issues spanning 30 years; corpus assembly is a 4-6 week analyst-grade task before any model work and must be scheduled before pilot kick-off.",
+        "DG MOVE State-aid notification format under Reg. 3577/92 has a specific schema the audit-trail packet must match; need a former DG MOVE secondee or Greek-state-aid lawyer on the founding advisory board."
+      ],
+      "next30days": "Book a 45-min meeting with the Διεύθυνση Θαλασσίων Συγκοινωνιών Director (warm intro via ex-Attica/Minoan operations alumni) to pre-register a 6-route direct-award pilot (Cyclades + Dodecanese clusters); in parallel sign a paid 30-day corpus-assembly engagement with a Piraeus maritime-law boutique to deliver a ΦΕΚ-indexed contract+decision corpus and a Reg. 3577/92 schema gap-list.",
+      "evidenceLinks": [
+        "https://www.travelandtourworld.com/news/article/greece-boosts-ferry-subsidies-and-launches-initiatives-to-enhance-island-tourism-sustainability-and-local-business-growth/",
+        "https://news.gtp.gr/2026/03/20/greece-to-start-transport-subsidy-payments-for-155000-beneficiaries/",
+        "https://www.milletnews.com/greece/new-delay-for-dedeagac-midilli-sakiz-piraeus-cargo-ferry-tender-sparks-concern-in-greece",
+        "https://transport.ec.europa.eu/transport-themes/public-service-obligations/maritime-and-inland-waterway-transport_en",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31992R3577",
+        "https://www.dma.dk/safety-at-sea/navigational-information/ais-data"
+      ]
+    },
+    {
+      "ideaId": "maritime-fueleu-psc-assistant",
+      "originalComposite": 4.0,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "FuelEU / PSC Drafting Assistant survives hostile second-pass: first FuelEU verification cycle is live now (first report due 31 Jan 2026, DoC deadline 30 Jun 2026), THETIS-MRV FuelEU database module is operational at EMSA, Greek-flag dominance gives ministry concrete EU-deadline cover, Piraeus has a deep ex-DNV/LR verifier bench.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 5,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 4.17,
+      "blockers": [
+        "Buyer is the *state-side* PSC inspector cadre, not the shipowner — DNV/LR/ABS will protect their commercial-verifier business and may try to frame the agent as 'second-guessing' their issued FuelEU DoC; ministry-side positioning has to be unambiguous from day one.",
+        "Inspection-report template is English (Paris MoU) — only the διοικητική πράξη / detention act layer is Greek-only, so the language-moat is partial; defensibility leans on the Greek administrative-law drafting plus integration into the HCG case-file system, not the bulk of the report.",
+        "PSC unit's IT environment is part of the Hellenic Coast Guard estate; even though the use case is non-classified compliance drafting, networking/auth integration has to thread through HCG IT governance which is slower than ministry-side IT.",
+        "FuelEU pooling-agreement verification mathematics changes year-on-year (banking/borrowing, RFNBO sub-target stepping up in 2030 then 2034); model + prompt library has to be versioned against EMSA's annual guidance updates — not a one-shot deliverable.",
+        "€80-150k pilot is at the upper edge of απευθείας ανάθεση for a Coast Guard procurement; clean pilot vehicle is the EMSA-grant-linked innovation envelope rather than ministry budget, which adds 2-3 months of paperwork."
+      ],
+      "next30days": "Land a 1-day Piraeus PSC unit observation visit through an ex-DNV verifier intro to time-and-motion the current FuelEU + Paris MoU drafting workflow on 5 live inspections; in parallel, write a 4-page memo to the GS Maritime / Director PSC framing the agent as 'Greece is the first MS with a documented FuelEU verification workflow before the 30 June 2026 DoC deadline', and sound out the EMSA Greek d",
+      "evidenceLinks": [
+        "https://transport.ec.europa.eu/transport-modes/maritime/decarbonising-maritime-transport-fueleu-maritime_en",
+        "https://www.emsa.europa.eu/reducing-emissions/news-activities/item/5306-fueleu-maritime-monitoring-plans-in-thetis-mrv.html",
+        "https://www.varuna-sentinels.com/what-is-fueleu-maritime",
+        "https://www.lr.org/en/services/statutory-compliance/fueleu-regulation/",
+        "https://ww2.eagle.org/en/rules-and-resources/regulatory-updates/fueleu-maritime.html",
+        "https://www.mpa.gov.sg/media-centre/details/singapore-posts-record-port-performance-in-2025-and-develops-future-readiness-through-industry-collaborations-for-2026"
+      ]
+    },
+    {
+      "ideaId": "maritime-passenger-rights-router",
+      "originalComposite": 3.75,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Passenger-Rights Router upgraded from park to conditional: shares the AIS + Greek legal-NLP stack with the barren-line agent at near-zero marginal cost; EU is actively amending the passenger-rights enforcement framework (Reg. 1177/2010 in scope of the cross-modal enforcement proposal) — ride-in path is as Product-2 inside the barren-line venture, not standalone.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.83,
+      "blockers": [
+        "Standalone champion is the ministry's Πολιτών / consumer-affairs desk — structurally lower-status than the Διεύθυνση Θαλασσίων Συγκοινωνιών; pitch only lands once the barren-line beachhead is signed and the GS can hand parliament a single loop story.",
+        "Operators will resist standardised compensation determinations (the same political risk as the barren-line, plus a Synigoros tou Katanaloti referral path that operators currently game with formulaic replies); legal-risk insurance and a strict copilot-in-the-loop UX are required.",
+        "Pending EU proposal amending Reg. 1177/2010 enforcement means the article-17/18/19 classifier may need to be re-templated within the pilot horizon; build the rule-set as data, not as model fine-tune.",
+        "Founder hire is solved (same pair as barren-line), but the legal-drafting prompt library is a second deliverable that has to be staffed without distracting from the barren-line pilot KPIs."
+      ],
+      "next30days": "Do not pitch standalone. Inside the barren-line memo, add a 1-page 'Module B' annex showing the joint loop (AIS-reality → operator letter → passenger compensation tracking) and the marginal pilot cost (~€20-30k incremental). Stand up a passive ingestor for the 12 most recent ministry consumer-desk replies to benchmark median draft-to-issue lag, and identify a Synigoros tou Katanaloti liaison as a ",
+      "evidenceLinks": [
+        "https://transport.ec.europa.eu/transport-themes/passenger-rights/maritime_en",
+        "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex:32010R1177",
+        "https://transport.ec.europa.eu/transport-themes/passenger-rights_en",
+        "https://www.nationaltransport.ie/eu-passenger-rights/eu-maritime-passenger-rights/"
+      ]
+    },
+    {
+      "ideaId": "maritime-island-medical-supply-agent",
+      "originalComposite": 3.65,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Island Pharmacy / Medical-Supply Agent stays conditional: thesis is genuinely cross-ministerial (Maritime + Health + IDIKA) with universally popular politics, but no fresh deployed precedent found on web search (Norway / NHS Highland remain manual coordination), and the convening cost requires Επικρατείας-level air cover before any pilot KPI is realistic.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 2,
+        "founderMarketFit": 3,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 2.83,
+      "blockers": [
+        "No deployed agentic precedent surfaced in 2025-2026 web search — Norway Helsedirektoratet small-island logistics and NHS Highland prescription planning are operational but manual; the 'no one has done this yet' angle is blue-ocean but also means no external comp to point at when defending the pilot to parliament.",
+        "Tri-ministerial procurement (Maritime + Health + IDIKA) is structurally outside the studio's preferred 6-month direct-award horizon — needs Υπουργείο Επικρατείας / Digital Transformation convening that the founding team cannot force.",
+        "IDIKA prescription data join (AMKA-linked) is the single most politically sensitive data join in the Greek public sector after AADE — DPIA and inter-ministerial protocol burden is real and pre-dates any model work.",
+        "Pharma wholesalers (Pharmaserve-Lilly / Pharmathen distribution / Demo) read this as encroachment on their dispatch optimisation moat; positioning has to be 'ministry-side cross-cutting visibility', explicitly not vendor management.",
+        "Founder pair (pharma-distribution ops + AEGEAN/SkyExpress logistics) is recruitable but neither understands the IDIKA integration burden — a third co-founder or senior advisor from the IDIKA leadership bench is the binding hire."
+      ],
+      "next30days": "Hard park as a standalone bet. Spend 30 days writing the policy brief 'Greek islander chronic-prescription continuity index' that quantifies the problem from public ELSTAT + Eordia / Donousa-class anecdote data, and shop it to a single Υπουργείο Επικρατείας / Digital-Transformation deputy as a cross-ministerial convening request. No founder commitment until the convening commitment exists.",
+      "evidenceLinks": [
+        "https://www.communitypharmacy.scot.nhs.uk/nhs-highland/wp-content/uploads/sites/12/NHS-Highland-Pharmacy-Services-Strategic-Plan-2025-2030.pdf",
+        "https://www.cps.scot/latest-news/sharing-scotlands-success-in-oslo",
+        "https://www.cencora.com/global-reach/europe/norway"
+      ]
+    },
+    {
+      "ideaId": "maritime-small-port-ops-agent",
+      "originalComposite": 3.55,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "Small-Port Operations Agent fails hostile second-pass: 120 fragmented Λιμενικά Ταμεία buyers without a KEDE-style aggregator is structurally incompatible with the studio's 6-month-to-revenue thesis; political tailwind remains a 2/5 (quiet operational file, no press cycle); ministry as platform-buyer is hypothetical not committed.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 2,
+        "founderMarketFit": 3,
+        "pilotProcurability": 2,
+        "lockInRisk": 3,
+        "studioFit": 3
+      },
+      "compositeNew": 2.5,
+      "blockers": [
+        "No equivalent of KEDE exists for Λιμενικά Ταμεία — the Hellenic Port Association is a coordination forum, not a procurement aggregator; ministry-as-platform-buyer requires a brand-new shared-services budget line that does not exist in the 2026 ministry envelope.",
+        "Cyprus Shipping Deputy Ministry and Croatia Adriatic minor-port platform are the cited precedents but neither shows up in 2025-2026 web search as scaled deployments worth citing in a Greek pitch — precedent freshness is thin.",
+        "Per-port pilot revenue (€10-25k) cannot fund a credible product team given 120-buyer GTM; only the platform-licence path is venture-fundable, and that path has no committed champion.",
+        "Political tailwind is structurally low: small ports surface in the press only after a marina-fire or yacht-fee scandal; there is no recurring policy moment that creates ministerial demand.",
+        "Workflow is genuinely tractable, which means a future Tier-1 SI (Netcompany / Singular / OTE) can copy it quickly once a single Λιμενικό Ταμείο references it — limited defensibility."
+      ],
+      "next30days": "Do not pursue from T-Life. Park indefinitely. Revisit only if (a) the GS for Insular Policy commits a shared-services budget line for Λιμενικά Ταμεία in the 2027 ministry envelope, or (b) a Cyclades-prefecture-level cluster contract emerges as an aggregator path. In the meantime use Naxos/Syros pilot conversations only to harvest workflow data for the barren-line agent.",
+      "evidenceLinks": [
+        "https://transport.ec.europa.eu/transport-themes/public-service-obligations/maritime-and-inland-waterway-transport_en",
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31992R3577"
+      ]
+    }
+  ]
+}

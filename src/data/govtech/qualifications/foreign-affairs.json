@@ -1,0 +1,155 @@
+{
+  "ministry": "foreign-affairs",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "mfa-eastmed-osint-monitor",
+      "originalComposite": 4.7,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "EastMed/Western-Balkans OSINT Brief Agent survives hostile second-pass: unclassified scope keeps it out of the diplomatic-classification kill-zone, Redbox-to-Assist (DBT, Feb 2026) and France's Albert→Assistant IA (10k-agent rollout through June 2026) are now operational templates, A1 (Turkey-Cyprus) directorate-level sub-€60k apefthias-anathesi is the cleanest pilot path on the entire MFA slate.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 4,
+        "lockInRisk": 4,
+        "studioFit": 5
+      },
+      "compositeNew": 4.0,
+      "blockers": [
+        "Greek-NLP applied-research lead bench is genuinely thin in Athens (ILSP/AUEB/Athena RC orbit) — only a handful of credible names with the EL+TR+SQ+MK multilingual NER chops; founder hunt is the binding constraint, not the model.",
+        "UK i.AI sunset of Redbox (Dec 2025) is the new precedent narrative: ministerial drafting general-purpose chatbots failed, *specialised workflow* tools like DBT Assist won — pitch must be a *directorate-configurable workflow*, not a 'general brief assistant', or the buyer recognises the sunset story.",
+        "Any factual slip in a published Greek-Turkish brief is a Parliament-floor incident; mitigation requires citation-trace on every claim plus officer-signed-not-agent-signed publishing — must be in the pilot SOW from day 1."
+      ],
+      "next30days": "Walk in to ELIAMEP and Διπλωματική Ακαδημία alumni network to source the ex-foreign-policy-analyst co-founder; in parallel build a 4-week retro-demo over one closed quarter of Turkish + Cypriot + Albanian press that reproduces an actual A1 morning brief side-by-side with the desk officer's published version. Use the demo to secure a 90-minute meeting with the A1 director through the Minister's chi",
+      "evidenceLinks": [
+        "https://digitaltrade.blog.gov.uk/2026/02/04/from-redbox-to-assist-building-ai-tools-that-balance-innovation-and-trust/",
+        "https://ai.gov.uk/blogs/redbox-reflections-5-key-lessons-from-building-and-sunsetting-our-government-ai-chatbot/",
+        "https://acteurspublics.fr/articles/de-chatbot-experimental-a-socle-interministeriel-pour-lia-de-letat-le-parcours-dalbert-ia/",
+        "https://www.banquedesterritoires.fr/en-2026-le-ministere-de-la-fonction-publique-promet-daccelerer-sur-lia"
+      ]
+    },
+    {
+      "ideaId": "mfa-diaspora-consular-concierge",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Diaspora Consular Concierge passes hostile review as CONDITIONAL: Deputy Min Loverdos has a verified 2024-2027 Strategic Plan for Greeks Abroad with explicit AI and digital-consulate language, and US STEP modernisation (Sept 2024) plus India Madad are operational templates — but the Deputy Minister is a political appointee (lockInRisk=3) and Crocus integration is still the Intrasoft/Netcompany-gat",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 3,
+        "studioFit": 4
+      },
+      "compositeNew": 3.83,
+      "blockers": [
+        "Deputy Minister Greeks Abroad is a political appointee — pilot signed under Loverdos can be unwound by a reshuffle; champion-coverage must be doubled with the permanent GS Consular Affairs to survive a government change.",
+        "Crocus is Netcompany-Intrasoft territory and the e-proxeneio rollout is already a flagship MFA project — selling 'an agent on top of Crocus' requires either a written innovation-pilot carve-out or a formal Netcompany partnership before the citizen-facing layer can ship.",
+        "DPIA on cross-border consular PII (5M diaspora across 17 time zones) is non-trivial; ΑΠΔΠΧ will scrutinise the AU/US/UK data-flow design and a generic 'EU sovereign cloud' answer is insufficient — needs jurisdiction-by-jurisdiction processing matrix in the pilot DPIA.",
+        "Greek-diaspora founder pool is the largest natural pool we have (5M people, deep US/AU/UK tech communities) — but the pairing with an ex-consular officer or Wallet.gov.gr alum is the harder side of the recruit."
+      ],
+      "next30days": "Two-track. Track A: warm intro to Loverdos' chief of staff via Greek-Australian or Greek-American diaspora-association president (HALC, GCM-Melbourne) and table a 'one corridor' pilot scoped to AU+US-East-Coast. Track B: open a parallel conversation with Netcompany-Intrasoft Greek branch leadership to scope a partnership or innovation-carve-out for Crocus API access — without that ticket the pitch",
+      "evidenceLinks": [
+        "https://neoskosmos.com/en/2026/02/01/news/greece/reforms-aim-to-bring-the-greek-state-closer-to-the-diaspora/",
+        "https://www.mfa.gr/en/foreign-policy/greeks-abroad/",
+        "https://travel.state.gov/en/international-travel/travel-advisories/smart-traveler-enrollment-program.html",
+        "https://www.federalregister.gov/documents/2026/04/10/2026-07013/30-day-notice-of-proposed-information-collection-smart-traveler-enrollment-program-step",
+        "https://www.madad.gov.in/madad/",
+        "https://www.greeknewsagenda.gr/consular-services/"
+      ]
+    },
+    {
+      "ideaId": "mfa-sister-cities-diplomacy",
+      "originalComposite": 4.3,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Sister-Cities & Cultural-Diplomacy Outreach Agent passes hostile second-pass: Ireland's brand-new Diaspora Strategy 2026-2030 (launched May 2026, €15M-€20M annual budget) is a direct fresh template, no Greek incumbent, single-buyer Hellenic Foundation + Deputy Min path, and zero classification risk — the cleanest small-but-real pilot on the slate.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 3,
+        "lockInRisk": 3,
+        "studioFit": 5
+      },
+      "compositeNew": 4.0,
+      "blockers": [
+        "Hellenic Foundation for Culture budget is genuinely small and ring-fenced for cultural programmes — pilot procurement must reframe as 'programme-multiplier' not 'software' or the buyer-objection ('we have no software budget') wins; the original buyerHook of 'one cancelled lecture series' is the right framing.",
+        "Both Hellenic Foundation director and Deputy Min Greeks Abroad are political-adjacent appointees — lock-in is moderate; KEDE (sister-cities) channel is more permanent and should anchor the pilot to survive ministerial changes.",
+        "Pilot economics are tight (€40-80k); the venture only works as an upsell into the diaspora-concierge venture or with KEDE municipality co-funding — standalone unit economics are marginal in year 1.",
+        "Ireland just launched the most ambitious diaspora platform in Europe (May 12 2026, New York launch) — the 'why don't we just copy Ireland' buyer objection is the fresh risk; pitch needs to differentiate on Greek-specific relationship graph (αδελφοποιήσεις + Greek-studies chairs + diaspora associations) that Ireland's strategy does not cover."
+      ],
+      "next30days": "Bundle this with the diaspora-consular-concierge pitch — do not pursue standalone champion meeting first. Build a relationship-graph demo using public ΓΕΜΗ, KEDE sister-city registry, and Greek-studies-chair public directories that lights up '20 dormant relationships in your network had a moment last quarter' as the wow-moment. Take it into the same Deputy Min meeting as the concierge venture.",
+      "evidenceLinks": [
+        "https://www.ireland.ie/en/irish-diaspora/diaspora-strategy-2026-2030/",
+        "https://www.gov.ie/en/department-of-foreign-affairs/press-releases/minister-richmond-launches-new-diaspora-strategy-at-global-irish-civic-forum/",
+        "https://www.irishcentral.com/news/irish-diaspora-strategy",
+        "https://www.travelandtourworld.com/news/article/ireland-sets-the-stage-for-a-new-era-of-global-connectivity-with-a-bold-diaspora-strategy-to-support-its-70-million-global-family/"
+      ]
+    },
+    {
+      "ideaId": "mfa-crisis-citizen-tracking",
+      "originalComposite": 4.05,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Citizen Crisis-Response Agent is CONDITIONAL on hostile review: MFA Crisis Management Unit was activated for Lebanon Oct 2024 and Sudan 2023 (both verified), making this a permanent-structure buyer with bipartisan air cover — but pilot procurement is middle-zone, the special-category-adjacent location data triggers a designable DPIA wound, and the ex-military / ex-humanitarian-logistics founder po",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 5,
+        "studioFit": 3
+      },
+      "compositeNew": 3.83,
+      "blockers": [
+        "Citizen location data is special-category-adjacent; ΑΠΔΠΧ DPIA is mandatory and the design must be strictly opt-in and crisis-activation-scoped. Permanent-tracking framing is a kill; episodic-activation framing is the only viable shape.",
+        "Founder recruit (ex-military, ex-EOMA, ex-Frontex Greek, or ex-humanitarian-logistics operator) is the binding constraint — credible Greek pool is single-digit and most are not entrepreneurially inclined; ex-Diplomatic Academy with reserve-officer background is the more realistic founder profile.",
+        "Pilot budget (€150-300k) is in the awkward middle — too big for απευθείας ανάθεση, smaller than a clean ESPA call; needs explicit innovation-pilot carve-out from MFA Crisis Unit + GS for International Economic Relations & Crisis Diplomacy.",
+        "'We don't want vendors holding citizen location data' is the buyer's instinctive killer objection — must be answered with a sovereign-EU architecture, citizen-controlled opt-in, and crisis-scoped data lifecycle (purge 90 days post-deactivation) before the first meeting, not after."
+      ],
+      "next30days": "Spend 30 days on founder discovery (ex-Frontex Greek officers, retired Διπλωματικοί B', ex-EKAB International ops, Hellenic Red Cross logistics leads). In parallel, draft a DPIA-first one-pager that pre-answers the ΑΠΔΠΧ question with opt-in + crisis-scoped + 90-day purge, and use the next Aegean/MENA flashpoint news cycle to send it to the Crisis Unit head as an unsolicited offer letter — politic",
+      "evidenceLinks": [
+        "https://www.mfa.gr/en/announcement-by-the-ministry-of-foreign-affairs-on-the-activation-of-the-crisis-management-unit-to-provide-assistance-to-greek-citizens-wishing-to-depart-from-lebanon-02-10-2024/",
+        "https://www.mfa.gr/en/announcement-by-the-ministry-of-foreign-affairs-regarding-the-evacuation-of-greeks-from-sudan--latest-meetings-of-the-crisis-management-unit-23042023/",
+        "https://travel.state.gov/en/international-travel/travel-advisories/smart-traveler-enrollment-program.html",
+        "https://www.federalregister.gov/documents/2026/04/10/2026-07013/30-day-notice-of-proposed-information-collection-smart-traveler-enrollment-program-step",
+        "https://www.euronews.com/my-europe/2024/10/04/eu-countries-continue-to-evacuate-citizens-from-lebanon-as-fighting-escalates"
+      ]
+    },
+    {
+      "ideaId": "mfa-consular-officer-copilot",
+      "originalComposite": 3.9,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Consular Officer Copilot is CONDITIONAL: precedent base is fresh (DBT Assist replacing Redbox Feb 2026, France's Assistant IA at 10k agents through June 2026, HMRC's 28k-staff copilot rollout Apr 2026 verified), but the Crocus incumbency kill-severity finding from the original red-team is unchanged and pilot procurability is now scored 2 — the agent has nothing to copilot against without a Netcomp",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.17,
+      "blockers": [
+        "Crocus is Netcompany-Intrasoft end-to-end and the e-proxeneio rollout is their flagship MFA programme — selling an officer copilot 'on top of Crocus' requires a written API/data agreement or a formal partnership; without that ticket pilotProcurability collapses (axis=2) and the pitch is a slide deck.",
+        "ΕΝΔΥ (diplomatic-staff union) resistance is real — officer job description and HR rules will be the conversation, not the technology; pilot SOW must explicitly preserve officer authorship and signing authority, and ΕΝΔΥ leadership needs to be in the room before pilot day 1, not after.",
+        "Founder recruit is uncommonly hard: ex-MFA-technical OR ex-Crocus-engineer + Greek-NLP applied-research lead is a two-sided recruit with single-digit pools on both sides; founder hunt is a 90-day critical-path item before champion outreach.",
+        "Consular PII residency forces EU sovereign infra + full audit logging; standard answer but adds cost and compliance overhead that erodes capital efficiency at three-consulate pilot scale.",
+        "GS Consular Affairs (Γ4) is reachable but is also the conservative anchor of the ministry — buyer profile is risk-averse and 'AI changes our drafting' will need a slow trust build; faster wins are downstream of the diaspora-concierge venture establishing T-Life as a credible MFA-friendly vendor first."
+      ],
+      "next30days": "Park behind the diaspora-concierge pitch. Use 30 days to (a) make a written approach to Netcompany-Intrasoft Greek branch about a Crocus partnership/innovation-carve-out and (b) source one credible co-founder candidate (ex-Διπλωματικός A'/B' who has retired into private practice, or ex-Crocus engineer) — without either piece the venture is not ready to pitch to Γ4. If the Crocus conversation close",
+      "evidenceLinks": [
+        "https://digitaltrade.blog.gov.uk/2026/02/04/from-redbox-to-assist-building-ai-tools-that-balance-innovation-and-trust/",
+        "https://ai.gov.uk/blogs/redbox-reflections-5-key-lessons-from-building-and-sunsetting-our-government-ai-chatbot/",
+        "https://www.theregister.com/2026/04/27/hmrc_hands_28000_staff_ai/",
+        "https://acteurspublics.fr/articles/de-chatbot-experimental-a-socle-interministeriel-pour-lia-de-letat-le-parcours-dalbert-ia/",
+        "https://www.netcompany-intrasoft.com/"
+      ]
+    }
+  ]
+}

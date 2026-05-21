@@ -1,0 +1,151 @@
+{
+  "ministry": "finance-aade",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "aade-elenxis-auditor-copilot",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "ELENXIS Auditor Copilot survives second-pass: clean champion path to AADE Governor, fresh UK/NL/Spain precedents, designable Netcompany overlay route, and a founder profile that is recruitable from Big-4 Athens tax-controversy bench within 90 days.",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 4,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.5,
+      "blockers": [
+        "Netcompany-Intrasoft will lobby to have any ELENXIS overlay routed through them as a change request — needs explicit Governor-level air cover for the carve-out before kickoff.",
+        "EU AI Act high-risk classification forces a DPIA and AI-Act traceability log to be in place before pilot day 1; non-trivial legal-engineering work for a first-time founder.",
+        "ELENXIS API access is gated behind authorised-contractor status; the 30-60 day clearance loop is the real critical path, not the model."
+      ],
+      "next30days": "Book a 45-min Governor / ΓΓ Διοίκησης meeting (warm intro via ex-AADE Big-4 partner) to pre-register a 10-auditor ΚΕΦΟΜΕΠ pilot with 3 KPIs (closed cases/auditor/month, draft-to-issue median, euros assessed) and request the ESPA innovation-pilot procurement route in writing.",
+      "evidenceLinks": [
+        "https://ai.gov.uk",
+        "https://taxadmin.ai/country/netherlands-ai-country-report/",
+        "https://gds.blog.gov.uk/category/ai/",
+        "https://digitaltrade.blog.gov.uk/2024/07/23/generative-ai-in-government-dbts-next-steps/"
+      ]
+    },
+    {
+      "ideaId": "aade-transfer-pricing-review-agent",
+      "originalComposite": 4.15,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "TP Review Agent for ΚΕΦΟΜΕΠ survives second-pass: Spain AEAT 2026 Tax Control Plan now explicitly mandates AI/predictive TP risk analytics, giving live procurement cover; ΚΕΦΟΜΕΠ Director is reachable; Big-4 TP-partner founder pool is small but identifiable in Athens.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 3,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.33,
+      "blockers": [
+        "Founder recruit is the binding constraint: one ex-Big-4 Greek TP partner who'll switch sides is the entire deal — fewer than ~10 credible names in Athens.",
+        "Amadeus/Orbis comparables licensing is a non-trivial OPEX line that will be probed in any pilot budget — needs a published-data fallback (CbCR aggregates, public-filing comparables) to keep capital efficiency credible.",
+        "Court-defensibility of comparables is the buyer's killer question; every output must trace to OECD chapter + statute + comparable record or the first MAP/APA challenge kills the reference."
+      ],
+      "next30days": "Land a retro-pilot offer on 5 closed ΚΕΦΟΜΕΠ TP cases (in-kind, NDA-bound) to produce a same-quality-in-25%-time benchmark; in parallel, run a structured 90-day founder hunt across Deloitte/PwC/KPMG/EY Athens TP partners with a co-founder equity package pre-modelled.",
+      "evidenceLinks": [
+        "https://www.uhy-fay.com/en/blog/2026-spanish-tax-control-plan-key-transfer-pricing-insights/",
+        "https://tpa-global.com/2026/03/30/spain-2026-tax-control-plan-transfer-pricing-audit-risks/",
+        "https://en.tpcgroup-int.com/news/the-aeats-2026-tax-audit-plan-toward-precision-auditing-of-transfer-pricing-and-economic-substance/",
+        "https://taxadmin.ai/country/spain-ai-country-report/",
+        "https://www.ciat.org/wp-06-2025-estudio-sobre-inteligencia-artificial-aplicada-a-los-precios-de-transferencia/"
+      ]
+    },
+    {
+      "ideaId": "aade-mydata-bank-anomaly-agent",
+      "originalComposite": 3.75,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "myDATA × Bank-Flow Anomaly Agent is conditional: Italy VeRA chatbot live and HMRC Quantexa £175M sovereign-AI deal signed March 2026 make 'why not buy theirs' the central buyer objection; only ride-in path is as the lead-generation layer behind the ELENXIS copilot beachhead.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.67,
+      "blockers": [
+        "Procurement vehicle for €200-400k pilot is in the awkward middle — too big for απευθείας ανάθεση, smaller than a clean ESPA call; risk of slipping to full ΕΣΗΔΗΣ.",
+        "HMRC Quantexa £175M 10-yr sovereign-data deal (signed March 2026) is the new 'why not Quantexa' incumbency objection — needs a Greek-language + myDATA-schema + on-prem narrative the Governor can defend in parliament.",
+        "DPIA on bank-flow × taxpayer ledger join is the hardest of the five — toeslagenaffaire optics force a strictly copilot-only design with auditor-in-the-loop on every lead.",
+        "Founder pair (banking-payments data engineer + tax-evasion economist) is uncommon in Athens; ex-Profile / ex-Viva candidates exist but rare."
+      ],
+      "next30days": "Treat as a fast-follow on the ELENXIS copilot — do not pitch standalone. Produce a 6-page brief that scopes a closed-month retro on one prior quarter of myDATA + bank-data, with a 200-leads / ≥25% positive-close target, and table it only after the copilot pilot signs.",
+      "evidenceLinks": [
+        "https://www.vatcalc.com/italy/italy-ai-tackling-vat-fraud/",
+        "https://www.vatupdate.com/2025/11/06/new-ai-based-vat-settlement-procedure-in-italys-2026-budget-law/",
+        "https://www.vatupdate.com/2025/07/08/italy-deploys-ai-chatbot-for-real-time-vat-fraud-detection-and-tax-compliance-enhancement/",
+        "https://thenextweb.com/news/quantexa-hmrc-ai-tax-fraud-sovereignty",
+        "https://www.techmarketview.com/ukhotviews/archive/2026/05/15/hmrc-hands-quantexa-175m-sovereign-data-and-ai-contract",
+        "https://reform-support.ec.europa.eu/what-we-do/revenue-administration-and-public-financial-management/data-driven-approaches-combat-tax-evasion-and-fraud-italy_en"
+      ]
+    },
+    {
+      "ideaId": "aade-icisnet-customs-anomaly",
+      "originalComposite": 3.45,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "ICISnet Customs Anomaly Agent is conditional: clean blue-ocean in EU-Mediterranean ports and Brazil HARPIA precedent holds, but champion is one Piraeus Director rather than the Governor, founder recruit (ex-customs ops insider) is the scarcest of all five, and ICISnet feed access is a Netcompany-gated 9-month negotiation.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.17,
+      "blockers": [
+        "Founder-market fit (axis 2): the ex-customs operations insider needed is a single-digit recruit pool in Athens; without them the pitch is generic ML.",
+        "Real-time ICISnet feed is gated by Netcompany — pilot must fall back to T+1 batch and lose the 'pre-clearance' framing, which weakens the Director's KPI story.",
+        "Brazil HARPIA is the lone fresh precedent and is somewhat thinly documented in English; EU-side equivalents are still policy frameworks (DG TAXUD CRMF) not deployments.",
+        "Political tailwind is lower than VAT-gap surfaces — customs revenue is steady-state, not a press cycle, which makes Governor-level air cover harder to win."
+      ],
+      "next30days": "Park as a side-car. Spend 30 days on founder discovery only — map ex-Piraeus Port Authority, ex-DG TAXUD Brussels secondees, and ex-Telωνειακή Ακαδημία instructors. Do not approach the Director of Customs until a credible operations co-founder is signed.",
+      "evidenceLinks": [
+        "https://blog.fdstributario.com.br/en/brazil-receita-federal-lanca-tecnologia-de-ia-que-detecta-fraudes-de-r-350-milhoes-2024/",
+        "https://thenextweb.com/news/quantexa-hmrc-ai-tax-fraud-sovereignty"
+      ]
+    },
+    {
+      "ideaId": "aade-vat-carousel-graph-agent",
+      "originalComposite": 3.4,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "VAT Carousel Graph Agent is conditional: AEAT TESEO (530M+ connectivity arcs, 49 relation types) and HMRC Quantexa graph stack are both operational in 2026, making the 'buy AEAT/Quantexa' objection sharper than original red-team caught; capital intensity and 9-month data-access negotiation push it firmly behind the copilot in sequencing.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.17,
+      "blockers": [
+        "Founder-market fit (axis 2): senior graph-ML engineer + ex-ΥΕΔΔΕ insider is even rarer than the customs pair; original red-team flagged this and it remains the binding constraint.",
+        "Pilot procurability (axis 2): €400k-1M pilot on country-scale myDATA + ΓΕΜΗ + bank data is full ΕΣΗΔΗΣ territory — no clean απευθείας ανάθεση or ESPA-innovation path.",
+        "Spain TESEO and HMRC Connect (Quantexa, contract live March 2026) have ridden through their 2025-2026 procurements with results that AADE can cite — the 'why not buy theirs' objection is harder to answer than for the copilot.",
+        "Entity-resolution at Greek-name scale (διακριτικός τίτλος vs επωνυμία variants) is a real technical lift that consumes capital before any pilot revenue.",
+        "ΥΕΔΔΕ is a more closed buyer than ΚΕΦΟΜΕΠ — the operational-secrecy culture makes a 'come in and show us' demo harder to even schedule."
+      ],
+      "next30days": "Hard park. Use the 30 days to build a synthetic-data graph demo on public ΓΕΜΗ + sanitised myDATA-shape data that reproduces 3 historical Greek carousel cases retrospectively; bank the demo for an air-cover meeting with ΥΕΔΔΕ Director only after the ELENXIS copilot pilot is signed and a Greek-name entity-resolution moat has been benchmarked.",
+      "evidenceLinks": [
+        "https://taxadmin.ai/country/spain-ai-country-report/",
+        "https://thenextweb.com/news/quantexa-hmrc-ai-tax-fraud-sovereignty",
+        "https://www.vatcalc.com/eu/eu-transaction-network-analysis-tna-fights-vat-fraud/",
+        "https://blog.fdstributario.com.br/en/brazil-receita-federal-lanca-tecnologia-de-ia-que-detecta-fraudes-de-r-350-milhoes-2024/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "ministry": "social-cohesion-family",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "social-opeka-benefit-claim-copilot",
+      "originalComposite": 4.25,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "OPEKA (now OPA) Benefit-Claim Copilot survives hostile second-pass: UK Caddy reached 40+ Citizens Advice offices with a 2025 RCT showing 80% approval and drafting time halved, giving the OPA Governor a defensible 'why-now' brief; single-buyer απευθείας ανάθεση path, deep KYA-citation moat, and a recruitable Greek admin-law + caseworker founder pair make this the ministry's lead bet.",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.67,
+      "blockers": [
+        "OPEKA was renamed to OPA in the 2026 reorganisation — pitch deck and contract templates must reflect the new entity; verify which DPO and legal directorate now owns benefit-decision data-sharing agreements.",
+        "EU AI Act Annex III classifies social-benefits eligibility as high-risk; obligations apply Aug 2026 unless the Digital Omnibus delays to Dec 2027. Either way, a DPIA + AI-Act traceability log must be designed in from day 1 and the human-in-the-loop architecture must be auditable.",
+        "Cross-system data pulls (EFKA contributions, AADE income, Interior household composition) need formal inter-agency agreements under L.4624/2019; clearance loop is the real critical path, not the model.",
+        "Tier-1 SI (Netcompany/Intrasoft footprint on OPEKA case-management) will lobby to absorb the copilot as a change request — needs Governor-level air cover for a productivity-layer carve-out before kickoff."
+      ],
+      "next30days": "Book a 45-min meeting with the OPA Governor through a Social Cohesion advisor warm intro to pre-register a 10-caseworker pilot on a single benefit family (επίδομα παιδιού A21 is the obvious wedge given the Feb-Mar 2026 application window just closed). Lock 3 KPIs (median days-to-decision, draft-to-issue median, appeal-overturn rate held flat). In parallel, recruit one named ex-OPEKA/EFKA caseworke",
+      "evidenceLinks": [
+        "https://ai.gov.uk/projects/caddy/",
+        "https://ai.gov.uk/knowledge-hub/use-cases/caddy/",
+        "https://www.ukauthority.com/articles/iai-and-citizens-advice-develop-ai-assistant/",
+        "https://www.gov.gr/en/org/opeka/epidomata",
+        "https://athens-times.com/opa-child-benefit-a21-how-to-apply-and-payment-amounts/",
+        "https://www.tovima.com/finance/child-benefit-application-platform-opens-march-1/",
+        "https://artificialintelligenceact.eu/annex/3/"
+      ]
+    },
+    {
+      "ideaId": "family-geny-birth-incentive-eligibility",
+      "originalComposite": 3.95,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "GenY Birth-Incentive Eligibility Agent upgrades to conditional: France CAF prime à la naissance is now fully auto-evaluated on pregnancy declaration (2026 amount €1,093.11), Estonia Bürokratt's birth life-event service is operational with a 2026 pivot to per-institution personalised AI agents, and Ireland's auto-enrolment holds — fresh precedents stack neatly. Binding constraint is the 75k-births/",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 4.0,
+      "blockers": [
+        "Standalone TAM is structurally narrow (~75k birth events/year × small per-event take-up gap) — pilot procurability is fine but the venture-scale story works only if the agent is positioned as the wedge into the broader family-navigator (Idea 3) within 18 months.",
+        "Wallet.gov.gr consent flow at the maternity ward is the real critical path; if Digital Governance ministry won't expose the birth-event trigger as an API, the agent is reduced to a post-hoc reminder system and loses the 'proactive' narrative.",
+        "GS Demographics champion is friendly but the PM-office demographic-policy KPI is a politically owned headline number — any agent that surfaces uptake gaps before being asked could embarrass the sponsor; framing must lead with 'closing the gap your policy already pays for'.",
+        "France CAF's substrate is centralised; Greece's EFKA + AADE + OPA + Interior split means the orchestration layer is harder than the French precedent suggests at first glance."
+      ],
+      "next30days": "Pull (or commission) the published uptake-vs-entitlement gap on the επίδομα γέννησης since 2020 — that single chart is the entire pitch. In parallel, get a 30-minute exploratory with the GS Demographics & Family advisor team to test framing as a demographic-policy win, and a separate 30-min with a Wallet.gov.gr product owner to scope the birth-event trigger API.",
+      "evidenceLinks": [
+        "https://www.caf.fr/allocataires/aides-et-demarches/droits-et-prestations/vie-personnelle/la-prime-la-naissance",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2550",
+        "https://oecd-opsi.org/innovations/child-life-event/",
+        "https://oecd-opsi.org/innovations/life-event-based-services-in-estonia/",
+        "https://e-estonia.com/proactive-services-estonia/",
+        "https://www.ria.ee/en/state-information-system/personal-services/burokratt",
+        "https://minscfa.gov.gr/en/ministry/general-special-secretariats/general-secretariat-for-demography-and-housing-policy/"
+      ]
+    },
+    {
+      "ideaId": "family-benefit-eligibility-navigator",
+      "originalComposite": 3.5,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Family Benefit Eligibility Navigator holds at conditional: France mes-aides remains the global reference, Ireland's MyWelfare 'Benefit-of-Work Estimator' is live in 2026, and Estonia's 2026 personalised-AI-agent pivot validates the architecture — but two-ministry sponsorship (Social Cohesion + Digital Governance) and the €300-700k full-ΕΣΗΔΗΣ/RRF pilot envelope keep this firmly behind the OPA copi",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.67,
+      "blockers": [
+        "Channel-conflict with gov.gr is the textbook two-ministry friction: Digital Governance has a legitimate ownership claim on any citizen-facing entitlement layer, and unless a paired sponsorship memo is in hand on day one, the project becomes a Ψηφιακή Διακυβέρνηση absorption candidate within 12 months.",
+        "Pilot tier (€300-700k) is structurally above απευθείας ανάθεση and either needs an RRF demographics-envelope carve-out or a full ΕΣΗΔΗΣ — both add 6-12 months to time-to-pilot.",
+        "Citizen-data consent flow under GDPR + L.4624/2019 + Wallet.gov.gr must be designed before any cross-agency data pull; the Ireland MyWelfare MyGovID pattern is a clean template but the Greek Wallet equivalent is still maturing.",
+        "Founder pair (Greek consumer-product builder + family-policy lawyer) is recruitable in Athens but every credible candidate is currently being pursued by other studio bets; window is real."
+      ],
+      "next30days": "Do not solo-pitch. Use the 30 days to draft the two-ministry paired sponsorship memo (Social Cohesion owns eligibility-logic + demographic-uptake KPI; Digital Governance owns gov.gr channel) and circulate it to a Social Cohesion advisor for a temperature check before any external work. Gate further investment to that memo being formally received.",
+      "evidenceLinks": [
+        "https://www.mesdroitssociaux.gouv.fr",
+        "https://services.mywelfare.ie/",
+        "https://www.citizensinformation.ie/en/social-welfare/irish-social-welfare-system/claiming-a-social-welfare-payment/applying-for-social-welfare-payments-and-services-online/",
+        "https://www.citizensinformationboard.ie/en/",
+        "https://www.ria.ee/en/state-information-system/personal-services/proactive-government-services",
+        "https://depp.oecd.org/policies/GRC1338"
+      ]
+    },
+    {
+      "ideaId": "social-disability-services-matcher",
+      "originalComposite": 3.2,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "Disability-Services Matcher downgrades to fail under the hostile pass: scope is exactly the disability/vulnerable-populations third-rail the studio brief says to avoid; Spain's Dependencia and the UK Carer's Allowance pilots are real but show no 2025-2026 AI-matching deployment Greece can cite; E.S.A.M.E.A. relationships and Head-of-Disability-Sector founder bench are not in T-Life's network.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 3,
+        "studioFit": 2
+      },
+      "compositeNew": 2.33,
+      "blockers": [
+        "Studio-fit (axis 6) is the binding kill: brief explicitly excludes disability/vulnerable-populations as a fundamental-rights third-rail; even a 'light-touch' matcher inherits E.S.A.M.E.A. scrutiny and EU AI Act Annex III essential-public-services classification.",
+        "Buyer is structurally fragmented: Social Cohesion disability directorate sets policy, KEPA (Labour ministry) certifies, municipalities deliver — three-way coordination plus E.S.A.M.E.A. as an effective veto-holder makes a 6-month pilot impossible.",
+        "Founder-market-fit (axis 3): no candidate in T-Life's network with both NGO/E.S.A.M.E.A. credibility AND the engineering/product chops; building that bench is 12+ months and would crowd out OPA copilot recruitment.",
+        "Precedent freshness is thin: Spain's July 2025 dependency-law reform is procedural not AI; SETWorks 2026 'AI in Disability Services' is vendor content not a government deployment; no operational national disability-matching agent has come online in 2025-2026 that Greece can point to.",
+        "EU AI Act Annex III treats AI used to determine access to essential public services for vulnerable populations as high-risk — full conformity assessment, ethics board, and disability-advocate observer are non-negotiable, which pushes pilot budget to €500k-1M+."
+      ],
+      "next30days": "Do not pursue. If a municipal champion (KEDE-backed mayor) personally commissions, revisit only as a paid feasibility study (<€20k) bounded to one δήμος and one service type — and only after the OPA copilot has signed.",
+      "evidenceLinks": [
+        "https://www.lamoncloa.gob.es/lang/en/gobierno/councilministers/paginas/2025/20250715-council-press-conference.aspx",
+        "https://easpd.eu/fileadmin/user_upload/Factsheets/EASPD-Spain_fact_sheet.pdf",
+        "https://artificialintelligenceact.eu/annex/3/",
+        "https://artificialintelligenceact.eu/article/6/"
+      ]
+    },
+    {
+      "ideaId": "family-foster-care-matching",
+      "originalComposite": 2.85,
+      "originalVerdict": "kill",
+      "qualification": "fail",
+      "headline": "Foster-Care Matching confirmed fail on hostile pass: US Casebook/Binti/CareMatch are commercially live in 2026 (so 'blue ocean' is qualified), but EU AI Act Annex III high-risk obligations for children-affecting AI plus judicial-process integration plus a non-existent founder bench keep this firmly outside T-Life's pilot-tier capital and time-to-market thesis.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 4,
+        "founderMarketFit": 1,
+        "pilotProcurability": 1,
+        "lockInRisk": 3,
+        "studioFit": 1
+      },
+      "compositeNew": 2.0,
+      "blockers": [
+        "Studio-fit (axis 6): children-affecting algorithmic decisions are exactly the brief's named third-rail; one mistaken placement that hits the press ends both the company and the ministry official's career — the asymmetric downside is total.",
+        "EU AI Act Annex III applies (vulnerable populations, essential services) with high-risk obligations from Aug 2026 (Dec 2027 if Digital Omnibus delay passes); full conformity-assessment package + child-protection ethics board + judicial sign-off on methodology before pilot pushes cost to €800k-2M and timeline to 18+ months.",
+        "Buyer convening power required (GS Child Protection + Family Court President + UNICEF/Save the Children observer) is beyond T-Life seed-stage capacity.",
+        "Founder bench is empty: no Head of Child Protection / senior social-worker / family-law judge with engineering co-founder available in network.",
+        "Casebook, Binti and CareMatch are live US commercial products; Greek-language moat exists but is not enough to offset the compliance and capital constraints — the 'no Greek incumbent' framing is real but irrelevant to studio fit."
+      ],
+      "next30days": "Do not pursue. Re-open only if (a) a named GS Child Protection commissions in writing with explicit AI-Act conformity budget line, (b) a Family-Court-bench advisor is signed as paid founding advisor, AND (c) a UNICEF or Save-the-Children observer is named — none of which are achievable within the studio's current convening surface.",
+      "evidenceLinks": [
+        "https://www.casebook.net/casebook-for-foster-care-and-adoption/",
+        "https://zipdo.co/best/foster-care-software/",
+        "https://www.aecf.org/blog/fixing-americas-child-welfare-system-theres-an-app-and-software-for-that",
+        "https://artificialintelligenceact.eu/annex/3/",
+        "https://decodethefuture.org/en/eu-ai-act-explained/"
+      ]
+    }
+  ]
+}

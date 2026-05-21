@@ -1,0 +1,115 @@
+{
+  "ministry": "climate-civil-protection",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "civil-protection-field-officer-dictation",
+      "originalComposite": 4.55,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Survives hostile pass cleanly. Studio-fit is the highest in the portfolio (no life-safety auto-trigger), precedent freshness is maximal (Axon + GDS both 2025-2026), founder bench is real in Athens. This is the lead candidate for the ministry.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.45,
+      "blockers": [
+        "Π.Σ. union position on body-worn microphones / audio retention",
+        "Whether ΓΓΠΠ has an ASR-friendly radio-corpus we can fine-tune on, or whether we need to bootstrap one"
+      ],
+      "next30days": "Brief Αρχηγός Π.Σ. office through minister CoS by end of fire season 2026 · Recruit ex-Π.Σ. operations officer co-founder (target: someone who worked Mati or Evros 2023 response)",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "civil-protection-post-incident-drafting",
+      "originalComposite": 4.5,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Highest hostile composite in the portfolio. Strongest pilot-procurability of the five. Lessons-learned annex is also politically valuable to the minister because parliament asks for it by name post-Mati and post-Thessaly. Memo-ready.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 5,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.62,
+      "blockers": [
+        "Whether ΓΓΠΠ wants Word/PDF export or integration with a future ΓΓΠΠ knowledge platform",
+        "Whether arogi.gov.gr team is open to API-level integration for the claims-log workflow"
+      ],
+      "next30days": "Build closed-historical-incident demo on Thessaly 2023 or Rhodes 2023 public materials · Brief GS Civil Protection + ΓΓΠΠ head of planning before next fire season debrief cycle",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "civil-protection-shelter-logistics",
+      "originalComposite": 3.6,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Composite holds at 3.62 with the hostile axes. Two soft spots: humanitarian-logistics co-founder is a real recruit problem (founderMarketFit 3), and special-category GDPR adds pilot drag (pilotProcurability 3). Conditional on (a) Ερυθρός Σταυρός co-design MoU and (b) named humanitarian-logistics co-founder. Without both, downgrade to fail.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 5,
+        "studioFit": 3
+      },
+      "compositeNew": 3.62,
+      "blockers": [
+        "Does Ερυθρός Σταυρός want to co-build or only to consume?",
+        "Is the ΣΑΤΑΜΕ shelter registry digitised enough to be ingestible, or do we need a digitisation phase first?"
+      ],
+      "next30days": "Open Ερυθρός Σταυρός operations-lead conversation (warm intro via the studio's NGO network) · Scope a humanitarian-logistics co-founder search (Geneva + Athens diaspora)",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "civil-protection-wildfire-fusion-agent",
+      "originalComposite": 3.55,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "Composite drops below 3.6 under hostile axes. Two axes at 2 (founderMarketFit, pilotProcurability) push this into conditional-with-strong-mitigation territory. Only re-promote if (a) we sign a Demokritos or AUA wildfire-science principal as co-founder, and (b) we secure an RRF Civil-Protection Modernisation envelope letter of intent. Without those, this stays parked and Πυρόπολις or Μετά-Συμβάντος",
+      "axes": {
+        "buyerReachability": 5,
+        "precedentFreshness": 5,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 5,
+        "studioFit": 3
+      },
+      "compositeNew": 3.39,
+      "blockers": [
+        "Is Demokritos NCSR open to a JV-style spin-out arrangement, or are they only open to grant-funded collaboration?",
+        "Can we shape an AI-Act-friendly framing (decision-support with named human + full audit trail) that the ministry legal team will pre-bless?"
+      ],
+      "next30days": "Map wildfire-science PhD bench (Demokritos, AUA, Cyprus Institute, FORTH-IACM) and grade each for spinout-receptivity · Defer to fire season 2027 unless the founder problem is solved first",
+      "evidenceLinks": []
+    },
+    {
+      "ideaId": "civil-protection-evacuation-routing",
+      "originalComposite": 3.4,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "Hostile pass kills this. StudioFit = 1 alone triggers fail under the threshold rule. Composite 2.65 confirms it. T-Life Capital studio thesis is explicit about avoiding life-safety third-rail; route-recommendation in an active evacuation is the canonical third-rail case in Greek civil protection post-Mati. Do not pursue as a studio company. If a strategic acquirer or a state-owned vehicle wants to",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 2,
+        "pilotProcurability": 2,
+        "lockInRisk": 5,
+        "studioFit": 1
+      },
+      "compositeNew": 2.65,
+      "blockers": [
+        "Is there a state-vehicle (e.g. Athena RC + ΓΓΠΠ joint lab) that could take this on with statutory liability cover the studio cannot replicate?"
+      ],
+      "next30days": "Document the kill rationale in the studio's no-go memo so we don't re-litigate next year · Refer the use-case (with permission) to OASP/Athena RC if a public-research vehicle wants it",
+      "evidenceLinks": []
+    }
+  ]
+}

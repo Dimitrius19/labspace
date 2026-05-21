@@ -1,0 +1,149 @@
+{
+  "ministry": "state-cross-cutting",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "pmo-briefing-dossier-agent",
+      "originalComposite": 4.25,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Strong agentic loop and a permanent civil-service buyer (ΓΓΚ), but the marquee Redbox precedent collapsed (i.AI sunset, Dec 2025) and the studioFit penalty for the most politically-proximate ministry is real.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 3.17,
+      "blockers": [
+        "Headline precedent (UK Redbox) was sunset by i.AI in December 2025; DBT migrated to 'Assist' as a one-off and Cabinet Office transitioned to a gemini-based enterprise option. The 'we are the Greek Redbox' pitch no longer lands — re-frame on Assist/Gemini-Enterprise/Assistant IA generation precedents.",
+        "ΓΓΚ is a permanent role but warm intro through T-Life's network is not currently in hand; one or two retired ΓΓΚ briefing officers must be retained as paid advisors before any approach.",
+        "PM-office-proximate work means relationship is partially exposed to the political weather even when contracting with the apolitical Secretariat — a single 'AI writes the PM's briefings' headline can torch the channel.",
+        "Founder bench: ex-ΓΓΚ briefing officer recruitable but small; talent search needs to start now."
+      ],
+      "next30days": "Map and approach two retired ΓΓΚ briefing officers as paid founding advisors; commission a sanitised side-by-side demo (mock bilateral brief, hand-written vs. agent-drafted) using public-domain inputs only, to be shown to the first advisor as the credentialing artefact.",
+      "evidenceLinks": [
+        "https://ai.gov.uk/blogs/redbox-reflections-5-key-lessons-from-building-and-sunsetting-our-government-ai-chatbot/",
+        "https://digitaltrade.blog.gov.uk/2026/02/04/from-redbox-to-assist-building-ai-tools-that-balance-innovation-and-trust/",
+        "https://ai.gov.uk/projects/redbox/"
+      ]
+    },
+    {
+      "ideaId": "pmo-council-of-ministers-prep",
+      "originalComposite": 4.15,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "Best Επικρατείας bet — Council Secretariat seat is structurally apolitical, the EU AI Act high-risk deadline slipped to Dec 2027 buying design runway, and Estonia's e-Cabinet + 2026 Bürokratt agentic layer gives a fresh sovereign precedent we can cite.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 4,
+        "founderMarketFit": 3,
+        "pilotProcurability": 3,
+        "lockInRisk": 5,
+        "studioFit": 4
+      },
+      "compositeNew": 3.8,
+      "blockers": [
+        "Classified-handling carve-out (subset of Υπουργικό Συμβούλιο papers) forces on-prem or sovereign-cloud — pushes the build cost above the €30k direct-award threshold immediately, so the procurement story must rely on the innovation-pilot path or an RRF e-government envelope from day one.",
+        "Founder mix is three-headed (ex-ΓΓΚ Council Secretariat officer + applied-NLP engineer + classified-IT partner) — three-person assembly is fragile and slower than the two-person archetype.",
+        "Redbox+Minute as a single marquee precedent is degraded (Minute persists at DBT-as-Assist, Redbox sunset). Need to lead with Estonia e-Cabinet + Bürokratt 2026 and France's Assistant IA pilot instead.",
+        "Pilot budget (€180-350k) is above απευθείας ανάθεση (€30k services); needs an innovation-pilot framing or RRF envelope to procure cleanly."
+      ],
+      "next30days": "Secure one retired ΓΓΚ Council Secretariat officer as paid founding advisor; draft a one-pager mapping the Greek Υπουργικό Συμβούλιο procedural code onto the Estonia e-Cabinet + Bürokratt agentic layer as the canonical precedent (replacing the Redbox+Minute citation in the original memo); identify two classified-IT-handling partners (likely existing Greek SI or sovereign-cloud vendor) and run one ",
+      "evidenceLinks": [
+        "https://www.kratid.ee/en/burokratt",
+        "https://ega.ee/wp-content/uploads/2022/10/eCabinet_Government-office.pdf",
+        "https://digitaltrade.blog.gov.uk/2026/02/04/from-redbox-to-assist-building-ai-tools-that-balance-innovation-and-trust/",
+        "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/"
+      ]
+    },
+    {
+      "ideaId": "pmo-legislative-bureau-copilot",
+      "originalComposite": 3.9,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Highest-moat angle in the portfolio and the apolitical Bureau seat survives government changes, but the founder constraint (ex-ΣτΕ rapporteur or ex-Bureau νομοτέχνης) is the binding bottleneck — without that bench, this idea cannot ship.",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 3,
+        "lockInRisk": 5,
+        "studioFit": 4
+      },
+      "compositeNew": 3.25,
+      "blockers": [
+        "Senior public-law jurist bench in Athens is one of the smallest founder pools in Greek govtech — without a named ex-Bureau νομοτέχνης or ex-ΣτΕ πάρεδρος on the cap table, the pitch is dead on arrival. Talent search is the gating activity.",
+        "EU AI Act high-risk classification arguably applies to legislative-drafting tools; the May 7 2026 Omnibus deal defers Annex III enforcement to Dec 2027, which buys runway, but pilots after that date carry conformity-assessment overhead from day one — design must bake this in.",
+        "Precedent set is thinner than originally implied: France Albert's France Services rollout was not generalised; Albert API persists and 'Assistant IA' is a 10k-agent pilot through June 2026, but neither is a legislative-drafting deployment. UK GDS 'Lex' remains exploratory. The 'this is being done elsewhere already' frame collapses on close inspection — re-frame as genuine first-mover instead.",
+        "Pilot budget (€150-300k) exceeds απευθείας ανάθεση, requires innovation-pilot sole-source justification on Greek public-law specificity — defensible but not automatic."
+      ],
+      "next30days": "Run a structured founder search: list every retired or near-retirement Bureau νομοτέχνης and ex-ΣτΕ πάρεδρος of the last 10 years; secure paid feasibility study (<€10k) with one candidate to validate corpus access (Bureau drafting manual, αιτιολογική-έκθεση archive) and produce a single annotated demo on a real recent νομοσχέδιο.",
+      "evidenceLinks": [
+        "https://acteurspublics.fr/articles/de-chatbot-experimental-a-socle-interministeriel-pour-lia-de-letat-le-parcours-dalbert-ia/",
+        "https://www.weka.fr/actualite/administration/article/albert-l-outil-d-ia-generative-experimente-a-france-services-ne-sera-pas-generalise-209194/",
+        "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+        "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act"
+      ]
+    },
+    {
+      "ideaId": "pmo-commitment-tracker",
+      "originalComposite": 3.85,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "Hostile pass confirms the original park hardens to fail: the artefact is a structurally leak-prone catalogue of broken government promises, and the buyer (Minister-of-State office) is the politically most-volatile seat in the ministry — studioFit collapses on the same logic as the statement-consistency monitor.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 3,
+        "founderMarketFit": 3,
+        "pilotProcurability": 2,
+        "lockInRisk": 2,
+        "studioFit": 1
+      },
+      "compositeNew": 2.25,
+      "blockers": [
+        "Champion is the Secretary General of Coordination at the PM-office — political appointee, replaced at every government change. lockInRisk drops accordingly; this is not a permanent-civil-service seat like ΓΓΚ proper.",
+        "The artefact's value IS the politically explosive output: a ranked list of which Secretaries-General are missing their commitments. A single screenshot leak burns the vendor across every other Επικρατείας idea — same structural class of risk as the statement-consistency monitor.",
+        "'Positive framing' (praise/push tool) does not survive contact with the actual artefact; first internal demo will show ministers their own slippage, and the leak countdown starts immediately.",
+        "Pilot procurement (€120-250k, on-prem) is above απευθείας ανάθεση and requires sovereign-cloud carve-out, but the deeper issue is the buyer's political risk appetite — not procurement.",
+        "StudioFit penalty: T-Life Capital's portfolio diversification depends on not having a single politically-exposed product torch the relationship for ΓΓΚ Council-prep and Bureau-copilot. This idea concentrates that risk."
+      ],
+      "next30days": "Do not pursue as a studio venture. Revisit only if Greece sets up a permanent civil-service Delivery Unit (analogous to the 2025 UK 10DU institutionalisation under the Chief Secretary to the PM) with a named non-political career-civil-service lead — that would change the buyer seat and the lockInRisk profile. Until then, leak-risk dominates.",
+      "evidenceLinks": [
+        "https://en.wikipedia.org/wiki/Prime_Minister's_Delivery_Unit",
+        "https://www.civilserviceworld.com/professions/article/pm-setting-up-new-unit-to-strengthen-policy-delivery",
+        "https://www.instituteforgovernment.org.uk/article/comment/new-prime-ministers-delivery-unit-needs-prime-ministerial-authority-and-attention"
+      ]
+    },
+    {
+      "ideaId": "pmo-statement-consistency-monitor",
+      "originalComposite": 3.55,
+      "originalVerdict": "kill",
+      "qualification": "fail",
+      "headline": "Original kill confirmed on hostile pass. Included in the top-5 cut per instruction; studioFit scored at floor because the artefact is structurally a leak-bomb whose single-screenshot exposure incinerates every other Επικρατείας channel the studio is building.",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 2,
+        "founderMarketFit": 2,
+        "pilotProcurability": 1,
+        "lockInRisk": 1,
+        "studioFit": 1
+      },
+      "compositeNew": 1.5,
+      "blockers": [
+        "The product's value IS the explosive artefact — a ranked dashboard of inter-cabinet contradictions. No design fix removes this; obfuscation makes the tool useless to the buyer.",
+        "International precedent is the weakest in the portfolio: UK No.10 'grid' is a manual coordination function with no automation precedent; Israel PMO tooling is undisclosed. Nothing to cite as a fresh deployment in 2025-2026.",
+        "Buyer is the Minister-of-State political appointee — replaced every government change, so any pilot's institutional memory dies with the government. lockInRisk is at floor.",
+        "Single screenshot leak from this dashboard hands the opposition a constitutional-crisis press cycle and torches T-Life's relationship across every other Επικρατείας venture in flight (Council-prep, Bureau-copilot, dossier agent). StudioFit at floor — this is anti-portfolio.",
+        "Founder pitch implodes on first principles: no senior public-administration professional in Athens will let this carry their name."
+      ],
+      "next30days": "Do not pursue. No revisit path — the kill is structural, not solvable by re-scoping. If a similar workflow ever ships in Greek government, it will be built in-house by the PMO comms team without external vendor exposure.",
+      "evidenceLinks": [
+        "https://en.wikipedia.org/wiki/Prime_Minister's_Delivery_Unit",
+        "https://www.pmo.gov.sg/about-us/"
+      ]
+    }
+  ]
+}

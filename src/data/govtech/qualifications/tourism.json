@@ -1,0 +1,150 @@
+{
+  "ministry": "tourism",
+  "qualifiedAt": "2026-05-21",
+  "ideas": [
+    {
+      "ideaId": "tourism-ama-cross-check-agent",
+      "originalComposite": 4.75,
+      "originalVerdict": "promote",
+      "qualification": "pass",
+      "headline": "AMA x Platforms x AADE Compliance Agent clears the hostile second-pass: EU 2024/1028 SDEP goes live 20 May 2026, Spain's VUDA already delisted 86k+ listings and Italy CIN enforcement is operational since Jan 2025, and Greece L.5170/2025 plus the Athens 1st-3rd district registration freeze gives an active PM-office political tailwind a venture-studio first product can ride.",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 5,
+        "founderMarketFit": 4,
+        "pilotProcurability": 3,
+        "lockInRisk": 5,
+        "studioFit": 5
+      },
+      "compositeNew": 4.33,
+      "blockers": [
+        "Cross-ministerial Tourism + AADE coordination is the binding procurement constraint: champion must be GS Tourism Policy AND AADE Governor jointly, or the AADE-side income cross-check leg falls through and the agent becomes a registry-cleanup tool rather than an enforcement loop.",
+        "EU 2024/1028 SDEP operational date is 20 May 2026 (one day before this qualification) — pilot must scope around the fact that Greece's SDEP build-out is itself in flight, so the agent has to ride on a provisional data feed (direct platform endpoints + AMA registry export) for the first 6 months.",
+        "AI Act high-risk classification on de-listing recommendations forces a strict copilot-only design with officer sign-off on every notice; AADE-style DPIA and traceability log must ship with the pilot, not after.",
+        "Athens-municipal political cycle: the registration freeze runs through Dec 2026 and the Mayor of Athens is in the loop, so a single-municipality pilot has to be vetted by both Tourism and the Athens municipality before any AADE join can happen."
+      ],
+      "next30days": "Book a joint 45-min meeting with the GS for Tourism Policy and AADE Governor's office (warm intro via SETE or via the AADE ELENXIS-copilot path) to pre-register a 500-listing Athens-1st-District retro-pilot on closed Sept-Oct 2025 data, with 3 KPIs (provably non-compliant operators flagged, draft pre-enforcement letters produced in Greek per L.5170/2025, AADE revenue at risk per AFM). In parallel,",
+      "evidenceLinks": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1028/oj/eng",
+        "https://www.beyondpricing.com/blog/spain-cracks-down-on-short-term-rentals-2026",
+        "https://www.idealista.com/en/news/property-for-rent-in-spain/2026/01/19/877614-2025-the-year-the-single-registry-revolutionised-tourist-and-short-term",
+        "https://yourbusinessinitaly.com/en/blog/short-term-rentals-italy-cin-code-2025",
+        "https://news.gtp.gr/2026/01/26/short-term-rentals-in-greece-new-restrictions-take-effect-in-2026/",
+        "https://expatsgreece.com/housing-guide/new-era-for-greeces-short-term-rental-market-what-changes-on-1-october-2025/",
+        "https://chekin.com/en/blog/regulation-eu-2024-1028/"
+      ]
+    },
+    {
+      "ideaId": "eot-destination-overcrowding-signal",
+      "originalComposite": 3.85,
+      "originalVerdict": "promote",
+      "qualification": "conditional",
+      "headline": "Destination Carrying-Capacity Signal Agent is conditional: Venice's 2025 day-tripper fee produced 13k avg daily visitors paid (vs 16k in 2024 — marginal crowd effect), Amsterdam capped river cruises at 1,150/yr and ocean cruises to 100/yr starting 2026, Dubrovnik 'Respect the City' is enforcing 2-ship/4k-passenger limits in 2025-2026 — precedents are operational but show carrying-capacity dashboar",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 5,
+        "founderMarketFit": 3,
+        "pilotProcurability": 2,
+        "lockInRisk": 4,
+        "studioFit": 4
+      },
+      "compositeNew": 3.5,
+      "blockers": [
+        "Buyer triangulation problem: EOT analytics team, GS Tourism Policy, and the mayors of Santorini/Mykonos all need to be co-sponsors; no single decision-maker can sign the pilot. Without Maritime Affairs in the room (port-call manifests) the agent loses its action leg and becomes a dashboard.",
+        "Pilot procurability is the weakest axis: multi-island, multi-ministry pilot is structurally a €150-250k scope that fits no clean direct-award route — risk of slipping to full ESHDIS. Single-island scoping (e.g. Santorini-only) keeps it under the 60k direct-award tier but loses the cross-island data-fusion narrative.",
+        "Mobile-network telemetry data licensing (COSMOTE/Vodafone GDPR-aggregated products) is a non-trivial OPEX line that will be probed in any pilot budget; without it the agent loses its real-time density leg.",
+        "Cyclades/Dodecanese municipal-government co-founder is the rarest leg of the founder team — overlaps with the data-science requirement and demands deep local-politics fluency that doesn't recruit from Athens tech.",
+        "Venice 2025 results show day-tripper fees barely moved the daily average (13k vs 16k), so the buyer-hook 'we would have flagged the 17k Santorini day 9 days ahead' must be paired with a binding-action lever (port-authority reschedule, ferry-cap) the agent can actually trigger — pure prediction is not enough."
+      ],
+      "next30days": "Park as a fast-follow on AMA cross-check. Use 30 days to (1) scope a single-island Santorini retro-demo on summer 2024 cruise-call + bednight data, (2) confirm Maritime Affairs willingness to entertain a 'port-authority duty officer draft memo' loop (without which the agent is a dashboard), (3) run a structured co-founder search across ex-EOT analytics, ex-INSETE, and Cyclades-based municipal-secr",
+      "evidenceLinks": [
+        "https://untolditaly.com/venice-tourist-tax/",
+        "https://www.thetraveler.org/venice-day-tripper-fee-2025-2026-guide/",
+        "https://www.travelandtourworld.com/news/article/amsterdam-announces-measures-to-curb-overtourism-with-limits-on-river-cruises/",
+        "https://www.globaltravelerusa.com/dubrovnik-makes-strides-toward-a-sustainable-year-round-tourism-strategy/",
+        "https://weoncruise.com/mediterranean-cruise-port-restriction-tracker-2025-27/"
+      ]
+    },
+    {
+      "ideaId": "tourism-beach-concession-aigialos-agent",
+      "originalComposite": 3.7,
+      "originalVerdict": "kill",
+      "qualification": "fail",
+      "headline": "Beach-Concession (Aigialos) Allocation & Audit Agent confirmed kill on second-pass: Italy's 2024-2025 Bolkestein reform shows reforming coastal-concession regimes is a multi-year political battle even with EU infringement pressure — Greek concessionaire networks, cross-ministerial Finance + Tourism + municipal complexity, and named-MP exposure remain structural killers no studio first product can ",
+      "axes": {
+        "buyerReachability": 2,
+        "precedentFreshness": 3,
+        "founderMarketFit": 2,
+        "pilotProcurability": 1,
+        "lockInRisk": 4,
+        "studioFit": 3
+      },
+      "compositeNew": 2.5,
+      "blockers": [
+        "Buyer-reachability fails: primary buyer sits at GS Public Property (Finance), not Tourism; Tourism is at best a co-owner of 'beach image' — no clean single champion path. Original kill-severity political-third-rail finding survives intact.",
+        "Pilot procurability is bottom-of-rubric: any beach-imagery x cadastre x AADE pilot is inter-ministerial €200-400k+, full ESHDIS, with municipal sign-off per beach. No direct-award route exists.",
+        "Italy Bolkestein 2024-2025 reform precedent shows even with EU pressure, reform pushed to 2027 and concessionaires struck nationally — the political tooling moves slower than agent procurement cycles, so no 'fresh-precedent operational tailwind' to ride.",
+        "Founder-market fit: no Athens founder can take the targeted hostility from concessionaire networks plus the named-MP political fallout as their first venture; recruit pool is effectively zero.",
+        "Studio-fit broken: T-Life Capital cannot afford its first portfolio company taking concession-network reputational risk in year one — kills downstream venture pipeline access."
+      ],
+      "next30days": "Hard kill. Re-confirm with the user that beach-concession is off the studio first-wave list. If retained as a 'watching brief', monitor only: (1) Greek Court of Auditors special reports on aigialos revenue leakage, (2) any EU infringement notice on Greek concession regime (modeled on Bolkestein), (3) a Sentinel-2-based academic / Court-of-Auditors-led demo that someone else funds first.",
+      "evidenceLinks": [
+        "https://www.firstonline.info/en/concessioni-balneari-proroga-al-2027-e-indennizzi-per-i-gestori-uscenti-governo-e-ue-approvano-le-nuove-regole/",
+        "https://www.eunews.it/en/2024/08/08/the-last-chapter-in-the-bolkestein-saga-in-italy-beach-concessionaires-to-strike-against-auctions-in-2025/",
+        "https://www.meer.com/en/82846-italys-beach-concessions-the-need-for-urgent-reform"
+      ]
+    },
+    {
+      "ideaId": "eot-marketing-analytics-agent",
+      "originalComposite": 3.4,
+      "originalVerdict": "park",
+      "qualification": "conditional",
+      "headline": "EOT Source-Market Analytics & Campaign-Brief Agent is conditional: EOT President is reachable as single budget-holder champion, but precedent freshness is weak (Spain Turespana SEGITTUR, Portugal TravelBI, Singapore STB are all manual reporting platforms — no operational agentic peer in 2025-2026), shallow Greek-language moat invites multinational marketing-analytics entrants, and INSETE incumbenc",
+      "axes": {
+        "buyerReachability": 4,
+        "precedentFreshness": 2,
+        "founderMarketFit": 4,
+        "pilotProcurability": 4,
+        "lockInRisk": 2,
+        "studioFit": 2
+      },
+      "compositeNew": 3.0,
+      "blockers": [
+        "Lock-in risk and studio-fit are the binding axes: housing-crisis political tailwind that powers AMA cross-check does not extend here — tourism marketing is operational, not headline, and a multinational marketing-analytics platform with translation can enter the lane within 24 months once EOT shows budget commitment.",
+        "Precedent freshness: search confirms no operational tourism-board agent globally — could be read as blue-ocean but more likely reads as 'no one ships this because tourism boards don't actually buy agentic tools, they buy Skift/Phocuswright subscriptions'. Buyer-objection 'we have INSETE and our agencies' is real.",
+        "INSETE (Greek Tourism Confederation analytics) territorial risk: a venture-studio play that bypasses INSETE will be lobbied against from within the EOT ecosystem.",
+        "Studio-fit 2: this doesn't carry the political-resonance T-Life Capital wants for portfolio narrative — campaign reallocation is a marketing-tech bet that lives or dies on EOT budget cycles rather than housing-crisis or anti-corruption framing.",
+        "Greek-language moat shallow: brief output is one localisation layer, not core moat — translation-equipped multinational platforms can match."
+      ],
+      "next30days": "Park behind AMA cross-check. Use 30 days to do an INSETE-friendly framing exercise: scope the agent as 'augments INSETE quarterly reports with weekly cadence and named campaign reallocations' rather than 'replaces INSETE'. Test the framing in a single conversation with the EOT President's chief of staff. Only invest deeper if INSETE-co-sponsorship is achievable.",
+      "evidenceLinks": [
+        "https://www.idealista.com/en/news/property-for-rent-in-spain/2026/04/07/891543-spain-s-new-short-term-rental-rules-vuda-registry-and-annual-reporting"
+      ]
+    },
+    {
+      "ideaId": "eot-brand-protection-agent",
+      "originalComposite": 3.3,
+      "originalVerdict": "park",
+      "qualification": "fail",
+      "headline": "EOT Brand-Protection & Misinformation Agent fails second-pass: weak Greek-language moat against corporate brand-protection SaaS (Red Points, BrandShield, MarkMonitor), no fresh operational precedent (France Atout / Italy ENIT / Spain Turespana are all manual takedown campaigns), narrow IP/brand-protection legal founder pool in Athens, and the housing-crisis political tailwind that lifts AMA cross-",
+      "axes": {
+        "buyerReachability": 3,
+        "precedentFreshness": 2,
+        "founderMarketFit": 2,
+        "pilotProcurability": 4,
+        "lockInRisk": 2,
+        "studioFit": 2
+      },
+      "compositeNew": 2.5,
+      "blockers": [
+        "Lock-in risk axis 2: brand-protection SaaS (Red Points, BrandShield, MarkMonitor) is a mature commercial category with multinational vendors that already sell into government brand offices; differentiation collapses to 'Greek-language drafting + national-tourism vertical', which is a feature not a moat.",
+        "Founder-market fit axis 2: IP / brand-protection legal background plus brand-monitoring-tech engineering is a narrow founder pool in Athens; no clear identifiable 90-day recruit list comparable to the AADE-auditor leg on AMA cross-check.",
+        "Precedent freshness axis 2: France, Italy, Spain precedents are all manual takedown campaigns from 2023-2024 with no agentic deployment in 2025-2026 — implies tourism-board buyers don't see this as a budget priority.",
+        "Studio-fit axis 2: anti-fraud has zero political-resonance lift; no PM-office narrative; the buyer-hook 'N lookalike Acropolis-ticket domains' is operational PR not headline policy.",
+        "Composite drops below 3.0 threshold on hostile axes — kill per rubric (composite < 3.0)."
+      ],
+      "next30days": "Drop from the first-wave slate. If a brand-protection-tech founder later approaches the studio with a different commercial wedge (e.g. monastic / archaeological-site IP, not generic Acropolis-ticket scams), revisit then — but do not invest discovery cycles in the EOT-as-buyer framing.",
+      "evidenceLinks": []
+    }
+  ]
+}
