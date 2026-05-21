@@ -2067,7 +2067,7 @@ export const ideas: Idea[] = [
     "description": "Re-spec'd AGAIN 2026-05-21 (2nd round) after the redTeamFindings[1] finding that the 'sell into 3 PIS vendors' framing was a category error: Farmakon is a product line of Epsilon CSA (EPSILON NET acquired 2022); LAVINET tucked Jan 2024 (€184K); Galaxy Pharma absorbed via SingularLogic SPA (€18.05M). EpsilonNet runs >50% Greek pharmacy desktop — the buyer set is effectively a monopsonist, not 3 independent vendors, and CGM PRESCRIBE (2025 Surescripts White Coat winner) proves the largest EU PIS vendors BUILD adherence natively rather than white-label. \n\nNew shape: invert from sell-side SaaS to buy-side data play. €40K Phase 0 buys a paid ELPEN or Pharmathen RWE contract (cash, not LOI) on a single branded-molecule cohort. Two binary outcomes at Week 12: (a) signed paid contract ≥€50K → T-Life balance sheet funds acquisition of a non-Epsilon tail PIS vendor (3-4 candidates exist in the 30-40% non-Epsilon tail at est. €2-5M EV per public M&A comps), gaining direct ownership of the data pipe + recurring rev from existing pharmacy seats; or (b) clean fail with a publishable RWE study and zero sunk integration. The PIS-vendor question becomes a build-vs-buy decision T-Life controls, not a license-into-a-competitor negotiation. WinMedica's leverage converts from soft co-marketing weight to hard acquisition-target sourcing.",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
-    "primaryMarketRationale": "1 named buyer in Phase 0 (ELPEN OR Pharmathen, paid contract). Acquisition target set in Phase 1 = 2-4 non-Epsilon tail PIS vendors in the Greek 30-40% non-consolidated segment.",
+    "primaryMarketRationale": "1 named buyer in Phase 0 (ELPEN OR Pharmathen, paid contract). Acquisition target set in Phase 1 = 2 confirmed independent tuck-in candidates (Europharmacy IKE, In-house Solutions / E-Care) + 1 scale-meaningful structured option (Dioscourides AE 35% minority via ILYDA). See research/tail-pis-targets.md.",
     "expansionMarkets": [
       {
         "market": "europe",
@@ -2096,7 +2096,7 @@ export const ideas: Idea[] = [
       "phase0-funded"
     ],
     "addedDate": "2026-05-16",
-    "notes": "RE-SPEC v3 2026-05-21 (2nd-round red-team adoption). Decision basis: redTeamFindings[1] surfaced EpsilonNet's >50% Greek pharmacy desktop consolidation (CSA 2022, LAVINET Jan 2024, Galaxy Pharma via SingularLogic SPA €18.05M). The v2 'sell into 3 vendors' framing was effectively a monopsonist negotiation against a listed consolidator with a fresh M&A track record buying competing codebases for sub-€200K. Adopting redTeamFindings[1].alternativeThesis verbatim: pivot to buy-side, anchor Phase 0 on ELPEN/Pharmathen paid data contract, use Week-12 outcome to gate a T-Life balance-sheet acquisition of a non-Epsilon tail PIS vendor.\n\nNow the ONLY funded Phase 0 bet — HospitalStaff-API was killed 2026-05-21 after 2nd-round red-team found 3 independent kill vectors (Aya UK + RLDatix-Allocate already build; EUDI Wallet eIDAS 2.0 commoditizes by Dec 2027; Directive 2005/36/EC Annex V auto-recognition makes 'data' thin). See catalog-cuts.ts.\n\nPRIOR HISTORY:\n- v1 2026-05-16: standalone pharmacy SaaS via WinMedica warm channel\n- 2026-05-20 1st red-team (verdict: revise — channel confusion)\n- v2 2026-05-21 morning: certified module into SCRIPTA/PharmaSoft/Farmakon @ €10-30/pharmacy/mo rev-share\n- 2026-05-21 evening 2nd red-team (verdict: proceed-with-caveats — Farmakon ≠ independent; monopsonist)\n- v3 2026-05-21 evening: this entry. Buy-side, ELPEN data contract Week-12 gate, tail-PIS acquisition Phase 1.",
+    "notes": "RE-SPEC v3 2026-05-21 (2nd-round red-team adoption). Decision basis: redTeamFindings[1] surfaced EpsilonNet's >50% Greek pharmacy desktop consolidation (CSA 2022, LAVINET Jan 2024, Galaxy Pharma via SingularLogic SPA €18.05M). The v2 'sell into 3 vendors' framing was effectively a monopsonist negotiation against a listed consolidator with a fresh M&A track record buying competing codebases for sub-€200K. Adopting redTeamFindings[1].alternativeThesis verbatim: pivot to buy-side, anchor Phase 0 on ELPEN/Pharmathen paid data contract, use Week-12 outcome to gate a T-Life balance-sheet acquisition of a non-Epsilon tail PIS vendor.\n\nNow the ONLY funded Phase 0 bet — HospitalStaff-API was killed 2026-05-21 after 2nd-round red-team found 3 independent kill vectors (Aya UK + RLDatix-Allocate already build; EUDI Wallet eIDAS 2.0 commoditizes by Dec 2027; Directive 2005/36/EC Annex V auto-recognition makes 'data' thin). See catalog-cuts.ts.\n\nTAIL-PIS TARGET RESEARCH 2026-05-21 (see research/tail-pis-targets.md): only 2 clean independent tuck-ins exist (Europharmacy IKE, In-house Solutions AE). Entersoft already absorbed SmartPharmaSys Nov 2022 (€1.8M for €1.1M rev / €0.22M EBITDA — exact deal-box comp). Scale-meaningful path = 35% minority of Dioscourides AE (ILYDA carve-out). ma-k2 reshaped to accept either tuck-in OR minority structure as deployable-capital path.\n\nPRIOR HISTORY:\n- v1 2026-05-16: standalone pharmacy SaaS via WinMedica warm channel\n- 2026-05-20 1st red-team (verdict: revise — channel confusion)\n- v2 2026-05-21 morning: certified module into SCRIPTA/PharmaSoft/Farmakon @ €10-30/pharmacy/mo rev-share\n- 2026-05-21 evening 2nd red-team (verdict: proceed-with-caveats — Farmakon ≠ independent; monopsonist)\n- v3 2026-05-21 evening: this entry. Buy-side, ELPEN data contract Week-12 gate, tail-PIS acquisition Phase 1.\n- 2026-05-21 night: tail-PIS market research; ma-k2 reshaped to include Dioscourides minority option.",
     "whyNow": "ELPEN/Pharmathen RWE-data spend window: IQVIA Greece office sells Xponent/LRx feeds at scale to global pharma, but Greek branded-molecule adherence cohorts for ELPEN/Pharmathen-specific portfolios are NOT in IQVIA's standard SKU — they require purpose-built cohort design. EpsilonNet's roll-up has compressed independent-tail PIS valuations (LAVINET sold for €184K in Jan 2024) which puts 2-4 acquisition targets in the €2-5M EV range — exactly the T-Life balance-sheet check size. Both windows close in 12-18 months if EpsilonNet completes the roll-up or IQVIA productizes Greek-cohort RWE.",
     "roadToMoat": [
       {
@@ -2190,6 +2190,22 @@ export const ideas: Idea[] = [
         "source": "[ESTIMATE]",
         "status": "estimated",
         "lastChecked": "2026-05-16"
+      },
+      {
+        "id": "ma-a6",
+        "claim": "Non-Epsilon tail of Greek PIS market is THINNER than the v3 spec assumed: only 2 clean independent tuck-in candidates exist (Europharmacy IKE / euromedica TWO — Thessaloniki, founder-led, PFS Platinum award; In-house Solutions AE / E-Care — generalist IT house with pharmacy vertical). SmartPharmaSys was acquired by Entersoft Nov 2022 for €1.8M + earnout (€1.1M rev / €0.22M EBITDA). The scale-meaningful path = 35% minority of Dioscourides AE (carve-out sub of ATHEX-listed ILYDA, ~1,250+ pharmacies, founder still President with ~57% insider ownership).",
+        "source": "research/tail-pis-targets.md (commissioned 2026-05-21)",
+        "status": "confirmed",
+        "lastChecked": "2026-05-21",
+        "note": "MATERIAL: tightens ma-k2 target set. The 'scaled at 1000-2500 pharmacy seats' framing was wrong — the 2 tuck-in candidates are likely sub-500 seats each. Scale-meaningful coverage requires the Dioscourides minority structure (no operational control, trades for board seat + RWE data-rights)."
+      },
+      {
+        "id": "ma-a7",
+        "claim": "Entersoft / Smartware SmartPharmaSys deal Nov 2022 = €1.8M for ~€1.1M revenue / €0.22M EBITDA — exact public comp for the tuck-in deal box; proves tail-PIS vendors clear at ~1.6× revenue / ~8× EBITDA at the small end of the market.",
+        "source": "https://www.entersoft.eu/2022/11/07/smartware-acquisition/",
+        "status": "confirmed",
+        "lastChecked": "2026-05-21",
+        "note": "Anchors the €2-5M EV deal box but also signals competition: Entersoft is an active acquirer in the same space."
       }
     ],
     "killTests": [
@@ -2204,12 +2220,12 @@ export const ideas: Idea[] = [
       },
       {
         "id": "ma-k2",
-        "hypothesis": "≥2 non-Epsilon Greek tail PIS vendors are acquirable at ≤€5M EV with deliverable ownership terms by Week 14",
-        "experiment": "M&A advisor or direct outreach to 4-6 non-Epsilon tail vendors; soft term-sheet conversations; reference public M&A comps (LAVINET €184K, comparable scaled at 1000-2500 pharmacy seats)",
+        "hypothesis": "By Week 14, deployable capital path is open via ONE of: (a) ≥1 of Europharmacy IKE / In-house Solutions AE willing-seller signal at €1-3M EV; (b) Dioscourides AE 35% minority + RWE data-rights term sheet with ILYDA at €2-5M total commitment",
+        "experiment": "Targeted outreach to the 2 named tuck-in candidates (Europharmacy Thessaloniki + In-house Solutions) AND a parallel approach to ILYDA's President for the Dioscourides minority/JV structure. Reference Entersoft/SmartPharmaSys €1.8M comp (€1.1M rev / €0.22M EBITDA) as the deal-box anchor. M&A advisor if needed; otherwise direct founder-to-founder.",
         "costEur": 14000,
         "durationWeeks": 14,
-        "killSignal": "<2 candidates with willing-seller signals at ≤€5M (KEY GATE — failing this means even if ELPEN contract validates, there is no acquisition target to deploy capital into)",
-        "validateSignal": "≥2 candidates with priced-or-discussed term sheets at €2-5M EV"
+        "killSignal": "BOTH tuck-in candidates decline AND ILYDA declines the Dioscourides minority/JV conversation (KEY GATE — failing this means even if ELPEN contract validates, there is no capital-deployment path)",
+        "validateSignal": "≥1 of: tuck-in term sheet at €1-3M, OR Dioscourides minority + RWE-rights term sheet at ≤€5M total"
       }
     ],
     "preMortem": [
@@ -2233,7 +2249,7 @@ export const ideas: Idea[] = [
       "reaches1mArrBy18mo": 0.4,
       "reaches10mArrBy36mo": 0.08,
       "totalFailureBy36mo": 0.45,
-      "basisOfEstimate": "Re-spec'd v3 2026-05-21 (buy-side). €1M ARR feasible if Week-12 ELPEN contract gates pass AND acquisition closes within 12 months — acquired vendor brings €0.5-1M existing rev + €100-300K incremental from ELPEN-style contracts. €10M ARR explicitly UNLIKELY by design; this is a balance-sheet infrastructure bet, not a venture bet. Higher P(failure) than v2 reflects: (a) ELPEN/Pharmathen IQVIA-competition risk, (b) tail-PIS vendor unwillingness to sell, (c) acquisition integration risk new to T-Life operating model. €40K probe is binary-cheap regardless."
+      "basisOfEstimate": "Re-spec'd v3 2026-05-21 (buy-side); refined post-tail-PIS-research 2026-05-21 night. €1M ARR feasible if Week-12 ELPEN contract gates pass AND deployable-capital path resolves (tuck-in OR Dioscourides minority). Tuck-in path = acquired vendor brings €0.3-1M existing rev (SmartPharmaSys €1.1M comp) + €100-300K incremental from ELPEN-style contracts = €0.4-1.3M ARR exit. Minority path = no direct rev but board access + RWE data-rights into 1,250+ Dioscourides pharmacies — different shape, slower compound. €10M ARR explicitly UNLIKELY by design; this is a balance-sheet infrastructure bet, not a venture bet. Higher P(failure) than v2 reflects: (a) ELPEN/Pharmathen IQVIA-competition risk, (b) THINNER independent-tail than v3 assumed (only 2 tuck-in candidates, not 4), (c) Entersoft is an active competing acquirer (Nov 2022 comp), (d) acquisition integration risk new to T-Life operating model. €40K probe is binary-cheap regardless."
     },
     "redTeamFindings": [
       {
