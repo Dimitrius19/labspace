@@ -1,0 +1,17 @@
+{
+  "date": "2026-05-21",
+  "verdict": "kill",
+  "dealKiller": "Spec's #1 named target (Matrix Insurance & Reinsurance Brokers) was acquired by Howden in April 2020 and rebranded Howden Matrix/Howden Hellas; #2 target (Karavias) is a Lloyd's coverholder since 1992 whose value evaporates under any change-of-control without PRA+FCA+Lloyd's re-approval; Acrisure/Unilink bought Mega Brokers Aug 2025, Piraeus bought 70% of Ethniki Mar 2025, Reale bought 75% of Ydrogios Feb 2025 — the Greek broker tail this thesis targets is already mid-consolidation by strategics with deeper pockets, leaving only adversely-selected scraps. Spec's authors did not check whether their flagship target still exists as an independent company in 2026.",
+  "patternMatches": [
+    "named-target-already-acquired (Matrix-Howden 2020, public for 6 years before this memo)",
+    "stale-desk-research (treats 2023 Howden entry as 'why now' in 2026)",
+    "regulatory-license-risk-ignored (Lloyd's coverholder change-of-control = PRA+FCA+Lloyd's re-approval, can fail)",
+    "earn-out/headcount-incompatibility (24-mo retention covenants vs. firing 70% of servicers Year 1 — same critique spec levels at Howden applies to T-Life)",
+    "AI-labor-compression-unvalidated (no published EU broker case study shows 70% account-servicer cut; industry data shows 9% net headcount reduction expected, not 50%)",
+    "captive-anchor-overclaimed (ELPEN/WinMedica €2-4M spend is asserted, not sourced; pharma D&O+product-liability typically goes through Lloyd's coverholders or Howden/Aon/Marsh global accounts, not a sub-€5M Greek shop)",
+    "carrier-portal-API-fiction (Greek carriers run customer-facing portals — Chara/ERGO forMe — no documented broker-side API for programmatic endorsement/COI issuance)"
+  ],
+  "unitEconomicsConcern": "20%→38-44% EBITDA leap requires (a) keeping 100% of the book through a 70% servicer purge (broker retention math says 5-10pt churn per year of disruption — book burns to €2.1-2.4M, not €3.6M), (b) carrier portals exposing write-APIs they don't expose, (c) Lloyd's/coverholder licenses surviving change-of-control. Realistic post-overhaul: rev €2.4M, EBITDA €550-700K (23-29%), not the claimed 38-44%. 5-7× EBITDA on degraded €600K = €3-4.2M EV but T-Life pays €2-4M for a shop that books €600K LESS revenue post-integration. Negative ROIC for 36+ months.",
+  "loadBearingAssumption": "That Matrix/Karavias/EuroInsurances are still independent, willing-seller, AI-naive shops in 2026. Falsified: Matrix gone since 2020, Karavias is a Lloyd's-dependent specialist (not a generalist account-servicing shop the AI thesis fits), Mega Brokers gone Aug 2025. The remaining HAIB tail at sub-€2M is below the AI-investment break-even and adversely-selected (the good ones got picked off 2020-2025).",
+  "alternativeThesis": "If T-Life insists on Greek insurance distribution: pivot to MGA/coverholder build (not broker roll-up) — license a Lloyd's coverholder de novo around ELPEN/WinMedica pharma product-liability and a narrow Greek life-sciences specialty book, hire 2-3 ex-Howden Hellas/Matrix underwriters at exit. Captures the actual moat (binding authority + niche underwriting data) instead of buying a melting ice-cube of account-servicer FTEs. Falls outside the 'acquisition-shaped' frame, which means this candidate should be cut from this memo entirely and the slot reassigned."
+}
