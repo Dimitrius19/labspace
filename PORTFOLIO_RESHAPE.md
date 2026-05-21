@@ -7,7 +7,7 @@
 
 ---
 
-> **⚠️ READ §8 FIRST.** The 2nd-round red-team on both re-spec'd Phase 0 bets (run same-day) materially changed the funded portfolio: HospitalStaff-API killed (€120K returns to reserve), MedAdherence-PIS re-spec'd a second time to a buy-side play (MedAdherence-RWE), and the funded Phase 0 commit dropped from **€200K → €80K**. The body of this memo (§§1-7) is preserved as the morning's reasoning; §8 reflects the actual decision state.
+> **⚠️ READ §8 FIRST — particularly §8.6.** Same-day 2nd-round red-team results materially changed the entire portfolio: HospitalStaff-API killed (€120K returns to reserve), MedAdherence-PIS re-spec'd a second time to a buy-side play (MedAdherence-RWE), and a follow-on 2nd-round review of the 9 morning-filter-survivors produced **9 of 9 KILL verdicts**. Catalog went 14 → 4 ideas. Only the funded MedAdherence-RWE survived intensive scrutiny. Funded Phase 0 commit = **€40K**, reserve = **€160K**. The body of this memo (§§1-7) is preserved as the morning's reasoning; §8 reflects the actual decision state.
 
 ---
 
@@ -182,3 +182,50 @@ The 2nd-round red-team cost ~€0 (two parallel agent runs, ~4 minutes wall-cloc
 
 - If **MedAdherence-RWE** validates both kill tests: deploy €2-5M from T-Life balance sheet for tail-PIS acquisition; no VC round needed.
 - If either fails: kill cleanly. Total burn = €40K. Reserve grows back to €200K and the next bet draws from the surviving 12 catalog entries or net-new sourcing.
+
+---
+
+## 8.6 — Filter-survivor 2nd-round red-team (2026-05-21 night): 9 of 9 KILLED
+
+After the funded-bet decisions in §8.1-§8.5, the 9 catalog entries that passed the morning's "infrastructure-to-incumbents" filter but had not been adversarially reviewed were 2nd-round red-teamed in parallel. **Every single one died.**
+
+| Entry | Verdict | Deal-killer (one-line) |
+|---|---|---|
+| **altp-techshift** | KILL | Greek labor reality is shortage not displacement; RRF/Greece 2.0 funding expires Aug 2026 before Month-6 milestones; ALTP incubator doesn't open until Q1 2026. |
+| **olaf-trace-eu-funds** | KILL | EC's "corporate Arachne" (COM(2025)546 + SWD(2025)197) is being built as the integrated EU anti-fraud IT system with UBO/EDES/SUMMA/IMS interoperability — supplied free to the named buyer offices under mandatory CPR 2021/1060 data provision. |
+| **pharma-kickback-sentinel** | KILL | IQVIA Transparency Reporting (48 countries incl. Greece), Veeva + BMI SYSTEM NAYA, MediSpend (dedicated Greek product page), Qordata all ship EFPIA transfer-of-value + HCP anomaly detection as productized modules at 5-10 years tenure. |
+| **shipping-sanctions-tracer** | KILL | Lloyd's List Intelligence Seasearcher ARC + Evidencing Findings shipped; Windward recapitalized by FTV at $280M Mar 2025; Kpler vertically consolidated the AIS+SAR layer with Spire Maritime ($233.5M Apr 2025) + MarineTraffic + FleetMon. |
+| **agecare-compliance** | KILL | Two of three load-bearing Greek regulators misidentified (KEDASY is special-ed not elder-care; Law 5039/2023 is the Tempi transport law). KIFI operator count ~5× inflated against primary sources (~200-270 actual). Why-now and €10M ARR math both unsupportable. |
+| **pharmadataforge-llm-training** | KILL | Veeva ships native AI Agents + Direct Data API into Vault across Safety/Quality/Clinical/Regulatory through 2026 (squeeze from below); Claude for Life Sciences, GPT-Rosalind, Coefficient Bio acquisition, Clarivate-Anthropic MCP from above. Middle layer foreclosed. |
+| **porthos-shipping-llm-platform** | KILL | Veson IMOS X Claims CoCaptain (May 2025) is a domain-specific maritime LLM trained on charter party terms, Statements of Facts, laytime clauses — embedded in the IMOS platform Greek shipowners already run. Incumbent ate the exact wedge with proprietary data Porthos can't legally access. |
+| **mobivisa-employer-permits** | KILL | Localyze → Boundless acquisition Oct 2025 destroyed the named wedge. Deel + Remote Mobility + Pebl/Vialto + Fragomen Connect all ship native visa lifecycle. 70% cycle-time claim is impossible (bottleneck is sovereign queue: IE 9-11 wk, DE up to 3mo, EU Single Permit cap 90d). |
+| **diaspora-return** | KILL | Greek Ministry of Labor already runs reBrainGreece via Crowdpolicy — ESCO-coded jobs, AI matching, free for employers, active diaspora fairs in NYC/Stuttgart/London. Named anchor buyer IS the incumbent. Plus tax-incentive corridors weakened in 2024 (NHR closed, Impatriati cut 50%). |
+
+### 8.7 Methodology lesson
+
+**The morning "infrastructure-to-incumbents" filter is a useful necessary condition but not a sufficient one.** It is good at archiving obvious SOR-replacement plays (the 25 catalog cuts on 2026-05-21 morning) but cannot validate "passes." Every survivor either (a) named a buyer that turned out to be the incumbent doing the building, or (b) targeted a data/regulatory niche that an SOR vendor or sovereign system shipped or announced in the last 12 months, or (c) rested on a load-bearing fact that turned out to be factually wrong (agecare-compliance's regulator confusion; altp-techshift's labor-supply inversion).
+
+**Discipline going forward:** every entry must be **deeply adversarially red-teamed** before being included in any portfolio narrative. The "filter screened → ship" pipeline produced a 0-for-9 hit rate. The cost was ~€20 in API spend and ~15 minutes wall-clock — the value was avoiding ~€500K-1M of Phase 0 + founder-recruit burn on theses whose load-bearing assumptions were already empirically dead.
+
+### 8.8 Catalog state after 8.6
+
+**Catalog: 4 surviving ideas.**
+
+| ID | Title | Status |
+|---|---|---|
+| `longevity-pharmacy-protocol` | LongevityRx Pharmacy Protocol | Prior red-team PASS (2026-05-16) — held through reshape. |
+| `sme-bookkeeping-agent` | SME Bookkeeping Agent | Prior red-team PASS (2026-05-16) — held through reshape. |
+| `pawmetric-pet-health` | PawMetric Pet Health | Prior red-team PASS (2026-05-16) — held through reshape. |
+| `medadherence-pharmacy` | **MedAdherence-RWE** | **FUNDED Phase 0 €40K.** v3 spec, ma-k2 reshaped against tail-PIS research. |
+
+**Killed/archived from morning portfolio:** 34 entries (25 from morning filter + 1 HospitalStaff-API + 9 filter-survivors after 2nd-round).
+
+**Cuts file (catalog-cuts.ts):** 76 total entries documenting reasoning for each cut.
+
+**Funded Phase 0 commit:** **€40K** (MedAdherence-RWE only).
+**Reserve:** **€160K** (€40K original + €120K HospitalStaff kill).
+**Catalog 3 prior-PASS bets** are unredone; recommend they get 2nd-round red-teamed too before any further capital allocation. None are currently in the funded pipeline.
+
+### 8.9 Honest read
+
+Across 5 days and 3 rounds of adversarial review, the catalog went **57 → 39 → 14 → 13 → 4 ideas**. The only thesis that survived intensive scrutiny is MedAdherence-RWE — and even that one had to be re-spec'd three times (v1 → v2 → v3) and its kill tests reshaped after market research. **The 9/9 filter-survivor kill rate is the single most important data point in the entire exercise**: most "discovered B2B opportunities" do not survive an honest look at the 2024-2026 incumbent shipping cadence. The right portfolio is not bigger and broader — it is smaller, deeper, and structurally aligned with capital you actually control (in this case, T-Life balance-sheet acquisition rather than VC-shaped Phase 0).

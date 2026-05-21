@@ -416,4 +416,59 @@ export const catalogCuts: CatalogCut[] = [
     "composite": 3.3,
     "reason": "PORTFOLIO_RESHAPE.md 2nd-round (2026-05-21): KILL. The 2026-05-21 re-spec to credential-portability API → Aya/Doctari/RLDatix/Patchwork was itself killed in same-day 2nd-round red-team (verdict: REVISE; see redTeamFindings[1] in pre-cut archive). Three independent kill vectors: (1) Aya Global Talent UK already credentials 5,000+ international placements in-house; RLDatix acquired Allocate Dec 2025 to fuse credentialing + workforce management — buyers ARE building, not buying. (2) EUDI Wallet eIDAS 2.0 mandates healthcare-professional EAAs from all 27 member states by Dec 2026 with mandatory acceptance by Dec 2027 — public-good API collapses the moat on a statutory clock inside the Phase-0 window. (3) Directive 2005/36/EC Annex V auto-recognizes EU sectoral health professions (doctors, nurses, midwives, dentists, pharmacists), making 'verification' a thin admin workflow not a defensible data product. Unit economics cap at €1.2M ARR with 3-of-4 consolidator logos — wrong-shape for venture. Alternative (EUDI relying-party integration layer for NHS Trusts + Kliniken + staffing platforms ahead of Dec-2027 deadline) is a fundamentally different bet needing separate Phase 0 spec; not pursued in this catalog cycle. MedAdherence-RWE is now the only funded Phase 0 bet."
   }
+,
+  {
+    "id": "altp-techshift",
+    "title": "TechShift ALTP",
+    "composite": 3.65,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. The thesis is structurally upside-down: Greece is a labor-shortage economy (~300K vacancies, 8.5% unemployment, 6-in-10 foreign workers exiting to Western Europe) not a displacement economy, and the load-bearing RRF/Greece 2.0 funding tailwind expires August 2026 — before this venture's Month-6 milestone. Simultaneously, ALTP's biotech incubator only launches Q1 2026, so there is no tenant base to absorb the 200+ retrained hires/year required by kill-test ts-k3."
+  },
+  {
+    "id": "olaf-trace-eu-funds",
+    "title": "OLAFTrace",
+    "composite": 3.2,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. The EC is actively building 'corporate Arachne' as the single integrated IT anti-fraud system (COM(2025)546 White Paper, SWD(2025)197), explicitly extending Arachne with beneficial-ownership risk indicators and EDES/SUMMA/IMS interoperability — this is the exact 'last-mile layer' OLAFTrace pitches, but built in-house by DG BUDG with mandatory Member State data provision under CPR 2021/1060. The named buyer offices (OLAF, EPPO, EDEL, Greek Court of Auditors) consume this for free; there is no €100-250K ACV line item to capture."
+  },
+  {
+    "id": "pharma-kickback-sentinel",
+    "title": "Sentinel Pharma Compliance",
+    "composite": 3.5,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. The EFPIA transfer-of-value reporting + HCP anomaly detection use case has been a shipped, productized module from at least four incumbents (IQVIA Transparency Reporting covers 48 countries / 324 reports including Greece; Veeva + BMI SYSTEM NAYA explicitly markets a 'complete EFPIA compliance management solution'; MediSpend has a dedicated Greece transparency product; Qordata sells Aggregate Spend + Compliance Monitoring globally) for 5-10 years, and they have already won the mid-market via SAP Concur connectors and per-country pricing tiers."
+  },
+  {
+    "id": "shipping-sanctions-tracer",
+    "title": "VesselVerity",
+    "composite": 3.3,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. The 'evidence package for dark voyages' product already shipped from Lloyd's List Intelligence (Seasearcher Advanced Risk & Compliance + explicit 'Evidencing Findings' module covering OFAC/OFSI/EU 50% rules, AIS manipulation, STS detection) and Windward (now FTV-owned, $280M deal March 2025), while the underlying AIS+SAR data layer was vertically consolidated in 2024-2025 (Kpler acquired Spire Maritime for $233.5M and MarineTraffic/FleetMon; Pole Star acquired Clearwater Dynamics). A €300-600K seed startup cannot rent AIS data from a competitor (Kpler/Spire), out-pedigree LLI/Windward at OFAC/OFSI desks, and survive 12-24mo B2G cycles simultaneously."
+  },
+  {
+    "id": "agecare-compliance",
+    "title": "CareClear",
+    "composite": 3.55,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. Two of the three load-bearing regulators/statutes are misidentified: KEDASY is Greece's special-education assessment body (not elder-care licensing), and Law 5039/2023 is the Tempi rail-disaster transport law (already self-flagged in cc-a1). With the 'why now' regulatory tailwind unsupported and the licensing buyer wrong, the thesis has no verified anchor."
+  },
+  {
+    "id": "pharmadataforge-llm-training",
+    "title": "PharmaDataForge",
+    "composite": 3.65,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. Veeva ships native AI Agents and Direct Data API into Vault across Safety/Quality/Clinical/Regulatory through 2026, collapsing the 'GxP-compliant data pipeline' wedge into a free feature of the system PharmaDataForge depends on for ingestion."
+  },
+  {
+    "id": "porthos-shipping-llm-platform",
+    "title": "Porthos",
+    "composite": 3.85,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. Veson IMOS X Claims CoCaptain shipped in May 2025 — a domain-specific maritime LLM trained on charter party terms, Statements of Facts, and laytime clauses, embedded directly in the IMOS platform that 80%+ of Porthos's target customers already use; the incumbent has already eaten the wedge with the actual fixture/voyage data Porthos cannot legally access."
+  },
+  {
+    "id": "mobivisa-employer-permits",
+    "title": "MobiVisa",
+    "composite": 3.4,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. The 'multi-jurisdiction wedge vs Localyze' thesis collapsed on 1 Oct 2025 when Boundless acquired Localyze, creating a single unified Americas+EU+APAC mobility platform; meanwhile Deel, Remote (Mobility), Velocity Global/Pebl+Vialto, and Fragomen Connect (120-engineer tech lab, owns SimpleCitizen) have all shipped native visa-lifecycle automation with auto-populated forms, case tracking, renewal reminders and HRIS integration — leaving MobiVisa with no defensible wedge and a closing window."
+  },
+  {
+    "id": "diaspora-return",
+    "title": "DiasporaReturn",
+    "composite": 3.65,
+    "reason": "PORTFOLIO_RESHAPE.md §8.6 (2026-05-21 night): 2nd-round red-team KILL. The named anchor buyer (Greek Ministry of Labor / reBrainGreece) has already built and deployed the platform via Crowdpolicy — ESCO-coded job posts, AI matching, NYC/Stuttgart/London fairs, free for employers — so the wedge is occupied by an incumbent gov-funded portal whose unit economics (€0 to corporates) make a paid SaaS layer structurally impossible."
+  }
 ];
