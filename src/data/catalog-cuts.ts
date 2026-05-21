@@ -409,4 +409,11 @@ export const catalogCuts: CatalogCut[] = [
     "composite": 3.25,
     "reason": "PORTFOLIO_RESHAPE.md filter (2026-05-21): ARCHIVE. Saudi HRDF/Tawteen + UAE MoHRE + Tahaluf platforms are the SORs; corporate training SaaS competes with Pluralsight/Coursera/Cornerstone. Combined sovereign + commercial foreclosure."
   }
+,
+  {
+    "id": "hospitalstaff-eu",
+    "title": "HospitalStaff-API",
+    "composite": 3.3,
+    "reason": "PORTFOLIO_RESHAPE.md 2nd-round (2026-05-21): KILL. The 2026-05-21 re-spec to credential-portability API → Aya/Doctari/RLDatix/Patchwork was itself killed in same-day 2nd-round red-team (verdict: REVISE; see redTeamFindings[1] in pre-cut archive). Three independent kill vectors: (1) Aya Global Talent UK already credentials 5,000+ international placements in-house; RLDatix acquired Allocate Dec 2025 to fuse credentialing + workforce management — buyers ARE building, not buying. (2) EUDI Wallet eIDAS 2.0 mandates healthcare-professional EAAs from all 27 member states by Dec 2026 with mandatory acceptance by Dec 2027 — public-good API collapses the moat on a statutory clock inside the Phase-0 window. (3) Directive 2005/36/EC Annex V auto-recognizes EU sectoral health professions (doctors, nurses, midwives, dentists, pharmacists), making 'verification' a thin admin workflow not a defensible data product. Unit economics cap at €1.2M ARR with 3-of-4 consolidator logos — wrong-shape for venture. Alternative (EUDI relying-party integration layer for NHS Trusts + Kliniken + staffing platforms ahead of Dec-2027 deadline) is a fundamentally different bet needing separate Phase 0 spec; not pursued in this catalog cycle. MedAdherence-RWE is now the only funded Phase 0 bet."
+  }
 ];

@@ -3,7 +3,11 @@
 **Date:** 21 May 2026
 **To:** Tryfon family principals
 **Re:** 9/9 red-team pattern, catalog re-shape decision
-**Status:** Supersedes `PHASE0.md` (preserved for historical record)
+**Status:** Supersedes `PHASE0.md` (preserved for historical record). **§8 ADDENDUM 2026-05-21 evening — see end of memo.**
+
+---
+
+> **⚠️ READ §8 FIRST.** The 2nd-round red-team on both re-spec'd Phase 0 bets (run same-day) materially changed the funded portfolio: HospitalStaff-API killed (€120K returns to reserve), MedAdherence-PIS re-spec'd a second time to a buy-side play (MedAdherence-RWE), and the funded Phase 0 commit dropped from **€200K → €80K**. The body of this memo (§§1-7) is preserved as the morning's reasoning; §8 reflects the actual decision state.
 
 ---
 
@@ -111,5 +115,70 @@ Auto-archive any entry that fails the filter. The 9/9 evidence base is sufficien
 
 - 2026-05-16 — PHASE0.md drafted with 3-bet portfolio: Aletheia GxP + GCCNationalize + HospitalStaff
 - 2026-05-20 — 9 adversarial reviews completed; all top-3 picks materially weakened; pattern across 9/9 reviews is consistent
-- 2026-05-21 — This memo. Portfolio re-shaped to 2 infrastructure bets totalling €160K Phase 0 deployment + €40K reserve
+- 2026-05-21 morning — This memo. Portfolio re-shaped to 2 infrastructure bets totalling €160K Phase 0 deployment + €40K reserve
+- 2026-05-21 morning — Executed: catalog cut from 39 → 14 ideas (25 archived); HospitalStaff re-spec'd to HospitalStaff-API; MedAdherence re-spec'd to MedAdherence-PIS
+- 2026-05-21 evening — 2nd-round red-team on both re-spec'd bets surfaced material kill vectors. See §8 below.
 - **PHASE0.md is superseded.** Retained as historical record of the pre-red-team plan.
+
+---
+
+## 8. §8 ADDENDUM — 2nd-round red-team results (2026-05-21 evening)
+
+Same-day adversarial review of both re-spec'd Phase 0 bets to validate the new shapes before founder recruitment. Both came back with material findings.
+
+### 8.1 HospitalStaff-API → **KILLED**
+
+Verdict: **REVISE** with three independent kill vectors. Decision: **kill the bet entirely.** Moved to `catalog-cuts.ts`. €120K returns to reserve.
+
+Kill vectors:
+
+1. **Buyers already build it.** Aya Global Talent UK office credentials 5,000+ international placements in-house pre-acquisition; RLDatix acquired Allocate in Dec 2025 and explicitly markets "only platform combining workforce management with credentialing." The load-bearing assumption "consolidators can't economically build credential portability" is empirically false in 2026 — they are building, or have built.
+2. **EUDI Wallet statutory clock.** eIDAS 2.0 Implementing Acts 2025 mandate healthcare-professional EAA issuance by every member state by Dec 2026 and mandatory relying-party acceptance by Dec 2027. The "low likelihood" of a public-good EPC API in the preMortem was wrong — the API is legally mandated and inside the Phase-0 + seed window.
+3. **Annex V auto-recognition.** EU sectoral health professions (doctors, nurses, midwives, dentists, pharmacists) get **automatic recognition** under Directive 2005/36/EC Annex V. The "verification data moat" is a thin administrative-workflow wrapper, not a defensible data product.
+
+Unit economics cap: 4 named buyers × realistic €200-400K = **€1.2M ARR ceiling** with 3-of-4 logos. €120K Phase 0 + €300-600K member-state legal mapping for a market that maxes at €3-5M ARR is wrong-shape for venture.
+
+Alternative thesis offered by the red-team — **pivot to EUDI relying-party integration layer** (SaaS sold to NHS Trusts, Kliniken, staffing platforms ahead of Dec-2027 mandatory-acceptance deadline) — is a fundamentally different bet. Not pursued in this catalog cycle; flagged for re-evaluation if the right founder surfaces.
+
+### 8.2 MedAdherence-PIS → **MedAdherence-RWE** (3rd-version re-spec)
+
+Verdict: **PROCEED-WITH-CAVEATS** with one structural correction. Decision: **adopt the buy-side reframe verbatim** and ship a third spec.
+
+Material finding: the morning re-spec's "3 independent PIS-vendor buyers" framing was already invalid. **Farmakon is not an independent vendor** — it is a product line of Epsilon CSA, a wholly-owned subsidiary of EPSILON NET (CSA acquired 2022 €2.73M; LAVINET Jan 2024 €184K; Galaxy Pharma absorbed via the €18.05M SingularLogic SPA). EpsilonNet now runs >50% of Greek pharmacy desktops (~5,200 of ~10,400). The "3-vendor" motion collapses to a monopsonist negotiation against a listed consolidator with a fresh sub-€200K M&A track record on competing codebases.
+
+CGM PRESCRIBE (2025 Surescripts White Coat winner) compounds the pattern — the largest EU PIS vendor BUILDS adherence natively, not licenses it.
+
+Adopted alternative thesis: invert from sell-side SaaS to buy-side data play.
+
+- **Phase 0 (€40K, Week 12 binary kill):** Signed PAID ELPEN or Pharmathen RWE/adherence data contract ≥€50K. Cash, not LOI. Second kill test in parallel: ≥2 non-Epsilon tail PIS vendors are acquirable at ≤€5M EV with deliverable ownership terms by Week 14.
+- **Phase 1 (€2-5M from T-Life balance sheet, Month 3-12):** Acquire 1 non-Epsilon tail PIS vendor at €2-5M EV. Data pipe live across acquired vendor's 800-2,500 pharmacy seats. Second branded-molecule cohort with ELPEN.
+- **Phase 2 (Month 12-36):** €2-5M ARR steady-state from acquired SaaS rev + RWE contracts. Off-balance-sheet. Never raises VC.
+
+Why this works for T-Life specifically:
+
+- ELPEN is the natural Phase 0 anchor (same family, same building, paid contract not LOI).
+- T-Life Capital balance sheet at €2-5M is exactly sized for the acquisition — no other portfolio idea has this tight a fit between asset edge + capital structure + execution capability.
+- EpsilonNet's roll-up has compressed independent-tail PIS valuations (LAVINET sold for €184K Jan 2024); 2-4 acquisition targets sit in the €2-5M EV range right now.
+- WinMedica's leverage converts from soft co-marketing weight (the morning re-spec's framing) to **hard acquisition-target sourcing** — a real and durable edge.
+
+Founder profile changes: from "pharma SaaS BD lead" → "M&A operator + RWE epidemiologist." Smaller, more recruitable archetype.
+
+### 8.3 Net funded portfolio (revised)
+
+| Action | Amount | Detail |
+|---|---|---|
+| **Fund MedAdherence-RWE** | **€40K Phase 0** | Two binary kill tests by Week 14: (1) signed paid ELPEN/Pharmathen contract ≥€50K, (2) ≥2 acquirable non-Epsilon tail PIS vendors at ≤€5M EV with willing-seller signals. **Both must pass.** Phase 1 = €2-5M T-Life balance-sheet acquisition on validation. |
+| **Kill HospitalStaff-API** | **−€120K** | Returns to reserve. Killed at the desk before any founder recruit spend, not after a Phase 0 burn. |
+| **Reserve** | **€160K** | €40K original reserve + €120K from HospitalStaff kill. Available for: (a) EUDI relying-party pivot if founder surfaces; (b) MedAdherence Phase 1 top-up; (c) one new infrastructure bet from the surviving 12 catalog entries if it converts to an infrastructure-to-incumbents framing. |
+| **Total 6-month Phase 0 commit** | **€40K** | vs €200K in §5 above. The 2nd-round red-team prevented a €120K founder-search + Phase 0 burn on a bet whose load-bearing assumption was empirically false. |
+
+### 8.4 What the 2nd round bought us
+
+The 2nd-round red-team cost ~€0 (two parallel agent runs, ~4 minutes wall-clock, ~€2 in API calls) and saved €120K + 6 months of founder-search effort by killing HospitalStaff-API before commitment. The same review materially improved the MedAdherence shape — converting a license-into-monopsonist play into a balance-sheet acquisition play that actually matches T-Life's capital structure.
+
+**Discipline going forward**: every Phase 0 re-spec must be 2nd-round red-teamed before founder recruitment starts. The same-day cycle works.
+
+### 8.5 Decision gate (Week 14)
+
+- If **MedAdherence-RWE** validates both kill tests: deploy €2-5M from T-Life balance sheet for tail-PIS acquisition; no VC round needed.
+- If either fails: kill cleanly. Total burn = €40K. Reserve grows back to €200K and the next bet draws from the surviving 12 catalog entries or net-new sourcing.

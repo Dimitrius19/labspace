@@ -2060,82 +2060,82 @@ export const ideas: Idea[] = [
   },
   {
     "id": "medadherence-pharmacy",
-    "title": "MedAdherence-PIS",
-    "ycCategory": "Pharmacy-PIS Certified Module",
+    "title": "MedAdherence-RWE",
+    "ycCategory": "Greek Pharma RWE + Tail-PIS Buy-Side",
     "ycBatchDate": "Fall 2026",
-    "oneLiner": "Certified adherence module inside Greek + EU pharmacy PIS vendors (SCRIPTA, PharmaSoft, Farmakon) at €10-30/pharmacy/mo rev-share. Buyer is the PIS-vendor PM (5-8 vendors covers 80% of EU-5 pharmacies) — not 10,000 owner-operators.",
-    "description": "Re-spec'd 2026-05-21 per PORTFOLIO_RESHAPE.md after the original standalone-pharmacy-SaaS thesis was killed by the 2026-05-20 red-team finding (WinMedica is a DRUG distributor not a SaaS channel; Greek pharmacy ownership law fragments the buyer; SCRIPTA/PharmaSoft/Farmakon already own the integrated POS+eRx+EOPYY+myDATA seat). New thesis: ship as a CERTIFIED adherence + MTM module licensed into the PIS vendors themselves — €10-30/pharmacy/month rev-share + one-time integration license per PIS vendor. WinMedica's actual leverage shifts from 'warm pharmacy intro' (low-value) to 'co-marketing weight with the PIS vendor that wants WinMedica's drug-stock feed' (structural). Secondary thesis: sell the de-identified adherence dataset to ONE Greek pharma (ELPEN, Pharmathen) for branded-molecule interventions at €100-300K/yr — concrete, T-Life-adjacent buyer, NOT chasing global pharma R&D buyers who already license IQVIA Xponent.",
+    "oneLiner": "Buy-side play in Greek pharmacy data infrastructure: Phase 0 lands a paid ELPEN or Pharmathen adherence-data contract at ≥€50K by Week 12. If it validates, T-Life acquires a non-Epsilon tail PIS vendor for low single-digit millions and owns the data pipe directly — instead of licensing into EpsilonNet (the consolidator that already runs >50% of Greek pharmacy desktops).",
+    "description": "Re-spec'd AGAIN 2026-05-21 (2nd round) after the redTeamFindings[1] finding that the 'sell into 3 PIS vendors' framing was a category error: Farmakon is a product line of Epsilon CSA (EPSILON NET acquired 2022); LAVINET tucked Jan 2024 (€184K); Galaxy Pharma absorbed via SingularLogic SPA (€18.05M). EpsilonNet runs >50% Greek pharmacy desktop — the buyer set is effectively a monopsonist, not 3 independent vendors, and CGM PRESCRIBE (2025 Surescripts White Coat winner) proves the largest EU PIS vendors BUILD adherence natively rather than white-label. \n\nNew shape: invert from sell-side SaaS to buy-side data play. €40K Phase 0 buys a paid ELPEN or Pharmathen RWE contract (cash, not LOI) on a single branded-molecule cohort. Two binary outcomes at Week 12: (a) signed paid contract ≥€50K → T-Life balance sheet funds acquisition of a non-Epsilon tail PIS vendor (3-4 candidates exist in the 30-40% non-Epsilon tail at est. €2-5M EV per public M&A comps), gaining direct ownership of the data pipe + recurring rev from existing pharmacy seats; or (b) clean fail with a publishable RWE study and zero sunk integration. The PIS-vendor question becomes a build-vs-buy decision T-Life controls, not a license-into-a-competitor negotiation. WinMedica's leverage converts from soft co-marketing weight to hard acquisition-target sourcing.",
     "primaryMarket": "greece-cyprus",
     "primaryMarketFit": "green",
-    "primaryMarketRationale": "3 named PIS-vendor buyers (SCRIPTA, PharmaSoft, Farmakon) reachable through existing ELPEN/WinMedica relationships. Greek market is the proof — EU-5 follows via the same 5-8 PIS-vendor consolidation.",
+    "primaryMarketRationale": "1 named buyer in Phase 0 (ELPEN OR Pharmathen, paid contract). Acquisition target set in Phase 1 = 2-4 non-Epsilon tail PIS vendors in the Greek 30-40% non-consolidated segment.",
     "expansionMarkets": [
       {
         "market": "europe",
         "fit": "yellow",
-        "note": "After Greek proof: DE (Pharmaserv, ADG, NOVENTI), IT (CompuGroup). 5-8 PIS vendors cover ~80% of EU-5 pharmacy desktop."
+        "note": "After acquisition + data pipe live: cross-sell Greek RWE methodology to DE/IT pharma (Stada, Menarini). EU PIS roll-up out of scope; CGM PRESCRIBE proves they build natively."
       },
       {
         "market": "middle-east",
         "fit": "red",
-        "note": "Not pursued — GCC pharmacy retail is chain-led (BinSina, LIFE) with different software topology; out of scope."
+        "note": "Not pursued."
       },
       {
         "market": "balkans",
         "fit": "red",
-        "note": "Not pursued — sub-scale TAM, fragmented PIS landscape."
+        "note": "Not pursued."
       }
     ],
     "stage": "discovered",
-    "tlifeAngle": "ELPEN + WinMedica relationships open the PIS-vendor PM door (the PIS vendor wants WinMedica's drug-stock feed and ELPEN co-marketing). Secondary: ELPEN/Pharmathen as the named buyer for the adherence-data layer at €100-300K/yr — concrete and adjacent, NOT global pharma R&D fantasy.",
+    "tlifeAngle": "ELPEN is the Phase 0 anchor design-partner (paid contract, not LOI) — same family, same building. WinMedica relationships convert from soft co-marketing to hard acquisition-target sourcing on the tail-PIS deal. T-Life Capital balance sheet at €2-5M is exactly sized for the acquisition without VC. No other portfolio idea has this tight a fit between asset edge + capital structure + execution capability.",
     "tags": [
-      "infrastructure-to-incumbents",
-      "pis-vendor-module",
-      "scripta-pharmasoft-farmakon",
-      "adherence-data-licensing",
-      "elpen-channel",
+      "buy-side-play",
+      "greek-pharma-rwe",
+      "elpen-anchor-contract",
+      "tail-pis-acquisition",
+      "t-life-balance-sheet",
       "phase0-funded"
     ],
     "addedDate": "2026-05-16",
-    "notes": "RE-SPEC 2026-05-21 per PORTFOLIO_RESHAPE.md. The original 'standalone pharmacy SaaS via WinMedica warm channel' framing died on the 2026-05-20 red-team finding (channel-confusion: WinMedica sells drugs not software; Greek pharmacy law fragments the buyer; PIS incumbents already own the seat). Adopted the redTeamFindings[0].alternativeThesis verbatim: certified module inside SCRIPTA/PharmaSoft/Farmakon at €10-30/pharmacy/mo rev-share + named-Greek-pharma adherence-data buyer at €100-300K/yr. Phase 0 budget reset to €40K with ONE binary kill test (signed PIS rev-share LOI by Week 12). Cheap, fast, decisive.\n\nFunded as 1 of 2 surviving Phase 0 bets in the re-shape. The other is hospitalstaff-eu (HospitalStaff-API).\n\nDoes not require external founder recruit beyond a fractional Greek BD lead (ELPEN/WinMedica relationships convert directly). Validation-pass success funds the next stage off T-Life balance sheet (€500K-1M) — no VC round needed.\n\nPRIOR HISTORY: v2 upgrade 2026-05-16 (4 assertion validation patches); red-team 2026-05-20 (verdict: revise with alternative thesis adopted).\n\n2ND-ROUND RED-TEAM 2026-05-21: see redTeamFindings[1].",
-    "whyNow": "PIS-vendor buying window: SCRIPTA + PharmaSoft + Farmakon have ZERO AI roadmap and will white-label rather than build (red-team load-bearing finding). EU pharma RWE buyers have moved upstream to IQVIA/Datavant, so the global pharma fantasy is dead — but ELPEN/Pharmathen still need branded-molecule adherence data and currently buy zero. Both windows align for 2026.",
+    "notes": "RE-SPEC v3 2026-05-21 (2nd-round red-team adoption). Decision basis: redTeamFindings[1] surfaced EpsilonNet's >50% Greek pharmacy desktop consolidation (CSA 2022, LAVINET Jan 2024, Galaxy Pharma via SingularLogic SPA €18.05M). The v2 'sell into 3 vendors' framing was effectively a monopsonist negotiation against a listed consolidator with a fresh M&A track record buying competing codebases for sub-€200K. Adopting redTeamFindings[1].alternativeThesis verbatim: pivot to buy-side, anchor Phase 0 on ELPEN/Pharmathen paid data contract, use Week-12 outcome to gate a T-Life balance-sheet acquisition of a non-Epsilon tail PIS vendor.\n\nNow the ONLY funded Phase 0 bet — HospitalStaff-API was killed 2026-05-21 after 2nd-round red-team found 3 independent kill vectors (Aya UK + RLDatix-Allocate already build; EUDI Wallet eIDAS 2.0 commoditizes by Dec 2027; Directive 2005/36/EC Annex V auto-recognition makes 'data' thin). See catalog-cuts.ts.\n\nPRIOR HISTORY:\n- v1 2026-05-16: standalone pharmacy SaaS via WinMedica warm channel\n- 2026-05-20 1st red-team (verdict: revise — channel confusion)\n- v2 2026-05-21 morning: certified module into SCRIPTA/PharmaSoft/Farmakon @ €10-30/pharmacy/mo rev-share\n- 2026-05-21 evening 2nd red-team (verdict: proceed-with-caveats — Farmakon ≠ independent; monopsonist)\n- v3 2026-05-21 evening: this entry. Buy-side, ELPEN data contract Week-12 gate, tail-PIS acquisition Phase 1.",
+    "whyNow": "ELPEN/Pharmathen RWE-data spend window: IQVIA Greece office sells Xponent/LRx feeds at scale to global pharma, but Greek branded-molecule adherence cohorts for ELPEN/Pharmathen-specific portfolios are NOT in IQVIA's standard SKU — they require purpose-built cohort design. EpsilonNet's roll-up has compressed independent-tail PIS valuations (LAVINET sold for €184K in Jan 2024) which puts 2-4 acquisition targets in the €2-5M EV range — exactly the T-Life balance-sheet check size. Both windows close in 12-18 months if EpsilonNet completes the roll-up or IQVIA productizes Greek-cohort RWE.",
     "roadToMoat": [
       {
-        "timeframe": "Month 0-3",
-        "milestone": "Signed rev-share LOI with 1 of SCRIPTA, PharmaSoft, Farmakon at €10-30/pharmacy/mo (Week 12 kill gate). Founder-BD via ELPEN/WinMedica."
+        "timeframe": "Phase 0 — Week 0-12",
+        "milestone": "Signed paid ELPEN OR Pharmathen RWE/adherence data contract ≥€50K (binary kill gate). NDA + tail-PIS vendor scoping list completed in parallel."
       },
       {
-        "timeframe": "Month 3-12",
-        "milestone": "First PIS integration live (~1,500 pharmacies through 1 vendor); first ELPEN/Pharmathen adherence-data contract signed at €100-300K/yr; second PIS vendor in pipeline."
+        "timeframe": "Phase 1 — Month 3-12",
+        "milestone": "Acquisition of 1 non-Epsilon tail PIS vendor at €2-5M EV via T-Life balance sheet (no VC). Data pipe live across acquired vendor's pharmacy seats (est. 800-2,500). Second branded-molecule cohort live with ELPEN."
       },
       {
-        "timeframe": "Month 12-36",
-        "milestone": "2-3 PIS vendors integrated (~6,000 Greek pharmacies); €1-2M ARR from module rev-share + €500K-€1M ARR from Greek pharma data line. Fund off T-Life balance sheet at €500K-1M — never raises VC."
+        "timeframe": "Phase 2 — Month 12-36",
+        "milestone": "€2-5M ARR mix from (a) acquired PIS vendor's existing SaaS rev + (b) ELPEN/Pharmathen/Stada/Menarini RWE contracts. Optional: second tail-PIS tuck-in if EpsilonNet's pace permits. Off-balance-sheet, never raises VC."
       }
     ],
     "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€40K Phase 0 → €500K-€1M direct from T-Life balance sheet if Week-12 gate passes",
-      "capexRatio": "5% capex / 95% opex",
-      "note": "PIS-integration build is meaningfully cheaper than 5,000-door GTM. Fractional Greek BD lead + 1-2 engineers covers Phase 0. NEVER needs VC if validates."
+      "level": "medium",
+      "estimatedSeedCapital": "€40K Phase 0 → €2-5M T-Life balance-sheet acquisition + €300-500K integration if Week-12 gate passes",
+      "capexRatio": "20% capex (acquisition) / 80% opex",
+      "note": "Acquisition cost is real but it is T-Life Capital's natural shape — 4th-gen Greek pharmaceutical family with €X balance sheet, buying a Greek pharmacy IT vendor at compressed post-EpsilonNet valuations. NEVER needs VC. Founder profile shifts from 'pharma SaaS BD lead' to 'M&A operator + RWE epidemiologist'."
     },
     "competitors": [
       {
-        "name": "SCRIPTA, PharmaSoft, Farmakon",
+        "name": "EPSILON NET / Epsilon CSA (Athens Exchange listed)",
         "type": "incumbent",
         "geography": "Greece",
-        "note": "BUYERS, not competitors. Own the pharmacy desktop, have zero AI roadmap, will white-label rather than build."
+        "note": "The monopsonist that killed the v2 thesis. NOT a competitor here — we explicitly sidestep them by buying a non-Epsilon tail vendor. They cannot block a sub-€5M private acquisition because by the time they notice, the data pipe is live."
       },
       {
-        "name": "Pharmaserv, ADG, NOVENTI (DE); CompuGroup (IT)",
+        "name": "IQVIA Greece Information Solutions",
         "type": "incumbent",
-        "geography": "EU",
-        "note": "Phase-2 buyer expansion targets — same module-licensing motion."
+        "geography": "Greece",
+        "note": "Sells global Rx-fill feeds (Xponent/LRx) into ELPEN/Pharmathen accounts already. Differentiation = Greek-cohort branded-molecule design IQVIA does NOT productize; risk = they could productize it within 12-24mo if we prove the demand."
       },
       {
-        "name": "IQVIA Xponent, Datavant",
+        "name": "Datavant, Komodo Health",
         "type": "incumbent",
-        "geography": "Global",
-        "note": "Already commoditised the global Rx-fill data feed. Sidesteps competition by selling Greek branded-molecule data to ELPEN/Pharmathen, NOT global pharma R&D."
+        "geography": "US/Global",
+        "note": "Not active in Greek pharmacy data; no presence on ELPEN/Pharmathen RFP lists."
       }
     ],
     "competitiveIntensity": "open",
@@ -2195,28 +2195,28 @@ export const ideas: Idea[] = [
     "killTests": [
       {
         "id": "ma-k1",
-        "hypothesis": "Signed rev-share LOI with SCRIPTA, PharmaSoft, OR Farmakon at €10-30/pharmacy/mo by Week 12 — the binary kill for the whole bet",
-        "experiment": "ELPEN/WinMedica-warm intro to PIS-vendor CEO/Head of Product at all 3; pitch = certified adherence + MTM module + WinMedica drug-stock feed bundle; 4 in-person + 4 follow-up cycles capped at 12 weeks",
-        "costEur": 18000,
+        "hypothesis": "Signed PAID ELPEN or Pharmathen RWE/adherence data contract ≥€50K by Week 12 — the binary kill (cash, not LOI)",
+        "experiment": "Direct pitch to ELPEN R&D Director + Pharmathen Commercial; propose 1 branded-molecule retrospective + 6-month prospective adherence cohort with deliverable scope; ELPEN warm via family channel; cap iteration at 12 weeks",
+        "costEur": 22000,
         "durationWeeks": 12,
-        "killSignal": "ZERO signed LOIs from 3 named PIS vendors (KEY GATE — failing this kills the bet per PORTFOLIO_RESHAPE.md §5)",
-        "validateSignal": "≥1 signed LOI at €10-30/pharmacy/mo with integration timeline ≤6 months"
+        "killSignal": "ZERO signed paid contracts ≥€50K (KEY GATE — failing this kills the entire bet AND removes the Phase 1 acquisition option since no validated demand exists)",
+        "validateSignal": "≥1 signed paid contract ≥€50K with concrete deliverable scope"
       },
       {
         "id": "ma-k2",
-        "hypothesis": "ELPEN or Pharmathen signs an adherence-data partnership at ≥€100K/yr for branded-molecule cohort intervention by Week 16",
-        "experiment": "Direct pitch to ELPEN R&D + Pharmathen Commercial; one branded molecule, retrospective + 6-month prospective adherence cohort design",
-        "costEur": 8000,
-        "durationWeeks": 16,
-        "killSignal": "0 advances past initial data-design review",
-        "validateSignal": "≥1 signed LOI at ≥€100K/yr"
+        "hypothesis": "≥2 non-Epsilon Greek tail PIS vendors are acquirable at ≤€5M EV with deliverable ownership terms by Week 14",
+        "experiment": "M&A advisor or direct outreach to 4-6 non-Epsilon tail vendors; soft term-sheet conversations; reference public M&A comps (LAVINET €184K, comparable scaled at 1000-2500 pharmacy seats)",
+        "costEur": 14000,
+        "durationWeeks": 14,
+        "killSignal": "<2 candidates with willing-seller signals at ≤€5M (KEY GATE — failing this means even if ELPEN contract validates, there is no acquisition target to deploy capital into)",
+        "validateSignal": "≥2 candidates with priced-or-discussed term sheets at €2-5M EV"
       }
     ],
     "preMortem": [
       {
-        "cause": "Greek PIS vendors decide to build adherence in-house after seeing the spec (vendor IP misappropriation)",
-        "likelihood": "low",
-        "earlySignal": "Mitigation: spec gated behind NDA + integration license; if any vendor stalls 6+ weeks after viewing spec, treat as build-signal and pivot to next vendor"
+        "cause": "ELPEN says 'we already get this from IQVIA' on first pitch — the secondary thesis was actually the primary thesis and it competes head-on with an entrenched supplier",
+        "likelihood": "medium",
+        "earlySignal": "ELPEN R&D Director's first reaction in opening meeting; if IQVIA contract is referenced as already covering the use case, pivot scope to Greek-cohort branded-molecule analysis that is explicitly OUT of IQVIA's productized scope"
       },
       {
         "cause": "Pharma data buyers (ELPEN, Pharmathen) decide IQVIA Xponent + LRx already covers their need at <€10K",
@@ -2230,10 +2230,10 @@ export const ideas: Idea[] = [
       }
     ],
     "probabilityBands": {
-      "reaches1mArrBy18mo": 0.55,
-      "reaches10mArrBy36mo": 0.12,
-      "totalFailureBy36mo": 0.3,
-      "basisOfEstimate": "Re-spec'd 2026-05-21. €1M ARR feasible via 1-2 PIS vendor integrations × 3,000-5,000 pharmacies × €10-30/mo + €100-300K data line. €10M ARR probability LOW by design — this is NOT a venture-scale bet, it's an off-balance-sheet T-Life infrastructure investment. €500K-1M direct funding, no VC, target €2-5M ARR steady-state. Lower failure rate than HospitalStaff-API because the kill test is cheap, fast, and binary."
+      "reaches1mArrBy18mo": 0.4,
+      "reaches10mArrBy36mo": 0.08,
+      "totalFailureBy36mo": 0.45,
+      "basisOfEstimate": "Re-spec'd v3 2026-05-21 (buy-side). €1M ARR feasible if Week-12 ELPEN contract gates pass AND acquisition closes within 12 months — acquired vendor brings €0.5-1M existing rev + €100-300K incremental from ELPEN-style contracts. €10M ARR explicitly UNLIKELY by design; this is a balance-sheet infrastructure bet, not a venture bet. Higher P(failure) than v2 reflects: (a) ELPEN/Pharmathen IQVIA-competition risk, (b) tail-PIS vendor unwillingness to sell, (c) acquisition integration risk new to T-Life operating model. €40K probe is binary-cheap regardless."
     },
     "redTeamFindings": [
       {
@@ -2642,224 +2642,5 @@ export const ideas: Idea[] = [
       "totalFailureBy36mo": 0.3,
       "basisOfEstimate": "Niche but capital-efficient bet with real T-Life government-channel advantage. Cross-cutting red-team explicitly flagged TAM ceiling at €10-20M ARR; accept as focused seed bet not unicorn. €1M ARR achievable on government co-funding + 200-500 returnees + corporate-side SaaS."
     }
-  },
-  {
-    "id": "hospitalstaff-eu",
-    "title": "HospitalStaff-API",
-    "ycCategory": "Clinician-Mobility Infrastructure",
-    "ycBatchDate": "Fall 2026",
-    "oneLiner": "Credential-portability API for EU clinician mobility — Directive 2005/36/EC + 2013/55/EU compliance engine sold to Aya, Doctari, RLDatix, Patchwork as the regulatory-data layer they can't economically build.",
-    "description": "Re-spec'd 2026-05-21 per PORTFOLIO_RESHAPE.md after the original NHS-direct platform thesis (HospitalStaff) was killed by RM6387 framework foreclosure to 2033 + Doctari/Aya/Patchwork consolidation. New thesis: build the headless credential-verification engine — EPC (European Professional Card) workflow, primary-source verification across 27 member-state regulators (UK GMC/NMC, German Landesärztekammer + Pflegekammer 16-state, Italian FNOMCeO + IPASVI, French Ordre, etc.), language-proficiency checks, EHIC + qualification cross-mapping — and sell it as €5-15/verification + €200-400K/yr enterprise contract to the 4-5 staffing-tech consolidators who own framework-listed distribution and need cross-border supply to scale beyond domestic shift-fill. Different buyer (staffing-platform PM, not hospital COO), different cycle (3-6 months B2B SaaS), different moat (regulatory data + member-state relationships, not hospital implementation).",
-    "primaryMarket": "europe",
-    "primaryMarketFit": "green",
-    "primaryMarketRationale": "Buyer set is 4-5 EU+US staffing-tech consolidators (Aya, Doctari, RLDatix, Patchwork) — UK + DE + IT + FR are the active cross-border demand corridors.",
-    "expansionMarkets": [
-      {
-        "market": "middle-east",
-        "fit": "yellow",
-        "note": "DHA/HAAD credential portability is a secondary product line for the same buyers; deprioritised vs EU core."
-      },
-      {
-        "market": "greece-cyprus",
-        "fit": "yellow",
-        "note": "T-Life private hospital network (HHG, Iaso, Mitera) = pilot validation site for real placements, NOT GTM channel."
-      },
-      {
-        "market": "balkans",
-        "fit": "yellow",
-        "note": "Not relevant to API-buyer GTM."
-      }
-    ],
-    "stage": "discovered",
-    "tlifeAngle": "T-Life Greek private-hospital network = pilot validation surface for 20 real cross-border placements during kill-test hs-k2. NOT the load-bearing GTM channel — sales is direct to consolidator product orgs.",
-    "tags": [
-      "infrastructure-to-incumbents",
-      "credential-portability",
-      "directive-2005-36",
-      "epc-european-professional-card",
-      "api-first",
-      "phase0-funded"
-    ],
-    "addedDate": "2026-05-16",
-    "notes": "RE-SPEC 2026-05-21 per PORTFOLIO_RESHAPE.md. The original 'AI staffing platform sold to NHS Trusts + Kliniken' framing died on the 2026-05-20 red-team finding (RM6387 framework lock to Nov 2033 + Doctari/Aya/Patchwork consolidation). Adopted the redTeamFindings[0].alternativeThesis verbatim: credential-portability infrastructure sold to the 4 consolidators (Aya, Doctari, RLDatix, Patchwork) at €5-15/verification + €200-400K/yr enterprise. Phase 0 budget reset to €120K with 3 binary kill tests (paid scoping LOI Week 10, technical pass-through Week 14, term-sheet/acqui-hire Week 18). Original assertions retained as factual ground; killTests, preMortem, probabilityBands rewritten.\n\nFunded as 1 of 2 surviving Phase 0 bets in the re-shape. The other is medadherence-pharmacy.\n\nPRIOR HISTORY: v2 upgrade 2026-05-16 (5 assertion validation patches); red-team 2026-05-20 (verdict: pass with alternative thesis adopted).\n\n2ND-ROUND RED-TEAM 2026-05-21: see redTeamFindings[1].",
-    "whyNow": "EU consolidator buying window is OPEN: Aya bought Locum's Nest June 2025 (active EU M&A pipeline); Patchwork acquired L2P Oct 2024 (modular acquisition appetite); Doctari/Vitruvian sitting on cross-border placement capacity it cannot legally compute today. Credential-portability is the rate-limit on cross-border supply — every consolidator hits it and none will build it. Window closes when ONE of them buys an EHIC/EPC-adjacent regtech first.",
-    "roadToMoat": [
-      {
-        "timeframe": "Month 0-4",
-        "milestone": "Paid scoping engagement signed with 1 of Aya/Doctari/RLDatix/Patchwork at ≥€50K; UK+DE+IT credential pass-through demonstrated on 20 real placements (T-Life Greek hospital network = pilot surface)."
-      },
-      {
-        "timeframe": "Month 4-12",
-        "milestone": "First €200-400K/yr enterprise contract live; second consolidator in design-partner pipeline; verification volume 5K+/mo."
-      },
-      {
-        "timeframe": "Month 12-36",
-        "milestone": "3 of 4 named consolidators on contract; €3-6M ARR; acqui-hire conversation OR €2-3M seed round targeting healthcare-staffing strategics (NOT generalist Atomico/Insight)."
-      }
-    ],
-    "capitalIntensity": {
-      "level": "low",
-      "estimatedSeedCapital": "€120K Phase 0 → €2-3M seed if Week-18 gate passes",
-      "capexRatio": "5% capex / 95% opex",
-      "note": "API-first; no hospital deployment, no on-prem integration. Material spend is regulatory engineering: legal mapping across 27 member-state professional registers (~€300-600K to full coverage, deferred to post-seed)."
-    },
-    "competitors": [
-      {
-        "name": "ENIC-NARIC + member-state regulator portals",
-        "type": "incumbent",
-        "geography": "EU",
-        "note": "The OFFICIAL credential-recognition channels — slow, fragmented, not API. We aggregate + abstract these, we don't replace them."
-      },
-      {
-        "name": "Aya, Doctari, RLDatix, Patchwork",
-        "type": "incumbent",
-        "geography": "EU+US",
-        "note": "BUYERS, not competitors. Each consolidates domestic shift-fill but lacks cross-jurisdiction supply because credential portability is uneconomic to build internally."
-      },
-      {
-        "name": "Vialto Partners, Fragomen",
-        "type": "incumbent",
-        "geography": "Global",
-        "note": "Adjacent immigration/credentialing law firms. Services-heavy; not API-shaped; do not sell to staffing platforms."
-      }
-    ],
-    "competitiveIntensity": "open",
-    "scorecard": {
-      "marketSize": 5,
-      "tlifeEdge": 1,
-      "competitiveGap": 4,
-      "capitalFit": 3,
-      "regulatoryRisk": 3,
-      "founderAvailability": 3,
-      "composite": 3.3
-    },
-    "ycRfsCorrelation": "EU healthcare workforce crisis at political peak; high-ACV B2B SaaS at intersection of agetech demand + workforce mobility supply.",
-    "tlifeAssetRefs": [
-      "t-life-capital"
-    ],
-    "industry": "agetech",
-    "assertions": [
-      {
-        "id": "hs-a1",
-        "claim": "WHO Europe projects ~4.1M healthcare worker shortfall by 2030 (600K doctors + 2.3M nurses + 1.1M social care). NOT 1M+ — actual figure is ~4× the prior thesis number.",
-        "source": "https://www.euronews.com/my-europe/2025/09/09/which-eu-countries-have-the-most-healthcare-workers-amid-shortages",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16",
-        "note": "MATERIAL: shortfall is 4× larger than thesis claimed — STRENGTHENS the thesis materially. Demand-side pressure is more acute."
-      },
-      {
-        "id": "hs-a2",
-        "claim": "UK NHS ~100-126K vacancies (Q1 2023/24); Germany 150-200K+ nursing gap (projections up to 200-520K by 2030); Italy ~30K doctors + 70K nurses (~100K combined); France ~12K doctors + 50-60K nurses (~62-72K combined). Italy+France combined ~160-170K (prior '~200K' is plausible upper range).",
-        "source": "https://www.kingsfund.org.uk/insight-and-analysis/data-and-charts/nhs-workforce-nutshell",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      },
-      {
-        "id": "hs-a3",
-        "claim": "Locum's Nest (60K+ professionals, 50+ NHS Trusts) and Patchwork Health (200+ orgs) are the dominant UK locum-marketplace incumbents. CRITICAL UPDATE: Locum's Nest acquired by Aya Healthcare (US) in 2024-25 — the prior 'structurally UK-locked' framing is materially weaker; Aya is US-based and expansion-friendly, potentially erodes the multi-jurisdiction wedge.",
-        "source": "https://www.workforcealliance.nhs.uk/suppliers/locums-nest/",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16",
-        "note": "MATERIAL: Locum's Nest under Aya ownership is no longer UK-locked. The thesis wedge (multi-jurisdiction expansion that incumbents can't do) is now contestable. Track Aya EU rollout."
-      },
-      {
-        "id": "hs-a4",
-        "claim": "NHS agency-staff price cap was set at ~55% above substantive basic pay in 2016 (covers NI, pension, holiday, agency fee). Mean realized agency spend ~6.8% of total substantive pay; effective per-shift premium varies widely. Prior '30-40%' likely understates true loaded cost.",
-        "source": "https://www.england.nhs.uk/long-read/agency-rules/",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16",
-        "note": "Tightened — premium is closer to 55%+ on per-shift loaded cost basis."
-      },
-      {
-        "id": "hs-a5",
-        "claim": "Directive 2005/36/EC (7 Sept 2005), amended by Directive 2013/55/EU (20 Nov 2013, transposition deadline 18 Jan 2016) governs EU cross-border recognition of professional qualifications including sectoral health professions.",
-        "source": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex:32013L0055",
-        "status": "confirmed",
-        "lastChecked": "2026-05-16"
-      }
-    ],
-    "killTests": [
-      {
-        "id": "hs-k1",
-        "hypothesis": "1 of Aya, Doctari, RLDatix, Patchwork signs a paid scoping engagement at ≥€50K by Week 10",
-        "experiment": "Founder + ex-Patchwork/ex-Locum's-Nest advisor direct outreach to 4 named product/M&A leads; pitch deck = credential-portability gap memo + 20-placement Greek pilot dataset; cap discovery at 8 weeks",
-        "costEur": 15000,
-        "durationWeeks": 10,
-        "killSignal": "0 paid scoping engagements signed",
-        "validateSignal": "≥1 signed at ≥€50K (KEY GATE — failing this kills the bet per PORTFOLIO_RESHAPE.md §5)"
-      },
-      {
-        "id": "hs-k2",
-        "hypothesis": "Headless API demonstrates UK+DE+IT credential pass-through on 20 real placements by Week 14",
-        "experiment": "Build minimum-viable verifiers against UK GMC/NMC primary-source APIs, German Landesärztekammer (start with NRW + Bayern), Italian FNOMCeO; run 20 real cross-border placements through HHG/Iaso/Mitera Greek hospital network with a paid SLA on placement-failure rate",
-        "costEur": 65000,
-        "durationWeeks": 14,
-        "killSignal": "Any jurisdiction's primary-source pathway not technically reachable, OR placement-failure rate >3% on the 20-placement cohort",
-        "validateSignal": "All 3 jurisdictions live; ≤2% failure; placement turnaround <72h vs current 4-12 weeks"
-      },
-      {
-        "id": "hs-k3",
-        "hypothesis": "Signed term-sheet for €200-400K data/API license OR substantive acqui-hire conversation initiated with ≥1 named acquirer by Week 18",
-        "experiment": "Convert hs-k1 scoping engagement + hs-k2 technical proof into commercial term-sheet OR initiate acqui-hire dialogue (acquirer pays for the regulatory IP + team, not the platform)",
-        "costEur": 12000,
-        "durationWeeks": 18,
-        "killSignal": "No term-sheet AND no acqui-hire dialogue (KEY GATE — failing this kills the bet)",
-        "validateSignal": "Signed term-sheet OR formal acqui-hire conversation with diligence list issued"
-      }
-    ],
-    "preMortem": [
-      {
-        "cause": "Aya/Doctari decide to build internally — staffing-tech M&A teams convince leadership the regulatory data is core IP not third-party",
-        "likelihood": "medium",
-        "earlySignal": "Job postings at Aya/Doctari for 'Director, EU Credentialing' or 'Head of Regulatory Engineering'; track quarterly"
-      },
-      {
-        "cause": "ENIC-NARIC or EU Commission ships a public-good EPC verification API before Phase 0 closes, collapsing the data moat",
-        "likelihood": "low",
-        "earlySignal": "Track DG GROW + DG EMPL public-consultation calendar; flag any 2026 RFP for unified credential infrastructure"
-      },
-      {
-        "cause": "Member-state regulator primary-source APIs require political access we don't have (e.g. Italian FNOMCeO requires Sapio/INAIL approvals; French Ordre national gateway only)",
-        "likelihood": "medium",
-        "earlySignal": "Week 6 technical scoping with 3 national-regulator IT leads — if cooperation requires >12-month government contract, halt build"
-      }
-    ],
-    "probabilityBands": {
-      "reaches1mArrBy18mo": 0.5,
-      "reaches10mArrBy36mo": 0.18,
-      "totalFailureBy36mo": 0.4,
-      "basisOfEstimate": "Re-spec'd 2026-05-21. €1M ARR pathway is materially cleaner under API-to-incumbent thesis (3 consolidators × €300-400K = €1M base case in 18 months IF Phase 0 gates clear). €10M ARR probability drops vs. original platform thesis because the buyer set is narrower (4 named) — but failure-mode is also faster and cheaper to detect (€120K vs €1.2-2.5M seed). Higher total-failure rate (0.4) reflects honesty about consolidator-internal-build risk."
-    },
-    "redTeamFindings": [
-      {
-        "date": "2026-05-20",
-        "verdict": "pass",
-        "dealKiller": "The NHS market is procurement-foreclosed for the duration of this deal's window. NHS Workforce Alliance Workforce Technology Systems framework (RM6387) was re-awarded 17 November 2025; it runs to Nov 2026 with extensions to 1 November 2033 — an 8-year lock-out for non-framework suppliers. Locum's Nest (now Aya-owned), Patchwork Health, and RLDatix/Allocate are on it; HospitalStaff is not, cannot be added mid-cycle (frameworks don't take new suppliers except via narrow DPS routes), and NHS Trusts overwhelmingly call off framework-listed vendors for compliant procurement. Meanwhile the parallel 'wedge' market — Germany — already has Doctari Group (Vitruvian-backed since 2018) which acquired Planerio (AI shift scheduling, 4,000+ EU sites) in 2021 and consolidates Lichtfeld + others. Both flagship buyer geographies are owned by capitalized incumbents who pre-empted the wedge while the thesis was being written. The 'fax and phone' framing in the description is false for the rostering layer (Allocate Optima rosters 2M+ NHS staff; Patchwork has 200+ orgs).",
-        "patternMatches": [
-          "Aya Healthcare acquired Locum's Nest June 2025 — the 'UK-locked incumbents can't go EU' wedge died on transaction close; Aya is the largest US healthcare workforce software+staffing platform with EU expansion capital and motive.",
-          "Doctari Group (Berlin, founded 2008, Vitruvian-backed 2018) acquired Planerio (Munich AI shift planning, 4,000+ EU sites) in 2021 and Lichtfeld in 2021 — German hospital staffing tech is consolidated under a PE roll-up that has had 7 years' head start.",
-          "Patchwork Health raised £20M, acquired L2P (job planning/appraisal) Oct 2024, signed 17 NHS partnerships in 8 months in 2025 — actively expanding scope from rostering into adjacent modules HospitalStaff also targets. Not the static UK-locked competitor the thesis describes.",
-          "NHS Workforce Technology Systems framework RM6387 (awarded 17 Nov 2025, extensions to 1 Nov 2033) — NHS buyers procurement-locked to listed suppliers for up to 8 years; non-framework entrants face open-tender 3-6 month cycles per Trust × 215 Trusts, structurally unviable for a seed-stage entrant."
-        ],
-        "unitEconomicsConcern": "€100-300K ACV is gross of 18-24 month NHS Trust sales cycle (Information Governance, DSPT, DTAC, Clinical Safety DCB0129/0160, security assessment, framework workaround) and 12-month German Kliniken procurement (KIS integration, BSI security review, Betriebsrat sign-off). At €1.5-2.5M seed, CAC per hospital is €150-400K before payback — pre-payback unit margin is negative for 24+ months even on stated ACVs. Multi-jurisdiction credential-recognition build (kill-test hs-k2, €30K stated) materially under-estimates legal+integration cost across UK GMC/NMC, German Landesärztekammer + Pflegekammer (16 state variants), Italian FNOMCeO + IPASVI, French Ordre — closer to €400-600K of regulatory engineering before revenue.",
-        "loadBearingAssumption": "That hospital procurement officers in UK and Germany will buy an integrated cross-jurisdiction platform from a seed-stage non-framework vendor on a 12-18 month timeline, when (a) NHS Trust compliant procurement routes flow through RM6387 which excludes new entrants until 2033, (b) German Kliniken buy through KIS-integrated PE-consolidated incumbents (Doctari/Planerio), and (c) the cross-border placement use case is <2% of actual hospital staffing volume — hospitals overwhelmingly fill from domestic banks first, agencies second, cross-border last. The thesis assumes the cross-jurisdiction wedge is what hospitals are buying; in practice they are buying domestic shift-fill, where Allocate, Patchwork, Locum's Nest, NHS Professionals National Bank, and Doctari already deliver.",
-        "alternativeThesis": "Drop the hospital-direct platform play. Reframe as a credential-portability and clinician-mobility infrastructure layer that incumbents (Aya, Doctari, RLDatix, Patchwork) buy from you. Build the Directive 2005/36/EC + 2013/55/EU compliance engine — automated credential verification across 27 member-state regulators, language-proficiency checks, primary-source verification, EPC (European Professional Card) workflow — as headless API at €5-15 per verification + €50-150K/yr enterprise contract. Sell to the 3-5 staffing tech consolidators who actually have framework-listed distribution and need cross-border supply to scale beyond domestic shift-fill. Different buyer (staffing platform PM, not hospital COO), different sales cycle (3-6 months B2B SaaS, not 12-18 months NHS procurement), different moat (regulatory data + relationships, not hospital implementation). T-Life Greek private-hospital channel becomes a pilot validation site, not the load-bearing GTM."
-      },
-      {
-        "date": "2026-05-21",
-        "verdict": "revise",
-        "dealKiller": "The 'consolidators can't economically build credential portability' assumption is empirically false in 2026. Aya Global Talent's UK office already credentials 5,000+ international placements; RLDatix's Dec-2025 Allocate acquisition explicitly fuses credentialing + workforce management; Doctari has run cross-border German placement since 2018. More fatally, EU sectoral health professions (doctors, nurses, midwives, dentists, pharmacists) have AUTOMATIC RECOGNITION under Directive 2005/36/EC Annex V — the verification 'data moat' is a thin administrative-workflow wrapper, not a hard regulatory-data product. Layer on the EUDI Wallet mandate (member states MUST issue healthcare-professional EAAs by Dec 2026, relying parties MUST accept by Dec 2027) and the public-good infrastructure the preMortem flagged as 'low' likelihood is in fact legally mandated and shipping inside the Phase-0 window. The €5-15/verification + €200-400K/yr ACV gets compressed against a free state-issued QEAA before the Week-18 gate.",
-        "patternMatches": [
-          "Aya Global Talent UK office — placed 5,000+ international clinicians pre-acquisition; credential ops in-house, not outsourced. The buyer the thesis names has already built v1.",
-          "RLDatix acquires Allocate (Dec 2025) — explicitly markets 'only platform combining workforce management with credentialing.' The integration play the thesis sells TO them is now their internal product roadmap.",
-          "EUDI Wallet eIDAS 2.0 — Implementing Acts 2025; mandatory issuance of healthcare-professional EAAs by all 27 member states Dec 2026; mandatory acceptance by relying parties Dec 2027. Identity Management CIR names healthcare as a first-priority sector. Public-good API collapses the data moat in the exact Phase-0 timeline.",
-          "Fragomen Wallet (ELA Belgium good-practice 2024) — already a digital credential wallet from a Vialto/Fragomen-adjacent immigration practice; services-firms ARE moving into the API-shaped space, contra the spec's framing.",
-          "CertifyOS / Verifiable / Propelus — US API-first credentialing raised growth capital 2024-25 on the exact 'primary-source verification API' model; any of them landing one EU acquihire (Aya is the obvious channel) compresses the window before Week 18."
-        ],
-        "unitEconomicsConcern": "Cross-border EU clinician placements are <5% of total EU healthcare hiring (WHO Europe 2025); 4 named consolidators × realistic 20-50K verifications/yr each at €5-15 = €0.4-3M total addressable verification revenue across the entire buyer set. Enterprise contracts at €200-400K × 3 = €0.6-1.2M ARR ceiling for the 'base case' — but only if buyers don't internalize (Aya, RLDatix already have) and EUDI doesn't free-tier the primary-source layer. €120K Phase 0 + €300-600K member-state legal mapping for a market that maxes at €3-5M ARR with 3-of-4 logo capture is a wrong-shape outcome for a venture bet — closer to a services consultancy.",
-        "loadBearingAssumption": "That EU credential portability is a hard, defensible data product that 4-5 consolidators will pay €200-400K/yr to outsource. In reality it is (a) a thin administrative workflow on top of automatically-recognized sectoral qualifications, (b) being commoditized by EUDI Wallet QEAAs on a 2026-27 statutory clock, and (c) already in-housed by Aya UK and RLDatix-Allocate. The thesis re-adopted the prior alt-thesis verbatim without re-stress-testing it against the buyers' actual 2025-26 build/buy posture.",
-        "alternativeThesis": "Pivot from selling-the-engine to selling-the-EUDI-integration-layer. The real 2026-28 wedge is NOT building the credential data moat — it's the relying-party orchestration that staffing-tech consolidators, hospital HRs, and locum platforms must wire up to ACCEPT QEAAs from 27 different member-state wallets by Dec 2027 (eIDAS 2.0 mandatory-acceptance deadline). This is a SaaS integration product (€20-60K/yr per relying party × hundreds of hospitals + staffing platforms + agencies), sells into a statutory compliance deadline (not a discretionary build-vs-buy), and the buyers are wider than 4 consolidators (every NHS Trust, every Klinik, every staffing platform). The T-Life pilot becomes a relying-party reference architecture for accepting EUDI-issued clinician EAAs at point of placement. Different shape: compliance-deadline B2B SaaS, broad buyer set, regulatory tailwind rather than headwind."
-      }
-    ]
   }
 ];
