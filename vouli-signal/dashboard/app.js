@@ -30,9 +30,11 @@ async function boot() {
   state.signals = signals;
   state.grievances = grievances || [];
   state.topics = (await loadJSON(["data/topics.json", "../out/topics.json"])) || [];
+  state.graph = (await loadJSON(["data/graph.json", "../out/graph.json"])) || null;
   initFilters();
   render();
   renderTopics();
+  renderGraph();
   const latest = signals.map(s => s.latest_date).filter(Boolean).sort().pop() || "—";
   $("#updated").textContent = "latest " + latest;
   const llm = state.grievances.some(g => g.classifier === "llm");
@@ -173,6 +175,26 @@ function renderTopics() {
        <span class="tlabel" title="${(t.top_terms||[]).join(', ')}">${t.label}</span>
        ${t.dominant_party ? `<span class="badge" style="color:${PARTY_COLORS[t.dominant_party]||'#ccc'}">${t.dominant_party}</span>` : ""}</div>`
   ).join("");
+}
+
+function renderGraph() {
+  const node = document.querySelector("#mlGraph");
+  if (!node) return;
+  const g = state.graph;
+  if (!g || !g.report) { node.innerHTML = '<span class="muted">run `ml.cli graph`</span>'; return; }
+  const r = g.report;
+  const comm = (r.community_party_makeup || []).filter(c => c.size > 1).slice(0, 4).map(c => {
+    const top = Object.entries(c.parties).slice(0, 3)
+      .map(([p, n]) => `<span class="badge" style="color:${PARTY_COLORS[p] || '#ccc'}">${p} ${n}</span>`).join("");
+    return `<div class="topic"><span class="tsize">${c.size}</span><span class="tlabel">${top}</span></div>`;
+  }).join("");
+  const defs = (r.top_defectors || []).slice(0, 4).map(d =>
+    `<div class="topic"><span class="tsize" style="background:var(--hot)">${d.defection}</span>
+       <span class="tlabel">${d.mp}</span>
+       <span class="badge" style="color:${PARTY_COLORS[d.party] || '#ccc'}">${d.party}</span></div>`).join("");
+  node.innerHTML =
+    `<div class="muted" style="font-size:11px;margin-bottom:4px">${r.n_communities} coalitions · modularity ${r.modularity} · vote-pred ${Math.round((r.vote_prediction_accuracy || 0) * 100)}%</div>`
+    + comm + '<div class="muted" style="font-size:11px;margin:6px 0 4px">Top defectors</div>' + defs;
 }
 
 function openDrawer(s) {

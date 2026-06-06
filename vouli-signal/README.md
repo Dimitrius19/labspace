@@ -79,6 +79,30 @@ python -m vouli_signal.ml.cli query "ποιοι μιλούν για ακρίβε
 | `topics.py` | KMeans + top-term labels | BERTopic + drift |
 | `distill.py` | LogReg over features, CV-scored, saved | same, over transformer features |
 | `rag.py` | cosine retrieval + citations | + Claude synthesis (`ANTHROPIC_API_KEY`) |
+| `graph.py` | networkx co-voting graph → coalitions, defection, vote prediction | node2vec / GNN, temporal models |
+
+`ml.cli graph` builds an MP co-voting network from `data/votes.json` (Vouliwatch
+format; a realistic synthetic set is generated if absent): greedy-modularity
+**coalitions**, per-MP **defection scores**, and a LogReg **vote predictor** —
+written to `graph.json` and shown in the dashboard. On the demo votes it cleanly
+separates the government bloc from the opposition and predicts votes at ~0.94.
+
+## Run the real thing (Greek-IP vantage)
+
+```bash
+./run_full.sh 2021-01-01          # harvest 5y + full ML + dashboard, end-to-end
+# or containerised, identical anywhere:
+docker build -t vouli-signal . && docker run --rm \
+  -e VOULI_PROXY=$VOULI_PROXY -e VOULI_EMBED_MODEL=intfloat/multilingual-e5-large \
+  -v "$PWD/data:/app/data" -v "$PWD/dashboard/data:/app/dashboard/data" \
+  vouli-signal ./run_full.sh 2021-01-01
+```
+
+`run_full.sh` installs the full + ML tiers, preflight-checks reachability,
+harvests ~5 years, classifies/scores the corpus, and runs topics + distillation
++ graph. The **`vouli-harvest`** GitHub Action does this monthly from CI once you
+set the repo secret `VOULI_PROXY` (a GR residential proxy / scraping API — CI
+runners are datacenter IPs the parliament host geo-blocks).
 
 `topics.discover()` writes `topics.json` into `out/` and `dashboard/data/`, and the
 dashboard renders the discovered topics. The **distillation** pattern is the cost

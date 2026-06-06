@@ -21,12 +21,17 @@ def main() -> None:
     pt = sub.add_parser("topics"); pt.add_argument("--k", type=int, default=0)
     tr = sub.add_parser("train"); tr.add_argument("--target", default="ab")
     pq = sub.add_parser("query"); pq.add_argument("q"); pq.add_argument("--k", type=int, default=6)
+    sub.add_parser("graph")
 
     args = ap.parse_args()
     if args.cmd == "build":
-        from . import topics, distill
+        from . import topics, distill, graph
         topics.discover()
         distill.train("ab")
+        graph.build()
+    elif args.cmd == "graph":
+        from . import graph
+        graph.build()
     elif args.cmd == "topics":
         from . import topics
         for t in topics.discover(n_topics=args.k):

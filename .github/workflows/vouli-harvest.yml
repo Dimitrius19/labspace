@@ -1,0 +1,53 @@
+name: vouli-harvest
+
+# Real corpus harvest + ML refresh. Needs a Greek/residential egress, so set the
+# repo secret VOULI_PROXY to a GR residential proxy / scraping-API endpoint
+# (CI runners are datacenter IPs that the parliament host geo-blocks).
+# Runs monthly + on demand; commits the refreshed corpus-derived dashboard data.
+on:
+  schedule:
+    - cron: "0 4 1 * *"
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Harvest since (ISO date)"
+        default: "2021-01-01"
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vouli-signal
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt -r requirements-ml.txt
+
+      - name: Harvest + analyse + ML
+        env:
+          VOULI_PROXY: ${{ secrets.VOULI_PROXY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "${VOULI_PROXY}" ]; then
+            echo "::warning::VOULI_PROXY not set — parliament host will geo-block CI; skipping harvest."
+            exit 0
+          fi
+          python -m vouli_signal.pipeline harvest --pages 300 --since "${{ github.event.inputs.since || '2021-01-01' }}"
+          python -m vouli_signal.pipeline analyse-corpus
+          python -m vouli_signal.ml.cli build
+
+      - name: Commit refreshed corpus + ML outputs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard/data/*.json || true
+          git commit -m "vouli-harvest: refresh corpus + ML (topics/graph)" || echo "no changes"
+          git push || echo "push skipped"
