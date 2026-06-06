@@ -62,6 +62,19 @@
     </div>
   </main>
 
+  <section class="panel netpanel">
+    <div class="nethead">
+      <h2>Co-voting network <span class="muted">· graph</span></h2>
+      <div class="netctrls">
+        <span id="netStats" class="muted"></span>
+        <button id="netColor" class="btn">Colour: coalition</button>
+        <button id="netRelayout" class="btn">Re-layout</button>
+      </div>
+    </div>
+    <canvas id="net"></canvas>
+    <div id="netTip" class="nettip hidden"></div>
+  </section>
+
   <aside id="drawer" class="drawer hidden">
     <button id="closeDrawer" class="close">×</button>
     <div id="drawerBody"></div>

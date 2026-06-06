@@ -35,6 +35,7 @@ async function boot() {
   render();
   renderTopics();
   renderGraph();
+  renderNetwork();
   const latest = signals.map(s => s.latest_date).filter(Boolean).sort().pop() || "—";
   $("#updated").textContent = "latest " + latest;
   const llm = state.grievances.some(g => g.classifier === "llm");
@@ -195,6 +196,112 @@ function renderGraph() {
   node.innerHTML =
     `<div class="muted" style="font-size:11px;margin-bottom:4px">${r.n_communities} coalitions · modularity ${r.modularity} · vote-pred ${Math.round((r.vote_prediction_accuracy || 0) * 100)}%</div>`
     + comm + '<div class="muted" style="font-size:11px;margin:6px 0 4px">Top defectors</div>' + defs;
+}
+
+/* ---- force-directed co-voting network (vanilla Canvas, no deps) ---- */
+const COMMUNITY_COLORS = ["#4f7cff", "#21c08b", "#e0457b", "#e08e2f", "#b14ae0",
+  "#e0473a", "#2bb3c0", "#c0b22b", "#9aa6b5", "#6a5acd"];
+const net = { nodes: [], edges: [], colorBy: "community", alpha: 1, anim: null, hover: null, drag: null };
+
+function nodeColor(n) {
+  return net.colorBy === "party" ? (PARTY_COLORS[n.party] || "#888")
+    : COMMUNITY_COLORS[(n.community + COMMUNITY_COLORS.length) % COMMUNITY_COLORS.length];
+}
+
+function renderNetwork() {
+  const cv = document.querySelector("#net"), g = state.graph;
+  if (!cv) return;
+  if (!g || !g.nodes || !g.nodes.length) { cv.style.display = "none"; return; }
+  document.querySelector("#netStats").textContent =
+    `${g.nodes.length} MPs · ${g.edges.length} edges · ${g.report.n_communities} coalitions · vote-pred ${Math.round((g.report.vote_prediction_accuracy || 0) * 100)}%`;
+
+  const W = cv.clientWidth || 900, H = 560, dpr = window.devicePixelRatio || 1;
+  cv.width = W * dpr; cv.height = H * dpr;
+  const ctx = cv.getContext("2d"); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  Object.assign(net, { ctx, W, H, cv });
+
+  const byId = {};
+  net.nodes = g.nodes.map(n => { const o = { ...n, x: Math.random() * W, y: Math.random() * H, vx: 0, vy: 0, r: 4 + Math.sqrt((n.degree || 1)) * 1.4 }; byId[n.id] = o; return o; });
+  net.edges = g.edges.map(e => ({ s: byId[e.source], t: byId[e.target], w: e.weight })).filter(e => e.s && e.t);
+  net.alpha = 1;
+  if (net.anim) cancelAnimationFrame(net.anim);
+  loop();
+  bindNet();
+}
+
+function tick() {
+  const { nodes, edges, W, H, alpha: k } = net;
+  for (let i = 0; i < nodes.length; i++) {
+    const a = nodes[i];
+    for (let j = i + 1; j < nodes.length; j++) {
+      const b = nodes[j];
+      let dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy || 0.01, d = Math.sqrt(d2);
+      let f = Math.min(40, 1400 / d2), fx = dx / d * f, fy = dy / d * f;
+      a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+    }
+  }
+  for (const e of edges) {
+    let dx = e.t.x - e.s.x, dy = e.t.y - e.s.y, d = Math.sqrt(dx * dx + dy * dy) || 0.01;
+    let f = (d - 64) * 0.02 * e.w, fx = dx / d * f, fy = dy / d * f;
+    e.s.vx += fx; e.s.vy += fy; e.t.vx -= fx; e.t.vy -= fy;
+  }
+  for (const n of nodes) {
+    n.vx += (W / 2 - n.x) * 0.002; n.vy += (H / 2 - n.y) * 0.002;
+    n.vx *= 0.85; n.vy *= 0.85;
+    if (n !== net.drag) { n.x += n.vx * k; n.y += n.vy * k; }
+    n.x = Math.max(n.r, Math.min(W - n.r, n.x)); n.y = Math.max(n.r, Math.min(H - n.r, n.y));
+  }
+  net.alpha = Math.max(0.04, net.alpha * 0.992);
+}
+
+function draw() {
+  const { ctx, W, H } = net; ctx.clearRect(0, 0, W, H);
+  ctx.globalAlpha = 0.45;
+  for (const e of net.edges) {
+    ctx.strokeStyle = "#26303f"; ctx.lineWidth = Math.max(0.3, e.w * 1.3 - 0.6);
+    ctx.beginPath(); ctx.moveTo(e.s.x, e.s.y); ctx.lineTo(e.t.x, e.t.y); ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+  for (const n of net.nodes) {
+    ctx.fillStyle = nodeColor(n);
+    ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 7); ctx.fill();
+    if (n.defection > 0.25) { ctx.strokeStyle = "#ff6b4a"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 2.6, 0, 7); ctx.stroke(); }
+    if (n === net.hover) { ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 1, 0, 7); ctx.stroke(); }
+  }
+}
+
+function loop() { tick(); draw(); net.anim = requestAnimationFrame(loop); }
+
+function atPointer(ev) {
+  const r = net.cv.getBoundingClientRect(), x = ev.clientX - r.left, y = ev.clientY - r.top;
+  let best = null, bd = 1e9;
+  for (const n of net.nodes) { const d = (n.x - x) ** 2 + (n.y - y) ** 2; if (d < bd && d < (n.r + 6) ** 2) { bd = d; best = n; } }
+  return { node: best, x, y };
+}
+
+function bindNet() {
+  const cv = net.cv, tip = document.querySelector("#netTip");
+  cv.onmousemove = (ev) => {
+    if (net.drag) { const r = cv.getBoundingClientRect(); net.drag.x = ev.clientX - r.left; net.drag.y = ev.clientY - r.top; net.alpha = Math.max(net.alpha, 0.3); return; }
+    const { node } = atPointer(ev); net.hover = node;
+    if (node) {
+      tip.classList.remove("hidden");
+      tip.style.left = (ev.clientX + 14) + "px"; tip.style.top = (ev.clientY + 14) + "px";
+      tip.innerHTML = `<b>${node.id}</b><br><span class="k">party</span> ${node.party || "—"}<br>
+        <span class="k">coalition</span> ${node.community} &nbsp; <span class="k">defection</span> ${node.defection}`;
+    } else tip.classList.add("hidden");
+  };
+  cv.onmousedown = (ev) => { net.drag = atPointer(ev).node; };
+  window.addEventListener("mouseup", () => { net.drag = null; });
+  cv.onmouseleave = () => { tip.classList.add("hidden"); net.hover = null; };
+  document.querySelector("#netColor").onclick = (e) => {
+    net.colorBy = net.colorBy === "community" ? "party" : "community";
+    e.target.textContent = "Colour: " + net.colorBy;
+  };
+  document.querySelector("#netRelayout").onclick = () => {
+    for (const n of net.nodes) { n.x = Math.random() * net.W; n.y = Math.random() * net.H; n.vx = n.vy = 0; }
+    net.alpha = 1;
+  };
 }
 
 function openDrawer(s) {
