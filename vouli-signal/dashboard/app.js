@@ -29,8 +29,10 @@ async function boot() {
   }
   state.signals = signals;
   state.grievances = grievances || [];
+  state.topics = (await loadJSON(["data/topics.json", "../out/topics.json"])) || [];
   initFilters();
   render();
+  renderTopics();
   const latest = signals.map(s => s.latest_date).filter(Boolean).sort().pop() || "—";
   $("#updated").textContent = "latest " + latest;
   const llm = state.grievances.some(g => g.classifier === "llm");
@@ -160,6 +162,17 @@ function renderABChart(rows) {
     </svg>
     <div class="legend"><div><span class="dot" style="background:#21c08b"></span><b>${a}</b> AI-addressable (A)</div>
       <div><span class="dot" style="background:#7a869a"></span><b>${b}</b> political (B)</div></div>`;
+}
+
+function renderTopics() {
+  const node = document.querySelector("#mlTopics");
+  if (!node) return;
+  if (!state.topics.length) { node.innerHTML = '<span class="muted">run `ml.cli build`</span>'; return; }
+  node.innerHTML = state.topics.map(t =>
+    `<div class="topic"><span class="tsize">${t.size}</span>
+       <span class="tlabel" title="${(t.top_terms||[]).join(', ')}">${t.label}</span>
+       ${t.dominant_party ? `<span class="badge" style="color:${PARTY_COLORS[t.dominant_party]||'#ccc'}">${t.dominant_party}</span>` : ""}</div>`
+  ).join("");
 }
 
 function openDrawer(s) {

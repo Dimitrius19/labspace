@@ -1,0 +1,12 @@
+# ML layer. Lite tier (runs anywhere, no GPU, no downloads):
+numpy>=1.26
+scikit-learn>=1.4
+
+# Full tier (upgrade on real infra; set VOULI_EMBED_MODEL to activate):
+#   transformer embeddings — multilingual-e5 / GreekBERT / Meltemi
+sentence-transformers>=3.0
+#   topic modelling + drift
+bertopic>=0.16
+umap-learn>=0.5
+hdbscan>=0.8
+# torch is pulled by sentence-transformers; install the CUDA build on GPU boxes.

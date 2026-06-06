@@ -59,6 +59,32 @@ The fetch layer routes through `VOULI_PROXY`/`HTTPS_PROXY` transparently, so the
 harvest logic is identical from any vantage. ~5 years ≈ a few thousand files;
 rate-limited, resumable, run it once then incrementally.
 
+## ML layer (`vouli_signal/ml/`)
+
+Moves the engine from keyword heuristics to learned representations. Two tiers,
+same API — the **lite** tier (numpy + scikit-learn) runs anywhere; the **full**
+tier (transformers + BERTopic + Claude) is a lazy upgrade for GPU infra.
+
+```bash
+pip install -r requirements-ml.txt           # lite: numpy + scikit-learn
+python -m vouli_signal.ml.cli build           # topic discovery + distilled A/B classifier
+python -m vouli_signal.ml.cli topics          # KMeans/BERTopic clusters + labels
+python -m vouli_signal.ml.cli train --target ab   # distil LLM/heuristic labels -> LogReg
+python -m vouli_signal.ml.cli query "ποιοι μιλούν για ακρίβεια;"   # semantic search / RAG
+```
+
+| Component | lite (here) | full (upgrade) |
+|---|---|---|
+| `embed.py` | TF-IDF (accent-folded) | `VOULI_EMBED_MODEL=intfloat/multilingual-e5-large` · GreekBERT · Meltemi |
+| `topics.py` | KMeans + top-term labels | BERTopic + drift |
+| `distill.py` | LogReg over features, CV-scored, saved | same, over transformer features |
+| `rag.py` | cosine retrieval + citations | + Claude synthesis (`ANTHROPIC_API_KEY`) |
+
+`topics.discover()` writes `topics.json` into `out/` and `dashboard/data/`, and the
+dashboard renders the discovered topics. The **distillation** pattern is the cost
+move: label a sample with Claude once, train a cheap model, classify the whole
+corpus for ~free. See `docs/ML_ROADMAP.md` for the full data→model→serving plan.
+
 ## Dashboard
 
 A dedicated, zero-build analytics dashboard lives in `dashboard/` and reads the

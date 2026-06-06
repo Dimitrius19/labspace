@@ -1,0 +1,48 @@
+[
+  {
+    "topic_id": 0,
+    "size": 5,
+    "label": "και, rrf, συνταξεισ και, στισ",
+    "top_terms": [
+      "και",
+      "rrf",
+      "συνταξεισ και",
+      "στισ",
+      "πολιτικη",
+      "περικοπεσ στισ",
+      "περικοπεσ",
+      "στισ συνταξεισ"
+    ],
+    "dominant_ministry": "education",
+    "dominant_party": "ΠΑΣΟΚ",
+    "example_ids": [
+      "demo-elidek",
+      "demo-kedasy",
+      "demo-anaplirotes",
+      "demo-rrf-controls",
+      "demo-syntaxeis"
+    ]
+  },
+  {
+    "topic_id": 1,
+    "size": 3,
+    "label": "τα νοικοκυρια, τα, αισχροκερδεια, διμεα",
+    "top_terms": [
+      "τα νοικοκυρια",
+      "τα",
+      "αισχροκερδεια",
+      "διμεα",
+      "ανισχυρη",
+      "ακριβεια στραγγαλιζει",
+      "ακριβεια",
+      "νοικοκυρια"
+    ],
+    "dominant_ministry": "development",
+    "dominant_party": "ΣΥΡΙΖΑ",
+    "example_ids": [
+      "89ac7f8e",
+      "c11455bb",
+      "demo-dimea"
+    ]
+  }
+]
