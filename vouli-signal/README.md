@@ -22,6 +22,43 @@ Outputs land in `out/`:
 - `signals.json` — scored signals (per ministry × topic)
 - `grievances.json` — every classified question
 
+## Harvest 5 years of plenary transcripts at scale
+
+```bash
+python -m vouli_signal.pipeline harvest --since 2021-01-01   # ~2022→ born-digital
+python -m vouli_signal.pipeline analyse-corpus               # classify+score attack turns
+```
+
+`plenary.py` implements the structure proven by the **greparl** crawler:
+listing `…/Synedriaseis-Olomeleias?pageNo=N` → `<tr class="odd|even">` rows
+(date · period · session · sitting) → `<a href>` document links containing
+`/UserFiles/`. Files are **static** (and `.txt` is often available → no OCR),
+downloaded directly in preference order **txt > docx > doc > pdf**. Resumable
+(skips files already on disk; appends to `data/plenary/index.json`).
+
+`extract.py` converts each transcript (txt/docx/pdf/doc) to text, segments
+speaker turns, and feeds attack-shaped opposition turns into the same
+classify → score → digest path. (ParlaMint-GR covers 2015–Feb 2022; this
+harvest covers the missing ~2022→present.)
+
+### ⚠️ The one operational gotcha — egress IP
+`www.hellenicparliament.gr` (where the transcripts live) **geo/ASN-blocks
+datacenter & non-Greek IPs at the Akamai edge** — an instant `403 Access Denied`,
+*not* a fingerprint or JS challenge (verified: `curl_cffi` Chrome-JA3 still 403;
+a neutral Akamai site and `library.parliament.gr` both return 200 from the same
+host). So fingerprint tricks don't help — the request must **egress from a Greek
+or residential IP**. Pick one:
+
+| Vantage | What to do |
+|---|---|
+| Your machine / a Greek-region VPS | works directly, no config |
+| Greek residential proxy | `export VOULI_PROXY=http://user:pass@gr-proxy:port` |
+| Scraping API (Zyte / Bright Data / ScraperAPI, `geo=GR`, residential) | point `VOULI_PROXY` at its proxy endpoint |
+
+The fetch layer routes through `VOULI_PROXY`/`HTTPS_PROXY` transparently, so the
+harvest logic is identical from any vantage. ~5 years ≈ a few thousand files;
+rate-limited, resumable, run it once then incrementally.
+
 ## How it works
 
 ```

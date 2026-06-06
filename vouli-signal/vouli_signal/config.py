@@ -19,8 +19,24 @@ ENDPOINTS = {
     "plenary_minutes": f"{BASE}/Praktika/Synedriaseis-Olomeleias",
 }
 
-# ParlaMint-GR: clean, annotated, CC BY 4.0 bulk corpus (no scraping needed).
+# ParlaMint-GR: clean, annotated, CC BY 4.0 bulk corpus (covers 2015–Feb 2022).
 PARLAMINT_GR_URL = "http://hdl.handle.net/11356/1486/ParlaMint-GR.tgz"
+
+# --- Plenary transcript harvest (born-digital, ~2022→present) -----------------
+# Structure proven by the greparl crawler (Dritsa et al.):
+#   listing is paginated by ?pageNo=N; each page is a <tbody> of <tr class=odd|even>
+#   rows with 4 columns (date, period, session, sitting) and <a href> links whose
+#   document URLs contain "/UserFiles/". Files are static -> direct GET once found.
+PLENARY_DOMAIN = "https://www.hellenicparliament.gr"
+PLENARY_LISTING = PLENARY_DOMAIN + "/Praktika/Synedriaseis-Olomeleias?pageNo={page}"
+PLENARY_FILE_MARKER = "/UserFiles/"
+PLENARY_FORMAT_PREFERENCE = ["txt", "docx", "doc", "pdf"]   # cleanest first
+
+# Egress proxy for the geo-blocked main host (www.hellenicparliament.gr denies
+# datacenter/non-GR IPs at the Akamai edge). Set to a Greek/residential proxy or
+# a scraping-API endpoint; leave empty when running from a Greek IP.
+import os as _os
+EGRESS_PROXY = _os.environ.get("VOULI_PROXY") or _os.environ.get("HTTPS_PROXY") or ""
 
 # A realistic browser identity (curl_cffi additionally spoofs the TLS/JA3 layer).
 USER_AGENT = (

@@ -29,6 +29,11 @@ def _polite_sleep() -> None:
     time.sleep(config.RATE_LIMIT_SECONDS + random.uniform(0, config.RATE_LIMIT_JITTER))
 
 
+def _proxies() -> dict | None:
+    return {"https": config.EGRESS_PROXY, "http": config.EGRESS_PROXY} \
+        if config.EGRESS_PROXY else None
+
+
 def _fetch_curl_cffi(url: str) -> str | None:
     try:
         from curl_cffi import requests as creq  # type: ignore
@@ -37,12 +42,34 @@ def _fetch_curl_cffi(url: str) -> str | None:
     try:
         sess = creq.Session(impersonate="chrome")
         r = sess.get(url, headers={"Accept-Language": "el-GR,el;q=0.9,en;q=0.6"},
-                     timeout=config.REQUEST_TIMEOUT)
+                     proxies=_proxies(), timeout=config.REQUEST_TIMEOUT)
         if r.status_code == 200 and r.text:
             return r.text
     except Exception:
         return None
     return None
+
+
+def fetch_bytes(url: str, dest: str) -> bool:
+    """Download a binary file (transcript) to dest. Proxy-aware. Returns ok."""
+    if os.path.exists(dest) and os.path.getsize(dest) > 0:
+        return True
+    try:
+        from curl_cffi import requests as creq  # type: ignore
+    except Exception:
+        return False
+    _polite_sleep()
+    try:
+        sess = creq.Session(impersonate="chrome")
+        r = sess.get(url, proxies=_proxies(), timeout=config.REQUEST_TIMEOUT * 2)
+        if r.status_code == 200 and r.content:
+            os.makedirs(os.path.dirname(dest) or ".", exist_ok=True)
+            with open(dest, "wb") as fh:
+                fh.write(r.content)
+            return True
+    except Exception:
+        return False
+    return False
 
 
 def _fetch_playwright(url: str) -> str | None:
@@ -52,7 +79,10 @@ def _fetch_playwright(url: str) -> str | None:
         return None
     try:
         with sync_playwright() as p:
-            br = p.chromium.launch(headless=True)
+            launch = {"headless": True}
+            if config.EGRESS_PROXY:
+                launch["proxy"] = {"server": config.EGRESS_PROXY}
+            br = p.chromium.launch(**launch)
             ctx = br.new_context(locale="el-GR", user_agent=config.USER_AGENT)
             page = ctx.new_page()
             page.goto(url, wait_until="networkidle", timeout=config.REQUEST_TIMEOUT * 1000)
