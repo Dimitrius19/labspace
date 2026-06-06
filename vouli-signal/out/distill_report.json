@@ -1,0 +1,9 @@
+{
+  "target": "ab",
+  "n": 6,
+  "classes": [
+    "A",
+    "B"
+  ],
+  "saved": "out/ab_classifier.npz"
+}

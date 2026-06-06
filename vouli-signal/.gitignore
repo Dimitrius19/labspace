@@ -1,0 +1,12 @@
+# Raw scrape cache and bulk corpora — anchored to the module root so the
+# dashboard's committed snapshot (dashboard/data/) is NOT matched.
+/cache/
+/data/
+*.tgz
+*.tar.gz
+__pycache__/
+*.pyc
+.env
+
+# generated dashboard preview
+/dashboard/preview.png

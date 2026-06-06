@@ -1,0 +1,16 @@
+# Core pipeline runs on the stdlib alone (and so does `--demo`).
+# The libraries below are only needed for live scraping / LLM classification
+# and are imported lazily, so the package imports and demo-runs without them.
+
+# Live fetching (defeats the Akamai TLS/JA3 fingerprint that blocks plain requests)
+curl_cffi>=0.7.0
+# Robust fallback that drives a real browser through the WAF + JS + ASP.NET postbacks
+playwright>=1.44.0
+# HTML / PDF / DOCX parsing for scraped pages, bulletins and transcripts
+selectolax>=0.3.21
+beautifulsoup4>=4.12.0
+pypdf>=4.2.0
+pdfminer.six>=20231228
+python-docx>=1.1.0
+# LLM grievance + A/B classification (optional; heuristic fallback if absent)
+anthropic>=0.40.0

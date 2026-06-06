@@ -1,0 +1,135 @@
+[
+  {
+    "ministry_id": "development",
+    "ministry_name": "Ανάπτυξης",
+    "topic": "elidek-evaluation",
+    "summary": "Νέο ΟΠΕΚΕΠΕ στην έρευνα — €300εκ. RRF και €60εκ. απλήρωτη συμμετοχή στο ΕΛΙΔΕΚ",
+    "score": 9.0,
+    "frequency": 1,
+    "parties": [
+      "ΠΑΣΟΚ"
+    ],
+    "ai_addressable": true,
+    "controls_theme": true,
+    "matched_theses": [
+      "espa-screening-copilot",
+      "rrf-milestone-tracker",
+      "espa-audit-trail-synthesis",
+      "development-strategic-investment-drafter"
+    ],
+    "latest_date": "2025-08-11",
+    "examples": [
+      "Νέο ΟΠΕΚΕΠΕ στην έρευνα — €300εκ. RRF και €60εκ. απλήρωτη συμμετοχή στο ΕΛΙΔΕΚ"
+    ]
+  },
+  {
+    "ministry_id": "development",
+    "ministry_name": "Ανάπτυξης",
+    "topic": "cost-of-living",
+    "summary": "Η ακρίβεια στραγγαλίζει τα νοικοκυριά — η ΔΙΜΕΑ ανίσχυρη στην αισχροκέρδεια",
+    "score": 9.0,
+    "frequency": 1,
+    "parties": [
+      "ΣΥΡΙΖΑ"
+    ],
+    "ai_addressable": true,
+    "controls_theme": true,
+    "matched_theses": [
+      "espa-screening-copilot",
+      "rrf-milestone-tracker",
+      "espa-audit-trail-synthesis",
+      "development-strategic-investment-drafter"
+    ],
+    "latest_date": "2025-09-26",
+    "examples": [
+      "Η ακρίβεια στραγγαλίζει τα νοικοκυριά — η ΔΙΜΕΑ ανίσχυρη στην αισχροκέρδεια"
+    ]
+  },
+  {
+    "ministry_id": "finance-aade",
+    "ministry_name": "Εθνικής Οικονομίας & Οικονομικών",
+    "topic": "rrf-controls",
+    "summary": "Ταμείο Ανάκαμψης — χαμηλή υλοποίηση, ελλιπής ιχνηλασιμότητα, κίνδυνος απώλειας πόρων",
+    "score": 9.0,
+    "frequency": 1,
+    "parties": [
+      "ΠΑΣΟΚ"
+    ],
+    "ai_addressable": true,
+    "controls_theme": true,
+    "matched_theses": [
+      "espa-screening-copilot",
+      "rrf-milestone-tracker",
+      "aade-elenxis-auditor-copilot",
+      "espa-audit-trail-synthesis"
+    ],
+    "latest_date": "2026-02-10",
+    "examples": [
+      "Ταμείο Ανάκαμψης — χαμηλή υλοποίηση, ελλιπής ιχνηλασιμότητα, κίνδυνος απώλειας πόρων"
+    ]
+  },
+  {
+    "ministry_id": "education",
+    "ministry_name": "Παιδείας, Θρησκευμάτων & Αθλητισμού",
+    "topic": "kedasy-waitlists",
+    "summary": "Λίστες αναμονής ΚΕΔΑΣΥ — αναμονή από μήνες έως χρόνια",
+    "score": 8.5,
+    "frequency": 1,
+    "parties": [
+      "ΣΥΡΙΖΑ"
+    ],
+    "ai_addressable": true,
+    "controls_theme": false,
+    "matched_theses": [
+      "education-school-inspection-drafting",
+      "education-substitute-teacher-matching",
+      "education-kedasy-special-ed-matching",
+      "education-teacher-placement-agent"
+    ],
+    "latest_date": "2026-05-24",
+    "examples": [
+      "Λίστες αναμονής ΚΕΔΑΣΥ — αναμονή από μήνες έως χρόνια"
+    ]
+  },
+  {
+    "ministry_id": "education",
+    "ministry_name": "Παιδείας, Θρησκευμάτων & Αθλητισμού",
+    "topic": "anaplirotes-vacancies",
+    "summary": "Χιλιάδες κενά εκπαιδευτικών και χαμένες διδακτικές ώρες",
+    "score": 8.5,
+    "frequency": 1,
+    "parties": [
+      "ΠΑΣΟΚ"
+    ],
+    "ai_addressable": true,
+    "controls_theme": false,
+    "matched_theses": [
+      "education-school-inspection-drafting",
+      "education-substitute-teacher-matching",
+      "education-kedasy-special-ed-matching",
+      "education-teacher-placement-agent"
+    ],
+    "latest_date": "2026-05-25",
+    "examples": [
+      "Χιλιάδες κενά εκπαιδευτικών και χαμένες διδακτικές ώρες"
+    ]
+  },
+  {
+    "ministry_id": "labour-social-security",
+    "ministry_name": "Εργασίας & Κοιν. Ασφάλισης",
+    "topic": "pensions",
+    "summary": "Περικοπές στις συντάξεις και μνημονιακή πολιτική",
+    "score": 3.0,
+    "frequency": 1,
+    "parties": [
+      "ΚΚΕ"
+    ],
+    "ai_addressable": false,
+    "controls_theme": false,
+    "matched_theses": [],
+    "latest_date": "2026-04-15",
+    "examples": [
+      "Περικοπές στις συντάξεις και μνημονιακή πολιτική"
+    ]
+  }
+]
