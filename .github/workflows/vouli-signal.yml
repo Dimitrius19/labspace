@@ -1,0 +1,43 @@
+name: vouli-signal
+
+# Hands-off parliamentary demand-signal scan.
+# Runs weekly (Mon 06:00 UTC) and on demand; commits the refreshed digest.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: vouli-signal
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Optional deps enable the live Akamai-bypassing scraper + LLM classifier.
+      # The pipeline runs stdlib-only if these fail, so the job stays green.
+      - name: Install optional deps
+        continue-on-error: true
+        run: pip install curl_cffi selectolax pypdf anthropic
+
+      - name: Run pipeline (live, falls back to sample)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m vouli_signal.pipeline all
+
+      - name: Commit refreshed digest
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add out/digest.md out/signals.json out/grievances.json
+          git commit -m "vouli-signal: refresh demand-signal digest" || echo "no changes"
+          git push || echo "push skipped"

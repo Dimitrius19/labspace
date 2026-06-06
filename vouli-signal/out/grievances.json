@@ -1,0 +1,123 @@
+[
+  {
+    "source_id": "demo-elidek",
+    "date": "2025-08-11",
+    "party": "ΠΑΣΟΚ",
+    "is_opposition": true,
+    "mps": [
+      "Γιώργος Νικητιάδης",
+      "Στέφανος Παραστατίδης"
+    ],
+    "ministry_id": "development",
+    "ministry_name": "Ανάπτυξης",
+    "topic": "elidek-evaluation",
+    "summary": "Νέο ΟΠΕΚΕΠΕ στην έρευνα — €300εκ. RRF και €60εκ. απλήρωτη συμμετοχή στο ΕΛΙΔΕΚ",
+    "quantities": [
+      "€300",
+      "€60",
+      "€60 εκατ.",
+      "60 εκατ.",
+      "1.000"
+    ],
+    "ab_class": "A",
+    "ai_addressable": true,
+    "controls_theme": true,
+    "classifier": "heuristic",
+    "url": ""
+  },
+  {
+    "source_id": "demo-kedasy",
+    "date": "2026-05-24",
+    "party": "ΣΥΡΙΖΑ",
+    "is_opposition": true,
+    "mps": [
+      "Ανδρέας Παναγιωτόπουλος"
+    ],
+    "ministry_id": "education",
+    "ministry_name": "Παιδείας, Θρησκευμάτων & Αθλητισμού",
+    "topic": "kedasy-waitlists",
+    "summary": "Λίστες αναμονής ΚΕΔΑΣΥ — αναμονή από μήνες έως χρόνια",
+    "quantities": [],
+    "ab_class": "A",
+    "ai_addressable": true,
+    "controls_theme": false,
+    "classifier": "heuristic",
+    "url": ""
+  },
+  {
+    "source_id": "demo-anaplirotes",
+    "date": "2026-05-25",
+    "party": "ΠΑΣΟΚ",
+    "is_opposition": true,
+    "mps": [
+      "Στέφανος Παραστατίδης"
+    ],
+    "ministry_id": "education",
+    "ministry_name": "Παιδείας, Θρησκευμάτων & Αθλητισμού",
+    "topic": "anaplirotes-vacancies",
+    "summary": "Χιλιάδες κενά εκπαιδευτικών και χαμένες διδακτικές ώρες",
+    "quantities": [],
+    "ab_class": "A",
+    "ai_addressable": true,
+    "controls_theme": false,
+    "classifier": "heuristic",
+    "url": ""
+  },
+  {
+    "source_id": "demo-dimea",
+    "date": "2025-09-26",
+    "party": "ΣΥΡΙΖΑ",
+    "is_opposition": true,
+    "mps": [
+      "Χάρης Μαμουλάκης"
+    ],
+    "ministry_id": "development",
+    "ministry_name": "Ανάπτυξης",
+    "topic": "cost-of-living",
+    "summary": "Η ακρίβεια στραγγαλίζει τα νοικοκυριά — η ΔΙΜΕΑ ανίσχυρη στην αισχροκέρδεια",
+    "quantities": [],
+    "ab_class": "A",
+    "ai_addressable": true,
+    "controls_theme": true,
+    "classifier": "heuristic",
+    "url": ""
+  },
+  {
+    "source_id": "demo-rrf-controls",
+    "date": "2026-02-10",
+    "party": "ΠΑΣΟΚ",
+    "is_opposition": true,
+    "mps": [
+      "Ανδρέας Πουλάς"
+    ],
+    "ministry_id": "finance-aade",
+    "ministry_name": "Εθνικής Οικονομίας & Οικονομικών",
+    "topic": "rrf-controls",
+    "summary": "Ταμείο Ανάκαμψης — χαμηλή υλοποίηση, ελλιπής ιχνηλασιμότητα, κίνδυνος απώλειας πόρων",
+    "quantities": [],
+    "ab_class": "A",
+    "ai_addressable": true,
+    "controls_theme": true,
+    "classifier": "heuristic",
+    "url": ""
+  },
+  {
+    "source_id": "demo-syntaxeis",
+    "date": "2026-04-15",
+    "party": "ΚΚΕ",
+    "is_opposition": true,
+    "mps": [
+      "Βουλευτής ΚΚΕ"
+    ],
+    "ministry_id": "labour-social-security",
+    "ministry_name": "Εργασίας & Κοιν. Ασφάλισης",
+    "topic": "pensions",
+    "summary": "Περικοπές στις συντάξεις και μνημονιακή πολιτική",
+    "quantities": [],
+    "ab_class": "B",
+    "ai_addressable": false,
+    "controls_theme": false,
+    "classifier": "heuristic",
+    "url": ""
+  }
+]

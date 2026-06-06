@@ -1,0 +1,8 @@
+# Raw scrape cache and bulk corpora — never commit
+cache/
+data/
+*.tgz
+*.tar.gz
+__pycache__/
+*.pyc
+.env
