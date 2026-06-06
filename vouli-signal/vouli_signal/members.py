@@ -56,17 +56,23 @@ def _external() -> dict[str, str]:
 
 
 def party_for(speaker: str) -> str:
-    """Best-effort party for a transcript speaker label ('ΟΝΟΜΑ ΕΠΩΝΥΜΟ')."""
+    """Best-effort party for a transcript speaker label ('ΟΝΟΜΑ ΕΠΩΝΥΜΟ').
+
+    The real Vouliwatch roster (data/members.json) is authoritative; the curated
+    SEED is only a fallback for when that file isn't present.
+    """
     f = fold(speaker)
     if not f:
         return ""
     ext = _external()
-    if f in ext:
+    if f in ext:                              # 1) real full-name match
         return ext[f]
-    # try each token as a surname against the seed + external map
+    for tok in reversed(f.split()):           # 2) real surname match
+        if tok in ext:
+            return ext[tok]
+    if f in SEED:                             # 3) seed fallback
+        return SEED[f]
     for tok in reversed(f.split()):
         if tok in SEED:
             return SEED[tok]
-        if tok in ext:
-            return ext[tok]
     return ""

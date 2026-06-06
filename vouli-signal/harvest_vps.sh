@@ -33,6 +33,9 @@ PY
 echo "[vps] harvesting plenary transcripts since ${SINCE}"
 python3 -m vouli_signal.pipeline harvest --pages 200 --since "${SINCE}"
 
+echo "[vps] fetch real member roster (Vouliwatch)"
+python3 -m vouli_signal.sources.vouliwatch members || true
+
 echo "[vps] analysing corpus -> demand-signal digest"
 python3 -m vouli_signal.pipeline analyse-corpus
 

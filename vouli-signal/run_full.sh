@@ -40,6 +40,9 @@ python3 -m vouli_signal.pipeline harvest --pages 300 --since "${SINCE}"
 echo "[full] 2/4 live questions + signal digest"
 python3 -m vouli_signal.pipeline all || true
 
+echo "[full] fetch real member->party roster + votings metadata (Vouliwatch)"
+python3 -m vouli_signal.sources.vouliwatch all || echo "[full] vouliwatch fetch skipped"
+
 echo "[full] 3/4 classify+score the harvested corpus"
 python3 -m vouli_signal.pipeline analyse-corpus
 

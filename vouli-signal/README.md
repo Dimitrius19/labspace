@@ -87,6 +87,28 @@ format; a realistic synthetic set is generated if absent): greedy-modularity
 written to `graph.json` and shown in the dashboard. On the demo votes it cleanly
 separates the government bloc from the opposition and predicts votes at ~0.94.
 
+## Real data sources (`vouli_signal/sources/`)
+
+**Vouliwatch adapter** — pulls real structured data from the public Vouliwatch
+JSON API (reachable, not Akamai-blocked; `robots.txt` permits it):
+
+```bash
+python -m vouli_signal.sources.vouliwatch all   # -> data/members.json + data/votings.json
+```
+
+- **`members.json`** — the real **330-MP → party roster** (`/api/current_members`,
+  resolving `@political_party_member`). This is authoritative and overrides the
+  curated seed in `members.py`, so plenary-turn party attribution becomes real
+  (verified: Ανδρουλάκης→ΠΑΣΟΚ-ΚΙΝΑΛ, Κωνσταντοπούλου→ΠΛΕΥΣΗ ΕΛΕΥΘΕΡΙΑΣ).
+- **`votings.json`** — voting metadata (title, outcome, topic, date, slug),
+  **1000 votings incl. 275 named roll-calls**, for topic/temporal analysis.
+
+Per-MP roll-call *breakdowns* are not exposed by the public API, so `graph.py`
+keeps its synthetic vote fallback until a Vouliwatch data partnership or the
+official ονομαστικές-ψηφοφορίες feed (hellenicparliament.gr, GR-IP) supplies them.
+Prefer **partnering** with Vouliwatch over scraping; the adapter only reads the
+public JSON API, politely.
+
 ## Run the real thing (Greek-IP vantage)
 
 ```bash
