@@ -11,7 +11,7 @@ import os
 import subprocess
 import uuid
 
-from . import normalize
+from . import members, normalize
 from .models import Question
 
 # Grievance markers that flag a debate turn as an opposition-style attack.
@@ -68,14 +68,13 @@ def corpus_to_questions(index_path: str, max_files: int = 0,
                         max_turns: int = 0) -> list[Question]:
     """Walk the harvested index, segment, keep attack-shaped turns as Questions.
 
-    Party attribution per speaker is left blank here; wire a member->party map
-    (ParlaMint/greparl members CSV -> data/members.json) to sharpen the signal.
+    Party attribution uses `members.party_for` (curated seed of current
+    front-benchers + optional data/members.json for historical depth).
     """
     if not os.path.exists(index_path):
         print(f"[extract] no index at {index_path} — run `harvest` first")
         return []
     index = json.load(open(index_path, encoding="utf-8"))
-    members = _load_member_party_map()
     out: list[Question] = []
     for i, entry in enumerate(index):
         if max_files and i >= max_files:
@@ -83,7 +82,7 @@ def corpus_to_questions(index_path: str, max_files: int = 0,
         for turn in segment(entry["path"], entry.get("ext")):
             if not _looks_like_attack(turn["text"]):
                 continue
-            party = members.get(normalize.fold(turn["speaker"]), "")
+            party = members.party_for(turn["speaker"])
             out.append(Question(
                 id=str(uuid.uuid4())[:8], date=entry.get("date", ""),
                 doc_type="praktika", mps=[turn["speaker"]], party=party,
@@ -94,12 +93,3 @@ def corpus_to_questions(index_path: str, max_files: int = 0,
                 return out
     print(f"[extract] {len(out)} attack-shaped turns from {len(index)} transcripts")
     return out
-
-
-def _load_member_party_map() -> dict[str, str]:
-    """Optional data/members.json: {folded_member_name: party}. Empty if absent."""
-    path = os.path.join(os.environ.get("VOULI_DATA", "data"), "members.json")
-    if os.path.exists(path):
-        raw = json.load(open(path, encoding="utf-8"))
-        return {normalize.fold(k): v for k, v in raw.items()}
-    return {}
