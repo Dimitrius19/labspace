@@ -59,6 +59,22 @@ The fetch layer routes through `VOULI_PROXY`/`HTTPS_PROXY` transparently, so the
 harvest logic is identical from any vantage. ~5 years ≈ a few thousand files;
 rate-limited, resumable, run it once then incrementally.
 
+## Dashboard
+
+A dedicated, zero-build analytics dashboard lives in `dashboard/` and reads the
+pipeline's JSON output (it's refreshed automatically by `pipeline all` and the
+weekly Action). KPI cards, a ranked/filterable demand-signal table, ministry-heat
+and party-activity bars, the A/B split, controls-theme highlights, and a
+grievance drill-down drawer.
+
+```bash
+python -m vouli_signal.pipeline all --demo     # writes dashboard/data/*.json
+cd dashboard && python -m http.server 8099     # then open http://localhost:8099
+```
+
+It's a static site (HTML/CSS/vanilla JS) — deploy `dashboard/` to GitHub Pages,
+Netlify, S3, anywhere. A demo snapshot is committed so it renders immediately.
+
 ## How it works
 
 ```

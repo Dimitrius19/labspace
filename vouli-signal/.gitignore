@@ -1,6 +1,7 @@
-# Raw scrape cache and bulk corpora — never commit
-cache/
-data/
+# Raw scrape cache and bulk corpora — anchored to the module root so the
+# dashboard's committed snapshot (dashboard/data/) is NOT matched.
+/cache/
+/data/
 *.tgz
 *.tar.gz
 __pycache__/

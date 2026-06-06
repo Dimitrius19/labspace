@@ -17,14 +17,21 @@ from .sample_data import SAMPLE_QUESTIONS
 OUT = os.environ.get("VOULI_OUT", "out")
 
 
+DASH_DATA = os.path.join(os.path.dirname(__file__), "..", "dashboard", "data")
+
+
 def _emit(grievances, signals, md):
     os.makedirs(OUT, exist_ok=True)
     write_json(os.path.join(OUT, "grievances.json"), grievances)
     write_json(os.path.join(OUT, "signals.json"), signals)
     with open(os.path.join(OUT, "digest.md"), "w", encoding="utf-8") as fh:
         fh.write(md)
-    print(f"[vouli] wrote {len(grievances)} grievances, {len(signals)} signals -> {OUT}/")
-    print(f"[vouli] digest: {OUT}/digest.md")
+    # Feed the dashboard so it ships with the latest snapshot baked in.
+    os.makedirs(DASH_DATA, exist_ok=True)
+    write_json(os.path.join(DASH_DATA, "grievances.json"), grievances)
+    write_json(os.path.join(DASH_DATA, "signals.json"), signals)
+    print(f"[vouli] wrote {len(grievances)} grievances, {len(signals)} signals -> {OUT}/ + dashboard/data/")
+    print(f"[vouli] digest: {OUT}/digest.md  ·  dashboard: dashboard/index.html")
 
 
 def run_all(demo: bool = False, save_html: bool = False) -> None:

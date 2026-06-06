@@ -38,6 +38,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add out/digest.md out/signals.json out/grievances.json
-          git commit -m "vouli-signal: refresh demand-signal digest" || echo "no changes"
+          git add out/digest.md out/signals.json out/grievances.json \
+                  dashboard/data/signals.json dashboard/data/grievances.json
+          git commit -m "vouli-signal: refresh demand-signal digest + dashboard" || echo "no changes"
           git push || echo "push skipped"
