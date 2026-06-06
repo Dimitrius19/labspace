@@ -5,7 +5,7 @@ on:
   workflow_dispatch: {}
   push:
     branches: ["claude/gamma-presentations-pitch-6cOq9", "main"]
-    paths: ["vouli-signal/dashboard/**"]
+    paths: ["vouli-signal/dashboard/**", ".github/workflows/pages.yml"]
 
 permissions:
   contents: read
@@ -25,6 +25,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: vouli-signal/dashboard
