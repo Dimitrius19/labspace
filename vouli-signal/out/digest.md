@@ -1,4 +1,4 @@
-# Βουλή Demand-Signal Digest — 2026-06-06
+# Βουλή Demand-Signal Digest — 2026-06-08
 
 Govtech-addressable opposition attacks, ranked by opportunity score.
 Score = AI-addressable × cross-party × frequency × controls-tailwind × existing-thesis × recency.
